@@ -1,0 +1,30 @@
+{
+	"name": "midi-devices",
+	"version": "1.0.0",
+	"description": "Open MIDI hardware profiles: controls, port names, panel diagrams, icons and setup notes for MIDI devices",
+	"type": "module",
+	"main": "./index.js",
+	"exports": {
+		".": "./index.js",
+		"./device-files.js": "./index.js",
+		"./index.json": "./devices/index.json",
+		"./profile.schema.json": "./devices/profile.schema.json",
+		"./devices/*": "./devices/*"
+	},
+	"files": ["index.js", "devices"],
+	"scripts": {
+		"build": "node scripts/build.js",
+		"validate": "node scripts/validate.js",
+		"test": "npm run validate",
+		"preview": "npm run build && npx --yes serve dist"
+	},
+	"devDependencies": {
+		"ajv": "^8.17.1"
+	},
+	"keywords": ["midi", "hardware", "synthesizer", "controller", "web-midi", "device-profiles"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/designerzen/midi-devices.git"
+	},
+	"homepage": "https://designerzen.github.io/midi-devices/"
+}
