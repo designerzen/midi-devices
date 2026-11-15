@@ -6,6 +6,12 @@ import path from "node:path"
 export const API_VERSION = "v1"
 
 const normalise = (value) => String(value).trim().toLowerCase()
+// Same rule harmoneasy uses to turn Web MIDI port IDs and names into profile IDs.
+export const midiSlug = (value) =>
+	String(value)
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/^-|-$/g, "")
 
 export async function buildApi({ entries, devicesDirectory, outDirectory, siteUrl, version }) {
 	const site = siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`
@@ -13,6 +19,7 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 	const out = path.join(outDirectory, "api", API_VERSION)
 	await mkdir(path.join(out, "devices"), { recursive: true })
 	await mkdir(path.join(out, "manufacturers"), { recursive: true })
+	await mkdir(path.join(out, "midi"), { recursive: true })
 	const write = (file, data) => writeFile(path.join(out, file), JSON.stringify(data, null, "\t") + "\n")
 	const meta = { apiVersion: API_VERSION, dataVersion: version, generated: new Date().toISOString() }
 
@@ -67,6 +74,21 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 		for (const value of device.portNames ?? []) ports.byName[normalise(value)] ??= device.id
 	}
 
+	// Every device ID and port name gets a URL of its own, so a known MIDI identifier is one request.
+	const aliases = new Map()
+	for (const device of devices) {
+		for (const value of [device.id, ...(device.ids ?? []), ...(device.portNames ?? [])]) {
+			const slug = midiSlug(value)
+			if (!slug) continue
+			const owner = aliases.get(slug)
+			if (owner && owner !== device.id) {
+				throw new Error(`MIDI identifier "${value}" (${slug}) is claimed by ${owner} and ${device.id}`)
+			}
+			aliases.set(slug, device.id)
+		}
+	}
+	const byId = new Map(devices.map((device) => [device.id, device]))
+	for (const [slug, id] of aliases) await write(`midi/${slug}.json`, byId.get(id))
 	for (const device of devices) await write(`devices/${device.id}.json`, device)
 	for (const manufacturer of manufacturers.values()) {
 		await write(`manufacturers/${manufacturer.id}.json`, {
@@ -84,7 +106,7 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 			deviceIds: devices.map((device) => device.id)
 		}))
 	})
-	await write("ports.json", { ...meta, ...ports })
+	await write("ports.json", { ...meta, ...ports, bySlug: Object.fromEntries([...aliases].sort()) })
 	await write("index.json", {
 		...meta,
 		count: devices.length,
@@ -94,11 +116,12 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 			device: `${api}devices/{id}.json`,
 			manufacturers: `${api}manufacturers.json`,
 			manufacturer: `${api}manufacturers/{id}.json`,
+			midi: `${api}midi/{slug}.json`,
 			ports: `${api}ports.json`,
 			schema: `${site}profile.schema.json`,
 			client: `${site}client.js`
 		},
 		devices: devices.map(summary)
 	})
-	return { devices: devices.length, manufacturers: manufacturers.size }
+	return { devices: devices.length, manufacturers: manufacturers.size, aliases: aliases.size }
 }

@@ -29,7 +29,8 @@ A static, read-only JSON API is published with the site. Every response is CORS-
 | `api/v1/devices/{id}.json` | One full profile plus `manufacturerId` and `links` (`profile`, `icon`, `panel`, `base`, `catalogue`) |
 | `api/v1/manufacturers.json` | Manufacturers with device counts and IDs |
 | `api/v1/manufacturers/{id}.json` | One manufacturer with summaries of its devices |
-| `api/v1/ports.json` | `byId` and `byName` maps from lowercased Web MIDI port IDs and names to device IDs |
+| `api/v1/midi/{slug}.json` | The full profile for a device ID or Web MIDI port name, slugged: lowercase, other characters become `-` (`MPK mini 3` → [`midi/mpk-mini-3.json`](https://designerzen.github.io/midi-devices/api/v1/midi/mpk-mini-3.json)) |
+| `api/v1/ports.json` | `byId`, `byName` and `bySlug` maps from lowercased Web MIDI port IDs and names to device IDs |
 
 Relative asset paths inside a profile (`icon`, `surface.src`, GUI element `src`) resolve against `links.base`. Responses carry `apiVersion` and `dataVersion`; breaking changes to the shape will move to a new `api/v2/`.
 
@@ -41,6 +42,7 @@ import { createMidiDevicesClient } from "https://designerzen.github.io/midi-devi
 const devices = createMidiDevicesClient()
 await devices.list()                      // summaries
 await devices.device("korg-minilogue")    // full profile, or undefined
+await devices.lookup("MPK mini 3")        // full profile by device ID or port name
 await devices.manufacturer("roland")
 await devices.search("roland drum")
 

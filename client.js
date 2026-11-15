@@ -4,6 +4,11 @@
 export const DEFAULT_API_URL = "https://designerzen.github.io/midi-devices/api/v1/"
 
 const normalise = (value) => String(value ?? "").trim().toLowerCase()
+export const midiSlug = (value) =>
+	String(value ?? "")
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/^-|-$/g, "")
 
 export function createMidiDevicesClient({ baseUrl = DEFAULT_API_URL, fetch: fetcher = globalThis.fetch } = {}) {
 	const cache = new Map()
@@ -32,6 +37,16 @@ export function createMidiDevicesClient({ baseUrl = DEFAULT_API_URL, fetch: fetc
 			if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) return
 			try {
 				return await get(`devices/${id}.json`)
+			} catch {
+				return undefined
+			}
+		},
+		/** Full profile for a device ID or Web MIDI port name ("MPK mini 3"), or undefined. */
+		async lookup(identifier) {
+			const slug = midiSlug(identifier)
+			if (!slug) return
+			try {
+				return await get(`midi/${slug}.json`)
 			} catch {
 				return undefined
 			}

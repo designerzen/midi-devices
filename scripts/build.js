@@ -27,4 +27,6 @@ const api = await buildApi({
 	siteUrl,
 	version: pkg.version
 })
-console.log(`Built ${api.devices} devices from ${api.manufacturers} manufacturers into dist/ for ${siteUrl}`)
+console.log(
+	`Built ${api.devices} devices, ${api.manufacturers} manufacturers and ${api.aliases} MIDI identifiers into dist/ for ${siteUrl}`
+)
