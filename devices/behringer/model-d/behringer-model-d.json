@@ -1,0 +1,59 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "behringer-model-d",
+	"name": "Behringer MODEL D",
+	"manufacturer": "Behringer",
+	"manufacturerUrl": "https://www.behringer.com",
+	"productUrl": "https://www.behringer.com/en/products/0718-AAC",
+	"description": "Analog desktop synthesizer with DIN and USB MIDI.",
+	"ids": [
+		"behringer-model-d"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer documentation and MIDI setup",
+			"url": "https://www.behringer.com/en/products/0718-AAC"
+		}
+	],
+	"abilities": [
+		"MIDI notes"
+	],
+	"hardwareControls": [
+		"Hardware synthesis controls"
+	],
+	"notice": "Select the receive channel using the hardware MIDI channel switches. The analog panel is not a MIDI CC editor. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Behringer MODEL D schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Manufacturer documentation and MIDI setup"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 600,
+		"height": 240,
+		"elements": []
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "moog-minitaur",
+	"name": "Moog Minitaur",
+	"manufacturer": "Moog",
+	"manufacturerUrl": "https://www.moogmusic.com/",
+	"productUrl": "https://www.moogmusic.com/",
+	"description": "Analog bass synthesizer with DIN and USB MIDI.",
+	"ids": [
+		"moog-minitaur"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer documentation and MIDI setup",
+			"url": "https://back.moogmusic.com/sites/default/files/2018-02/Minitaur_Manual.pdf"
+		}
+	],
+	"abilities": [
+		"MIDI notes"
+	],
+	"hardwareControls": [
+		"Hardware synthesis controls"
+	],
+	"notice": "Receives MIDI notes 0-72; higher notes are outside the supported range. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Moog Minitaur schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Manufacturer documentation and MIDI setup"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 600,
+		"height": 240,
+		"elements": []
+	}
+}

@@ -1,0 +1,572 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "moog-grandmother",
+	"name": "Moog Grandmother",
+	"manufacturer": "Moog",
+	"manufacturerUrl": "https://www.moogmusic.com/",
+	"productUrl": "https://www.moogmusic.com/",
+	"description": "Semi-modular analog keyboard synthesizer.",
+	"ids": [
+		"moog-grandmother"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer documentation and MIDI setup",
+			"url": "https://www.moogmusic.com/downloads/"
+		}
+	],
+	"abilities": [
+		"MIDI notes"
+	],
+	"hardwareControls": [
+		"32 keys"
+	],
+	"notice": "Analog panel controls are not a general-purpose MIDI CC control surface. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram. Surface notes are virtual chromatic pads starting at note 48, not factory keyboard octave assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Moog Grandmother schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Manufacturer documentation and MIDI setup"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 600,
+		"height": 240,
+		"elements": [
+			{
+				"id": "note-48",
+				"label": "Virtual MIDI note 48",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true,
+				"position": {
+					"x": 4.0,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-49",
+				"label": "Virtual MIDI note 49",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true,
+				"position": {
+					"x": 6.875,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-50",
+				"label": "Virtual MIDI note 50",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true,
+				"position": {
+					"x": 9.75,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-51",
+				"label": "Virtual MIDI note 51",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true,
+				"position": {
+					"x": 12.625,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-52",
+				"label": "Virtual MIDI note 52",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true,
+				"position": {
+					"x": 15.5,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-53",
+				"label": "Virtual MIDI note 53",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true,
+				"position": {
+					"x": 18.375,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-54",
+				"label": "Virtual MIDI note 54",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true,
+				"position": {
+					"x": 21.25,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-55",
+				"label": "Virtual MIDI note 55",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true,
+				"position": {
+					"x": 24.125,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-56",
+				"label": "Virtual MIDI note 56",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true,
+				"position": {
+					"x": 27.0,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-57",
+				"label": "Virtual MIDI note 57",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true,
+				"position": {
+					"x": 29.875,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-58",
+				"label": "Virtual MIDI note 58",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true,
+				"position": {
+					"x": 32.75,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-59",
+				"label": "Virtual MIDI note 59",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 59
+				},
+				"learnable": true,
+				"position": {
+					"x": 35.625,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-60",
+				"label": "Virtual MIDI note 60",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true,
+				"position": {
+					"x": 38.5,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-61",
+				"label": "Virtual MIDI note 61",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 61
+				},
+				"learnable": true,
+				"position": {
+					"x": 41.375,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-62",
+				"label": "Virtual MIDI note 62",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 62
+				},
+				"learnable": true,
+				"position": {
+					"x": 44.25,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-63",
+				"label": "Virtual MIDI note 63",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 63
+				},
+				"learnable": true,
+				"position": {
+					"x": 47.125,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-64",
+				"label": "Virtual MIDI note 64",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 64
+				},
+				"learnable": true,
+				"position": {
+					"x": 50.0,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-65",
+				"label": "Virtual MIDI note 65",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 65
+				},
+				"learnable": true,
+				"position": {
+					"x": 52.875,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-66",
+				"label": "Virtual MIDI note 66",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 66
+				},
+				"learnable": true,
+				"position": {
+					"x": 55.75,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-67",
+				"label": "Virtual MIDI note 67",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 67
+				},
+				"learnable": true,
+				"position": {
+					"x": 58.625,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-68",
+				"label": "Virtual MIDI note 68",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 68
+				},
+				"learnable": true,
+				"position": {
+					"x": 61.5,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-69",
+				"label": "Virtual MIDI note 69",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 69
+				},
+				"learnable": true,
+				"position": {
+					"x": 64.375,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-70",
+				"label": "Virtual MIDI note 70",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 70
+				},
+				"learnable": true,
+				"position": {
+					"x": 67.25,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-71",
+				"label": "Virtual MIDI note 71",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 71
+				},
+				"learnable": true,
+				"position": {
+					"x": 70.125,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-72",
+				"label": "Virtual MIDI note 72",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 72
+				},
+				"learnable": true,
+				"position": {
+					"x": 73.0,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-73",
+				"label": "Virtual MIDI note 73",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 73
+				},
+				"learnable": true,
+				"position": {
+					"x": 75.875,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-74",
+				"label": "Virtual MIDI note 74",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 74
+				},
+				"learnable": true,
+				"position": {
+					"x": 78.75,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-75",
+				"label": "Virtual MIDI note 75",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 75
+				},
+				"learnable": true,
+				"position": {
+					"x": 81.625,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-76",
+				"label": "Virtual MIDI note 76",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 76
+				},
+				"learnable": true,
+				"position": {
+					"x": 84.5,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-77",
+				"label": "Virtual MIDI note 77",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 77
+				},
+				"learnable": true,
+				"position": {
+					"x": 87.375,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-78",
+				"label": "Virtual MIDI note 78",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 78
+				},
+				"learnable": true,
+				"position": {
+					"x": 90.25,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			},
+			{
+				"id": "note-79",
+				"label": "Virtual MIDI note 79",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 79
+				},
+				"learnable": true,
+				"position": {
+					"x": 93.125,
+					"y": 45,
+					"width": 2.875,
+					"height": 40
+				}
+			}
+		]
+	}
+}

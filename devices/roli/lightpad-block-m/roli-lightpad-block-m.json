@@ -1,0 +1,60 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "roli-lightpad-block-m",
+	"name": "ROLI Lightpad Block M",
+	"manufacturer": "ROLI",
+	"manufacturerUrl": "https://roli.com/",
+	"productUrl": "https://roli.com/",
+	"description": "Illuminated multitouch MIDI controller.",
+	"ids": [
+		"roli-lightpad-block-m"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer documentation and MIDI setup",
+			"url": "https://rolisupport.freshdesk.com/en/support/solutions/articles/36000019127-lightpad-block-and-lightpad-block-m-compared"
+		}
+	],
+	"abilities": [
+		"MIDI notes",
+		"MPE (configuration dependent)"
+	],
+	"hardwareControls": [
+		"Touch surface"
+	],
+	"notice": "The loaded Dashboard app determines note grid, channel range and CC assignments; no fixed pad mapping is assumed. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram. For per-note expression, configure matching MPE zones and pitch-bend ranges in the controller and destination; the single-channel notes GUI does not reproduce MPE gestures.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "ROLI Lightpad Block M schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Manufacturer documentation and MIDI setup"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 600,
+		"height": 240,
+		"elements": []
+	}
+}

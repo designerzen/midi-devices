@@ -1,0 +1,59 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "buchla-easel-command",
+	"name": "Buchla Easel Command",
+	"manufacturer": "Buchla",
+	"manufacturerUrl": "https://buchla.com/easel-command-and-208c/",
+	"productUrl": "https://buchla.com/easel-command-and-208c/",
+	"description": "Semi-modular desktop instrument with MIDI input.",
+	"ids": [
+		"buchla-easel-command"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer documentation and MIDI setup",
+			"url": "https://buchla.com/download/"
+		}
+	],
+	"abilities": [
+		"MIDI notes"
+	],
+	"hardwareControls": [
+		"Hardware synthesis controls"
+	],
+	"notice": "Use the MIDI implementation for your hardware revision; pre-2024 and current implementations differ. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Buchla Easel Command schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Manufacturer documentation and MIDI setup"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 600,
+		"height": 240,
+		"elements": []
+	}
+}
