@@ -18,7 +18,41 @@ devices/
 
 The `id` inside each profile must match its filename. Asset paths inside a profile are relative to its folder.
 
-## Using the data
+## API
+
+A static, read-only JSON API is published with the site. Every response is CORS-enabled and all links in it are absolute URLs.
+
+| Endpoint | Returns |
+| --- | --- |
+| [`api/v1/index.json`](https://designerzen.github.io/midi-devices/api/v1/index.json) | Endpoint links and a summary of every device (name, manufacturer, abilities, port names, links) |
+| `api/v1/devices.json` | Every full profile in one response |
+| `api/v1/devices/{id}.json` | One full profile plus `manufacturerId` and `links` (`profile`, `icon`, `panel`, `base`, `catalogue`) |
+| `api/v1/manufacturers.json` | Manufacturers with device counts and IDs |
+| `api/v1/manufacturers/{id}.json` | One manufacturer with summaries of its devices |
+| `api/v1/ports.json` | `byId` and `byName` maps from lowercased Web MIDI port IDs and names to device IDs |
+
+Relative asset paths inside a profile (`icon`, `surface.src`, GUI element `src`) resolve against `links.base`. Responses carry `apiVersion` and `dataVersion`; breaking changes to the shape will move to a new `api/v2/`.
+
+### JavaScript client
+
+```js
+import { createMidiDevicesClient } from "https://designerzen.github.io/midi-devices/client.js"
+
+const devices = createMidiDevicesClient()
+await devices.list()                      // summaries
+await devices.device("korg-minilogue")    // full profile, or undefined
+await devices.manufacturer("roland")
+await devices.search("roland drum")
+
+const access = await navigator.requestMIDIAccess()
+for (const port of access.inputs.values()) {
+	const id = await devices.match(port)  // device ID for a connected port
+}
+```
+
+`createMidiDevicesClient({ baseUrl, fetch })` accepts another API location (for example a pinned jsDelivr copy) and a custom `fetch`.
+
+## Using the raw files
 
 ### Over HTTP
 

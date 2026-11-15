@@ -7,11 +7,12 @@
 	"exports": {
 		".": "./index.js",
 		"./device-files.js": "./index.js",
+		"./client.js": "./client.js",
 		"./index.json": "./devices/index.json",
 		"./profile.schema.json": "./devices/profile.schema.json",
 		"./devices/*": "./devices/*"
 	},
-	"files": ["index.js", "devices"],
+	"files": ["index.js", "client.js", "devices"],
 	"scripts": {
 		"build": "node scripts/build.js",
 		"validate": "node scripts/validate.js",
