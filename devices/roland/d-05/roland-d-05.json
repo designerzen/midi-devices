@@ -7,8 +7,14 @@
 	"manufacturerUrl": "https://www.roland.com/",
 	"productUrl": "https://www.roland.com/global/products/d-05/",
 	"description": "Boutique D-50 Linear Arithmetic synthesizer.",
-	"ids": ["roland-d-05"],
-	"portNames": ["D-05", "D-05 MIDI 1", "Roland D-05"],
+	"ids": [
+		"roland-d-05"
+	],
+	"portNames": [
+		"D-05",
+		"D-05 MIDI 1",
+		"Roland D-05"
+	],
 	"icon": "icon.svg",
 	"documentation": [
 		{
@@ -16,7 +22,12 @@
 			"url": "https://static.roland.com/assets/media/pdf/D-05_eng04_W.pdf"
 		}
 	],
-	"abilities": ["USB MIDI", "DIN MIDI IN/OUT", "MIDI notes", "Documented controller mappings"],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI IN/OUT",
+		"MIDI notes",
+		"Documented controller mappings"
+	],
 	"hardwareControls": [
 		"Performance: Volume, Ribbon C1, Ribbon C2, Partial balance joystick",
 		"Edit: Function, Preset User, Partial Balance Edit, Left, F1, F2, Right, Chase, Portamento, Edit, Exit, Sequencer, Write, Increment, Decrement",
@@ -70,34 +81,562 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1761,
-		"height": 540,
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 680,
 		"elements": [
 			{
-				"id": "performance-ribbon-c1-touch",
-				"label": "Ribbon C1",
+				"id": "ribbons-c1",
+				"label": "RIBBONS: C1",
 				"kind": "fader",
 				"position": {
-					"x": 7.495741056218058,
-					"y": 26.851851851851855,
-					"width": 4.315729699034639,
-					"height": 9.25925925925926
-				},
-				"control": "performance-ribbon-c1-touch"
+					"x": 2.0666666666666664,
+					"y": 13.970588235294118,
+					"width": 4.766666666666667,
+					"height": 52.20588235294118
+				}
 			},
 			{
-				"id": "performance-ribbon-c2-touch",
-				"label": "Ribbon C2",
+				"id": "ribbons-c2",
+				"label": "RIBBONS: C2",
 				"kind": "fader",
 				"position": {
-					"x": 2.1010789324247585,
-					"y": 42.77777777777778,
-					"width": 4.315729699034639,
-					"height": 9.25925925925926
-				},
-				"control": "performance-ribbon-c2-touch"
+					"x": 6.833333333333333,
+					"y": 13.970588235294118,
+					"width": 4.766666666666667,
+					"height": 52.20588235294118
+				}
+			},
+			{
+				"id": "partial-balance-partial-balance",
+				"label": "PARTIAL BALANCE: Partial balance",
+				"kind": "button",
+				"position": {
+					"x": 13.4,
+					"y": 13.970588235294118,
+					"width": 12.533333333333333,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "partial-balance-function",
+				"label": "PARTIAL BALANCE: Function",
+				"kind": "button",
+				"position": {
+					"x": 13.4,
+					"y": 31.372549019607842,
+					"width": 12.533333333333333,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "partial-balance-preset-user",
+				"label": "PARTIAL BALANCE: Preset / User",
+				"kind": "button",
+				"position": {
+					"x": 13.4,
+					"y": 48.77450980392156,
+					"width": 12.533333333333333,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "display-edit-display",
+				"label": "DISPLAY / EDIT: Display",
+				"kind": "button",
+				"position": {
+					"x": 27.73333333333333,
+					"y": 13.970588235294118,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-left",
+				"label": "DISPLAY / EDIT: Left",
+				"kind": "button",
+				"position": {
+					"x": 35.03333333333333,
+					"y": 13.970588235294118,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-f1",
+				"label": "DISPLAY / EDIT: F1",
+				"kind": "button",
+				"position": {
+					"x": 42.333333333333336,
+					"y": 13.970588235294118,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-f2",
+				"label": "DISPLAY / EDIT: F2",
+				"kind": "button",
+				"position": {
+					"x": 49.63333333333333,
+					"y": 13.970588235294118,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-right",
+				"label": "DISPLAY / EDIT: Right",
+				"kind": "button",
+				"position": {
+					"x": 27.73333333333333,
+					"y": 27.02205882352941,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-chase",
+				"label": "DISPLAY / EDIT: Chase",
+				"kind": "button",
+				"position": {
+					"x": 35.03333333333333,
+					"y": 27.02205882352941,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-portamento",
+				"label": "DISPLAY / EDIT: Portamento",
+				"kind": "button",
+				"position": {
+					"x": 42.333333333333336,
+					"y": 27.02205882352941,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-edit",
+				"label": "DISPLAY / EDIT: Edit",
+				"kind": "button",
+				"position": {
+					"x": 49.63333333333333,
+					"y": 27.02205882352941,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-exit",
+				"label": "DISPLAY / EDIT: Exit",
+				"kind": "button",
+				"position": {
+					"x": 27.73333333333333,
+					"y": 40.07352941176471,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-sequencer",
+				"label": "DISPLAY / EDIT: Sequencer",
+				"kind": "button",
+				"position": {
+					"x": 35.03333333333333,
+					"y": 40.07352941176471,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-write",
+				"label": "DISPLAY / EDIT: Write",
+				"kind": "button",
+				"position": {
+					"x": 42.333333333333336,
+					"y": 40.07352941176471,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-increment",
+				"label": "DISPLAY / EDIT: Increment",
+				"kind": "button",
+				"position": {
+					"x": 49.63333333333333,
+					"y": 40.07352941176471,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "display-edit-decrement",
+				"label": "DISPLAY / EDIT: Decrement",
+				"kind": "button",
+				"position": {
+					"x": 27.73333333333333,
+					"y": 53.125,
+					"width": 7.3,
+					"height": 13.051470588235295
+				}
+			},
+			{
+				"id": "numeric-0",
+				"label": "NUMERIC: 0",
+				"kind": "button",
+				"position": {
+					"x": 58.733333333333334,
+					"y": 13.970588235294118,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-1",
+				"label": "NUMERIC: 1",
+				"kind": "button",
+				"position": {
+					"x": 68.53333333333333,
+					"y": 13.970588235294118,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-2",
+				"label": "NUMERIC: 2",
+				"kind": "button",
+				"position": {
+					"x": 78.33333333333333,
+					"y": 13.970588235294118,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-3",
+				"label": "NUMERIC: 3",
+				"kind": "button",
+				"position": {
+					"x": 88.13333333333333,
+					"y": 13.970588235294118,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-4",
+				"label": "NUMERIC: 4",
+				"kind": "button",
+				"position": {
+					"x": 58.733333333333334,
+					"y": 31.372549019607842,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-5",
+				"label": "NUMERIC: 5",
+				"kind": "button",
+				"position": {
+					"x": 68.53333333333333,
+					"y": 31.372549019607842,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-6",
+				"label": "NUMERIC: 6",
+				"kind": "button",
+				"position": {
+					"x": 78.33333333333333,
+					"y": 31.372549019607842,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-7",
+				"label": "NUMERIC: 7",
+				"kind": "button",
+				"position": {
+					"x": 88.13333333333333,
+					"y": 31.372549019607842,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-8",
+				"label": "NUMERIC: 8",
+				"kind": "button",
+				"position": {
+					"x": 58.733333333333334,
+					"y": 48.77450980392156,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-9",
+				"label": "NUMERIC: 9",
+				"kind": "button",
+				"position": {
+					"x": 68.53333333333333,
+					"y": 48.77450980392156,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-shift",
+				"label": "NUMERIC: Shift",
+				"kind": "button",
+				"position": {
+					"x": 78.33333333333333,
+					"y": 48.77450980392156,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "numeric-enter",
+				"label": "NUMERIC: Enter",
+				"kind": "button",
+				"position": {
+					"x": 88.13333333333333,
+					"y": 48.77450980392156,
+					"width": 9.8,
+					"height": 17.401960784313726
+				}
+			},
+			{
+				"id": "patch-bank-bank-1",
+				"label": "PATCH / BANK: Bank 1",
+				"kind": "button",
+				"position": {
+					"x": 13.4,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-bank-2",
+				"label": "PATCH / BANK: Bank 2",
+				"kind": "button",
+				"position": {
+					"x": 18.683333333333334,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-bank-3",
+				"label": "PATCH / BANK: Bank 3",
+				"kind": "button",
+				"position": {
+					"x": 23.966666666666665,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-bank-4",
+				"label": "PATCH / BANK: Bank 4",
+				"kind": "button",
+				"position": {
+					"x": 29.25,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-bank-5",
+				"label": "PATCH / BANK: Bank 5",
+				"kind": "button",
+				"position": {
+					"x": 34.53333333333333,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-bank-6",
+				"label": "PATCH / BANK: Bank 6",
+				"kind": "button",
+				"position": {
+					"x": 39.81666666666667,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-bank-7",
+				"label": "PATCH / BANK: Bank 7",
+				"kind": "button",
+				"position": {
+					"x": 45.1,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-bank-8",
+				"label": "PATCH / BANK: Bank 8",
+				"kind": "button",
+				"position": {
+					"x": 50.38333333333333,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-patch-1",
+				"label": "PATCH / BANK: Patch 1",
+				"kind": "button",
+				"position": {
+					"x": 55.666666666666664,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-patch-2",
+				"label": "PATCH / BANK: Patch 2",
+				"kind": "button",
+				"position": {
+					"x": 60.95,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-patch-3",
+				"label": "PATCH / BANK: Patch 3",
+				"kind": "button",
+				"position": {
+					"x": 66.23333333333333,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-patch-4",
+				"label": "PATCH / BANK: Patch 4",
+				"kind": "button",
+				"position": {
+					"x": 71.51666666666667,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-patch-5",
+				"label": "PATCH / BANK: Patch 5",
+				"kind": "button",
+				"position": {
+					"x": 76.8,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-patch-6",
+				"label": "PATCH / BANK: Patch 6",
+				"kind": "button",
+				"position": {
+					"x": 82.08333333333333,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-patch-7",
+				"label": "PATCH / BANK: Patch 7",
+				"kind": "button",
+				"position": {
+					"x": 87.36666666666667,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "patch-bank-patch-8",
+				"label": "PATCH / BANK: Patch 8",
+				"kind": "button",
+				"position": {
+					"x": 92.65,
+					"y": 74.26470588235294,
+					"width": 5.283333333333333,
+					"height": 16.176470588235293
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Mix IN",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Output",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Micro USB",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://static.roland.com/assets/media/pdf/D-05_eng04_W.pdf"
+	]
 }

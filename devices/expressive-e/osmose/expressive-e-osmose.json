@@ -25,7 +25,7 @@
 	"hardwareControls": [
 		"49 keys"
 	],
-	"notice": "Use External MIDI mode when controlling other instruments; its settings differ from the internal sound engine. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram. For per-note expression, configure matching MPE zones and pitch-bend ranges in the controller and destination; the single-channel notes GUI does not reproduce MPE gestures. Surface notes are virtual chromatic pads starting at note 48, not factory keyboard octave assignments.",
+	"notice": "Use External MIDI mode when controlling other instruments; its settings differ from the internal sound engine. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. For per-note expression, configure matching MPE zones and pitch-bend ranges in the controller and destination; the single-channel notes GUI does not reproduce MPE gestures.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -52,794 +52,1111 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 600,
-		"height": 240,
+		"src": "interface.svg",
+		"width": 1600,
+		"height": 770,
 		"elements": [
 			{
-				"id": "note-48",
-				"label": "Virtual MIDI note 48",
+				"id": "performance-pitch",
+				"label": "PERFORMANCE: Pitch",
+				"kind": "fader",
+				"position": {
+					"x": 1.9375,
+					"y": 12.337662337662337,
+					"width": 9.0,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "performance-mod",
+				"label": "PERFORMANCE: Mod",
+				"kind": "fader",
+				"position": {
+					"x": 10.9375,
+					"y": 12.337662337662337,
+					"width": 9.0,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "performance-octave",
+				"label": "PERFORMANCE: Octave -",
+				"kind": "button",
+				"position": {
+					"x": 1.9375,
+					"y": 23.376623376623375,
+					"width": 9.0,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "performance-octave-2",
+				"label": "PERFORMANCE: Octave +",
+				"kind": "button",
+				"position": {
+					"x": 10.9375,
+					"y": 23.376623376623375,
+					"width": 9.0,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-display",
+				"label": "DISPLAY / NAVIGATION: Display",
+				"kind": "button",
+				"position": {
+					"x": 36.0,
+					"y": 12.337662337662337,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-preset",
+				"label": "DISPLAY / NAVIGATION: Preset",
+				"kind": "knob",
+				"position": {
+					"x": 42.645833333333336,
+					"y": 12.337662337662337,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-left",
+				"label": "DISPLAY / NAVIGATION: Left",
+				"kind": "button",
+				"position": {
+					"x": 49.291666666666664,
+					"y": 12.337662337662337,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-right",
+				"label": "DISPLAY / NAVIGATION: Right",
+				"kind": "button",
+				"position": {
+					"x": 55.93749999999999,
+					"y": 12.337662337662337,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-up",
+				"label": "DISPLAY / NAVIGATION: Up",
+				"kind": "button",
+				"position": {
+					"x": 62.58333333333332,
+					"y": 12.337662337662337,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-down",
+				"label": "DISPLAY / NAVIGATION: Down",
+				"kind": "button",
+				"position": {
+					"x": 69.22916666666666,
+					"y": 12.337662337662337,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-menu",
+				"label": "DISPLAY / NAVIGATION: Menu",
+				"kind": "button",
+				"position": {
+					"x": 36.0,
+					"y": 23.376623376623375,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-encoder-1",
+				"label": "DISPLAY / NAVIGATION: Encoder 1",
+				"kind": "knob",
+				"position": {
+					"x": 42.645833333333336,
+					"y": 23.376623376623375,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-encoder-2",
+				"label": "DISPLAY / NAVIGATION: Encoder 2",
+				"kind": "knob",
+				"position": {
+					"x": 49.291666666666664,
+					"y": 23.376623376623375,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-encoder-3",
+				"label": "DISPLAY / NAVIGATION: Encoder 3",
+				"kind": "knob",
+				"position": {
+					"x": 55.93749999999999,
+					"y": 23.376623376623375,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "display-navigation-encoder-4",
+				"label": "DISPLAY / NAVIGATION: Encoder 4",
+				"kind": "knob",
+				"position": {
+					"x": 62.58333333333332,
+					"y": 23.376623376623375,
+					"width": 6.645833333333333,
+					"height": 11.03896103896104
+				}
+			},
+			{
+				"id": "output-volume",
+				"label": "OUTPUT: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 77.875,
+					"y": 12.337662337662337,
+					"width": 6.729166666666667,
+					"height": 22.07792207792208
+				}
+			},
+			{
+				"id": "output-config",
+				"label": "OUTPUT: Config",
+				"kind": "button",
+				"position": {
+					"x": 84.60416666666667,
+					"y": 12.337662337662337,
+					"width": 6.729166666666667,
+					"height": 22.07792207792208
+				}
+			},
+			{
+				"id": "output-mode",
+				"label": "OUTPUT: Mode",
+				"kind": "button",
+				"position": {
+					"x": 91.33333333333333,
+					"y": 12.337662337662337,
+					"width": 6.729166666666667,
+					"height": 22.07792207792208
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
 				"kind": "key",
+				"position": {
+					"x": 1.875,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 48
 				},
 				"learnable": true,
-				"position": {
-					"x": 4.0,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-49",
-				"label": "Virtual MIDI note 49",
+				"id": "key-3",
+				"label": "Key 3",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 49
+				"position": {
+					"x": 5.193965517241379,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 5.877551020408164,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-50",
-				"label": "Virtual MIDI note 50",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 50
 				},
 				"learnable": true,
-				"position": {
-					"x": 7.755102040816327,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-51",
-				"label": "Virtual MIDI note 51",
+				"id": "key-5",
+				"label": "Key 5",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 51
+				"position": {
+					"x": 8.512931034482758,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 9.63265306122449,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-52",
-				"label": "Virtual MIDI note 52",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 52
 				},
 				"learnable": true,
-				"position": {
-					"x": 11.510204081632654,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-53",
-				"label": "Virtual MIDI note 53",
+				"id": "key-6",
+				"label": "Key 6",
 				"kind": "key",
+				"position": {
+					"x": 11.831896551724139,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 53
 				},
 				"learnable": true,
-				"position": {
-					"x": 13.387755102040817,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-54",
-				"label": "Virtual MIDI note 54",
+				"id": "key-8",
+				"label": "Key 8",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 54
+				"position": {
+					"x": 15.150862068965518,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 15.26530612244898,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-55",
-				"label": "Virtual MIDI note 55",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 55
 				},
 				"learnable": true,
-				"position": {
-					"x": 17.142857142857142,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-56",
-				"label": "Virtual MIDI note 56",
+				"id": "key-10",
+				"label": "Key 10",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 56
+				"position": {
+					"x": 18.469827586206897,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 19.02040816326531,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-57",
-				"label": "Virtual MIDI note 57",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 57
 				},
 				"learnable": true,
-				"position": {
-					"x": 20.897959183673468,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-58",
-				"label": "Virtual MIDI note 58",
+				"id": "key-12",
+				"label": "Key 12",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 58
+				"position": {
+					"x": 21.788793103448278,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 22.775510204081634,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-59",
-				"label": "Virtual MIDI note 59",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 59
 				},
 				"learnable": true,
-				"position": {
-					"x": 24.653061224489797,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-60",
-				"label": "Virtual MIDI note 60",
+				"id": "key-13",
+				"label": "Key 13",
 				"kind": "key",
+				"position": {
+					"x": 25.10775862068966,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 60
 				},
 				"learnable": true,
-				"position": {
-					"x": 26.53061224489796,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-61",
-				"label": "Virtual MIDI note 61",
+				"id": "key-15",
+				"label": "Key 15",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 61
+				"position": {
+					"x": 28.426724137931036,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 28.408163265306122,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-62",
-				"label": "Virtual MIDI note 62",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 62
 				},
 				"learnable": true,
-				"position": {
-					"x": 30.285714285714285,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-63",
-				"label": "Virtual MIDI note 63",
+				"id": "key-17",
+				"label": "Key 17",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 63
+				"position": {
+					"x": 31.745689655172416,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 32.16326530612245,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-64",
-				"label": "Virtual MIDI note 64",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 64
 				},
 				"learnable": true,
-				"position": {
-					"x": 34.04081632653062,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-65",
-				"label": "Virtual MIDI note 65",
+				"id": "key-18",
+				"label": "Key 18",
 				"kind": "key",
+				"position": {
+					"x": 35.064655172413794,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 65
 				},
 				"learnable": true,
-				"position": {
-					"x": 35.91836734693878,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-66",
-				"label": "Virtual MIDI note 66",
+				"id": "key-20",
+				"label": "Key 20",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 66
+				"position": {
+					"x": 38.383620689655174,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 37.795918367346935,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-67",
-				"label": "Virtual MIDI note 67",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 67
 				},
 				"learnable": true,
-				"position": {
-					"x": 39.673469387755105,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-68",
-				"label": "Virtual MIDI note 68",
+				"id": "key-22",
+				"label": "Key 22",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 68
+				"position": {
+					"x": 41.702586206896555,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 41.55102040816327,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-69",
-				"label": "Virtual MIDI note 69",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 69
 				},
 				"learnable": true,
-				"position": {
-					"x": 43.42857142857143,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-70",
-				"label": "Virtual MIDI note 70",
+				"id": "key-24",
+				"label": "Key 24",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 70
+				"position": {
+					"x": 45.021551724137936,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 45.30612244897959,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-71",
-				"label": "Virtual MIDI note 71",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 71
 				},
 				"learnable": true,
-				"position": {
-					"x": 47.183673469387756,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-72",
-				"label": "Virtual MIDI note 72",
+				"id": "key-25",
+				"label": "Key 25",
 				"kind": "key",
+				"position": {
+					"x": 48.34051724137931,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 72
 				},
 				"learnable": true,
-				"position": {
-					"x": 49.06122448979592,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-73",
-				"label": "Virtual MIDI note 73",
+				"id": "key-27",
+				"label": "Key 27",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 73
+				"position": {
+					"x": 51.65948275862069,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 50.93877551020408,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-74",
-				"label": "Virtual MIDI note 74",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 74
 				},
 				"learnable": true,
-				"position": {
-					"x": 52.816326530612244,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-75",
-				"label": "Virtual MIDI note 75",
+				"id": "key-29",
+				"label": "Key 29",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 75
+				"position": {
+					"x": 54.97844827586207,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 54.69387755102041,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-76",
-				"label": "Virtual MIDI note 76",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 76
 				},
 				"learnable": true,
-				"position": {
-					"x": 56.57142857142857,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-77",
-				"label": "Virtual MIDI note 77",
+				"id": "key-30",
+				"label": "Key 30",
 				"kind": "key",
+				"position": {
+					"x": 58.297413793103445,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 77
 				},
 				"learnable": true,
-				"position": {
-					"x": 58.44897959183673,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-78",
-				"label": "Virtual MIDI note 78",
+				"id": "key-32",
+				"label": "Key 32",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 78
+				"position": {
+					"x": 61.61637931034484,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 60.326530612244895,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-79",
-				"label": "Virtual MIDI note 79",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 79
 				},
 				"learnable": true,
-				"position": {
-					"x": 62.204081632653065,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-80",
-				"label": "Virtual MIDI note 80",
+				"id": "key-34",
+				"label": "Key 34",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 80
+				"position": {
+					"x": 64.9353448275862,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 64.08163265306123,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-81",
-				"label": "Virtual MIDI note 81",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 81
 				},
 				"learnable": true,
-				"position": {
-					"x": 65.9591836734694,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-82",
-				"label": "Virtual MIDI note 82",
+				"id": "key-36",
+				"label": "Key 36",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 82
+				"position": {
+					"x": 68.25431034482759,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 67.83673469387756,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-83",
-				"label": "Virtual MIDI note 83",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 83
 				},
 				"learnable": true,
-				"position": {
-					"x": 69.71428571428571,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-84",
-				"label": "Virtual MIDI note 84",
+				"id": "key-37",
+				"label": "Key 37",
 				"kind": "key",
+				"position": {
+					"x": 71.57327586206897,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 84
 				},
 				"learnable": true,
-				"position": {
-					"x": 71.59183673469387,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-85",
-				"label": "Virtual MIDI note 85",
+				"id": "key-39",
+				"label": "Key 39",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 85
+				"position": {
+					"x": 74.89224137931035,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 73.46938775510205,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-86",
-				"label": "Virtual MIDI note 86",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 86
 				},
 				"learnable": true,
-				"position": {
-					"x": 75.34693877551021,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-87",
-				"label": "Virtual MIDI note 87",
+				"id": "key-41",
+				"label": "Key 41",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 87
+				"position": {
+					"x": 78.21120689655173,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 77.22448979591837,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-88",
-				"label": "Virtual MIDI note 88",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 88
 				},
 				"learnable": true,
-				"position": {
-					"x": 79.10204081632654,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-89",
-				"label": "Virtual MIDI note 89",
+				"id": "key-42",
+				"label": "Key 42",
 				"kind": "key",
+				"position": {
+					"x": 81.53017241379311,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 89
 				},
 				"learnable": true,
-				"position": {
-					"x": 80.9795918367347,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-90",
-				"label": "Virtual MIDI note 90",
+				"id": "key-44",
+				"label": "Key 44",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 90
+				"position": {
+					"x": 84.84913793103449,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 82.85714285714286,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-91",
-				"label": "Virtual MIDI note 91",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 91
 				},
 				"learnable": true,
-				"position": {
-					"x": 84.73469387755102,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-92",
-				"label": "Virtual MIDI note 92",
+				"id": "key-46",
+				"label": "Key 46",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 92
+				"position": {
+					"x": 88.16810344827587,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 86.61224489795919,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-93",
-				"label": "Virtual MIDI note 93",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 93
 				},
 				"learnable": true,
-				"position": {
-					"x": 88.48979591836735,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-94",
-				"label": "Virtual MIDI note 94",
+				"id": "key-48",
+				"label": "Key 48",
 				"kind": "key",
-				"message": {
-					"type": "note",
-					"number": 94
+				"position": {
+					"x": 91.48706896551724,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
 				},
-				"learnable": true,
-				"position": {
-					"x": 90.36734693877551,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
-			},
-			{
-				"id": "note-95",
-				"label": "Virtual MIDI note 95",
-				"kind": "key",
 				"message": {
 					"type": "note",
 					"number": 95
 				},
 				"learnable": true,
-				"position": {
-					"x": 92.24489795918367,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+				"dark": false
 			},
 			{
-				"id": "note-96",
-				"label": "Virtual MIDI note 96",
+				"id": "key-49",
+				"label": "Key 49",
 				"kind": "key",
+				"position": {
+					"x": 94.80603448275862,
+					"y": 38.311688311688314,
+					"width": 3.31896551724138,
+					"height": 55.84415584415584
+				},
 				"message": {
 					"type": "note",
 					"number": 96
 				},
 				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
 				"position": {
-					"x": 94.12244897959184,
-					"y": 45,
-					"width": 1.8775510204081634,
-					"height": 40
-				}
+					"x": 4.165086206896552,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 7.484051724137932,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 14.12198275862069,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 17.44094827586207,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 20.75991379310345,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 27.39784482758621,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 61
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 30.716810344827582,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 63
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 37.35474137931035,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 66
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 40.67370689655172,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 68
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 43.9926724137931,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 70
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Key 26",
+				"kind": "key",
+				"position": {
+					"x": 50.63060344827587,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 73
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-28",
+				"label": "Key 28",
+				"kind": "key",
+				"position": {
+					"x": 53.949568965517244,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 75
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-31",
+				"label": "Key 31",
+				"kind": "key",
+				"position": {
+					"x": 60.587500000000006,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 78
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-33",
+				"label": "Key 33",
+				"kind": "key",
+				"position": {
+					"x": 63.90646551724139,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 80
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-35",
+				"label": "Key 35",
+				"kind": "key",
+				"position": {
+					"x": 67.22543103448277,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 82
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-38",
+				"label": "Key 38",
+				"kind": "key",
+				"position": {
+					"x": 73.86336206896553,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 85
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-40",
+				"label": "Key 40",
+				"kind": "key",
+				"position": {
+					"x": 77.18232758620691,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 87
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-43",
+				"label": "Key 43",
+				"kind": "key",
+				"position": {
+					"x": 83.82025862068966,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 90
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-45",
+				"label": "Key 45",
+				"kind": "key",
+				"position": {
+					"x": 87.13922413793104,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 92
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-47",
+				"label": "Key 47",
+				"kind": "key",
+				"position": {
+					"x": 90.45818965517242,
+					"y": 38.311688311688314,
+					"width": 2.0577586206896554,
+					"height": 34.064935064935064
+				},
+				"message": {
+					"type": "note",
+					"number": 94
+				},
+				"learnable": true,
+				"dark": true
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Audio L",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-B",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "Power",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Pedal 1",
+			"connector": "6.35 mm pedal",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Pedal 2",
+			"connector": "6.35 mm pedal",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Front"
+		},
+		{
+			"label": "Power on/off",
+			"connector": "Switch",
+			"direction": "control",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://expressive-e.s3.amazonaws.com/CLA-Osmose/Osmose_UserManual_EN.pdf"
+	]
 }

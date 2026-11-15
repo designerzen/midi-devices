@@ -12,14 +12,37 @@ const entries = await createMidiDeviceStore(() => [MIDI_DEVICE_DIRECTORY]).entri
 
 for (const { id, path: folder } of entries) {
 	const profile = read(`${folder}/${id}.json`)
+	if (!profile.diagrams) errors.push(`${folder}: missing panel, connections and interface diagrams`)
 	if (!validate(profile)) {
 		errors.push(...validate.errors.map((error) => `${folder}/${id}.json${error.instancePath} ${error.message}`))
 	}
-	const assets = [profile.icon ?? "icon.svg", profile.surface?.src ?? "panel.svg"]
+	const assets = [profile.icon ?? "icon.svg", profile.surface?.src ?? "panel.svg", ...Object.values(profile.diagrams ?? {})]
 	for (const asset of assets) {
 		if (!existsSync(path.join(MIDI_DEVICE_DIRECTORY, folder, asset))) {
 			errors.push(`${folder}: missing ${asset}`)
 		}
+	}
+	for (const [kind, asset] of Object.entries(profile.diagrams ?? {})) {
+		const file = path.join(MIDI_DEVICE_DIRECTORY, folder, asset)
+		if (!existsSync(file)) continue
+		const svg = readFileSync(file, "utf8")
+		const ids = [...svg.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1])
+		if (new Set(ids).size !== ids.length) errors.push(`${folder}/${asset}: duplicate SVG element IDs`)
+		if (!svg.includes("<title") || !svg.includes("<desc")) errors.push(`${folder}/${asset}: missing accessible title or description`)
+		for (const [, colour] of svg.matchAll(/(?:fill|stroke)="([^"]+)"/g)) {
+			if (!["#000", "#fff", "none"].includes(colour)) errors.push(`${folder}/${asset}: non-monochrome colour ${colour}`)
+		}
+		if (kind === "interface") {
+			for (const element of profile.surface?.elements ?? []) {
+				if (!ids.includes(element.id)) errors.push(`${folder}/${asset}: missing surface element ${element.id}`)
+			}
+		}
+	}
+	const controlIds = new Set((profile.controls ?? []).map((control) => control.id))
+	for (const element of profile.surface?.elements ?? []) {
+		if (element.control && !controlIds.has(element.control)) errors.push(`${folder}: unknown control ${element.control}`)
+		const { x, y, width, height } = element.position
+		if (x + width > 100.001 || y + height > 100.001) errors.push(`${folder}: surface element ${element.id} exceeds the diagram bounds`)
 	}
 }
 

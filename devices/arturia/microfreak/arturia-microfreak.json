@@ -5,7 +5,9 @@
 	"name": "Arturia MicroFreak",
 	"manufacturer": "Arturia",
 	"manufacturerUrl": "https://www.arturia.com/",
-	"ids": ["arturia-microfreak"],
+	"ids": [
+		"arturia-microfreak"
+	],
 	"portNames": [
 		"MicroFreak",
 		"Arturia MicroFreak",
@@ -208,283 +210,443 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1200,
-		"height": 620,
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 805,
 		"elements": [
 			{
-				"id": "spice",
-				"label": "Spice",
-				"kind": "knob",
+				"id": "mod-matrix-matrix",
+				"label": "MOD MATRIX: Matrix",
+				"kind": "button",
 				"position": {
-					"x": 83.33333333333334,
-					"y": 65.0,
-					"width": 14.583333333333334,
-					"height": 4.516129032258064
-				},
-				"control": "spice"
+					"x": 2.214285714285714,
+					"y": 11.801242236024844,
+					"width": 10.285714285714285,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "glide",
-				"label": "Glide",
+				"id": "mod-matrix-matrix-encoder",
+				"label": "MOD MATRIX: Matrix encoder",
 				"kind": "knob",
 				"position": {
-					"x": 2.3333333333333335,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "glide"
+					"x": 12.5,
+					"y": 11.801242236024844,
+					"width": 10.285714285714285,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "oscillator-type",
-				"label": "Oscillator type",
-				"kind": "knob",
+				"id": "lfo-shape",
+				"label": "LFO: Shape",
+				"kind": "button",
 				"position": {
-					"x": 11.5,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "oscillator-type"
+					"x": 24.714285714285715,
+					"y": 11.801242236024844,
+					"width": 5.666666666666666,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "oscillator-wave",
-				"label": "Oscillator wave",
+				"id": "lfo-rate",
+				"label": "LFO: Rate",
 				"kind": "knob",
 				"position": {
-					"x": 19.833333333333332,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "oscillator-wave"
+					"x": 30.38095238095238,
+					"y": 11.801242236024844,
+					"width": 5.666666666666666,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "oscillator-timbre",
-				"label": "Oscillator timbre",
-				"kind": "knob",
+				"id": "lfo-sync",
+				"label": "LFO: Sync",
+				"kind": "button",
 				"position": {
-					"x": 28.166666666666668,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "oscillator-timbre"
+					"x": 36.047619047619044,
+					"y": 11.801242236024844,
+					"width": 5.666666666666666,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "oscillator-shape",
-				"label": "Oscillator shape",
-				"kind": "knob",
+				"id": "preset-master-paraphonic",
+				"label": "PRESET / MASTER: Paraphonic",
+				"kind": "button",
 				"position": {
-					"x": 36.5,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "oscillator-shape"
+					"x": 43.642857142857146,
+					"y": 11.801242236024844,
+					"width": 7.73469387755102,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "filter-cutoff",
-				"label": "Filter cutoff",
-				"kind": "knob",
+				"id": "preset-master-panel",
+				"label": "PRESET / MASTER: Panel",
+				"kind": "button",
 				"position": {
-					"x": 49.0,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "filter-cutoff"
+					"x": 51.37755102040816,
+					"y": 11.801242236024844,
+					"width": 7.73469387755102,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "cycling-envelope-amount",
-				"label": "Cycling envelope amount",
-				"kind": "knob",
+				"id": "preset-master-display",
+				"label": "PRESET / MASTER: Display",
+				"kind": "button",
 				"position": {
-					"x": 94.0,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "cycling-envelope-amount"
+					"x": 59.11224489795919,
+					"y": 11.801242236024844,
+					"width": 7.73469387755102,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "filter-envelope-amount",
-				"label": "Filter envelope amount",
+				"id": "preset-master-preset",
+				"label": "PRESET / MASTER: Preset",
 				"kind": "knob",
 				"position": {
-					"x": 90.66666666666666,
-					"y": 48.064516129032256,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "filter-envelope-amount"
+					"x": 66.84693877551021,
+					"y": 11.801242236024844,
+					"width": 7.73469387755102,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "cycling-envelope-hold",
-				"label": "Cycling envelope hold",
-				"kind": "knob",
+				"id": "preset-master-save",
+				"label": "PRESET / MASTER: Save",
+				"kind": "button",
 				"position": {
-					"x": 85.66666666666667,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "cycling-envelope-hold"
+					"x": 74.58163265306122,
+					"y": 11.801242236024844,
+					"width": 7.73469387755102,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "envelope-sustain",
-				"label": "Envelope sustain",
-				"kind": "knob",
+				"id": "preset-master-utility",
+				"label": "PRESET / MASTER: Utility",
+				"kind": "button",
 				"position": {
-					"x": 81.91666666666667,
-					"y": 48.064516129032256,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "envelope-sustain"
+					"x": 82.31632653061224,
+					"y": 11.801242236024844,
+					"width": 7.73469387755102,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "filter-resonance",
-				"label": "Filter resonance",
+				"id": "preset-master-master",
+				"label": "PRESET / MASTER: Master",
 				"kind": "knob",
 				"position": {
-					"x": 57.333333333333336,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "filter-resonance"
+					"x": 90.05102040816327,
+					"y": 11.801242236024844,
+					"width": 7.73469387755102,
+					"height": 18.012422360248447
+				}
 			},
 			{
-				"id": "arp-seq-rate-free",
-				"label": "Arp/Seq rate free",
+				"id": "digital-osc-type",
+				"label": "DIGITAL OSC: Type",
 				"kind": "knob",
 				"position": {
-					"x": 40.666666666666664,
-					"y": 48.064516129032256,
-					"width": 1.8333333333333333,
-					"height": 7.096774193548387
-				},
-				"control": "arp-seq-rate-free"
+					"x": 2.214285714285714,
+					"y": 36.64596273291926,
+					"width": 5.142857142857142,
+					"height": 16.77018633540373
+				}
 			},
 			{
-				"id": "arp-seq-rate-sync",
-				"label": "Arp/Seq rate sync",
+				"id": "digital-osc-wave",
+				"label": "DIGITAL OSC: Wave",
 				"kind": "knob",
 				"position": {
-					"x": 42.5,
-					"y": 48.064516129032256,
-					"width": 1.8333333333333333,
-					"height": 7.096774193548387
-				},
-				"control": "arp-seq-rate-sync"
+					"x": 7.357142857142857,
+					"y": 36.64596273291926,
+					"width": 5.142857142857142,
+					"height": 16.77018633540373
+				}
 			},
 			{
-				"id": "lfo-rate-free",
-				"label": "LFO rate free",
+				"id": "digital-osc-timbre",
+				"label": "DIGITAL OSC: Timbre",
 				"kind": "knob",
 				"position": {
-					"x": 55.25,
-					"y": 48.064516129032256,
-					"width": 1.8333333333333333,
-					"height": 7.096774193548387
-				},
-				"control": "lfo-rate-free"
+					"x": 12.5,
+					"y": 36.64596273291926,
+					"width": 5.142857142857142,
+					"height": 16.77018633540373
+				}
 			},
 			{
-				"id": "lfo-rate-sync",
-				"label": "LFO rate sync",
+				"id": "digital-osc-shape",
+				"label": "DIGITAL OSC: Shape",
 				"kind": "knob",
 				"position": {
-					"x": 57.08333333333333,
-					"y": 48.064516129032256,
-					"width": 1.8333333333333333,
-					"height": 7.096774193548387
-				},
-				"control": "lfo-rate-sync"
+					"x": 17.642857142857142,
+					"y": 36.64596273291926,
+					"width": 5.142857142857142,
+					"height": 16.77018633540373
+				}
+			},
+			{
+				"id": "analog-filter-cutoff",
+				"label": "ANALOG FILTER: Cutoff",
+				"kind": "knob",
+				"position": {
+					"x": 24.714285714285715,
+					"y": 36.64596273291926,
+					"width": 4.25,
+					"height": 16.77018633540373
+				}
+			},
+			{
+				"id": "analog-filter-resonance",
+				"label": "ANALOG FILTER: Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 28.964285714285715,
+					"y": 36.64596273291926,
+					"width": 4.25,
+					"height": 16.77018633540373
+				}
+			},
+			{
+				"id": "analog-filter-type",
+				"label": "ANALOG FILTER: Type",
+				"kind": "button",
+				"position": {
+					"x": 33.214285714285715,
+					"y": 36.64596273291926,
+					"width": 4.25,
+					"height": 16.77018633540373
+				}
 			},
 			{
 				"id": "cycling-envelope-rise",
-				"label": "Cycling envelope rise",
+				"label": "CYCLING ENVELOPE: Rise",
 				"kind": "knob",
 				"position": {
-					"x": 69.0,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
+					"x": 43.642857142857146,
+					"y": 36.64596273291926,
+					"width": 6.125,
+					"height": 8.385093167701864
 				},
 				"control": "cycling-envelope-rise"
 			},
 			{
 				"id": "cycling-envelope-fall",
-				"label": "Cycling envelope fall",
+				"label": "CYCLING ENVELOPE: Fall",
 				"kind": "knob",
 				"position": {
-					"x": 77.33333333333333,
-					"y": 28.225806451612907,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
+					"x": 49.76785714285714,
+					"y": 36.64596273291926,
+					"width": 6.125,
+					"height": 8.385093167701864
 				},
 				"control": "cycling-envelope-fall"
 			},
 			{
-				"id": "envelope-attack",
-				"label": "Envelope attack",
+				"id": "cycling-envelope-hold",
+				"label": "CYCLING ENVELOPE: Hold",
 				"kind": "knob",
 				"position": {
-					"x": 64.41666666666667,
-					"y": 48.064516129032256,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
+					"x": 55.892857142857146,
+					"y": 36.64596273291926,
+					"width": 6.125,
+					"height": 8.385093167701864
+				},
+				"control": "cycling-envelope-hold"
+			},
+			{
+				"id": "cycling-envelope-amount",
+				"label": "CYCLING ENVELOPE: Amount",
+				"kind": "knob",
+				"position": {
+					"x": 62.017857142857146,
+					"y": 36.64596273291926,
+					"width": 6.125,
+					"height": 8.385093167701864
+				},
+				"control": "cycling-envelope-amount"
+			},
+			{
+				"id": "cycling-envelope-mode",
+				"label": "CYCLING ENVELOPE: Mode",
+				"kind": "button",
+				"position": {
+					"x": 43.642857142857146,
+					"y": 45.03105590062112,
+					"width": 6.125,
+					"height": 8.385093167701864
+				}
+			},
+			{
+				"id": "envelope-attack",
+				"label": "ENVELOPE: Attack",
+				"kind": "knob",
+				"position": {
+					"x": 70.07142857142857,
+					"y": 36.64596273291926,
+					"width": 6.928571428571429,
+					"height": 8.385093167701864
 				},
 				"control": "envelope-attack"
 			},
 			{
-				"id": "envelope-decay",
-				"label": "Envelope decay",
+				"id": "envelope-decay-release",
+				"label": "ENVELOPE: Decay / Release",
 				"kind": "knob",
 				"position": {
-					"x": 73.16666666666667,
-					"y": 48.064516129032256,
-					"width": 3.6666666666666665,
-					"height": 7.096774193548387
-				},
-				"control": "envelope-decay"
+					"x": 77.0,
+					"y": 36.64596273291926,
+					"width": 6.928571428571429,
+					"height": 8.385093167701864
+				}
 			},
 			{
-				"id": "hold",
-				"label": "Keyboard hold",
+				"id": "envelope-sustain",
+				"label": "ENVELOPE: Sustain",
+				"kind": "knob",
+				"position": {
+					"x": 83.92857142857143,
+					"y": 36.64596273291926,
+					"width": 6.928571428571429,
+					"height": 8.385093167701864
+				},
+				"control": "envelope-sustain"
+			},
+			{
+				"id": "envelope-filter-amount",
+				"label": "ENVELOPE: Filter amount",
+				"kind": "knob",
+				"position": {
+					"x": 90.85714285714286,
+					"y": 36.64596273291926,
+					"width": 6.928571428571429,
+					"height": 8.385093167701864
+				}
+			},
+			{
+				"id": "envelope-amp-mod",
+				"label": "ENVELOPE: Amp mod",
 				"kind": "button",
 				"position": {
-					"x": 2.083333333333333,
-					"y": 65.32258064516128,
-					"width": 7.083333333333333,
-					"height": 4.032258064516129
-				},
-				"control": "hold"
+					"x": 70.07142857142857,
+					"y": 45.03105590062112,
+					"width": 6.928571428571429,
+					"height": 8.385093167701864
+				}
 			},
 			{
-				"id": "pitch-bend",
-				"label": "Pitch bend",
+				"id": "keyboard-seq-octave",
+				"label": "KEYBOARD / SEQ: Octave -",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
+			},
+			{
+				"id": "keyboard-seq-octave-2",
+				"label": "KEYBOARD / SEQ: Octave +",
+				"kind": "button",
+				"position": {
+					"x": 12.833333333333332,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
+			},
+			{
+				"id": "keyboard-seq-hold",
+				"label": "KEYBOARD / SEQ: Hold",
+				"kind": "button",
+				"position": {
+					"x": 23.452380952380953,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
+			},
+			{
+				"id": "keyboard-seq-shift",
+				"label": "KEYBOARD / SEQ: Shift",
+				"kind": "button",
+				"position": {
+					"x": 34.07142857142857,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
+			},
+			{
+				"id": "keyboard-seq-arp-seq",
+				"label": "KEYBOARD / SEQ: Arp / Seq",
+				"kind": "button",
+				"position": {
+					"x": 44.69047619047618,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
+			},
+			{
+				"id": "keyboard-seq-spice-dice",
+				"label": "KEYBOARD / SEQ: Spice / Dice",
+				"kind": "fader",
+				"position": {
+					"x": 55.30952380952381,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
+			},
+			{
+				"id": "keyboard-seq-rate",
+				"label": "KEYBOARD / SEQ: Rate",
 				"kind": "knob",
 				"position": {
-					"x": 68.75,
-					"y": 65.0,
-					"width": 14.583333333333334,
-					"height": 4.516129032258064
-				},
-				"control": "pitch-bend"
+					"x": 65.92857142857143,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
 			},
 			{
-				"id": "key-0",
-				"label": "Note 48",
+				"id": "keyboard-seq-pattern",
+				"label": "KEYBOARD / SEQ: Pattern",
+				"kind": "button",
+				"position": {
+					"x": 76.54761904761904,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
+			},
+			{
+				"id": "keyboard-seq-play-stop",
+				"label": "KEYBOARD / SEQ: Play / Stop",
+				"kind": "button",
+				"position": {
+					"x": 87.16666666666666,
+					"y": 59.62732919254658,
+					"width": 10.619047619047619,
+					"height": 6.211180124223603
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Touch plate 1",
 				"kind": "key",
 				"position": {
-					"x": 2.083333333333333,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 3.214285714285714,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -494,14 +656,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-2",
-				"label": "Note 50",
+				"id": "key-3",
+				"label": "Touch plate 3",
 				"kind": "key",
 				"position": {
-					"x": 8.472222222222223,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 9.45238095238095,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -511,14 +673,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-4",
-				"label": "Note 52",
+				"id": "key-5",
+				"label": "Touch plate 5",
 				"kind": "key",
 				"position": {
-					"x": 14.86111111111111,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 15.690476190476192,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -528,14 +690,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-5",
-				"label": "Note 53",
+				"id": "key-6",
+				"label": "Touch plate 6",
 				"kind": "key",
 				"position": {
-					"x": 21.25,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 21.928571428571427,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -545,14 +707,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-7",
-				"label": "Note 55",
+				"id": "key-8",
+				"label": "Touch plate 8",
 				"kind": "key",
 				"position": {
-					"x": 27.63888888888889,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 28.166666666666668,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -562,14 +724,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-9",
-				"label": "Note 57",
+				"id": "key-10",
+				"label": "Touch plate 10",
 				"kind": "key",
 				"position": {
-					"x": 34.02777777777778,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 34.404761904761905,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -579,14 +741,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-11",
-				"label": "Note 59",
+				"id": "key-12",
+				"label": "Touch plate 12",
 				"kind": "key",
 				"position": {
-					"x": 40.416666666666664,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 40.64285714285714,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -596,14 +758,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-12",
-				"label": "Note 60",
+				"id": "key-13",
+				"label": "Touch plate 13",
 				"kind": "key",
 				"position": {
-					"x": 46.805555555555564,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 46.88095238095237,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -613,14 +775,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-14",
-				"label": "Note 62",
+				"id": "key-15",
+				"label": "Touch plate 15",
 				"kind": "key",
 				"position": {
-					"x": 53.19444444444444,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 53.11904761904762,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -630,14 +792,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-16",
-				"label": "Note 64",
+				"id": "key-17",
+				"label": "Touch plate 17",
 				"kind": "key",
 				"position": {
-					"x": 59.583333333333336,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 59.357142857142854,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -647,14 +809,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-17",
-				"label": "Note 65",
+				"id": "key-18",
+				"label": "Touch plate 18",
 				"kind": "key",
 				"position": {
-					"x": 65.97222222222223,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 65.5952380952381,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -664,14 +826,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-19",
-				"label": "Note 67",
+				"id": "key-20",
+				"label": "Touch plate 20",
 				"kind": "key",
 				"position": {
-					"x": 72.36111111111111,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 71.83333333333333,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -681,14 +843,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-21",
-				"label": "Note 69",
+				"id": "key-22",
+				"label": "Touch plate 22",
 				"kind": "key",
 				"position": {
-					"x": 78.75,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 78.07142857142857,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -698,14 +860,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-23",
-				"label": "Note 71",
+				"id": "key-24",
+				"label": "Touch plate 24",
 				"kind": "key",
 				"position": {
-					"x": 85.1388888888889,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 84.3095238095238,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -715,14 +877,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-24",
-				"label": "Note 72",
+				"id": "key-25",
+				"label": "Touch plate 25",
 				"kind": "key",
 				"position": {
-					"x": 91.52777777777779,
-					"y": 75.0,
-					"width": 6.197222222222223,
-					"height": 20.967741935483872
+					"x": 90.54761904761904,
+					"y": 70.1863354037267,
+					"width": 6.238095238095238,
+					"height": 24.84472049689441
 				},
 				"message": {
 					"type": "note",
@@ -732,14 +894,14 @@
 				"dark": false
 			},
 			{
-				"id": "key-1",
-				"label": "Note 49",
+				"id": "key-2",
+				"label": "Touch plate 2",
 				"kind": "key",
 				"position": {
-					"x": 6.5555555555555545,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 7.518571428571427,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -749,14 +911,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-3",
-				"label": "Note 51",
+				"id": "key-4",
+				"label": "Touch plate 4",
 				"kind": "key",
 				"position": {
-					"x": 12.944444444444445,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 13.756666666666668,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -766,14 +928,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-6",
-				"label": "Note 54",
+				"id": "key-7",
+				"label": "Touch plate 7",
 				"kind": "key",
 				"position": {
-					"x": 25.722222222222225,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 26.232857142857142,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -783,14 +945,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-8",
-				"label": "Note 56",
+				"id": "key-9",
+				"label": "Touch plate 9",
 				"kind": "key",
 				"position": {
-					"x": 32.111111111111114,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 32.47095238095238,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -800,14 +962,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-10",
-				"label": "Note 58",
+				"id": "key-11",
+				"label": "Touch plate 11",
 				"kind": "key",
 				"position": {
-					"x": 38.50000000000001,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 38.709047619047624,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -817,14 +979,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-13",
-				"label": "Note 61",
+				"id": "key-14",
+				"label": "Touch plate 14",
 				"kind": "key",
 				"position": {
-					"x": 51.27777777777778,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 51.18523809523809,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -834,14 +996,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-15",
-				"label": "Note 63",
+				"id": "key-16",
+				"label": "Touch plate 16",
 				"kind": "key",
 				"position": {
-					"x": 57.666666666666664,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 57.423333333333325,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -851,14 +1013,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-18",
-				"label": "Note 66",
+				"id": "key-19",
+				"label": "Touch plate 19",
 				"kind": "key",
 				"position": {
-					"x": 70.44444444444444,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 69.8995238095238,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -868,14 +1030,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-20",
-				"label": "Note 68",
+				"id": "key-21",
+				"label": "Touch plate 21",
 				"kind": "key",
 				"position": {
-					"x": 76.83333333333333,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 76.13761904761905,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -885,14 +1047,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-22",
-				"label": "Note 70",
+				"id": "key-23",
+				"label": "Touch plate 23",
 				"kind": "key",
 				"position": {
-					"x": 83.22222222222221,
-					"y": 75.0,
-					"width": 3.833333333333333,
-					"height": 12.79032258064516
+					"x": 82.37571428571428,
+					"y": 70.1863354037267,
+					"width": 3.8676190476190477,
+					"height": 15.15527950310559
 				},
 				"message": {
 					"type": "note",
@@ -902,5 +1064,87 @@
 				"dark": true
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Audio OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-B",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "Power",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Clock IN",
+			"connector": "3.5 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Clock OUT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Pitch OUT",
+			"connector": "3.5 mm CV",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Gate OUT",
+			"connector": "3.5 mm CV",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Pressure OUT",
+			"connector": "3.5 mm CV",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones / mic",
+			"connector": "3.5 mm TRRS",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Power on/off",
+			"connector": "Switch",
+			"direction": "control",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://downloads.arturia.net/products/microfreak/manual/microfreak_Manual_5_0_0_EN.pdf"
+	]
 }

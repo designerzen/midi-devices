@@ -2,12 +2,17 @@
 	"name": "DIGIT CMPSR",
 	"manufacturer": "Digit Music",
 	"description": "Accessible joystick instrument with directional MIDI CC expression.",
-	"ids": ["digit-cmpsr"],
-	"portNames": ["CMPSR", "DIGIT CMPSR"],
+	"ids": [
+		"digit-cmpsr"
+	],
+	"portNames": [
+		"CMPSR",
+		"DIGIT CMPSR"
+	],
 	"icon": "icon.svg",
 	"documentation": [
 		{
-			"title": "CMPSR owner's manual, pages 5\u20138",
+			"title": "CMPSR owner's manual, pages 5–8",
 			"url": "https://www.digitmusic.co.uk/wp-content/uploads/2025/07/CMPSR-Owners-Manual_V2.pdf"
 		},
 		{
@@ -94,31 +99,67 @@
 		{
 			"id": "all",
 			"label": "All documented CCs",
-			"cc": [102, 111, 112, 113, 114, 115, 116, 117, 118]
+			"cc": [
+				102,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118
+			]
 		},
 		{
 			"id": "blue",
-			"label": "Blue \u2014 one CC",
-			"cc": [102]
+			"label": "Blue — one CC",
+			"cc": [
+				102
+			]
 		},
 		{
 			"id": "red",
-			"label": "Red \u2014 eight directions",
-			"cc": [111, 112, 113, 114, 115, 116, 117, 118]
+			"label": "Red — eight directions",
+			"cc": [
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118
+			]
 		},
 		{
 			"id": "purple",
-			"label": "Purple \u2014 combined",
-			"cc": [102, 111, 112, 113, 114, 115, 116, 117, 118]
+			"label": "Purple — combined",
+			"cc": [
+				102,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118
+			]
 		},
 		{
 			"id": "green",
-			"label": "Green \u2014 nested XY",
-			"cc": [111, 113, 115, 117]
+			"label": "Green — nested XY",
+			"cc": [
+				111,
+				113,
+				115,
+				117
+			]
 		},
 		{
 			"id": "yellow",
-			"label": "Yellow \u2014 CC numbers undocumented",
+			"label": "Yellow — CC numbers undocumented",
 			"cc": []
 		},
 		{
@@ -176,118 +217,126 @@
 	"manufacturerUrl": "https://www.digitmusic.co.uk/",
 	"productUrl": "https://www.digitmusic.co.uk/cmpsr/",
 	"surface": {
-		"src": "panel.svg",
-		"width": 480,
-		"height": 200,
+		"src": "interface.svg",
+		"width": 530,
+		"height": 1040,
 		"elements": [
 			{
-				"id": "expression",
-				"label": "All directions",
-				"kind": "knob",
+				"id": "joystick-expressive-joystick",
+				"label": "JOYSTICK: Expressive joystick",
+				"kind": "button",
 				"position": {
-					"x": 20.0,
-					"y": 11.0,
-					"width": 14.1667,
-					"height": 34.0
-				},
-				"control": "expression"
+					"x": 17.169811320754715,
+					"y": 11.057692307692307,
+					"width": 65.66037735849056,
+					"height": 26.442307692307693
+				}
 			},
 			{
-				"id": "up",
-				"label": "Up",
+				"id": "buttons-1-settings",
+				"label": "BUTTONS: 1 Settings",
 				"kind": "pad",
 				"position": {
-					"x": 54.1667,
-					"y": 9.0,
-					"width": 11.25,
-					"height": 16.0
-				},
-				"control": "up"
+					"x": 17.169811320754715,
+					"y": 43.269230769230774,
+					"width": 32.83018867924528,
+					"height": 12.5
+				}
 			},
 			{
-				"id": "up-right",
-				"label": "Up-right",
+				"id": "buttons-2-midi-cc",
+				"label": "BUTTONS: 2 MIDI CC",
 				"kind": "pad",
 				"position": {
-					"x": 70.0,
-					"y": 9.0,
-					"width": 11.25,
-					"height": 16.0
-				},
-				"control": "up-right"
+					"x": 50.0,
+					"y": 43.269230769230774,
+					"width": 32.83018867924528,
+					"height": 12.5
+				}
 			},
 			{
-				"id": "right",
-				"label": "Right",
+				"id": "buttons-3-smart-sustain",
+				"label": "BUTTONS: 3 Smart sustain",
 				"kind": "pad",
 				"position": {
-					"x": 54.1667,
-					"y": 32.0,
-					"width": 11.25,
-					"height": 16.0
-				},
-				"control": "right"
+					"x": 17.169811320754715,
+					"y": 55.769230769230774,
+					"width": 32.83018867924528,
+					"height": 12.5
+				}
 			},
 			{
-				"id": "down-right",
-				"label": "Down-right",
+				"id": "buttons-4-chords",
+				"label": "BUTTONS: 4 Chords",
 				"kind": "pad",
 				"position": {
-					"x": 70.0,
-					"y": 32.0,
-					"width": 11.25,
-					"height": 16.0
-				},
-				"control": "down-right"
+					"x": 50.0,
+					"y": 55.769230769230774,
+					"width": 32.83018867924528,
+					"height": 12.5
+				}
 			},
 			{
-				"id": "down",
-				"label": "Down",
+				"id": "buttons-5-chord-extensions",
+				"label": "BUTTONS: 5 Chord extensions",
 				"kind": "pad",
 				"position": {
-					"x": 54.1667,
-					"y": 55.0,
-					"width": 11.25,
-					"height": 16.0
-				},
-				"control": "down"
+					"x": 17.169811320754715,
+					"y": 68.26923076923077,
+					"width": 32.83018867924528,
+					"height": 12.5
+				}
 			},
 			{
-				"id": "down-left",
-				"label": "Down-left",
+				"id": "buttons-6-inversions",
+				"label": "BUTTONS: 6 Inversions",
 				"kind": "pad",
 				"position": {
-					"x": 70.0,
-					"y": 55.0,
-					"width": 11.25,
-					"height": 16.0
-				},
-				"control": "down-left"
+					"x": 50.0,
+					"y": 68.26923076923077,
+					"width": 32.83018867924528,
+					"height": 12.5
+				}
 			},
 			{
-				"id": "left",
-				"label": "Left",
+				"id": "buttons-7-octave",
+				"label": "BUTTONS: 7 Octave -",
 				"kind": "pad",
 				"position": {
-					"x": 54.1667,
-					"y": 78.0,
-					"width": 11.25,
-					"height": 16.0
-				},
-				"control": "left"
+					"x": 17.169811320754715,
+					"y": 80.76923076923077,
+					"width": 32.83018867924528,
+					"height": 12.5
+				}
 			},
 			{
-				"id": "up-left",
-				"label": "Up-left",
+				"id": "buttons-8-octave",
+				"label": "BUTTONS: 8 Octave +",
 				"kind": "pad",
 				"position": {
-					"x": 70.0,
-					"y": 78.0,
-					"width": 11.25,
-					"height": 16.0
-				},
-				"control": "up-left"
+					"x": 50.0,
+					"y": 80.76923076923077,
+					"width": 32.83018867924528,
+					"height": 12.5
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB-C",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.digitmusic.co.uk/wp-content/uploads/2025/07/CMPSR-Owners-Manual_V2.pdf",
+		"https://www.digitmusic.co.uk/wp-content/uploads/2025/07/CMPSR-Cheat-Sheet.pdf"
+	]
 }

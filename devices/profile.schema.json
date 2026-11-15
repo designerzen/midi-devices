@@ -16,6 +16,36 @@
 		"ids": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
 		"portNames": { "$ref": "#/$defs/strings" },
 		"icon": { "$ref": "#/$defs/asset" },
+		"diagramSources": {
+			"type": "array",
+			"minItems": 1,
+			"items": { "type": "string", "pattern": "^https?://" }
+		},
+		"diagrams": {
+			"type": "object",
+			"required": ["panel", "connections", "interface"],
+			"additionalProperties": false,
+			"properties": {
+				"panel": { "$ref": "#/$defs/asset" },
+				"connections": { "$ref": "#/$defs/asset" },
+				"interface": { "$ref": "#/$defs/asset" },
+				"logo": { "$ref": "#/$defs/asset" }
+			}
+		},
+		"connections": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["label", "connector", "direction", "location"],
+				"additionalProperties": false,
+				"properties": {
+					"label": { "type": "string", "minLength": 1 },
+					"connector": { "type": "string", "minLength": 1 },
+					"direction": { "enum": ["input", "output", "bidirectional", "control"] },
+					"location": { "type": "string", "minLength": 1 }
+				}
+			}
+		},
 		"abilities": { "$ref": "#/$defs/strings" },
 		"hardwareControls": { "$ref": "#/$defs/strings" },
 		"notice": { "type": "string" },

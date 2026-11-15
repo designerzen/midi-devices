@@ -25,7 +25,7 @@
 	"hardwareControls": [
 		"Touch surface"
 	],
-	"notice": "The loaded Dashboard app determines note grid, channel range and CC assignments; no fixed pad mapping is assumed. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram. For per-note expression, configure matching MPE zones and pitch-bend ranges in the controller and destination; the single-channel notes GUI does not reproduce MPE gestures.",
+	"notice": "The loaded Dashboard app determines note grid, channel range and CC assignments; no fixed pad mapping is assumed. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. For per-note expression, configure matching MPE zones and pitch-bend ranges in the controller and destination; the single-channel notes GUI does not reproduce MPE gestures.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -52,9 +52,60 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 600,
-		"height": 240,
-		"elements": []
-	}
+		"src": "interface.svg",
+		"width": 650,
+		"height": 690,
+		"elements": [
+			{
+				"id": "lightpad-m-15-x-15-led-multi-touch-surface",
+				"label": "LIGHTPAD M: 15 x 15 LED multi-touch surface",
+				"kind": "button",
+				"position": {
+					"x": 6.3076923076923075,
+					"y": 14.492753623188406,
+					"width": 87.38461538461539,
+					"height": 67.3913043478261
+				}
+			},
+			{
+				"id": "edge-control-power-mode",
+				"label": "EDGE CONTROL: Power / Mode",
+				"kind": "button",
+				"position": {
+					"x": 6.3076923076923075,
+					"y": 89.85507246376811,
+					"width": 87.38461538461539,
+					"height": 5.072463768115942
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB-C",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "BLOCKS DNA edges",
+			"connector": "Magnetic",
+			"direction": "bidirectional",
+			"location": "Edges"
+		},
+		{
+			"label": "Bluetooth MIDI",
+			"connector": "Wireless",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://rolisupport.freshdesk.com/en/support/solutions/articles/36000019127-lightpad-block-and-lightpad-block-m-compared"
+	]
 }

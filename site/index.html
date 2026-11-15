@@ -132,7 +132,7 @@
 				heading.append(title)
 				card.append(heading, ports, element("p", profile.description))
 				card.dataset.connected = "unknown"
-				const panel = asset(folder, profile.surface?.src ?? "panel.svg")
+				const panel = asset(folder, profile.diagrams?.panel ?? "panel.svg")
 				if (panel) {
 					const image = element("img", undefined, "diagram")
 					image.src = panel
@@ -142,12 +142,28 @@
 				}
 				const assets = element("div", undefined, "asset-links")
 				if (panel) assets.append(link("Panel SVG", panel))
+				for (const [key, label] of [["connections", "Connections SVG"], ["interface", "Interface SVG"], ["logo", "Logo SVG"]]) {
+					const url = asset(folder, profile.diagrams?.[key])
+					if (url) assets.append(link(label, url))
+				}
 				if (icon) assets.append(link("Icon", icon))
 				assets.append(link("Profile JSON", new URL(`${id}.json`, folder).href))
 				card.append(assets)
 				list(card, "Capabilities", profile.abilities)
 				const details = element("details")
 				details.append(element("summary", "Setup, controls and documentation"))
+				for (const [key, label] of [["interface", "Labelled hardware interface"], ["connections", "Inputs, outputs and controls"]]) {
+					const url = asset(folder, profile.diagrams?.[key])
+					if (!url) continue
+					const diagram = element("details")
+					diagram.append(element("summary", label))
+					const image = element("img", undefined, "diagram")
+					image.src = url
+					image.alt = `${profile.name}: ${label.toLowerCase()}`
+					image.loading = "lazy"
+					diagram.append(image)
+					details.append(diagram)
+				}
 				if (profile.notice) details.append(element("p", profile.notice, "notice"))
 				list(details, "Hardware controls", profile.hardwareControls)
 				const identity = element("dl")
@@ -187,6 +203,11 @@
 				for (const entry of profile.documentation ?? []) {
 					const item = element("li")
 					externalLink(item, entry.title, entry.url)
+					if (item.childElementCount) docs.append(item)
+				}
+				for (const [index, url] of (profile.diagramSources ?? []).entries()) {
+					const item = element("li")
+					externalLink(item, `Hardware drawing reference ${index + 1}`, url)
 					if (item.childElementCount) docs.append(item)
 				}
 				for (const [label, url] of [["Product page", profile.productUrl], ["Manufacturer website", profile.manufacturerUrl]]) {

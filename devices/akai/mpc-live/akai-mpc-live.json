@@ -5,8 +5,15 @@
 	"name": "Akai MPC Live",
 	"manufacturer": "Akai Professional",
 	"manufacturerUrl": "https://www.akaipro.com/",
-	"ids": ["akai-mpc-live"],
-	"portNames": ["MPC Live", "Akai MPC Live", "MPC Live MIDI 1", "MPC Live Public"],
+	"ids": [
+		"akai-mpc-live"
+	],
+	"portNames": [
+		"MPC Live",
+		"Akai MPC Live",
+		"MPC Live MIDI 1",
+		"MPC Live Public"
+	],
 	"description": "First-generation MPC Live sampler and sequencer with sixteen pads and four assignable Q-Link knobs.",
 	"icon": "icon.svg",
 	"documentation": [
@@ -15,7 +22,11 @@
 			"url": "https://www.akaipro.com/downloads-and-support/downloads/?legacy=true&product=MPC+Live"
 		}
 	],
-	"abilities": ["Velocity-sensitive pad notes", "MIDI sequence output", "Assignable Q-Link CCs"],
+	"abilities": [
+		"Velocity-sensitive pad notes",
+		"MIDI sequence output",
+		"Assignable Q-Link CCs"
+	],
 	"hardwareControls": [
 		"16 velocity-sensitive pads",
 		"Four Q-Link knobs",
@@ -84,318 +95,637 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1200,
-		"height": 620,
+		"src": "interface.svg",
+		"width": 1250,
+		"height": 750,
 		"elements": [
 			{
-				"id": "q-link-1",
-				"label": "Assignable Q-Link 1",
+				"id": "pad-functions-pad-bank-a",
+				"label": "PAD FUNCTIONS: Pad bank A",
+				"kind": "button",
+				"position": {
+					"x": 2.48,
+					"y": 12.666666666666668,
+					"width": 10.76,
+					"height": 4.333333333333334
+				}
+			},
+			{
+				"id": "pad-functions-pad-bank-b",
+				"label": "PAD FUNCTIONS: Pad bank B",
+				"kind": "button",
+				"position": {
+					"x": 13.239999999999998,
+					"y": 12.666666666666668,
+					"width": 10.76,
+					"height": 4.333333333333334
+				}
+			},
+			{
+				"id": "pad-functions-pad-bank-c",
+				"label": "PAD FUNCTIONS: Pad bank C",
+				"kind": "button",
+				"position": {
+					"x": 24.0,
+					"y": 12.666666666666668,
+					"width": 10.76,
+					"height": 4.333333333333334
+				}
+			},
+			{
+				"id": "pad-functions-pad-bank-d",
+				"label": "PAD FUNCTIONS: Pad bank D",
+				"kind": "button",
+				"position": {
+					"x": 34.760000000000005,
+					"y": 12.666666666666668,
+					"width": 10.76,
+					"height": 4.333333333333334
+				}
+			},
+			{
+				"id": "pad-functions-note-repeat",
+				"label": "PAD FUNCTIONS: Note repeat",
+				"kind": "button",
+				"position": {
+					"x": 2.48,
+					"y": 17.0,
+					"width": 10.76,
+					"height": 4.333333333333334
+				}
+			},
+			{
+				"id": "pad-functions-full-level",
+				"label": "PAD FUNCTIONS: Full level",
+				"kind": "button",
+				"position": {
+					"x": 13.239999999999998,
+					"y": 17.0,
+					"width": 10.76,
+					"height": 4.333333333333334
+				}
+			},
+			{
+				"id": "pad-functions-16-level",
+				"label": "PAD FUNCTIONS: 16 level",
+				"kind": "button",
+				"position": {
+					"x": 24.0,
+					"y": 17.0,
+					"width": 10.76,
+					"height": 4.333333333333334
+				}
+			},
+			{
+				"id": "pad-functions-erase",
+				"label": "PAD FUNCTIONS: Erase",
+				"kind": "button",
+				"position": {
+					"x": 34.760000000000005,
+					"y": 17.0,
+					"width": 10.76,
+					"height": 4.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-1",
+				"label": "PADS: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.48,
+					"y": 28.666666666666668,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-2",
+				"label": "PADS: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 13.239999999999998,
+					"y": 28.666666666666668,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-3",
+				"label": "PADS: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 24.0,
+					"y": 28.666666666666668,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-4",
+				"label": "PADS: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 34.760000000000005,
+					"y": 28.666666666666668,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-5",
+				"label": "PADS: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 2.48,
+					"y": 42.0,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-6",
+				"label": "PADS: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 13.239999999999998,
+					"y": 42.0,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-7",
+				"label": "PADS: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 24.0,
+					"y": 42.0,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-8",
+				"label": "PADS: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 34.760000000000005,
+					"y": 42.0,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-9",
+				"label": "PADS: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 2.48,
+					"y": 55.333333333333336,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-10",
+				"label": "PADS: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 13.239999999999998,
+					"y": 55.333333333333336,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-11",
+				"label": "PADS: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 24.0,
+					"y": 55.333333333333336,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-12",
+				"label": "PADS: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 34.760000000000005,
+					"y": 55.333333333333336,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-13",
+				"label": "PADS: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 2.48,
+					"y": 68.66666666666667,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-14",
+				"label": "PADS: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 13.239999999999998,
+					"y": 68.66666666666667,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-15",
+				"label": "PADS: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 24.0,
+					"y": 68.66666666666667,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "pads-pad-16",
+				"label": "PADS: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 34.760000000000005,
+					"y": 68.66666666666667,
+					"width": 10.76,
+					"height": 13.333333333333334
+				}
+			},
+			{
+				"id": "touch-display-7-inch-touchscreen",
+				"label": "TOUCH DISPLAY: 7 inch touchscreen",
+				"kind": "button",
+				"position": {
+					"x": 48.480000000000004,
+					"y": 16.0,
+					"width": 35.04,
+					"height": 44.0
+				}
+			},
+			{
+				"id": "q-link-q-link-1",
+				"label": "Q-LINK: Q-Link 1",
 				"kind": "knob",
 				"position": {
-					"x": 90.25,
-					"y": 22.258064516129032,
-					"width": 4.5,
-					"height": 8.709677419354838
-				},
-				"control": "q-link-1",
-				"learnable": true
+					"x": 86.08,
+					"y": 16.0,
+					"width": 11.44,
+					"height": 8.799999999999999
+				}
 			},
 			{
-				"id": "q-link-2",
-				"label": "Assignable Q-Link 2",
+				"id": "q-link-q-link-2",
+				"label": "Q-LINK: Q-Link 2",
 				"kind": "knob",
 				"position": {
-					"x": 90.25,
-					"y": 36.45161290322581,
-					"width": 4.5,
-					"height": 8.709677419354838
-				},
-				"control": "q-link-2",
-				"learnable": true
+					"x": 86.08,
+					"y": 24.8,
+					"width": 11.44,
+					"height": 8.799999999999999
+				}
 			},
 			{
-				"id": "q-link-3",
-				"label": "Assignable Q-Link 3",
+				"id": "q-link-q-link-3",
+				"label": "Q-LINK: Q-Link 3",
 				"kind": "knob",
 				"position": {
-					"x": 90.25,
-					"y": 50.645161290322584,
-					"width": 4.5,
-					"height": 8.709677419354838
-				},
-				"control": "q-link-3",
-				"learnable": true
+					"x": 86.08,
+					"y": 33.6,
+					"width": 11.44,
+					"height": 8.799999999999999
+				}
 			},
 			{
-				"id": "q-link-4",
-				"label": "Assignable Q-Link 4",
+				"id": "q-link-q-link-4",
+				"label": "Q-LINK: Q-Link 4",
 				"kind": "knob",
 				"position": {
-					"x": 90.25,
-					"y": 64.83870967741936,
-					"width": 4.5,
-					"height": 8.709677419354838
-				},
-				"control": "q-link-4",
-				"learnable": true
+					"x": 86.08,
+					"y": 42.4,
+					"width": 11.44,
+					"height": 8.799999999999999
+				}
 			},
 			{
-				"id": "pad-1",
-				"label": "Pad 1",
-				"kind": "pad",
+				"id": "q-link-q-link-select",
+				"label": "Q-LINK: Q-Link select",
+				"kind": "button",
 				"position": {
-					"x": 2.083333333333333,
-					"y": 78.38709677419354,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 36
-				},
-				"learnable": true
+					"x": 86.08,
+					"y": 51.2,
+					"width": 11.44,
+					"height": 8.799999999999999
+				}
 			},
 			{
-				"id": "pad-2",
-				"label": "Pad 2",
-				"kind": "pad",
+				"id": "data-data-dial",
+				"label": "DATA: Data dial",
+				"kind": "knob",
 				"position": {
-					"x": 12.083333333333334,
-					"y": 78.38709677419354,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 37
-				},
-				"learnable": true
+					"x": 86.08,
+					"y": 66.0,
+					"width": 11.44,
+					"height": 14.000000000000002
+				}
 			},
 			{
-				"id": "pad-3",
-				"label": "Pad 3",
-				"kind": "pad",
+				"id": "navigation-menu",
+				"label": "NAVIGATION: Menu",
+				"kind": "button",
 				"position": {
-					"x": 22.083333333333332,
-					"y": 78.38709677419354,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 38
-				},
-				"learnable": true
+					"x": 48.480000000000004,
+					"y": 67.33333333333333,
+					"width": 11.68,
+					"height": 6.333333333333334
+				}
 			},
 			{
-				"id": "pad-4",
-				"label": "Pad 4",
-				"kind": "pad",
+				"id": "navigation-main",
+				"label": "NAVIGATION: Main",
+				"kind": "button",
 				"position": {
-					"x": 32.083333333333336,
-					"y": 78.38709677419354,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 39
-				},
-				"learnable": true
+					"x": 60.160000000000004,
+					"y": 67.33333333333333,
+					"width": 11.68,
+					"height": 6.333333333333334
+				}
 			},
 			{
-				"id": "pad-5",
-				"label": "Pad 5",
-				"kind": "pad",
+				"id": "navigation-browse",
+				"label": "NAVIGATION: Browse",
+				"kind": "button",
 				"position": {
-					"x": 2.083333333333333,
-					"y": 61.12903225806452,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 40
-				},
-				"learnable": true
+					"x": 71.84,
+					"y": 67.33333333333333,
+					"width": 11.68,
+					"height": 6.333333333333334
+				}
 			},
 			{
-				"id": "pad-6",
-				"label": "Pad 6",
-				"kind": "pad",
+				"id": "navigation-shift",
+				"label": "NAVIGATION: Shift",
+				"kind": "button",
 				"position": {
-					"x": 12.083333333333334,
-					"y": 61.12903225806452,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 41
-				},
-				"learnable": true
+					"x": 48.480000000000004,
+					"y": 73.66666666666667,
+					"width": 11.68,
+					"height": 6.333333333333334
+				}
 			},
 			{
-				"id": "pad-7",
-				"label": "Pad 7",
-				"kind": "pad",
+				"id": "navigation-undo",
+				"label": "NAVIGATION: Undo",
+				"kind": "button",
 				"position": {
-					"x": 22.083333333333332,
-					"y": 61.12903225806452,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 42
-				},
-				"learnable": true
+					"x": 60.160000000000004,
+					"y": 73.66666666666667,
+					"width": 11.68,
+					"height": 6.333333333333334
+				}
 			},
 			{
-				"id": "pad-8",
-				"label": "Pad 8",
-				"kind": "pad",
+				"id": "navigation-copy-delete",
+				"label": "NAVIGATION: Copy / Delete",
+				"kind": "button",
 				"position": {
-					"x": 32.083333333333336,
-					"y": 61.12903225806452,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 43
-				},
-				"learnable": true
+					"x": 71.84,
+					"y": 73.66666666666667,
+					"width": 11.68,
+					"height": 6.333333333333334
+				}
 			},
 			{
-				"id": "pad-9",
-				"label": "Pad 9",
-				"kind": "pad",
+				"id": "transport-tap",
+				"label": "TRANSPORT: Tap",
+				"kind": "button",
 				"position": {
-					"x": 2.083333333333333,
-					"y": 43.87096774193549,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 44
-				},
-				"learnable": true
+					"x": 2.48,
+					"y": 89.33333333333333,
+					"width": 15.840000000000002,
+					"height": 5.333333333333334
+				}
 			},
 			{
-				"id": "pad-10",
-				"label": "Pad 10",
-				"kind": "pad",
+				"id": "transport-rec",
+				"label": "TRANSPORT: Rec",
+				"kind": "button",
 				"position": {
-					"x": 12.083333333333334,
-					"y": 43.87096774193549,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 45
-				},
-				"learnable": true
+					"x": 18.32,
+					"y": 89.33333333333333,
+					"width": 15.840000000000002,
+					"height": 5.333333333333334
+				}
 			},
 			{
-				"id": "pad-11",
-				"label": "Pad 11",
-				"kind": "pad",
+				"id": "transport-overdub",
+				"label": "TRANSPORT: Overdub",
+				"kind": "button",
 				"position": {
-					"x": 22.083333333333332,
-					"y": 43.87096774193549,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 46
-				},
-				"learnable": true
+					"x": 34.160000000000004,
+					"y": 89.33333333333333,
+					"width": 15.840000000000002,
+					"height": 5.333333333333334
+				}
 			},
 			{
-				"id": "pad-12",
-				"label": "Pad 12",
-				"kind": "pad",
+				"id": "transport-stop",
+				"label": "TRANSPORT: Stop",
+				"kind": "button",
 				"position": {
-					"x": 32.083333333333336,
-					"y": 43.87096774193549,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 47
-				},
-				"learnable": true
+					"x": 50.0,
+					"y": 89.33333333333333,
+					"width": 15.840000000000002,
+					"height": 5.333333333333334
+				}
 			},
 			{
-				"id": "pad-13",
-				"label": "Pad 13",
-				"kind": "pad",
+				"id": "transport-play",
+				"label": "TRANSPORT: Play",
+				"kind": "button",
 				"position": {
-					"x": 2.083333333333333,
-					"y": 26.61290322580645,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 48
-				},
-				"learnable": true
+					"x": 65.84,
+					"y": 89.33333333333333,
+					"width": 15.840000000000002,
+					"height": 5.333333333333334
+				}
 			},
 			{
-				"id": "pad-14",
-				"label": "Pad 14",
-				"kind": "pad",
+				"id": "transport-play-start",
+				"label": "TRANSPORT: Play start",
+				"kind": "button",
 				"position": {
-					"x": 12.083333333333334,
-					"y": 26.61290322580645,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 49
-				},
-				"learnable": true
-			},
-			{
-				"id": "pad-15",
-				"label": "Pad 15",
-				"kind": "pad",
-				"position": {
-					"x": 22.083333333333332,
-					"y": 26.61290322580645,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 50
-				},
-				"learnable": true
-			},
-			{
-				"id": "pad-16",
-				"label": "Pad 16",
-				"kind": "pad",
-				"position": {
-					"x": 32.083333333333336,
-					"y": 26.61290322580645,
-					"width": 8.75,
-					"height": 14.838709677419354
-				},
-				"message": {
-					"type": "note",
-					"number": 51
-				},
-				"learnable": true
+					"x": 81.67999999999999,
+					"y": 89.33333333333333,
+					"width": 15.840000000000002,
+					"height": 5.333333333333334
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Input L",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Input R",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Output 1",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Output 2",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Output 3",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Output 4",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Output 5",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Output 6",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-B",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "Power",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN 1",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN 2",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT A",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT B",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phono L/R",
+			"connector": "RCA",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Ground",
+			"connector": "Terminal",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-A 1",
+			"connector": "USB host",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-A 2",
+			"connector": "USB host",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "SD card",
+			"connector": "SD",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Rec volume",
+			"connector": "Knob",
+			"direction": "control",
+			"location": "Rear"
+		},
+		{
+			"label": "Master volume",
+			"connector": "Knob",
+			"direction": "control",
+			"location": "Rear"
+		},
+		{
+			"label": "Line / Phono",
+			"connector": "Switch",
+			"direction": "control",
+			"location": "Rear"
+		},
+		{
+			"label": "Power on/off",
+			"connector": "Switch",
+			"direction": "control",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://cdn.inmusicbrands.com/akai/M2P6CF3/MPC%20X%2CMPC%20Live%2CMPC%20Touch-UserGuide-v2.6.pdf"
+	]
 }

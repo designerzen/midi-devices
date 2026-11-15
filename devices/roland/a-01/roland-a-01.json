@@ -7,8 +7,14 @@
 	"manufacturerUrl": "https://www.roland.com/",
 	"productUrl": "https://www.roland.com/global/products/a-01/",
 	"description": "Assignable MIDI/Bluetooth controller with an 8-bit synthesizer.",
-	"ids": ["roland-a-01"],
-	"portNames": ["A-01", "A-01 MIDI 1", "Roland A-01"],
+	"ids": [
+		"roland-a-01"
+	],
+	"portNames": [
+		"A-01",
+		"A-01 MIDI 1",
+		"Roland A-01"
+	],
 	"icon": "icon.svg",
 	"documentation": [
 		{
@@ -16,7 +22,12 @@
 			"url": "https://static.roland.com/assets/media/pdf/A-01_e02_W.pdf"
 		}
 	],
-	"abilities": ["USB MIDI", "DIN MIDI IN/OUT", "MIDI notes", "Documented controller mappings"],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI IN/OUT",
+		"MIDI notes",
+		"Documented controller mappings"
+	],
 	"hardwareControls": [
 		"Performance: Volume, Ribbon C1, Ribbon C2",
 		"Encoders: Encoder 1, Encoder 2, Encoder 3, Encoder 4",
@@ -94,82 +105,313 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1200,
-		"height": 540,
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 680,
 		"elements": [
 			{
-				"id": "performance-ribbon-c1-touch",
-				"label": "Ribbon C1",
+				"id": "ribbons-c1",
+				"label": "RIBBONS: C1",
 				"kind": "fader",
 				"position": {
-					"x": 3.0833333333333335,
-					"y": 42.77777777777778,
-					"width": 6.333333333333334,
-					"height": 9.25925925925926
-				},
-				"control": "performance-ribbon-c1-touch"
+					"x": 2.0666666666666664,
+					"y": 13.970588235294118,
+					"width": 5.6000000000000005,
+					"height": 69.85294117647058
+				}
 			},
 			{
-				"id": "performance-ribbon-c2-touch",
-				"label": "Ribbon C2",
+				"id": "ribbons-c2",
+				"label": "RIBBONS: C2",
 				"kind": "fader",
 				"position": {
-					"x": 3.0833333333333335,
-					"y": 58.7037037037037,
-					"width": 6.333333333333334,
-					"height": 9.25925925925926
-				},
-				"control": "performance-ribbon-c2-touch"
+					"x": 7.666666666666666,
+					"y": 13.970588235294118,
+					"width": 5.6000000000000005,
+					"height": 69.85294117647058
+				}
 			},
 			{
-				"id": "encoders-encoder-1-knob",
-				"label": "Encoder 1",
+				"id": "mode-memory-bank-1",
+				"label": "MODE / MEMORY: Bank 1",
+				"kind": "button",
+				"position": {
+					"x": 15.066666666666666,
+					"y": 13.970588235294118,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-bank-2",
+				"label": "MODE / MEMORY: Bank 2",
+				"kind": "button",
+				"position": {
+					"x": 21.866666666666667,
+					"y": 13.970588235294118,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-dec",
+				"label": "MODE / MEMORY: Dec",
+				"kind": "button",
+				"position": {
+					"x": 28.666666666666668,
+					"y": 13.970588235294118,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-inc",
+				"label": "MODE / MEMORY: Inc",
+				"kind": "button",
+				"position": {
+					"x": 35.46666666666667,
+					"y": 13.970588235294118,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-controller",
+				"label": "MODE / MEMORY: Controller",
+				"kind": "button",
+				"position": {
+					"x": 15.066666666666666,
+					"y": 31.433823529411764,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-synth",
+				"label": "MODE / MEMORY: Synth",
+				"kind": "button",
+				"position": {
+					"x": 21.866666666666667,
+					"y": 31.433823529411764,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-seq",
+				"label": "MODE / MEMORY: Seq",
+				"kind": "button",
+				"position": {
+					"x": 28.666666666666668,
+					"y": 31.433823529411764,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-menu",
+				"label": "MODE / MEMORY: Menu",
+				"kind": "button",
+				"position": {
+					"x": 35.46666666666667,
+					"y": 31.433823529411764,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-patch-1",
+				"label": "MODE / MEMORY: Patch 1",
+				"kind": "button",
+				"position": {
+					"x": 15.066666666666666,
+					"y": 48.89705882352941,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-patch-2",
+				"label": "MODE / MEMORY: Patch 2",
+				"kind": "button",
+				"position": {
+					"x": 21.866666666666667,
+					"y": 48.89705882352941,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-patch-3",
+				"label": "MODE / MEMORY: Patch 3",
+				"kind": "button",
+				"position": {
+					"x": 28.666666666666668,
+					"y": 48.89705882352941,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-patch-4",
+				"label": "MODE / MEMORY: Patch 4",
+				"kind": "button",
+				"position": {
+					"x": 35.46666666666667,
+					"y": 48.89705882352941,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-play-stop",
+				"label": "MODE / MEMORY: Play / Stop",
+				"kind": "button",
+				"position": {
+					"x": 15.066666666666666,
+					"y": 66.36029411764706,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-write",
+				"label": "MODE / MEMORY: Write",
+				"kind": "button",
+				"position": {
+					"x": 21.866666666666667,
+					"y": 66.36029411764706,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-function",
+				"label": "MODE / MEMORY: Function",
+				"kind": "button",
+				"position": {
+					"x": 28.666666666666668,
+					"y": 66.36029411764706,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "mode-memory-shift",
+				"label": "MODE / MEMORY: Shift",
+				"kind": "button",
+				"position": {
+					"x": 35.46666666666667,
+					"y": 66.36029411764706,
+					"width": 6.800000000000001,
+					"height": 17.463235294117645
+				}
+			},
+			{
+				"id": "display-display",
+				"label": "DISPLAY: Display",
+				"kind": "button",
+				"position": {
+					"x": 44.4,
+					"y": 13.970588235294118,
+					"width": 53.53333333333333,
+					"height": 24.264705882352942
+				}
+			},
+			{
+				"id": "encoders-encoder-1",
+				"label": "ENCODERS: Encoder 1",
 				"kind": "knob",
 				"position": {
-					"x": 15.416666666666668,
-					"y": 26.851851851851855,
-					"width": 6.333333333333334,
-					"height": 9.25925925925926
+					"x": 44.4,
+					"y": 46.32352941176471,
+					"width": 13.383333333333333,
+					"height": 37.5
 				},
 				"control": "encoders-encoder-1-knob"
 			},
 			{
-				"id": "encoders-encoder-2-knob",
-				"label": "Encoder 2",
+				"id": "encoders-encoder-2",
+				"label": "ENCODERS: Encoder 2",
 				"kind": "knob",
 				"position": {
-					"x": 23.333333333333332,
-					"y": 26.851851851851855,
-					"width": 6.333333333333334,
-					"height": 9.25925925925926
+					"x": 57.78333333333333,
+					"y": 46.32352941176471,
+					"width": 13.383333333333333,
+					"height": 37.5
 				},
 				"control": "encoders-encoder-2-knob"
 			},
 			{
-				"id": "encoders-encoder-3-knob",
-				"label": "Encoder 3",
+				"id": "encoders-encoder-3",
+				"label": "ENCODERS: Encoder 3",
 				"kind": "knob",
 				"position": {
-					"x": 15.416666666666668,
-					"y": 42.77777777777778,
-					"width": 6.333333333333334,
-					"height": 9.25925925925926
+					"x": 71.16666666666667,
+					"y": 46.32352941176471,
+					"width": 13.383333333333333,
+					"height": 37.5
 				},
 				"control": "encoders-encoder-3-knob"
 			},
 			{
-				"id": "encoders-encoder-4-knob",
-				"label": "Encoder 4",
+				"id": "encoders-encoder-4",
+				"label": "ENCODERS: Encoder 4",
 				"kind": "knob",
 				"position": {
-					"x": 23.333333333333332,
-					"y": 42.77777777777778,
-					"width": 6.333333333333334,
-					"height": 9.25925925925926
+					"x": 84.55,
+					"y": 46.32352941176471,
+					"width": 13.383333333333333,
+					"height": 37.5
 				},
 				"control": "encoders-encoder-4-knob"
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Micro USB",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "CV OUT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Gate OUT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://static.roland.com/assets/media/pdf/A-01_e02_W.pdf"
+	]
 }

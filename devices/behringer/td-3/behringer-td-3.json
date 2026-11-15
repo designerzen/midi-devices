@@ -24,7 +24,7 @@
 	"hardwareControls": [
 		"Hardware synthesis controls"
 	],
-	"notice": "Select the appropriate MIDI or USB clock source for external synchronization. The analog filter knobs are not MIDI CC controls. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram.",
+	"notice": "Select the appropriate MIDI or USB clock source for external synchronization. The analog filter knobs are not MIDI CC controls. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -51,9 +51,515 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 600,
-		"height": 240,
-		"elements": []
-	}
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 600,
+		"elements": [
+			{
+				"id": "sound-waveform",
+				"label": "SOUND: Waveform",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-tuning",
+				"label": "SOUND: Tuning",
+				"kind": "knob",
+				"position": {
+					"x": 11.204545454545453,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-cutoff",
+				"label": "SOUND: Cutoff",
+				"kind": "knob",
+				"position": {
+					"x": 19.825757575757574,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-resonance",
+				"label": "SOUND: Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 28.4469696969697,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-env-mod",
+				"label": "SOUND: Env mod",
+				"kind": "knob",
+				"position": {
+					"x": 37.06818181818182,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-decay",
+				"label": "SOUND: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 45.68939393939394,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-accent",
+				"label": "SOUND: Accent",
+				"kind": "knob",
+				"position": {
+					"x": 54.31060606060606,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-volume",
+				"label": "SOUND: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 62.93181818181818,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-distortion",
+				"label": "SOUND: Distortion",
+				"kind": "knob",
+				"position": {
+					"x": 71.55303030303031,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-tone",
+				"label": "SOUND: Tone",
+				"kind": "knob",
+				"position": {
+					"x": 80.17424242424242,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "sound-distortion-on",
+				"label": "SOUND: Distortion on",
+				"kind": "button",
+				"position": {
+					"x": 88.79545454545455,
+					"y": 15.833333333333332,
+					"width": 8.621212121212121,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "mode-pattern-track",
+				"label": "MODE / PATTERN: Track",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 44.166666666666664,
+					"width": 8.555555555555557,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "mode-pattern-mode",
+				"label": "MODE / PATTERN: Mode",
+				"kind": "knob",
+				"position": {
+					"x": 11.13888888888889,
+					"y": 44.166666666666664,
+					"width": 8.555555555555557,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "mode-pattern-tempo",
+				"label": "MODE / PATTERN: Tempo",
+				"kind": "knob",
+				"position": {
+					"x": 19.694444444444446,
+					"y": 44.166666666666664,
+					"width": 8.555555555555557,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "mode-pattern-pattern-group",
+				"label": "MODE / PATTERN: Pattern group",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 66.25,
+					"width": 8.555555555555557,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "mode-pattern-run-stop",
+				"label": "MODE / PATTERN: Run / Stop",
+				"kind": "button",
+				"position": {
+					"x": 11.13888888888889,
+					"y": 66.25,
+					"width": 8.555555555555557,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "mode-pattern-pattern-clear",
+				"label": "MODE / PATTERN: Pattern clear",
+				"kind": "button",
+				"position": {
+					"x": 19.694444444444446,
+					"y": 66.25,
+					"width": 8.555555555555557,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-pitch-mode",
+				"label": "SEQUENCER: Pitch mode",
+				"kind": "button",
+				"position": {
+					"x": 30.5,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-time-mode",
+				"label": "SEQUENCER: Time mode",
+				"kind": "button",
+				"position": {
+					"x": 35.6474358974359,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-function",
+				"label": "SEQUENCER: Function",
+				"kind": "button",
+				"position": {
+					"x": 40.794871794871796,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-transpose",
+				"label": "SEQUENCER: Transpose -",
+				"kind": "button",
+				"position": {
+					"x": 45.942307692307686,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-transpose-2",
+				"label": "SEQUENCER: Transpose +",
+				"kind": "button",
+				"position": {
+					"x": 51.089743589743584,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-accent",
+				"label": "SEQUENCER: Accent",
+				"kind": "button",
+				"position": {
+					"x": 56.23717948717949,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-slide",
+				"label": "SEQUENCER: Slide",
+				"kind": "button",
+				"position": {
+					"x": 61.38461538461538,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-back",
+				"label": "SEQUENCER: Back",
+				"kind": "button",
+				"position": {
+					"x": 66.53205128205127,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-tap",
+				"label": "SEQUENCER: Tap",
+				"kind": "button",
+				"position": {
+					"x": 71.67948717948718,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-1",
+				"label": "SEQUENCER: Key 1",
+				"kind": "key",
+				"position": {
+					"x": 76.82692307692307,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-2",
+				"label": "SEQUENCER: Key 2",
+				"kind": "key",
+				"position": {
+					"x": 81.97435897435898,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-3",
+				"label": "SEQUENCER: Key 3",
+				"kind": "key",
+				"position": {
+					"x": 87.12179487179488,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-4",
+				"label": "SEQUENCER: Key 4",
+				"kind": "key",
+				"position": {
+					"x": 92.26923076923076,
+					"y": 44.166666666666664,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-5",
+				"label": "SEQUENCER: Key 5",
+				"kind": "key",
+				"position": {
+					"x": 30.5,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-6",
+				"label": "SEQUENCER: Key 6",
+				"kind": "key",
+				"position": {
+					"x": 35.6474358974359,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-7",
+				"label": "SEQUENCER: Key 7",
+				"kind": "key",
+				"position": {
+					"x": 40.794871794871796,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-8",
+				"label": "SEQUENCER: Key 8",
+				"kind": "key",
+				"position": {
+					"x": 45.942307692307686,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-9",
+				"label": "SEQUENCER: Key 9",
+				"kind": "key",
+				"position": {
+					"x": 51.089743589743584,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-10",
+				"label": "SEQUENCER: Key 10",
+				"kind": "key",
+				"position": {
+					"x": 56.23717948717949,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-11",
+				"label": "SEQUENCER: Key 11",
+				"kind": "key",
+				"position": {
+					"x": 61.38461538461538,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-12",
+				"label": "SEQUENCER: Key 12",
+				"kind": "key",
+				"position": {
+					"x": 66.53205128205127,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			},
+			{
+				"id": "sequencer-key-13",
+				"label": "SEQUENCER: Key 13",
+				"kind": "key",
+				"position": {
+					"x": 71.67948717948718,
+					"y": 66.25,
+					"width": 5.147435897435897,
+					"height": 22.083333333333332
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Filter IN",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Main OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-B",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "Power",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "CV OUT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Gate OUT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Sync IN",
+			"connector": "3.5 mm",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Power on/off",
+			"connector": "Switch",
+			"direction": "control",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.behringer.com/en/products/0718-AAN"
+	]
 }

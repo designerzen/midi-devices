@@ -24,7 +24,7 @@
 	"hardwareControls": [
 		"Hardware synthesis controls"
 	],
-	"notice": "Check MIDI channel and firmware configuration. Patch connections and analog panel controls require hardware operation. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram.",
+	"notice": "Check MIDI channel and firmware configuration. Patch connections and analog panel controls require hardware operation. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -51,9 +51,1493 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 600,
-		"height": 240,
-		"elements": []
-	}
+		"src": "interface.svg",
+		"width": 1600,
+		"height": 640,
+		"elements": [
+			{
+				"id": "osc-1-osc-2-tune-1",
+				"label": "OSC 1 / OSC 2: Tune 1",
+				"kind": "knob",
+				"position": {
+					"x": 1.9375,
+					"y": 20.3125,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-osc-mix",
+				"label": "OSC 1 / OSC 2: Osc mix",
+				"kind": "knob",
+				"position": {
+					"x": 9.395833333333332,
+					"y": 20.3125,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-tune-2",
+				"label": "OSC 1 / OSC 2: Tune 2",
+				"kind": "knob",
+				"position": {
+					"x": 16.854166666666664,
+					"y": 20.3125,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-shape-1",
+				"label": "OSC 1 / OSC 2: Shape 1",
+				"kind": "knob",
+				"position": {
+					"x": 1.9375,
+					"y": 36.9140625,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-range-1",
+				"label": "OSC 1 / OSC 2: Range 1",
+				"kind": "button",
+				"position": {
+					"x": 9.395833333333332,
+					"y": 36.9140625,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-shape-2",
+				"label": "OSC 1 / OSC 2: Shape 2",
+				"kind": "knob",
+				"position": {
+					"x": 16.854166666666664,
+					"y": 36.9140625,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-width-1",
+				"label": "OSC 1 / OSC 2: Width 1",
+				"kind": "knob",
+				"position": {
+					"x": 1.9375,
+					"y": 53.515625,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-osc-sync",
+				"label": "OSC 1 / OSC 2: Osc sync",
+				"kind": "button",
+				"position": {
+					"x": 9.395833333333332,
+					"y": 53.515625,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-width-2",
+				"label": "OSC 1 / OSC 2: Width 2",
+				"kind": "knob",
+				"position": {
+					"x": 16.854166666666664,
+					"y": 53.515625,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "osc-1-osc-2-paraphonic",
+				"label": "OSC 1 / OSC 2: Paraphonic",
+				"kind": "button",
+				"position": {
+					"x": 1.9375,
+					"y": 70.1171875,
+					"width": 7.458333333333334,
+					"height": 16.6015625
+				}
+			},
+			{
+				"id": "vcf-mode",
+				"label": "VCF: Mode",
+				"kind": "button",
+				"position": {
+					"x": 26.0,
+					"y": 14.84375,
+					"width": 8.625,
+					"height": 11.979166666666668
+				}
+			},
+			{
+				"id": "vcf-frequency",
+				"label": "VCF: Frequency",
+				"kind": "knob",
+				"position": {
+					"x": 26.0,
+					"y": 26.822916666666668,
+					"width": 8.625,
+					"height": 11.979166666666668
+				}
+			},
+			{
+				"id": "vcf-resonance",
+				"label": "VCF: Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 26.0,
+					"y": 38.802083333333336,
+					"width": 8.625,
+					"height": 11.979166666666668
+				}
+			},
+			{
+				"id": "vcf-mod-depth",
+				"label": "VCF: Mod depth",
+				"kind": "knob",
+				"position": {
+					"x": 26.0,
+					"y": 50.78125,
+					"width": 8.625,
+					"height": 11.979166666666668
+				}
+			},
+			{
+				"id": "vcf-env-depth",
+				"label": "VCF: Env depth",
+				"kind": "knob",
+				"position": {
+					"x": 26.0,
+					"y": 62.76041666666667,
+					"width": 8.625,
+					"height": 11.979166666666668
+				}
+			},
+			{
+				"id": "vcf-key-track",
+				"label": "VCF: Key track",
+				"kind": "button",
+				"position": {
+					"x": 26.0,
+					"y": 74.73958333333334,
+					"width": 8.625,
+					"height": 11.979166666666668
+				}
+			},
+			{
+				"id": "lfo-key-sync",
+				"label": "LFO: Key sync",
+				"kind": "button",
+				"position": {
+					"x": 36.3125,
+					"y": 14.84375,
+					"width": 5.5625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "lfo-rate",
+				"label": "LFO: Rate",
+				"kind": "knob",
+				"position": {
+					"x": 41.875,
+					"y": 14.84375,
+					"width": 5.5625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "lfo-shape",
+				"label": "LFO: Shape",
+				"kind": "knob",
+				"position": {
+					"x": 36.3125,
+					"y": 30.078125,
+					"width": 5.5625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "delay-overdrive-time",
+				"label": "DELAY / OVERDRIVE: Time",
+				"kind": "knob",
+				"position": {
+					"x": 49.125,
+					"y": 14.84375,
+					"width": 6.625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "delay-overdrive-repeats",
+				"label": "DELAY / OVERDRIVE: Repeats",
+				"kind": "knob",
+				"position": {
+					"x": 55.75,
+					"y": 14.84375,
+					"width": 6.625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "delay-overdrive-mix",
+				"label": "DELAY / OVERDRIVE: Mix",
+				"kind": "knob",
+				"position": {
+					"x": 62.375,
+					"y": 14.84375,
+					"width": 6.625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "delay-overdrive-drive",
+				"label": "DELAY / OVERDRIVE: Drive",
+				"kind": "knob",
+				"position": {
+					"x": 49.125,
+					"y": 30.078125,
+					"width": 6.625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "delay-overdrive-tone",
+				"label": "DELAY / OVERDRIVE: Tone",
+				"kind": "knob",
+				"position": {
+					"x": 55.75,
+					"y": 30.078125,
+					"width": 6.625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "delay-overdrive-level",
+				"label": "DELAY / OVERDRIVE: Level",
+				"kind": "knob",
+				"position": {
+					"x": 62.375,
+					"y": 30.078125,
+					"width": 6.625,
+					"height": 15.234375
+				}
+			},
+			{
+				"id": "noise-vca-noise",
+				"label": "NOISE / VCA: Noise",
+				"kind": "knob",
+				"position": {
+					"x": 36.3125,
+					"y": 53.125,
+					"width": 6.4375,
+					"height": 16.796875
+				}
+			},
+			{
+				"id": "noise-vca-vca-bias",
+				"label": "NOISE / VCA: VCA bias",
+				"kind": "knob",
+				"position": {
+					"x": 36.3125,
+					"y": 69.921875,
+					"width": 6.4375,
+					"height": 16.796875
+				}
+			},
+			{
+				"id": "envelope-1-attack",
+				"label": "ENVELOPE 1: Attack",
+				"kind": "knob",
+				"position": {
+					"x": 44.4375,
+					"y": 53.125,
+					"width": 6.140625,
+					"height": 13.28125
+				}
+			},
+			{
+				"id": "envelope-1-decay",
+				"label": "ENVELOPE 1: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 50.57812499999999,
+					"y": 53.125,
+					"width": 6.140625,
+					"height": 13.28125
+				}
+			},
+			{
+				"id": "envelope-1-sustain",
+				"label": "ENVELOPE 1: Sustain",
+				"kind": "knob",
+				"position": {
+					"x": 56.71874999999999,
+					"y": 53.125,
+					"width": 6.140625,
+					"height": 13.28125
+				}
+			},
+			{
+				"id": "envelope-1-release",
+				"label": "ENVELOPE 1: Release",
+				"kind": "knob",
+				"position": {
+					"x": 62.85937499999999,
+					"y": 53.125,
+					"width": 6.140625,
+					"height": 13.28125
+				}
+			},
+			{
+				"id": "envelope-2-attack",
+				"label": "ENVELOPE 2: Attack",
+				"kind": "knob",
+				"position": {
+					"x": 44.4375,
+					"y": 74.21875,
+					"width": 6.140625,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "envelope-2-decay",
+				"label": "ENVELOPE 2: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 50.57812499999999,
+					"y": 74.21875,
+					"width": 6.140625,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "envelope-2-sustain",
+				"label": "ENVELOPE 2: Sustain",
+				"kind": "knob",
+				"position": {
+					"x": 56.71874999999999,
+					"y": 74.21875,
+					"width": 6.140625,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "envelope-2-release",
+				"label": "ENVELOPE 2: Release",
+				"kind": "knob",
+				"position": {
+					"x": 62.85937499999999,
+					"y": 74.21875,
+					"width": 6.140625,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "output-utility-volume",
+				"label": "OUTPUT / UTILITY: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 70.6875,
+					"y": 14.84375,
+					"width": 4.0,
+					"height": 17.96875
+				}
+			},
+			{
+				"id": "output-utility-midi-in",
+				"label": "OUTPUT / UTILITY: MIDI IN",
+				"kind": "button",
+				"position": {
+					"x": 74.6875,
+					"y": 14.84375,
+					"width": 4.0,
+					"height": 17.96875
+				}
+			},
+			{
+				"id": "output-utility-s-h-rate",
+				"label": "OUTPUT / UTILITY: S/H rate",
+				"kind": "knob",
+				"position": {
+					"x": 70.6875,
+					"y": 32.8125,
+					"width": 4.0,
+					"height": 17.96875
+				}
+			},
+			{
+				"id": "output-utility-s-h-glide",
+				"label": "OUTPUT / UTILITY: S/H glide",
+				"kind": "knob",
+				"position": {
+					"x": 74.6875,
+					"y": 32.8125,
+					"width": 4.0,
+					"height": 17.96875
+				}
+			},
+			{
+				"id": "output-utility-slew",
+				"label": "OUTPUT / UTILITY: Slew",
+				"kind": "knob",
+				"position": {
+					"x": 70.6875,
+					"y": 50.78125,
+					"width": 4.0,
+					"height": 17.96875
+				}
+			},
+			{
+				"id": "output-utility-porta-time",
+				"label": "OUTPUT / UTILITY: Porta time",
+				"kind": "knob",
+				"position": {
+					"x": 74.6875,
+					"y": 50.78125,
+					"width": 4.0,
+					"height": 17.96875
+				}
+			},
+			{
+				"id": "output-utility-attenuator-1",
+				"label": "OUTPUT / UTILITY: Attenuator 1",
+				"kind": "knob",
+				"position": {
+					"x": 70.6875,
+					"y": 68.75,
+					"width": 4.0,
+					"height": 17.96875
+				}
+			},
+			{
+				"id": "output-utility-attenuator-2",
+				"label": "OUTPUT / UTILITY: Attenuator 2",
+				"kind": "knob",
+				"position": {
+					"x": 74.6875,
+					"y": 68.75,
+					"width": 4.0,
+					"height": 17.96875
+				}
+			},
+			{
+				"id": "patch-inputs-osc-1",
+				"label": "PATCH INPUTS: OSC 1",
+				"kind": "button",
+				"position": {
+					"x": 80.375,
+					"y": 14.84375,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-osc-2",
+				"label": "PATCH INPUTS: OSC 2",
+				"kind": "button",
+				"position": {
+					"x": 82.6875,
+					"y": 14.84375,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-osc-1-2",
+				"label": "PATCH INPUTS: OSC 1+2",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 14.84375,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-invert-in",
+				"label": "PATCH INPUTS: INVERT IN",
+				"kind": "button",
+				"position": {
+					"x": 87.3125,
+					"y": 14.84375,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-shape-1",
+				"label": "PATCH INPUTS: SHAPE 1",
+				"kind": "button",
+				"position": {
+					"x": 80.375,
+					"y": 23.828125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-shape-2",
+				"label": "PATCH INPUTS: SHAPE 2",
+				"kind": "button",
+				"position": {
+					"x": 82.6875,
+					"y": 23.828125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-pw-1",
+				"label": "PATCH INPUTS: PW 1",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 23.828125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-pw-2",
+				"label": "PATCH INPUTS: PW 2",
+				"kind": "button",
+				"position": {
+					"x": 87.3125,
+					"y": 23.828125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-vcf-freq",
+				"label": "PATCH INPUTS: VCF FREQ",
+				"kind": "button",
+				"position": {
+					"x": 80.375,
+					"y": 32.8125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-freq-mod",
+				"label": "PATCH INPUTS: FREQ MOD",
+				"kind": "button",
+				"position": {
+					"x": 82.6875,
+					"y": 32.8125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-res",
+				"label": "PATCH INPUTS: RES",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 32.8125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-od-in",
+				"label": "PATCH INPUTS: OD IN",
+				"kind": "button",
+				"position": {
+					"x": 87.3125,
+					"y": 32.8125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-vca-in",
+				"label": "PATCH INPUTS: VCA IN",
+				"kind": "button",
+				"position": {
+					"x": 80.375,
+					"y": 41.796875,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-vca-cv",
+				"label": "PATCH INPUTS: VCA CV",
+				"kind": "button",
+				"position": {
+					"x": 82.6875,
+					"y": 41.796875,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-delay-in",
+				"label": "PATCH INPUTS: DELAY IN",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 41.796875,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-delay-time",
+				"label": "PATCH INPUTS: DELAY TIME",
+				"kind": "button",
+				"position": {
+					"x": 87.3125,
+					"y": 41.796875,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-e-gate-1",
+				"label": "PATCH INPUTS: E.GATE 1",
+				"kind": "button",
+				"position": {
+					"x": 80.375,
+					"y": 50.78125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-e-gate-2",
+				"label": "PATCH INPUTS: E.GATE 2",
+				"kind": "button",
+				"position": {
+					"x": 82.6875,
+					"y": 50.78125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-s-h-in",
+				"label": "PATCH INPUTS: S&H IN",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 50.78125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-s-h-clock",
+				"label": "PATCH INPUTS: S&H CLOCK",
+				"kind": "button",
+				"position": {
+					"x": 87.3125,
+					"y": 50.78125,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-lfo-rate",
+				"label": "PATCH INPUTS: LFO RATE",
+				"kind": "button",
+				"position": {
+					"x": 80.375,
+					"y": 59.765625,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-lfo-shape",
+				"label": "PATCH INPUTS: LFO SHAPE",
+				"kind": "button",
+				"position": {
+					"x": 82.6875,
+					"y": 59.765625,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-lfo-trig",
+				"label": "PATCH INPUTS: LFO TRIG",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 59.765625,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-mult-in",
+				"label": "PATCH INPUTS: MULT IN",
+				"kind": "button",
+				"position": {
+					"x": 87.3125,
+					"y": 59.765625,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-att-1-in",
+				"label": "PATCH INPUTS: ATT 1 IN",
+				"kind": "button",
+				"position": {
+					"x": 80.375,
+					"y": 68.75,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-att-1-cv",
+				"label": "PATCH INPUTS: ATT 1 CV",
+				"kind": "button",
+				"position": {
+					"x": 82.6875,
+					"y": 68.75,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-att-2-in",
+				"label": "PATCH INPUTS: ATT 2 IN",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 68.75,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-slew-in",
+				"label": "PATCH INPUTS: SLEW IN",
+				"kind": "button",
+				"position": {
+					"x": 87.3125,
+					"y": 68.75,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-sum-1-a",
+				"label": "PATCH INPUTS: SUM 1 A",
+				"kind": "button",
+				"position": {
+					"x": 80.375,
+					"y": 77.734375,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-sum-1-b",
+				"label": "PATCH INPUTS: SUM 1 B",
+				"kind": "button",
+				"position": {
+					"x": 82.6875,
+					"y": 77.734375,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-sum-2-a",
+				"label": "PATCH INPUTS: SUM 2 A",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 77.734375,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-inputs-sum-2-b",
+				"label": "PATCH INPUTS: SUM 2 B",
+				"kind": "button",
+				"position": {
+					"x": 87.3125,
+					"y": 77.734375,
+					"width": 2.3125,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-osc-1",
+				"label": "PATCH OUTPUTS: OSC 1",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 14.84375,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-osc-2",
+				"label": "PATCH OUTPUTS: OSC 2",
+				"kind": "button",
+				"position": {
+					"x": 93.35416666666667,
+					"y": 14.84375,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-osc-mix",
+				"label": "PATCH OUTPUTS: OSC MIX",
+				"kind": "button",
+				"position": {
+					"x": 95.70833333333333,
+					"y": 14.84375,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-vcf-1",
+				"label": "PATCH OUTPUTS: VCF 1",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 23.828125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-vcf-2",
+				"label": "PATCH OUTPUTS: VCF 2",
+				"kind": "button",
+				"position": {
+					"x": 93.35416666666667,
+					"y": 23.828125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-overdrive",
+				"label": "PATCH OUTPUTS: OVERDRIVE",
+				"kind": "button",
+				"position": {
+					"x": 95.70833333333333,
+					"y": 23.828125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-vca",
+				"label": "PATCH OUTPUTS: VCA",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 32.8125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-output",
+				"label": "PATCH OUTPUTS: OUTPUT",
+				"kind": "button",
+				"position": {
+					"x": 93.35416666666667,
+					"y": 32.8125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-noise",
+				"label": "PATCH OUTPUTS: NOISE",
+				"kind": "button",
+				"position": {
+					"x": 95.70833333333333,
+					"y": 32.8125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-env-1",
+				"label": "PATCH OUTPUTS: ENV 1",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 41.796875,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-env-2",
+				"label": "PATCH OUTPUTS: ENV 2",
+				"kind": "button",
+				"position": {
+					"x": 93.35416666666667,
+					"y": 41.796875,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-invert",
+				"label": "PATCH OUTPUTS: INVERT",
+				"kind": "button",
+				"position": {
+					"x": 95.70833333333333,
+					"y": 41.796875,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-lfo",
+				"label": "PATCH OUTPUTS: LFO",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 50.78125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-lfo-uni",
+				"label": "PATCH OUTPUTS: LFO UNI",
+				"kind": "button",
+				"position": {
+					"x": 93.35416666666667,
+					"y": 50.78125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-s-h",
+				"label": "PATCH OUTPUTS: S&H",
+				"kind": "button",
+				"position": {
+					"x": 95.70833333333333,
+					"y": 50.78125,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-mult-1",
+				"label": "PATCH OUTPUTS: MULT 1",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 59.765625,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-mult-2",
+				"label": "PATCH OUTPUTS: MULT 2",
+				"kind": "button",
+				"position": {
+					"x": 93.35416666666667,
+					"y": 59.765625,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-midi-gate",
+				"label": "PATCH OUTPUTS: MIDI GATE",
+				"kind": "button",
+				"position": {
+					"x": 95.70833333333333,
+					"y": 59.765625,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-att-1",
+				"label": "PATCH OUTPUTS: ATT 1",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 68.75,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-att-2",
+				"label": "PATCH OUTPUTS: ATT 2",
+				"kind": "button",
+				"position": {
+					"x": 93.35416666666667,
+					"y": 68.75,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-slew",
+				"label": "PATCH OUTPUTS: SLEW",
+				"kind": "button",
+				"position": {
+					"x": 95.70833333333333,
+					"y": 68.75,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-sum-1",
+				"label": "PATCH OUTPUTS: SUM 1",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 77.734375,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-sum-2",
+				"label": "PATCH OUTPUTS: SUM 2",
+				"kind": "button",
+				"position": {
+					"x": 93.35416666666667,
+					"y": 77.734375,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			},
+			{
+				"id": "patch-outputs-assign",
+				"label": "PATCH OUTPUTS: ASSIGN",
+				"kind": "button",
+				"position": {
+					"x": 95.70833333333333,
+					"y": 77.734375,
+					"width": 2.3541666666666665,
+					"height": 8.984375
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Audio IN",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Line OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "MIDI THRU",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-B",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "Power",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "OSC 1",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "OSC 2",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "OSC 1+2",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "INVERT IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "SHAPE 1",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "SHAPE 2",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "PW 1",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "PW 2",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCF FREQ",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "FREQ MOD",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "RES",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "OD IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCA IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCA CV",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "DELAY IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "DELAY TIME",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "E.GATE 1",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "E.GATE 2",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "S&H IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "S&H CLOCK",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "LFO RATE",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "LFO SHAPE",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "LFO TRIG",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "MULT IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "ATT 1 IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "ATT 1 CV",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "ATT 2 IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "SLEW IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "SUM 1 A",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "SUM 1 B",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "SUM 2 A",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "SUM 2 B",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "OSC 1",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "OSC 2",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "OSC MIX",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "VCF 1",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "VCF 2",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "OVERDRIVE",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "VCA",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "OUTPUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "NOISE",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "ENV 1",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "ENV 2",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "INVERT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "LFO",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "LFO UNI",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "S&H",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "MULT 1",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "MULT 2",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "MIDI GATE",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "ATT 1",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "ATT 2",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "SLEW",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "SUM 1",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "SUM 2",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "ASSIGN",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Power on/off",
+			"connector": "Switch",
+			"direction": "control",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.behringer.com/en/products/0718-aab"
+	]
 }

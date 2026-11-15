@@ -5,7 +5,9 @@
 	"name": "Arturia DrumBrute Impact",
 	"manufacturer": "Arturia",
 	"manufacturerUrl": "https://www.arturia.com/",
-	"ids": ["arturia-drumbrute-impact"],
+	"ids": [
+		"arturia-drumbrute-impact"
+	],
 	"portNames": [
 		"DrumBrute Impact",
 		"Arturia DrumBrute Impact",
@@ -58,314 +60,956 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1200,
-		"height": 680,
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 750,
 		"elements": [
 			{
-				"id": "drum-0",
-				"label": "Kick",
-				"kind": "pad",
+				"id": "tempo-pattern-display",
+				"label": "TEMPO / PATTERN: Display",
+				"kind": "button",
 				"position": {
-					"x": 10.416666666666668,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 36
-				},
-				"learnable": true
+					"x": 2.0666666666666664,
+					"y": 12.666666666666668,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-1",
-				"label": "Snare 1",
-				"kind": "pad",
+				"id": "tempo-pattern-rate",
+				"label": "TEMPO / PATTERN: Rate",
+				"kind": "knob",
 				"position": {
-					"x": 21.0,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 37
-				},
-				"learnable": true
+					"x": 6.238095238095238,
+					"y": 12.666666666666668,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-2",
-				"label": "Snare 2",
-				"kind": "pad",
+				"id": "tempo-pattern-tap",
+				"label": "TEMPO / PATTERN: Tap",
+				"kind": "button",
 				"position": {
-					"x": 31.583333333333336,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 38
-				},
-				"learnable": true
+					"x": 10.409523809523808,
+					"y": 12.666666666666668,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-3",
-				"label": "High tom",
-				"kind": "pad",
+				"id": "tempo-pattern-record",
+				"label": "TEMPO / PATTERN: Record",
+				"kind": "button",
 				"position": {
-					"x": 42.16666666666667,
-					"y": 84.70588235294117,
-					"width": 1.8333333333333333,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 39
-				},
-				"learnable": true
+					"x": 14.58095238095238,
+					"y": 12.666666666666668,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-4",
-				"label": "Low tom",
-				"kind": "pad",
+				"id": "tempo-pattern-stop",
+				"label": "TEMPO / PATTERN: Stop",
+				"kind": "button",
 				"position": {
-					"x": 45.83333333333333,
-					"y": 84.70588235294117,
-					"width": 1.8333333333333333,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 40
-				},
-				"learnable": true
+					"x": 18.75238095238095,
+					"y": 12.666666666666668,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-5",
-				"label": "Cymbal",
-				"kind": "pad",
+				"id": "tempo-pattern-play",
+				"label": "TEMPO / PATTERN: Play",
+				"kind": "button",
 				"position": {
-					"x": 52.75,
-					"y": 84.70588235294117,
-					"width": 2.444444444444444,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 41
-				},
-				"learnable": true
+					"x": 22.92380952380952,
+					"y": 12.666666666666668,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-6",
-				"label": "Cowbell",
-				"kind": "pad",
+				"id": "tempo-pattern-song",
+				"label": "TEMPO / PATTERN: Song",
+				"kind": "button",
 				"position": {
-					"x": 57.638888888888886,
-					"y": 84.70588235294117,
-					"width": 2.444444444444444,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 42
-				},
-				"learnable": true
+					"x": 27.095238095238095,
+					"y": 12.666666666666668,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-7",
-				"label": "Closed hat",
-				"kind": "pad",
+				"id": "tempo-pattern-bank",
+				"label": "TEMPO / PATTERN: Bank",
+				"kind": "button",
 				"position": {
-					"x": 63.33333333333333,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 43
-				},
-				"learnable": true
+					"x": 2.0666666666666664,
+					"y": 23.0,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-8",
-				"label": "Open hat",
-				"kind": "pad",
+				"id": "tempo-pattern-pattern",
+				"label": "TEMPO / PATTERN: Pattern",
+				"kind": "button",
 				"position": {
-					"x": 73.91666666666666,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 44
-				},
-				"learnable": true
+					"x": 6.238095238095238,
+					"y": 23.0,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "drum-9",
-				"label": "FM drum",
-				"kind": "pad",
+				"id": "tempo-pattern-save",
+				"label": "TEMPO / PATTERN: Save",
+				"kind": "button",
 				"position": {
-					"x": 84.5,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 45
-				},
-				"learnable": true
+					"x": 10.409523809523808,
+					"y": 23.0,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "color-0",
-				"label": "Color Kick",
-				"kind": "pad",
+				"id": "tempo-pattern-erase",
+				"label": "TEMPO / PATTERN: Erase",
+				"kind": "button",
 				"position": {
-					"x": 14.083333333333334,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 48
-				},
-				"learnable": true
+					"x": 14.58095238095238,
+					"y": 23.0,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "color-1",
-				"label": "Color Snare 1",
-				"kind": "pad",
+				"id": "tempo-pattern-copy",
+				"label": "TEMPO / PATTERN: Copy",
+				"kind": "button",
 				"position": {
-					"x": 24.666666666666668,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 49
-				},
-				"learnable": true
+					"x": 18.75238095238095,
+					"y": 23.0,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "color-2",
-				"label": "Color Snare 2",
-				"kind": "pad",
+				"id": "tempo-pattern-last-step",
+				"label": "TEMPO / PATTERN: Last step",
+				"kind": "button",
 				"position": {
-					"x": 35.25,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 50
-				},
-				"learnable": true
+					"x": 22.92380952380952,
+					"y": 23.0,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "color-3",
-				"label": "Color High tom",
-				"kind": "pad",
+				"id": "tempo-pattern-sync",
+				"label": "TEMPO / PATTERN: Sync",
+				"kind": "button",
 				"position": {
-					"x": 44.0,
-					"y": 84.70588235294117,
-					"width": 1.8333333333333333,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 51
-				},
-				"learnable": true
+					"x": 27.095238095238095,
+					"y": 23.0,
+					"width": 4.171428571428571,
+					"height": 10.333333333333334
+				}
 			},
 			{
-				"id": "color-4",
-				"label": "Color Low tom",
-				"kind": "pad",
+				"id": "pattern-fx-swing",
+				"label": "PATTERN FX: Swing",
+				"kind": "knob",
 				"position": {
-					"x": 47.66666666666667,
-					"y": 84.70588235294117,
-					"width": 1.8333333333333333,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 52
-				},
-				"learnable": true
+					"x": 33.06666666666666,
+					"y": 12.666666666666668,
+					"width": 7.199999999999999,
+					"height": 20.666666666666668
+				}
 			},
 			{
-				"id": "color-5",
-				"label": "Color Cymbal",
-				"kind": "pad",
+				"id": "pattern-fx-random",
+				"label": "PATTERN FX: Random",
+				"kind": "knob",
 				"position": {
-					"x": 55.19444444444444,
-					"y": 84.70588235294117,
-					"width": 2.444444444444444,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 53
-				},
-				"learnable": true
+					"x": 40.266666666666666,
+					"y": 12.666666666666668,
+					"width": 7.199999999999999,
+					"height": 20.666666666666668
+				}
 			},
 			{
-				"id": "color-7",
-				"label": "Color Closed hat",
-				"kind": "pad",
+				"id": "pattern-fx-current-track",
+				"label": "PATTERN FX: Current track",
+				"kind": "button",
 				"position": {
-					"x": 67.0,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 55
-				},
-				"learnable": true
+					"x": 47.46666666666667,
+					"y": 12.666666666666668,
+					"width": 7.199999999999999,
+					"height": 20.666666666666668
+				}
 			},
 			{
-				"id": "color-8",
-				"label": "Color Open hat",
-				"kind": "pad",
+				"id": "pattern-fx-step-repeat",
+				"label": "PATTERN FX: Step repeat",
+				"kind": "fader",
 				"position": {
-					"x": 77.58333333333334,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 56
-				},
-				"learnable": true
+					"x": 54.666666666666664,
+					"y": 12.666666666666668,
+					"width": 7.199999999999999,
+					"height": 20.666666666666668
+				}
 			},
 			{
-				"id": "color-9",
-				"label": "Color FM drum",
+				"id": "pattern-fx-roller",
+				"label": "PATTERN FX: Roller",
+				"kind": "fader",
+				"position": {
+					"x": 61.86666666666667,
+					"y": 12.666666666666668,
+					"width": 7.199999999999999,
+					"height": 20.666666666666668
+				}
+			},
+			{
+				"id": "pattern-fx-looper",
+				"label": "PATTERN FX: Looper",
+				"kind": "fader",
+				"position": {
+					"x": 69.06666666666666,
+					"y": 12.666666666666668,
+					"width": 7.199999999999999,
+					"height": 20.666666666666668
+				}
+			},
+			{
+				"id": "output-distortion",
+				"label": "OUTPUT: Distortion",
+				"kind": "knob",
+				"position": {
+					"x": 78.06666666666666,
+					"y": 12.666666666666668,
+					"width": 6.622222222222223,
+					"height": 20.666666666666668
+				}
+			},
+			{
+				"id": "output-master-volume",
+				"label": "OUTPUT: Master volume",
+				"kind": "knob",
+				"position": {
+					"x": 84.68888888888888,
+					"y": 12.666666666666668,
+					"width": 6.622222222222223,
+					"height": 20.666666666666668
+				}
+			},
+			{
+				"id": "output-distortion-on",
+				"label": "OUTPUT: Distortion on",
+				"kind": "button",
+				"position": {
+					"x": 91.31111111111112,
+					"y": 12.666666666666668,
+					"width": 6.622222222222223,
+					"height": 20.666666666666668
+				}
+			},
+			{
+				"id": "kick-decay",
+				"label": "KICK: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 10.066666666666666,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "kick-pitch",
+				"label": "KICK: Pitch",
+				"kind": "knob",
+				"position": {
+					"x": 14.899999999999999,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "kick-level",
+				"label": "KICK: Level",
+				"kind": "knob",
+				"position": {
+					"x": 10.066666666666666,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "kick-play",
+				"label": "KICK: Play",
 				"kind": "pad",
 				"position": {
-					"x": 88.16666666666667,
-					"y": 84.70588235294117,
-					"width": 3.6666666666666665,
-					"height": 9.558823529411764
-				},
-				"message": {
-					"type": "note",
-					"number": 57
-				},
-				"learnable": true
+					"x": 14.899999999999999,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "snare-1-decay",
+				"label": "SNARE 1: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 21.2,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "snare-1-tone-snap",
+				"label": "SNARE 1: Tone / Snap",
+				"kind": "knob",
+				"position": {
+					"x": 26.033333333333335,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "snare-1-level",
+				"label": "SNARE 1: Level",
+				"kind": "knob",
+				"position": {
+					"x": 21.2,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "snare-1-play",
+				"label": "SNARE 1: Play",
+				"kind": "pad",
+				"position": {
+					"x": 26.033333333333335,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "snare-2-decay",
+				"label": "SNARE 2: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 32.33333333333333,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "snare-2-tone",
+				"label": "SNARE 2: Tone",
+				"kind": "knob",
+				"position": {
+					"x": 37.166666666666664,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "snare-2-level",
+				"label": "SNARE 2: Level",
+				"kind": "knob",
+				"position": {
+					"x": 32.33333333333333,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "snare-2-play",
+				"label": "SNARE 2: Play",
+				"kind": "pad",
+				"position": {
+					"x": 37.166666666666664,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "tom-hi-low-type",
+				"label": "TOM HI/LOW: Type",
+				"kind": "button",
+				"position": {
+					"x": 43.46666666666666,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "tom-hi-low-pitch",
+				"label": "TOM HI/LOW: Pitch",
+				"kind": "knob",
+				"position": {
+					"x": 48.3,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "tom-hi-low-level",
+				"label": "TOM HI/LOW: Level",
+				"kind": "knob",
+				"position": {
+					"x": 43.46666666666666,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "tom-hi-low-play",
+				"label": "TOM HI/LOW: Play",
+				"kind": "pad",
+				"position": {
+					"x": 48.3,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "cym-cow-type",
+				"label": "CYM/COW: Type",
+				"kind": "button",
+				"position": {
+					"x": 54.6,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "cym-cow-cym-decay",
+				"label": "CYM/COW: Cym decay",
+				"kind": "knob",
+				"position": {
+					"x": 59.43333333333334,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "cym-cow-level",
+				"label": "CYM/COW: Level",
+				"kind": "knob",
+				"position": {
+					"x": 54.6,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "cym-cow-play",
+				"label": "CYM/COW: Play",
+				"kind": "pad",
+				"position": {
+					"x": 59.43333333333334,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "closed-hat-decay",
+				"label": "CLOSED HAT: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 65.73333333333333,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "closed-hat-hat-tone",
+				"label": "CLOSED HAT: Hat tone",
+				"kind": "knob",
+				"position": {
+					"x": 70.56666666666666,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "closed-hat-level",
+				"label": "CLOSED HAT: Level",
+				"kind": "knob",
+				"position": {
+					"x": 65.73333333333333,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "closed-hat-play",
+				"label": "CLOSED HAT: Play",
+				"kind": "pad",
+				"position": {
+					"x": 70.56666666666666,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "open-hat-decay",
+				"label": "OPEN HAT: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 76.86666666666667,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "open-hat-level",
+				"label": "OPEN HAT: Level",
+				"kind": "knob",
+				"position": {
+					"x": 81.69999999999999,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "open-hat-play",
+				"label": "OPEN HAT: Play",
+				"kind": "pad",
+				"position": {
+					"x": 76.86666666666667,
+					"y": 58.333333333333336,
+					"width": 4.833333333333333,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "fm-drum-mod-decay",
+				"label": "FM DRUM: Mod decay",
+				"kind": "knob",
+				"position": {
+					"x": 88.0,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "fm-drum-mod-pitch",
+				"label": "FM DRUM: Mod pitch",
+				"kind": "knob",
+				"position": {
+					"x": 92.83333333333333,
+					"y": 40.666666666666664,
+					"width": 4.833333333333333,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "fm-drum-fm-amount",
+				"label": "FM DRUM: FM amount",
+				"kind": "knob",
+				"position": {
+					"x": 88.0,
+					"y": 52.444444444444436,
+					"width": 4.833333333333333,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "fm-drum-carrier-pitch",
+				"label": "FM DRUM: Carrier pitch",
+				"kind": "knob",
+				"position": {
+					"x": 92.83333333333333,
+					"y": 52.444444444444436,
+					"width": 4.833333333333333,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "fm-drum-level",
+				"label": "FM DRUM: Level",
+				"kind": "knob",
+				"position": {
+					"x": 88.0,
+					"y": 64.22222222222221,
+					"width": 4.833333333333333,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "fm-drum-play",
+				"label": "FM DRUM: Play",
+				"kind": "pad",
+				"position": {
+					"x": 92.83333333333333,
+					"y": 64.22222222222221,
+					"width": 4.833333333333333,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "utility-metronome",
+				"label": "UTILITY: Metronome",
+				"kind": "knob",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 40.666666666666664,
+					"width": 6.2,
+					"height": 5.888888888888888
+				}
+			},
+			{
+				"id": "utility-on",
+				"label": "UTILITY: On",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 46.55555555555556,
+					"width": 6.2,
+					"height": 5.888888888888888
+				}
+			},
+			{
+				"id": "utility-mute",
+				"label": "UTILITY: Mute",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 52.444444444444436,
+					"width": 6.2,
+					"height": 5.888888888888888
+				}
+			},
+			{
+				"id": "utility-solo",
+				"label": "UTILITY: Solo",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 58.333333333333336,
+					"width": 6.2,
+					"height": 5.888888888888888
+				}
+			},
+			{
+				"id": "utility-shift",
+				"label": "UTILITY: Shift",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 64.22222222222221,
+					"width": 6.2,
+					"height": 5.888888888888888
+				}
+			},
+			{
+				"id": "utility-color",
+				"label": "UTILITY: Color",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 70.1111111111111,
+					"width": 6.2,
+					"height": 5.888888888888888
+				}
+			},
+			{
+				"id": "steps-1",
+				"label": "STEPS: 1",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-2",
+				"label": "STEPS: 2",
+				"kind": "button",
+				"position": {
+					"x": 8.058333333333334,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-3",
+				"label": "STEPS: 3",
+				"kind": "button",
+				"position": {
+					"x": 14.05,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-4",
+				"label": "STEPS: 4",
+				"kind": "button",
+				"position": {
+					"x": 20.041666666666664,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-5",
+				"label": "STEPS: 5",
+				"kind": "button",
+				"position": {
+					"x": 26.033333333333335,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-6",
+				"label": "STEPS: 6",
+				"kind": "button",
+				"position": {
+					"x": 32.025,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-7",
+				"label": "STEPS: 7",
+				"kind": "button",
+				"position": {
+					"x": 38.016666666666666,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-8",
+				"label": "STEPS: 8",
+				"kind": "button",
+				"position": {
+					"x": 44.00833333333333,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-9",
+				"label": "STEPS: 9",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-10",
+				"label": "STEPS: 10",
+				"kind": "button",
+				"position": {
+					"x": 55.99166666666666,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-11",
+				"label": "STEPS: 11",
+				"kind": "button",
+				"position": {
+					"x": 61.983333333333334,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-12",
+				"label": "STEPS: 12",
+				"kind": "button",
+				"position": {
+					"x": 67.975,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-13",
+				"label": "STEPS: 13",
+				"kind": "button",
+				"position": {
+					"x": 73.96666666666667,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-14",
+				"label": "STEPS: 14",
+				"kind": "button",
+				"position": {
+					"x": 79.95833333333333,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-15",
+				"label": "STEPS: 15",
+				"kind": "button",
+				"position": {
+					"x": 85.95,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
+			},
+			{
+				"id": "steps-16",
+				"label": "STEPS: 16",
+				"kind": "button",
+				"position": {
+					"x": 91.94166666666666,
+					"y": 84.0,
+					"width": 5.991666666666666,
+					"height": 8.666666666666668
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Mix OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Kick OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Snares OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Hi-hats OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "FM drum OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-B",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "Power",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Clock IN",
+			"connector": "3.5 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Clock OUT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Power on/off",
+			"connector": "Switch",
+			"direction": "control",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://downloads.arturia.net/products/drumbrute-impact/manual/drumbrute-impact_Manual_1_0_EN.pdf"
+	]
 }

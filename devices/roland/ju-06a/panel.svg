@@ -1,525 +1,209 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2602 540" role="group" aria-labelledby="roland-ju-06a-panel--title" aria-describedby="roland-ju-06a-panel--description" data-device="roland-ju-06a" data-diagram-style="wireframe" style="background: #fff; color: #334155;">
-  <title id="roland-ju-06a-panel--title">Roland JU-06A overhead wireframe diagram</title>
-  <desc id="roland-ju-06a-panel--description">Schematic top view grouped by panel section. Every physical control has a stable ID and accessible label. Standalone buttons are disabled until a host supplies interaction. MIDI regions match the JSON surface; note and shared parameter regions use the setup described in the profile.</desc>
-  <style>text { font-family: Arial, sans-serif; fill: currentColor; stroke: none; } [data-part]:focus-visible { outline: 3px solid currentColor; }</style>
-  <g id="roland-ju-06a-panel--chassis" aria-hidden="true">
-    <rect x="3" y="3" width="2596" height="534" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="25" y="30" font-size="22">Roland JU-06A</text>
-    <rect x="25" y="105" width="136" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="35" y="128" font-size="12">Performance</text>
-    <rect x="173" y="105" width="136" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="183" y="128" font-size="12">LFO</text>
-    <rect x="321" y="105" width="392" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="331" y="128" font-size="12">DCO</text>
-    <rect x="725" y="105" width="136" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="735" y="128" font-size="12">HPF</text>
-    <rect x="873" y="105" width="202" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="883" y="128" font-size="12">VCF</text>
-    <rect x="1087" y="105" width="136" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="1097" y="128" font-size="12">VCA</text>
-    <rect x="1235" y="105" width="202" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="1245" y="128" font-size="12">Envelope</text>
-    <rect x="1449" y="105" width="136" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="1459" y="128" font-size="12">Chorus</text>
-    <rect x="1597" y="105" width="136" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="1607" y="128" font-size="12">Keyboard</text>
-    <rect x="1745" y="105" width="202" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="1755" y="128" font-size="12">Arpeggio</text>
-    <rect x="1959" y="105" width="202" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="1969" y="128" font-size="12">Sequencer</text>
-    <rect x="2173" y="105" width="392" height="300" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="2183" y="128" font-size="12">Memory</text>
-  </g>
-  <g id="roland-ju-06a-panel--controls" role="group" aria-label="Physical hardware controls">
-    <g id="roland-ju-06a-panel--performance-volume-knob" data-part="performance-volume-knob" data-kind="knob" role="group" aria-label="Volume" aria-roledescription="rotary control">
-      <title>Volume</title>
-      <g aria-hidden="true">
-        <circle cx="75.0" cy="167" r="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M 75.0 152 v 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="75.0" y="209" text-anchor="middle" font-size="10">Volume</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--performance-sound-mode-60-106-switch" data-part="performance-sound-mode-60-106-switch" data-kind="switch" role="group" aria-label="Sound mode 60 106" aria-roledescription="selector switch">
-      <title>Sound mode 60 106</title>
-      <g aria-hidden="true">
-        <rect x="37" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="75.0" y="260.0" text-anchor="middle" font-size="8">Sound mode 60 106</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--performance-manual-button" data-part="performance-manual-button" data-kind="button" role="button" aria-label="Manual" aria-disabled="true" tabindex="-1">
-      <title>Manual</title>
-      <g aria-hidden="true">
-        <rect x="37" y="317" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="75.0" y="346.0" text-anchor="middle" font-size="10">Manual</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--lfo-rate-fader" data-part="lfo-rate-fader" data-kind="fader" role="group" aria-label="Rate" aria-roledescription="slider" data-surface-controls="lfo-rate-fader">
-      <title>Rate</title>
-      <g aria-hidden="true">
-        <rect x="220.0" y="145" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="210.0" y="172.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="223.0" y="209" text-anchor="middle" font-size="10">Rate</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--lfo-rate-fader" data-surface-control="lfo-rate-fader" aria-hidden="true">
-        <rect x="185.0" y="145" width="76.0" height="50" data-hit-area="lfo-rate-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--lfo-delay-fader" data-part="lfo-delay-fader" data-kind="fader" role="group" aria-label="Delay" aria-roledescription="slider" data-surface-controls="lfo-delay-fader">
-      <title>Delay</title>
-      <g aria-hidden="true">
-        <rect x="220.0" y="231" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="210.0" y="258.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="223.0" y="295" text-anchor="middle" font-size="10">Delay</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--lfo-delay-fader" data-surface-control="lfo-delay-fader" aria-hidden="true">
-        <rect x="185.0" y="231" width="76.0" height="50" data-hit-area="lfo-delay-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-16-foot-button" data-part="dco-16-foot-button" data-kind="button" role="button" aria-label="16 foot" aria-disabled="true" tabindex="-1">
-      <title>16 foot</title>
-      <g aria-hidden="true">
-        <rect x="333" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="371.0" y="174.0" text-anchor="middle" font-size="10">16 foot</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-8-foot-button" data-part="dco-8-foot-button" data-kind="button" role="button" aria-label="8 foot" aria-disabled="true" tabindex="-1">
-      <title>8 foot</title>
-      <g aria-hidden="true">
-        <rect x="428" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="466.0" y="174.0" text-anchor="middle" font-size="10">8 foot</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-4-foot-button" data-part="dco-4-foot-button" data-kind="button" role="button" aria-label="4 foot" aria-disabled="true" tabindex="-1">
-      <title>4 foot</title>
-      <g aria-hidden="true">
-        <rect x="523" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="561.0" y="174.0" text-anchor="middle" font-size="10">4 foot</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-lfo-fader" data-part="dco-lfo-fader" data-kind="fader" role="group" aria-label="LFO" aria-roledescription="slider" data-surface-controls="dco-lfo-fader">
-      <title>LFO</title>
-      <g aria-hidden="true">
-        <rect x="653.0" y="145" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="643.0" y="172.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="656.0" y="209" text-anchor="middle" font-size="10">LFO</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--dco-lfo-fader" data-surface-control="dco-lfo-fader" aria-hidden="true">
-        <rect x="618.0" y="145" width="76.0" height="50" data-hit-area="dco-lfo-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-pwm-fader" data-part="dco-pwm-fader" data-kind="fader" role="group" aria-label="PWM" aria-roledescription="slider" data-surface-controls="dco-pwm-fader">
-      <title>PWM</title>
-      <g aria-hidden="true">
-        <rect x="368.0" y="231" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="358.0" y="258.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="371.0" y="295" text-anchor="middle" font-size="10">PWM</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--dco-pwm-fader" data-surface-control="dco-pwm-fader" aria-hidden="true">
-        <rect x="333.0" y="231" width="76.0" height="50" data-hit-area="dco-pwm-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-pwm-source-switch" data-part="dco-pwm-source-switch" data-kind="switch" role="group" aria-label="PWM source" aria-roledescription="selector switch" data-surface-controls="dco-pwm-source-switch">
-      <title>PWM source</title>
-      <g aria-hidden="true">
-        <rect x="428" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="466.0" y="260.0" text-anchor="middle" font-size="10">PWM source</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--dco-pwm-source-switch" data-surface-control="dco-pwm-source-switch" aria-hidden="true">
-        <rect x="428.0" y="231" width="76.0" height="50" data-hit-area="dco-pwm-source-switch" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-square-button" data-part="dco-square-button" data-kind="button" role="button" aria-label="Square" aria-disabled="true" tabindex="-1">
-      <title>Square</title>
-      <g aria-hidden="true">
-        <rect x="523" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="561.0" y="260.0" text-anchor="middle" font-size="10">Square</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-saw-button" data-part="dco-saw-button" data-kind="button" role="button" aria-label="Saw" aria-disabled="true" tabindex="-1">
-      <title>Saw</title>
-      <g aria-hidden="true">
-        <rect x="618" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="656.0" y="260.0" text-anchor="middle" font-size="10">Saw</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-sub-fader" data-part="dco-sub-fader" data-kind="fader" role="group" aria-label="Sub" aria-roledescription="slider" data-surface-controls="dco-sub-fader">
-      <title>Sub</title>
-      <g aria-hidden="true">
-        <rect x="368.0" y="317" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="358.0" y="344.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="371.0" y="381" text-anchor="middle" font-size="10">Sub</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--dco-sub-fader" data-surface-control="dco-sub-fader" aria-hidden="true">
-        <rect x="333.0" y="317" width="76.0" height="50" data-hit-area="dco-sub-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--dco-noise-fader" data-part="dco-noise-fader" data-kind="fader" role="group" aria-label="Noise" aria-roledescription="slider" data-surface-controls="dco-noise-fader">
-      <title>Noise</title>
-      <g aria-hidden="true">
-        <rect x="463.0" y="317" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="453.0" y="344.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="466.0" y="381" text-anchor="middle" font-size="10">Noise</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--dco-noise-fader" data-surface-control="dco-noise-fader" aria-hidden="true">
-        <rect x="428.0" y="317" width="76.0" height="50" data-hit-area="dco-noise-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--hpf-cutoff-fader" data-part="hpf-cutoff-fader" data-kind="fader" role="group" aria-label="Cutoff" aria-roledescription="slider" data-surface-controls="hpf-cutoff-fader">
-      <title>Cutoff</title>
-      <g aria-hidden="true">
-        <rect x="772.0" y="145" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="762.0" y="172.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="775.0" y="209" text-anchor="middle" font-size="10">Cutoff</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--hpf-cutoff-fader" data-surface-control="hpf-cutoff-fader" aria-hidden="true">
-        <rect x="737.0" y="145" width="76.0" height="50" data-hit-area="hpf-cutoff-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--vcf-cutoff-fader" data-part="vcf-cutoff-fader" data-kind="fader" role="group" aria-label="Cutoff" aria-roledescription="slider" data-surface-controls="vcf-cutoff-fader">
-      <title>Cutoff</title>
-      <g aria-hidden="true">
-        <rect x="920.0" y="145" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="910.0" y="172.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="923.0" y="209" text-anchor="middle" font-size="10">Cutoff</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--vcf-cutoff-fader" data-surface-control="vcf-cutoff-fader" aria-hidden="true">
-        <rect x="885.0" y="145" width="76.0" height="50" data-hit-area="vcf-cutoff-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--vcf-resonance-fader" data-part="vcf-resonance-fader" data-kind="fader" role="group" aria-label="Resonance" aria-roledescription="slider" data-surface-controls="vcf-resonance-fader">
-      <title>Resonance</title>
-      <g aria-hidden="true">
-        <rect x="1015.0" y="145" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="1005.0" y="172.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1018.0" y="209" text-anchor="middle" font-size="10">Resonance</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--vcf-resonance-fader" data-surface-control="vcf-resonance-fader" aria-hidden="true">
-        <rect x="980.0" y="145" width="76.0" height="50" data-hit-area="vcf-resonance-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--vcf-polarity-switch" data-part="vcf-polarity-switch" data-kind="switch" role="group" aria-label="Polarity" aria-roledescription="selector switch" data-surface-controls="vcf-polarity-switch">
-      <title>Polarity</title>
-      <g aria-hidden="true">
-        <rect x="885" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="923.0" y="260.0" text-anchor="middle" font-size="10">Polarity</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--vcf-polarity-switch" data-surface-control="vcf-polarity-switch" aria-hidden="true">
-        <rect x="885.0" y="231" width="76.0" height="50" data-hit-area="vcf-polarity-switch" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--vcf-envelope-fader" data-part="vcf-envelope-fader" data-kind="fader" role="group" aria-label="Envelope" aria-roledescription="slider" data-surface-controls="vcf-envelope-fader">
-      <title>Envelope</title>
-      <g aria-hidden="true">
-        <rect x="1015.0" y="231" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="1005.0" y="258.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1018.0" y="295" text-anchor="middle" font-size="10">Envelope</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--vcf-envelope-fader" data-surface-control="vcf-envelope-fader" aria-hidden="true">
-        <rect x="980.0" y="231" width="76.0" height="50" data-hit-area="vcf-envelope-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--vcf-lfo-fader" data-part="vcf-lfo-fader" data-kind="fader" role="group" aria-label="LFO" aria-roledescription="slider" data-surface-controls="vcf-lfo-fader">
-      <title>LFO</title>
-      <g aria-hidden="true">
-        <rect x="920.0" y="317" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="910.0" y="344.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="923.0" y="381" text-anchor="middle" font-size="10">LFO</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--vcf-lfo-fader" data-surface-control="vcf-lfo-fader" aria-hidden="true">
-        <rect x="885.0" y="317" width="76.0" height="50" data-hit-area="vcf-lfo-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--vcf-key-follow-fader" data-part="vcf-key-follow-fader" data-kind="fader" role="group" aria-label="Key follow" aria-roledescription="slider" data-surface-controls="vcf-key-follow-fader">
-      <title>Key follow</title>
-      <g aria-hidden="true">
-        <rect x="1015.0" y="317" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="1005.0" y="344.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1018.0" y="381" text-anchor="middle" font-size="10">Key follow</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--vcf-key-follow-fader" data-surface-control="vcf-key-follow-fader" aria-hidden="true">
-        <rect x="980.0" y="317" width="76.0" height="50" data-hit-area="vcf-key-follow-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--vca-envelope-gate-switch" data-part="vca-envelope-gate-switch" data-kind="switch" role="group" aria-label="Envelope Gate" aria-roledescription="selector switch" data-surface-controls="vca-envelope-gate-switch">
-      <title>Envelope Gate</title>
-      <g aria-hidden="true">
-        <rect x="1099" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1137.0" y="174.0" text-anchor="middle" font-size="10">Envelope Gate</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--vca-envelope-gate-switch" data-surface-control="vca-envelope-gate-switch" aria-hidden="true">
-        <rect x="1099.0" y="145" width="76.0" height="50" data-hit-area="vca-envelope-gate-switch" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--vca-level-fader" data-part="vca-level-fader" data-kind="fader" role="group" aria-label="Level" aria-roledescription="slider" data-surface-controls="vca-level-fader">
-      <title>Level</title>
-      <g aria-hidden="true">
-        <rect x="1134.0" y="231" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="1124.0" y="258.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1137.0" y="295" text-anchor="middle" font-size="10">Level</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--vca-level-fader" data-surface-control="vca-level-fader" aria-hidden="true">
-        <rect x="1099.0" y="231" width="76.0" height="50" data-hit-area="vca-level-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--envelope-attack-fader" data-part="envelope-attack-fader" data-kind="fader" role="group" aria-label="Attack" aria-roledescription="slider" data-surface-controls="envelope-attack-fader">
-      <title>Attack</title>
-      <g aria-hidden="true">
-        <rect x="1282.0" y="145" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="1272.0" y="172.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1285.0" y="209" text-anchor="middle" font-size="10">Attack</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--envelope-attack-fader" data-surface-control="envelope-attack-fader" aria-hidden="true">
-        <rect x="1247.0" y="145" width="76.0" height="50" data-hit-area="envelope-attack-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--envelope-decay-fader" data-part="envelope-decay-fader" data-kind="fader" role="group" aria-label="Decay" aria-roledescription="slider" data-surface-controls="envelope-decay-fader">
-      <title>Decay</title>
-      <g aria-hidden="true">
-        <rect x="1377.0" y="145" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="1367.0" y="172.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1380.0" y="209" text-anchor="middle" font-size="10">Decay</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--envelope-decay-fader" data-surface-control="envelope-decay-fader" aria-hidden="true">
-        <rect x="1342.0" y="145" width="76.0" height="50" data-hit-area="envelope-decay-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--envelope-sustain-fader" data-part="envelope-sustain-fader" data-kind="fader" role="group" aria-label="Sustain" aria-roledescription="slider">
-      <title>Sustain</title>
-      <g aria-hidden="true">
-        <rect x="1282.0" y="231" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="1272.0" y="258.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1285.0" y="295" text-anchor="middle" font-size="10">Sustain</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--envelope-release-fader" data-part="envelope-release-fader" data-kind="fader" role="group" aria-label="Release" aria-roledescription="slider" data-surface-controls="envelope-release-fader">
-      <title>Release</title>
-      <g aria-hidden="true">
-        <rect x="1377.0" y="231" width="6" height="50" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="1367.0" y="258.5" width="26" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1380.0" y="295" text-anchor="middle" font-size="10">Release</text>
-      </g>
-      <g id="roland-ju-06a-panel--surface--envelope-release-fader" data-surface-control="envelope-release-fader" aria-hidden="true">
-        <rect x="1342.0" y="231" width="76.0" height="50" data-hit-area="envelope-release-fader" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--chorus-chorus-i-button" data-part="chorus-chorus-i-button" data-kind="button" role="button" aria-label="Chorus I" aria-disabled="true" tabindex="-1">
-      <title>Chorus I</title>
-      <g aria-hidden="true">
-        <rect x="1461" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1499.0" y="174.0" text-anchor="middle" font-size="10">Chorus I</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--chorus-chorus-ii-button" data-part="chorus-chorus-ii-button" data-kind="button" role="button" aria-label="Chorus II" aria-disabled="true" tabindex="-1">
-      <title>Chorus II</title>
-      <g aria-hidden="true">
-        <rect x="1461" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1499.0" y="260.0" text-anchor="middle" font-size="10">Chorus II</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--keyboard-hold-button" data-part="keyboard-hold-button" data-kind="button" role="button" aria-label="Hold" aria-disabled="true" tabindex="-1">
-      <title>Hold</title>
-      <g aria-hidden="true">
-        <rect x="1609" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1647.0" y="174.0" text-anchor="middle" font-size="10">Hold</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--keyboard-chord-button" data-part="keyboard-chord-button" data-kind="button" role="button" aria-label="Chord" aria-disabled="true" tabindex="-1">
-      <title>Chord</title>
-      <g aria-hidden="true">
-        <rect x="1609" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1647.0" y="260.0" text-anchor="middle" font-size="10">Chord</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--keyboard-note-button" data-part="keyboard-note-button" data-kind="button" role="button" aria-label="Note" aria-disabled="true" tabindex="-1">
-      <title>Note</title>
-      <g aria-hidden="true">
-        <rect x="1609" y="317" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1647.0" y="346.0" text-anchor="middle" font-size="10">Note</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--arpeggio-on-off-button" data-part="arpeggio-on-off-button" data-kind="button" role="button" aria-label="On Off" aria-disabled="true" tabindex="-1">
-      <title>On Off</title>
-      <g aria-hidden="true">
-        <rect x="1757" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1795.0" y="174.0" text-anchor="middle" font-size="10">On Off</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--arpeggio-mode-switch" data-part="arpeggio-mode-switch" data-kind="switch" role="group" aria-label="Mode" aria-roledescription="selector switch">
-      <title>Mode</title>
-      <g aria-hidden="true">
-        <rect x="1852" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1890.0" y="174.0" text-anchor="middle" font-size="10">Mode</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--arpeggio-range-switch" data-part="arpeggio-range-switch" data-kind="switch" role="group" aria-label="Range" aria-roledescription="selector switch">
-      <title>Range</title>
-      <g aria-hidden="true">
-        <rect x="1757" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1795.0" y="260.0" text-anchor="middle" font-size="10">Range</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--arpeggio-rate-knob" data-part="arpeggio-rate-knob" data-kind="knob" role="group" aria-label="Rate" aria-roledescription="rotary control">
-      <title>Rate</title>
-      <g aria-hidden="true">
-        <circle cx="1890.0" cy="253" r="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M 1890.0 238 v 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="1890.0" y="295" text-anchor="middle" font-size="10">Rate</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--sequencer-start-button" data-part="sequencer-start-button" data-kind="button" role="button" aria-label="Start" aria-disabled="true" tabindex="-1">
-      <title>Start</title>
-      <g aria-hidden="true">
-        <rect x="1971" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2009.0" y="174.0" text-anchor="middle" font-size="10">Start</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--sequencer-edit-button" data-part="sequencer-edit-button" data-kind="button" role="button" aria-label="Edit" aria-disabled="true" tabindex="-1">
-      <title>Edit</title>
-      <g aria-hidden="true">
-        <rect x="2066" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2104.0" y="174.0" text-anchor="middle" font-size="10">Edit</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--sequencer-value-knob" data-part="sequencer-value-knob" data-kind="knob" role="group" aria-label="Value" aria-roledescription="rotary control">
-      <title>Value</title>
-      <g aria-hidden="true">
-        <circle cx="2009.0" cy="253" r="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M 2009.0 238 v 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2009.0" y="295" text-anchor="middle" font-size="10">Value</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--sequencer-note-gate-switch" data-part="sequencer-note-gate-switch" data-kind="switch" role="group" aria-label="Note Gate" aria-roledescription="selector switch">
-      <title>Note Gate</title>
-      <g aria-hidden="true">
-        <rect x="2066" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2104.0" y="260.0" text-anchor="middle" font-size="10">Note Gate</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-bank-1-button" data-part="memory-bank-1-button" data-kind="button" role="button" aria-label="Bank 1" aria-disabled="true" tabindex="-1">
-      <title>Bank 1</title>
-      <g aria-hidden="true">
-        <rect x="2185" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2223.0" y="174.0" text-anchor="middle" font-size="10">Bank 1</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-bank-2-button" data-part="memory-bank-2-button" data-kind="button" role="button" aria-label="Bank 2" aria-disabled="true" tabindex="-1">
-      <title>Bank 2</title>
-      <g aria-hidden="true">
-        <rect x="2280" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2318.0" y="174.0" text-anchor="middle" font-size="10">Bank 2</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-bank-3-button" data-part="memory-bank-3-button" data-kind="button" role="button" aria-label="Bank 3" aria-disabled="true" tabindex="-1">
-      <title>Bank 3</title>
-      <g aria-hidden="true">
-        <rect x="2375" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2413.0" y="174.0" text-anchor="middle" font-size="10">Bank 3</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-bank-4-button" data-part="memory-bank-4-button" data-kind="button" role="button" aria-label="Bank 4" aria-disabled="true" tabindex="-1">
-      <title>Bank 4</title>
-      <g aria-hidden="true">
-        <rect x="2470" y="145" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2508.0" y="174.0" text-anchor="middle" font-size="10">Bank 4</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-patch-1-button" data-part="memory-patch-1-button" data-kind="button" role="button" aria-label="Patch 1" aria-disabled="true" tabindex="-1">
-      <title>Patch 1</title>
-      <g aria-hidden="true">
-        <rect x="2185" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2223.0" y="260.0" text-anchor="middle" font-size="10">Patch 1</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-patch-2-button" data-part="memory-patch-2-button" data-kind="button" role="button" aria-label="Patch 2" aria-disabled="true" tabindex="-1">
-      <title>Patch 2</title>
-      <g aria-hidden="true">
-        <rect x="2280" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2318.0" y="260.0" text-anchor="middle" font-size="10">Patch 2</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-patch-3-button" data-part="memory-patch-3-button" data-kind="button" role="button" aria-label="Patch 3" aria-disabled="true" tabindex="-1">
-      <title>Patch 3</title>
-      <g aria-hidden="true">
-        <rect x="2375" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2413.0" y="260.0" text-anchor="middle" font-size="10">Patch 3</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-patch-4-button" data-part="memory-patch-4-button" data-kind="button" role="button" aria-label="Patch 4" aria-disabled="true" tabindex="-1">
-      <title>Patch 4</title>
-      <g aria-hidden="true">
-        <rect x="2470" y="231" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2508.0" y="260.0" text-anchor="middle" font-size="10">Patch 4</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-patch-5-button" data-part="memory-patch-5-button" data-kind="button" role="button" aria-label="Patch 5" aria-disabled="true" tabindex="-1">
-      <title>Patch 5</title>
-      <g aria-hidden="true">
-        <rect x="2185" y="317" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2223.0" y="346.0" text-anchor="middle" font-size="10">Patch 5</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-patch-6-button" data-part="memory-patch-6-button" data-kind="button" role="button" aria-label="Patch 6" aria-disabled="true" tabindex="-1">
-      <title>Patch 6</title>
-      <g aria-hidden="true">
-        <rect x="2280" y="317" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2318.0" y="346.0" text-anchor="middle" font-size="10">Patch 6</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-patch-7-button" data-part="memory-patch-7-button" data-kind="button" role="button" aria-label="Patch 7" aria-disabled="true" tabindex="-1">
-      <title>Patch 7</title>
-      <g aria-hidden="true">
-        <rect x="2375" y="317" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2413.0" y="346.0" text-anchor="middle" font-size="10">Patch 7</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--memory-patch-8-button" data-part="memory-patch-8-button" data-kind="button" role="button" aria-label="Patch 8" aria-disabled="true" tabindex="-1">
-      <title>Patch 8</title>
-      <g aria-hidden="true">
-        <rect x="2470" y="317" width="76" height="50" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2508.0" y="346.0" text-anchor="middle" font-size="10">Patch 8</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--power" data-part="power" data-kind="button" role="button" aria-label="Power" aria-disabled="true" tabindex="-1">
-      <title>Power</title>
-      <g aria-hidden="true">
-        <rect x="2512" y="45" width="65" height="25" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="2544.5" y="61.5" text-anchor="middle" font-size="10">Power</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--usb-midi" data-part="usb-midi" data-kind="socket" role="group" aria-label="USB MIDI" aria-roledescription="connector">
-      <title>USB MIDI</title>
-      <g aria-hidden="true">
-        <rect x="25" y="47" width="88" height="23" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="69.0" y="62.5" text-anchor="middle" font-size="10">USB MIDI</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--midi-in" data-part="midi-in" data-kind="socket" role="group" aria-label="MIDI IN" aria-roledescription="connector">
-      <title>MIDI IN</title>
-      <g aria-hidden="true">
-        <rect x="125" y="47" width="88" height="23" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="169.0" y="62.5" text-anchor="middle" font-size="10">MIDI IN</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--midi-out" data-part="midi-out" data-kind="socket" role="group" aria-label="MIDI OUT" aria-roledescription="connector">
-      <title>MIDI OUT</title>
-      <g aria-hidden="true">
-        <rect x="225" y="47" width="88" height="23" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="269.0" y="62.5" text-anchor="middle" font-size="10">MIDI OUT</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--audio-out" data-part="audio-out" data-kind="socket" role="group" aria-label="Audio OUT" aria-roledescription="connector">
-      <title>Audio OUT</title>
-      <g aria-hidden="true">
-        <rect x="325" y="47" width="88" height="23" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="369.0" y="62.5" text-anchor="middle" font-size="10">Audio OUT</text>
-      </g>
-    </g>
-    <g id="roland-ju-06a-panel--headphones" data-part="headphones" data-kind="socket" role="group" aria-label="Headphones" aria-roledescription="connector">
-      <title>Headphones</title>
-      <g aria-hidden="true">
-        <rect x="425" y="47" width="88" height="23" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="469.0" y="62.5" text-anchor="middle" font-size="10">Headphones</text>
-      </g>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="img" aria-labelledby="title description">
+<title id="title">Roland JU-06A top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect x="0" y="0" width="1500" height="680" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1482" height="662" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland JU-06A</text>
+<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="97.807" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="lfo-rate" data-kind="fader" aria-label="Rate" data-control="lfo-rate-fader"><title>Rate</title>
+<rect x="47.732" y="100" width="9.439" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.146245353159852"/>
+<rect x="43.013" y="258.723" width="18.877" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="lfo-delay" data-kind="fader" aria-label="Delay" data-control="lfo-delay-fader"><title>Delay</title>
+<rect x="90.636" y="100" width="9.439" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.146245353159852"/>
+<rect x="85.916" y="258.723" width="18.877" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<rect x="132.807" y="65" width="367.323" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="dco-16-foot" data-kind="button" aria-label="16 foot"><title>16 foot</title>
+<rect x="159.339" y="161.879" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="dco-8-foot" data-kind="button" aria-label="8 foot"><title>8 foot</title>
+<rect x="230.404" y="161.879" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="dco-4-foot" data-kind="button" aria-label="4 foot"><title>4 foot</title>
+<rect x="301.468" y="161.879" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="dco-lfo" data-kind="fader" aria-label="LFO" data-control="dco-lfo-fader"><title>LFO</title>
+<rect x="380.533" y="100" width="14" height="149.758" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
+<rect x="373.533" y="170.724" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="dco-pwm" data-kind="fader" aria-label="PWM" data-control="dco-pwm-fader"><title>PWM</title>
+<rect x="451.598" y="100" width="14" height="149.758" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
+<rect x="444.598" y="170.724" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="dco-pwm-source" data-kind="switch" aria-label="PWM source" data-control="dco-pwm-source-switch"><title>PWM source</title>
+<rect x="169.339" y="344.879" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="165.339" y="352.879" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="dco-square" data-kind="knob" aria-label="Square"><title>Square</title>
+<circle cx="245.404" cy="356.879" r="17.766" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M245.404 342.113L245.404 350.661" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="dco-saw" data-kind="knob" aria-label="Saw"><title>Saw</title>
+<circle cx="316.468" cy="356.879" r="17.766" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M316.468 342.113L316.468 350.661" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="dco-sub" data-kind="fader" aria-label="Sub" data-control="dco-sub-fader"><title>Sub</title>
+<rect x="380.533" y="280" width="14" height="149.758" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
+<rect x="373.533" y="350.724" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="dco-noise" data-kind="fader" aria-label="Noise" data-control="dco-noise-fader"><title>Noise</title>
+<rect x="451.598" y="280" width="14" height="149.758" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
+<rect x="444.598" y="350.724" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<rect x="510.13" y="65" width="97.807" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="hpf-cutoff" data-kind="fader" aria-label="Cutoff" data-control="hpf-cutoff-fader"><title>Cutoff</title>
+<rect x="552.033" y="100" width="14" height="328.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
+<rect x="545.033" y="256.554" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<rect x="617.937" y="65" width="216.394" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="vcf-cutoff" data-kind="fader" aria-label="Cutoff" data-control="vcf-cutoff-fader"><title>Cutoff</title>
+<rect x="637.222" y="100" width="7.494" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.4981495249896732"/>
+<rect x="633.475" y="258.723" width="14.989" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="vcf-resonance" data-kind="fader" aria-label="Resonance" data-control="vcf-resonance-fader"><title>Resonance</title>
+<rect x="671.288" y="100" width="7.494" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.4981495249896732"/>
+<rect x="667.541" y="254.926" width="14.989" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="vcf-polarity" data-kind="switch" aria-label="Polarity" data-control="vcf-polarity-switch"><title>Polarity</title>
+<rect x="704.101" y="252.59" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="700.101" y="260.59" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="vcf-envelope" data-kind="fader" aria-label="Envelope" data-control="vcf-envelope-fader"><title>Envelope</title>
+<rect x="739.419" y="100" width="7.494" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.4981495249896732"/>
+<rect x="735.672" y="254.926" width="14.989" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="vcf-lfo" data-kind="fader" aria-label="LFO" data-control="vcf-lfo-fader"><title>LFO</title>
+<rect x="773.485" y="100" width="7.494" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.4981495249896732"/>
+<rect x="769.738" y="258.723" width="14.989" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="vcf-key-follow" data-kind="fader" aria-label="Key follow" data-control="vcf-key-follow-fader"><title>Key follow</title>
+<rect x="807.551" y="100" width="7.494" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.4981495249896732"/>
+<rect x="803.804" y="254.926" width="14.989" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<rect x="844.331" y="65" width="97.807" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="vca-envelope-gate" data-kind="switch" aria-label="Envelope Gate" data-control="vca-envelope-gate-switch"><title>Envelope Gate</title>
+<rect x="866.783" y="252.59" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="862.783" y="260.59" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="vca-level" data-kind="fader" aria-label="Level" data-control="vca-level-fader"><title>Level</title>
+<rect x="909.967" y="100" width="9.439" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.146245353159852"/>
+<rect x="905.247" y="258.723" width="18.877" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<rect x="952.138" y="65" width="140.929" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="envelope-attack" data-kind="fader" aria-label="Attack" data-control="envelope-attack-fader"><title>Attack</title>
+<rect x="970.708" y="100" width="7.091" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.363705080545229"/>
+<rect x="967.163" y="258.723" width="14.182" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="envelope-decay" data-kind="fader" aria-label="Decay" data-control="envelope-decay-fader"><title>Decay</title>
+<rect x="1002.941" y="100" width="7.091" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.363705080545229"/>
+<rect x="999.395" y="258.723" width="14.182" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="envelope-sustain" data-kind="knob" aria-label="Sustain"><title>Sustain</title>
+<circle cx="1038.718" cy="268.545" r="8.058" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1038.718 263.487L1038.718 265.725" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="envelope-release" data-kind="fader" aria-label="Release" data-control="envelope-release-fader"><title>Release</title>
+<rect x="1067.405" y="100" width="7.091" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.363705080545229"/>
+<rect x="1063.86" y="258.723" width="14.182" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<rect x="1103.067" y="65" width="97.807" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="chorus-chorus-i" data-kind="knob" aria-label="Chorus I"><title>Chorus I</title>
+<circle cx="1130.519" cy="268.545" r="10.726" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1130.519 260.819L1130.519 264.791" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="chorus-chorus-ii" data-kind="knob" aria-label="Chorus II"><title>Chorus II</title>
+<circle cx="1173.422" cy="268.545" r="10.726" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1173.422 260.819L1173.422 264.791" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<rect x="1210.874" y="65" width="103.197" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="keyboard-hold" data-kind="knob" aria-label="Hold"><title>Hold</title>
+<circle cx="1232.073" cy="268.545" r="7.6" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1232.073 263.945L1232.073 265.885" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="keyboard-chord" data-kind="knob" aria-label="Chord"><title>Chord</title>
+<circle cx="1262.472" cy="268.545" r="7.6" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1262.472 263.945L1262.472 265.885" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="keyboard-note" data-kind="knob" aria-label="Note"><title>Note</title>
+<circle cx="1292.871" cy="268.545" r="7.6" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1292.871 263.945L1292.871 265.885" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<rect x="1324.071" y="65" width="140.929" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arpeggio-on-off" data-kind="button" aria-label="On Off"><title>On Off</title>
+<rect x="1336.071" y="258.429" width="20.232" height="20.232" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="arpeggio-mode" data-kind="knob" aria-label="Mode"><title>Mode</title>
+<circle cx="1378.419" cy="268.545" r="8.058" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1378.419 263.487L1378.419 265.725" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="arpeggio-range" data-kind="knob" aria-label="Range"><title>Range</title>
+<circle cx="1410.651" cy="268.545" r="8.058" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1410.651 263.487L1410.651 265.725" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="arpeggio-rate" data-kind="knob" aria-label="Rate"><title>Rate</title>
+<circle cx="1442.884" cy="268.545" r="8.058" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M1442.884 263.487L1442.884 265.725" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<rect x="25" y="480" width="1450" height="145" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="memory-performance-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
+<circle cx="68.842" cy="556.513" r="18.921" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M68.842 540.592L68.842 549.891" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="memory-performance-sound-mode-60-106" data-kind="button" aria-label="Sound mode 60 106"><title>Sound mode 60 106</title>
+<rect x="129.526" y="535.527" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-manual" data-kind="button" aria-label="Manual"><title>Manual</title>
+<rect x="205.211" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-start" data-kind="button" aria-label="Start"><title>Start</title>
+<rect x="280.895" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-edit" data-kind="button" aria-label="Edit"><title>Edit</title>
+<rect x="356.579" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-value" data-kind="knob" aria-label="Value"><title>Value</title>
+<circle cx="447.263" cy="556.513" r="18.921" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<path d="M447.263 540.592L447.263 549.891" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="memory-performance-note-gate" data-kind="button" aria-label="Note Gate"><title>Note Gate</title>
+<rect x="507.947" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-bank-1" data-kind="button" aria-label="Bank 1"><title>Bank 1</title>
+<rect x="583.632" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-bank-2" data-kind="button" aria-label="Bank 2"><title>Bank 2</title>
+<rect x="659.316" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-bank-3" data-kind="button" aria-label="Bank 3"><title>Bank 3</title>
+<rect x="735" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-bank-4" data-kind="button" aria-label="Bank 4"><title>Bank 4</title>
+<rect x="810.684" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-patch-1" data-kind="button" aria-label="Patch 1"><title>Patch 1</title>
+<rect x="886.368" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-patch-2" data-kind="button" aria-label="Patch 2"><title>Patch 2</title>
+<rect x="962.053" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-patch-3" data-kind="button" aria-label="Patch 3"><title>Patch 3</title>
+<rect x="1037.737" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-patch-4" data-kind="button" aria-label="Patch 4"><title>Patch 4</title>
+<rect x="1113.421" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-patch-5" data-kind="button" aria-label="Patch 5"><title>Patch 5</title>
+<rect x="1189.105" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-patch-6" data-kind="button" aria-label="Patch 6"><title>Patch 6</title>
+<rect x="1264.789" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-patch-7" data-kind="button" aria-label="Patch 7"><title>Patch 7</title>
+<rect x="1340.474" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
+<g id="memory-performance-patch-8" data-kind="button" aria-label="Patch 8"><title>Patch 8</title>
+<rect x="1416.158" y="541.513" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+</g>
 </svg>

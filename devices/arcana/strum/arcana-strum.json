@@ -2,8 +2,12 @@
 	"name": "Arcana Strum",
 	"manufacturer": "Arcana Instruments",
 	"description": "Adaptive guitar controller with a strum handle and five-key or three-key playing.",
-	"ids": ["arcana-strum"],
-	"portNames": ["Arcana Strum"],
+	"ids": [
+		"arcana-strum"
+	],
+	"portNames": [
+		"Arcana Strum"
+	],
 	"icon": "icon.svg",
 	"documentation": [
 		{
@@ -66,95 +70,187 @@
 	"manufacturerUrl": "https://arcanainstruments.com/",
 	"productUrl": "https://arcanainstruments.com/product/arcana-instrument/",
 	"surface": {
-		"src": "panel.svg",
-		"width": 1100,
-		"height": 650,
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 530,
 		"elements": [
 			{
-				"id": "strum-key-1",
-				"label": "Playing key 1",
-				"kind": "key",
+				"id": "five-key-touch-cluster-playing-key-1",
+				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 1",
+				"kind": "button",
 				"position": {
-					"x": 5.454545454545454,
-					"y": 20.307692307692307,
-					"width": 3.1818181818181817,
-					"height": 19.692307692307693
-				},
-				"message": {
-					"type": "note",
-					"number": 60
-				},
-				"learnable": true,
-				"dark": false
+					"x": 14.578571428571427,
+					"y": 44.00943396226415,
+					"width": 7.985714285714285,
+					"height": 15.58490566037736
+				}
 			},
 			{
-				"id": "strum-key-2",
-				"label": "Playing key 2",
-				"kind": "key",
+				"id": "five-key-touch-cluster-playing-key-2",
+				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 2",
+				"kind": "button",
 				"position": {
-					"x": 9.454545454545455,
-					"y": 20.307692307692307,
-					"width": 3.1818181818181817,
-					"height": 19.692307692307693
-				},
-				"message": {
-					"type": "note",
-					"number": 62
-				},
-				"learnable": true,
-				"dark": false
+					"x": 5.671428571428572,
+					"y": 44.00943396226415,
+					"width": 7.985714285714285,
+					"height": 15.58490566037736
+				}
 			},
 			{
-				"id": "strum-key-3",
-				"label": "Playing key 3",
-				"kind": "key",
+				"id": "five-key-touch-cluster-playing-key-3",
+				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 3",
+				"kind": "button",
 				"position": {
-					"x": 13.454545454545455,
-					"y": 20.307692307692307,
-					"width": 3.1818181818181817,
-					"height": 19.692307692307693
-				},
-				"message": {
-					"type": "note",
-					"number": 64
-				},
-				"learnable": true,
-				"dark": false
+					"x": 14.578571428571427,
+					"y": 26.19811320754717,
+					"width": 7.985714285714285,
+					"height": 15.58490566037736
+				}
 			},
 			{
-				"id": "strum-key-4",
-				"label": "Playing key 4",
-				"kind": "key",
+				"id": "five-key-touch-cluster-playing-key-4",
+				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 4",
+				"kind": "button",
 				"position": {
-					"x": 17.454545454545457,
-					"y": 20.307692307692307,
-					"width": 3.1818181818181817,
-					"height": 19.692307692307693
-				},
-				"message": {
-					"type": "note",
-					"number": 65
-				},
-				"learnable": true,
-				"dark": false
+					"x": 23.485714285714288,
+					"y": 44.00943396226415,
+					"width": 7.985714285714285,
+					"height": 15.58490566037736
+				}
 			},
 			{
-				"id": "strum-key-5",
-				"label": "Playing key 5",
-				"kind": "key",
+				"id": "five-key-touch-cluster-playing-key-5",
+				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 5",
+				"kind": "button",
 				"position": {
-					"x": 21.454545454545453,
-					"y": 20.307692307692307,
-					"width": 3.1818181818181817,
-					"height": 19.692307692307693
-				},
-				"message": {
-					"type": "note",
-					"number": 67
-				},
-				"learnable": true,
-				"dark": false
+					"x": 14.578571428571427,
+					"y": 61.82075471698113,
+					"width": 7.985714285714285,
+					"height": 15.58490566037736
+				}
+			},
+			{
+				"id": "mode-buttons-duration",
+				"label": "MODE BUTTONS: Duration",
+				"kind": "button",
+				"position": {
+					"x": 35.785714285714285,
+					"y": 29.245283018867923,
+					"width": 8.535714285714285,
+					"height": 22.169811320754718
+				}
+			},
+			{
+				"id": "mode-buttons-melodic-mode",
+				"label": "MODE BUTTONS: Melodic mode",
+				"kind": "button",
+				"position": {
+					"x": 44.32142857142857,
+					"y": 29.245283018867923,
+					"width": 8.535714285714285,
+					"height": 22.169811320754718
+				}
+			},
+			{
+				"id": "mode-buttons-septachords",
+				"label": "MODE BUTTONS: SeptaChords",
+				"kind": "button",
+				"position": {
+					"x": 52.85714285714286,
+					"y": 29.245283018867923,
+					"width": 8.535714285714285,
+					"height": 22.169811320754718
+				}
+			},
+			{
+				"id": "mode-buttons-power-reset",
+				"label": "MODE BUTTONS: Power / Reset",
+				"kind": "button",
+				"position": {
+					"x": 61.39285714285714,
+					"y": 29.245283018867923,
+					"width": 8.535714285714285,
+					"height": 22.169811320754718
+				}
+			},
+			{
+				"id": "mode-buttons-transpose",
+				"label": "MODE BUTTONS: Transpose -",
+				"kind": "button",
+				"position": {
+					"x": 35.785714285714285,
+					"y": 51.41509433962265,
+					"width": 8.535714285714285,
+					"height": 22.169811320754718
+				}
+			},
+			{
+				"id": "mode-buttons-transpose-2",
+				"label": "MODE BUTTONS: Transpose +",
+				"kind": "button",
+				"position": {
+					"x": 44.32142857142857,
+					"y": 51.41509433962265,
+					"width": 8.535714285714285,
+					"height": 22.169811320754718
+				}
+			},
+			{
+				"id": "mode-buttons-mode-1",
+				"label": "MODE BUTTONS: Mode 1",
+				"kind": "button",
+				"position": {
+					"x": 52.85714285714286,
+					"y": 51.41509433962265,
+					"width": 8.535714285714285,
+					"height": 22.169811320754718
+				}
+			},
+			{
+				"id": "mode-buttons-mode-2",
+				"label": "MODE BUTTONS: Mode 2",
+				"kind": "button",
+				"position": {
+					"x": 61.39285714285714,
+					"y": 51.41509433962265,
+					"width": 8.535714285714285,
+					"height": 22.169811320754718
+				}
+			},
+			{
+				"id": "strum-stick-strum-handle",
+				"label": "STRUM STICK: Strum handle",
+				"kind": "button",
+				"position": {
+					"x": 72.57142857142857,
+					"y": 24.528301886792452,
+					"width": 23.785714285714285,
+					"height": 55.660377358490564
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB power / MIDI",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Edge"
+		},
+		{
+			"label": "E-Box",
+			"connector": "Accessory connector",
+			"direction": "bidirectional",
+			"location": "Edge"
+		}
+	],
+	"diagramSources": [
+		"https://arcanainstruments.com/support/",
+		"https://arcanainstruments.com/product/arcana-instrument/"
+	]
 }

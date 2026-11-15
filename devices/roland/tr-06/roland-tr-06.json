@@ -7,8 +7,14 @@
 	"manufacturerUrl": "https://www.roland.com/",
 	"productUrl": "https://www.roland.com/global/products/tr-06/",
 	"description": "Boutique Expanded TR-606-style Drumatix rhythm composer.",
-	"ids": ["roland-tr-06"],
-	"portNames": ["TR-06", "TR-06 MIDI 1", "Roland TR-06"],
+	"ids": [
+		"roland-tr-06"
+	],
+	"portNames": [
+		"TR-06",
+		"TR-06 MIDI 1",
+		"Roland TR-06"
+	],
 	"icon": "icon.svg",
 	"documentation": [
 		{
@@ -20,7 +26,12 @@
 			"url": "https://static.roland.com/assets/media/pdf/TR-06_MIDI_Imple_Chart_eng01_W.pdf"
 		}
 	],
-	"abilities": ["USB MIDI", "DIN MIDI IN/OUT", "MIDI notes", "Documented controller mappings"],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI IN/OUT",
+		"MIDI notes",
+		"Documented controller mappings"
+	],
 	"hardwareControls": [
 		"Master: Volume, Value, Instrument, Mode, Run Stop, Pattern clear, Menu Substep, Step loop, Function, Tempo, Pattern group, Tap Reset, Scale",
 		"Effects: Drive, Time, Depth",
@@ -125,261 +136,518 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1220,
-		"height": 650,
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 680,
 		"elements": [
 			{
-				"id": "effects-drive-knob",
-				"label": "Drive",
+				"id": "master-volume",
+				"label": "MASTER: Volume",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 13.970588235294118,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-value",
+				"label": "MASTER: Value",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 13.970588235294118,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-instrument",
+				"label": "MASTER: Instrument",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 13.970588235294118,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-mode",
+				"label": "MASTER: Mode",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 24.558823529411764,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-run-stop",
+				"label": "MASTER: Run Stop",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 24.558823529411764,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-pattern-clear",
+				"label": "MASTER: Pattern clear",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 24.558823529411764,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-menu-substep",
+				"label": "MASTER: Menu Substep",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 35.147058823529406,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-step-loop",
+				"label": "MASTER: Step loop",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 35.147058823529406,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-function",
+				"label": "MASTER: Function",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 35.147058823529406,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-tempo",
+				"label": "MASTER: Tempo",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 45.73529411764706,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-pattern-group",
+				"label": "MASTER: Pattern group",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 45.73529411764706,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-tap-reset",
+				"label": "MASTER: Tap Reset",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 45.73529411764706,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "master-scale",
+				"label": "MASTER: Scale",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 56.3235294117647,
+					"width": 5.733333333333333,
+					"height": 10.588235294117647
+				}
+			},
+			{
+				"id": "effects-drive",
+				"label": "EFFECTS: Drive",
 				"kind": "knob",
 				"position": {
-					"x": 43.9344262295082,
-					"y": 22.30769230769231,
-					"width": 6.229508196721312,
-					"height": 7.6923076923076925
+					"x": 21.066666666666666,
+					"y": 13.970588235294118,
+					"width": 24.42222222222222,
+					"height": 17.647058823529413
 				},
 				"control": "effects-drive-knob"
 			},
 			{
-				"id": "effects-time-knob",
-				"label": "Time",
+				"id": "effects-time",
+				"label": "EFFECTS: Time",
 				"kind": "knob",
 				"position": {
-					"x": 43.9344262295082,
-					"y": 35.53846153846154,
-					"width": 6.229508196721312,
-					"height": 7.6923076923076925
+					"x": 21.066666666666666,
+					"y": 31.61764705882353,
+					"width": 24.42222222222222,
+					"height": 17.647058823529413
 				},
 				"control": "effects-time-knob"
 			},
 			{
-				"id": "effects-depth-knob",
-				"label": "Depth",
+				"id": "effects-depth",
+				"label": "EFFECTS: Depth",
 				"kind": "knob",
 				"position": {
-					"x": 43.9344262295082,
-					"y": 48.769230769230774,
-					"width": 6.229508196721312,
-					"height": 7.6923076923076925
+					"x": 21.066666666666666,
+					"y": 49.26470588235294,
+					"width": 24.42222222222222,
+					"height": 17.647058823529413
 				},
 				"control": "effects-depth-knob"
 			},
 			{
-				"id": "levels-accent-knob",
-				"label": "Accent",
+				"id": "levels-accent",
+				"label": "LEVELS: Accent",
 				"kind": "knob",
 				"position": {
-					"x": 56.0655737704918,
-					"y": 22.30769230769231,
-					"width": 6.229508196721312,
-					"height": 7.6923076923076925
+					"x": 46.95555555555555,
+					"y": 13.970588235294118,
+					"width": 25.15555555555555,
+					"height": 17.647058823529413
 				},
 				"control": "levels-accent-knob"
 			},
 			{
-				"id": "levels-bass-drum-knob",
-				"label": "Bass drum",
+				"id": "levels-bass-drum",
+				"label": "LEVELS: Bass drum",
 				"kind": "knob",
 				"position": {
-					"x": 63.852459016393446,
-					"y": 22.30769230769231,
-					"width": 6.229508196721312,
-					"height": 7.6923076923076925
+					"x": 72.1111111111111,
+					"y": 13.970588235294118,
+					"width": 25.15555555555555,
+					"height": 17.647058823529413
 				},
 				"control": "levels-bass-drum-knob"
 			},
 			{
-				"id": "levels-snare-knob",
-				"label": "Snare",
+				"id": "levels-snare",
+				"label": "LEVELS: Snare",
 				"kind": "knob",
 				"position": {
-					"x": 56.0655737704918,
-					"y": 35.53846153846154,
-					"width": 6.229508196721312,
-					"height": 7.6923076923076925
+					"x": 46.95555555555555,
+					"y": 31.61764705882353,
+					"width": 25.15555555555555,
+					"height": 17.647058823529413
 				},
 				"control": "levels-snare-knob"
 			},
 			{
-				"id": "levels-tom-knob-1",
-				"label": "Tom (part 1)",
+				"id": "levels-tom",
+				"label": "LEVELS: Tom",
 				"kind": "knob",
 				"position": {
-					"x": 63.852459016393446,
-					"y": 35.53846153846154,
-					"width": 3.114754098360656,
-					"height": 7.6923076923076925
-				},
-				"control": "levels-tom-knob-1"
+					"x": 72.1111111111111,
+					"y": 31.61764705882353,
+					"width": 25.15555555555555,
+					"height": 17.647058823529413
+				}
 			},
 			{
-				"id": "levels-tom-knob-2",
-				"label": "Tom (part 2)",
+				"id": "levels-cymbal",
+				"label": "LEVELS: Cymbal",
 				"kind": "knob",
 				"position": {
-					"x": 66.9672131147541,
-					"y": 35.53846153846154,
-					"width": 3.114754098360656,
-					"height": 7.6923076923076925
-				},
-				"control": "levels-tom-knob-2"
-			},
-			{
-				"id": "levels-cymbal-knob",
-				"label": "Cymbal",
-				"kind": "knob",
-				"position": {
-					"x": 56.0655737704918,
-					"y": 48.769230769230774,
-					"width": 6.229508196721312,
-					"height": 7.6923076923076925
+					"x": 46.95555555555555,
+					"y": 49.26470588235294,
+					"width": 25.15555555555555,
+					"height": 17.647058823529413
 				},
 				"control": "levels-cymbal-knob"
 			},
 			{
-				"id": "levels-hi-hat-knob-1",
-				"label": "Hi hat (part 1)",
+				"id": "levels-hi-hat",
+				"label": "LEVELS: Hi hat",
 				"kind": "knob",
 				"position": {
-					"x": 63.852459016393446,
-					"y": 48.769230769230774,
-					"width": 3.114754098360656,
-					"height": 7.6923076923076925
-				},
-				"control": "levels-hi-hat-knob-1"
+					"x": 72.1111111111111,
+					"y": 49.26470588235294,
+					"width": 25.15555555555555,
+					"height": 17.647058823529413
+				}
 			},
 			{
-				"id": "levels-hi-hat-knob-2",
-				"label": "Hi hat (part 2)",
-				"kind": "knob",
+				"id": "steps-1",
+				"label": "STEPS: 1",
+				"kind": "button",
 				"position": {
-					"x": 66.9672131147541,
-					"y": 48.769230769230774,
-					"width": 3.114754098360656,
-					"height": 7.6923076923076925
-				},
-				"control": "levels-hi-hat-knob-2"
+					"x": 2.0666666666666664,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-1",
-				"label": "Kick",
-				"kind": "key",
+				"id": "steps-2",
+				"label": "STEPS: 2",
+				"kind": "button",
 				"position": {
-					"x": 2.0491803278688523,
-					"y": 82.76923076923077,
-					"width": 13.290398126463701,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 36,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 8.058333333333334,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-2",
-				"label": "Snare",
-				"kind": "key",
+				"id": "steps-3",
+				"label": "STEPS: 3",
+				"kind": "button",
 				"position": {
-					"x": 15.749414519906324,
-					"y": 82.76923076923077,
-					"width": 13.290398126463701,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 38,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 14.05,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-3",
-				"label": "Low tom",
-				"kind": "key",
+				"id": "steps-4",
+				"label": "STEPS: 4",
+				"kind": "button",
 				"position": {
-					"x": 29.449648711943794,
-					"y": 82.76923076923077,
-					"width": 13.290398126463701,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 47,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 20.041666666666664,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-4",
-				"label": "High tom",
-				"kind": "key",
+				"id": "steps-5",
+				"label": "STEPS: 5",
+				"kind": "button",
 				"position": {
-					"x": 43.149882903981265,
-					"y": 82.76923076923077,
-					"width": 13.290398126463701,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 50,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 26.033333333333335,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-5",
-				"label": "Cymbal",
-				"kind": "key",
+				"id": "steps-6",
+				"label": "STEPS: 6",
+				"kind": "button",
 				"position": {
-					"x": 56.850117096018735,
-					"y": 82.76923076923077,
-					"width": 13.290398126463701,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 49,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 32.025,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-6",
-				"label": "Open hat",
-				"kind": "key",
+				"id": "steps-7",
+				"label": "STEPS: 7",
+				"kind": "button",
 				"position": {
-					"x": 70.5503512880562,
-					"y": 82.76923076923077,
-					"width": 13.290398126463701,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 46,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 38.016666666666666,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-7",
-				"label": "Closed hat",
-				"kind": "key",
+				"id": "steps-8",
+				"label": "STEPS: 8",
+				"kind": "button",
 				"position": {
-					"x": 84.25058548009368,
-					"y": 82.76923076923077,
-					"width": 13.290398126463701,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 42,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 44.00833333333333,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
+			},
+			{
+				"id": "steps-9",
+				"label": "STEPS: 9",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
+			},
+			{
+				"id": "steps-10",
+				"label": "STEPS: 10",
+				"kind": "button",
+				"position": {
+					"x": 55.99166666666666,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
+			},
+			{
+				"id": "steps-11",
+				"label": "STEPS: 11",
+				"kind": "button",
+				"position": {
+					"x": 61.983333333333334,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
+			},
+			{
+				"id": "steps-12",
+				"label": "STEPS: 12",
+				"kind": "button",
+				"position": {
+					"x": 67.975,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
+			},
+			{
+				"id": "steps-13",
+				"label": "STEPS: 13",
+				"kind": "button",
+				"position": {
+					"x": 73.96666666666667,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
+			},
+			{
+				"id": "steps-14",
+				"label": "STEPS: 14",
+				"kind": "button",
+				"position": {
+					"x": 79.95833333333333,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
+			},
+			{
+				"id": "steps-15",
+				"label": "STEPS: 15",
+				"kind": "button",
+				"position": {
+					"x": 85.95,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
+			},
+			{
+				"id": "steps-16",
+				"label": "STEPS: 16",
+				"kind": "button",
+				"position": {
+					"x": 91.94166666666666,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Mix IN",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Output",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Micro USB",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Trigger IN",
+			"connector": "3.5 mm",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Trigger OUT AC",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Trigger OUT BD",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Trigger OUT SD",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Trigger OUT LT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Trigger OUT HT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Top"
+		}
+	],
+	"diagramSources": [
+		"https://static.roland.com/assets/media/pdf/TR-06_eng02_W.pdf",
+		"https://static.roland.com/assets/media/pdf/TR-06_MIDI_Imple_Chart_eng01_W.pdf"
+	]
 }

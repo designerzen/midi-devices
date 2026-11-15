@@ -36,7 +36,10 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 				profile: `${base}${id}.json`,
 				base,
 				icon: `${base}${profile.icon ?? "icon.svg"}`,
-				panel: `${base}${profile.surface?.src ?? "panel.svg"}`,
+				panel: `${base}${profile.diagrams?.panel ?? "panel.svg"}`,
+				...(profile.diagrams?.connections ? { connections: `${base}${profile.diagrams.connections}` } : {}),
+				...(profile.diagrams?.interface ? { interface: `${base}${profile.diagrams.interface}` } : {}),
+				...(profile.diagrams?.logo ? { logo: `${base}${profile.diagrams.logo}` } : {}),
 				manufacturer: `${api}manufacturers/${folder.split("/")[0]}.json`,
 				catalogue: `${site}#device-${id}`
 			}

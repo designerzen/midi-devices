@@ -4,8 +4,13 @@
 	"id": "k-mix-expander",
 	"name": "K-Mix Expander",
 	"manufacturer": "Keith McMillen Instruments",
-	"ids": ["k-mix-expander"],
-	"portNames": ["2- Expander", "K-Mix Expander"],
+	"ids": [
+		"k-mix-expander"
+	],
+	"portNames": [
+		"2- Expander",
+		"K-Mix Expander"
+	],
 	"description": "Hardware MIDI input for the K-Mix Expander port, restored from the original AudioBus adapter.",
 	"icon": "icon.svg",
 	"documentation": [
@@ -18,7 +23,10 @@
 			"url": "https://github.com/designerzen/audiobus/blob/ts2wp2es6pug/source/code/typescript/audiobus/io/devices/KMix.ts"
 		}
 	],
-	"abilities": ["MIDI message forwarding", "Independent Expander port selection"],
+	"abilities": [
+		"MIDI message forwarding",
+		"Independent Expander port selection"
+	],
 	"hardwareControls": [
 		"Eight input faders",
 		"Main fader",
@@ -219,308 +227,517 @@
 	"manufacturerUrl": "https://www.keithmcmillen.com/",
 	"productUrl": "https://www.keithmcmillen.com/products/k-mix/",
 	"surface": {
-		"src": "panel.svg",
-		"width": 600,
-		"height": 300,
+		"src": "interface.svg",
+		"width": 1100,
+		"height": 860,
 		"elements": [
 			{
-				"id": "fader-1",
-				"label": "Channel 1 fader",
-				"kind": "fader",
-				"position": {
-					"x": 4.1667,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
-				},
-				"control": "fader-1",
-				"learnable": true
-			},
-			{
-				"id": "mute-1",
-				"label": "Channel 1 mute",
+				"id": "rotary-touch-rotary-1",
+				"label": "ROTARY TOUCH: Rotary 1",
 				"kind": "button",
 				"position": {
-					"x": 4.1667,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-1",
-				"learnable": true
+					"x": 5.090909090909091,
+					"y": 13.953488372093023,
+					"width": 15.636363636363637,
+					"height": 15.69767441860465
+				}
 			},
 			{
-				"id": "fader-2",
-				"label": "Channel 2 fader",
-				"kind": "fader",
-				"position": {
-					"x": 14.5,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
-				},
-				"control": "fader-2",
-				"learnable": true
-			},
-			{
-				"id": "mute-2",
-				"label": "Channel 2 mute",
+				"id": "rotary-touch-rotary-2",
+				"label": "ROTARY TOUCH: Rotary 2",
 				"kind": "button",
 				"position": {
-					"x": 14.5,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-2",
-				"learnable": true
+					"x": 20.727272727272727,
+					"y": 13.953488372093023,
+					"width": 15.636363636363637,
+					"height": 15.69767441860465
+				}
 			},
 			{
-				"id": "fader-3",
-				"label": "Channel 3 fader",
-				"kind": "fader",
-				"position": {
-					"x": 24.8333,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
-				},
-				"control": "fader-3",
-				"learnable": true
-			},
-			{
-				"id": "mute-3",
-				"label": "Channel 3 mute",
+				"id": "rotary-touch-rotary-3",
+				"label": "ROTARY TOUCH: Rotary 3",
 				"kind": "button",
 				"position": {
-					"x": 24.8333,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-3",
-				"learnable": true
+					"x": 36.36363636363637,
+					"y": 13.953488372093023,
+					"width": 15.636363636363637,
+					"height": 15.69767441860465
+				}
 			},
 			{
-				"id": "fader-4",
-				"label": "Channel 4 fader",
-				"kind": "fader",
-				"position": {
-					"x": 35.1667,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
-				},
-				"control": "fader-4",
-				"learnable": true
-			},
-			{
-				"id": "mute-4",
-				"label": "Channel 4 mute",
+				"id": "rotary-touch-rotary-4",
+				"label": "ROTARY TOUCH: Rotary 4",
 				"kind": "button",
 				"position": {
-					"x": 35.1667,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-4",
-				"learnable": true
+					"x": 52.0,
+					"y": 13.953488372093023,
+					"width": 15.636363636363637,
+					"height": 15.69767441860465
+				}
 			},
 			{
-				"id": "fader-5",
-				"label": "Channel 5 fader",
+				"id": "channel-faders-channel-1",
+				"label": "CHANNEL FADERS: Channel 1",
 				"kind": "fader",
 				"position": {
-					"x": 45.5,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
+					"x": 5.090909090909091,
+					"y": 36.627906976744185,
+					"width": 7.818181818181818,
+					"height": 45.93023255813954
 				},
-				"control": "fader-5",
-				"learnable": true
+				"control": "fader-1"
 			},
 			{
-				"id": "mute-5",
-				"label": "Channel 5 mute",
-				"kind": "button",
-				"position": {
-					"x": 45.5,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-5",
-				"learnable": true
-			},
-			{
-				"id": "fader-6",
-				"label": "Channel 6 fader",
+				"id": "channel-faders-channel-2",
+				"label": "CHANNEL FADERS: Channel 2",
 				"kind": "fader",
 				"position": {
-					"x": 55.8333,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
+					"x": 12.909090909090908,
+					"y": 36.627906976744185,
+					"width": 7.818181818181818,
+					"height": 45.93023255813954
 				},
-				"control": "fader-6",
-				"learnable": true
+				"control": "fader-2"
 			},
 			{
-				"id": "mute-6",
-				"label": "Channel 6 mute",
-				"kind": "button",
-				"position": {
-					"x": 55.8333,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-6",
-				"learnable": true
-			},
-			{
-				"id": "fader-7",
-				"label": "Channel 7 fader",
+				"id": "channel-faders-channel-3",
+				"label": "CHANNEL FADERS: Channel 3",
 				"kind": "fader",
 				"position": {
-					"x": 66.1667,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
+					"x": 20.727272727272727,
+					"y": 36.627906976744185,
+					"width": 7.818181818181818,
+					"height": 45.93023255813954
 				},
-				"control": "fader-7",
-				"learnable": true
+				"control": "fader-3"
 			},
 			{
-				"id": "mute-7",
-				"label": "Channel 7 mute",
-				"kind": "button",
-				"position": {
-					"x": 66.1667,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-7",
-				"learnable": true
-			},
-			{
-				"id": "fader-8",
-				"label": "Channel 8 fader",
+				"id": "channel-faders-channel-4",
+				"label": "CHANNEL FADERS: Channel 4",
 				"kind": "fader",
 				"position": {
-					"x": 76.5,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
+					"x": 28.545454545454547,
+					"y": 36.627906976744185,
+					"width": 7.818181818181818,
+					"height": 45.93023255813954
 				},
-				"control": "fader-8",
-				"learnable": true
+				"control": "fader-4"
 			},
 			{
-				"id": "mute-8",
-				"label": "Channel 8 mute",
-				"kind": "button",
-				"position": {
-					"x": 76.5,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-8",
-				"learnable": true
-			},
-			{
-				"id": "fader-9",
-				"label": "Main fader",
+				"id": "channel-faders-channel-5",
+				"label": "CHANNEL FADERS: Channel 5",
 				"kind": "fader",
 				"position": {
-					"x": 86.8333,
-					"y": 31.6667,
-					"width": 6.0,
-					"height": 50.0
+					"x": 36.36363636363637,
+					"y": 36.627906976744185,
+					"width": 7.818181818181818,
+					"height": 45.93023255813954
 				},
-				"control": "fader-9",
-				"learnable": true
+				"control": "fader-5"
 			},
 			{
-				"id": "mute-9",
-				"label": "Main mute",
+				"id": "channel-faders-channel-6",
+				"label": "CHANNEL FADERS: Channel 6",
+				"kind": "fader",
+				"position": {
+					"x": 44.18181818181818,
+					"y": 36.627906976744185,
+					"width": 7.818181818181818,
+					"height": 45.93023255813954
+				},
+				"control": "fader-6"
+			},
+			{
+				"id": "channel-faders-channel-7",
+				"label": "CHANNEL FADERS: Channel 7",
+				"kind": "fader",
+				"position": {
+					"x": 52.0,
+					"y": 36.627906976744185,
+					"width": 7.818181818181818,
+					"height": 45.93023255813954
+				},
+				"control": "fader-7"
+			},
+			{
+				"id": "channel-faders-channel-8",
+				"label": "CHANNEL FADERS: Channel 8",
+				"kind": "fader",
+				"position": {
+					"x": 59.81818181818181,
+					"y": 36.627906976744185,
+					"width": 7.818181818181818,
+					"height": 45.93023255813954
+				},
+				"control": "fader-8"
+			},
+			{
+				"id": "channel-select-1",
+				"label": "CHANNEL SELECT: 1",
 				"kind": "button",
 				"position": {
-					"x": 86.8333,
-					"y": 85.0,
-					"width": 6.0,
-					"height": 8.0
-				},
-				"control": "mute-9",
-				"learnable": true
+					"x": 5.090909090909091,
+					"y": 88.37209302325581,
+					"width": 7.818181818181818,
+					"height": 4.069767441860465
+				}
 			},
 			{
-				"id": "rotary-1",
-				"label": "Assignable rotary 1",
-				"kind": "knob",
+				"id": "channel-select-2",
+				"label": "CHANNEL SELECT: 2",
+				"kind": "button",
 				"position": {
-					"x": 25,
-					"y": 13,
-					"width": 6,
-					"height": 12
-				},
-				"message": {
-					"type": "cc",
-					"number": 50
-				},
-				"learnable": true
+					"x": 12.909090909090908,
+					"y": 88.37209302325581,
+					"width": 7.818181818181818,
+					"height": 4.069767441860465
+				}
 			},
 			{
-				"id": "rotary-2",
-				"label": "Assignable rotary 2",
-				"kind": "knob",
+				"id": "channel-select-3",
+				"label": "CHANNEL SELECT: 3",
+				"kind": "button",
 				"position": {
-					"x": 37,
-					"y": 13,
-					"width": 6,
-					"height": 12
-				},
-				"message": {
-					"type": "cc",
-					"number": 51
-				},
-				"learnable": true
+					"x": 20.727272727272727,
+					"y": 88.37209302325581,
+					"width": 7.818181818181818,
+					"height": 4.069767441860465
+				}
 			},
 			{
-				"id": "rotary-3",
-				"label": "Assignable rotary 3",
-				"kind": "knob",
+				"id": "channel-select-4",
+				"label": "CHANNEL SELECT: 4",
+				"kind": "button",
 				"position": {
-					"x": 49,
-					"y": 13,
-					"width": 6,
-					"height": 12
-				},
-				"message": {
-					"type": "cc",
-					"number": 52
-				},
-				"learnable": true
+					"x": 28.545454545454547,
+					"y": 88.37209302325581,
+					"width": 7.818181818181818,
+					"height": 4.069767441860465
+				}
 			},
 			{
-				"id": "rotary-4",
-				"label": "Assignable rotary 4",
-				"kind": "knob",
+				"id": "channel-select-5",
+				"label": "CHANNEL SELECT: 5",
+				"kind": "button",
 				"position": {
-					"x": 61,
-					"y": 13,
-					"width": 6,
-					"height": 12
+					"x": 36.36363636363637,
+					"y": 88.37209302325581,
+					"width": 7.818181818181818,
+					"height": 4.069767441860465
+				}
+			},
+			{
+				"id": "channel-select-6",
+				"label": "CHANNEL SELECT: 6",
+				"kind": "button",
+				"position": {
+					"x": 44.18181818181818,
+					"y": 88.37209302325581,
+					"width": 7.818181818181818,
+					"height": 4.069767441860465
+				}
+			},
+			{
+				"id": "channel-select-7",
+				"label": "CHANNEL SELECT: 7",
+				"kind": "button",
+				"position": {
+					"x": 52.0,
+					"y": 88.37209302325581,
+					"width": 7.818181818181818,
+					"height": 4.069767441860465
+				}
+			},
+			{
+				"id": "channel-select-8",
+				"label": "CHANNEL SELECT: 8",
+				"kind": "button",
+				"position": {
+					"x": 59.81818181818181,
+					"y": 88.37209302325581,
+					"width": 7.818181818181818,
+					"height": 4.069767441860465
+				}
+			},
+			{
+				"id": "main-main",
+				"label": "MAIN: Main",
+				"kind": "fader",
+				"position": {
+					"x": 85.0909090909091,
+					"y": 36.627906976744185,
+					"width": 9.818181818181818,
+					"height": 45.93023255813954
 				},
-				"message": {
-					"type": "cc",
-					"number": 53
-				},
-				"learnable": true
+				"control": "fader-9"
+			},
+			{
+				"id": "navigation-up",
+				"label": "NAVIGATION: Up",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 13.953488372093023,
+					"width": 11.954545454545455,
+					"height": 7.848837209302325
+				}
+			},
+			{
+				"id": "navigation-down",
+				"label": "NAVIGATION: Down",
+				"kind": "button",
+				"position": {
+					"x": 82.95454545454545,
+					"y": 13.953488372093023,
+					"width": 11.954545454545455,
+					"height": 7.848837209302325
+				}
+			},
+			{
+				"id": "navigation-left",
+				"label": "NAVIGATION: Left",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 21.802325581395348,
+					"width": 11.954545454545455,
+					"height": 7.848837209302325
+				}
+			},
+			{
+				"id": "navigation-right",
+				"label": "NAVIGATION: Right",
+				"kind": "button",
+				"position": {
+					"x": 82.95454545454545,
+					"y": 21.802325581395348,
+					"width": 11.954545454545455,
+					"height": 7.848837209302325
+				}
+			},
+			{
+				"id": "mix-midi-input",
+				"label": "MIX / MIDI: Input",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 36.627906976744185,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-output",
+				"label": "MIX / MIDI: Output",
+				"kind": "button",
+				"position": {
+					"x": 76.81818181818181,
+					"y": 36.627906976744185,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-pan",
+				"label": "MIX / MIDI: Pan",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 43.604651162790695,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-aux-1",
+				"label": "MIX / MIDI: Aux 1",
+				"kind": "button",
+				"position": {
+					"x": 76.81818181818181,
+					"y": 43.604651162790695,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-aux-2",
+				"label": "MIX / MIDI: Aux 2",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 50.58139534883721,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-aux-3",
+				"label": "MIX / MIDI: Aux 3",
+				"kind": "button",
+				"position": {
+					"x": 76.81818181818181,
+					"y": 50.58139534883721,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-eq",
+				"label": "MIX / MIDI: EQ",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 57.55813953488372,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-dynamics",
+				"label": "MIX / MIDI: Dynamics",
+				"kind": "button",
+				"position": {
+					"x": 76.81818181818181,
+					"y": 57.55813953488372,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-reverb",
+				"label": "MIX / MIDI: Reverb",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 64.53488372093024,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-midi",
+				"label": "MIX / MIDI: MIDI",
+				"kind": "button",
+				"position": {
+					"x": 76.81818181818181,
+					"y": 64.53488372093024,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-bank-1",
+				"label": "MIX / MIDI: Bank 1",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 71.51162790697676,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-bank-2",
+				"label": "MIX / MIDI: Bank 2",
+				"kind": "button",
+				"position": {
+					"x": 76.81818181818181,
+					"y": 71.51162790697676,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-bank-3",
+				"label": "MIX / MIDI: Bank 3",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 78.48837209302324,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-mute",
+				"label": "MIX / MIDI: Mute",
+				"kind": "button",
+				"position": {
+					"x": 76.81818181818181,
+					"y": 78.48837209302324,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-solo",
+				"label": "MIX / MIDI: Solo",
+				"kind": "button",
+				"position": {
+					"x": 71.0,
+					"y": 85.46511627906976,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
+			},
+			{
+				"id": "mix-midi-bypass",
+				"label": "MIX / MIDI: Bypass",
+				"kind": "button",
+				"position": {
+					"x": 76.81818181818181,
+					"y": 85.46511627906976,
+					"width": 5.818181818181818,
+					"height": 6.976744186046512
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB micro-B AUDIO",
+			"connector": "Micro USB MIDI / audio / power",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Inputs 1/2",
+			"connector": "XLR / TRS combo",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Inputs 3-8",
+			"connector": "6.35 mm TRS",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Outputs 1-8",
+			"connector": "6.35 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Front"
+		},
+		{
+			"label": "CONTROL / Power / MIDI Expander",
+			"connector": "USB mini-B",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://files.keithmcmillen.com/products/k-mix/documentation/kmix-manual.pdf",
+		"https://github.com/designerzen/audiobus/blob/ts2wp2es6pug/source/code/typescript/audiobus/io/devices/KMix.ts"
+	]
 }

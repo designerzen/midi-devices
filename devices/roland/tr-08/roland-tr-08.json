@@ -7,8 +7,14 @@
 	"manufacturerUrl": "https://www.roland.com/",
 	"productUrl": "https://www.roland.com/global/products/tr-08/",
 	"description": "Boutique TR-808-style rhythm composer.",
-	"ids": ["roland-tr-08"],
-	"portNames": ["TR-08", "TR-08 MIDI 1", "Roland TR-08"],
+	"ids": [
+		"roland-tr-08"
+	],
+	"portNames": [
+		"TR-08",
+		"TR-08 MIDI 1",
+		"Roland TR-08"
+	],
 	"icon": "icon.svg",
 	"documentation": [
 		{
@@ -20,7 +26,12 @@
 			"url": "https://static.roland.com/assets/media/pdf/TR-08_MIDI_Imple_Chart_eng01_W.pdf"
 		}
 	],
-	"abilities": ["USB MIDI", "DIN MIDI IN/OUT", "MIDI notes", "Documented controller mappings"],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI IN/OUT",
+		"MIDI notes",
+		"Documented controller mappings"
+	],
 	"hardwareControls": [
 		"Master: Volume, Tempo, Fine Value, Mode, Instrument Track, Auto Fill, Start Stop, Bank Tempo Shuffle, Clear, Trigger track, Tap, Menu Substep, Basic variation, Prescale, Fill variation, Accent",
 		"Bass Drum: Level, Tone, Decay",
@@ -199,546 +210,723 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 2272,
-		"height": 650,
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 680,
 		"elements": [
 			{
-				"id": "master-accent-knob",
-				"label": "Accent",
-				"kind": "knob",
+				"id": "master-volume",
+				"label": "MASTER: Volume",
+				"kind": "button",
 				"position": {
-					"x": 14.172535211267606,
-					"y": 48.769230769230774,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 2.0666666666666664,
+					"y": 13.970588235294118,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-tempo",
+				"label": "MASTER: Tempo",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 13.970588235294118,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-fine-value",
+				"label": "MASTER: Fine Value",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 13.970588235294118,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-mode",
+				"label": "MASTER: Mode",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 22.794117647058822,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-instrument-track",
+				"label": "MASTER: Instrument Track",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 22.794117647058822,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-auto-fill",
+				"label": "MASTER: Auto Fill",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 22.794117647058822,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-start-stop",
+				"label": "MASTER: Start Stop",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 31.61764705882353,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-bank-tempo-shuffle",
+				"label": "MASTER: Bank Tempo Shuffle",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 31.61764705882353,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-clear",
+				"label": "MASTER: Clear",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 31.61764705882353,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-trigger-track",
+				"label": "MASTER: Trigger track",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 40.44117647058824,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-tap",
+				"label": "MASTER: Tap",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 40.44117647058824,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-menu-substep",
+				"label": "MASTER: Menu Substep",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 40.44117647058824,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-basic-variation",
+				"label": "MASTER: Basic variation",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 49.26470588235294,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-prescale",
+				"label": "MASTER: Prescale",
+				"kind": "button",
+				"position": {
+					"x": 7.8,
+					"y": 49.26470588235294,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-fill-variation",
+				"label": "MASTER: Fill variation",
+				"kind": "button",
+				"position": {
+					"x": 13.533333333333333,
+					"y": 49.26470588235294,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
+				}
+			},
+			{
+				"id": "master-accent",
+				"label": "MASTER: Accent",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 58.08823529411765,
+					"width": 5.733333333333333,
+					"height": 8.823529411764707
 				},
 				"control": "master-accent-knob"
 			},
 			{
-				"id": "bass-drum-level-knob",
-				"label": "Level",
+				"id": "bass-drum-level",
+				"label": "BASS DRUM: Level",
 				"kind": "knob",
 				"position": {
-					"x": 27.772887323943664,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 21.066666666666666,
+					"y": 13.970588235294118,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "bass-drum-level-knob"
 			},
 			{
-				"id": "bass-drum-tone-knob",
-				"label": "Tone",
+				"id": "bass-drum-tone",
+				"label": "BASS DRUM: Tone",
 				"kind": "knob",
 				"position": {
-					"x": 27.772887323943664,
-					"y": 35.53846153846154,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 21.066666666666666,
+					"y": 31.61764705882353,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "bass-drum-tone-knob"
 			},
 			{
-				"id": "bass-drum-decay-knob",
-				"label": "Decay",
+				"id": "bass-drum-decay",
+				"label": "BASS DRUM: Decay",
 				"kind": "knob",
 				"position": {
-					"x": 27.772887323943664,
-					"y": 48.769230769230774,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 21.066666666666666,
+					"y": 49.26470588235294,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "bass-drum-decay-knob"
 			},
 			{
-				"id": "snare-level-knob",
-				"label": "Level",
+				"id": "snare-level",
+				"label": "SNARE: Level",
 				"kind": "knob",
 				"position": {
-					"x": 34.28697183098591,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 29.388095238095236,
+					"y": 13.970588235294118,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "snare-level-knob"
 			},
 			{
-				"id": "snare-tone-knob",
-				"label": "Tone",
+				"id": "snare-tone",
+				"label": "SNARE: Tone",
 				"kind": "knob",
 				"position": {
-					"x": 34.28697183098591,
-					"y": 35.53846153846154,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 29.388095238095236,
+					"y": 31.61764705882353,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "snare-tone-knob"
 			},
 			{
-				"id": "snare-snappy-knob",
-				"label": "Snappy",
+				"id": "snare-snappy",
+				"label": "SNARE: Snappy",
 				"kind": "knob",
 				"position": {
-					"x": 34.28697183098591,
-					"y": 48.769230769230774,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 29.388095238095236,
+					"y": 49.26470588235294,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "snare-snappy-knob"
 			},
 			{
-				"id": "low-tom-conga-level-knob",
-				"label": "Level",
+				"id": "low-tom-conga-level",
+				"label": "LOW TOM CONGA: Level",
 				"kind": "knob",
 				"position": {
-					"x": 40.80105633802817,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 37.70952380952381,
+					"y": 13.970588235294118,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "low-tom-conga-level-knob"
 			},
 			{
-				"id": "low-tom-conga-tune-knob",
-				"label": "Tune",
+				"id": "low-tom-conga-tune",
+				"label": "LOW TOM CONGA: Tune",
 				"kind": "knob",
 				"position": {
-					"x": 40.80105633802817,
-					"y": 35.53846153846154,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 37.70952380952381,
+					"y": 31.61764705882353,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "low-tom-conga-tune-knob"
 			},
 			{
-				"id": "mid-tom-conga-level-knob",
-				"label": "Level",
+				"id": "low-tom-conga-voice",
+				"label": "LOW TOM CONGA: Voice",
+				"kind": "button",
+				"position": {
+					"x": 37.70952380952381,
+					"y": 49.26470588235294,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
+				}
+			},
+			{
+				"id": "mid-tom-conga-level",
+				"label": "MID TOM CONGA: Level",
 				"kind": "knob",
 				"position": {
-					"x": 47.315140845070424,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 46.03095238095238,
+					"y": 13.970588235294118,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "mid-tom-conga-level-knob"
 			},
 			{
-				"id": "mid-tom-conga-tune-knob",
-				"label": "Tune",
+				"id": "mid-tom-conga-tune",
+				"label": "MID TOM CONGA: Tune",
 				"kind": "knob",
 				"position": {
-					"x": 47.315140845070424,
-					"y": 35.53846153846154,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 46.03095238095238,
+					"y": 31.61764705882353,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "mid-tom-conga-tune-knob"
 			},
 			{
-				"id": "high-tom-conga-level-knob",
-				"label": "Level",
+				"id": "mid-tom-conga-voice",
+				"label": "MID TOM CONGA: Voice",
+				"kind": "button",
+				"position": {
+					"x": 46.03095238095238,
+					"y": 49.26470588235294,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
+				}
+			},
+			{
+				"id": "high-tom-conga-level",
+				"label": "HIGH TOM CONGA: Level",
 				"kind": "knob",
 				"position": {
-					"x": 53.82922535211267,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 54.352380952380955,
+					"y": 13.970588235294118,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "high-tom-conga-level-knob"
 			},
 			{
-				"id": "high-tom-conga-tune-knob",
-				"label": "Tune",
+				"id": "high-tom-conga-tune",
+				"label": "HIGH TOM CONGA: Tune",
 				"kind": "knob",
 				"position": {
-					"x": 53.82922535211267,
-					"y": 35.53846153846154,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 54.352380952380955,
+					"y": 31.61764705882353,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "high-tom-conga-tune-knob"
 			},
 			{
-				"id": "claves-rim-level-knob",
-				"label": "Level",
+				"id": "high-tom-conga-voice",
+				"label": "HIGH TOM CONGA: Voice",
+				"kind": "button",
+				"position": {
+					"x": 54.352380952380955,
+					"y": 49.26470588235294,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
+				}
+			},
+			{
+				"id": "claves-rim-level",
+				"label": "CLAVES RIM: Level",
 				"kind": "knob",
 				"position": {
-					"x": 60.34330985915493,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 62.673809523809524,
+					"y": 13.970588235294118,
+					"width": 4.080952380952381,
+					"height": 26.47058823529412
 				},
 				"control": "claves-rim-level-knob"
 			},
 			{
-				"id": "maracas-clap-level-knob",
-				"label": "Level",
+				"id": "claves-rim-voice",
+				"label": "CLAVES RIM: Voice",
+				"kind": "button",
+				"position": {
+					"x": 62.673809523809524,
+					"y": 40.44117647058824,
+					"width": 4.080952380952381,
+					"height": 26.47058823529412
+				}
+			},
+			{
+				"id": "maracas-clap-level",
+				"label": "MARACAS CLAP: Level",
 				"kind": "knob",
 				"position": {
-					"x": 66.85739436619718,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 68.22142857142856,
+					"y": 13.970588235294118,
+					"width": 4.080952380952381,
+					"height": 26.47058823529412
 				},
 				"control": "maracas-clap-level-knob"
 			},
 			{
-				"id": "cowbell-level-knob",
-				"label": "Level",
+				"id": "maracas-clap-voice",
+				"label": "MARACAS CLAP: Voice",
+				"kind": "button",
+				"position": {
+					"x": 68.22142857142856,
+					"y": 40.44117647058824,
+					"width": 4.080952380952381,
+					"height": 26.47058823529412
+				}
+			},
+			{
+				"id": "cowbell-level",
+				"label": "COWBELL: Level",
 				"kind": "knob",
 				"position": {
-					"x": 73.37147887323944,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 73.76904761904761,
+					"y": 13.970588235294118,
+					"width": 4.080952380952381,
+					"height": 52.94117647058824
 				},
 				"control": "cowbell-level-knob"
 			},
 			{
-				"id": "cymbal-level-knob",
-				"label": "Level",
+				"id": "cymbal-level",
+				"label": "CYMBAL: Level",
 				"kind": "knob",
 				"position": {
-					"x": 79.88556338028168,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 79.31666666666666,
+					"y": 13.970588235294118,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "cymbal-level-knob"
 			},
 			{
-				"id": "cymbal-tone-knob",
-				"label": "Tone",
+				"id": "cymbal-tone",
+				"label": "CYMBAL: Tone",
 				"kind": "knob",
 				"position": {
-					"x": 79.88556338028168,
-					"y": 35.53846153846154,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 79.31666666666666,
+					"y": 31.61764705882353,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "cymbal-tone-knob"
 			},
 			{
-				"id": "cymbal-decay-knob",
-				"label": "Decay",
+				"id": "cymbal-decay",
+				"label": "CYMBAL: Decay",
 				"kind": "knob",
 				"position": {
-					"x": 79.88556338028168,
-					"y": 48.769230769230774,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 79.31666666666666,
+					"y": 49.26470588235294,
+					"width": 6.854761904761905,
+					"height": 17.647058823529413
 				},
 				"control": "cymbal-decay-knob"
 			},
 			{
-				"id": "open-hat-level-knob",
-				"label": "Level",
+				"id": "open-hat-level",
+				"label": "OPEN HAT: Level",
 				"kind": "knob",
 				"position": {
-					"x": 86.39964788732394,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 87.63809523809525,
+					"y": 13.970588235294118,
+					"width": 4.080952380952381,
+					"height": 26.47058823529412
 				},
 				"control": "open-hat-level-knob"
 			},
 			{
-				"id": "open-hat-decay-knob",
-				"label": "Decay",
+				"id": "open-hat-decay",
+				"label": "OPEN HAT: Decay",
 				"kind": "knob",
 				"position": {
-					"x": 86.39964788732394,
-					"y": 35.53846153846154,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 87.63809523809525,
+					"y": 40.44117647058824,
+					"width": 4.080952380952381,
+					"height": 26.47058823529412
 				},
 				"control": "open-hat-decay-knob"
 			},
 			{
-				"id": "closed-hat-level-knob",
-				"label": "Level",
+				"id": "closed-hat-level",
+				"label": "CLOSED HAT: Level",
 				"kind": "knob",
 				"position": {
-					"x": 92.9137323943662,
-					"y": 22.30769230769231,
-					"width": 3.345070422535211,
-					"height": 7.6923076923076925
+					"x": 93.1857142857143,
+					"y": 13.970588235294118,
+					"width": 4.080952380952381,
+					"height": 52.94117647058824
 				},
 				"control": "closed-hat-level-knob"
 			},
 			{
-				"id": "key-1",
-				"label": "Kick",
-				"kind": "key",
+				"id": "steps-1",
+				"label": "STEPS: 1",
+				"kind": "button",
 				"position": {
-					"x": 1.1003521126760563,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 36,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 2.0666666666666664,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-2",
-				"label": "Snare",
-				"kind": "key",
+				"id": "steps-2",
+				"label": "STEPS: 2",
+				"kind": "button",
 				"position": {
-					"x": 7.21280809859155,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 38,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 8.058333333333334,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-3",
-				"label": "Low tom",
-				"kind": "key",
+				"id": "steps-3",
+				"label": "STEPS: 3",
+				"kind": "button",
 				"position": {
-					"x": 13.325264084507044,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 43,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 14.05,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-4",
-				"label": "Mid tom",
-				"kind": "key",
+				"id": "steps-4",
+				"label": "STEPS: 4",
+				"kind": "button",
 				"position": {
-					"x": 19.437720070422536,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 47,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 20.041666666666664,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-5",
-				"label": "High tom",
-				"kind": "key",
+				"id": "steps-5",
+				"label": "STEPS: 5",
+				"kind": "button",
 				"position": {
-					"x": 25.55017605633803,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 50,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 26.033333333333335,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-6",
-				"label": "Rim",
-				"kind": "key",
+				"id": "steps-6",
+				"label": "STEPS: 6",
+				"kind": "button",
 				"position": {
-					"x": 31.66263204225352,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 37,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 32.025,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-7",
-				"label": "Clap",
-				"kind": "key",
+				"id": "steps-7",
+				"label": "STEPS: 7",
+				"kind": "button",
 				"position": {
-					"x": 37.775088028169016,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 39,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 38.016666666666666,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-8",
-				"label": "Closed hat",
-				"kind": "key",
+				"id": "steps-8",
+				"label": "STEPS: 8",
+				"kind": "button",
 				"position": {
-					"x": 43.887544014084504,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 42,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 44.00833333333333,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-9",
-				"label": "Open hat",
-				"kind": "key",
+				"id": "steps-9",
+				"label": "STEPS: 9",
+				"kind": "button",
 				"position": {
 					"x": 50.0,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 46,
-					"channel": 10
-				},
-				"learnable": true
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-10",
-				"label": "Cymbal",
-				"kind": "key",
+				"id": "steps-10",
+				"label": "STEPS: 10",
+				"kind": "button",
 				"position": {
-					"x": 56.11245598591549,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 49,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 55.99166666666666,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-11",
-				"label": "Cowbell",
-				"kind": "key",
+				"id": "steps-11",
+				"label": "STEPS: 11",
+				"kind": "button",
 				"position": {
-					"x": 62.224911971830984,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 56,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 61.983333333333334,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-12",
-				"label": "Hi conga",
-				"kind": "key",
+				"id": "steps-12",
+				"label": "STEPS: 12",
+				"kind": "button",
 				"position": {
-					"x": 68.33736795774648,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 62,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 67.975,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-13",
-				"label": "Mid conga",
-				"kind": "key",
+				"id": "steps-13",
+				"label": "STEPS: 13",
+				"kind": "button",
 				"position": {
-					"x": 74.44982394366197,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 63,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 73.96666666666667,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-14",
-				"label": "Low conga",
-				"kind": "key",
+				"id": "steps-14",
+				"label": "STEPS: 14",
+				"kind": "button",
 				"position": {
-					"x": 80.56227992957746,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 64,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 79.95833333333333,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-15",
-				"label": "Maracas",
-				"kind": "key",
+				"id": "steps-15",
+				"label": "STEPS: 15",
+				"kind": "button",
 				"position": {
-					"x": 86.67473591549296,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 70,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 85.95,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			},
 			{
-				"id": "key-16",
-				"label": "Claves",
-				"kind": "key",
+				"id": "steps-16",
+				"label": "STEPS: 16",
+				"kind": "button",
 				"position": {
-					"x": 92.78719190140845,
-					"y": 82.76923076923077,
-					"width": 5.892385563380282,
-					"height": 11.538461538461538
-				},
-				"message": {
-					"type": "note",
-					"number": 75,
-					"channel": 10
-				},
-				"learnable": true
+					"x": 91.94166666666666,
+					"y": 76.47058823529412,
+					"width": 5.991666666666666,
+					"height": 13.970588235294118
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Mix IN",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Output",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Micro USB",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Trigger OUT",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Top"
+		}
+	],
+	"diagramSources": [
+		"https://static.roland.com/assets/media/pdf/TR-08_eng04_W.pdf",
+		"https://static.roland.com/assets/media/pdf/TR-08_MIDI_Imple_Chart_eng01_W.pdf"
+	]
 }

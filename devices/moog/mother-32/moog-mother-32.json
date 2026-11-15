@@ -24,7 +24,7 @@
 	"hardwareControls": [
 		"Hardware synthesis controls"
 	],
-	"notice": "Requires an external MIDI interface; no native USB MIDI. Analog knobs are not remotely addressable as a complete CC panel. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram.",
+	"notice": "Requires an external MIDI interface; no native USB MIDI. Analog knobs are not remotely addressable as a complete CC panel. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -51,9 +51,1017 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 600,
-		"height": 240,
-		"elements": []
-	}
+		"src": "interface.svg",
+		"width": 1250,
+		"height": 650,
+		"elements": [
+			{
+				"id": "vco-modulation-frequency",
+				"label": "VCO / MODULATION: Frequency",
+				"kind": "knob",
+				"position": {
+					"x": 2.48,
+					"y": 14.615384615384617,
+					"width": 8.36,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vco-modulation-pulse-width",
+				"label": "VCO / MODULATION: Pulse width",
+				"kind": "knob",
+				"position": {
+					"x": 10.84,
+					"y": 14.615384615384617,
+					"width": 8.36,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vco-modulation-vco-mod-amt",
+				"label": "VCO / MODULATION: VCO mod amt",
+				"kind": "knob",
+				"position": {
+					"x": 19.2,
+					"y": 14.615384615384617,
+					"width": 8.36,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vco-modulation-lfo-rate",
+				"label": "VCO / MODULATION: LFO rate",
+				"kind": "knob",
+				"position": {
+					"x": 27.560000000000002,
+					"y": 14.615384615384617,
+					"width": 8.36,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vco-modulation-glide",
+				"label": "VCO / MODULATION: Glide",
+				"kind": "knob",
+				"position": {
+					"x": 2.48,
+					"y": 33.07692307692307,
+					"width": 8.36,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vco-modulation-wave",
+				"label": "VCO / MODULATION: Wave",
+				"kind": "button",
+				"position": {
+					"x": 10.84,
+					"y": 33.07692307692307,
+					"width": 8.36,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vco-modulation-mod-source",
+				"label": "VCO / MODULATION: Mod source",
+				"kind": "button",
+				"position": {
+					"x": 19.2,
+					"y": 33.07692307692307,
+					"width": 8.36,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vco-modulation-mod-dest",
+				"label": "VCO / MODULATION: Mod dest",
+				"kind": "button",
+				"position": {
+					"x": 27.560000000000002,
+					"y": 33.07692307692307,
+					"width": 8.36,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-cutoff",
+				"label": "VCF / VCA / EG: Cutoff",
+				"kind": "knob",
+				"position": {
+					"x": 37.68,
+					"y": 14.615384615384617,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-resonance",
+				"label": "VCF / VCA / EG: Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 43.888,
+					"y": 14.615384615384617,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-vcf-mod-amt",
+				"label": "VCF / VCA / EG: VCF mod amt",
+				"kind": "knob",
+				"position": {
+					"x": 50.096000000000004,
+					"y": 14.615384615384617,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-mix",
+				"label": "VCF / VCA / EG: Mix",
+				"kind": "knob",
+				"position": {
+					"x": 56.304,
+					"y": 14.615384615384617,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-attack",
+				"label": "VCF / VCA / EG: Attack",
+				"kind": "knob",
+				"position": {
+					"x": 62.512,
+					"y": 14.615384615384617,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-decay",
+				"label": "VCF / VCA / EG: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 37.68,
+					"y": 33.07692307692307,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-sustain",
+				"label": "VCF / VCA / EG: Sustain",
+				"kind": "button",
+				"position": {
+					"x": 43.888,
+					"y": 33.07692307692307,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-volume",
+				"label": "VCF / VCA / EG: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 50.096000000000004,
+					"y": 33.07692307692307,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-vcf-mode",
+				"label": "VCF / VCA / EG: VCF mode",
+				"kind": "button",
+				"position": {
+					"x": 56.304,
+					"y": 33.07692307692307,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "vcf-vca-eg-vca-mode",
+				"label": "VCF / VCA / EG: VCA mode",
+				"kind": "button",
+				"position": {
+					"x": 62.512,
+					"y": 33.07692307692307,
+					"width": 6.207999999999999,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "sequencer-tempo",
+				"label": "SEQUENCER: Tempo",
+				"kind": "knob",
+				"position": {
+					"x": 2.48,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-run-stop",
+				"label": "SEQUENCER: Run / Stop",
+				"kind": "button",
+				"position": {
+					"x": 7.575384615384616,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-hold",
+				"label": "SEQUENCER: Hold",
+				"kind": "button",
+				"position": {
+					"x": 12.67076923076923,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-reset-accent",
+				"label": "SEQUENCER: Reset / Accent",
+				"kind": "button",
+				"position": {
+					"x": 17.76615384615385,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-shift",
+				"label": "SEQUENCER: Shift",
+				"kind": "button",
+				"position": {
+					"x": 22.861538461538462,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-kb-step",
+				"label": "SEQUENCER: KB / Step",
+				"kind": "button",
+				"position": {
+					"x": 27.956923076923072,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-pattern",
+				"label": "SEQUENCER: Pattern",
+				"kind": "button",
+				"position": {
+					"x": 33.0523076923077,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-bank",
+				"label": "SEQUENCER: Bank",
+				"kind": "button",
+				"position": {
+					"x": 38.14769230769231,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-1",
+				"label": "SEQUENCER: Key 1",
+				"kind": "key",
+				"position": {
+					"x": 43.24307692307692,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-2",
+				"label": "SEQUENCER: Key 2",
+				"kind": "key",
+				"position": {
+					"x": 48.338461538461544,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-3",
+				"label": "SEQUENCER: Key 3",
+				"kind": "key",
+				"position": {
+					"x": 53.433846153846154,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-4",
+				"label": "SEQUENCER: Key 4",
+				"kind": "key",
+				"position": {
+					"x": 58.529230769230765,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-5",
+				"label": "SEQUENCER: Key 5",
+				"kind": "key",
+				"position": {
+					"x": 63.62461538461539,
+					"y": 59.23076923076923,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-6",
+				"label": "SEQUENCER: Key 6",
+				"kind": "key",
+				"position": {
+					"x": 2.48,
+					"y": 75.38461538461539,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-7",
+				"label": "SEQUENCER: Key 7",
+				"kind": "key",
+				"position": {
+					"x": 7.575384615384616,
+					"y": 75.38461538461539,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-8",
+				"label": "SEQUENCER: Key 8",
+				"kind": "key",
+				"position": {
+					"x": 12.67076923076923,
+					"y": 75.38461538461539,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-9",
+				"label": "SEQUENCER: Key 9",
+				"kind": "key",
+				"position": {
+					"x": 17.76615384615385,
+					"y": 75.38461538461539,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-10",
+				"label": "SEQUENCER: Key 10",
+				"kind": "key",
+				"position": {
+					"x": 22.861538461538462,
+					"y": 75.38461538461539,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-11",
+				"label": "SEQUENCER: Key 11",
+				"kind": "key",
+				"position": {
+					"x": 27.956923076923072,
+					"y": 75.38461538461539,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-12",
+				"label": "SEQUENCER: Key 12",
+				"kind": "key",
+				"position": {
+					"x": 33.0523076923077,
+					"y": 75.38461538461539,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "sequencer-key-13",
+				"label": "SEQUENCER: Key 13",
+				"kind": "key",
+				"position": {
+					"x": 38.14769230769231,
+					"y": 75.38461538461539,
+					"width": 5.095384615384615,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "patch-bay-ext-audio-in",
+				"label": "PATCH BAY: Ext audio IN",
+				"kind": "button",
+				"position": {
+					"x": 71.28,
+					"y": 14.615384615384617,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-mix-cv-in",
+				"label": "PATCH BAY: Mix CV IN",
+				"kind": "button",
+				"position": {
+					"x": 77.84,
+					"y": 14.615384615384617,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vca-cv-in",
+				"label": "PATCH BAY: VCA CV IN",
+				"kind": "button",
+				"position": {
+					"x": 84.39999999999999,
+					"y": 14.615384615384617,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vcf-cutoff-in",
+				"label": "PATCH BAY: VCF cutoff IN",
+				"kind": "button",
+				"position": {
+					"x": 90.96,
+					"y": 14.615384615384617,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vcf-res-in",
+				"label": "PATCH BAY: VCF res IN",
+				"kind": "button",
+				"position": {
+					"x": 71.28,
+					"y": 24.23076923076923,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vcf-mod-in",
+				"label": "PATCH BAY: VCF mod IN",
+				"kind": "button",
+				"position": {
+					"x": 77.84,
+					"y": 24.23076923076923,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vco-1v-oct-in",
+				"label": "PATCH BAY: VCO 1V/oct IN",
+				"kind": "button",
+				"position": {
+					"x": 84.39999999999999,
+					"y": 24.23076923076923,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vco-lin-fm-in",
+				"label": "PATCH BAY: VCO LIN FM IN",
+				"kind": "button",
+				"position": {
+					"x": 90.96,
+					"y": 24.23076923076923,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vco-mod-in",
+				"label": "PATCH BAY: VCO mod IN",
+				"kind": "button",
+				"position": {
+					"x": 71.28,
+					"y": 33.84615384615385,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vco-pwm-in",
+				"label": "PATCH BAY: VCO PWM IN",
+				"kind": "button",
+				"position": {
+					"x": 77.84,
+					"y": 33.84615384615385,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-lfo-rate-in",
+				"label": "PATCH BAY: LFO rate IN",
+				"kind": "button",
+				"position": {
+					"x": 84.39999999999999,
+					"y": 33.84615384615385,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-tempo-in",
+				"label": "PATCH BAY: Tempo IN",
+				"kind": "button",
+				"position": {
+					"x": 90.96,
+					"y": 33.84615384615385,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-run-stop-in",
+				"label": "PATCH BAY: Run / Stop IN",
+				"kind": "button",
+				"position": {
+					"x": 71.28,
+					"y": 43.46153846153846,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-reset-in",
+				"label": "PATCH BAY: Reset IN",
+				"kind": "button",
+				"position": {
+					"x": 77.84,
+					"y": 43.46153846153846,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-hold-in",
+				"label": "PATCH BAY: Hold IN",
+				"kind": "button",
+				"position": {
+					"x": 84.39999999999999,
+					"y": 43.46153846153846,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-eg-gate-in",
+				"label": "PATCH BAY: EG gate IN",
+				"kind": "button",
+				"position": {
+					"x": 90.96,
+					"y": 43.46153846153846,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vc-mix-in",
+				"label": "PATCH BAY: VC mix IN",
+				"kind": "button",
+				"position": {
+					"x": 71.28,
+					"y": 53.07692307692308,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vca-out",
+				"label": "PATCH BAY: VCA OUT",
+				"kind": "button",
+				"position": {
+					"x": 77.84,
+					"y": 53.07692307692308,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-noise-out",
+				"label": "PATCH BAY: Noise OUT",
+				"kind": "button",
+				"position": {
+					"x": 84.39999999999999,
+					"y": 53.07692307692308,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vcf-out",
+				"label": "PATCH BAY: VCF OUT",
+				"kind": "button",
+				"position": {
+					"x": 90.96,
+					"y": 53.07692307692308,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vco-saw-out",
+				"label": "PATCH BAY: VCO saw OUT",
+				"kind": "button",
+				"position": {
+					"x": 71.28,
+					"y": 62.69230769230769,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vco-pulse-out",
+				"label": "PATCH BAY: VCO pulse OUT",
+				"kind": "button",
+				"position": {
+					"x": 77.84,
+					"y": 62.69230769230769,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-lfo-triangle-out",
+				"label": "PATCH BAY: LFO triangle OUT",
+				"kind": "button",
+				"position": {
+					"x": 84.39999999999999,
+					"y": 62.69230769230769,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-lfo-square-out",
+				"label": "PATCH BAY: LFO square OUT",
+				"kind": "button",
+				"position": {
+					"x": 90.96,
+					"y": 62.69230769230769,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vc-mix-out",
+				"label": "PATCH BAY: VC mix OUT",
+				"kind": "button",
+				"position": {
+					"x": 71.28,
+					"y": 72.3076923076923,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-assign-out",
+				"label": "PATCH BAY: Assign OUT",
+				"kind": "button",
+				"position": {
+					"x": 77.84,
+					"y": 72.3076923076923,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-eg-out",
+				"label": "PATCH BAY: EG OUT",
+				"kind": "button",
+				"position": {
+					"x": 84.39999999999999,
+					"y": 72.3076923076923,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-kb-out",
+				"label": "PATCH BAY: KB OUT",
+				"kind": "button",
+				"position": {
+					"x": 90.96,
+					"y": 72.3076923076923,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-gate-out",
+				"label": "PATCH BAY: Gate OUT",
+				"kind": "button",
+				"position": {
+					"x": 71.28,
+					"y": 81.92307692307692,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-mult-1-out",
+				"label": "PATCH BAY: Mult 1 OUT",
+				"kind": "button",
+				"position": {
+					"x": 77.84,
+					"y": 81.92307692307692,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-mult-2-out",
+				"label": "PATCH BAY: Mult 2 OUT",
+				"kind": "button",
+				"position": {
+					"x": 84.39999999999999,
+					"y": 81.92307692307692,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			},
+			{
+				"id": "patch-bay-vc-mix-control-out",
+				"label": "PATCH BAY: VC mix control OUT",
+				"kind": "button",
+				"position": {
+					"x": 90.96,
+					"y": 81.92307692307692,
+					"width": 6.5600000000000005,
+					"height": 9.615384615384617
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Ext audio IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Mix CV IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCA CV IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCF cutoff IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCF res IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCF mod IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCO 1V/oct IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCO LIN FM IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCO mod IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCO PWM IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "LFO rate IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Tempo IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Run / Stop IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Reset IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Hold IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "EG gate IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VC mix IN",
+			"connector": "3.5 mm patch",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "VCA OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Noise OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "VCF OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "VCO saw OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "VCO pulse OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "LFO triangle OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "LFO square OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "VC mix OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Assign OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "EG OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "KB OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Gate OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Mult 1 OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Mult 2 OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "VC mix control OUT",
+			"connector": "3.5 mm patch",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Audio OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "Power",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Power on/off",
+			"connector": "Switch",
+			"direction": "control",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://cdn.inmusicbrands.com/Moog/Mother32/Mother_32_Users_Manual.pdf"
+	]
 }

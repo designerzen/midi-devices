@@ -7,8 +7,14 @@
 	"manufacturerUrl": "https://www.roland.com/",
 	"productUrl": "https://www.roland.com/global/products/ju-06/",
 	"description": "Four-voice JUNO-106-inspired Boutique synthesizer.",
-	"ids": ["roland-ju-06"],
-	"portNames": ["JU-06", "JU-06 MIDI 1", "Roland JU-06"],
+	"ids": [
+		"roland-ju-06"
+	],
+	"portNames": [
+		"JU-06",
+		"JU-06 MIDI 1",
+		"Roland JU-06"
+	],
 	"icon": "icon.svg",
 	"documentation": [
 		{
@@ -20,7 +26,12 @@
 			"url": "https://static.roland.com/assets/media/pdf/JU-06_MIDI_Imple_eng03_W.pdf"
 		}
 	],
-	"abilities": ["USB MIDI", "DIN MIDI IN/OUT", "MIDI notes", "Documented controller mappings"],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI IN/OUT",
+		"MIDI notes",
+		"Documented controller mappings"
+	],
 	"hardwareControls": [
 		"Performance: Volume, Ribbon C1, Ribbon C2, Manual",
 		"LFO: Rate, Delay",
@@ -199,274 +210,594 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 2282,
-		"height": 540,
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 680,
 		"elements": [
 			{
-				"id": "performance-ribbon-c1-touch",
-				"label": "Ribbon C1",
+				"id": "controllers-ribbon-c1",
+				"label": "CONTROLLERS: Ribbon C1",
 				"kind": "fader",
 				"position": {
-					"x": 5.784399649430324,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
-				},
-				"control": "performance-ribbon-c1-touch"
+					"x": 2.0666666666666664,
+					"y": 13.970588235294118,
+					"width": 4.266666666666667,
+					"height": 52.94117647058824
+				}
 			},
 			{
-				"id": "performance-ribbon-c2-touch",
-				"label": "Ribbon C2",
+				"id": "controllers-ribbon-c2",
+				"label": "CONTROLLERS: Ribbon C2",
 				"kind": "fader",
 				"position": {
-					"x": 1.6213847502191059,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
-				},
-				"control": "performance-ribbon-c2-touch"
+					"x": 6.333333333333334,
+					"y": 13.970588235294118,
+					"width": 4.266666666666667,
+					"height": 52.94117647058824
+				}
 			},
 			{
-				"id": "lfo-rate-fader",
-				"label": "Rate",
+				"id": "lfo-rate",
+				"label": "LFO: Rate",
 				"kind": "fader",
 				"position": {
-					"x": 10.999123575810692,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 12.4,
+					"y": 13.970588235294118,
+					"width": 3.190909090909091,
+					"height": 52.94117647058824
 				},
 				"control": "lfo-rate-fader"
 			},
 			{
-				"id": "lfo-delay-fader",
-				"label": "Delay",
+				"id": "lfo-delay",
+				"label": "LFO: Delay",
 				"kind": "fader",
 				"position": {
-					"x": 10.999123575810692,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 15.590909090909092,
+					"y": 13.970588235294118,
+					"width": 3.190909090909091,
+					"height": 52.94117647058824
 				},
 				"control": "lfo-delay-fader"
 			},
 			{
-				"id": "dco-lfo-fader",
-				"label": "LFO",
+				"id": "dco-16-foot",
+				"label": "DCO: 16 foot",
+				"kind": "button",
+				"position": {
+					"x": 20.24848484848485,
+					"y": 13.970588235294118,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
+				}
+			},
+			{
+				"id": "dco-8-foot",
+				"label": "DCO: 8 foot",
+				"kind": "button",
+				"position": {
+					"x": 25.44909090909091,
+					"y": 13.970588235294118,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
+				}
+			},
+			{
+				"id": "dco-4-foot",
+				"label": "DCO: 4 foot",
+				"kind": "button",
+				"position": {
+					"x": 30.649696969696972,
+					"y": 13.970588235294118,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
+				}
+			},
+			{
+				"id": "dco-lfo",
+				"label": "DCO: LFO",
 				"kind": "fader",
 				"position": {
-					"x": 29.97370727432077,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 35.85030303030303,
+					"y": 13.970588235294118,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
 				},
 				"control": "dco-lfo-fader"
 			},
 			{
-				"id": "dco-pwm-fader",
-				"label": "PWM",
+				"id": "dco-pwm",
+				"label": "DCO: PWM",
 				"kind": "fader",
 				"position": {
-					"x": 17.484662576687114,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 41.05090909090909,
+					"y": 13.970588235294118,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
 				},
 				"control": "dco-pwm-fader"
 			},
 			{
-				"id": "dco-pwm-source-switch",
-				"label": "PWM source",
-				"kind": "fader",
+				"id": "dco-pwm-source",
+				"label": "DCO: PWM source",
+				"kind": "button",
 				"position": {
-					"x": 21.647677475898337,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 20.24848484848485,
+					"y": 40.44117647058824,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
 				},
 				"control": "dco-pwm-source-switch"
 			},
 			{
-				"id": "dco-sub-fader",
-				"label": "Sub",
+				"id": "dco-square",
+				"label": "DCO: Square",
+				"kind": "knob",
+				"position": {
+					"x": 25.44909090909091,
+					"y": 40.44117647058824,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
+				}
+			},
+			{
+				"id": "dco-saw",
+				"label": "DCO: Saw",
+				"kind": "knob",
+				"position": {
+					"x": 30.649696969696972,
+					"y": 40.44117647058824,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
+				}
+			},
+			{
+				"id": "dco-sub",
+				"label": "DCO: Sub",
 				"kind": "fader",
 				"position": {
-					"x": 17.484662576687114,
-					"y": 58.7037037037037,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 35.85030303030303,
+					"y": 40.44117647058824,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
 				},
 				"control": "dco-sub-fader"
 			},
 			{
-				"id": "dco-noise-fader",
-				"label": "Noise",
+				"id": "dco-noise",
+				"label": "DCO: Noise",
 				"kind": "fader",
 				"position": {
-					"x": 21.647677475898337,
-					"y": 58.7037037037037,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 41.05090909090909,
+					"y": 40.44117647058824,
+					"width": 5.200606060606061,
+					"height": 26.47058823529412
 				},
 				"control": "dco-noise-fader"
 			},
 			{
-				"id": "hpf-cutoff-fader",
-				"label": "Cutoff",
+				"id": "hpf-cutoff",
+				"label": "HPF: Cutoff",
 				"kind": "fader",
 				"position": {
-					"x": 35.18843120070114,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 47.71818181818182,
+					"y": 13.970588235294118,
+					"width": 6.381818181818182,
+					"height": 52.94117647058824
 				},
 				"control": "hpf-cutoff-fader"
 			},
 			{
-				"id": "vcf-cutoff-fader",
-				"label": "Cutoff",
+				"id": "vcf-cutoff",
+				"label": "VCF: Cutoff",
 				"kind": "fader",
 				"position": {
-					"x": 41.67397020157757,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 55.56666666666666,
+					"y": 13.970588235294118,
+					"width": 2.502525252525252,
+					"height": 52.94117647058824
 				},
 				"control": "vcf-cutoff-fader"
 			},
 			{
-				"id": "vcf-resonance-fader",
-				"label": "Resonance",
+				"id": "vcf-resonance",
+				"label": "VCF: Resonance",
 				"kind": "fader",
 				"position": {
-					"x": 45.83698510078878,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 58.06919191919192,
+					"y": 13.970588235294118,
+					"width": 2.502525252525252,
+					"height": 52.94117647058824
 				},
 				"control": "vcf-resonance-fader"
 			},
 			{
-				"id": "vcf-polarity-switch",
-				"label": "Polarity",
-				"kind": "fader",
+				"id": "vcf-polarity",
+				"label": "VCF: Polarity",
+				"kind": "button",
 				"position": {
-					"x": 41.67397020157757,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 60.57171717171717,
+					"y": 13.970588235294118,
+					"width": 2.502525252525252,
+					"height": 52.94117647058824
 				},
 				"control": "vcf-polarity-switch"
 			},
 			{
-				"id": "vcf-envelope-fader",
-				"label": "Envelope",
+				"id": "vcf-envelope",
+				"label": "VCF: Envelope",
 				"kind": "fader",
 				"position": {
-					"x": 45.83698510078878,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 63.07424242424242,
+					"y": 13.970588235294118,
+					"width": 2.502525252525252,
+					"height": 52.94117647058824
 				},
 				"control": "vcf-envelope-fader"
 			},
 			{
-				"id": "vcf-lfo-fader",
-				"label": "LFO",
+				"id": "vcf-lfo",
+				"label": "VCF: LFO",
 				"kind": "fader",
 				"position": {
-					"x": 41.67397020157757,
-					"y": 58.7037037037037,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 65.57676767676767,
+					"y": 13.970588235294118,
+					"width": 2.502525252525252,
+					"height": 52.94117647058824
 				},
 				"control": "vcf-lfo-fader"
 			},
 			{
-				"id": "vcf-key-follow-fader",
-				"label": "Key follow",
+				"id": "vcf-key-follow",
+				"label": "VCF: Key follow",
 				"kind": "fader",
 				"position": {
-					"x": 45.83698510078878,
-					"y": 58.7037037037037,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 68.07929292929292,
+					"y": 13.970588235294118,
+					"width": 2.502525252525252,
+					"height": 52.94117647058824
 				},
 				"control": "vcf-key-follow-fader"
 			},
 			{
-				"id": "vca-envelope-gate-switch",
-				"label": "Envelope Gate",
-				"kind": "fader",
+				"id": "vca-envelope-gate",
+				"label": "VCA: Envelope Gate",
+				"kind": "button",
 				"position": {
-					"x": 51.051709027169146,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 72.04848484848485,
+					"y": 13.970588235294118,
+					"width": 3.190909090909091,
+					"height": 52.94117647058824
 				},
 				"control": "vca-envelope-gate-switch"
 			},
 			{
-				"id": "vca-level-fader",
-				"label": "Level",
+				"id": "vca-level",
+				"label": "VCA: Level",
 				"kind": "fader",
 				"position": {
-					"x": 51.051709027169146,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 75.23939393939393,
+					"y": 13.970588235294118,
+					"width": 3.190909090909091,
+					"height": 52.94117647058824
 				},
 				"control": "vca-level-fader"
 			},
 			{
-				"id": "envelope-attack-fader",
-				"label": "Attack",
+				"id": "envelope-attack",
+				"label": "ENVELOPE: Attack",
 				"kind": "fader",
 				"position": {
-					"x": 57.537248028045575,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 79.8969696969697,
+					"y": 13.970588235294118,
+					"width": 2.38030303030303,
+					"height": 52.94117647058824
 				},
 				"control": "envelope-attack-fader"
 			},
 			{
-				"id": "envelope-decay-fader",
-				"label": "Decay",
+				"id": "envelope-decay",
+				"label": "ENVELOPE: Decay",
 				"kind": "fader",
 				"position": {
-					"x": 61.70026292725679,
-					"y": 26.851851851851855,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 82.27727272727273,
+					"y": 13.970588235294118,
+					"width": 2.38030303030303,
+					"height": 52.94117647058824
 				},
 				"control": "envelope-decay-fader"
 			},
 			{
-				"id": "envelope-sustain-fader",
-				"label": "Sustain",
+				"id": "envelope-sustain",
+				"label": "ENVELOPE: Sustain",
 				"kind": "fader",
 				"position": {
-					"x": 57.537248028045575,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 84.65757575757577,
+					"y": 13.970588235294118,
+					"width": 2.38030303030303,
+					"height": 52.94117647058824
 				},
 				"control": "envelope-sustain-fader"
 			},
 			{
-				"id": "envelope-release-fader",
-				"label": "Release",
+				"id": "envelope-release",
+				"label": "ENVELOPE: Release",
 				"kind": "fader",
 				"position": {
-					"x": 61.70026292725679,
-					"y": 42.77777777777778,
-					"width": 3.3304119193689745,
-					"height": 9.25925925925926
+					"x": 87.03787878787878,
+					"y": 13.970588235294118,
+					"width": 2.38030303030303,
+					"height": 52.94117647058824
 				},
 				"control": "envelope-release-fader"
+			},
+			{
+				"id": "chorus-chorus-i",
+				"label": "CHORUS: Chorus I",
+				"kind": "knob",
+				"position": {
+					"x": 90.88484848484848,
+					"y": 13.970588235294118,
+					"width": 3.190909090909091,
+					"height": 52.94117647058824
+				}
+			},
+			{
+				"id": "chorus-chorus-ii",
+				"label": "CHORUS: Chorus II",
+				"kind": "knob",
+				"position": {
+					"x": 94.07575757575756,
+					"y": 13.970588235294118,
+					"width": 3.190909090909091,
+					"height": 52.94117647058824
+				}
+			},
+			{
+				"id": "memory-performance-volume",
+				"label": "MEMORY / PERFORMANCE: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-manual",
+				"label": "MEMORY / PERFORMANCE: Manual",
+				"kind": "button",
+				"position": {
+					"x": 7.392592592592592,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-bank-1",
+				"label": "MEMORY / PERFORMANCE: Bank 1",
+				"kind": "button",
+				"position": {
+					"x": 12.718518518518518,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-bank-2",
+				"label": "MEMORY / PERFORMANCE: Bank 2",
+				"kind": "button",
+				"position": {
+					"x": 18.04444444444444,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-bank-3",
+				"label": "MEMORY / PERFORMANCE: Bank 3",
+				"kind": "button",
+				"position": {
+					"x": 23.37037037037037,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-bank-4",
+				"label": "MEMORY / PERFORMANCE: Bank 4",
+				"kind": "button",
+				"position": {
+					"x": 28.696296296296296,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-bank-5",
+				"label": "MEMORY / PERFORMANCE: Bank 5",
+				"kind": "button",
+				"position": {
+					"x": 34.02222222222222,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-bank-6",
+				"label": "MEMORY / PERFORMANCE: Bank 6",
+				"kind": "button",
+				"position": {
+					"x": 39.34814814814814,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-bank-7",
+				"label": "MEMORY / PERFORMANCE: Bank 7",
+				"kind": "button",
+				"position": {
+					"x": 44.67407407407407,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-bank-8",
+				"label": "MEMORY / PERFORMANCE: Bank 8",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-patch-1",
+				"label": "MEMORY / PERFORMANCE: Patch 1",
+				"kind": "button",
+				"position": {
+					"x": 55.32592592592592,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-patch-2",
+				"label": "MEMORY / PERFORMANCE: Patch 2",
+				"kind": "button",
+				"position": {
+					"x": 60.651851851851845,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-patch-3",
+				"label": "MEMORY / PERFORMANCE: Patch 3",
+				"kind": "button",
+				"position": {
+					"x": 65.97777777777777,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-patch-4",
+				"label": "MEMORY / PERFORMANCE: Patch 4",
+				"kind": "button",
+				"position": {
+					"x": 71.30370370370369,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-patch-5",
+				"label": "MEMORY / PERFORMANCE: Patch 5",
+				"kind": "button",
+				"position": {
+					"x": 76.62962962962962,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-patch-6",
+				"label": "MEMORY / PERFORMANCE: Patch 6",
+				"kind": "button",
+				"position": {
+					"x": 81.95555555555555,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-patch-7",
+				"label": "MEMORY / PERFORMANCE: Patch 7",
+				"kind": "button",
+				"position": {
+					"x": 87.28148148148148,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
+			},
+			{
+				"id": "memory-performance-patch-8",
+				"label": "MEMORY / PERFORMANCE: Patch 8",
+				"kind": "button",
+				"position": {
+					"x": 92.60740740740741,
+					"y": 75.0,
+					"width": 5.325925925925926,
+					"height": 16.176470588235293
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Mix IN",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Output",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Micro USB",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://static.roland.com/assets/media/pdf/JU-06_e02_W.pdf",
+		"https://static.roland.com/assets/media/pdf/JU-06_MIDI_Imple_eng03_W.pdf"
+	]
 }

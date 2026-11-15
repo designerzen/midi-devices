@@ -24,7 +24,7 @@
 	"hardwareControls": [
 		"Hardware synthesis controls"
 	],
-	"notice": "Receives MIDI notes 0-72; higher notes are outside the supported range. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. Panel art is a schematic, not a scale hardware diagram.",
+	"notice": "Receives MIDI notes 0-72; higher notes are outside the supported range. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -51,9 +51,311 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 600,
-		"height": 240,
-		"elements": []
-	}
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 600,
+		"elements": [
+			{
+				"id": "oscillators-filter-vco-2-freq",
+				"label": "OSCILLATORS / FILTER: VCO 2 freq",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 15.833333333333332,
+					"width": 19.45,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "oscillators-filter-cutoff",
+				"label": "OSCILLATORS / FILTER: Cutoff",
+				"kind": "knob",
+				"position": {
+					"x": 22.55,
+					"y": 15.833333333333332,
+					"width": 19.45,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "oscillators-filter-resonance",
+				"label": "OSCILLATORS / FILTER: Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 42.0,
+					"y": 15.833333333333332,
+					"width": 19.45,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "oscillators-filter-eg-amount",
+				"label": "OSCILLATORS / FILTER: EG amount",
+				"kind": "knob",
+				"position": {
+					"x": 61.45,
+					"y": 15.833333333333332,
+					"width": 19.45,
+					"height": 20.0
+				}
+			},
+			{
+				"id": "mix-envelopes-vco-1-level",
+				"label": "MIX / ENVELOPES: VCO 1 level",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 44.166666666666664,
+					"width": 15.559999999999999,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "mix-envelopes-vco-2-level",
+				"label": "MIX / ENVELOPES: VCO 2 level",
+				"kind": "knob",
+				"position": {
+					"x": 18.66,
+					"y": 44.166666666666664,
+					"width": 15.559999999999999,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "mix-envelopes-vcf-attack",
+				"label": "MIX / ENVELOPES: VCF attack",
+				"kind": "knob",
+				"position": {
+					"x": 34.22,
+					"y": 44.166666666666664,
+					"width": 15.559999999999999,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "mix-envelopes-vcf-decay-release",
+				"label": "MIX / ENVELOPES: VCF decay / release",
+				"kind": "knob",
+				"position": {
+					"x": 49.779999999999994,
+					"y": 44.166666666666664,
+					"width": 15.559999999999999,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "mix-envelopes-vcf-sustain",
+				"label": "MIX / ENVELOPES: VCF sustain",
+				"kind": "knob",
+				"position": {
+					"x": 65.34,
+					"y": 44.166666666666664,
+					"width": 15.559999999999999,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "modulation-envelopes-lfo-rate",
+				"label": "MODULATION / ENVELOPES: LFO rate",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 71.66666666666667,
+					"width": 12.966666666666665,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "modulation-envelopes-vco-lfo-amt",
+				"label": "MODULATION / ENVELOPES: VCO LFO amt",
+				"kind": "knob",
+				"position": {
+					"x": 16.066666666666666,
+					"y": 71.66666666666667,
+					"width": 12.966666666666665,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "modulation-envelopes-vcf-lfo-amt",
+				"label": "MODULATION / ENVELOPES: VCF LFO amt",
+				"kind": "knob",
+				"position": {
+					"x": 29.03333333333333,
+					"y": 71.66666666666667,
+					"width": 12.966666666666665,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "modulation-envelopes-vca-attack",
+				"label": "MODULATION / ENVELOPES: VCA attack",
+				"kind": "knob",
+				"position": {
+					"x": 42.0,
+					"y": 71.66666666666667,
+					"width": 12.966666666666665,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "modulation-envelopes-vca-decay-release",
+				"label": "MODULATION / ENVELOPES: VCA decay / release",
+				"kind": "knob",
+				"position": {
+					"x": 54.96666666666666,
+					"y": 71.66666666666667,
+					"width": 12.966666666666665,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "modulation-envelopes-vca-sustain",
+				"label": "MODULATION / ENVELOPES: VCA sustain",
+				"kind": "knob",
+				"position": {
+					"x": 67.93333333333332,
+					"y": 71.66666666666667,
+					"width": 12.966666666666665,
+					"height": 19.166666666666668
+				}
+			},
+			{
+				"id": "output-volume",
+				"label": "OUTPUT: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 83.6,
+					"y": 15.833333333333332,
+					"width": 13.3,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "output-vco-1-wave",
+				"label": "OUTPUT: VCO 1 wave",
+				"kind": "button",
+				"position": {
+					"x": 83.6,
+					"y": 28.333333333333332,
+					"width": 13.3,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "output-vco-2-wave",
+				"label": "OUTPUT: VCO 2 wave",
+				"kind": "button",
+				"position": {
+					"x": 83.6,
+					"y": 40.833333333333336,
+					"width": 13.3,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "output-release",
+				"label": "OUTPUT: Release",
+				"kind": "button",
+				"position": {
+					"x": 83.6,
+					"y": 53.333333333333336,
+					"width": 13.3,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "output-glide-rate",
+				"label": "OUTPUT: Glide rate",
+				"kind": "knob",
+				"position": {
+					"x": 83.6,
+					"y": 65.83333333333333,
+					"width": 13.3,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "output-glide",
+				"label": "OUTPUT: Glide",
+				"kind": "button",
+				"position": {
+					"x": 83.6,
+					"y": 78.33333333333333,
+					"width": 13.3,
+					"height": 12.5
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Audio IN",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Pitch CV",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Filter CV",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Volume CV",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Gate",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "USB-B",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "Power",
+			"direction": "input",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://cdn.inmusicbrands.com/Moog/Minitaur/Minitaur_REV2.2_Manual_D_Web.pdf"
+	]
 }

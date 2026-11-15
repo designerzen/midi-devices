@@ -7,8 +7,14 @@
 	"manufacturerUrl": "https://www.roland.com/",
 	"productUrl": "https://www.roland.com/global/products/vp-03/",
 	"description": "Boutique vocoder, human-voice and string synthesizer.",
-	"ids": ["roland-vp-03"],
-	"portNames": ["VP-03", "VP-03 MIDI 1", "Roland VP-03"],
+	"ids": [
+		"roland-vp-03"
+	],
+	"portNames": [
+		"VP-03",
+		"VP-03 MIDI 1",
+		"Roland VP-03"
+	],
 	"icon": "icon.svg",
 	"documentation": [
 		{
@@ -20,7 +26,12 @@
 			"url": "https://static.roland.com/assets/media/pdf/VP-03_MIDI_Imple_e01_W.pdf"
 		}
 	],
-	"abilities": ["USB MIDI", "DIN MIDI IN/OUT", "MIDI notes", "Documented controller mappings"],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI IN/OUT",
+		"MIDI notes",
+		"Documented controller mappings"
+	],
 	"hardwareControls": [
 		"Performance: Volume, Tune, Ribbon C1, Ribbon C2, Mic power, C1 mode",
 		"Pitch Shift: Time, Pitch set, Auto Off Manual",
@@ -174,226 +185,573 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1944,
-		"height": 540,
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 680,
 		"elements": [
 			{
-				"id": "performance-tune-knob",
-				"label": "Tune",
-				"kind": "knob",
-				"position": {
-					"x": 6.790123456790123,
-					"y": 26.851851851851855,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
-				},
-				"control": "performance-tune-knob"
-			},
-			{
-				"id": "performance-ribbon-c1-touch",
-				"label": "Ribbon C1",
+				"id": "controllers-ribbon-c1",
+				"label": "CONTROLLERS: Ribbon C1",
 				"kind": "fader",
 				"position": {
-					"x": 1.9032921810699588,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
-				},
-				"control": "performance-ribbon-c1-touch"
+					"x": 2.0666666666666664,
+					"y": 13.970588235294118,
+					"width": 4.266666666666667,
+					"height": 52.94117647058824
+				}
 			},
 			{
-				"id": "performance-ribbon-c2-touch",
-				"label": "Ribbon C2",
+				"id": "controllers-ribbon-c2",
+				"label": "CONTROLLERS: Ribbon C2",
 				"kind": "fader",
 				"position": {
-					"x": 6.790123456790123,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
-				},
-				"control": "performance-ribbon-c2-touch"
+					"x": 6.333333333333334,
+					"y": 13.970588235294118,
+					"width": 4.266666666666667,
+					"height": 52.94117647058824
+				}
 			},
 			{
-				"id": "pitch-shift-time-knob",
-				"label": "Time",
+				"id": "pitch-shift-time",
+				"label": "PITCH SHIFT: Time",
 				"kind": "knob",
 				"position": {
-					"x": 12.911522633744857,
-					"y": 26.851851851851855,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 12.4,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "pitch-shift-time-knob"
 			},
 			{
-				"id": "pitch-shift-pitch-set-knob",
-				"label": "Pitch set",
+				"id": "pitch-shift-pitch-set",
+				"label": "PITCH SHIFT: Pitch set",
 				"kind": "knob",
 				"position": {
-					"x": 12.911522633744857,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 16.022222222222222,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "pitch-shift-pitch-set-knob"
 			},
 			{
-				"id": "pitch-shift-auto-off-manual-switch",
-				"label": "Auto Off Manual",
+				"id": "pitch-shift-auto-off-manual",
+				"label": "PITCH SHIFT: Auto Off Manual",
 				"kind": "fader",
 				"position": {
-					"x": 12.911522633744857,
-					"y": 58.7037037037037,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 19.644444444444442,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "pitch-shift-auto-off-manual-switch"
 			},
 			{
-				"id": "balance-direct-mic-fader",
-				"label": "Direct mic",
+				"id": "balance-direct-mic",
+				"label": "BALANCE: Direct mic",
 				"kind": "fader",
 				"position": {
-					"x": 20.52469135802469,
-					"y": 26.851851851851855,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 24.73333333333333,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "balance-direct-mic-fader"
 			},
 			{
-				"id": "balance-human-voice-fader",
-				"label": "Human voice",
+				"id": "balance-human-voice",
+				"label": "BALANCE: Human voice",
 				"kind": "fader",
 				"position": {
-					"x": 20.52469135802469,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 28.355555555555554,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "balance-human-voice-fader"
 			},
 			{
-				"id": "balance-strings-fader",
-				"label": "Strings",
+				"id": "balance-strings",
+				"label": "BALANCE: Strings",
 				"kind": "fader",
 				"position": {
-					"x": 20.52469135802469,
-					"y": 58.7037037037037,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 31.977777777777778,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "balance-strings-fader"
 			},
 			{
-				"id": "vibrato-rate-fader",
-				"label": "Rate",
+				"id": "vibrato-rate",
+				"label": "VIBRATO: Rate",
 				"kind": "fader",
 				"position": {
-					"x": 28.137860082304528,
-					"y": 26.851851851851855,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 37.06666666666666,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "vibrato-rate-fader"
 			},
 			{
-				"id": "vibrato-delay-fader",
-				"label": "Delay",
+				"id": "vibrato-delay",
+				"label": "VIBRATO: Delay",
 				"kind": "fader",
 				"position": {
-					"x": 28.137860082304528,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 40.68888888888889,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "vibrato-delay-fader"
 			},
 			{
-				"id": "vibrato-depth-fader",
-				"label": "Depth",
+				"id": "vibrato-depth",
+				"label": "VIBRATO: Depth",
 				"kind": "fader",
 				"position": {
-					"x": 28.137860082304528,
-					"y": 58.7037037037037,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 44.31111111111111,
+					"y": 13.970588235294118,
+					"width": 3.622222222222221,
+					"height": 52.94117647058824
 				},
 				"control": "vibrato-depth-fader"
 			},
 			{
-				"id": "vocoder-level-fader",
-				"label": "Level",
+				"id": "vocoder-on-off",
+				"label": "VOCODER: On Off",
+				"kind": "button",
+				"position": {
+					"x": 49.4,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
+				}
+			},
+			{
+				"id": "vocoder-ensemble",
+				"label": "VOCODER: Ensemble",
+				"kind": "button",
+				"position": {
+					"x": 53.14444444444444,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
+				}
+			},
+			{
+				"id": "vocoder-level",
+				"label": "VOCODER: Level",
 				"kind": "fader",
 				"position": {
-					"x": 35.75102880658436,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 56.888888888888886,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
 				},
 				"control": "vocoder-level-fader"
 			},
 			{
-				"id": "vocoder-tone-fader",
-				"label": "Tone",
+				"id": "vocoder-tone",
+				"label": "VOCODER: Tone",
 				"kind": "fader",
 				"position": {
-					"x": 40.63786008230453,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 60.633333333333326,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
 				},
 				"control": "vocoder-tone-fader"
 			},
 			{
-				"id": "human-voice-attack-fader",
-				"label": "Attack",
+				"id": "human-voice-male-8-foot",
+				"label": "HUMAN VOICE: Male 8 foot",
+				"kind": "button",
+				"position": {
+					"x": 65.84444444444443,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
+				}
+			},
+			{
+				"id": "human-voice-female-4-foot",
+				"label": "HUMAN VOICE: Female 4 foot",
+				"kind": "button",
+				"position": {
+					"x": 69.58888888888889,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
+				}
+			},
+			{
+				"id": "human-voice-ensemble",
+				"label": "HUMAN VOICE: Ensemble",
+				"kind": "button",
+				"position": {
+					"x": 73.33333333333333,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
+				}
+			},
+			{
+				"id": "human-voice-attack",
+				"label": "HUMAN VOICE: Attack",
 				"kind": "fader",
 				"position": {
-					"x": 51.64609053497943,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 77.07777777777777,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
 				},
 				"control": "human-voice-attack-fader"
 			},
 			{
-				"id": "strings-attack-fader",
-				"label": "Attack",
+				"id": "strings-on-off",
+				"label": "STRINGS: On Off",
+				"kind": "button",
+				"position": {
+					"x": 82.28888888888889,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
+				}
+			},
+			{
+				"id": "strings-attack",
+				"label": "STRINGS: Attack",
 				"kind": "fader",
 				"position": {
-					"x": 62.65432098765432,
-					"y": 26.851851851851855,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 86.03333333333333,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
 				},
 				"control": "strings-attack-fader"
 			},
 			{
-				"id": "strings-tone-fader",
-				"label": "Tone",
+				"id": "strings-tone",
+				"label": "STRINGS: Tone",
 				"kind": "fader",
 				"position": {
-					"x": 57.76748971193416,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 89.77777777777777,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
 				},
 				"control": "strings-tone-fader"
 			},
 			{
-				"id": "strings-release-fader",
-				"label": "Release",
+				"id": "strings-release",
+				"label": "STRINGS: Release",
 				"kind": "fader",
 				"position": {
-					"x": 62.65432098765432,
-					"y": 42.77777777777778,
-					"width": 3.909465020576132,
-					"height": 9.25925925925926
+					"x": 93.52222222222221,
+					"y": 13.970588235294118,
+					"width": 3.744444444444444,
+					"height": 52.94117647058824
 				},
 				"control": "strings-release-fader"
+			},
+			{
+				"id": "memory-performance-volume",
+				"label": "MEMORY / PERFORMANCE: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-tune",
+				"label": "MEMORY / PERFORMANCE: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 6.860000000000001,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-mic-power",
+				"label": "MEMORY / PERFORMANCE: Mic power",
+				"kind": "button",
+				"position": {
+					"x": 11.653333333333334,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-c1-mode",
+				"label": "MEMORY / PERFORMANCE: C1 mode",
+				"kind": "button",
+				"position": {
+					"x": 16.44666666666667,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-memory",
+				"label": "MEMORY / PERFORMANCE: Memory",
+				"kind": "button",
+				"position": {
+					"x": 21.240000000000002,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-play-stop",
+				"label": "MEMORY / PERFORMANCE: Play Stop",
+				"kind": "button",
+				"position": {
+					"x": 26.033333333333335,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-1",
+				"label": "MEMORY / PERFORMANCE: Step 1",
+				"kind": "button",
+				"position": {
+					"x": 30.826666666666668,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-2",
+				"label": "MEMORY / PERFORMANCE: Step 2",
+				"kind": "button",
+				"position": {
+					"x": 35.620000000000005,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-3",
+				"label": "MEMORY / PERFORMANCE: Step 3",
+				"kind": "button",
+				"position": {
+					"x": 40.413333333333334,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-4",
+				"label": "MEMORY / PERFORMANCE: Step 4",
+				"kind": "button",
+				"position": {
+					"x": 45.20666666666667,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-5",
+				"label": "MEMORY / PERFORMANCE: Step 5",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-6",
+				"label": "MEMORY / PERFORMANCE: Step 6",
+				"kind": "button",
+				"position": {
+					"x": 54.79333333333334,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-7",
+				"label": "MEMORY / PERFORMANCE: Step 7",
+				"kind": "button",
+				"position": {
+					"x": 59.58666666666667,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-8",
+				"label": "MEMORY / PERFORMANCE: Step 8",
+				"kind": "button",
+				"position": {
+					"x": 64.38000000000001,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-9",
+				"label": "MEMORY / PERFORMANCE: Step 9",
+				"kind": "button",
+				"position": {
+					"x": 69.17333333333335,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-10",
+				"label": "MEMORY / PERFORMANCE: Step 10",
+				"kind": "button",
+				"position": {
+					"x": 73.96666666666667,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-11",
+				"label": "MEMORY / PERFORMANCE: Step 11",
+				"kind": "button",
+				"position": {
+					"x": 78.76,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-12",
+				"label": "MEMORY / PERFORMANCE: Step 12",
+				"kind": "button",
+				"position": {
+					"x": 83.55333333333334,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-13",
+				"label": "MEMORY / PERFORMANCE: Step 13",
+				"kind": "button",
+				"position": {
+					"x": 88.34666666666668,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-14",
+				"label": "MEMORY / PERFORMANCE: Step 14",
+				"kind": "button",
+				"position": {
+					"x": 93.14000000000001,
+					"y": 75.0,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-15",
+				"label": "MEMORY / PERFORMANCE: Step 15",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 83.08823529411765,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
+			},
+			{
+				"id": "memory-performance-step-16",
+				"label": "MEMORY / PERFORMANCE: Step 16",
+				"kind": "button",
+				"position": {
+					"x": 6.860000000000001,
+					"y": 83.08823529411765,
+					"width": 4.793333333333334,
+					"height": 8.088235294117647
+				}
 			}
 		]
-	}
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Mix IN",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Output",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "DIN 5-pin",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "DIN 5-pin",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Micro USB",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Mic IN",
+			"connector": "XLR",
+			"direction": "input",
+			"location": "Top"
+		}
+	],
+	"diagramSources": [
+		"https://static.roland.com/assets/media/pdf/VP-03_e03_W.pdf",
+		"https://static.roland.com/assets/media/pdf/VP-03_MIDI_Imple_e01_W.pdf"
+	]
 }
