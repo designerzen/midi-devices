@@ -1,0 +1,1111 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "roland-jx-8p",
+	"name": "Roland JX-8P",
+	"manufacturer": "Roland",
+	"manufacturerUrl": "https://www.roland.com/",
+	"ids": [
+		"roland-jx-8p"
+	],
+	"portNames": [],
+	"description": "Six-voice analog synthesizer with velocity and aftertouch keyboard.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Roland JX-8P: manufacturer or original documentation",
+			"url": "https://www.roland.com/us/support/manual_archive/"
+		}
+	],
+	"abilities": [
+		"MIDI notes",
+		"Pitch bend"
+	],
+	"hardwareControls": [
+		"61 keys"
+	],
+	"notice": "Select the MIDI channel and enable the required receive functions. PG-800 programming is not a standard CC implementation and is not mapped here. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"controls": [
+		{
+			"id": "pitch-bend",
+			"label": "Pitch bend",
+			"message": {
+				"type": "pitchBend"
+			},
+			"widget": "slider",
+			"min": 0,
+			"max": 16383,
+			"default": 8192
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Roland JX-8P schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": [
+			{
+				"id": "key-0",
+				"label": "Virtual note 36",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 36
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 4,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Virtual note 37",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 37
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 5.508196721311475,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-2",
+				"label": "Virtual note 38",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 38
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 7.016393442622951,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-3",
+				"label": "Virtual note 39",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 39
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 8.524590163934427,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-4",
+				"label": "Virtual note 40",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 40
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 10.032786885245901,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-5",
+				"label": "Virtual note 41",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 41
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 11.540983606557377,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-6",
+				"label": "Virtual note 42",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 42
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 13.049180327868852,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-7",
+				"label": "Virtual note 43",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 43
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 14.557377049180328,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-8",
+				"label": "Virtual note 44",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 44
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 16.065573770491802,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-9",
+				"label": "Virtual note 45",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 45
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 17.57377049180328,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-10",
+				"label": "Virtual note 46",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 46
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 19.081967213114755,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-11",
+				"label": "Virtual note 47",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 47
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 20.59016393442623,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-12",
+				"label": "Virtual note 48",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 22.098360655737704,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-13",
+				"label": "Virtual note 49",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 23.60655737704918,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-14",
+				"label": "Virtual note 50",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 25.114754098360656,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-15",
+				"label": "Virtual note 51",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 26.62295081967213,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-16",
+				"label": "Virtual note 52",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 28.131147540983605,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-17",
+				"label": "Virtual note 53",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 29.639344262295083,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-18",
+				"label": "Virtual note 54",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 31.147540983606557,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-19",
+				"label": "Virtual note 55",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 32.65573770491803,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-20",
+				"label": "Virtual note 56",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 34.16393442622951,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-21",
+				"label": "Virtual note 57",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 35.67213114754098,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-22",
+				"label": "Virtual note 58",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 37.18032786885246,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-23",
+				"label": "Virtual note 59",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 59
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 38.68852459016394,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-24",
+				"label": "Virtual note 60",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 40.19672131147541,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-25",
+				"label": "Virtual note 61",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 61
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 41.704918032786885,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-26",
+				"label": "Virtual note 62",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 62
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 43.21311475409836,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-27",
+				"label": "Virtual note 63",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 63
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 44.721311475409834,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-28",
+				"label": "Virtual note 64",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 64
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 46.22950819672131,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-29",
+				"label": "Virtual note 65",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 65
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 47.73770491803279,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-30",
+				"label": "Virtual note 66",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 66
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 49.24590163934426,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-31",
+				"label": "Virtual note 67",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 67
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 50.75409836065574,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-32",
+				"label": "Virtual note 68",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 68
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 52.26229508196721,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-33",
+				"label": "Virtual note 69",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 69
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 53.77049180327869,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-34",
+				"label": "Virtual note 70",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 70
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 55.278688524590166,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-35",
+				"label": "Virtual note 71",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 71
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 56.78688524590164,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-36",
+				"label": "Virtual note 72",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 72
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 58.295081967213115,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-37",
+				"label": "Virtual note 73",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 73
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 59.80327868852459,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-38",
+				"label": "Virtual note 74",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 74
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 61.31147540983606,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-39",
+				"label": "Virtual note 75",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 75
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 62.81967213114754,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-40",
+				"label": "Virtual note 76",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 76
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 64.32786885245902,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-41",
+				"label": "Virtual note 77",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 77
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 65.8360655737705,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-42",
+				"label": "Virtual note 78",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 78
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 67.34426229508196,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-43",
+				"label": "Virtual note 79",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 79
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 68.85245901639344,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-44",
+				"label": "Virtual note 80",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 80
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 70.36065573770492,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-45",
+				"label": "Virtual note 81",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 81
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 71.8688524590164,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-46",
+				"label": "Virtual note 82",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 82
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 73.37704918032787,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-47",
+				"label": "Virtual note 83",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 83
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 74.88524590163935,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-48",
+				"label": "Virtual note 84",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 84
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 76.39344262295081,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-49",
+				"label": "Virtual note 85",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 85
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 77.90163934426229,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-50",
+				"label": "Virtual note 86",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 86
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 79.40983606557377,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-51",
+				"label": "Virtual note 87",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 87
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 80.91803278688525,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-52",
+				"label": "Virtual note 88",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 88
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 82.42622950819673,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-53",
+				"label": "Virtual note 89",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 89
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 83.93442622950819,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-54",
+				"label": "Virtual note 90",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 90
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 85.44262295081967,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-55",
+				"label": "Virtual note 91",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 91
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 86.95081967213115,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-56",
+				"label": "Virtual note 92",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 92
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 88.45901639344262,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-57",
+				"label": "Virtual note 93",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 93
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 89.9672131147541,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-58",
+				"label": "Virtual note 94",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 94
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 91.47540983606558,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-59",
+				"label": "Virtual note 95",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 95
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 92.98360655737704,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			},
+			{
+				"id": "key-60",
+				"label": "Virtual note 96",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 96
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 94.49180327868852,
+					"y": 48,
+					"width": 1.5081967213114753,
+					"height": 44
+				}
+			}
+		]
+	}
+}

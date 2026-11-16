@@ -1,0 +1,56 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "soundbeam-soundbeam-5",
+	"name": "Soundbeam 5",
+	"manufacturer": "Soundbeam",
+	"manufacturerUrl": "https://www.soundbeam.co.uk/",
+	"ids": [
+		"soundbeam-soundbeam-5"
+	],
+	"portNames": [],
+	"description": "Accessible ultrasonic movement-to-MIDI instrument with switch inputs.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Soundbeam 5: manufacturer or original documentation",
+			"url": "https://www.soundbeam.co.uk/software-updates"
+		},
+		{
+			"title": "Soundbeam 5 MIDI utilities",
+			"url": "https://static1.squarespace.com/static/56d802d962cd9424aa8b5eb7/t/5707a0f6746fb94ec68e976e/1460117754257/Soundbeam_Part2.pdf"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware"
+	],
+	"hardwareControls": [],
+	"notice": "Configure beam ranges, scales, MIDI channels and switch assignments on the Soundbeam. Connect its MIDI output through an interface to external sounds. Assignments depend on the setup; no universal note or CC map is supplied. This is Soundbeam 5, not Soundbeam 6. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Soundbeam 5 schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	}
+}

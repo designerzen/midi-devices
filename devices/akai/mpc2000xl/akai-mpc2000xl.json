@@ -1,0 +1,50 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "akai-mpc2000xl",
+	"name": "Akai MPC2000XL",
+	"manufacturer": "Akai",
+	"manufacturerUrl": "https://www.akaipro.com/",
+	"ids": [
+		"akai-mpc2000xl"
+	],
+	"portNames": [],
+	"description": "Sampling workstation and MIDI sequencer with 16 performance pads.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Akai MPC2000XL: manufacturer or original documentation",
+			"url": "https://www.akaipro.com/downloads-and-support/downloads/?legacy=true"
+		}
+	],
+	"abilities": [],
+	"hardwareControls": [],
+	"notice": "Choose the input/output MIDI ports and track channels on the MPC. Pad note assignments depend on the loaded program; use MIDI learn instead of assuming General MIDI drums. No fixed pad map, mixer automation or transport mapping is provided. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Akai MPC2000XL schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	}
+}

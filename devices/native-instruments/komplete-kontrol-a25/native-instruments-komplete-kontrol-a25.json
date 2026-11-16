@@ -1,0 +1,541 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "native-instruments-komplete-kontrol-a25",
+	"name": "Native Instruments KOMPLETE KONTROL A25",
+	"manufacturer": "Native Instruments",
+	"manufacturerUrl": "https://www.native-instruments.com/",
+	"productUrl": "https://www.native-instruments.com/products/komplete-kontrol-a25",
+	"ids": [
+		"native-instruments-komplete-kontrol-a25"
+	],
+	"portNames": [],
+	"description": "25-key velocity-sensitive USB MIDI keyboard controller with pitch and modulation wheels.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Native Instruments KOMPLETE KONTROL A25 product information and support",
+			"url": "https://www.native-instruments.com/products/komplete-kontrol-a25"
+		}
+	],
+	"abilities": [
+		"Velocity-sensitive notes",
+		"Pitch bend",
+		"Modulation",
+		"Sustain"
+	],
+	"hardwareControls": [
+		"25 keys",
+		"Pitch bend wheel",
+		"Modulation wheel",
+		"Pedal input"
+	],
+	"notice": "Connect via USB and select the keyboard MIDI input and matching MIDI channel in your application. This profile covers keyboard performance messages only. CC1 and CC64 represent standard modulation and sustain assignments; match any hardware reassignment using MIDI learn. Assignable controls, DAW transport and software integration are not mapped here. Port names vary by operating system and are intentionally omitted until verified on hardware; select this profile manually. The panel is a schematic, not a scaled hardware drawing. Virtual note numbers are illustrative; use MIDI learn after changing octave or transpose.",
+	"controls": [
+		{
+			"id": "pitch-bend",
+			"label": "Pitch bend",
+			"message": {
+				"type": "pitchBend"
+			},
+			"widget": "slider",
+			"min": 0,
+			"max": 16383,
+			"default": 8192
+		},
+		{
+			"id": "modulation",
+			"label": "Modulation (CC1)",
+			"cc": 1,
+			"widget": "slider"
+		},
+		{
+			"id": "sustain",
+			"label": "Sustain pedal (CC64)",
+			"cc": 64,
+			"widget": "toggle"
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Native Instruments KOMPLETE KONTROL A25 schematic keyboard panel"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": [
+			{
+				"id": "pitch-bend",
+				"label": "Pitch bend",
+				"kind": "fader",
+				"control": "pitch-bend",
+				"position": {
+					"x": 3,
+					"y": 45,
+					"width": 3,
+					"height": 40
+				}
+			},
+			{
+				"id": "modulation",
+				"label": "Modulation (CC1)",
+				"kind": "fader",
+				"control": "modulation",
+				"position": {
+					"x": 8,
+					"y": 45,
+					"width": 3,
+					"height": 40
+				}
+			},
+			{
+				"id": "key-0",
+				"label": "Note 48",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 16,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Note 49",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 19.240000000000002,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-2",
+				"label": "Note 50",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 22.48,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-3",
+				"label": "Note 51",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 25.72,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-4",
+				"label": "Note 52",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 28.96,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-5",
+				"label": "Note 53",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 32.2,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-6",
+				"label": "Note 54",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 35.44,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-7",
+				"label": "Note 55",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 38.68,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-8",
+				"label": "Note 56",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 41.92,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-9",
+				"label": "Note 57",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 45.16,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-10",
+				"label": "Note 58",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 48.4,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-11",
+				"label": "Note 59",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 59
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 51.64,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-12",
+				"label": "Note 60",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 54.88,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-13",
+				"label": "Note 61",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 61
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 58.12,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-14",
+				"label": "Note 62",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 62
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 61.36,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-15",
+				"label": "Note 63",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 63
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 64.6,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-16",
+				"label": "Note 64",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 64
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 67.84,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-17",
+				"label": "Note 65",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 65
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 71.08,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-18",
+				"label": "Note 66",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 66
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 74.32,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-19",
+				"label": "Note 67",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 67
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 77.56,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-20",
+				"label": "Note 68",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 68
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 80.8,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-21",
+				"label": "Note 69",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 69
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 84.04,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-22",
+				"label": "Note 70",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 70
+				},
+				"learnable": true,
+				"dark": true,
+				"position": {
+					"x": 87.28,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-23",
+				"label": "Note 71",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 71
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 90.52,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			},
+			{
+				"id": "key-24",
+				"label": "Note 72",
+				"kind": "key",
+				"message": {
+					"type": "note",
+					"number": 72
+				},
+				"learnable": true,
+				"dark": false,
+				"position": {
+					"x": 93.76,
+					"y": 43,
+					"width": 3.24,
+					"height": 48
+				}
+			}
+		]
+	}
+}

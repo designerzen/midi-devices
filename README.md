@@ -4,6 +4,12 @@ Open profiles for MIDI hardware: port names for auto-detection, MIDI control map
 
 **Browse the catalogue:** https://designerzen.github.io/midi-devices/
 
+Read the [complete API reference](docs/api.md) for response shapes, every client method, identifier matching, errors, caching, and self-hosting. The [profile and contribution guide](docs/profiles.md) explains MIDI mappings, panel geometry, and how to add devices and manufacturers.
+
+See [classic MIDI and accessible hardware coverage](docs/coverage.md) for the DX7, D-50, JUNO-106, M1, TR-909 and other landmark devices, plus Soundbeam, Magic Flute, Skoog and Skwitch. The guide explains DIN MIDI interfaces, companion-app dependencies, and partial mappings.
+
+The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native Instruments KOMPLETE KONTROL A25/A49, and Nektar SE49/SE61. These keyboard profiles cover basic performance messages; their setup notes explain configurable controls and manual selection where port aliases have not been verified.
+
 ## Layout
 
 ```
@@ -20,7 +26,7 @@ The `id` inside each profile must match its filename. Asset paths inside a profi
 
 ## API
 
-A static, read-only JSON API is published with the site. Every response is CORS-enabled and all links in it are absolute URLs.
+A static, read-only JSON API is published with the site. Generated `links` are absolute URLs; asset fields within profiles remain relative. CORS and HTTP caching depend on the deployment host.
 
 | Endpoint | Returns |
 | --- | --- |
@@ -32,7 +38,7 @@ A static, read-only JSON API is published with the site. Every response is CORS-
 | `api/v1/midi/{slug}.json` | The full profile for a device ID or Web MIDI port name, slugged: lowercase, other characters become `-` (`MPK mini 3` → [`midi/mpk-mini-3.json`](https://designerzen.github.io/midi-devices/api/v1/midi/mpk-mini-3.json)) |
 | `api/v1/ports.json` | `byId`, `byName` and `bySlug` maps from lowercased Web MIDI port IDs and names to device IDs |
 
-Relative asset paths inside a profile (`icon`, `surface.src`, GUI element `src`) resolve against `links.base`. Responses carry `apiVersion` and `dataVersion`; breaking changes to the shape will move to a new `api/v2/`.
+Relative asset paths inside a profile (`icon`, `surface.src`, GUI element `src`) resolve against `links.base`. Collection responses and the port map carry `apiVersion` and `dataVersion`; individual device and manufacturer responses do not. Breaking changes to the shape will move to a new `api/v2/`.
 
 ### JavaScript client
 
@@ -82,10 +88,13 @@ import { MIDI_DEVICE_DIRECTORY, midiDeviceFolders, createMidiDeviceStore, midiDe
 
 - `MIDI_DEVICE_DIRECTORY`: absolute path of `devices/`.
 - `midiDeviceFolders(root?)`: `{ id, path }` for every valid profile.
+- `midiDeviceDirectory(id, root?)`: absolute device folder; throws for unknown IDs.
 - `createMidiDeviceStore(getRoots)`: reads registry files from one or more roots (earlier roots win), for serving from Node or Electron.
 - `midiDeviceFilesPlugin()`: Vite plugin that serves the registry at `<base>midi-devices/` in development and copies it into the build.
 
 Raw files are also exported, e.g. `midi-devices/index.json`, `midi-devices/profile.schema.json` and `midi-devices/devices/korg/volca-fm/korg-volca-fm.json`.
+
+The Node entry point uses filesystem APIs; browser applications should import `midi-devices/client.js` instead. A store exposes asynchronous `entries()` (sorted `{ id, path }` records), `list()` (IDs), and `read(relative)` (`{ type, bytes }` or `null` for missing or disallowed paths). Its roots callback returns filesystem paths in priority order. The Vite plugin serves raw profiles and assets, rather than the generated versioned API.
 
 ## Adding a device
 

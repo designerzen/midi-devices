@@ -1,0 +1,50 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "roland-tr-909",
+	"name": "Roland TR-909",
+	"manufacturer": "Roland",
+	"manufacturerUrl": "https://www.roland.com/",
+	"ids": [
+		"roland-tr-909"
+	],
+	"portNames": [],
+	"description": "Classic analog and sample-based MIDI rhythm composer.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Roland TR-909: manufacturer or original documentation",
+			"url": "https://cdn.roland.com/assets/media/pdf/TR-909_OM.pdf"
+		}
+	],
+	"abilities": [],
+	"hardwareControls": [],
+	"notice": "Connect the original TR-909 through DIN MIDI. Configure MIDI receive channel and sync source on the hardware. Instrument tuning and decay knobs are not generic MIDI CCs. Drum-note assignments and clock transport are omitted from this initial profile; consult the MIDI chart. This is not the TR-09 reissue. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Roland TR-909 schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	}
+}

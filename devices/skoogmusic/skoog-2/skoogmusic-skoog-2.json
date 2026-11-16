@@ -1,0 +1,52 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "skoogmusic-skoog-2",
+	"name": "Skoogmusic Skoog 2.0",
+	"manufacturer": "Skoogmusic",
+	"manufacturerUrl": "https://www.playable.tech/skoog",
+	"ids": [
+		"skoogmusic-skoog-2"
+	],
+	"portNames": [],
+	"description": "Accessible soft tactile cube instrument with five playable faces and app-mediated MIDI.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Skoogmusic Skoog 2.0: manufacturer or original documentation",
+			"url": "https://www.playable.tech/skoog"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware"
+	],
+	"hardwareControls": [],
+	"notice": "Pair the Skoog with its compatible companion app and route MIDI from the app to the destination. The physical sensor connection must not be treated as a class-compliant MIDI port. Set sensitivity, scales and assignments in the app. Hardware is discontinued; consult the maintained support page for software requirements. No fixed MIDI mapping is assumed. Use the software routing described above. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Skoogmusic Skoog 2.0 schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	}
+}

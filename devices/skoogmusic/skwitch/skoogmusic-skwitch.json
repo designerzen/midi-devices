@@ -1,0 +1,52 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "skoogmusic-skwitch",
+	"name": "Skoogmusic Skwitch",
+	"manufacturer": "Skoogmusic",
+	"manufacturerUrl": "https://www.playable.tech/skoog",
+	"ids": [
+		"skoogmusic-skwitch"
+	],
+	"portNames": [],
+	"description": "Accessible single-button musical accessory used with an iPhone app.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Skoogmusic Skwitch: manufacturer or original documentation",
+			"url": "https://www.playable.tech/skoog"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware"
+	],
+	"hardwareControls": [],
+	"notice": "Skwitch requires its compatible phone and companion app; route the app MIDI output to your instrument. The accessory itself is not a USB MIDI controller. Musical behavior and MIDI assignments are app-dependent. Hardware is no longer sold or supported; check compatibility before obtaining used hardware. Use the software routing described above. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Skoogmusic Skwitch schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	}
+}

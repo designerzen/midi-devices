@@ -1,0 +1,52 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "mybreathmymusic-magic-flute",
+	"name": "Magic Flute",
+	"manufacturer": "My Breath My Music",
+	"manufacturerUrl": "https://mybreathmymusic.com/",
+	"ids": [
+		"mybreathmymusic-magic-flute"
+	],
+	"portNames": [],
+	"description": "Accessible hands-free electronic wind instrument using breath and head tilt.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Magic Flute: manufacturer or original documentation",
+			"url": "https://mybreathmymusic.com/en/magic-flute"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware"
+	],
+	"hardwareControls": [],
+	"notice": "Select scales and sounds on the control module. Head tilt chooses pitch and breath controls dynamics. Route the module MIDI output to an external instrument through a DIN MIDI interface. The cited guide does not establish a fixed CC map, so breath CC assignments are intentionally omitted. My Breath My Music is the project/support organization; see its page for supplier information. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Magic Flute schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	}
+}
