@@ -14,6 +14,11 @@
 			a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px solid #b8f1df; outline-offset: 5px; }
 			button { font: inherit; font-weight: 650; cursor: pointer; color: #0b1420; background: #9cddcf; border: 0; border-radius: 6px; padding: 0.7rem 1rem; }
 			button:disabled { cursor: default; opacity: 0.6; }
+			.filter-bar { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; padding: 1.25rem; margin: 1.5rem 0 0; border: 1px solid #304052; border-radius: 12px; background: #132131; }
+			.filter-field { display: grid; gap: 0.5rem; flex: 1 1 240px; font-weight: 650; }
+			.filter-field input, .filter-field select { width: 100%; min-width: 0; font: inherit; font-weight: 400; padding: 0.7rem; color: #e5edf5; background: #0b1420; border: 1px solid #64748b; border-radius: 6px; }
+			.filter-field input:focus-visible, .filter-field select:focus-visible { outline: 3px solid #b8f1df; outline-offset: 3px; }
+			#filter-status { color: #acbdce; }
 			article.is-connected { border-color: #9cddcf; box-shadow: 0 0 0 2px #9cddcf; }
 			.connection-status { display: inline-block; font-size: 0.85rem; color: #acbdce; margin-top: 0.6rem; }
 			.is-connected .connection-status { color: #b8f1df; font-weight: 700; }
@@ -66,6 +71,17 @@
 			<p id="midi-status" role="status" aria-live="polite">Allow MIDI access to highlight connected hardware. Devices behind a generic MIDI interface may not be identifiable by name.</p>
 		</header>
 		<main>
+			<form id="filters" class="filter-bar" role="search" aria-label="Filter MIDI devices">
+				<label class="filter-field" for="device-search">Search devices or manufacturers
+					<input id="device-search" type="search" placeholder="Try DX7, Roland, or Soundbeam" aria-controls="catalog" disabled />
+				</label>
+				<label class="filter-field" for="manufacturer-filter">Manufacturer
+					<select id="manufacturer-filter" aria-controls="catalog" disabled><option value="">All manufacturers</option></select>
+				</label>
+				<button id="clear-filters" type="reset" disabled>Clear filters</button>
+			</form>
+			<p id="filter-status" role="status" aria-live="polite" aria-atomic="true"></p>
+			<p id="no-results" hidden>No devices match these filters. Try another search or clear the filters.</p>
 			<div id="catalog" aria-label="Available MIDI devices" aria-busy="true"></div>
 			<noscript>Enable JavaScript to load the MIDI device catalog.</noscript>
 		</main>
@@ -76,6 +92,12 @@
 			const detectMidi = document.getElementById("detect-midi")
 			const midiStatus = document.getElementById("midi-status")
 			const deviceCards = new Map()
+			const filters = document.getElementById("filters")
+			const search = document.getElementById("device-search")
+			const manufacturerFilter = document.getElementById("manufacturer-filter")
+			const clearFilters = document.getElementById("clear-filters")
+			const filterStatus = document.getElementById("filter-status")
+			const noResults = document.getElementById("no-results")
 			let midiAccess
 			const registry = new URL("./", document.baseURI)
 			const element = (tag, text, className) => {
@@ -220,6 +242,30 @@
 				return card
 			}
 			const normalise = (value) => String(value ?? "").trim().toLowerCase()
+			const updateFilters = () => {
+				const terms = normalise(search.value).split(/\s+/).filter(Boolean)
+				const manufacturer = manufacturerFilter.value
+				let visible = 0
+				for (const [id, { card, profile }] of deviceCards) {
+					const text = normalise([id, profile.name, profile.manufacturer].join(" "))
+					const matches = (!manufacturer || profile.manufacturer === manufacturer) && terms.every((term) => text.includes(term))
+					card.hidden = !matches
+					if (matches) visible++
+				}
+				filterStatus.textContent = `Showing ${visible} of ${deviceCards.size} devices.`
+				noResults.hidden = visible !== 0 || deviceCards.size === 0
+				clearFilters.disabled = !search.value && !manufacturer
+			}
+			search.addEventListener("input", updateFilters)
+			manufacturerFilter.addEventListener("change", updateFilters)
+			filters.addEventListener("submit", (event) => event.preventDefault())
+			filters.addEventListener("reset", (event) => {
+				event.preventDefault()
+				search.value = ""
+				manufacturerFilter.value = ""
+				updateFilters()
+				search.focus()
+			})
 			const updateConnections = () => {
 				if (!midiAccess) return
 				const matches = new Map()
@@ -298,6 +344,14 @@
 				}
 				status.textContent = `${count} ${count === 1 ? "device" : "devices"} available.${failed ? ` ${failed} ${failed === 1 ? "profile could" : "profiles could"} not be loaded.` : ""}`
 				if (!ids.length) status.textContent = "No MIDI device profiles are available."
+				const manufacturers = [...new Set([...deviceCards.values()].map(({ profile }) => profile.manufacturer).filter(Boolean))].sort((a, b) => a.localeCompare(b))
+				for (const manufacturer of manufacturers) {
+					const option = element("option", manufacturer)
+					option.value = manufacturer
+					manufacturerFilter.append(option)
+				}
+				search.disabled = manufacturerFilter.disabled = deviceCards.size === 0
+				updateFilters()
 			} catch {
 				status.textContent = "The MIDI device catalog could not be loaded. Reload the page to try again."
 				status.className = "error"

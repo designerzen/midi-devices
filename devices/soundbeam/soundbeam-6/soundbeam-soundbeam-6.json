@@ -1,0 +1,58 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "soundbeam-soundbeam-6",
+	"name": "Soundbeam 6",
+	"manufacturer": "Soundbeam",
+	"manufacturerUrl": "https://www.soundbeam.co.uk/",
+	"ids": [
+		"soundbeam-soundbeam-6"
+	],
+	"portNames": [],
+	"description": "Accessible touchscreen instrument with ultrasonic sensors, wireless switches and built-in sampled sounds.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Soundbeam 6 official manuals and support",
+			"url": "https://www.soundbeam.co.uk/soundbeam-6-manual-and-support"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware",
+		"Touch-free musical interaction",
+		"Built-in sounds"
+	],
+	"hardwareControls": [
+		"Touchscreen",
+		"Up to four sensor inputs and eight wireless switches"
+	],
+	"notice": "Use the touchscreen to select a Soundset and configure sensor and switch behavior. Built-in sounds can be played through the audio outputs without an external MIDI sound module. The USB socket is documented for file transfer; this profile does not claim class-compliant USB MIDI or a verified external MIDI route. For external integration, consult the current manual and manufacturer for your software version. Notes, channels and expression depend on the selected setup; this profile supplies setup guidance rather than a fixed note or CC map. Select this profile manually: port names have not been verified. The panel is an original conceptual schematic, not a scaled drawing of the physical controls.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Soundbeam 6 conceptual schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	},
+	"productUrl": "https://www.soundbeam.co.uk/soundbeam-6-manual-and-support"
+}

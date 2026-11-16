@@ -1,0 +1,62 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "soundbeam-desktop-soundbeam",
+	"name": "Desktop Soundbeam",
+	"manufacturer": "Soundbeam",
+	"manufacturerUrl": "https://www.soundbeam.co.uk/",
+	"ids": [
+		"soundbeam-desktop-soundbeam"
+	],
+	"portNames": [],
+	"description": "Accessible computer-based Soundbeam system with a dedicated interface, sensors and Windows software.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Desktop Soundbeam official manuals and support",
+			"url": "https://www.soundbeam.co.uk/desktop-soundbeam-manual-updates"
+		},
+		{
+			"title": "Desktop Soundbeam handbook",
+			"url": "https://www.soundbeam.co.uk/s/Manual-xnk7.pdf"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware",
+		"Touch-free musical interaction",
+		"Configurable MIDI performance"
+	],
+	"hardwareControls": [
+		"Sensor interface",
+		"Software-configured pitch and MIDI routing"
+	],
+	"notice": "Install the matching Desktop Soundbeam software and interface driver, then configure sensor input, MIDI routing and sound destinations in that software. The manufacturer specifies 32-bit Windows XP, Vista or Windows 7 and states development ended in spring 2012. Do not assume compatibility with modern Windows or a class-compliant USB MIDI connection. Notes, channels and expression depend on the selected setup; this profile supplies setup guidance rather than a fixed note or CC map. Select this profile manually: port names have not been verified. The panel is an original conceptual schematic, not a scaled drawing of the physical controls.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Desktop Soundbeam conceptual schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	},
+	"productUrl": "https://www.soundbeam.co.uk/desktop-soundbeam-manual-updates"
+}

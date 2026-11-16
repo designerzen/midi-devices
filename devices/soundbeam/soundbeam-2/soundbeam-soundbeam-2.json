@@ -1,0 +1,62 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "soundbeam-soundbeam-2",
+	"name": "Soundbeam 2",
+	"manufacturer": "Soundbeam",
+	"manufacturerUrl": "https://www.soundbeam.co.uk/",
+	"ids": [
+		"soundbeam-soundbeam-2"
+	],
+	"portNames": [],
+	"description": "Accessible ultrasonic MIDI controller with programmable pitch sequences and setups.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Soundbeam 2 official manuals and support",
+			"url": "https://www.soundbeam.co.uk/soundbeam-2-manual-and-updates"
+		},
+		{
+			"title": "Soundbeam 2 handbook",
+			"url": "https://www.soundbeam.co.uk/s/Soundbeam_Part1.pdf"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware",
+		"Touch-free musical interaction",
+		"Configurable MIDI performance"
+	],
+	"hardwareControls": [
+		"Pitch sequence, range and divisions",
+		"Trigger mode and transpose"
+	],
+	"notice": "Connect the sensor through its sensor driver to the controller, then controller MIDI OUT to an external sound source or interface MIDI IN. Set pitch sequence, range, divisions, trigger mode, transpose and MIDI utilities on the controller. Match the destination MIDI channel to the selected setup. Notes, channels and expression depend on the selected setup; this profile supplies setup guidance rather than a fixed note or CC map. Select this profile manually: port names have not been verified. The panel is an original conceptual schematic, not a scaled drawing of the physical controls.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Soundbeam 2 conceptual schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	},
+	"productUrl": "https://www.soundbeam.co.uk/soundbeam-2-manual-and-updates"
+}

@@ -1,0 +1,62 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "soundbeam-soundbeam-1",
+	"name": "Soundbeam 1",
+	"manufacturer": "Soundbeam",
+	"manufacturerUrl": "https://www.soundbeam.co.uk/",
+	"ids": [
+		"soundbeam-soundbeam-1"
+	],
+	"portNames": [],
+	"description": "Original accessible ultrasonic movement-to-MIDI controller.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Soundbeam 1 official manuals and support",
+			"url": "https://www.soundbeam.co.uk/soundbeam-1-manual"
+		},
+		{
+			"title": "Soundbeam 1 handbook",
+			"url": "https://www.soundbeam.co.uk/s/Scanned-SB1manual.pdf"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware",
+		"Touch-free musical interaction",
+		"Configurable MIDI performance"
+	],
+	"hardwareControls": [
+		"Range and pitch controls",
+		"DIN MIDI output"
+	],
+	"notice": "Connect the controller MIDI output to a sound module or MIDI interface input. Use the original manual to configure range, pitch and MIDI settings for your hardware revision. The original family had hardware revisions; do not substitute Soundbeam 2 or 5 settings. Notes, channels and expression depend on the selected setup; this profile supplies setup guidance rather than a fixed note or CC map. Select this profile manually: port names have not been verified. The panel is an original conceptual schematic, not a scaled drawing of the physical controls.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Soundbeam 1 conceptual schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "panel.svg",
+		"width": 1000,
+		"height": 300,
+		"elements": []
+	},
+	"productUrl": "https://www.soundbeam.co.uk/soundbeam-1-manual"
+}
