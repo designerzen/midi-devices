@@ -21,6 +21,11 @@ test("built data and query endpoint return only the requested device in either f
 	await buildApi({
 		entries: [
 			{ id: "arcana-strum", path: "arcana/strum" },
+			{ id: "arturia-keystep-37", path: "arturia/keystep-37" },
+			{ id: "novation-launchpad-mini-mk3", path: "novation/launchpad-mini-mk3" },
+			{ id: "novation-launchpad-x", path: "novation/launchpad-x" },
+			{ id: "novation-circuit-tracks", path: "novation/circuit-tracks" },
+			{ id: "novation-circuit-rhythm", path: "novation/circuit-rhythm" },
 			{ id: "korg-minilogue", path: "korg/minilogue" },
 			{ id: "roland-tr-909", path: "roland/tr-909" },
 			{ id: "superlative-sb01", path: "superlative/sb01" },
@@ -44,6 +49,14 @@ test("built data and query endpoint return only the requested device in either f
 		assert.equal((await client.lookup(name)).id, "arcana-strum")
 	}
 	assert.equal(await client.match({ name: "ArcanaStrum Virtual" }), undefined)
+	for (const name of ["LPX MIDI In", "LPX MIDI Out"]) {
+		assert.equal(await client.match({ id: "opaque-browser-port-id", name }), "novation-launchpad-x")
+	}
+	for (const id of ["arturia-keystep-37", "novation-launchpad-mini-mk3", "novation-launchpad-x", "novation-circuit-tracks", "novation-circuit-rhythm"]) {
+		assert.equal((await client.lookup(id)).id, id)
+		assert.equal((await client.device(id)).id, id)
+	}
+	assert.equal(await client.match({ name: "LPX DAW In" }), undefined)
 	for (const id of ["korg-minilogue", "roland-tr-909", "superlative-sb01", "korg-arp-2600-fs", "roland-v-stage-76", "roland-v-stage-88"]) {
 		for (const format of ["json", "xml"]) {
 			const response = await fetch(`${base}device?id=${id}&format=${format}`)
@@ -75,7 +88,7 @@ test("built data and query endpoint return only the requested device in either f
 		assert.equal((await fetch(`${base}${resource}.xml`)).status, 200)
 	}
 	const index = await (await fetch(`${base}index.json`)).json()
-	assert.equal(index.count, 7)
+	assert.equal(index.count, 12)
 	assert.equal(index.links.accessibility, undefined)
 	assert.equal((await fetch(`${base}accessibility/tactile-synth-guides.json`)).status, 404)
 })

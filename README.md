@@ -12,6 +12,8 @@ See [classic MIDI and accessible hardware coverage](docs/coverage.md) for the DX
 
 The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native Instruments KOMPLETE KONTROL A25/A49, and Nektar SE49/SE61. These keyboard profiles cover basic performance messages; their setup notes explain configurable controls and manual selection where port aliases have not been verified.
 
+Also included: Novation Launchpad Mini MK3, Launchpad X, Circuit Tracks, Circuit Rhythm, and the original Arturia KeyStep 37. Launchpad X provides its documented Programmer-mode grid and button mappings and LPX MIDI port aliases. The other four profiles provide model-specific schematic surfaces and setup guidance; their USB port names remain unverified and require manual profile selection. Custom layouts and assignable encoders are left unbound rather than given assumed factory assignments. Manufacturer manuals and MIDI setup references are linked in each profile.
+
 ## Layout
 
 Device diagrams use the [NYU SynthAccess tactile symbol vocabulary](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides): striped-ring knobs, distinct input/output/bidirectional jack shapes, switches, sliders and buttons. The catalogue includes source-backed controls and layouts for Superlative SB01, Roland V-STAGE 76/88 and the MIDI-equipped Korg ARP 2600 FS. Guide references are attached to the individual profiles. Original pre-MIDI instruments are not added as MIDI devices.

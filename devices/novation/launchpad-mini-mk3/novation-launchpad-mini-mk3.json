@@ -1,0 +1,970 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "novation-launchpad-mini-mk3",
+	"name": "Novation Launchpad Mini MK3",
+	"manufacturer": "Novation",
+	"manufacturerUrl": "https://novationmusic.com/",
+	"ids": [
+		"novation-launchpad-mini-mk3"
+	],
+	"portNames": [],
+	"description": "USB grid controller with 64 RGB pads and custom layouts.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Settings and operating modes",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/23731330721682-Launchpad-Mini-MK3-s-Settings-menu"
+		},
+		{
+			"title": "Manual downloads",
+			"url": "https://downloads.novationmusic.com/novation/launchpad-mk3/launchpad-mini-mk3-0"
+		}
+	],
+	"abilities": [
+		"Custom MIDI layouts",
+		"Session control",
+		"Programmer mode"
+	],
+	"hardwareControls": [
+		"64 pads",
+		"Eight top buttons",
+		"Eight scene launch buttons",
+		"USB-C"
+	],
+	"notice": "Connect USB MIDI. Custom-mode notes and CCs depend on the template loaded with Novation Components; this profile does not assume fixed pad assignments. Programmer mode replaces the normal Session, Drums, Keys and User layouts; consult the programmer reference before controlling LEDs. USB port aliases have not been verified; select this profile manually. Diagrams are original schematics with illustrative positions, not scaled hardware drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Novation Launchpad Mini MK3 schematic panel"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Hardware setup and documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 1050,
+		"elements": [
+			{
+				"id": "top-buttons-up",
+				"label": "TOP BUTTONS: Up",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				}
+			},
+			{
+				"id": "top-buttons-down",
+				"label": "TOP BUTTONS: Down",
+				"kind": "button",
+				"position": {
+					"x": 13.5125,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				}
+			},
+			{
+				"id": "top-buttons-left",
+				"label": "TOP BUTTONS: Left",
+				"kind": "button",
+				"position": {
+					"x": 23.925,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				}
+			},
+			{
+				"id": "top-buttons-right",
+				"label": "TOP BUTTONS: Right",
+				"kind": "button",
+				"position": {
+					"x": 34.3375,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				}
+			},
+			{
+				"id": "top-buttons-session",
+				"label": "TOP BUTTONS: Session",
+				"kind": "button",
+				"position": {
+					"x": 44.75,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				}
+			},
+			{
+				"id": "top-buttons-drums",
+				"label": "TOP BUTTONS: Drums",
+				"kind": "button",
+				"position": {
+					"x": 55.1625,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				}
+			},
+			{
+				"id": "top-buttons-keys",
+				"label": "TOP BUTTONS: Keys",
+				"kind": "button",
+				"position": {
+					"x": 65.575,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				}
+			},
+			{
+				"id": "top-buttons-user",
+				"label": "TOP BUTTONS: User",
+				"kind": "button",
+				"position": {
+					"x": 75.9875,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				}
+			},
+			{
+				"id": "grid-pad-1",
+				"label": "GRID: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-2",
+				"label": "GRID: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-3",
+				"label": "GRID: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-4",
+				"label": "GRID: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-5",
+				"label": "GRID: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-6",
+				"label": "GRID: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-7",
+				"label": "GRID: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-8",
+				"label": "GRID: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-9",
+				"label": "GRID: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-10",
+				"label": "GRID: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-11",
+				"label": "GRID: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-12",
+				"label": "GRID: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-13",
+				"label": "GRID: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-14",
+				"label": "GRID: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-15",
+				"label": "GRID: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-16",
+				"label": "GRID: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-17",
+				"label": "GRID: Pad 17",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-18",
+				"label": "GRID: Pad 18",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-19",
+				"label": "GRID: Pad 19",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-20",
+				"label": "GRID: Pad 20",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-21",
+				"label": "GRID: Pad 21",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-22",
+				"label": "GRID: Pad 22",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-23",
+				"label": "GRID: Pad 23",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-24",
+				"label": "GRID: Pad 24",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-25",
+				"label": "GRID: Pad 25",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-26",
+				"label": "GRID: Pad 26",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-27",
+				"label": "GRID: Pad 27",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-28",
+				"label": "GRID: Pad 28",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-29",
+				"label": "GRID: Pad 29",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-30",
+				"label": "GRID: Pad 30",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-31",
+				"label": "GRID: Pad 31",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-32",
+				"label": "GRID: Pad 32",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-33",
+				"label": "GRID: Pad 33",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-34",
+				"label": "GRID: Pad 34",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-35",
+				"label": "GRID: Pad 35",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-36",
+				"label": "GRID: Pad 36",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-37",
+				"label": "GRID: Pad 37",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-38",
+				"label": "GRID: Pad 38",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-39",
+				"label": "GRID: Pad 39",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-40",
+				"label": "GRID: Pad 40",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-41",
+				"label": "GRID: Pad 41",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-42",
+				"label": "GRID: Pad 42",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-43",
+				"label": "GRID: Pad 43",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-44",
+				"label": "GRID: Pad 44",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-45",
+				"label": "GRID: Pad 45",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-46",
+				"label": "GRID: Pad 46",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-47",
+				"label": "GRID: Pad 47",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-48",
+				"label": "GRID: Pad 48",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-49",
+				"label": "GRID: Pad 49",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-50",
+				"label": "GRID: Pad 50",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-51",
+				"label": "GRID: Pad 51",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-52",
+				"label": "GRID: Pad 52",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-53",
+				"label": "GRID: Pad 53",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-54",
+				"label": "GRID: Pad 54",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-55",
+				"label": "GRID: Pad 55",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-56",
+				"label": "GRID: Pad 56",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-57",
+				"label": "GRID: Pad 57",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-58",
+				"label": "GRID: Pad 58",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-59",
+				"label": "GRID: Pad 59",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-60",
+				"label": "GRID: Pad 60",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-61",
+				"label": "GRID: Pad 61",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-62",
+				"label": "GRID: Pad 62",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-63",
+				"label": "GRID: Pad 63",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "grid-pad-64",
+				"label": "GRID: Pad 64",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "scene-launch-scene-1",
+				"label": "SCENE LAUNCH: Scene 1",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 19.523809523809526,
+					"width": 8.3,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "scene-launch-scene-2",
+				"label": "SCENE LAUNCH: Scene 2",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 29.107142857142858,
+					"width": 8.3,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "scene-launch-scene-3",
+				"label": "SCENE LAUNCH: Scene 3",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 38.69047619047619,
+					"width": 8.3,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "scene-launch-scene-4",
+				"label": "SCENE LAUNCH: Scene 4",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 48.273809523809526,
+					"width": 8.3,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "scene-launch-scene-5",
+				"label": "SCENE LAUNCH: Scene 5",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 57.85714285714286,
+					"width": 8.3,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "scene-launch-scene-6",
+				"label": "SCENE LAUNCH: Scene 6",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 67.44047619047619,
+					"width": 8.3,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "scene-launch-scene-7",
+				"label": "SCENE LAUNCH: Scene 7",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 77.02380952380953,
+					"width": 8.3,
+					"height": 9.583333333333334
+				}
+			},
+			{
+				"id": "scene-launch-scene-8",
+				"label": "SCENE LAUNCH: Scene 8",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 86.60714285714286,
+					"width": 8.3,
+					"height": 9.583333333333334
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://userguides.novationmusic.com/hc/en-gb/articles/23731330721682-Launchpad-Mini-MK3-s-Settings-menu",
+		"https://downloads.novationmusic.com/novation/launchpad-mk3/launchpad-mini-mk3-0",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

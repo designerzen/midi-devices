@@ -1,0 +1,934 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "novation-circuit-tracks",
+	"name": "Novation Circuit Tracks",
+	"manufacturer": "Novation",
+	"manufacturerUrl": "https://novationmusic.com/",
+	"ids": [
+		"novation-circuit-tracks"
+	],
+	"portNames": [],
+	"description": "Groovebox with two synth tracks, two external MIDI tracks, four drum tracks and USB / DIN MIDI.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Hardware and connections",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/25494476280850-Circuit-Tracks-hardware-overview"
+		},
+		{
+			"title": "MIDI setup and channels",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/25494477003154-Circuit-Tracks-appendix"
+		}
+	],
+	"abilities": [
+		"Synth and drum sequencing",
+		"USB MIDI",
+		"DIN MIDI",
+		"MIDI clock",
+		"Configurable track channels"
+	],
+	"hardwareControls": [
+		"32 pads",
+		"Eight macro encoders",
+		"Eight track buttons",
+		"Master filter",
+		"Master volume"
+	],
+	"notice": "Synths default to MIDI channels 1 and 2, external MIDI tracks to 3 and 4, and all four drum tracks to 10. Connect USB MIDI or the 5-pin MIDI ports. Hold Shift and press Save for Setup View to configure channels and independently enable note, CC, program-change and clock transmission/receive. Channel 16 is reserved for project selection. Pad notes and encoder behavior depend on the current view and configuration; this profile supplies setup guidance and an unbound physical surface, with no guessed CC or pad maps. USB port aliases have not been verified; select this profile manually. Diagrams are original schematics with illustrative positions, not scaled hardware drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Novation Circuit Tracks schematic panel"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Hardware setup and documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 1000,
+		"elements": [
+			{
+				"id": "macros-macro-1",
+				"label": "MACROS: Macro 1",
+				"kind": "knob",
+				"position": {
+					"x": 11.333333333333332,
+					"y": 9.5,
+					"width": 9.666666666666666,
+					"height": 9.5
+				}
+			},
+			{
+				"id": "macros-macro-2",
+				"label": "MACROS: Macro 2",
+				"kind": "knob",
+				"position": {
+					"x": 21.0,
+					"y": 9.5,
+					"width": 9.666666666666666,
+					"height": 9.5
+				}
+			},
+			{
+				"id": "macros-macro-3",
+				"label": "MACROS: Macro 3",
+				"kind": "knob",
+				"position": {
+					"x": 30.666666666666664,
+					"y": 9.5,
+					"width": 9.666666666666666,
+					"height": 9.5
+				}
+			},
+			{
+				"id": "macros-macro-4",
+				"label": "MACROS: Macro 4",
+				"kind": "knob",
+				"position": {
+					"x": 40.33333333333333,
+					"y": 9.5,
+					"width": 9.666666666666666,
+					"height": 9.5
+				}
+			},
+			{
+				"id": "macros-macro-5",
+				"label": "MACROS: Macro 5",
+				"kind": "knob",
+				"position": {
+					"x": 50.0,
+					"y": 9.5,
+					"width": 9.666666666666666,
+					"height": 9.5
+				}
+			},
+			{
+				"id": "macros-macro-6",
+				"label": "MACROS: Macro 6",
+				"kind": "knob",
+				"position": {
+					"x": 59.66666666666667,
+					"y": 9.5,
+					"width": 9.666666666666666,
+					"height": 9.5
+				}
+			},
+			{
+				"id": "macros-macro-7",
+				"label": "MACROS: Macro 7",
+				"kind": "knob",
+				"position": {
+					"x": 69.33333333333334,
+					"y": 9.5,
+					"width": 9.666666666666666,
+					"height": 9.5
+				}
+			},
+			{
+				"id": "macros-macro-8",
+				"label": "MACROS: Macro 8",
+				"kind": "knob",
+				"position": {
+					"x": 79.0,
+					"y": 9.5,
+					"width": 9.666666666666666,
+					"height": 9.5
+				}
+			},
+			{
+				"id": "track-select-synth-1",
+				"label": "TRACK SELECT: Synth 1",
+				"kind": "button",
+				"position": {
+					"x": 11.333333333333332,
+					"y": 23.5,
+					"width": 9.666666666666666,
+					"height": 5.5
+				}
+			},
+			{
+				"id": "track-select-synth-2",
+				"label": "TRACK SELECT: Synth 2",
+				"kind": "button",
+				"position": {
+					"x": 21.0,
+					"y": 23.5,
+					"width": 9.666666666666666,
+					"height": 5.5
+				}
+			},
+			{
+				"id": "track-select-midi-1",
+				"label": "TRACK SELECT: MIDI 1",
+				"kind": "button",
+				"position": {
+					"x": 30.666666666666664,
+					"y": 23.5,
+					"width": 9.666666666666666,
+					"height": 5.5
+				}
+			},
+			{
+				"id": "track-select-midi-2",
+				"label": "TRACK SELECT: MIDI 2",
+				"kind": "button",
+				"position": {
+					"x": 40.33333333333333,
+					"y": 23.5,
+					"width": 9.666666666666666,
+					"height": 5.5
+				}
+			},
+			{
+				"id": "track-select-drum-1",
+				"label": "TRACK SELECT: Drum 1",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 23.5,
+					"width": 9.666666666666666,
+					"height": 5.5
+				}
+			},
+			{
+				"id": "track-select-drum-2",
+				"label": "TRACK SELECT: Drum 2",
+				"kind": "button",
+				"position": {
+					"x": 59.66666666666667,
+					"y": 23.5,
+					"width": 9.666666666666666,
+					"height": 5.5
+				}
+			},
+			{
+				"id": "track-select-drum-3",
+				"label": "TRACK SELECT: Drum 3",
+				"kind": "button",
+				"position": {
+					"x": 69.33333333333334,
+					"y": 23.5,
+					"width": 9.666666666666666,
+					"height": 5.5
+				}
+			},
+			{
+				"id": "track-select-drum-4",
+				"label": "TRACK SELECT: Drum 4",
+				"kind": "button",
+				"position": {
+					"x": 79.0,
+					"y": 23.5,
+					"width": 9.666666666666666,
+					"height": 5.5
+				}
+			},
+			{
+				"id": "grid-pad-1",
+				"label": "GRID: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 11.333333333333332,
+					"y": 33.5,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-2",
+				"label": "GRID: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 21.0,
+					"y": 33.5,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-3",
+				"label": "GRID: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 30.666666666666664,
+					"y": 33.5,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-4",
+				"label": "GRID: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.33333333333333,
+					"y": 33.5,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-5",
+				"label": "GRID: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 50.0,
+					"y": 33.5,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-6",
+				"label": "GRID: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 59.66666666666667,
+					"y": 33.5,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-7",
+				"label": "GRID: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 69.33333333333334,
+					"y": 33.5,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-8",
+				"label": "GRID: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 79.0,
+					"y": 33.5,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-9",
+				"label": "GRID: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 11.333333333333332,
+					"y": 48.875,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-10",
+				"label": "GRID: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 21.0,
+					"y": 48.875,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-11",
+				"label": "GRID: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 30.666666666666664,
+					"y": 48.875,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-12",
+				"label": "GRID: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 40.33333333333333,
+					"y": 48.875,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-13",
+				"label": "GRID: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 50.0,
+					"y": 48.875,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-14",
+				"label": "GRID: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 59.66666666666667,
+					"y": 48.875,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-15",
+				"label": "GRID: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 69.33333333333334,
+					"y": 48.875,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-16",
+				"label": "GRID: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 79.0,
+					"y": 48.875,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-17",
+				"label": "GRID: Pad 17",
+				"kind": "pad",
+				"position": {
+					"x": 11.333333333333332,
+					"y": 64.25,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-18",
+				"label": "GRID: Pad 18",
+				"kind": "pad",
+				"position": {
+					"x": 21.0,
+					"y": 64.25,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-19",
+				"label": "GRID: Pad 19",
+				"kind": "pad",
+				"position": {
+					"x": 30.666666666666664,
+					"y": 64.25,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-20",
+				"label": "GRID: Pad 20",
+				"kind": "pad",
+				"position": {
+					"x": 40.33333333333333,
+					"y": 64.25,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-21",
+				"label": "GRID: Pad 21",
+				"kind": "pad",
+				"position": {
+					"x": 50.0,
+					"y": 64.25,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-22",
+				"label": "GRID: Pad 22",
+				"kind": "pad",
+				"position": {
+					"x": 59.66666666666667,
+					"y": 64.25,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-23",
+				"label": "GRID: Pad 23",
+				"kind": "pad",
+				"position": {
+					"x": 69.33333333333334,
+					"y": 64.25,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-24",
+				"label": "GRID: Pad 24",
+				"kind": "pad",
+				"position": {
+					"x": 79.0,
+					"y": 64.25,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-25",
+				"label": "GRID: Pad 25",
+				"kind": "pad",
+				"position": {
+					"x": 11.333333333333332,
+					"y": 79.625,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-26",
+				"label": "GRID: Pad 26",
+				"kind": "pad",
+				"position": {
+					"x": 21.0,
+					"y": 79.625,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-27",
+				"label": "GRID: Pad 27",
+				"kind": "pad",
+				"position": {
+					"x": 30.666666666666664,
+					"y": 79.625,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-28",
+				"label": "GRID: Pad 28",
+				"kind": "pad",
+				"position": {
+					"x": 40.33333333333333,
+					"y": 79.625,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-29",
+				"label": "GRID: Pad 29",
+				"kind": "pad",
+				"position": {
+					"x": 50.0,
+					"y": 79.625,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-30",
+				"label": "GRID: Pad 30",
+				"kind": "pad",
+				"position": {
+					"x": 59.66666666666667,
+					"y": 79.625,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-31",
+				"label": "GRID: Pad 31",
+				"kind": "pad",
+				"position": {
+					"x": 69.33333333333334,
+					"y": 79.625,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "grid-pad-32",
+				"label": "GRID: Pad 32",
+				"kind": "pad",
+				"position": {
+					"x": 79.0,
+					"y": 79.625,
+					"width": 9.666666666666666,
+					"height": 15.375
+				}
+			},
+			{
+				"id": "level-master-volume",
+				"label": "LEVEL: Master Volume",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 9.5,
+					"width": 6.916666666666667,
+					"height": 9.25
+				}
+			},
+			{
+				"id": "level-master-filter",
+				"label": "LEVEL: Master Filter",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 18.75,
+					"width": 6.916666666666667,
+					"height": 9.25
+				}
+			},
+			{
+				"id": "step-views-note",
+				"label": "STEP VIEWS: Note",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 33.5,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "step-views-velocity",
+				"label": "STEP VIEWS: Velocity",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 40.33333333333333,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "step-views-gate",
+				"label": "STEP VIEWS: Gate",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 47.166666666666664,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "step-views-pattern-settings",
+				"label": "STEP VIEWS: Pattern Settings",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 54.0,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "step-views-step-page",
+				"label": "STEP VIEWS: Step Page",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 60.83333333333333,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "step-views-preset",
+				"label": "STEP VIEWS: Preset",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 67.66666666666666,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "step-views-scales",
+				"label": "STEP VIEWS: Scales",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 74.5,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "step-views-down",
+				"label": "STEP VIEWS: Down",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 81.33333333333333,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "step-views-up",
+				"label": "STEP VIEWS: Up",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 88.16666666666666,
+					"width": 6.916666666666667,
+					"height": 6.833333333333333
+				}
+			},
+			{
+				"id": "session-tempo",
+				"label": "SESSION: Tempo",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 9.5,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-swing",
+				"label": "SESSION: Swing",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 16.625,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-projects",
+				"label": "SESSION: Projects",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 23.75,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-save",
+				"label": "SESSION: Save",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 30.875000000000004,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-patterns",
+				"label": "SESSION: Patterns",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 38.0,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-mixer",
+				"label": "SESSION: Mixer",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 45.125,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-fx",
+				"label": "SESSION: FX",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 52.25,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-duplicate",
+				"label": "SESSION: Duplicate",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 59.375,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-clear",
+				"label": "SESSION: Clear",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 66.5,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-play",
+				"label": "SESSION: Play",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 73.625,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-record",
+				"label": "SESSION: Record",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 80.75,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			},
+			{
+				"id": "session-shift",
+				"label": "SESSION: Shift",
+				"kind": "button",
+				"position": {
+					"x": 90.5,
+					"y": 87.875,
+					"width": 6.916666666666667,
+					"height": 7.124999999999999
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI THRU",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Sync OUT",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio IN L",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio IN R",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT L / Mono",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "microSD",
+			"connector": "microSD card",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://userguides.novationmusic.com/hc/en-gb/articles/25494476280850-Circuit-Tracks-hardware-overview",
+		"https://userguides.novationmusic.com/hc/en-gb/articles/25494477003154-Circuit-Tracks-appendix",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

@@ -14,6 +14,30 @@ def profile(folder, identifier):
 
 
 class DeviceDiagrams(unittest.TestCase):
+    def test_launchpad_programmer_map_keeps_physical_orientation(self):
+        device = profile("novation/launchpad-x", "novation-launchpad-x")
+        controls = {c["id"]: c for c in device["controls"]}
+        pads = [e for e in device["surface"]["elements"] if e["kind"] == "pad"]
+        self.assertEqual(len(pads), 64)
+        notes = [controls[p["control"]]["message"]["number"] for p in pads]
+        self.assertEqual(notes[:8], list(range(81, 89)))
+        self.assertEqual(notes[-8:], list(range(11, 19)))
+        self.assertEqual(len(set(notes)), 64)
+        self.assertTrue(all(controls[p["control"]]["message"]["channel"] == 1 for p in pads))
+        cc = {c["message"]["number"] for c in controls.values() if c["message"]["type"] == "cc"}
+        self.assertEqual(cc, set(range(91, 99)) | set(range(19, 90, 10)))
+
+    def test_configurable_surfaces_do_not_inherit_other_models_mappings(self):
+        for model, count in [("launchpad-mini-mk3", 64), ("circuit-tracks", 32), ("circuit-rhythm", 32)]:
+            device = profile("novation/" + model, "novation-" + model)
+            pads = [e for e in device["surface"]["elements"] if e["kind"] == "pad"]
+            self.assertEqual(len(pads), count)
+            self.assertTrue(all("control" not in p and "message" not in p for p in pads))
+            self.assertEqual(device["portNames"], [])
+        device = profile("arturia/keystep-37", "arturia-keystep-37")
+        self.assertEqual(len([e for e in device["surface"]["elements"] if e["kind"] == "key"]), 37)
+        self.assertTrue(all("cc" not in c for c in device["controls"]))
+
     def test_svg_documents_and_local_references(self):
         for file in (ROOT / "devices").glob("*/*/*.svg"):
             with self.subTest(file=file):
