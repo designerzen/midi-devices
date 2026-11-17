@@ -245,8 +245,10 @@ def main():
             render_existing_surface(profile,folder)
             spec={"ports":profile.get("connections",[]),"groups":[],"references":profile.get("diagramSources",[])}
         if spec["ports"] or identifier in LAYOUTS:render_connections(spec,profile,folder)
-        if spec.get("iconFromPanel") or not (folder/"icon.svg").exists():
-            (folder/"icon.svg").write_text((folder/"panel.svg").read_text(encoding="utf-8"),encoding="utf-8",newline="\n")
+        # Device icon URLs stay stable, but their artwork is the manufacturer's logo.
+        logo=folder.parent/"logo.svg"
+        if logo.exists():
+            (folder/"icon.svg").write_bytes(logo.read_bytes())
         profile["diagrams"]={"panel":"panel.svg","connections":"connections.svg","interface":"interface.svg"}
         profile["connections"]=spec["ports"]
         profile["diagramSources"]=list(dict.fromkeys(spec["references"]+[SOURCE]))

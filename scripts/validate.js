@@ -12,6 +12,12 @@ const entries = await createMidiDeviceStore(() => [MIDI_DEVICE_DIRECTORY]).entri
 
 for (const { id, path: folder } of entries) {
 	const profile = read(`${folder}/${id}.json`)
+	const logo = path.join(MIDI_DEVICE_DIRECTORY, folder.split("/")[0], "logo.svg")
+	const icon = path.join(MIDI_DEVICE_DIRECTORY, folder, profile.icon ?? "icon.svg")
+	if (!existsSync(logo)) errors.push(`${folder}: missing manufacturer logo.svg`)
+	else if (existsSync(icon) && !readFileSync(icon).equals(readFileSync(logo))) {
+		errors.push(`${folder}: icon must match manufacturer logo.svg`)
+	}
 	if (!profile.diagrams) errors.push(`${folder}: missing panel, connections and interface diagrams`)
 	if (!validate(profile)) {
 		errors.push(...validate.errors.map((error) => `${folder}/${id}.json${error.instancePath} ${error.message}`))
@@ -49,8 +55,9 @@ for (const { id, path: folder } of entries) {
 // A JSON file whose id does not match its filename is silently skipped by the loader.
 for (const manufacturer of readdirSync(MIDI_DEVICE_DIRECTORY, { withFileTypes: true })) {
 	if (!manufacturer.isDirectory()) continue
-	for (const model of readdirSync(path.join(MIDI_DEVICE_DIRECTORY, manufacturer.name))) {
-		const folder = `${manufacturer.name}/${model}`
+	for (const model of readdirSync(path.join(MIDI_DEVICE_DIRECTORY, manufacturer.name), { withFileTypes: true })) {
+		if (!model.isDirectory()) continue
+		const folder = `${manufacturer.name}/${model.name}`
 		if (!entries.some((entry) => entry.path === folder)) {
 			errors.push(`${folder}: no profile JSON whose id matches its filename`)
 		}

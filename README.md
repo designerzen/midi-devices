@@ -18,13 +18,16 @@ Device diagrams use the [NYU SynthAccess tactile symbol vocabulary](https://gith
 devices/
   index.json                      [{ "id": "akai-mpk-mini-mk3", "path": "akai/mpk-mini-mk3" }, …]
   profile.schema.json             JSON Schema (draft 2020-12) for every profile
+  <manufacturer>/logo.svg          manufacturer logo shared by its devices
   <manufacturer>/<model>/
     <id>.json                     the device profile
-    icon.svg                      small device icon
+    icon.svg                      copy of the manufacturer logo (stable device asset URL)
     panel.svg                     panel diagram; surface elements are positioned over it
 ```
 
 The `id` inside each profile must match its filename. Asset paths inside a profile are relative to its folder.
+
+Icons use manufacturer brand artwork, with sources recorded in [resources/manufacturer-logos.json](resources/manufacturer-logos.json). Raster-only sources are traced into SVG paths. Manufacturer logos remain the property of their respective owners. The diagram generator copies each manufacturer's `logo.svg` to its device icons.
 
 ## API
 
