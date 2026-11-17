@@ -170,6 +170,8 @@
 				}
 				if (icon) assets.append(link("Icon", icon))
 				assets.append(link("Profile JSON", new URL(`${id}.json`, folder).href))
+				assets.append(link("API JSON", `api/v1/devices/${encodeURIComponent(id)}.json`))
+				assets.append(link("API XML", `api/v1/devices/${encodeURIComponent(id)}.xml`))
 				card.append(assets)
 				list(card, "Capabilities", profile.abilities)
 				const details = element("details")

@@ -1,7 +1,8 @@
-// Generates the static JSON API served from GitHub Pages under api/v1/.
+// Generates the static JSON and XML API served under api/v1/.
 import { readFileSync } from "node:fs"
 import { mkdir, writeFile } from "node:fs/promises"
 import path from "node:path"
+import { toXml } from "./xml.js"
 
 export const API_VERSION = "v1"
 
@@ -20,7 +21,10 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 	await mkdir(path.join(out, "devices"), { recursive: true })
 	await mkdir(path.join(out, "manufacturers"), { recursive: true })
 	await mkdir(path.join(out, "midi"), { recursive: true })
-	const write = (file, data) => writeFile(path.join(out, file), JSON.stringify(data, null, "\t") + "\n")
+	const write = async (file, data) => {
+		await writeFile(path.join(out, file), JSON.stringify(data, null, "\t") + "\n")
+		await writeFile(path.join(out, file.replace(/\.json$/, ".xml")), toXml(data))
+	}
 	const meta = { apiVersion: API_VERSION, dataVersion: version, generated: new Date().toISOString() }
 
 	const devices = entries.map(({ id, path: folder }) => {
@@ -33,6 +37,7 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 			manufacturerId: folder.split("/")[0],
 			links: {
 				self: `${api}devices/${id}.json`,
+				xml: `${api}devices/${id}.xml`,
 				profile: `${base}${id}.json`,
 				base,
 				icon: `${base}${profile.icon ?? "icon.svg"}`,

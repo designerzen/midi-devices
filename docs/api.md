@@ -1,12 +1,12 @@
 # API reference
 
-The catalogue is a static, read-only collection of JSON files. No account or API key is required. It describes hardware; it does not open MIDI ports, send MIDI messages, or provide a MIDI driver.
+The catalogue is a static, read-only collection of JSON and XML files generated at build time. Every device has its own URL in both formats. No account or API key is required. It describes hardware; it does not open MIDI ports, send MIDI messages, or provide a MIDI driver.
 
 Base URL: `https://designerzen.github.io/midi-devices/api/v1/`
 
 ## Endpoints and response shapes
 
-Use GET requests. There is no server-side search, pagination, filtering, or write endpoint. Query parameters do not filter the catalogue.
+Use GET requests. Every `.json` endpoint below also has an equivalent `.xml` URL. Static hosts serve these files directly; query parameters do not filter static files. For a single endpoint that selects a device with an `id` query parameter, use the optional Node host described below.
 
 | Path relative to the base | JSON response |
 | --- | --- |
@@ -22,7 +22,7 @@ Metadata means `apiVersion` (`"v1"`), `dataVersion` (package version), and `gene
 
 A summary contains `id`, `name`, `manufacturer`, `manufacturerId`, `description`, `abilities`, `ids`, `portNames`, and `links`, when supplied by the profile. Full profiles additionally contain control mappings, setup notices, documentation, GUI layout, and panel geometry. See [the profile guide](profiles.md).
 
-Device links include `self` (API JSON), `profile` (raw profile), `base` (asset directory), `icon`, `panel`, `manufacturer`, and `catalogue`. Generated `links` are absolute URLs. Fields within the original profile, including `icon`, `surface.src`, and GUI image `src`, remain relative:
+Device links include `self` (API JSON), `xml` (API XML), `profile` (raw JSON profile), `base` (asset directory), `icon`, `panel`, `manufacturer`, and `catalogue`. Generated `links` are absolute URLs. Fields within the original profile, including `icon`, `surface.src`, and GUI image `src`, remain relative:
 
 ```js
 const base = "https://designerzen.github.io/midi-devices/api/v1/"
@@ -33,6 +33,33 @@ const panelUrl = new URL(device.surface.src, device.links.base).href
 ```
 
 Unknown paths normally return the static host's HTTP 404 page, which may be HTML. Always check `response.ok` before parsing JSON. HTTP headers, caching, and CORS are controlled by your static host; the JSON generator does not configure them. Breaking API shape changes will use a new version directory.
+
+## XML format
+
+For example, fetch `devices/korg-minilogue.xml` for the same device data as `devices/korg-minilogue.json`. XML uses a `<response>` root, object properties as `<field key="…">`, and array entries as `<item>`. Every element has a `type` attribute (`object`, `array`, `string`, `number`, `boolean`, or `null`). This preserves numeric mapping keys, empty arrays and objects, nulls, and primitive types. Text and keys are XML-escaped. Links inside XML contain the same values as JSON, including the explicit `links.xml` device URL.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<response type="object"><field type="string" key="id">korg-minilogue</field></response>
+```
+
+This example shows only the ID field; actual responses contain the complete profile.
+
+## Single-device query endpoint
+
+Run `npm start` to build the files and start the optional Node API host (Node 22 or later). It reads the requested prebuilt file without loading or filtering the full catalogue:
+
+```text
+http://127.0.0.1:3000/api/v1/device?id=korg-minilogue
+http://127.0.0.1:3000/api/v1/device?id=korg-minilogue&format=json
+http://127.0.0.1:3000/api/v1/device?id=korg-minilogue&format=xml
+```
+
+Exactly one canonical device `id` is required. JSON is the default; `format` accepts `json` or `xml`. A successful response contains only that device, with the same bytes as its static file. Missing, malformed, or repeated IDs and unsupported formats return 400; unknown devices return 404. Errors use the selected format, except unsupported formats return JSON. GET and HEAD are supported; other methods return 405. The host also serves the static `/api/v1/` JSON and XML URLs and allows cross-origin reads.
+
+Configure `PORT` (default `3000`) and `HOST` (default `127.0.0.1`) for your deployment. Set `SITE_URL` before building to make profile links point to the static site containing the assets. The Node host serves API data only. After changing profiles, rebuild with `npm run build`. To serve an existing build, run `node scripts/server.js`.
+
+GitHub Pages hosts the unique static URLs in both formats. It cannot execute the query endpoint; deploy the Node host separately if you need that endpoint.
 
 ## Identifier matching
 

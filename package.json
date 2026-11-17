@@ -17,7 +17,8 @@
 		"diagrams": "python scripts/generate-diagrams.py",
 		"build": "node scripts/build.js",
 		"validate": "node scripts/validate.js",
-		"test": "npm run validate",
+		"test": "npm run validate && node --test",
+		"start": "npm run build && node scripts/server.js",
 		"preview": "npm run build && npx --yes serve dist"
 	},
 	"devDependencies": {
