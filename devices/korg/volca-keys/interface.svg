@@ -1,273 +1,256 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
 <title id="title">Korg volca keys labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1200" height="720" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1182" height="702" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<rect x="0" y="0" width="1200" height="720" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1182" height="702" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
 <text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Korg volca keys</text>
 <text x="1175" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="60" width="1150" height="65" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="60" width="1150" height="65" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="32" y="74" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">TOP CONNECTIONS</text>
-<g id="top-connections-dc-9v" data-kind="jack" aria-label="DC 9V"><title>DC 9V</title>
-<circle cx="144.8" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="144.8" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="144.8" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">DC 9V</text>
+<g id="top-connections-dc-9v" data-kind="input" aria-label="DC 9V"><title>DC 9V</title>
+<svg data-symbol="input" x="137.800" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="144.8" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">DC 9V</text>
 </g>
-<g id="top-connections-midi-in" data-kind="jack" aria-label="MIDI IN"><title>MIDI IN</title>
-<circle cx="372.4" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="372.4" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="372.4" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">MIDI IN</text>
+<g id="top-connections-midi-in" data-kind="input" aria-label="MIDI IN"><title>MIDI IN</title>
+<svg data-symbol="input" x="365.400" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="372.4" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">MIDI IN</text>
 </g>
-<g id="top-connections-sync-in" data-kind="jack" aria-label="Sync IN"><title>Sync IN</title>
-<circle cx="600" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="600" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="600" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sync IN</text>
+<g id="top-connections-sync-in" data-kind="input" aria-label="Sync IN"><title>Sync IN</title>
+<svg data-symbol="input" x="593.000" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="600" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Sync IN</text>
 </g>
-<g id="top-connections-sync-out" data-kind="jack" aria-label="Sync OUT"><title>Sync OUT</title>
-<circle cx="827.6" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="827.6" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="827.6" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sync OUT</text>
+<g id="top-connections-sync-out" data-kind="output" aria-label="Sync OUT"><title>Sync OUT</title>
+<svg data-symbol="output" x="820.600" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="827.6" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Sync OUT</text>
 </g>
-<g id="top-connections-headphones" data-kind="jack" aria-label="Headphones"><title>Headphones</title>
-<circle cx="1055.2" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1055.2" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="1055.2" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Headphones</text>
+<g id="top-connections-headphones" data-kind="output" aria-label="Headphones"><title>Headphones</title>
+<svg data-symbol="output" x="1048.200" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="1055.2" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Headphones</text>
 </g>
-<rect x="25" y="130" width="170" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="130" width="170" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="32" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MASTER</text>
 <g id="master-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="70.5" cy="207.118" r="19.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M70.5 190.368L70.5 200.206" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="46.500" y="183.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="70.5" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Volume</text>
 </g>
 <g id="master-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="149.5" cy="207.118" r="19.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M149.5 190.368L149.5 200.206" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="125.500" y="183.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="149.5" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tempo</text>
 </g>
 <g id="master-memory" data-kind="button" aria-label="Memory"><title>Memory</title>
-<rect x="55.5" y="303.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="46.500" y="294.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="70.5" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Memory</text>
 </g>
 <g id="master-play" data-kind="button" aria-label="Play"><title>Play</title>
-<rect x="134.5" y="303.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="125.500" y="294.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="149.5" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Play</text>
 </g>
 <g id="master-record" data-kind="button" aria-label="Record"><title>Record</title>
-<rect x="55.5" y="415.452" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="46.500" y="406.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="70.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Record</text>
 </g>
 <g id="master-function" data-kind="button" aria-label="Function"><title>Function</title>
-<rect x="134.5" y="415.452" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="125.500" y="406.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="149.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function</text>
 </g>
-<rect x="210" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="210" y="130" width="184" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="217" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VCO</text>
 <g id="vco-voice" data-kind="knob" aria-label="Voice" data-control="vco-voice-knob"><title>Voice</title>
-<circle cx="259" cy="235.035" r="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M259 216.535L259 227.51" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="235.000" y="211.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="259" y="323.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Voice</text>
 </g>
 <g id="vco-octave" data-kind="knob" aria-label="Octave" data-control="vco-octave-knob"><title>Octave</title>
-<circle cx="345" cy="235.035" r="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M345 216.535L345 227.51" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="321.000" y="211.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="345" y="323.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Octave</text>
 </g>
 <g id="vco-detune" data-kind="knob" aria-label="Detune" data-control="vco-detune-knob"><title>Detune</title>
-<circle cx="259" cy="402.535" r="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M259 384.035L259 395.01" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="235.000" y="378.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="259" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Detune</text>
 </g>
 <g id="vco-eg-intensity" data-kind="knob" aria-label="EG intensity" data-control="vco-eg-intensity-knob"><title>EG intensity</title>
-<circle cx="345" cy="402.535" r="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M345 384.035L345 395.01" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="321.000" y="378.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="345" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG intensity</text>
 </g>
-<rect x="404" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="404" y="130" width="184" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="411" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VCF</text>
 <g id="vcf-cutoff" data-kind="knob" aria-label="Cutoff" data-control="vcf-cutoff-knob"><title>Cutoff</title>
-<circle cx="496" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M496 185.118L496 198.368" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="472.000" y="183.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="496" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Cutoff</text>
 </g>
 <g id="vcf-peak" data-kind="knob" aria-label="Peak"><title>Peak</title>
-<circle cx="496" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M496 296.785L496 310.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="472.000" y="294.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="496" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Peak</text>
 </g>
 <g id="vcf-eg-intensity" data-kind="knob" aria-label="EG intensity" data-control="vcf-eg-intensity-knob"><title>EG intensity</title>
-<circle cx="496" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M496 408.452L496 421.702" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="472.000" y="406.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="496" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG intensity</text>
 </g>
-<rect x="598" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="598" y="130" width="184" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="605" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
 <g id="lfo-rate" data-kind="knob" aria-label="Rate" data-control="lfo-rate-knob"><title>Rate</title>
-<circle cx="690" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M690 185.118L690 198.368" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="666.000" y="183.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="690" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Rate</text>
 </g>
 <g id="lfo-pitch-intensity" data-kind="knob" aria-label="Pitch intensity" data-control="lfo-pitch-intensity-knob"><title>Pitch intensity</title>
-<circle cx="690" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M690 296.785L690 310.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="666.000" y="294.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="690" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pitch intensity</text>
 </g>
 <g id="lfo-cutoff-intensity" data-kind="knob" aria-label="Cutoff intensity" data-control="lfo-cutoff-intensity-knob"><title>Cutoff intensity</title>
-<circle cx="690" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M690 408.452L690 421.702" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="666.000" y="406.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="690" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Cutoff intensity</text>
 </g>
-<rect x="792" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="792" y="130" width="184" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="799" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
 <g id="envelope-attack" data-kind="knob" aria-label="Attack" data-control="envelope-attack-knob"><title>Attack</title>
-<circle cx="884" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M884 185.118L884 198.368" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="860.000" y="183.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="884" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Attack</text>
 </g>
 <g id="envelope-decay-release" data-kind="knob" aria-label="Decay Release" data-control="envelope-decay-release-knob"><title>Decay Release</title>
-<circle cx="884" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M884 296.785L884 310.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="860.000" y="294.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="884" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Decay Release</text>
 </g>
 <g id="envelope-sustain" data-kind="knob" aria-label="Sustain" data-control="envelope-sustain-knob"><title>Sustain</title>
-<circle cx="884" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M884 408.452L884 421.702" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="860.000" y="406.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="884" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sustain</text>
 </g>
-<rect x="986" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="986" y="130" width="184" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="993" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">DELAY</text>
 <g id="delay-time" data-kind="knob" aria-label="Time" data-control="delay-time-knob"><title>Time</title>
-<circle cx="1078" cy="235.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1078 213.035L1078 226.285" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1054.000" y="211.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="1078" y="323.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Time</text>
 </g>
 <g id="delay-feedback" data-kind="knob" aria-label="Feedback" data-control="delay-feedback-knob"><title>Feedback</title>
-<circle cx="1078" cy="402.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1078 380.535L1078 393.785" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1054.000" y="378.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="1078" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Feedback</text>
 </g>
 <g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
 <g id="key-1" data-kind="key" aria-label="Touch plate 1"><title>Touch plate 1</title>
-<rect x="25" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="25" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M60.938 537L60.938 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="60.938" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">1</text>
 </g>
 <g id="key-3" data-kind="key" aria-label="Touch plate 3"><title>Touch plate 3</title>
-<rect x="96.875" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="96.875" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M132.812 537L132.812 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="132.812" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">3</text>
 </g>
 <g id="key-5" data-kind="key" aria-label="Touch plate 5"><title>Touch plate 5</title>
-<rect x="168.75" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="168.75" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M204.688 537L204.688 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="204.688" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">5</text>
 </g>
 <g id="key-6" data-kind="key" aria-label="Touch plate 6"><title>Touch plate 6</title>
-<rect x="240.625" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="240.625" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M276.562 537L276.562 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="276.562" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">6</text>
 </g>
 <g id="key-8" data-kind="key" aria-label="Touch plate 8"><title>Touch plate 8</title>
-<rect x="312.5" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="312.5" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M348.438 537L348.438 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="348.438" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">8</text>
 </g>
 <g id="key-10" data-kind="key" aria-label="Touch plate 10"><title>Touch plate 10</title>
-<rect x="384.375" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="384.375" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M420.312 537L420.312 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="420.312" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">10</text>
 </g>
 <g id="key-12" data-kind="key" aria-label="Touch plate 12"><title>Touch plate 12</title>
-<rect x="456.25" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="456.25" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M492.188 537L492.188 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="492.188" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">12</text>
 </g>
 <g id="key-13" data-kind="key" aria-label="Touch plate 13"><title>Touch plate 13</title>
-<rect x="528.125" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="528.125" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M564.062 537L564.062 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="564.062" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">13</text>
 </g>
 <g id="key-15" data-kind="key" aria-label="Touch plate 15"><title>Touch plate 15</title>
-<rect x="600" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="600" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M635.938 537L635.938 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="635.938" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">15</text>
 </g>
 <g id="key-17" data-kind="key" aria-label="Touch plate 17"><title>Touch plate 17</title>
-<rect x="671.875" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="671.875" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M707.812 537L707.812 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="707.812" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">17</text>
 </g>
 <g id="key-18" data-kind="key" aria-label="Touch plate 18"><title>Touch plate 18</title>
-<rect x="743.75" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="743.75" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M779.688 537L779.688 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="779.688" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">18</text>
 </g>
 <g id="key-20" data-kind="key" aria-label="Touch plate 20"><title>Touch plate 20</title>
-<rect x="815.625" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="815.625" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M851.562 537L851.562 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="851.562" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">20</text>
 </g>
 <g id="key-22" data-kind="key" aria-label="Touch plate 22"><title>Touch plate 22</title>
-<rect x="887.5" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="887.5" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M923.438 537L923.438 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="923.438" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">22</text>
 </g>
 <g id="key-24" data-kind="key" aria-label="Touch plate 24"><title>Touch plate 24</title>
-<rect x="959.375" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="959.375" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M995.312 537L995.312 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="995.312" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">24</text>
 </g>
 <g id="key-25" data-kind="key" aria-label="Touch plate 25"><title>Touch plate 25</title>
-<rect x="1031.25" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1031.25" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M1067.188 537L1067.188 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="1067.188" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">25</text>
 </g>
 <g id="key-27" data-kind="key" aria-label="Touch plate 27"><title>Touch plate 27</title>
-<rect x="1103.125" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1103.125" y="525" width="71.875" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M1139.062 537L1139.062 653" fill="none" stroke="#000" stroke-width="1"/>
 <text x="1139.062" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">27</text>
 </g>
 <g id="key-2" data-kind="key" aria-label="Touch plate 2"><title>Touch plate 2</title>
-<rect x="74.594" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="74.594" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M96.875 537L96.875 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-4" data-kind="key" aria-label="Touch plate 4"><title>Touch plate 4</title>
-<rect x="146.469" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="146.469" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M168.75 537L168.75 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-7" data-kind="key" aria-label="Touch plate 7"><title>Touch plate 7</title>
-<rect x="290.219" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="290.219" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M312.5 537L312.5 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-9" data-kind="key" aria-label="Touch plate 9"><title>Touch plate 9</title>
-<rect x="362.094" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="362.094" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M384.375 537L384.375 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-11" data-kind="key" aria-label="Touch plate 11"><title>Touch plate 11</title>
-<rect x="433.969" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="433.969" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M456.25 537L456.25 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-14" data-kind="key" aria-label="Touch plate 14"><title>Touch plate 14</title>
-<rect x="577.719" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="577.719" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M600 537L600 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-16" data-kind="key" aria-label="Touch plate 16"><title>Touch plate 16</title>
-<rect x="649.594" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="649.594" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M671.875 537L671.875 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-19" data-kind="key" aria-label="Touch plate 19"><title>Touch plate 19</title>
-<rect x="793.344" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="793.344" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M815.625 537L815.625 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-21" data-kind="key" aria-label="Touch plate 21"><title>Touch plate 21</title>
-<rect x="865.219" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="865.219" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M887.5 537L887.5 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-23" data-kind="key" aria-label="Touch plate 23"><title>Touch plate 23</title>
-<rect x="937.094" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="937.094" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M959.375 537L959.375 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="key-26" data-kind="key" aria-label="Touch plate 26"><title>Touch plate 26</title>
-<rect x="1080.844" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1080.844" y="525" width="44.562" height="85.4" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 <path d="M1103.125 537L1103.125 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 </g>

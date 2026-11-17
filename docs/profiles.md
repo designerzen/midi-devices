@@ -31,6 +31,10 @@ Surface positions are percentages of the image width and height, measured from i
 
 ## Adding a device or manufacturer
 
+`python scripts/generate-diagrams.py` applies the [NYU SynthAccess tactile symbol vocabulary](https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides) to device layouts. Hollow hexagons identify inputs, striped hexagons outputs, dotted squares bidirectional jacks, and striped rings knobs. Buttons, two/three-way switches and slider tracks retain distinct shapes. These are original monochrome schematic drawings; upstream PDF artwork and braille are not embedded, and the layouts are not certified tactile print masters. New source inventories belong to the exact MIDI-capable model, with manufacturer documentation verifying any model-specific additions and MIDI assignments.
+
+Surface `kind` preserves physical types such as `switch`, `switch3`, `input`, `output`, `bidirectional`, `jack`, `power`, `wheel`, `joystick`, `screen` and `horizontal-strip`, as well as the original key/pad/button/knob/fader types. Consumers should provide an unbound display fallback for unfamiliar kinds. A physical surface element only has a MIDI binding when its `control` or `message` field supplies one. Existing partial profiles without detailed layout inventories retain their documented virtual surfaces.
+
 1. Consult the manufacturer's manual and MIDI implementation chart. Add direct source links to `documentation`; record firmware, mode, and configurable assignments in `notice` when relevant.
 2. Create `devices/<manufacturer>/<model>/<id>.json` plus `icon.svg` and `panel.svg`. Use lowercase kebab-case. A new manufacturer needs no separate registration: its folder and profile metadata create the manufacturer API entry at build time.
 3. Set `$schema` to `../../profile.schema.json`, `schemaVersion` to `1`, and `id` to the filename without `.json`. Include manufacturer metadata, useful setup notes, controls, and a GUI tree.

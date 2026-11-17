@@ -1,354 +1,312 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="img" aria-labelledby="title description">
 <title id="title">Roland n/vision labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="680" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="662" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<rect x="0" y="0" width="1500" height="680" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1482" height="662" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
 <text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland n/vision</text>
 <text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="148.1" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="65" width="148.1" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
 <g id="lfo-amp" data-kind="knob" aria-label="Amp"><title>Amp</title>
-<circle cx="44.61" cy="268.545" r="6.805" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M44.61 264.74L44.61 266.163" fill="none" stroke="#000" stroke-width="1"/>
-<text x="44.61" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Amp</text>
+<svg data-symbol="knob" x="36.000" y="261.065" width="17.220" height="17.220" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="44.61" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Amp</text>
 </g>
 <g id="lfo-delay" data-kind="knob" aria-label="Delay" data-control="lfo-delay-knob"><title>Delay</title>
-<circle cx="71.83" cy="268.545" r="6.805" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M71.83 264.74L71.83 266.163" fill="none" stroke="#000" stroke-width="1"/>
-<text x="71.83" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Delay</text>
+<svg data-symbol="knob" x="63.220" y="261.065" width="17.220" height="17.220" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="71.83" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Delay</text>
 </g>
 <g id="lfo-wave" data-kind="knob" aria-label="Wave" data-control="lfo-wave-knob"><title>Wave</title>
-<circle cx="99.05" cy="268.545" r="6.805" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M99.05 264.74L99.05 266.163" fill="none" stroke="#000" stroke-width="1"/>
-<text x="99.05" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Wave</text>
+<svg data-symbol="knob" x="90.440" y="261.065" width="17.220" height="17.220" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="99.05" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Wave</text>
 </g>
 <g id="lfo-rate" data-kind="fader" aria-label="Rate" data-control="lfo-rate-fader"><title>Rate</title>
-<rect x="123.276" y="100" width="5.988" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1.9961287642782972"/>
-<rect x="120.281" y="258.723" width="11.977" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="126.27" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Rate</text>
+<rect data-symbol="fader" x="124.572" y="100.000" width="3.395" height="339.350" rx="1.698" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="126.27" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Rate</text>
 </g>
 <g id="lfo-key-trigger" data-kind="switch" aria-label="Key trigger" data-control="lfo-key-trigger-switch"><title>Key trigger</title>
-<rect x="148.49" y="248.635" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="144.49" y="256.635" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="153.49" y="435.18" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Key t</text>
-<text x="153.49" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">rigge</text>
-<text x="153.49" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">r</text>
+<svg data-symbol="switch" x="144.880" y="258.240" width="17.220" height="17.220" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="153.49" y="445.35" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Key</text>
+<text x="153.49" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">trigger</text>
 </g>
-<rect x="183.1" y="65" width="211.34" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="183.1" y="65" width="211.34" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="190.1" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">POSITION</text>
 <g id="position-lfo" data-kind="fader" aria-label="LFO" data-control="position-lfo-fader"><title>LFO</title>
-<rect x="208.535" y="100" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="203.053" y="172.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="214.017" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">LFO</text>
+<rect data-symbol="fader" x="210.510" y="100.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="214.017" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">LFO</text>
 </g>
 <g id="position-lfo-polarity" data-kind="button" aria-label="LFO polarity"><title>LFO polarity</title>
-<rect x="248.852" y="159.59" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="263.852" y="263.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">LFO</text>
-<text x="263.852" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">polarity</text>
+<svg data-symbol="button" x="243.935" y="154.699" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<text x="263.852" y="263.116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">LFO</text>
+<text x="263.852" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">polarity</text>
 </g>
 <g id="position-random" data-kind="knob" aria-label="Random" data-control="position-random-knob"><title>Random</title>
-<circle cx="313.687" cy="178.545" r="12.459" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M313.687 169.086L313.687 174.184" fill="none" stroke="#000" stroke-width="1"/>
-<text x="313.687" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Random</text>
+<svg data-symbol="knob" x="293.769" y="158.641" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="313.687" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Random</text>
 </g>
 <g id="position-spread" data-kind="knob" aria-label="Spread" data-control="position-spread-knob"><title>Spread</title>
-<circle cx="363.522" cy="178.545" r="12.459" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M363.522 169.086L363.522 174.184" fill="none" stroke="#000" stroke-width="1"/>
-<text x="363.522" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Spread</text>
+<svg data-symbol="knob" x="343.604" y="158.641" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="363.522" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Spread</text>
 </g>
 <g id="position-position" data-kind="fader" aria-label="Position" data-control="position-position-fader"><title>Position</title>
-<rect x="208.535" y="280" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="203.053" y="352.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="214.017" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Position</text>
+<rect data-symbol="fader" x="210.510" y="280.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="214.017" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Position</text>
 </g>
 <g id="position-env" data-kind="fader" aria-label="Env" data-control="position-env-fader"><title>Env</title>
-<rect x="258.37" y="280" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="252.888" y="352.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="263.852" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Env</text>
+<rect data-symbol="fader" x="260.345" y="280.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="263.852" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Env</text>
 </g>
 <g id="position-env-polarity" data-kind="button" aria-label="Env polarity"><title>Env polarity</title>
-<rect x="298.687" y="339.59" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="313.687" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Env</text>
-<text x="313.687" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">polarity</text>
+<svg data-symbol="button" x="293.769" y="334.699" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<text x="313.687" y="443.116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Env</text>
+<text x="313.687" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">polarity</text>
 </g>
-<rect x="404.439" y="65" width="211.34" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="404.439" y="65" width="211.34" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="411.439" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">OSCILLATOR</text>
 <g id="oscillator-layer-1-wave" data-kind="knob" aria-label="Layer 1 wave"><title>Layer 1 wave</title>
-<circle cx="435.357" cy="174.59" r="12.459" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M435.357 165.131L435.357 170.229" fill="none" stroke="#000" stroke-width="1"/>
-<text x="435.357" y="263.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Layer 1</text>
-<text x="435.357" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">wave</text>
+<svg data-symbol="knob" x="415.439" y="154.699" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="435.357" y="263.116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Layer 1</text>
+<text x="435.357" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">wave</text>
 </g>
 <g id="oscillator-range" data-kind="fader" aria-label="Range" data-control="oscillator-range-switch"><title>Range</title>
-<rect x="479.71" y="100" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="474.228" y="172.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="485.192" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Range</text>
+<rect data-symbol="fader" x="481.685" y="100.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="485.192" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Range</text>
 </g>
 <g id="oscillator-layer-2-wave" data-kind="knob" aria-label="Layer 2 wave"><title>Layer 2 wave</title>
-<circle cx="535.026" cy="174.59" r="12.459" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M535.026 165.131L535.026 170.229" fill="none" stroke="#000" stroke-width="1"/>
-<text x="535.026" y="263.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Layer 2</text>
-<text x="535.026" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">wave</text>
+<svg data-symbol="knob" x="515.109" y="154.699" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="535.026" y="263.116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Layer 2</text>
+<text x="535.026" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">wave</text>
 </g>
 <g id="oscillator-layer-2-octave" data-kind="fader" aria-label="Layer 2 octave" data-control="oscillator-layer-2-octave-switch"><title>Layer 2 octave</title>
-<rect x="579.38" y="100" width="10.964" height="145.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="573.898" y="168.526" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="584.861" y="263.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Layer 2</text>
-<text x="584.861" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">octave</text>
+<rect data-symbol="fader" x="581.355" y="100.000" width="7.014" height="149.232" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="584.861" y="263.116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Layer 2</text>
+<text x="584.861" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">octave</text>
 </g>
 <g id="oscillator-layer-mix" data-kind="fader" aria-label="Layer mix" data-control="oscillator-layer-mix-fader"><title>Layer mix</title>
-<rect x="429.875" y="280" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="424.393" y="352.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="435.357" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Layer mix</text>
+<rect data-symbol="fader" x="431.850" y="280.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="435.357" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Layer mix</text>
 </g>
 <g id="oscillator-mix-env" data-kind="knob" aria-label="Mix env" data-control="oscillator-mix-env-knob"><title>Mix env</title>
-<circle cx="485.192" cy="358.545" r="12.459" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M485.192 349.086L485.192 354.184" fill="none" stroke="#000" stroke-width="1"/>
-<text x="485.192" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Mix env</text>
+<svg data-symbol="knob" x="465.274" y="338.641" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="485.192" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Mix env</text>
 </g>
 <g id="oscillator-mix-lfo" data-kind="knob" aria-label="Mix LFO" data-control="oscillator-mix-lfo-knob"><title>Mix LFO</title>
-<circle cx="535.026" cy="358.545" r="12.459" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M535.026 349.086L535.026 354.184" fill="none" stroke="#000" stroke-width="1"/>
-<text x="535.026" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Mix LFO</text>
+<svg data-symbol="knob" x="515.109" y="338.641" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="535.026" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Mix LFO</text>
 </g>
-<rect x="625.779" y="65" width="116.48" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="625.779" y="65" width="116.48" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="632.779" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">WAVESHAPER</text>
 <g id="waveshaper-pitch-lfo" data-kind="knob" aria-label="Pitch LFO" data-control="waveshaper-pitch-lfo-knob"><title>Pitch LFO</title>
-<circle cx="644.839" cy="264.59" r="6.53" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M644.839 261.06L644.839 262.305" fill="none" stroke="#000" stroke-width="1"/>
-<text x="644.839" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Pitch</text>
-<text x="644.839" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">LFO</text>
+<svg data-symbol="knob" x="636.779" y="258.790" width="16.120" height="16.120" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="644.839" y="445.35" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Pitch</text>
+<text x="644.839" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">LFO</text>
 </g>
 <g id="waveshaper-lfo" data-kind="knob" aria-label="LFO" data-control="waveshaper-lfo-knob"><title>LFO</title>
-<circle cx="670.959" cy="268.545" r="6.53" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M670.959 265.015L670.959 266.26" fill="none" stroke="#000" stroke-width="1"/>
-<text x="670.959" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">LFO</text>
+<svg data-symbol="knob" x="662.899" y="261.615" width="16.120" height="16.120" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="670.959" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">LFO</text>
 </g>
 <g id="waveshaper-shape" data-kind="knob" aria-label="Shape" data-control="waveshaper-shape-knob"><title>Shape</title>
-<circle cx="697.079" cy="268.545" r="6.53" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M697.079 265.015L697.079 266.26" fill="none" stroke="#000" stroke-width="1"/>
-<text x="697.079" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Shape</text>
+<svg data-symbol="knob" x="689.019" y="261.615" width="16.120" height="16.120" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="697.079" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Shape</text>
 </g>
 <g id="waveshaper-env" data-kind="knob" aria-label="Env" data-control="waveshaper-env-knob"><title>Env</title>
-<circle cx="723.199" cy="268.545" r="6.53" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M723.199 265.015L723.199 266.26" fill="none" stroke="#000" stroke-width="1"/>
-<text x="723.199" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Env</text>
+<svg data-symbol="knob" x="715.139" y="261.615" width="16.120" height="16.120" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="723.199" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Env</text>
 </g>
-<rect x="752.259" y="65" width="242.96" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="752.259" y="65" width="242.96" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="759.259" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">FILTER</text>
 <g id="filter-cutoff" data-kind="fader" aria-label="Cutoff" data-control="filter-cutoff-fader"><title>Cutoff</title>
-<rect x="780.777" y="100" width="12.703" height="151.866" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.234257528556594"/>
-<rect x="774.426" y="171.735" width="25.406" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<rect data-symbol="fader" x="783.129" y="100.000" width="8.000" height="155.866" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
 <text x="787.129" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.083582554517136" text-anchor="middle">Cutoff</text>
 </g>
 <g id="filter-resonance" data-kind="fader" aria-label="Resonance" data-control="filter-resonance-fader"><title>Resonance</title>
-<rect x="838.517" y="100" width="12.703" height="151.866" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.234257528556594"/>
-<rect x="832.166" y="171.735" width="25.406" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<rect data-symbol="fader" x="840.868" y="100.000" width="8.000" height="155.866" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
 <text x="844.868" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.083582554517136" text-anchor="middle">Resonance</text>
 </g>
 <g id="filter-env" data-kind="fader" aria-label="Env" data-control="filter-env-fader"><title>Env</title>
-<rect x="896.257" y="100" width="12.703" height="151.866" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.234257528556594"/>
-<rect x="889.905" y="171.735" width="25.406" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<rect data-symbol="fader" x="898.608" y="100.000" width="8.000" height="155.866" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
 <text x="902.608" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.083582554517136" text-anchor="middle">Env</text>
 </g>
 <g id="filter-lfo" data-kind="fader" aria-label="LFO" data-control="filter-lfo-fader"><title>LFO</title>
-<rect x="953.997" y="100" width="12.703" height="151.866" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.234257528556594"/>
-<rect x="947.645" y="171.735" width="25.406" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<rect data-symbol="fader" x="956.348" y="100.000" width="8.000" height="155.866" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
 <text x="960.348" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.083582554517136" text-anchor="middle">LFO</text>
 </g>
 <g id="filter-drive" data-kind="fader" aria-label="Drive" data-control="filter-drive-switch"><title>Drive</title>
-<rect x="780.777" y="280" width="12.703" height="151.866" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.234257528556594"/>
-<rect x="774.426" y="351.735" width="25.406" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<rect data-symbol="fader" x="783.129" y="280.000" width="8.000" height="155.866" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
 <text x="787.129" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.083582554517136" text-anchor="middle">Drive</text>
 </g>
 <g id="filter-hpf" data-kind="knob" aria-label="HPF" data-control="filter-hpf-knob"><title>HPF</title>
-<circle cx="844.868" cy="357.933" r="14.435" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M844.868 346.498L844.868 352.881" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="820.998" y="334.063" width="47.740" height="47.740" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="844.868" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.083582554517136" text-anchor="middle">HPF</text>
 </g>
 <g id="filter-type" data-kind="knob" aria-label="Type"><title>Type</title>
-<circle cx="902.608" cy="357.933" r="14.435" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M902.608 346.498L902.608 352.881" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="878.738" y="334.063" width="47.740" height="47.740" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="902.608" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.083582554517136" text-anchor="middle">Type</text>
 </g>
 <g id="filter-key-follow" data-kind="knob" aria-label="Key follow" data-control="filter-key-follow-knob"><title>Key follow</title>
-<circle cx="960.348" cy="357.933" r="14.435" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M960.348 346.498L960.348 352.881" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="936.478" y="334.063" width="47.740" height="47.740" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="960.348" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.083582554517136" text-anchor="middle">Key follow</text>
 </g>
-<rect x="1005.218" y="65" width="80.343" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="1005.218" y="65" width="80.343" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="1012.218" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">AMP</text>
 <g id="amp-level" data-kind="fader" aria-label="Level" data-control="amp-level-fader"><title>Level</title>
-<rect x="1038.389" y="100" width="14" height="330.188" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1031.389" y="257.33" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<rect data-symbol="fader" x="1041.389" y="100.000" width="8.000" height="334.188" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
 <text x="1045.389" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.567975077881623" text-anchor="middle">Level</text>
 </g>
-<rect x="1095.561" y="65" width="211.34" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="1095.561" y="65" width="211.34" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="1102.561" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
 <g id="envelope-attack" data-kind="fader" aria-label="Attack" data-control="envelope-attack-fader"><title>Attack</title>
-<rect x="1120.996" y="100" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="1115.515" y="172.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1126.478" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Attack</text>
+<rect data-symbol="fader" x="1122.971" y="100.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1126.478" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Attack</text>
 </g>
 <g id="envelope-decay" data-kind="fader" aria-label="Decay" data-control="envelope-decay-fader"><title>Decay</title>
-<rect x="1170.831" y="100" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="1165.349" y="172.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1176.313" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Decay</text>
+<rect data-symbol="fader" x="1172.806" y="100.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1176.313" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Decay</text>
 </g>
 <g id="envelope-sustain" data-kind="fader" aria-label="Sustain" data-control="envelope-sustain-fader"><title>Sustain</title>
-<rect x="1220.666" y="100" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="1215.184" y="172.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1226.148" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Sustain</text>
+<rect data-symbol="fader" x="1222.641" y="100.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1226.148" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Sustain</text>
 </g>
 <g id="envelope-release" data-kind="fader" aria-label="Release" data-control="envelope-release-fader"><title>Release</title>
-<rect x="1270.501" y="100" width="10.964" height="153.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.6545586708203537"/>
-<rect x="1265.019" y="172.323" width="21.927" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1275.983" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Release</text>
+<rect data-symbol="fader" x="1272.476" y="100.000" width="7.014" height="157.116" rx="3.507" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1275.983" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Release</text>
 </g>
 <g id="envelope-portamento" data-kind="knob" aria-label="Portamento"><title>Portamento</title>
-<circle cx="1126.478" cy="358.545" r="12.459" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1126.478 349.086L1126.478 354.184" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1126.478" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Portamento</text>
+<svg data-symbol="knob" x="1106.561" y="338.641" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1126.478" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Portamento</text>
 </g>
 <g id="envelope-portamento-time" data-kind="knob" aria-label="Portamento time" data-control="envelope-portamento-time-knob"><title>Portamento time</title>
-<circle cx="1176.313" cy="354.59" r="12.459" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1176.313 345.131L1176.313 350.229" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1176.313" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Portamento</text>
-<text x="1176.313" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">time</text>
+<svg data-symbol="knob" x="1156.396" y="334.699" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1176.313" y="443.116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">Portamento</text>
+<text x="1176.313" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">time</text>
 </g>
 <g id="envelope-env-select" data-kind="button" aria-label="ENV select"><title>ENV select</title>
-<rect x="1211.148" y="343.545" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1226.148" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">ENV select</text>
+<svg data-symbol="button" x="1206.231" y="338.641" width="39.835" height="39.835" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<text x="1226.148" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.976884735202494" text-anchor="middle">ENV select</text>
 </g>
-<rect x="1316.9" y="65" width="148.1" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="1316.9" y="65" width="148.1" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="1323.9" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">EFFECTS</text>
 <g id="effects-delay" data-kind="fader" aria-label="Delay" data-control="effects-delay-fader"><title>Delay</title>
-<rect x="1333.516" y="100" width="5.988" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1.9961287642782972"/>
-<rect x="1330.522" y="258.723" width="11.977" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1336.51" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Delay</text>
+<rect data-symbol="fader" x="1334.813" y="100.000" width="3.395" height="339.350" rx="1.698" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1336.51" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Delay</text>
 </g>
 <g id="effects-time" data-kind="fader" aria-label="Time" data-control="effects-time-fader"><title>Time</title>
-<rect x="1360.736" y="100" width="5.988" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1.9961287642782972"/>
-<rect x="1357.742" y="258.723" width="11.977" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1363.73" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Time</text>
+<rect data-symbol="fader" x="1362.033" y="100.000" width="3.395" height="339.350" rx="1.698" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1363.73" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Time</text>
 </g>
 <g id="effects-feedback" data-kind="fader" aria-label="Feedback" data-control="effects-feedback-fader"><title>Feedback</title>
-<rect x="1387.956" y="100" width="5.988" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1.9961287642782972"/>
-<rect x="1384.962" y="254.926" width="11.977" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1390.95" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Feedb</text>
-<text x="1390.95" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">ack</text>
+<rect data-symbol="fader" x="1389.253" y="100.000" width="3.395" height="339.350" rx="1.698" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1390.95" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Feedback</text>
 </g>
 <g id="effects-reverb" data-kind="knob" aria-label="Reverb" data-control="effects-reverb-knob"><title>Reverb</title>
-<circle cx="1418.17" cy="264.59" r="6.805" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1418.17 260.785L1418.17 262.208" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1418.17" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Rever</text>
-<text x="1418.17" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">b</text>
+<svg data-symbol="knob" x="1409.560" y="261.065" width="17.220" height="17.220" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1418.17" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Reverb</text>
 </g>
 <g id="effects-reverb-time" data-kind="knob" aria-label="Reverb time" data-control="effects-reverb-time-knob"><title>Reverb time</title>
-<circle cx="1445.39" cy="260.635" r="6.805" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1445.39 256.83L1445.39 258.253" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1445.39" y="435.18" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Rever</text>
-<text x="1445.39" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">b</text>
-<text x="1445.39" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">time</text>
+<svg data-symbol="knob" x="1436.780" y="258.240" width="17.220" height="17.220" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1445.39" y="445.35" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">Reverb</text>
+<text x="1445.39" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5" text-anchor="middle">time</text>
 </g>
-<rect x="25" y="480" width="1450" height="145" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="480" width="1450" height="145" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="32" y="494" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MEMORY / PERFORMANCE</text>
 <g id="memory-performance-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="66.95" cy="529.313" r="11.745" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M66.95 520.568L66.95 525.202" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="52.637" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="66.95" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Volume</text>
 </g>
 <g id="memory-performance-note" data-kind="button" aria-label="Note"><title>Note</title>
-<rect x="124.537" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="124.537" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="138.85" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Note</text>
 </g>
 <g id="memory-performance-arpeggio" data-kind="button" aria-label="Arpeggio"><title>Arpeggio</title>
-<rect x="196.437" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="196.437" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="210.75" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Arpeggio</text>
 </g>
 <g id="memory-performance-sequencer" data-kind="button" aria-label="Sequencer"><title>Sequencer</title>
-<rect x="268.337" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="268.337" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="282.65" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Sequencer</text>
 </g>
 <g id="memory-performance-start" data-kind="button" aria-label="Start"><title>Start</title>
-<rect x="340.237" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="340.237" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="354.55" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Start</text>
 </g>
 <g id="memory-performance-menu" data-kind="button" aria-label="Menu"><title>Menu</title>
-<rect x="412.137" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="412.137" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="426.45" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Menu</text>
 </g>
 <g id="memory-performance-value" data-kind="knob" aria-label="Value"><title>Value</title>
-<circle cx="498.35" cy="529.313" r="11.745" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M498.35 520.568L498.35 525.202" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="484.037" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="498.35" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Value</text>
 </g>
 <g id="memory-performance-hold" data-kind="button" aria-label="Hold"><title>Hold</title>
-<rect x="555.937" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="555.937" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="570.25" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Hold</text>
 </g>
 <g id="memory-performance-dual" data-kind="button" aria-label="Dual"><title>Dual</title>
-<rect x="627.837" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="627.837" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="642.15" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Dual</text>
 </g>
 <g id="memory-performance-split" data-kind="button" aria-label="Split"><title>Split</title>
-<rect x="699.737" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="699.737" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="714.05" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Split</text>
 </g>
 <g id="memory-performance-lower" data-kind="button" aria-label="Lower"><title>Lower</title>
-<rect x="771.637" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="771.637" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="785.95" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Lower</text>
 </g>
 <g id="memory-performance-upper" data-kind="button" aria-label="Upper"><title>Upper</title>
-<rect x="843.537" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="843.537" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="857.85" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Upper</text>
 </g>
 <g id="memory-performance-bank-1-4" data-kind="button" aria-label="Bank 1 4"><title>Bank 1 4</title>
-<rect x="915.437" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="915.437" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="929.75" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Bank 1 4</text>
 </g>
 <g id="memory-performance-bank-5-8" data-kind="button" aria-label="Bank 5 8"><title>Bank 5 8</title>
-<rect x="987.337" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="987.337" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="1001.65" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Bank 5 8</text>
 </g>
 <g id="memory-performance-manual" data-kind="button" aria-label="Manual"><title>Manual</title>
-<rect x="1059.237" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1059.237" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="1073.55" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Manual</text>
 </g>
 <g id="memory-performance-delay-reverb" data-kind="button" aria-label="Delay Reverb"><title>Delay Reverb</title>
-<rect x="1131.137" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1131.137" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="1145.45" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Delay Reverb</text>
 </g>
 <g id="memory-performance-chorus-i" data-kind="button" aria-label="Chorus I"><title>Chorus I</title>
-<rect x="1203.037" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1203.037" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="1217.35" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Chorus I</text>
 </g>
 <g id="memory-performance-chorus-ii" data-kind="button" aria-label="Chorus II"><title>Chorus II</title>
-<rect x="1274.937" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1274.937" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="1289.25" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Chorus II</text>
 </g>
 <g id="memory-performance-patch-1" data-kind="button" aria-label="Patch 1"><title>Patch 1</title>
-<rect x="1346.837" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1346.837" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="1361.15" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Patch 1</text>
 </g>
 <g id="memory-performance-patch-2" data-kind="button" aria-label="Patch 2"><title>Patch 2</title>
-<rect x="1418.737" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1418.737" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="1433.05" y="561" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Patch 2</text>
 </g>
 <g id="memory-performance-patch-3" data-kind="button" aria-label="Patch 3"><title>Patch 3</title>
-<rect x="52.637" y="570" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="52.637" y="570.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="66.95" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Patch 3</text>
 </g>
 <g id="memory-performance-patch-4" data-kind="button" aria-label="Patch 4"><title>Patch 4</title>
-<rect x="124.537" y="570" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="124.537" y="570.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="138.85" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Patch 4</text>
 </g>
 <g id="memory-performance-patch-5" data-kind="button" aria-label="Patch 5"><title>Patch 5</title>
-<rect x="196.437" y="570" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="196.437" y="570.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="210.75" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Patch 5</text>
 </g>
 <g id="memory-performance-patch-6" data-kind="button" aria-label="Patch 6"><title>Patch 6</title>
-<rect x="268.337" y="570" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="268.337" y="570.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="282.65" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.066000000000003" text-anchor="middle">Patch 6</text>
 </g>
 </svg>

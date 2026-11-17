@@ -1,146 +1,134 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
 <title id="title">Korg volca kick top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1200" height="720" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1182" height="702" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<rect x="0" y="0" width="1200" height="720" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1182" height="702" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
 <text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Korg volca kick</text>
 <text x="1175" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="60" width="1150" height="65" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="top-connections-dc-9v" data-kind="jack" aria-label="DC 9V"><title>DC 9V</title>
-<circle cx="144.8" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="144.8" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<rect x="25" y="60" width="1150" height="65" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="top-connections-dc-9v" data-kind="input" aria-label="DC 9V"><title>DC 9V</title>
+<svg data-symbol="input" x="137.800" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
-<g id="top-connections-midi-in" data-kind="jack" aria-label="MIDI IN"><title>MIDI IN</title>
-<circle cx="372.4" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="372.4" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="top-connections-midi-in" data-kind="input" aria-label="MIDI IN"><title>MIDI IN</title>
+<svg data-symbol="input" x="365.400" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
-<g id="top-connections-sync-in" data-kind="jack" aria-label="Sync IN"><title>Sync IN</title>
-<circle cx="600" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="600" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="top-connections-sync-in" data-kind="input" aria-label="Sync IN"><title>Sync IN</title>
+<svg data-symbol="input" x="593.000" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
-<g id="top-connections-sync-out" data-kind="jack" aria-label="Sync OUT"><title>Sync OUT</title>
-<circle cx="827.6" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="827.6" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="top-connections-sync-out" data-kind="output" aria-label="Sync OUT"><title>Sync OUT</title>
+<svg data-symbol="output" x="820.600" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
-<g id="top-connections-headphones" data-kind="jack" aria-label="Headphones"><title>Headphones</title>
-<circle cx="1055.2" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1055.2" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="top-connections-headphones" data-kind="output" aria-label="Headphones"><title>Headphones</title>
+<svg data-symbol="output" x="1048.200" y="95.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
-<rect x="25" y="130" width="170" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="130" width="170" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="master-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="70.5" cy="193.16" r="19.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M70.5 176.41L70.5 186.248" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="46.500" y="169.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="master-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="149.5" cy="193.16" r="19.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M149.5 176.41L149.5 186.248" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="125.500" y="169.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="master-memory" data-kind="button" aria-label="Memory"><title>Memory</title>
-<rect x="55.5" y="261.91" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="46.500" y="252.910" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-play" data-kind="button" aria-label="Play"><title>Play</title>
-<rect x="134.5" y="261.91" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="125.500" y="252.910" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-record" data-kind="button" aria-label="Record"><title>Record</title>
-<rect x="55.5" y="345.66" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="46.500" y="336.660" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-function" data-kind="button" aria-label="Function"><title>Function</title>
-<rect x="134.5" y="345.66" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="125.500" y="336.660" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-touch-fx" data-kind="button" aria-label="Touch FX"><title>Touch FX</title>
-<rect x="55.5" y="429.41" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="46.500" y="420.410" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<rect x="210" y="130" width="232.5" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="210" y="130" width="232.5" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="resonator-pitch" data-kind="knob" aria-label="Pitch" data-control="resonator-pitch-knob"><title>Pitch</title>
-<circle cx="326.25" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M326.25 185.118L326.25 198.368" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="302.250" y="183.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="resonator-bend" data-kind="knob" aria-label="Bend" data-control="resonator-bend-knob"><title>Bend</title>
-<circle cx="326.25" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M326.25 296.785L326.25 310.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="302.250" y="294.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="resonator-time" data-kind="knob" aria-label="Time" data-control="resonator-time-knob"><title>Time</title>
-<circle cx="326.25" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M326.25 408.452L326.25 421.702" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="302.250" y="406.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="452.5" y="130" width="232.5" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="452.5" y="130" width="232.5" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="pulse-colour" data-kind="knob" aria-label="Colour" data-control="pulse-colour-knob"><title>Colour</title>
-<circle cx="568.75" cy="235.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M568.75 213.035L568.75 226.285" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="544.750" y="211.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="pulse-level" data-kind="knob" aria-label="Level" data-control="pulse-level-knob"><title>Level</title>
-<circle cx="568.75" cy="402.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M568.75 380.535L568.75 393.785" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="544.750" y="378.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="695" y="130" width="232.5" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="695" y="130" width="232.5" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="amp-attack" data-kind="knob" aria-label="Attack" data-control="amp-attack-knob"><title>Attack</title>
-<circle cx="811.25" cy="235.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M811.25 213.035L811.25 226.285" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="787.250" y="211.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="amp-decay" data-kind="knob" aria-label="Decay" data-control="amp-decay-knob"><title>Decay</title>
-<circle cx="811.25" cy="402.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M811.25 380.535L811.25 393.785" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="787.250" y="378.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="937.5" y="130" width="232.5" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="937.5" y="130" width="232.5" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="drive-tone-drive" data-kind="knob" aria-label="Drive" data-control="drive-tone-drive-knob"><title>Drive</title>
-<circle cx="1053.75" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1053.75 185.118L1053.75 198.368" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1029.750" y="183.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="drive-tone-tone" data-kind="knob" aria-label="Tone" data-control="drive-tone-tone-knob"><title>Tone</title>
-<circle cx="1053.75" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1053.75 296.785L1053.75 310.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1029.750" y="294.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="drive-tone-accent" data-kind="knob" aria-label="Accent" data-control="drive-tone-accent-knob"><title>Accent</title>
-<circle cx="1053.75" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1053.75 408.452L1053.75 421.702" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1029.750" y="406.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="25" y="525" width="1150" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="525" width="1150" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="touch-keyboard-steps-1" data-kind="key" aria-label="1"><title>1</title>
-<rect x="37" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="37" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-2" data-kind="key" aria-label="2"><title>2</title>
-<rect x="108.125" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="108.125" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-3" data-kind="key" aria-label="3"><title>3</title>
-<rect x="179.25" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="179.25" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-4" data-kind="key" aria-label="4"><title>4</title>
-<rect x="250.375" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="250.375" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-5" data-kind="key" aria-label="5"><title>5</title>
-<rect x="321.5" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="321.5" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-6" data-kind="key" aria-label="6"><title>6</title>
-<rect x="392.625" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="392.625" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-7" data-kind="key" aria-label="7"><title>7</title>
-<rect x="463.75" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="463.75" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-8" data-kind="key" aria-label="8"><title>8</title>
-<rect x="534.875" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="534.875" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-9" data-kind="key" aria-label="9"><title>9</title>
-<rect x="606" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="606" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-10" data-kind="key" aria-label="10"><title>10</title>
-<rect x="677.125" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="677.125" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-11" data-kind="key" aria-label="11"><title>11</title>
-<rect x="748.25" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="748.25" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-12" data-kind="key" aria-label="12"><title>12</title>
-<rect x="819.375" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="819.375" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-13" data-kind="key" aria-label="13"><title>13</title>
-<rect x="890.5" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="890.5" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-14" data-kind="key" aria-label="14"><title>14</title>
-<rect x="961.625" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="961.625" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-15" data-kind="key" aria-label="15"><title>15</title>
-<rect x="1032.75" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="1032.75" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="touch-keyboard-steps-16" data-kind="key" aria-label="16"><title>16</title>
-<rect x="1103.875" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="1103.875" y="570.812" width="59.125" height="59.125" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 </svg>

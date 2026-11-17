@@ -1,350 +1,341 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 720" role="img" aria-labelledby="title description">
 <title id="title">ASM Hydrasynth Explorer top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="720" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="702" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<rect x="0" y="0" width="1250" height="720" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1232" height="702" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
 <text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">ASM Hydrasynth Explorer</text>
 <text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="120" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="65" width="120" height="140" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="master-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="85" cy="138.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M85 116.785L85 130.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="61.000" y="114.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="160" y="65" width="330" height="160" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="160" y="65" width="330" height="160" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="arpeggiator-mode" data-kind="knob" aria-label="Mode"><title>Mode</title>
-<circle cx="197.8" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M197.8 106.801L197.8 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="179.081" y="100.000" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="arpeggiator-octave" data-kind="knob" aria-label="Octave"><title>Octave</title>
-<circle cx="261.4" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M261.4 106.801L261.4 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="242.681" y="100.000" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="arpeggiator-division" data-kind="knob" aria-label="Division"><title>Division</title>
-<circle cx="325" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M325 106.801L325 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="306.281" y="100.000" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="arpeggiator-swing" data-kind="knob" aria-label="Swing"><title>Swing</title>
-<circle cx="388.6" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M388.6 106.801L388.6 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="369.881" y="100.000" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="arpeggiator-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="452.2" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M452.2 106.801L452.2 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="433.481" y="100.000" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="arpeggiator-on" data-kind="button" aria-label="On"><title>On</title>
-<rect x="182.8" y="166.219" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="179.081" y="162.500" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="arpeggiator-latch" data-kind="button" aria-label="Latch"><title>Latch</title>
-<rect x="246.4" y="166.219" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="242.681" y="162.500" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="arpeggiator-triplet" data-kind="button" aria-label="Triplet"><title>Triplet</title>
-<rect x="310" y="166.219" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="306.281" y="162.500" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="arpeggiator-tap" data-kind="button" aria-label="Tap"><title>Tap</title>
-<rect x="373.6" y="166.219" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="369.881" y="162.500" width="37.438" height="37.438" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<rect x="160" y="240" width="330" height="150" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="160" y="240" width="330" height="150" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="filter-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
-<circle cx="219" cy="290.035" r="12.265" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M219 280.77L219 285.742" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="203.965" y="275.000" width="30.070" height="30.070" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="filter-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<circle cx="325" cy="290.035" r="12.265" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M325 280.77L325 285.742" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="309.965" y="275.000" width="30.070" height="30.070" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="filter-drive-morph" data-kind="knob" aria-label="Drive / Morph"><title>Drive / Morph</title>
-<circle cx="431" cy="290.035" r="12.265" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M431 280.77L431 285.742" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="415.965" y="275.000" width="30.070" height="30.070" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="filter-filter-1" data-kind="button" aria-label="Filter 1"><title>Filter 1</title>
-<rect x="204" y="332.535" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="203.965" y="332.500" width="30.070" height="30.070" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="filter-filter-2" data-kind="button" aria-label="Filter 2"><title>Filter 2</title>
-<rect x="310" y="332.535" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="309.965" y="332.500" width="30.070" height="30.070" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<rect x="505" y="65" width="200" height="325" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="505" y="65" width="200" height="325" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="patch-main-system-patch-display" data-kind="screen" aria-label="Patch display"><title>Patch display</title>
-<rect x="516" y="100" width="84" height="30.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="520" y="104" width="76" height="22.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="516" y="100" width="84" height="32.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="520" y="104" width="76" height="24.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="patch-main-system-patch-select" data-kind="knob" aria-label="Patch select"><title>Patch select</title>
-<circle cx="652" cy="115.285" r="12.445" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M652 105.84L652 110.929" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="636.715" y="100.000" width="30.570" height="30.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="patch-main-system-home" data-kind="button" aria-label="Home"><title>Home</title>
-<rect x="543" y="158.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="542.715" y="158.000" width="30.570" height="30.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="patch-main-system-save" data-kind="button" aria-label="Save"><title>Save</title>
-<rect x="637" y="158.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="636.715" y="158.000" width="30.570" height="30.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="patch-main-system-system" data-kind="button" aria-label="System"><title>System</title>
-<rect x="543" y="216.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="542.715" y="216.000" width="30.570" height="30.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="patch-main-system-voice" data-kind="button" aria-label="Voice"><title>Voice</title>
-<rect x="637" y="216.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="636.715" y="216.000" width="30.570" height="30.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="patch-main-system-init" data-kind="button" aria-label="Init"><title>Init</title>
-<rect x="543" y="274.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="542.715" y="274.000" width="30.570" height="30.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="patch-main-system-random" data-kind="button" aria-label="Random"><title>Random</title>
-<rect x="637" y="274.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="636.715" y="274.000" width="30.570" height="30.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="patch-main-system-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<rect x="543" y="332.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="542.715" y="332.000" width="30.570" height="30.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<rect x="720" y="65" width="495" height="155" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="720" y="65" width="495" height="155" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="master-control-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="731" y="100" width="70.5" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="735" y="104" width="62.5" height="24.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<rect x="731" y="100" width="70.5" height="34.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="735" y="104" width="62.5" height="26.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
 </g>
 <g id="master-control-control-1" data-kind="knob" aria-label="Control 1"><title>Control 1</title>
-<circle cx="846.75" cy="116.285" r="13.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M846.75 106.12L846.75 111.677" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="830.465" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="master-control-control-2" data-kind="knob" aria-label="Control 2"><title>Control 2</title>
-<circle cx="927.25" cy="116.285" r="13.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M927.25 106.12L927.25 111.677" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="910.965" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="master-control-control-3" data-kind="knob" aria-label="Control 3"><title>Control 3</title>
-<circle cx="1007.75" cy="116.285" r="13.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1007.75 106.12L1007.75 111.677" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="991.465" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="master-control-control-4" data-kind="knob" aria-label="Control 4"><title>Control 4</title>
-<circle cx="1088.25" cy="116.285" r="13.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1088.25 106.12L1088.25 111.677" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1071.965" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="master-control-control-button-1" data-kind="button" aria-label="Control button 1"><title>Control button 1</title>
-<rect x="1158.68" y="100" width="20.14" height="20.14" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1158.680" y="100.000" width="20.140" height="20.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-control-control-button-2" data-kind="button" aria-label="Control button 2"><title>Control button 2</title>
-<rect x="756.18" y="160" width="20.14" height="20.14" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="756.180" y="160.000" width="20.140" height="20.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-control-control-button-3" data-kind="button" aria-label="Control button 3"><title>Control button 3</title>
-<rect x="836.68" y="160" width="20.14" height="20.14" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="836.680" y="160.000" width="20.140" height="20.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-control-control-button-4" data-kind="button" aria-label="Control button 4"><title>Control button 4</title>
-<rect x="917.18" y="160" width="20.14" height="20.14" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="917.180" y="160.000" width="20.140" height="20.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-control-page" data-kind="button" aria-label="Page -"><title>Page -</title>
-<rect x="992.75" y="161.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="991.465" y="160.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-control-page-2" data-kind="button" aria-label="Page +"><title>Page +</title>
-<rect x="1073.25" y="161.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1071.965" y="160.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="master-control-browse" data-kind="button" aria-label="Browse"><title>Browse</title>
-<rect x="1153.75" y="161.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1152.465" y="160.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<rect x="720" y="235" width="495" height="155" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="720" y="235" width="495" height="155" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="module-select-osc-1" data-kind="button" aria-label="Osc 1"><title>Osc 1</title>
-<rect x="741.605" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="741.471" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-osc-2" data-kind="button" aria-label="Osc 2"><title>Osc 2</title>
-<rect x="789.905" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="789.771" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-osc-3" data-kind="button" aria-label="Osc 3"><title>Osc 3</title>
-<rect x="838.205" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="838.071" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-mutant-1" data-kind="button" aria-label="Mutant 1"><title>Mutant 1</title>
-<rect x="886.505" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="886.371" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-mutant-2" data-kind="button" aria-label="Mutant 2"><title>Mutant 2</title>
-<rect x="934.805" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="934.671" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-mutant-3" data-kind="button" aria-label="Mutant 3"><title>Mutant 3</title>
-<rect x="983.105" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="982.971" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-mutant-4" data-kind="button" aria-label="Mutant 4"><title>Mutant 4</title>
-<rect x="1031.405" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1031.271" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-ring-noise" data-kind="button" aria-label="Ring noise"><title>Ring noise</title>
-<rect x="1079.705" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1079.571" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-mixer" data-kind="button" aria-label="Mixer"><title>Mixer</title>
-<rect x="1128.005" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1127.871" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-filter-1" data-kind="button" aria-label="Filter 1"><title>Filter 1</title>
-<rect x="1176.305" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1176.171" y="270.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-filter-2" data-kind="button" aria-label="Filter 2"><title>Filter 2</title>
-<rect x="741.605" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="741.471" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-amp" data-kind="button" aria-label="Amp"><title>Amp</title>
-<rect x="789.905" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="789.771" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-pre-fx" data-kind="button" aria-label="Pre FX"><title>Pre FX</title>
-<rect x="838.205" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="838.071" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-delay" data-kind="button" aria-label="Delay"><title>Delay</title>
-<rect x="886.505" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="886.371" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-reverb" data-kind="button" aria-label="Reverb"><title>Reverb</title>
-<rect x="934.805" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="934.671" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-post-fx" data-kind="button" aria-label="Post FX"><title>Post FX</title>
-<rect x="983.105" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="982.971" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-env-1" data-kind="button" aria-label="Env 1"><title>Env 1</title>
-<rect x="1031.405" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1031.271" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-env-2" data-kind="button" aria-label="Env 2"><title>Env 2</title>
-<rect x="1079.705" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1079.571" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-env-3" data-kind="button" aria-label="Env 3"><title>Env 3</title>
-<rect x="1128.005" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1127.871" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-env-4" data-kind="button" aria-label="Env 4"><title>Env 4</title>
-<rect x="1176.305" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1176.171" y="310.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-env-5" data-kind="button" aria-label="Env 5"><title>Env 5</title>
-<rect x="741.605" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="741.471" y="350.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-lfo-1" data-kind="button" aria-label="LFO 1"><title>LFO 1</title>
-<rect x="789.905" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="789.771" y="350.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-lfo-2" data-kind="button" aria-label="LFO 2"><title>LFO 2</title>
-<rect x="838.205" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="838.071" y="350.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-lfo-3" data-kind="button" aria-label="LFO 3"><title>LFO 3</title>
-<rect x="886.505" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="886.371" y="350.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-lfo-4" data-kind="button" aria-label="LFO 4"><title>LFO 4</title>
-<rect x="934.805" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="934.671" y="350.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-lfo-5" data-kind="button" aria-label="LFO 5"><title>LFO 5</title>
-<rect x="983.105" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="982.971" y="350.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-mod-matrix" data-kind="button" aria-label="Mod matrix"><title>Mod matrix</title>
-<rect x="1031.405" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1031.271" y="350.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="module-select-voice" data-kind="button" aria-label="Voice"><title>Voice</title>
-<rect x="1079.705" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1079.571" y="350.000" width="17.359" height="17.359" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<rect x="25" y="415" width="95" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="415" width="95" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="performance-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="37" y="481.295" width="29.5" height="29.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="36.000" y="480.967" width="31.500" height="31.500" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="performance-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="78.5" y="481.295" width="29.5" height="29.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="77.500" y="480.967" width="31.500" height="31.500" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="performance-pitch" data-kind="strip" aria-label="Pitch"><title>Pitch</title>
-<rect x="44.487" y="565" width="14.525" height="88.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.841666666666666"/>
-<path d="M51.75 570L51.75 649.09" fill="none" stroke="#000" stroke-width="1"/>
+<rect x="44.487" y="565" width="14.525" height="91.435" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.841666666666666"/>
+<path d="M51.75 570L51.75 652.435" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="performance-mod" data-kind="strip" aria-label="Mod"><title>Mod</title>
-<rect x="85.987" y="565" width="14.525" height="88.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.841666666666666"/>
-<path d="M93.25 570L93.25 649.09" fill="none" stroke="#000" stroke-width="1"/>
+<rect x="85.987" y="565" width="14.525" height="91.435" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.841666666666666"/>
+<path d="M93.25 570L93.25 652.435" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
 <g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="135" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="135" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="184.091" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="184.091" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="233.182" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="233.182" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="282.273" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="282.273" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="331.364" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="331.364" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="380.455" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="380.455" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="429.545" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="429.545" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="478.636" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="478.636" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="527.727" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="527.727" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="576.818" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="576.818" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="625.909" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="625.909" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="675" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="675" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="724.091" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="724.091" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="773.182" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="773.182" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="822.273" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="822.273" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="871.364" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="871.364" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="920.455" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="920.455" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="969.545" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="969.545" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="1018.636" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1018.636" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-34" data-kind="key" aria-label="Key 34"><title>Key 34</title>
-<rect x="1067.727" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1067.727" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-36" data-kind="key" aria-label="Key 36"><title>Key 36</title>
-<rect x="1116.818" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1116.818" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-37" data-kind="key" aria-label="Key 37"><title>Key 37</title>
-<rect x="1165.909" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1165.909" y="415" width="49.091" height="265" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="168.873" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="168.873" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="217.964" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="217.964" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="316.145" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="316.145" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="365.236" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="365.236" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="414.327" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="414.327" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="512.509" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="512.509" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="561.6" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="561.6" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="659.782" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="659.782" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="708.873" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="708.873" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="757.964" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="757.964" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="856.145" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="856.145" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="905.236" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="905.236" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="1003.418" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1003.418" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-33" data-kind="key" aria-label="Key 33"><title>Key 33</title>
-<rect x="1052.509" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1052.509" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-35" data-kind="key" aria-label="Key 35"><title>Key 35</title>
-<rect x="1101.6" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1101.6" y="415" width="30.436" height="161.65" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 </g>
 </svg>

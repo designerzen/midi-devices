@@ -1,117 +1,105 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="title description">
 <title id="title">Moog Minitaur labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1000" height="600" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="982" height="582" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<rect x="0" y="0" width="1000" height="600" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="982" height="582" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
 <text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Moog Minitaur</text>
 <text x="975" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="790" height="155" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="65" width="790" height="155" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">OSCILLATORS / FILTER</text>
 <g id="oscillators-filter-vco-2-freq" data-kind="knob" aria-label="VCO 2 freq"><title>VCO 2 freq</title>
-<circle cx="128.25" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M128.25 124.285L128.25 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="104.250" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="128.25" y="211" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCO 2 freq</text>
 </g>
 <g id="oscillators-filter-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
-<circle cx="322.75" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M322.75 124.285L322.75 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="298.750" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="322.75" y="211" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Cutoff</text>
 </g>
 <g id="oscillators-filter-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<circle cx="517.25" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M517.25 124.285L517.25 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="493.250" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="517.25" y="211" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Resonance</text>
 </g>
 <g id="oscillators-filter-eg-amount" data-kind="knob" aria-label="EG amount"><title>EG amount</title>
-<circle cx="711.75" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M711.75 124.285L711.75 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="687.750" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="711.75" y="211" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG amount</text>
 </g>
-<rect x="25" y="235" width="790" height="150" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="235" width="790" height="150" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="32" y="249" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MIX / ENVELOPES</text>
 <g id="mix-envelopes-vco-1-level" data-kind="knob" aria-label="VCO 1 level"><title>VCO 1 level</title>
-<circle cx="108.8" cy="313.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M108.8 291.785L108.8 305.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="84.800" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="108.8" y="376" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCO 1 level</text>
 </g>
 <g id="mix-envelopes-vco-2-level" data-kind="knob" aria-label="VCO 2 level"><title>VCO 2 level</title>
-<circle cx="264.4" cy="313.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M264.4 291.785L264.4 305.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="240.400" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="264.4" y="376" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCO 2 level</text>
 </g>
 <g id="mix-envelopes-vcf-attack" data-kind="knob" aria-label="VCF attack"><title>VCF attack</title>
-<circle cx="420" cy="313.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M420 291.785L420 305.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="396.000" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="420" y="376" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCF attack</text>
 </g>
 <g id="mix-envelopes-vcf-decay-release" data-kind="knob" aria-label="VCF decay / release"><title>VCF decay / release</title>
-<circle cx="575.6" cy="313.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M575.6 291.785L575.6 305.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="551.600" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="575.6" y="376" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCF decay / release</text>
 </g>
 <g id="mix-envelopes-vcf-sustain" data-kind="knob" aria-label="VCF sustain"><title>VCF sustain</title>
-<circle cx="731.2" cy="313.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M731.2 291.785L731.2 305.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="707.200" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="731.2" y="376" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCF sustain</text>
 </g>
-<rect x="25" y="400" width="790" height="150" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="400" width="790" height="150" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="32" y="414" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MODULATION / ENVELOPES</text>
 <g id="modulation-envelopes-lfo-rate" data-kind="knob" aria-label="LFO rate"><title>LFO rate</title>
-<circle cx="95.833" cy="478.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M95.833 456.785L95.833 470.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="71.833" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="95.833" y="541" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">LFO rate</text>
 </g>
 <g id="modulation-envelopes-vco-lfo-amt" data-kind="knob" aria-label="VCO LFO amt"><title>VCO LFO amt</title>
-<circle cx="225.5" cy="478.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M225.5 456.785L225.5 470.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="201.500" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="225.5" y="541" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCO LFO amt</text>
 </g>
 <g id="modulation-envelopes-vcf-lfo-amt" data-kind="knob" aria-label="VCF LFO amt"><title>VCF LFO amt</title>
-<circle cx="355.167" cy="478.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M355.167 456.785L355.167 470.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="331.167" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="355.167" y="541" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCF LFO amt</text>
 </g>
 <g id="modulation-envelopes-vca-attack" data-kind="knob" aria-label="VCA attack"><title>VCA attack</title>
-<circle cx="484.833" cy="478.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M484.833 456.785L484.833 470.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="460.833" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="484.833" y="541" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCA attack</text>
 </g>
 <g id="modulation-envelopes-vca-decay-release" data-kind="knob" aria-label="VCA decay / release"><title>VCA decay / release</title>
-<circle cx="614.5" cy="478.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M614.5 456.785L614.5 470.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="590.500" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="614.5" y="541" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCA decay / release</text>
 </g>
 <g id="modulation-envelopes-vca-sustain" data-kind="knob" aria-label="VCA sustain"><title>VCA sustain</title>
-<circle cx="744.167" cy="478.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M744.167 456.785L744.167 470.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="720.167" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="744.167" y="541" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCA sustain</text>
 </g>
-<rect x="830" y="65" width="145" height="485" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="830" y="65" width="145" height="485" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <text x="837" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">OUTPUT</text>
 <g id="output-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="902.5" cy="123.785" r="18.565" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M902.5 108.22L902.5 117.287" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="878.715" y="100.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="902.5" y="166" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Volume</text>
 </g>
 <g id="output-vco-1-wave" data-kind="button" aria-label="VCO 1 wave"><title>VCO 1 wave</title>
-<rect x="887.5" y="183.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="878.715" y="175.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="902.5" y="241" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCO 1 wave</text>
 </g>
 <g id="output-vco-2-wave" data-kind="button" aria-label="VCO 2 wave"><title>VCO 2 wave</title>
-<rect x="887.5" y="258.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="878.715" y="250.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="902.5" y="316" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">VCO 2 wave</text>
 </g>
 <g id="output-release" data-kind="button" aria-label="Release"><title>Release</title>
-<rect x="887.5" y="333.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="878.715" y="325.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="902.5" y="391" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Release</text>
 </g>
 <g id="output-glide-rate" data-kind="knob" aria-label="Glide rate"><title>Glide rate</title>
-<circle cx="902.5" cy="423.785" r="18.565" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M902.5 408.22L902.5 417.287" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="878.715" y="400.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 <text x="902.5" y="466" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Glide rate</text>
 </g>
 <g id="output-glide" data-kind="button" aria-label="Glide"><title>Glide</title>
-<rect x="887.5" y="483.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="878.715" y="475.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 <text x="902.5" y="541" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Glide</text>
 </g>
 </svg>

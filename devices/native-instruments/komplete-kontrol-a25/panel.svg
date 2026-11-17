@@ -1,1 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title description"><title id="title">Native Instruments KOMPLETE KONTROL A25 Panel</title><desc id="description">Conceptual schematic, not a scale drawing of hardware controls.</desc><rect width="1000" height="300" fill="#fff" stroke="#000"/><text x="20" y="35" font-family="sans-serif" font-size="20" fill="#000">Native Instruments KOMPLETE KONTROL A25 / Panel</text><text x="20" y="75" font-family="sans-serif" font-size="14" fill="#000">Conceptual schematic; see profile setup notes for hardware operation.</text><rect id="pitch-bend" x="30" y="135" width="30" height="120" fill="#fff" stroke="#000"><title>Pitch bend</title></rect><rect id="modulation" x="80" y="135" width="30" height="120" fill="#fff" stroke="#000"><title>Modulation (CC1)</title></rect><rect id="key-0" x="160" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 48</title></rect><rect id="key-1" x="192.40000000000003" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 49</title></rect><rect id="key-2" x="224.8" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 50</title></rect><rect id="key-3" x="257.2" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 51</title></rect><rect id="key-4" x="289.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 52</title></rect><rect id="key-5" x="322.00000000000006" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 53</title></rect><rect id="key-6" x="354.4" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 54</title></rect><rect id="key-7" x="386.8" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 55</title></rect><rect id="key-8" x="419.2" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 56</title></rect><rect id="key-9" x="451.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 57</title></rect><rect id="key-10" x="484" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 58</title></rect><rect id="key-11" x="516.4" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 59</title></rect><rect id="key-12" x="548.8" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 60</title></rect><rect id="key-13" x="581.2" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 61</title></rect><rect id="key-14" x="613.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 62</title></rect><rect id="key-15" x="645.9999999999999" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 63</title></rect><rect id="key-16" x="678.4" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 64</title></rect><rect id="key-17" x="710.8" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 65</title></rect><rect id="key-18" x="743.2" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 66</title></rect><rect id="key-19" x="775.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 67</title></rect><rect id="key-20" x="808" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 68</title></rect><rect id="key-21" x="840.4" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 69</title></rect><rect id="key-22" x="872.8" y="129" width="32.4" height="144" fill="#000" stroke="#000"><title>Note 70</title></rect><rect id="key-23" x="905.2" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 71</title></rect><rect id="key-24" x="937.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000"><title>Note 72</title></rect></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title description">
+<title id="title">Native Instruments KOMPLETE KONTROL A25 schematic</title><desc id="description">Partial conceptual surface. Existing virtual assignments and positions are preserved; consult the device documentation for physical hardware layout.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect x="0" y="0" width="1000" height="300" fill="#fff" stroke="none" stroke-width="1.6"/>
+<text x="20" y="35" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="20" text-anchor="start">Native Instruments KOMPLETE KONTROL A25</text>
+<g id="pitch-bend" data-kind="fader" aria-label="Pitch bend" data-control="pitch-bend"><title>Pitch bend</title>
+<rect data-symbol="fader" x="43.080" y="140.000" width="3.840" height="93.700" rx="1.920" fill="#fff" stroke="#000" stroke-width="2"/>
+</g>
+<g id="modulation" data-kind="fader" aria-label="Modulation (CC1)" data-control="modulation"><title>Modulation (CC1)</title>
+<rect data-symbol="fader" x="93.080" y="140.000" width="3.840" height="93.700" rx="1.920" fill="#fff" stroke="#000" stroke-width="2"/>
+</g>
+<g id="key-0" data-kind="key" aria-label="Note 48"><title>Note 48</title>
+<rect x="160" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-1" data-kind="key" aria-label="Note 49"><title>Note 49</title>
+<rect x="192.4" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-2" data-kind="key" aria-label="Note 50"><title>Note 50</title>
+<rect x="224.8" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-3" data-kind="key" aria-label="Note 51"><title>Note 51</title>
+<rect x="257.2" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-4" data-kind="key" aria-label="Note 52"><title>Note 52</title>
+<rect x="289.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-5" data-kind="key" aria-label="Note 53"><title>Note 53</title>
+<rect x="322" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-6" data-kind="key" aria-label="Note 54"><title>Note 54</title>
+<rect x="354.4" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-7" data-kind="key" aria-label="Note 55"><title>Note 55</title>
+<rect x="386.8" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-8" data-kind="key" aria-label="Note 56"><title>Note 56</title>
+<rect x="419.2" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-9" data-kind="key" aria-label="Note 57"><title>Note 57</title>
+<rect x="451.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-10" data-kind="key" aria-label="Note 58"><title>Note 58</title>
+<rect x="484" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-11" data-kind="key" aria-label="Note 59"><title>Note 59</title>
+<rect x="516.4" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-12" data-kind="key" aria-label="Note 60"><title>Note 60</title>
+<rect x="548.8" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-13" data-kind="key" aria-label="Note 61"><title>Note 61</title>
+<rect x="581.2" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-14" data-kind="key" aria-label="Note 62"><title>Note 62</title>
+<rect x="613.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-15" data-kind="key" aria-label="Note 63"><title>Note 63</title>
+<rect x="646" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-16" data-kind="key" aria-label="Note 64"><title>Note 64</title>
+<rect x="678.4" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-17" data-kind="key" aria-label="Note 65"><title>Note 65</title>
+<rect x="710.8" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-18" data-kind="key" aria-label="Note 66"><title>Note 66</title>
+<rect x="743.2" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-19" data-kind="key" aria-label="Note 67"><title>Note 67</title>
+<rect x="775.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-20" data-kind="key" aria-label="Note 68"><title>Note 68</title>
+<rect x="808" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-21" data-kind="key" aria-label="Note 69"><title>Note 69</title>
+<rect x="840.4" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-22" data-kind="key" aria-label="Note 70"><title>Note 70</title>
+<rect x="872.8" y="129" width="32.4" height="144" fill="#000" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-23" data-kind="key" aria-label="Note 71"><title>Note 71</title>
+<rect x="905.2" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+<g id="key-24" data-kind="key" aria-label="Note 72"><title>Note 72</title>
+<rect x="937.6" y="129" width="32.4" height="144" fill="#fff" stroke="#000" stroke-width="1.6"/>
+</g>
+</svg>

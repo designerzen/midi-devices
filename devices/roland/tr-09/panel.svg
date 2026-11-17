@@ -1,223 +1,203 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="img" aria-labelledby="title description">
 <title id="title">Roland TR-09 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="680" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="662" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<rect x="0" y="0" width="1500" height="680" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1482" height="662" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
 <text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland TR-09</text>
 <text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="270" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="master-volume" data-kind="knob~button" aria-label="Volume"><title>Volume</title>
-<rect x="62.001" y="100" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="65" width="270" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-volume" data-kind="button" aria-label="Volume"><title>Volume</title>
+<svg data-symbol="button" x="62.001" y="100.000" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-tempo" data-kind="knob~button" aria-label="Tempo"><title>Tempo</title>
-<rect x="148.001" y="100" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-tempo" data-kind="button" aria-label="Tempo"><title>Tempo</title>
+<svg data-symbol="button" x="148.001" y="100.000" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-total-accent" data-kind="knob~button" aria-label="Total accent" data-control="master-total-accent-knob"><title>Total accent</title>
-<rect x="234.001" y="100" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-total-accent" data-kind="button" aria-label="Total accent" data-control="master-total-accent-knob"><title>Total accent</title>
+<svg data-symbol="button" x="234.001" y="100.000" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-start" data-kind="knob~button" aria-label="Start"><title>Start</title>
-<rect x="62.001" y="151.429" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-start" data-kind="button" aria-label="Start"><title>Start</title>
+<svg data-symbol="button" x="62.001" y="151.429" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-stop-continue" data-kind="knob~button" aria-label="Stop Continue"><title>Stop Continue</title>
-<rect x="148.001" y="151.429" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-stop-continue" data-kind="button" aria-label="Stop Continue"><title>Stop Continue</title>
+<svg data-symbol="button" x="148.001" y="151.429" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-last-step" data-kind="knob~button" aria-label="Last step"><title>Last step</title>
-<rect x="234.001" y="151.429" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-last-step" data-kind="button" aria-label="Last step"><title>Last step</title>
+<svg data-symbol="button" x="234.001" y="151.429" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-scale" data-kind="knob~button" aria-label="Scale"><title>Scale</title>
-<rect x="62.001" y="202.857" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-scale" data-kind="button" aria-label="Scale"><title>Scale</title>
+<svg data-symbol="button" x="62.001" y="202.857" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-shuffle-flam" data-kind="knob~button" aria-label="Shuffle Flam"><title>Shuffle Flam</title>
-<rect x="148.001" y="202.857" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-shuffle-flam" data-kind="button" aria-label="Shuffle Flam"><title>Shuffle Flam</title>
+<svg data-symbol="button" x="148.001" y="202.857" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-clear" data-kind="knob~button" aria-label="Clear"><title>Clear</title>
-<rect x="234.001" y="202.857" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-clear" data-kind="button" aria-label="Clear"><title>Clear</title>
+<svg data-symbol="button" x="234.001" y="202.857" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-instrument-select" data-kind="button~button" aria-label="Instrument select"><title>Instrument select</title>
-<rect x="68.216" y="254.286" width="11.569" height="11.569" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-instrument-select" data-kind="button" aria-label="Instrument select"><title>Instrument select</title>
+<svg data-symbol="button" x="67.000" y="254.286" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-shift" data-kind="knob~button" aria-label="Shift"><title>Shift</title>
-<rect x="148.001" y="254.286" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
+<svg data-symbol="button" x="148.001" y="254.286" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-comp" data-kind="knob~button" aria-label="Comp"><title>Comp</title>
-<rect x="234.001" y="254.286" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-comp" data-kind="button" aria-label="Comp"><title>Comp</title>
+<svg data-symbol="button" x="234.001" y="254.286" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-tempo-2" data-kind="knob~button" aria-label="Tempo"><title>Tempo</title>
-<rect x="62.001" y="305.714" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-tempo-2" data-kind="button" aria-label="Tempo"><title>Tempo</title>
+<svg data-symbol="button" x="62.001" y="305.714" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-back" data-kind="knob~button" aria-label="Back"><title>Back</title>
-<rect x="148.001" y="305.714" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-back" data-kind="button" aria-label="Back"><title>Back</title>
+<svg data-symbol="button" x="148.001" y="305.714" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-forward" data-kind="knob~button" aria-label="Forward"><title>Forward</title>
-<rect x="234.001" y="305.714" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-forward" data-kind="button" aria-label="Forward"><title>Forward</title>
+<svg data-symbol="button" x="234.001" y="305.714" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-available-measure" data-kind="knob~button" aria-label="Available Measure"><title>Available Measure</title>
-<rect x="68.216" y="357.143" width="11.569" height="11.569" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-available-measure" data-kind="button" aria-label="Available Measure"><title>Available Measure</title>
+<svg data-symbol="button" x="67.000" y="357.143" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-cycle-guide" data-kind="knob~button" aria-label="Cycle Guide"><title>Cycle Guide</title>
-<rect x="148.001" y="357.143" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-cycle-guide" data-kind="button" aria-label="Cycle Guide"><title>Cycle Guide</title>
+<svg data-symbol="button" x="148.001" y="357.143" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-menu" data-kind="knob~button" aria-label="Menu"><title>Menu</title>
-<rect x="234.001" y="357.143" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-menu" data-kind="button" aria-label="Menu"><title>Menu</title>
+<svg data-symbol="button" x="234.001" y="357.143" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="master-enter" data-kind="knob~button" aria-label="Enter"><title>Enter</title>
-<rect x="62.001" y="408.571" width="23.999" height="23.999" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="master-enter" data-kind="button" aria-label="Enter"><title>Enter</title>
+<svg data-symbol="button" x="62.001" y="408.571" width="23.999" height="23.999" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<rect x="310" y="65" width="169.231" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="310" y="65" width="169.231" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="bass-drum-tune" data-kind="knob" aria-label="Tune" data-control="bass-drum-tune-knob"><title>Tune</title>
-<circle cx="355.308" cy="176.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M355.308 159.631L355.308 169.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="331.308" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="bass-drum-level" data-kind="knob" aria-label="Level" data-control="bass-drum-level-knob"><title>Level</title>
-<circle cx="433.923" cy="176.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M433.923 159.631L433.923 169.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="409.923" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="bass-drum-attack" data-kind="knob" aria-label="Attack" data-control="bass-drum-attack-knob"><title>Attack</title>
-<circle cx="355.308" cy="356.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M355.308 339.631L355.308 349.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="331.308" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="bass-drum-decay" data-kind="knob" aria-label="Decay" data-control="bass-drum-decay-knob"><title>Decay</title>
-<circle cx="433.923" cy="356.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M433.923 339.631L433.923 349.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="409.923" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="489.231" y="65" width="169.231" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="489.231" y="65" width="169.231" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="snare-tune" data-kind="knob" aria-label="Tune" data-control="snare-tune-knob"><title>Tune</title>
-<circle cx="534.538" cy="176.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M534.538 159.631L534.538 169.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="510.538" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="snare-level" data-kind="knob" aria-label="Level" data-control="snare-level-knob"><title>Level</title>
-<circle cx="613.154" cy="176.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M613.154 159.631L613.154 169.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="589.154" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="snare-tone" data-kind="knob" aria-label="Tone" data-control="snare-tone-knob"><title>Tone</title>
-<circle cx="534.538" cy="356.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M534.538 339.631L534.538 349.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="510.538" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="snare-snappy" data-kind="knob" aria-label="Snappy" data-control="snare-snappy-knob"><title>Snappy</title>
-<circle cx="613.154" cy="356.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M613.154 339.631L613.154 349.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="589.154" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="668.462" y="65" width="124.423" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="668.462" y="65" width="124.423" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="low-tom-tune" data-kind="knob" aria-label="Tune" data-control="low-tom-tune-knob"><title>Tune</title>
-<circle cx="730.673" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M730.673 124.285L730.673 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="706.673" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="low-tom-level" data-kind="knob" aria-label="Level" data-control="low-tom-level-knob"><title>Level</title>
-<circle cx="730.673" cy="266.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M730.673 244.285L730.673 257.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="706.673" y="242.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="low-tom-decay" data-kind="knob" aria-label="Decay" data-control="low-tom-decay-knob"><title>Decay</title>
-<circle cx="730.673" cy="386.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M730.673 364.285L730.673 377.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="706.673" y="362.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="802.885" y="65" width="124.423" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="802.885" y="65" width="124.423" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="mid-tom-tune" data-kind="knob" aria-label="Tune" data-control="mid-tom-tune-knob"><title>Tune</title>
-<circle cx="865.096" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M865.096 124.285L865.096 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="841.096" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="mid-tom-level" data-kind="knob" aria-label="Level" data-control="mid-tom-level-knob"><title>Level</title>
-<circle cx="865.096" cy="266.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M865.096 244.285L865.096 257.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="841.096" y="242.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="mid-tom-decay" data-kind="knob" aria-label="Decay" data-control="mid-tom-decay-knob"><title>Decay</title>
-<circle cx="865.096" cy="386.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M865.096 364.285L865.096 377.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="841.096" y="362.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="937.308" y="65" width="124.423" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="937.308" y="65" width="124.423" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="high-tom-tune" data-kind="knob" aria-label="Tune" data-control="high-tom-tune-knob"><title>Tune</title>
-<circle cx="999.519" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M999.519 124.285L999.519 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="975.519" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="high-tom-level" data-kind="knob" aria-label="Level" data-control="high-tom-level-knob"><title>Level</title>
-<circle cx="999.519" cy="266.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M999.519 244.285L999.519 257.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="975.519" y="242.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="high-tom-decay" data-kind="knob" aria-label="Decay" data-control="high-tom-decay-knob"><title>Decay</title>
-<circle cx="999.519" cy="386.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M999.519 364.285L999.519 377.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="975.519" y="362.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="1071.731" y="65" width="79.615" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="1071.731" y="65" width="79.615" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="rim-clap-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<circle cx="1111.538" cy="267.152" r="16.904" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1111.538 253.248L1111.538 261.235" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1087.538" y="243.152" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="1161.346" y="65" width="124.423" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="1161.346" y="65" width="124.423" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="hi-hat-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<circle cx="1223.558" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1223.558 124.285L1223.558 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1199.558" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="hi-hat-closed-decay" data-kind="knob" aria-label="Closed decay" data-control="hi-hat-closed-decay-knob"><title>Closed decay</title>
-<circle cx="1223.558" cy="266.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1223.558 244.285L1223.558 257.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1199.558" y="242.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="hi-hat-open-decay" data-kind="knob" aria-label="Open decay" data-control="hi-hat-open-decay-knob"><title>Open decay</title>
-<circle cx="1223.558" cy="386.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1223.558 364.285L1223.558 377.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1199.558" y="362.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="1295.769" y="65" width="169.231" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="1295.769" y="65" width="169.231" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="cymbals-crash-level" data-kind="knob" aria-label="Crash level" data-control="cymbals-crash-level-knob"><title>Crash level</title>
-<circle cx="1341.077" cy="176.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1341.077 159.631L1341.077 169.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1317.077" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="cymbals-crash-tune" data-kind="knob" aria-label="Crash tune" data-control="cymbals-crash-tune-knob"><title>Crash tune</title>
-<circle cx="1419.692" cy="176.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1419.692 159.631L1419.692 169.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1395.692" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="cymbals-ride-level" data-kind="knob" aria-label="Ride level" data-control="cymbals-ride-level-knob"><title>Ride level</title>
-<circle cx="1341.077" cy="356.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1341.077 339.631L1341.077 349.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1317.077" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="cymbals-ride-tune" data-kind="knob" aria-label="Ride tune" data-control="cymbals-ride-tune-knob"><title>Ride tune</title>
-<circle cx="1419.692" cy="356.285" r="19.654" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1419.692 339.631L1419.692 349.406" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="1395.692" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<rect x="25" y="490" width="1450" height="130" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="490" width="1450" height="130" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="steps-1" data-kind="button" aria-label="1"><title>1</title>
-<rect x="60.938" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="51.938" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-2" data-kind="button" aria-label="2"><title>2</title>
-<rect x="150.812" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="141.812" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-3" data-kind="button" aria-label="3"><title>3</title>
-<rect x="240.688" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="231.688" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-4" data-kind="button" aria-label="4"><title>4</title>
-<rect x="330.562" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="321.562" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-5" data-kind="button" aria-label="5"><title>5</title>
-<rect x="420.438" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="411.438" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-6" data-kind="button" aria-label="6"><title>6</title>
-<rect x="510.312" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="501.312" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-7" data-kind="button" aria-label="7"><title>7</title>
-<rect x="600.188" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="591.188" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-8" data-kind="button" aria-label="8"><title>8</title>
-<rect x="690.062" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="681.062" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-9" data-kind="button" aria-label="9"><title>9</title>
-<rect x="779.938" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="770.938" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-10" data-kind="button" aria-label="10"><title>10</title>
-<rect x="869.812" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="860.812" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-11" data-kind="button" aria-label="11"><title>11</title>
-<rect x="959.688" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="950.688" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-12" data-kind="button" aria-label="12"><title>12</title>
-<rect x="1049.562" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1040.562" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-13" data-kind="button" aria-label="13"><title>13</title>
-<rect x="1139.438" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1130.438" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-14" data-kind="button" aria-label="14"><title>14</title>
-<rect x="1229.312" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1220.312" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-15" data-kind="button" aria-label="15"><title>15</title>
-<rect x="1319.188" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1310.188" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="steps-16" data-kind="button" aria-label="16"><title>16</title>
-<rect x="1409.062" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1400.062" y="534.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 </svg>

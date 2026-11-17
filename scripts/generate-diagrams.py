@@ -9,6 +9,7 @@ import re
 import textwrap
 from html import escape
 from pathlib import Path
+from tactile import DEFS, SOURCE, symbol
 
 ROOT = Path(__file__).resolve().parent.parent
 PROFILES = {json.loads(p.read_text(encoding="utf-8"))["id"]: p for p in (ROOT / "devices").glob("*/*/*.json")}
@@ -17,6 +18,10 @@ LAYOUTS = {}
 
 def slug(value):
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+
+
+def normalise_label(value):
+    return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
 def number(value):
@@ -28,13 +33,15 @@ class Drawing:
         self.width=width;self.height=height;self.parts=[]
         self.parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title description">')
         self.parts.append(f'<title id="title">{escape(name)}</title><desc id="description">{escape(description)}</desc>')
+        self.parts.append(f'<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; {SOURCE}. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>')
+        self.parts.append(DEFS)
         self.parts.append('<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>')
         self.rect(0,0,width,height,fill="#fff",stroke="none")
 
     def rect(self,x,y,w,h,**attrs):
         attrs={"fill":"#fff","stroke":"#000","stroke_width":1.6,**attrs}
         args=" ".join(f'{k.replace("_","-")}="{escape(str(v))}"' for k,v in attrs.items())
-        self.parts.append(f'<rect x="{number(x)}" y="{number(y)}" width="{number(w)}" height="{number(h)}" class="line" {args}/>')
+        self.parts.append(f'<rect x="{number(x)}" y="{number(y)}" width="{number(w)}" height="{number(h)}" {args}/>')
 
     def line(self,x1,y1,x2,y2):
         self.parts.append(f'<path d="M{number(x1)} {number(y1)}L{number(x2)} {number(y2)}" fill="none" stroke="#000" stroke-width="1"/>')
@@ -42,7 +49,7 @@ class Drawing:
     def circle(self,x,y,r,**attrs):
         attrs={"fill":"#fff","stroke":"#000","stroke-width":1.6,**attrs}
         args=" ".join(f'{k}="{v}"' for k,v in attrs.items())
-        self.parts.append(f'<circle cx="{number(x)}" cy="{number(y)}" r="{number(r)}" class="line" {args}/>')
+        self.parts.append(f'<circle cx="{number(x)}" cy="{number(y)}" r="{number(r)}" {args}/>')
 
     def text(self,x,y,label,size=12,anchor="middle",width=None,bold=False):
         label=str(label)
@@ -57,11 +64,16 @@ class Drawing:
 def draw_control(draw, kind, label, x, y, w, h, labelled, identifier, binding=None):
     draw.parts.append(f'<g id="{escape(identifier)}" data-kind="{kind}" aria-label="{escape(label)}"'+(f' data-control="{binding}"' if binding else '')+f'><title>{escape(label)}</title>')
     # Reserve the bottom part of each cell for labels; geometry is identical in both views.
-    label_size=min(11,max(7,w*.14))
+    label_size=min(11,max(5,min(w*.14,(h-25)/2)))
     label_lines=textwrap.wrap(label,max(3,int((w-5)/(label_size*.55))))
     label_height=len(label_lines)*label_size*1.13+3
-    gh=max(8,h-label_height-8);cx=x+w/2;cy=y+gh/2+3
-    if kind in ["knob","touch"]:
+    gh=max(20,h-label_height-6);cx=x+w/2;cy=y+gh/2+3
+    tactile_kind = "power" if label.lower() in ["power", "power on/off"] else kind
+    tactile_kind = {"horizontal-strip": "horizontal-fader"}.get(tactile_kind, tactile_kind)
+    glyph = symbol(tactile_kind, x+3, y+3, w-6, gh-2)
+    if glyph:
+        draw.parts.append(glyph)
+    elif kind in ["knob","touch"]:
         r=min(w*.25,gh*.36,25);draw.circle(cx,cy,r);draw.line(cx,cy-r+3,cx,cy-r*.35)
         if kind=="touch":draw.circle(cx,cy,r*.8)
     elif kind in ["fader","strip","wheel"]:
@@ -95,17 +107,21 @@ def draw_control(draw, kind, label, x, y, w, h, labelled, identifier, binding=No
     else:
         size=max(6,min(w-12,gh-4,30 if kind=="button" else 10000));draw.rect(cx-size/2,cy-size/2,size,size,rx=3 if kind!="key" else 1)
     if labelled:draw.text(cx,y+h-4-(len(label_lines)-1)*label_size*1.13,label,label_size,width=w-5)
+    # Only label explicitly named waveforms; do not guess a selector's current value.
+    waveform = next((glyph for word,glyph in [("sawtooth","wave-saw"),("saw","wave-saw"),("pulse","wave-pulse"),("triangle","wave-triangle"),("sine","wave-sine"),("square","wave-square")] if label.lower() in [word,word+" out"]),None)
+    if waveform and w>40 and gh>30:draw.parts.append(symbol(waveform,x+4,y+4,20,20))
     draw.parts.append("</g>")
 
 
 def keyboard(draw,spec,labelled):
     count,x,y,width,height=spec["keyboard"];style=spec["style"]
-    notes=list(range(count));whites=[n for n in notes if n%12 not in [1,3,6,8,10]]
+    first=spec.get("firstNote",48)
+    notes=list(range(count));whites=[n for n in notes if (first+n)%12 not in [1,3,6,8,10]]
     ww=width/len(whites);positions={n:i for i,n in enumerate(whites)};elements=[]
     draw.parts.append('<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>')
     for black in [False,True]:
         for n in notes:
-            is_black=n%12 in [1,3,6,8,10]
+            is_black=(first+n)%12 in [1,3,6,8,10]
             if black!=is_black:continue
             xx=x+(sum(v<n for v in whites)-.31)*ww if black else x+positions[n]*ww
             w=ww*.62 if black else ww;hh=height*.61 if black else height
@@ -115,7 +131,7 @@ def keyboard(draw,spec,labelled):
             if style in ["keywave","capacitive","buchla"]:draw.line(xx+w/2,y+12,xx+w/2,y+hh-12)
             if labelled and not black:draw.text(xx+w/2,y+height-9,str(n+1),9)
             draw.parts.append("</g>")
-            elements.append({"id":f"key-{n+1}","label":label,"kind":"key","position":{"x":xx/draw.width*100,"y":y/draw.height*100,"width":w/draw.width*100,"height":hh/draw.height*100},"message":{"type":"note","number":48+n},"learnable":True,"dark":black})
+            elements.append({"id":f"key-{n+1}","label":label,"kind":"key","position":{"x":xx/draw.width*100,"y":y/draw.height*100,"width":w/draw.width*100,"height":hh/draw.height*100},"message":{"type":"note","number":first+n},"learnable":True,"dark":black})
     draw.parts.append("</g>")
     return elements
 
@@ -139,7 +155,14 @@ def render_device(identifier,spec,profile,folder):
             if labelled:draw.text(x+7,y+14,section["label"],9,"start",width=w-14,bold=True)
             cw=(w-12)/cols;ch=(h-35)/rows
             for i,value in enumerate(labels):
-                label,sep,kind=value.partition("~");kind=kind if sep else section["kind"]
+                label,sep,kind=value.partition("~");kind=kind.split("~")[-1] if sep else section["kind"]
+                if kind=="jack":
+                    # Direction comes from an explicit label or the documented port inventory.
+                    match=next((p for p in spec["ports"] if normalise_label(p["label"])==normalise_label(label)),None)
+                    if match and match["direction"] in ["input","output","bidirectional"]:kind=match["direction"]
+                    elif re.search(r"\bOUT\b|\bphones\b",label,re.I):kind="output"
+                    elif re.search(r"\bIN\b|^DC\b",label,re.I):kind="input"
+                    elif "USB" in label:kind="bidirectional"
                 key=slug(section["label"]+"-"+label);base=key;suffix=2
                 while key in used:key=f"{base}-{suffix}";suffix+=1
                 used.add(key)
@@ -148,9 +171,11 @@ def render_device(identifier,spec,profile,folder):
                 if section.get("positions"):
                     px,py,pw,ph=section["positions"][i]
                     xx=x+px*w;yy=y+30+py*(h-35);item_w=pw*w;item_h=ph*(h-35)
-                binding=spec.get("bindings",{}).get(key) or next((c["id"] for c in bindings if c["id"]==key or slug(c["label"])==key or slug(c["label"])==slug(label)),None)
+                binding=spec.get("bindings",{}).get(key)
+                if not binding and spec.get("autoBind",True):
+                    binding=next((c["id"] for c in bindings if c["id"]==key or slug(c["label"])==key or slug(c["label"])==slug(label)),None)
                 draw_control(draw,kind,label,xx,yy,item_w,item_h,labelled,key,binding)
-                e={"id":key,"label":section["label"]+": "+label,"kind":kind if kind in ["key","pad","button","knob","fader"] else "fader" if kind in ["strip","wheel","horizontal-strip"] else "button","position":{"x":xx/spec["width"]*100,"y":yy/spec["height"]*100,"width":item_w/spec["width"]*100,"height":item_h/spec["height"]*100}}
+                e={"id":key,"label":section["label"]+": "+label,"kind":kind,"position":{"x":xx/spec["width"]*100,"y":yy/spec["height"]*100,"width":item_w/spec["width"]*100,"height":item_h/spec["height"]*100}}
                 if binding:e["control"]=binding
                 current.append(e)
         if "keyboard" in spec:current+=keyboard(draw,spec,labelled)
@@ -179,39 +204,58 @@ def render_connections(spec,profile,folder):
         for i,p in enumerate(ports):
             y=145+i*62;key=f"port-{c}-{i+1}";label=p["label"];draw.parts.append(f'<g id="{key}" aria-label="{escape(label)}" data-direction="{p["direction"]}"><title>{escape(label)}</title>')
             connector=p["connector"]
-            if "USB" in connector:draw.rect(x+16,y,30,20,rx=3)
-            elif "DIN" in connector:
-                draw.circle(x+31,y+10,13)
-                for j in range(5):draw.circle(x+23+j*4,y+12+abs(j-2)*-2,1)
-            else:draw.circle(x+31,y+10,11);draw.circle(x+31,y+10,4)
+            draw.parts.append(symbol(p["direction"] if p["direction"] in ["input","output","bidirectional"] else "input",x+12,y-5,38,38))
             draw.text(x+62,y+11,label,13,"start",width=315,bold=True)
             draw.text(x+62,y+32,connector+" / "+p["location"],10,"start",width=365)
-            symbol="IN >" if p["direction"]=="input" else "> OUT" if p["direction"]=="output" else "< >" if p["direction"]=="bidirectional" else "CONTROL"
-            draw.text(x+448,y+11,symbol,8,"end");draw.parts.append("</g>")
+            direction_label="IN >" if p["direction"]=="input" else "> OUT" if p["direction"]=="output" else "< >" if p["direction"]=="bidirectional" else "CONTROL"
+            draw.text(x+448,y+11,direction_label,8,"end");draw.parts.append("</g>")
     draw.text(25,ports_height+28,"PHYSICAL CONTROLS / see interface.svg for labelled positions",12,"start",bold=True)
     for i,line in enumerate(inventory):
         draw.text(25,ports_height+52+i*18,line,11,"start")
     draw.save(folder/"connections.svg")
 
 
+def render_existing_surface(profile,folder):
+    """Restyle partial profiles without inventing missing hardware layout data."""
+    surface=profile["surface"];width=surface["width"];height=surface["height"]
+    if not surface["elements"]:return
+    for labelled,filename in [(False,"panel.svg"),(True,"interface.svg")]:
+        draw=Drawing(profile["name"]+" schematic",width,height,"Partial conceptual surface. Existing virtual assignments and positions are preserved; consult the device documentation for physical hardware layout.")
+        draw.text(20,35,profile["name"],20,"start")
+        for item in surface["elements"]:
+            p=item["position"];x=p["x"]*width/100;y=p["y"]*height/100;w=p["width"]*width/100;h=p["height"]*height/100
+            if item["kind"]=="key":
+                draw.parts.append(f'<g id="{escape(item["id"])}" data-kind="key" aria-label="{escape(item["label"])}"><title>{escape(item["label"])}</title>')
+                draw.rect(x,y,w,h,fill="#000" if item.get("dark") else "#fff")
+                draw.parts.append("</g>")
+            else:
+                draw_control(draw,item["kind"],item["label"],x,y,w,h,labelled,item["id"],item.get("control"))
+        draw.save(folder/filename)
+
+
 def main():
     LAYOUTS.update(json.loads((ROOT / "scripts" / "diagram-layouts.json").read_text(encoding="utf-8")))
-    missing=set(PROFILES)-set(LAYOUTS)
-    if missing:raise ValueError(f"Missing hardware layouts: {missing}")
     for identifier,path in PROFILES.items():
-        profile=json.loads(path.read_text(encoding="utf-8"));spec=LAYOUTS[identifier];folder=path.parent
-        elements=render_device(identifier,spec,profile,folder)
-        render_connections(spec,profile,folder)
+        profile=json.loads(path.read_text(encoding="utf-8"));folder=path.parent
+        spec=LAYOUTS.get(identifier)
+        if spec:
+            elements=render_device(identifier,spec,profile,folder)
+            profile["surface"]={"src":"interface.svg","width":spec["width"],"height":spec["height"],"elements":elements}
+        else:
+            render_existing_surface(profile,folder)
+            spec={"ports":profile.get("connections",[]),"groups":[],"references":profile.get("diagramSources",[])}
+        if spec["ports"] or identifier in LAYOUTS:render_connections(spec,profile,folder)
+        if spec.get("iconFromPanel") or not (folder/"icon.svg").exists():
+            (folder/"icon.svg").write_text((folder/"panel.svg").read_text(encoding="utf-8"),encoding="utf-8",newline="\n")
         profile["diagrams"]={"panel":"panel.svg","connections":"connections.svg","interface":"interface.svg"}
-        profile["surface"]={"src":"interface.svg","width":spec["width"],"height":spec["height"],"elements":elements}
         profile["connections"]=spec["ports"]
-        profile["diagramSources"]=spec["references"]
+        profile["diagramSources"]=list(dict.fromkeys(spec["references"]+[SOURCE]))
         notice=profile.get("notice","")
         notice=re.sub(r" Panel art is a schematic, not a scale hardware diagram\.","",notice)
         notice=re.sub(r" Surface notes are virtual chromatic pads starting at note 48, not factory keyboard octave assignments\.","",notice)
         profile["notice"]=notice
         path.write_text(json.dumps(profile,indent="\t",ensure_ascii=False)+"\n",encoding="utf-8",newline="\n")
-    print(f"Generated {len(LAYOUTS)*3} monochrome SVG diagrams for {len(LAYOUTS)} devices")
+    print(f"Generated {len(PROFILES)*3} monochrome SVG diagrams for {len(PROFILES)} devices")
 
 
 if __name__=="__main__":main()

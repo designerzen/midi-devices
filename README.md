@@ -12,6 +12,8 @@ The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native
 
 ## Layout
 
+Device diagrams use the [NYU SynthAccess tactile symbol vocabulary](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides): striped-ring knobs, distinct input/output/bidirectional jack shapes, switches, sliders and buttons. The catalogue includes source-backed controls and layouts for Superlative SB01, Roland V-STAGE 76/88 and the MIDI-equipped Korg ARP 2600 FS. Guide references are attached to the individual profiles. Original pre-MIDI instruments are not added as MIDI devices.
+
 ```
 devices/
   index.json                      [{ "id": "akai-mpk-mini-mk3", "path": "akai/mpk-mini-mk3" }, …]

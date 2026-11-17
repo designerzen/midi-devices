@@ -20,7 +20,11 @@ test("built data and query endpoint return only the requested device in either f
 	await buildApi({
 		entries: [
 			{ id: "korg-minilogue", path: "korg/minilogue" },
-			{ id: "roland-tr-909", path: "roland/tr-909" }
+			{ id: "roland-tr-909", path: "roland/tr-909" },
+			{ id: "superlative-sb01", path: "superlative/sb01" },
+			{ id: "korg-arp-2600-fs", path: "korg/arp-2600-fs" },
+			{ id: "roland-v-stage-76", path: "roland/v-stage-76" },
+			{ id: "roland-v-stage-88", path: "roland/v-stage-88" }
 		],
 		devicesDirectory: MIDI_DEVICE_DIRECTORY,
 		outDirectory: directory,
@@ -32,7 +36,7 @@ test("built data and query endpoint return only the requested device in either f
 	await once(server, "listening")
 	t.after(() => new Promise((resolve) => server.close(resolve)))
 	const base = `http://127.0.0.1:${server.address().port}/api/v1/`
-	for (const id of ["korg-minilogue", "roland-tr-909"]) {
+	for (const id of ["korg-minilogue", "roland-tr-909", "superlative-sb01", "korg-arp-2600-fs", "roland-v-stage-76", "roland-v-stage-88"]) {
 		for (const format of ["json", "xml"]) {
 			const response = await fetch(`${base}device?id=${id}&format=${format}`)
 			assert.equal(response.status, 200)
@@ -62,4 +66,8 @@ test("built data and query endpoint return only the requested device in either f
 	for (const resource of ["index", "devices", "manufacturers", "manufacturers/korg", "midi/korg-minilogue", "ports"]) {
 		assert.equal((await fetch(`${base}${resource}.xml`)).status, 200)
 	}
+	const index = await (await fetch(`${base}index.json`)).json()
+	assert.equal(index.count, 6)
+	assert.equal(index.links.accessibility, undefined)
+	assert.equal((await fetch(`${base}accessibility/tactile-synth-guides.json`)).status, 404)
 })

@@ -1,156 +1,157 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 540" role="img" aria-labelledby="title description">
 <title id="title">Arturia KeyStep top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="540" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="522" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<rect x="0" y="0" width="1250" height="540" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1232" height="522" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
 <text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Arturia KeyStep</text>
 <text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="1190" height="130" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="65" width="1190" height="130" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="seq-arp-seq-arp" data-kind="switch" aria-label="Seq / Arp"><title>Seq / Arp</title>
-<rect x="99.625" y="121.785" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="95.625" y="129.785" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<svg data-symbol="switch" x="80.625" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
 <g id="seq-arp-mode" data-kind="knob" aria-label="Mode"><title>Mode</title>
-<circle cx="251.875" cy="133.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M251.875 111.785L251.875 125.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="227.875" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="seq-arp-time-division" data-kind="knob" aria-label="Time division"><title>Time division</title>
-<circle cx="399.125" cy="133.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M399.125 111.785L399.125 125.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="375.125" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="seq-arp-rate" data-kind="knob" aria-label="Rate"><title>Rate</title>
-<circle cx="546.375" cy="133.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M546.375 111.785L546.375 125.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg data-symbol="knob" x="522.375" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
 <g id="seq-arp-tap-rest" data-kind="button" aria-label="Tap / Rest"><title>Tap / Rest</title>
-<rect x="678.625" y="118.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="669.625" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="seq-arp-rec" data-kind="button" aria-label="Rec"><title>Rec</title>
-<rect x="825.875" y="118.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="816.875" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="seq-arp-stop" data-kind="button" aria-label="Stop"><title>Stop</title>
-<rect x="973.125" y="118.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="964.125" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="seq-arp-play-pause" data-kind="button" aria-label="Play / Pause"><title>Play / Pause</title>
-<rect x="1120.375" y="118.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="1111.375" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<rect x="25" y="225" width="130" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="25" y="225" width="130" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 <g id="performance-hold" data-kind="button" aria-label="Hold"><title>Hold</title>
-<rect x="45.5" y="272.833" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="36.500" y="263.833" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="performance-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<rect x="104.5" y="272.833" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="95.500" y="263.833" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="performance-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="45.5" y="352.833" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="36.500" y="343.833" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="performance-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="104.5" y="352.833" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg data-symbol="button" x="95.500" y="343.833" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 <g id="performance-pitch" data-kind="strip" aria-label="Pitch"><title>Pitch</title>
-<rect x="50.175" y="420" width="20.65" height="51.666" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="6.883333333333333"/>
-<path d="M60.5 425L60.5 467.666" fill="none" stroke="#000" stroke-width="1"/>
+<rect x="50.175" y="420" width="20.65" height="53.666" fill="#fff" stroke="#000" stroke-width="1.6" rx="6.883333333333333"/>
+<path d="M60.5 425L60.5 469.666" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="performance-mod" data-kind="strip" aria-label="Mod"><title>Mod</title>
-<rect x="109.175" y="420" width="20.65" height="51.666" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="6.883333333333333"/>
-<path d="M119.5 425L119.5 467.666" fill="none" stroke="#000" stroke-width="1"/>
+<rect x="109.175" y="420" width="20.65" height="53.666" fill="#fff" stroke="#000" stroke-width="1.6" rx="6.883333333333333"/>
+<path d="M119.5 425L119.5 469.666" fill="none" stroke="#000" stroke-width="1"/>
 </g>
 <g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
 <g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="170" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="170" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="225" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="225" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="280" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="280" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="335" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="335" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="390" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="390" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="445" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="445" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="500" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="500" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="555" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="555" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="610" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="610" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="665" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="665" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="720" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="720" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="775" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="775" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="830" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="830" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="885" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="885" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="940" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="940" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="995" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="995" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="1050" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1050" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="1105" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1105" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="1160" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1160" y="225" width="55" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="207.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="207.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="262.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="262.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="372.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="372.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="427.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="427.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="482.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="482.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="592.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="592.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="647.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="647.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="757.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="757.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="812.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="812.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="867.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="867.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="977.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="977.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="1032.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1032.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 <g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="1142.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<rect x="1142.95" y="225" width="34.1" height="167.75" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
 </g>
 </svg>

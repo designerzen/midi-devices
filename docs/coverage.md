@@ -45,6 +45,8 @@ The Soundbeam catalogue now covers every Soundbeam instrument family listed in t
 
 ## Connecting older hardware
 
+The Superlative SB01, Roland V-STAGE 76/88 and Korg ARP 2600 FS profiles incorporate individual control and connection inventories from [NYU SynthAccess tactile guides](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides), cross-checked against the manufacturers' manuals. The SB01 and ARP 2600 FS entries explicitly distinguish their MIDI-equipped hardware from the original SH-101 and ARP 2600. The System-100 and Serge guides are not independent MIDI device entries. Analog panel controls are recorded as physical controls without guessed CC assignments.
+
 Connect hardware MIDI OUT to the interface MIDI IN to receive a performance. Connect interface MIDI OUT to hardware MIDI IN to play the hardware. Select matching MIDI channels; use each manual's receive filters and sync settings where applicable. MIDI cables do not carry audio, so a synthesizer's audio outputs still need an audio connection.
 
 DIN-connected hardware normally appears under the interface's name. These new legacy profiles therefore leave `portNames` empty rather than claiming generic interface aliases. Let the user select the profile for the port manually. App-mediated accessible devices likewise need the correct software routing before a MIDI application can receive their output.
