@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Open MIDI hardware profiles: panel diagrams, icons, MIDI control mappings and setup guides, free for any application to use." />
-		<title>MIDI device catalog</title>
+		<title>MIDI device discovery</title>
 		<style>
 			:root { color-scheme: dark; font-family: system-ui, sans-serif; color: #e5edf5; background: #0b1420; }
 			* { box-sizing: border-box; }
@@ -31,7 +31,19 @@
 			header p { color: #b1c0cf; max-width: 65ch; line-height: 1.7; }
 			#status { color: #9cddcf; }
 			main { padding-top: 0; }
-			#catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 540px), 1fr)); gap: 1.5rem; align-items: start; }
+			#catalog, #connected-devices { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 540px), 1fr)); gap: 1.5rem; align-items: start; }
+			[hidden] { display: none !important; }
+			#connected-section { margin-bottom: 3rem; }
+			#connected-section > h2, #all-devices-heading { font-size: 1.8rem; margin-bottom: 1rem; }
+			.port-metadata { border-top: 1px solid #304052; margin-top: 1rem; }
+			.port-metadata dd { word-break: break-word; }
+			.profile-picker { display: grid; gap: 0.5rem; margin-top: 1rem; }
+			.profile-picker select { width: 100%; min-width: 0; font: inherit; padding: 0.7rem; color: #e5edf5; background: #0b1420; border: 1px solid #64748b; border-radius: 6px; }
+			#midi-monitor { margin-bottom: 3rem; padding: 1.25rem; border: 1px solid #304052; border-radius: 12px; background: #132131; }
+			#midi-monitor .table-scroll { max-height: 420px; overflow: auto; }
+			#midi-monitor th { position: sticky; top: 0; background: #132131; }
+			#midi-monitor td:last-child { font-family: ui-monospace, monospace; overflow-wrap: anywhere; min-width: 10ch; }
+			.input-activity { color: #b8f1df; }
 			article { background: #132131; border: 1px solid #304052; border-radius: 14px; padding: 1.5rem; min-width: 0; }
 			.device-heading { display: flex; align-items: center; gap: 1rem; }
 			.icon { width: 64px; height: 64px; object-fit: contain; background: white; border-radius: 8px; padding: 5px; flex-shrink: 0; }
@@ -63,15 +75,32 @@
 		<a class="skip" href="#catalog">Skip to devices</a>
 		<header>
 			<nav aria-label="Site navigation"><a href="https://github.com/designerzen/midi-devices">Source on GitHub</a><a href="https://github.com/designerzen/midi-devices/blob/main/docs/api.md">API documentation</a><a href="https://github.com/designerzen/midi-devices/blob/main/docs/profiles.md">Profile guide</a><a href="api/v1/index.json">JSON API</a><a href="index.json">Device index</a><a href="profile.schema.json">Profile schema</a><a href="https://github.com/designerzen/harmoneasy">Harmoneasy</a></nav>
-			<h1>MIDI device catalog</h1>
+			<h1>MIDI device discovery</h1>
 			<p id="build-version">Version __BUILD_VERSION__ · Commit <a href="https://github.com/designerzen/midi-devices/commit/__BUILD_COMMIT__" title="__BUILD_COMMIT__">__BUILD_SHORT_COMMIT__</a> · Built <time datetime="__BUILD_TIME__">__BUILD_TIME__</time>. <a href="https://github.com/designerzen/midi-devices/commits/main/">Compare with latest commit</a> · <a href="version.json">Build details</a></p>
-			<p>Explore the available hardware profiles, their panel diagrams, MIDI controls and setup guides. Expand any device for its full details.</p>
-			<p>Every file here is public and CORS-enabled: fetch <a href="index.json"><code>index.json</code></a> for the list of <code>{ id, path }</code> entries, then <code>{path}/{id}.json</code> for each profile, with its icon and panel SVG alongside. The <a href="api/v1/index.json">JSON API</a> and <a href="client.js">JavaScript client</a> add summaries, manufacturers and port-name matching.</p>
+			<p>Detect your connected MIDI hardware, inspect device images and port details, and play your instrument to see incoming MIDI events.</p>
 			<p id="status" role="status" aria-live="polite">Loading device profiles…</p>
 			<button id="detect-midi" type="button" aria-describedby="midi-status" disabled>Detect connected devices</button>
-			<p id="midi-status" role="status" aria-live="polite">Allow MIDI access to highlight connected hardware. Devices behind a generic MIDI interface may not be identifiable by name.</p>
+			<label><input id="include-sysex" type="checkbox" /> Include SysEx (requires browser permission)</label>
+			<p><a href="#connected-section">Connected device cards</a> · <a href="#midi-monitor">Live incoming events</a></p>
+			<p id="midi-status" role="status" aria-live="polite">Allow MIDI access to see cards for all connected MIDI inputs and outputs.</p>
 		</header>
 		<main>
+			<section id="connected-section" aria-labelledby="connected-heading">
+				<h2 id="connected-heading">Connected MIDI devices</h2>
+				<p id="connected-empty">Click Detect connected devices to show your hardware, images and MIDI port details here.</p>
+				<div id="connected-devices" aria-label="Connected MIDI devices"></div>
+			</section>
+			<section id="midi-monitor" aria-labelledby="midi-monitor-heading">
+				<h2 id="midi-monitor-heading">Live incoming MIDI events</h2>
+				<p id="event-status" role="status">Detect connected devices, then play your instrument. Every incoming message type is shown; the latest 200 events are retained.</p>
+				<p id="input-errors" class="error" hidden></p>
+				<button id="clear-events" type="button">Clear events</button>
+				<div class="table-scroll"><table aria-label="Incoming MIDI messages">
+					<thead><tr><th scope="col">Time (UTC)</th><th scope="col">MIDI input</th><th scope="col">Message</th><th scope="col">Raw bytes (hex)</th></tr></thead>
+					<tbody id="midi-events"></tbody>
+				</table></div>
+			</section>
+			<h2 id="all-devices-heading">All device profiles</h2>
 			<form id="filters" class="filter-bar" role="search" aria-label="Filter MIDI devices">
 				<label class="filter-field" for="device-search">Search devices or manufacturers
 					<input id="device-search" type="search" placeholder="Try DX7, Roland, or Soundbeam" aria-controls="catalog" disabled />
@@ -88,6 +117,21 @@
 		</main>
 		<footer>Diagrams are schematic. MIDI mappings and available features depend on the hardware settings; check each device’s setup notes.</footer>
 		<script type="module">
+			import { connectedMidiDevices, describeMidiMessage } from "./midi-connections.js?v=__BUILD_COMMIT__"
+			const connectedCards = document.getElementById("connected-devices")
+			const connectedEmpty = document.getElementById("connected-empty")
+			const assignments = new Map()
+			const includeSysex = document.getElementById("include-sysex")
+			const eventStatus = document.getElementById("event-status")
+			const eventBody = document.getElementById("midi-events")
+			const inputErrors = document.getElementById("input-errors")
+			const inputListeners = new Map()
+			const inputActivity = new Map()
+			const activityNodes = new Map()
+			const failures = new Map()
+			const events = []
+			let receivedEvents = 0
+			let monitorTimer
 			const catalog = document.getElementById("catalog")
 			const status = document.getElementById("status")
 			const detectMidi = document.getElementById("detect-midi")
@@ -133,11 +177,11 @@
 				if (!response.ok) throw new Error(`Could not load ${url}`)
 				return response.json()
 			}
-			const render = (id, profile, devicePath) => {
+			const render = (id, profile, devicePath, prefix = "device") => {
 				const folder = new URL(`${devicePath}/`, registry)
 				const card = element("article")
-				card.id = `device-${id}`
-				card.setAttribute("aria-labelledby", `${id}-name`)
+				card.id = `${prefix}-${id}`
+				card.setAttribute("aria-labelledby", `${prefix}-${id}-name`)
 				const heading = element("div", undefined, "device-heading")
 				const icon = asset(folder, profile.icon)
 				if (icon) {
@@ -149,7 +193,7 @@
 				}
 				const title = element("div")
 				const name = element("h2", profile.name)
-				name.id = `${id}-name`
+				name.id = `${prefix}-${id}-name`
 				const connection = element("span", "Connection not checked", "connection-status")
 				const ports = element("p", undefined, "connection-ports")
 				ports.hidden = true
@@ -247,6 +291,60 @@
 				return card
 			}
 			const normalise = (value) => String(value ?? "").trim().toLowerCase()
+			const activityText = (id) => {
+				if (failures.has(id)) return "Could not open MIDI input. Refresh connections to retry."
+				const activity = inputActivity.get(id)
+				return activity ? `${activity.count} incoming events · Last: ${activity.message} at ${activity.time} UTC` : "Listening · No incoming events yet"
+			}
+			const renderEvents = () => {
+				clearTimeout(monitorTimer)
+				monitorTimer = undefined
+				eventBody.replaceChildren(...events.map((event) => {
+					const row = element("tr")
+					for (const value of [event.time, event.name, event.message, event.hex]) row.append(element("td", value))
+					return row
+				}))
+				eventStatus.textContent = `${receivedEvents} incoming events received · Showing latest ${events.length} · ${midiAccess?.sysexEnabled ? "SysEx enabled" : "SysEx disabled"}.`
+				for (const [id, node] of activityNodes) node.textContent = activityText(id)
+			}
+			const listenToInputs = () => {
+				for (const [port, listener] of inputListeners) {
+					if (port.state !== "connected" || ![...midiAccess.inputs.values()].includes(port)) {
+						port.removeEventListener("midimessage", listener)
+						inputListeners.delete(port)
+						failures.delete(port.id)
+					}
+				}
+				for (const port of midiAccess.inputs.values()) {
+					if (port.state !== "connected" || inputListeners.has(port)) continue
+					const listener = (event) => {
+						const time = new Date().toISOString().slice(11, 23)
+						const message = describeMidiMessage(event.data)
+						receivedEvents++
+						inputActivity.set(port.id, { count: (inputActivity.get(port.id)?.count ?? 0) + 1, message, time })
+						events.unshift({ time, name: port.name || port.id, message, hex: Array.from(event.data, (byte) => byte.toString(16).padStart(2, "0").toUpperCase()).join(" ") })
+						if (events.length > 200) events.length = 200
+						monitorTimer ??= setTimeout(renderEvents, 50)
+					}
+					port.addEventListener("midimessage", listener)
+					inputListeners.set(port, listener)
+					port.open().catch((error) => {
+						failures.set(port.id, `${port.name || port.id}: ${error.message || "Could not open MIDI input"}`)
+						inputErrors.textContent = [...failures.values()].join(" · ")
+						inputErrors.hidden = false
+						const node = activityNodes.get(port.id)
+						if (node) node.textContent = "Could not open input. Refresh connections to retry."
+					})
+				}
+				inputErrors.textContent = [...failures.values()].join(" · ")
+				inputErrors.hidden = failures.size === 0
+			}
+			document.getElementById("clear-events").addEventListener("click", () => {
+				events.length = 0
+				receivedEvents = 0
+				inputActivity.clear()
+				renderEvents()
+			})
 			const updateFilters = () => {
 				const terms = normalise(search.value).split(/\s+/).filter(Boolean)
 				const manufacturer = manufacturerFilter.value
@@ -274,27 +372,74 @@
 			const updateConnections = () => {
 				if (!midiAccess) return
 				const matches = new Map()
-				const unmatched = new Set()
 				const devices = [...deviceCards.entries()]
-				for (const [direction, ports] of [["Input", midiAccess.inputs], ["Output", midiAccess.outputs]]) {
-					for (const port of ports.values()) {
-						if (port.state !== "connected") continue
-						// Use the registry's exact, case-insensitive IDs and aliases; a
-						// different generation or a similarly named virtual port is not a match.
-						const match = devices.find(([id, { profile }]) =>
-							(profile.ids ?? [id]).some((alias) => normalise(alias) === normalise(port.id))
-						) ?? devices.find(([, { profile }]) =>
-							(profile.portNames ?? []).some((alias) => normalise(alias) === normalise(port.name))
-						)
-						if (!match) {
-							unmatched.add(port.name || "Unnamed MIDI port")
-							continue
-						}
-						const [id] = match
+				const groups = connectedMidiDevices(midiAccess, devices, assignments)
+				activityNodes.clear()
+				const cards = groups.map(({ id, device, ports }, index) => {
+					let card
+					if (device) {
+						card = render(id, device.profile, device.devicePath, `connected-${index}`)
+						card.querySelector(".connection-status").textContent = "Connected"
 						if (!matches.has(id)) matches.set(id, new Set())
-						matches.get(id).add(`${direction}: ${port.name || port.id}`)
+						for (const { direction, port } of ports) matches.get(id).add(`${direction}: ${port.name || port.id}`)
+					} else {
+						card = element("article")
+						const name = element("h2", ports[0].port.name || "Unnamed MIDI device")
+						name.id = `connected-${index}-name`
+						card.setAttribute("aria-labelledby", name.id)
+						const image = element("img", undefined, "diagram")
+						image.src = "midi-device.svg"
+						image.alt = "Generic MIDI device illustration; hardware image unavailable"
+						card.append(name, element("p", ports[0].port.manufacturer || "Manufacturer not reported", "manufacturer"), element("p", "Connected · No matching catalog profile", "connection-status"), image,
+							element("p", "This MIDI device is available. Choose its profile below to show hardware images and setup details."))
 					}
-				}
+					card.classList.add("is-connected")
+					card.dataset.connected = "true"
+					const metadata = element("details", undefined, "port-metadata")
+					metadata.append(element("summary", `MIDI port metadata (${ports.length})`))
+					const activitySummary = element("div")
+					for (const { direction, port } of ports) {
+						metadata.append(element("h3", `${direction}: ${port.name || "Unnamed MIDI port"}`))
+						const values = element("dl")
+						for (const [label, value] of [["Port name", port.name], ["Manufacturer", port.manufacturer], ["Port ID", port.id], ["Version", port.version], ["Direction", direction], ["Device state", port.state], ["Port connection", port.connection]]) {
+							values.append(element("dt", label), element("dd", value || "Not reported"))
+						}
+						metadata.append(values)
+						if (direction === "Input") {
+							const activity = element("p", failures.has(port.id) ? "Could not open MIDI input" : activityText(port.id), "input-activity")
+							activityNodes.set(port.id, activity)
+							activitySummary.append(activity)
+						}
+					}
+					const panelImage = card.querySelector(".diagram")
+					if (panelImage?.parentElement === card) panelImage.after(activitySummary, metadata)
+					else card.append(activitySummary, metadata)
+					const picker = element("label", undefined, "profile-picker")
+					picker.append(element("span", "Device profile"))
+					const select = element("select")
+					const automatic = element("option", "Automatic detection")
+					automatic.value = ""
+					select.append(automatic)
+					for (const [profileId, { profile }] of devices) {
+						const option = element("option", profile.name)
+						option.value = profileId
+						select.append(option)
+					}
+					select.value = assignments.get(ports[0].key) || ""
+					select.addEventListener("change", () => {
+						for (const { key } of ports) {
+							if (select.value) assignments.set(key, select.value)
+							else assignments.delete(key)
+						}
+						updateConnections()
+					})
+					picker.append(select)
+					metadata.after(picker)
+					return card
+				})
+				connectedCards.replaceChildren(...cards)
+				connectedEmpty.hidden = groups.length !== 0
+				connectedEmpty.textContent = "No connected MIDI ports are visible to this browser. Connect a device and refresh connections."
 				for (const [id, { card }] of devices) {
 					const ports = matches.get(id)
 					const connected = !!ports?.size
@@ -305,16 +450,30 @@
 					description.hidden = !connected
 					description.textContent = ports ? [...ports].join(" · ") : ""
 				}
-				midiStatus.textContent = `${matches.size} ${matches.size === 1 ? "catalog device" : "catalog devices"} connected. Connections update automatically.${unmatched.size ? ` Unmatched MIDI ports: ${[...unmatched].join(", ")}.` : ""}`
+				const portCount = groups.reduce((total, group) => total + group.ports.length, 0)
+				midiStatus.textContent = `${groups.length} connected device ${groups.length === 1 ? "card" : "cards"} · ${portCount} MIDI ${portCount === 1 ? "port" : "ports"}. Connections update automatically.`
+				listenToInputs()
+				if (!receivedEvents) eventStatus.textContent = `Listening to ${[...midiAccess.inputs.values()].filter((port) => port.state === "connected").length} MIDI inputs · ${midiAccess.sysexEnabled ? "SysEx enabled" : "SysEx disabled"}. Play your instrument to see incoming events.`
 			}
 			detectMidi.onclick = async () => {
 				detectMidi.disabled = true
 				midiStatus.textContent = "Checking MIDI connections…"
 				try {
-					midiAccess ??= await navigator.requestMIDIAccess({ sysex: false })
+					if (!midiAccess || midiAccess.sysexEnabled !== includeSysex.checked) {
+						const access = await navigator.requestMIDIAccess({ sysex: includeSysex.checked })
+						if (midiAccess) midiAccess.onstatechange = null
+						midiAccess = access
+					}
+					for (const [port, listener] of inputListeners) {
+						if (!failures.has(port.id)) continue
+						port.removeEventListener("midimessage", listener)
+						inputListeners.delete(port)
+					}
+					failures.clear()
 					midiAccess.onstatechange = updateConnections
 					updateConnections()
 					detectMidi.textContent = "Refresh connections"
+					document.getElementById("connected-section").scrollIntoView({ behavior: "smooth", block: "start" })
 				} catch {
 					midiStatus.textContent = "MIDI access was not granted or is unavailable. Allow MIDI access in your browser, then try again."
 				} finally {
@@ -343,7 +502,7 @@
 					try {
 						const card = render(id, profile, devicePath)
 						catalog.append(card)
-						deviceCards.set(id, { card, profile })
+						deviceCards.set(id, { card, profile, devicePath })
 						count++
 					} catch { failed++ }
 				}
@@ -364,7 +523,7 @@
 				catalog.setAttribute("aria-busy", "false")
 				if (!isSecureContext) midiStatus.textContent = "MIDI detection requires HTTPS or localhost."
 				else if (typeof navigator.requestMIDIAccess !== "function") midiStatus.textContent = "This browser does not support Web MIDI. The device catalog is still available."
-				else detectMidi.disabled = deviceCards.size === 0
+				else detectMidi.disabled = false
 			}
 		</script>
 	</body>
