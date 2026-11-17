@@ -5,6 +5,7 @@ import os from "node:os"
 import path from "node:path"
 import test from "node:test"
 import { MIDI_DEVICE_DIRECTORY } from "../index.js"
+import { createMidiDevicesClient } from "../client.js"
 import { buildApi } from "./api.js"
 import { createApiServer } from "./server.js"
 import { toXml } from "./xml.js"
@@ -19,6 +20,7 @@ test("built data and query endpoint return only the requested device in either f
 	t.after(() => rm(directory, { recursive: true, force: true }))
 	await buildApi({
 		entries: [
+			{ id: "arcana-strum", path: "arcana/strum" },
 			{ id: "korg-minilogue", path: "korg/minilogue" },
 			{ id: "roland-tr-909", path: "roland/tr-909" },
 			{ id: "superlative-sb01", path: "superlative/sb01" },
@@ -36,6 +38,12 @@ test("built data and query endpoint return only the requested device in either f
 	await once(server, "listening")
 	t.after(() => new Promise((resolve) => server.close(resolve)))
 	const base = `http://127.0.0.1:${server.address().port}/api/v1/`
+	const client = createMidiDevicesClient({ baseUrl: base })
+	for (const name of ["ArcanaStrum", "Arcana Strum", " arcanastrum "]) {
+		assert.equal(await client.match({ id: "opaque-browser-port-id", name }), "arcana-strum")
+		assert.equal((await client.lookup(name)).id, "arcana-strum")
+	}
+	assert.equal(await client.match({ name: "ArcanaStrum Virtual" }), undefined)
 	for (const id of ["korg-minilogue", "roland-tr-909", "superlative-sb01", "korg-arp-2600-fs", "roland-v-stage-76", "roland-v-stage-88"]) {
 		for (const format of ["json", "xml"]) {
 			const response = await fetch(`${base}device?id=${id}&format=${format}`)
@@ -67,7 +75,7 @@ test("built data and query endpoint return only the requested device in either f
 		assert.equal((await fetch(`${base}${resource}.xml`)).status, 200)
 	}
 	const index = await (await fetch(`${base}index.json`)).json()
-	assert.equal(index.count, 6)
+	assert.equal(index.count, 7)
 	assert.equal(index.links.accessibility, undefined)
 	assert.equal((await fetch(`${base}accessibility/tactile-synth-guides.json`)).status, 404)
 })
