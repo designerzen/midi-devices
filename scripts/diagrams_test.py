@@ -14,6 +14,61 @@ def profile(folder, identifier):
 
 
 class DeviceDiagrams(unittest.TestCase):
+    def test_launchkey_mk4_model_sizes_and_fader_inventory(self):
+        for count in [25, 37, 49, 61]:
+            device = profile(f"novation/launchkey-{count}-mk4", f"novation-launchkey-{count}-mk4")
+            surface = device["surface"]["elements"]
+            self.assertEqual(sum(e["kind"] == "key" for e in surface), count)
+            self.assertEqual(sum(e["kind"] == "pad" for e in surface), 16)
+            self.assertEqual(sum(e["kind"] == "fader" for e in surface), 9 if count >= 49 else 0)
+            self.assertTrue(all("control" not in e for e in surface if e["kind"] != "key"))
+
+    def test_alternative_controllers_preserve_configurable_assignments(self):
+        for model, kind, count in [("softstep-2", "pad", 10), ("12-step", "pad", 13), ("quneo", "pad", 16), ("qunexus", "key", 25)]:
+            device = profile(f"keith-mcmillen/{model}", f"keith-mcmillen-{model}")
+            surface = device["surface"]["elements"]
+            self.assertEqual(sum(e["kind"] == kind for e in surface), count)
+            self.assertTrue(all("message" not in e and "control" not in e for e in surface))
+            self.assertEqual(device["controls"], [])
+        for model in ["softstep-2", "12-step"]:
+            device = profile(f"keith-mcmillen/{model}", f"keith-mcmillen-{model}")
+            self.assertIn("MIDI Expander", device["notice"])
+            self.assertFalse(any("DIN" in p["connector"] for p in device["connections"]))
+
+    def test_kontrol_mk3_accessibility_dependencies_and_key_ranges(self):
+        for count, first in [(49, 36), (61, 36), (88, 21)]:
+            device = profile(f"native-instruments/kontrol-s{count}-mk3", f"native-instruments-kontrol-s{count}-mk3")
+            keys = [e for e in device["surface"]["elements"] if e["kind"] == "key"]
+            self.assertEqual(sorted(e["message"]["number"] for e in keys), list(range(first, first + count)))
+            self.assertIn("NI Accessibility Helper", device["notice"])
+            self.assertTrue(any("accessibility-helper" in d["url"] for d in device["documentation"]))
+            self.assertEqual(device["controls"][0]["cc"], 11)
+            self.assertTrue(any(e.get("control") == "expression" for e in device["surface"]["elements"]))
+
+    def test_catalogue_surfaces_are_drawn_and_match_their_svg(self):
+        for path in (ROOT / "devices").glob("*/*/*.json"):
+            device = json.loads(path.read_text(encoding="utf-8"))
+            with self.subTest(device=device["id"]):
+                surface = device["surface"]
+                self.assertTrue(surface["elements"], "Device still has an empty placeholder surface")
+                tree = ET.parse(path.parent / surface["src"])
+                by_id = {e.attrib["id"]: e for e in tree.iter() if "id" in e.attrib}
+                for item in surface["elements"]:
+                    self.assertIn(item["id"], by_id)
+                    self.assertEqual(item["kind"], by_id[item["id"]].attrib["data-kind"])
+                for filename in ["panel.svg", "interface.svg"]:
+                    self.assertNotIn("Conceptual schematic; see profile setup notes", (path.parent / filename).read_text())
+
+    def test_previously_empty_pad_surfaces_do_not_gain_guessed_midi_maps(self):
+        for folder, identifier, count in [("ableton/push-2", "ableton-push-2", 64), ("akai/mpc2000xl", "akai-mpc2000xl", 16)]:
+            device = profile(folder, identifier)
+            pads = [e for e in device["surface"]["elements"] if e["kind"] == "pad"]
+            self.assertEqual(len(pads), count)
+            self.assertTrue(all("control" not in e and "message" not in e for e in device["surface"]["elements"]))
+        mpc = profile("akai/mpc2000xl", "akai-mpc2000xl")
+        pads = [e for e in mpc["surface"]["elements"] if e["kind"] == "pad"]
+        self.assertEqual([e["label"] for e in pads[:4]], [f"PADS: Pad {i}" for i in range(13, 17)])
+
     def test_launchpad_programmer_map_keeps_physical_orientation(self):
         device = profile("novation/launchpad-x", "novation-launchpad-x")
         controls = {c["id"]: c for c in device["controls"]}

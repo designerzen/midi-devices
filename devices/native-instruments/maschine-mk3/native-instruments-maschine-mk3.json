@@ -1,0 +1,956 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "native-instruments-maschine-mk3",
+	"name": "Native Instruments Maschine MK3",
+	"manufacturer": "Native Instruments",
+	"manufacturerUrl": "https://www.native-instruments.com/",
+	"productUrl": "https://docs.native-instruments.com/online-guides/maschine-mk3-manual/en/quick-reference",
+	"ids": [
+		"native-instruments-maschine-mk3"
+	],
+	"portNames": [],
+	"description": "16-pad production controller and audio interface with NI software-assisted accessibility.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Native Instruments Maschine MK3 - hardware / MIDI documentation",
+			"url": "https://docs.native-instruments.com/online-guides/maschine-mk3-manual/en/quick-reference"
+		},
+		{
+			"title": "Native Instruments Maschine MK3 - setup and support reference",
+			"url": "https://www.native-instruments.com/pages/ni-accessibility-helper"
+		}
+	],
+	"abilities": [
+		"Velocity-sensitive pads",
+		"Pad pressure",
+		"Touch strip",
+		"Spoken feedback with NI Accessibility Helper",
+		"USB MIDI mode",
+		"Audio interface"
+	],
+	"hardwareControls": [
+		"CONTROL MODES: Channel, Plugin, Arranger, Mixer, Browser, Sampling, File, Settings, Auto, Macro",
+		"DISPLAY BUTTONS: Button 1, Button 2, Button 3, Button 4, Button 5, Button 6, Button 7, Button 8",
+		"DISPLAYS: Left display, Right display",
+		"PARAMETER KNOBS: Knob 1, Knob 2, Knob 3, Knob 4, Knob 5, Knob 6, Knob 7, Knob 8",
+		"PERFORMANCE / EDIT: 4-D encoder, Volume, Swing, Tempo, Pitch, Mod, Perform FX, Notes",
+		"SMART STRIP: Touch strip",
+		"GROUPS: A, B, C, D, E, F, G, H",
+		"PADS: Pad 13, Pad 14, Pad 15, Pad 16, Pad 9, Pad 10, Pad 11, Pad 12, Pad 5, Pad 6, Pad 7, Pad 8, Pad 1, Pad 2, Pad 3, Pad 4",
+		"PAD MODES: Pad mode, Keyboard, Chords, Step, Fixed velocity, Scene, Pattern, Events, Variation, Duplicate, Select, Solo, Mute"
+	],
+	"notice": "Use Maschine software for the integrated workflow. For accessibility, install NI Accessibility Helper and compatible Maschine 3 software and follow the manufacturer setup guide. Spoken feedback depends on those applications. For generic MIDI applications, switch to MIDI mode (Shift + Channel / MIDI) and configure a Controller Editor template. Pad notes, knobs and transport depend on that template; this profile does not assume a fixed map. Select the profile manually if the host does not identify it: no unverified port aliases are supplied. Diagrams are original simplified schematics, not scale drawings. Physical controls without a binding are informational; use MIDI learn for configurable assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Native Instruments Maschine MK3 schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1150,
+		"height": 850,
+		"elements": [
+			{
+				"id": "control-modes-channel",
+				"label": "CONTROL MODES: Channel",
+				"kind": "button",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 11.176470588235295,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-plugin",
+				"label": "CONTROL MODES: Plugin",
+				"kind": "button",
+				"position": {
+					"x": 10.434782608695652,
+					"y": 11.176470588235295,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-arranger",
+				"label": "CONTROL MODES: Arranger",
+				"kind": "button",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 15.764705882352942,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-mixer",
+				"label": "CONTROL MODES: Mixer",
+				"kind": "button",
+				"position": {
+					"x": 10.434782608695652,
+					"y": 15.764705882352942,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-browser",
+				"label": "CONTROL MODES: Browser",
+				"kind": "button",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 20.352941176470587,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-sampling",
+				"label": "CONTROL MODES: Sampling",
+				"kind": "button",
+				"position": {
+					"x": 10.434782608695652,
+					"y": 20.352941176470587,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-file",
+				"label": "CONTROL MODES: File",
+				"kind": "button",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 24.941176470588236,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-settings",
+				"label": "CONTROL MODES: Settings",
+				"kind": "button",
+				"position": {
+					"x": 10.434782608695652,
+					"y": 24.941176470588236,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-auto",
+				"label": "CONTROL MODES: Auto",
+				"kind": "button",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 29.52941176470588,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "control-modes-macro",
+				"label": "CONTROL MODES: Macro",
+				"kind": "button",
+				"position": {
+					"x": 10.434782608695652,
+					"y": 29.52941176470588,
+					"width": 7.739130434782608,
+					"height": 4.588235294117647
+				}
+			},
+			{
+				"id": "display-buttons-button-1",
+				"label": "DISPLAY BUTTONS: Button 1",
+				"kind": "button",
+				"position": {
+					"x": 20.08695652173913,
+					"y": 11.176470588235295,
+					"width": 9.652173913043478,
+					"height": 5.294117647058823
+				}
+			},
+			{
+				"id": "display-buttons-button-2",
+				"label": "DISPLAY BUTTONS: Button 2",
+				"kind": "button",
+				"position": {
+					"x": 29.739130434782606,
+					"y": 11.176470588235295,
+					"width": 9.652173913043478,
+					"height": 5.294117647058823
+				}
+			},
+			{
+				"id": "display-buttons-button-3",
+				"label": "DISPLAY BUTTONS: Button 3",
+				"kind": "button",
+				"position": {
+					"x": 39.391304347826086,
+					"y": 11.176470588235295,
+					"width": 9.652173913043478,
+					"height": 5.294117647058823
+				}
+			},
+			{
+				"id": "display-buttons-button-4",
+				"label": "DISPLAY BUTTONS: Button 4",
+				"kind": "button",
+				"position": {
+					"x": 49.04347826086956,
+					"y": 11.176470588235295,
+					"width": 9.652173913043478,
+					"height": 5.294117647058823
+				}
+			},
+			{
+				"id": "display-buttons-button-5",
+				"label": "DISPLAY BUTTONS: Button 5",
+				"kind": "button",
+				"position": {
+					"x": 58.69565217391305,
+					"y": 11.176470588235295,
+					"width": 9.652173913043478,
+					"height": 5.294117647058823
+				}
+			},
+			{
+				"id": "display-buttons-button-6",
+				"label": "DISPLAY BUTTONS: Button 6",
+				"kind": "button",
+				"position": {
+					"x": 68.34782608695652,
+					"y": 11.176470588235295,
+					"width": 9.652173913043478,
+					"height": 5.294117647058823
+				}
+			},
+			{
+				"id": "display-buttons-button-7",
+				"label": "DISPLAY BUTTONS: Button 7",
+				"kind": "button",
+				"position": {
+					"x": 78.0,
+					"y": 11.176470588235295,
+					"width": 9.652173913043478,
+					"height": 5.294117647058823
+				}
+			},
+			{
+				"id": "display-buttons-button-8",
+				"label": "DISPLAY BUTTONS: Button 8",
+				"kind": "button",
+				"position": {
+					"x": 87.65217391304347,
+					"y": 11.176470588235295,
+					"width": 9.652173913043478,
+					"height": 5.294117647058823
+				}
+			},
+			{
+				"id": "displays-left-display",
+				"label": "DISPLAYS: Left display",
+				"kind": "screen",
+				"position": {
+					"x": 20.08695652173913,
+					"y": 21.764705882352942,
+					"width": 38.608695652173914,
+					"height": 14.705882352941178
+				}
+			},
+			{
+				"id": "displays-right-display",
+				"label": "DISPLAYS: Right display",
+				"kind": "screen",
+				"position": {
+					"x": 58.69565217391305,
+					"y": 21.764705882352942,
+					"width": 38.608695652173914,
+					"height": 14.705882352941178
+				}
+			},
+			{
+				"id": "parameter-knobs-knob-1",
+				"label": "PARAMETER KNOBS: Knob 1",
+				"kind": "knob",
+				"position": {
+					"x": 20.08695652173913,
+					"y": 41.76470588235294,
+					"width": 9.652173913043478,
+					"height": 7.647058823529412
+				}
+			},
+			{
+				"id": "parameter-knobs-knob-2",
+				"label": "PARAMETER KNOBS: Knob 2",
+				"kind": "knob",
+				"position": {
+					"x": 29.739130434782606,
+					"y": 41.76470588235294,
+					"width": 9.652173913043478,
+					"height": 7.647058823529412
+				}
+			},
+			{
+				"id": "parameter-knobs-knob-3",
+				"label": "PARAMETER KNOBS: Knob 3",
+				"kind": "knob",
+				"position": {
+					"x": 39.391304347826086,
+					"y": 41.76470588235294,
+					"width": 9.652173913043478,
+					"height": 7.647058823529412
+				}
+			},
+			{
+				"id": "parameter-knobs-knob-4",
+				"label": "PARAMETER KNOBS: Knob 4",
+				"kind": "knob",
+				"position": {
+					"x": 49.04347826086956,
+					"y": 41.76470588235294,
+					"width": 9.652173913043478,
+					"height": 7.647058823529412
+				}
+			},
+			{
+				"id": "parameter-knobs-knob-5",
+				"label": "PARAMETER KNOBS: Knob 5",
+				"kind": "knob",
+				"position": {
+					"x": 58.69565217391305,
+					"y": 41.76470588235294,
+					"width": 9.652173913043478,
+					"height": 7.647058823529412
+				}
+			},
+			{
+				"id": "parameter-knobs-knob-6",
+				"label": "PARAMETER KNOBS: Knob 6",
+				"kind": "knob",
+				"position": {
+					"x": 68.34782608695652,
+					"y": 41.76470588235294,
+					"width": 9.652173913043478,
+					"height": 7.647058823529412
+				}
+			},
+			{
+				"id": "parameter-knobs-knob-7",
+				"label": "PARAMETER KNOBS: Knob 7",
+				"kind": "knob",
+				"position": {
+					"x": 78.0,
+					"y": 41.76470588235294,
+					"width": 9.652173913043478,
+					"height": 7.647058823529412
+				}
+			},
+			{
+				"id": "parameter-knobs-knob-8",
+				"label": "PARAMETER KNOBS: Knob 8",
+				"kind": "knob",
+				"position": {
+					"x": 87.65217391304347,
+					"y": 41.76470588235294,
+					"width": 9.652173913043478,
+					"height": 7.647058823529412
+				}
+			},
+			{
+				"id": "performance-edit-4-d-encoder",
+				"label": "PERFORMANCE / EDIT: 4-D encoder",
+				"kind": "knob",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 54.70588235294118,
+					"width": 8.0,
+					"height": 8.529411764705882
+				}
+			},
+			{
+				"id": "performance-edit-volume",
+				"label": "PERFORMANCE / EDIT: Volume",
+				"kind": "button",
+				"position": {
+					"x": 10.695652173913043,
+					"y": 54.70588235294118,
+					"width": 8.0,
+					"height": 8.529411764705882
+				}
+			},
+			{
+				"id": "performance-edit-swing",
+				"label": "PERFORMANCE / EDIT: Swing",
+				"kind": "button",
+				"position": {
+					"x": 18.695652173913043,
+					"y": 54.70588235294118,
+					"width": 8.0,
+					"height": 8.529411764705882
+				}
+			},
+			{
+				"id": "performance-edit-tempo",
+				"label": "PERFORMANCE / EDIT: Tempo",
+				"kind": "button",
+				"position": {
+					"x": 26.695652173913043,
+					"y": 54.70588235294118,
+					"width": 8.0,
+					"height": 8.529411764705882
+				}
+			},
+			{
+				"id": "performance-edit-pitch",
+				"label": "PERFORMANCE / EDIT: Pitch",
+				"kind": "button",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 63.23529411764706,
+					"width": 8.0,
+					"height": 8.529411764705882
+				}
+			},
+			{
+				"id": "performance-edit-mod",
+				"label": "PERFORMANCE / EDIT: Mod",
+				"kind": "button",
+				"position": {
+					"x": 10.695652173913043,
+					"y": 63.23529411764706,
+					"width": 8.0,
+					"height": 8.529411764705882
+				}
+			},
+			{
+				"id": "performance-edit-perform-fx",
+				"label": "PERFORMANCE / EDIT: Perform FX",
+				"kind": "button",
+				"position": {
+					"x": 18.695652173913043,
+					"y": 63.23529411764706,
+					"width": 8.0,
+					"height": 8.529411764705882
+				}
+			},
+			{
+				"id": "performance-edit-notes",
+				"label": "PERFORMANCE / EDIT: Notes",
+				"kind": "button",
+				"position": {
+					"x": 26.695652173913043,
+					"y": 63.23529411764706,
+					"width": 8.0,
+					"height": 8.529411764705882
+				}
+			},
+			{
+				"id": "smart-strip-touch-strip",
+				"label": "SMART STRIP: Touch strip",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 77.05882352941177,
+					"width": 32.0,
+					"height": 4.705882352941177
+				}
+			},
+			{
+				"id": "groups-a",
+				"label": "GROUPS: A",
+				"kind": "button",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 87.05882352941177,
+					"width": 8.0,
+					"height": 4.411764705882353
+				}
+			},
+			{
+				"id": "groups-b",
+				"label": "GROUPS: B",
+				"kind": "button",
+				"position": {
+					"x": 10.695652173913043,
+					"y": 87.05882352941177,
+					"width": 8.0,
+					"height": 4.411764705882353
+				}
+			},
+			{
+				"id": "groups-c",
+				"label": "GROUPS: C",
+				"kind": "button",
+				"position": {
+					"x": 18.695652173913043,
+					"y": 87.05882352941177,
+					"width": 8.0,
+					"height": 4.411764705882353
+				}
+			},
+			{
+				"id": "groups-d",
+				"label": "GROUPS: D",
+				"kind": "button",
+				"position": {
+					"x": 26.695652173913043,
+					"y": 87.05882352941177,
+					"width": 8.0,
+					"height": 4.411764705882353
+				}
+			},
+			{
+				"id": "groups-e",
+				"label": "GROUPS: E",
+				"kind": "button",
+				"position": {
+					"x": 2.6956521739130435,
+					"y": 91.47058823529412,
+					"width": 8.0,
+					"height": 4.411764705882353
+				}
+			},
+			{
+				"id": "groups-f",
+				"label": "GROUPS: F",
+				"kind": "button",
+				"position": {
+					"x": 10.695652173913043,
+					"y": 91.47058823529412,
+					"width": 8.0,
+					"height": 4.411764705882353
+				}
+			},
+			{
+				"id": "groups-g",
+				"label": "GROUPS: G",
+				"kind": "button",
+				"position": {
+					"x": 18.695652173913043,
+					"y": 91.47058823529412,
+					"width": 8.0,
+					"height": 4.411764705882353
+				}
+			},
+			{
+				"id": "groups-h",
+				"label": "GROUPS: H",
+				"kind": "button",
+				"position": {
+					"x": 26.695652173913043,
+					"y": 91.47058823529412,
+					"width": 8.0,
+					"height": 4.411764705882353
+				}
+			},
+			{
+				"id": "pads-pad-13",
+				"label": "PADS: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 47.91304347826087,
+					"y": 54.70588235294118,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-14",
+				"label": "PADS: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 60.26086956521739,
+					"y": 54.70588235294118,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-15",
+				"label": "PADS: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 72.60869565217392,
+					"y": 54.70588235294118,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-16",
+				"label": "PADS: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 84.95652173913044,
+					"y": 54.70588235294118,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-9",
+				"label": "PADS: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 47.91304347826087,
+					"y": 65.0,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-10",
+				"label": "PADS: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 60.26086956521739,
+					"y": 65.0,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-11",
+				"label": "PADS: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 72.60869565217392,
+					"y": 65.0,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-12",
+				"label": "PADS: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 84.95652173913044,
+					"y": 65.0,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-5",
+				"label": "PADS: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 47.91304347826087,
+					"y": 75.29411764705883,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-6",
+				"label": "PADS: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 60.26086956521739,
+					"y": 75.29411764705883,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-7",
+				"label": "PADS: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 72.60869565217392,
+					"y": 75.29411764705883,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-8",
+				"label": "PADS: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 84.95652173913044,
+					"y": 75.29411764705883,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-1",
+				"label": "PADS: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 47.91304347826087,
+					"y": 85.58823529411764,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-2",
+				"label": "PADS: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 60.26086956521739,
+					"y": 85.58823529411764,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-3",
+				"label": "PADS: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 72.60869565217392,
+					"y": 85.58823529411764,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pads-pad-4",
+				"label": "PADS: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 84.95652173913044,
+					"y": 85.58823529411764,
+					"width": 12.347826086956522,
+					"height": 10.294117647058822
+				}
+			},
+			{
+				"id": "pad-modes-pad-mode",
+				"label": "PAD MODES: Pad mode",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 54.70588235294118,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-keyboard",
+				"label": "PAD MODES: Keyboard",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 57.87330316742081,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-chords",
+				"label": "PAD MODES: Chords",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 61.04072398190045,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-step",
+				"label": "PAD MODES: Step",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 64.20814479638008,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-fixed-velocity",
+				"label": "PAD MODES: Fixed velocity",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 67.37556561085974,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-scene",
+				"label": "PAD MODES: Scene",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 70.54298642533936,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-pattern",
+				"label": "PAD MODES: Pattern",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 73.710407239819,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-events",
+				"label": "PAD MODES: Events",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 76.87782805429865,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-variation",
+				"label": "PAD MODES: Variation",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 80.04524886877827,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-duplicate",
+				"label": "PAD MODES: Duplicate",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 83.21266968325793,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-select",
+				"label": "PAD MODES: Select",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 86.38009049773756,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-solo",
+				"label": "PAD MODES: Solo",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 89.5475113122172,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			},
+			{
+				"id": "pad-modes-mute",
+				"label": "PAD MODES: Mute",
+				"kind": "button",
+				"position": {
+					"x": 36.608695652173914,
+					"y": 92.71493212669684,
+					"width": 9.391304347826086,
+					"height": 3.167420814479638
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB",
+			"connector": "USB Type-B",
+			"direction": "bidirectional",
+			"location": "rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Line IN 1 / 2",
+			"connector": "6.35 mm TRS",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "Mic IN",
+			"connector": "6.35 mm TRS",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "Line OUT L / R",
+			"connector": "6.35 mm TRS",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm TRS",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Pedal",
+			"connector": "6.35 mm TRS",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "Power",
+			"connector": "DC inlet",
+			"direction": "input",
+			"location": "rear"
+		}
+	],
+	"diagramSources": [
+		"https://docs.native-instruments.com/online-guides/maschine-mk3-manual/en/quick-reference",
+		"https://www.native-instruments.com/pages/ni-accessibility-helper",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

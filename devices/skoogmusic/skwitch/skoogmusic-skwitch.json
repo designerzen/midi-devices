@@ -21,7 +21,7 @@
 		"Accessible music hardware"
 	],
 	"hardwareControls": [],
-	"notice": "Skwitch requires its compatible phone and companion app; route the app MIDI output to your instrument. The accessory itself is not a USB MIDI controller. Musical behavior and MIDI assignments are app-dependent. Hardware is no longer sold or supported; check compatibility before obtaining used hardware. Use the software routing described above. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"notice": "Skwitch requires its compatible phone and companion app; route the app MIDI output to your instrument. The accessory itself is not a USB MIDI controller. Musical behavior and MIDI assignments are app-dependent. Hardware is no longer sold or supported; check compatibility before obtaining used hardware. Use the software routing described above. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original simplified schematic. Physical controls are shown without assumed MIDI assignments.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -44,10 +44,33 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1000,
-		"height": 300,
-		"elements": []
+		"src": "interface.svg",
+		"width": 700,
+		"height": 460,
+		"elements": [
+			{
+				"id": "playing-surface-pressure-button",
+				"label": "PLAYING SURFACE: Pressure button",
+				"kind": "touch",
+				"position": {
+					"x": 7.285714285714286,
+					"y": 22.82608695652174,
+					"width": 48.285714285714285,
+					"height": 68.47826086956522
+				}
+			},
+			{
+				"id": "phone-app-companion-app-display",
+				"label": "PHONE / APP: Companion app display",
+				"kind": "screen",
+				"position": {
+					"x": 60.14285714285714,
+					"y": 22.82608695652174,
+					"width": 32.57142857142858,
+					"height": 68.47826086956522
+				}
+			}
+		]
 	},
 	"diagrams": {
 		"panel": "panel.svg",
@@ -56,6 +79,8 @@
 	},
 	"connections": [],
 	"diagramSources": [
+		"https://www.playable.tech/skoog",
+		"https://www.playable.tech/s/skwitch_app_guide_V2.pdf",
 		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
 	]
 }

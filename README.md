@@ -16,9 +16,13 @@ The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native
 
 Also included: Novation Launchpad Mini MK3, Launchpad X, Circuit Tracks, Circuit Rhythm, and the original Arturia KeyStep 37. Launchpad X provides its documented Programmer-mode grid and button mappings and LPX MIDI port aliases. The other four profiles provide model-specific schematic surfaces and setup guidance; their USB port names remain unverified and require manual profile selection. Custom layouts and assignable encoders are left unbound rather than given assumed factory assignments. Manufacturer manuals and MIDI setup references are linked in each profile.
 
+The catalogue now contains 118 devices. Recent additions include Kontrol S49/S61/S88 MK3 and Maschine MK3 with NI Accessibility Helper setup guidance; SoftStep 2, 12 Step, QuNeo and original QuNexus for alternative foot or touch control; Launchkey 25/37/49/61 MK4, Launchpad Pro MK3, MPK mini IV and APC mini MK2. All include populated schematics and manufacturer references. See the [coverage guide](docs/coverage.md) for software dependencies, access methods and mapping limits.
+
 ## Layout
 
 Device diagrams use the [NYU SynthAccess tactile symbol vocabulary](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides): striped-ring knobs, distinct input/output/bidirectional jack shapes, switches, sliders and buttons. The catalogue includes source-backed controls and layouts for Superlative SB01, Roland V-STAGE 76/88 and the MIDI-equipped Korg ARP 2600 FS. Guide references are attached to the individual profiles. Original pre-MIDI instruments are not added as MIDI devices.
+
+Every profile has a populated schematic surface, including Push 2, MPC2000XL, TR-909, Magic Flute, Skoog, Skwitch and the Soundbeam family. Component views separate external sensors or playing faces for clarity. These simplified drawings do not imply fixed MIDI assignments; configurable and app-dependent controls remain unbound. Layout sources are recorded in each profile's `diagramSources`.
 
 ```
 devices/

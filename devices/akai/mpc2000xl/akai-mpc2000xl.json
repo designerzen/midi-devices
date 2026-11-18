@@ -19,7 +19,7 @@
 	],
 	"abilities": [],
 	"hardwareControls": [],
-	"notice": "Choose the input/output MIDI ports and track channels on the MPC. Pad note assignments depend on the loaded program; use MIDI learn instead of assuming General MIDI drums. No fixed pad map, mixer automation or transport mapping is provided. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"notice": "Choose the input/output MIDI ports and track channels on the MPC. Pad note assignments depend on the loaded program; use MIDI learn instead of assuming General MIDI drums. No fixed pad map, mixer automation or transport mapping is provided. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original simplified schematic. Physical controls are shown without assumed MIDI assignments.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -42,18 +42,806 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1000,
-		"height": 300,
-		"elements": []
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 760,
+		"elements": [
+			{
+				"id": "lcd-lcd",
+				"label": "LCD: LCD",
+				"kind": "screen",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.5,
+					"width": 44.0,
+					"height": 17.105263157894736
+				}
+			},
+			{
+				"id": "function-keys-f1",
+				"label": "FUNCTION KEYS: F1",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 35.526315789473685,
+					"width": 7.333333333333333,
+					"height": 6.578947368421052
+				}
+			},
+			{
+				"id": "function-keys-f2",
+				"label": "FUNCTION KEYS: F2",
+				"kind": "button",
+				"position": {
+					"x": 9.916666666666666,
+					"y": 35.526315789473685,
+					"width": 7.333333333333333,
+					"height": 6.578947368421052
+				}
+			},
+			{
+				"id": "function-keys-f3",
+				"label": "FUNCTION KEYS: F3",
+				"kind": "button",
+				"position": {
+					"x": 17.25,
+					"y": 35.526315789473685,
+					"width": 7.333333333333333,
+					"height": 6.578947368421052
+				}
+			},
+			{
+				"id": "function-keys-f4",
+				"label": "FUNCTION KEYS: F4",
+				"kind": "button",
+				"position": {
+					"x": 24.583333333333332,
+					"y": 35.526315789473685,
+					"width": 7.333333333333333,
+					"height": 6.578947368421052
+				}
+			},
+			{
+				"id": "function-keys-f5",
+				"label": "FUNCTION KEYS: F5",
+				"kind": "button",
+				"position": {
+					"x": 31.916666666666664,
+					"y": 35.526315789473685,
+					"width": 7.333333333333333,
+					"height": 6.578947368421052
+				}
+			},
+			{
+				"id": "function-keys-f6",
+				"label": "FUNCTION KEYS: F6",
+				"kind": "button",
+				"position": {
+					"x": 39.25,
+					"y": 35.526315789473685,
+					"width": 7.333333333333333,
+					"height": 6.578947368421052
+				}
+			},
+			{
+				"id": "numeric-mode-7",
+				"label": "NUMERIC / MODE: 7",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 48.026315789473685,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-8",
+				"label": "NUMERIC / MODE: 8",
+				"kind": "button",
+				"position": {
+					"x": 9.75,
+					"y": 48.026315789473685,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-9",
+				"label": "NUMERIC / MODE: 9",
+				"kind": "button",
+				"position": {
+					"x": 16.916666666666664,
+					"y": 48.026315789473685,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-4",
+				"label": "NUMERIC / MODE: 4",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 54.11184210526315,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-5",
+				"label": "NUMERIC / MODE: 5",
+				"kind": "button",
+				"position": {
+					"x": 9.75,
+					"y": 54.11184210526315,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-6",
+				"label": "NUMERIC / MODE: 6",
+				"kind": "button",
+				"position": {
+					"x": 16.916666666666664,
+					"y": 54.11184210526315,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-1",
+				"label": "NUMERIC / MODE: 1",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 60.19736842105263,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-2",
+				"label": "NUMERIC / MODE: 2",
+				"kind": "button",
+				"position": {
+					"x": 9.75,
+					"y": 60.19736842105263,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-3",
+				"label": "NUMERIC / MODE: 3",
+				"kind": "button",
+				"position": {
+					"x": 16.916666666666664,
+					"y": 60.19736842105263,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-0",
+				"label": "NUMERIC / MODE: 0",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 66.2828947368421,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-shift",
+				"label": "NUMERIC / MODE: Shift",
+				"kind": "button",
+				"position": {
+					"x": 9.75,
+					"y": 66.2828947368421,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "numeric-mode-enter",
+				"label": "NUMERIC / MODE: Enter",
+				"kind": "button",
+				"position": {
+					"x": 16.916666666666664,
+					"y": 66.2828947368421,
+					"width": 7.166666666666667,
+					"height": 6.0855263157894735
+				}
+			},
+			{
+				"id": "data-cursor-main-screen",
+				"label": "DATA / CURSOR: Main screen",
+				"kind": "button",
+				"position": {
+					"x": 25.916666666666664,
+					"y": 48.026315789473685,
+					"width": 6.888888888888889,
+					"height": 8.114035087719298
+				}
+			},
+			{
+				"id": "data-cursor-open-window",
+				"label": "DATA / CURSOR: Open window",
+				"kind": "button",
+				"position": {
+					"x": 32.80555555555556,
+					"y": 48.026315789473685,
+					"width": 6.888888888888889,
+					"height": 8.114035087719298
+				}
+			},
+			{
+				"id": "data-cursor-data",
+				"label": "DATA / CURSOR: Data",
+				"kind": "knob",
+				"position": {
+					"x": 39.69444444444445,
+					"y": 48.026315789473685,
+					"width": 6.888888888888889,
+					"height": 8.114035087719298
+				}
+			},
+			{
+				"id": "data-cursor-cursor-up",
+				"label": "DATA / CURSOR: Cursor up",
+				"kind": "button",
+				"position": {
+					"x": 25.916666666666664,
+					"y": 56.14035087719299,
+					"width": 6.888888888888889,
+					"height": 8.114035087719298
+				}
+			},
+			{
+				"id": "data-cursor-cursor-left",
+				"label": "DATA / CURSOR: Cursor left",
+				"kind": "button",
+				"position": {
+					"x": 32.80555555555556,
+					"y": 56.14035087719299,
+					"width": 6.888888888888889,
+					"height": 8.114035087719298
+				}
+			},
+			{
+				"id": "data-cursor-cursor-right",
+				"label": "DATA / CURSOR: Cursor right",
+				"kind": "button",
+				"position": {
+					"x": 39.69444444444445,
+					"y": 56.14035087719299,
+					"width": 6.888888888888889,
+					"height": 8.114035087719298
+				}
+			},
+			{
+				"id": "data-cursor-cursor-down",
+				"label": "DATA / CURSOR: Cursor down",
+				"kind": "button",
+				"position": {
+					"x": 25.916666666666664,
+					"y": 64.25438596491227,
+					"width": 6.888888888888889,
+					"height": 8.114035087719298
+				}
+			},
+			{
+				"id": "note-variation-after",
+				"label": "NOTE VARIATION: After",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 78.28947368421053,
+					"width": 6.5,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "note-variation-note-variation",
+				"label": "NOTE VARIATION: Note variation",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 87.17105263157895,
+					"width": 6.5,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-tap-tempo-note-repeat",
+				"label": "SEQUENCE / TRANSPORT: Tap tempo / Note repeat",
+				"kind": "button",
+				"position": {
+					"x": 10.916666666666666,
+					"y": 78.28947368421053,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-undo-seq",
+				"label": "SEQUENCE / TRANSPORT: Undo seq",
+				"kind": "button",
+				"position": {
+					"x": 16.01190476190476,
+					"y": 78.28947368421053,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-erase",
+				"label": "SEQUENCE / TRANSPORT: Erase",
+				"kind": "button",
+				"position": {
+					"x": 21.107142857142858,
+					"y": 78.28947368421053,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-step",
+				"label": "SEQUENCE / TRANSPORT: Step <",
+				"kind": "button",
+				"position": {
+					"x": 26.202380952380956,
+					"y": 78.28947368421053,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-step-2",
+				"label": "SEQUENCE / TRANSPORT: Step >",
+				"kind": "button",
+				"position": {
+					"x": 31.297619047619047,
+					"y": 78.28947368421053,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-go-to",
+				"label": "SEQUENCE / TRANSPORT: Go to",
+				"kind": "button",
+				"position": {
+					"x": 36.392857142857146,
+					"y": 78.28947368421053,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-bar",
+				"label": "SEQUENCE / TRANSPORT: Bar <<",
+				"kind": "button",
+				"position": {
+					"x": 41.48809523809524,
+					"y": 78.28947368421053,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-bar-2",
+				"label": "SEQUENCE / TRANSPORT: Bar >>",
+				"kind": "button",
+				"position": {
+					"x": 10.916666666666666,
+					"y": 87.17105263157895,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-rec",
+				"label": "SEQUENCE / TRANSPORT: Rec",
+				"kind": "button",
+				"position": {
+					"x": 16.01190476190476,
+					"y": 87.17105263157895,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-over-dub",
+				"label": "SEQUENCE / TRANSPORT: Over dub",
+				"kind": "button",
+				"position": {
+					"x": 21.107142857142858,
+					"y": 87.17105263157895,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-stop",
+				"label": "SEQUENCE / TRANSPORT: Stop",
+				"kind": "button",
+				"position": {
+					"x": 26.202380952380956,
+					"y": 87.17105263157895,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-play",
+				"label": "SEQUENCE / TRANSPORT: Play",
+				"kind": "button",
+				"position": {
+					"x": 31.297619047619047,
+					"y": 87.17105263157895,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "sequence-transport-play-start",
+				"label": "SEQUENCE / TRANSPORT: Play start",
+				"kind": "button",
+				"position": {
+					"x": 36.392857142857146,
+					"y": 87.17105263157895,
+					"width": 5.095238095238096,
+					"height": 8.881578947368421
+				}
+			},
+			{
+				"id": "levels-full-level",
+				"label": "LEVELS: Full level",
+				"kind": "button",
+				"position": {
+					"x": 49.25,
+					"y": 12.5,
+					"width": 10.333333333333334,
+					"height": 8.552631578947368
+				}
+			},
+			{
+				"id": "levels-16-levels",
+				"label": "LEVELS: 16 levels",
+				"kind": "button",
+				"position": {
+					"x": 59.583333333333336,
+					"y": 12.5,
+					"width": 10.333333333333334,
+					"height": 8.552631578947368
+				}
+			},
+			{
+				"id": "gain-volume-rec-gain",
+				"label": "GAIN / VOLUME: Rec gain",
+				"kind": "knob",
+				"position": {
+					"x": 71.75,
+					"y": 12.5,
+					"width": 12.833333333333332,
+					"height": 8.552631578947368
+				}
+			},
+			{
+				"id": "gain-volume-main-volume",
+				"label": "GAIN / VOLUME: Main volume",
+				"kind": "knob",
+				"position": {
+					"x": 84.58333333333333,
+					"y": 12.5,
+					"width": 12.833333333333332,
+					"height": 8.552631578947368
+				}
+			},
+			{
+				"id": "sequence-mode-next-seq",
+				"label": "SEQUENCE MODE: Next seq",
+				"kind": "button",
+				"position": {
+					"x": 49.25,
+					"y": 26.973684210526315,
+					"width": 10.333333333333334,
+					"height": 7.894736842105263
+				}
+			},
+			{
+				"id": "sequence-mode-track-mute",
+				"label": "SEQUENCE MODE: Track mute",
+				"kind": "button",
+				"position": {
+					"x": 59.583333333333336,
+					"y": 26.973684210526315,
+					"width": 10.333333333333334,
+					"height": 7.894736842105263
+				}
+			},
+			{
+				"id": "pad-bank-a",
+				"label": "PAD BANK: A",
+				"kind": "button",
+				"position": {
+					"x": 71.75,
+					"y": 26.973684210526315,
+					"width": 6.416666666666666,
+					"height": 7.894736842105263
+				}
+			},
+			{
+				"id": "pad-bank-b",
+				"label": "PAD BANK: B",
+				"kind": "button",
+				"position": {
+					"x": 78.16666666666666,
+					"y": 26.973684210526315,
+					"width": 6.416666666666666,
+					"height": 7.894736842105263
+				}
+			},
+			{
+				"id": "pad-bank-c",
+				"label": "PAD BANK: C",
+				"kind": "button",
+				"position": {
+					"x": 84.58333333333333,
+					"y": 26.973684210526315,
+					"width": 6.416666666666666,
+					"height": 7.894736842105263
+				}
+			},
+			{
+				"id": "pad-bank-d",
+				"label": "PAD BANK: D",
+				"kind": "button",
+				"position": {
+					"x": 91.0,
+					"y": 26.973684210526315,
+					"width": 6.416666666666666,
+					"height": 7.894736842105263
+				}
+			},
+			{
+				"id": "pads-pad-13",
+				"label": "PADS: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 49.25,
+					"y": 40.78947368421053,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-14",
+				"label": "PADS: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 61.291666666666664,
+					"y": 40.78947368421053,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-15",
+				"label": "PADS: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 73.33333333333333,
+					"y": 40.78947368421053,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-16",
+				"label": "PADS: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 85.375,
+					"y": 40.78947368421053,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-9",
+				"label": "PADS: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.25,
+					"y": 54.60526315789473,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-10",
+				"label": "PADS: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 61.291666666666664,
+					"y": 54.60526315789473,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-11",
+				"label": "PADS: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 73.33333333333333,
+					"y": 54.60526315789473,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-12",
+				"label": "PADS: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 85.375,
+					"y": 54.60526315789473,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-5",
+				"label": "PADS: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 49.25,
+					"y": 68.42105263157895,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-6",
+				"label": "PADS: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 61.291666666666664,
+					"y": 68.42105263157895,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-7",
+				"label": "PADS: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 73.33333333333333,
+					"y": 68.42105263157895,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-8",
+				"label": "PADS: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 85.375,
+					"y": 68.42105263157895,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-1",
+				"label": "PADS: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 49.25,
+					"y": 82.23684210526315,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-2",
+				"label": "PADS: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 61.291666666666664,
+					"y": 82.23684210526315,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-3",
+				"label": "PADS: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 73.33333333333333,
+					"y": 82.23684210526315,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			},
+			{
+				"id": "pads-pad-4",
+				"label": "PADS: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 85.375,
+					"y": 82.23684210526315,
+					"width": 12.041666666666668,
+					"height": 13.815789473684212
+				}
+			}
+		]
 	},
 	"diagrams": {
 		"panel": "panel.svg",
 		"connections": "connections.svg",
 		"interface": "interface.svg"
 	},
-	"connections": [],
+	"connections": [
+		{
+			"label": "MIDI IN 1 / 2",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "MIDI OUT A / B",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Record IN L / R",
+			"connector": "6.35 mm jack",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "Stereo OUT L / R",
+			"connector": "6.35 mm jack",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm stereo jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Footswitch 1 / 2",
+			"connector": "6.35 mm jack",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "SCSI",
+			"connector": "SCSI connector",
+			"direction": "bidirectional",
+			"location": "rear"
+		},
+		{
+			"label": "AC power",
+			"connector": "AC inlet",
+			"direction": "input",
+			"location": "rear"
+		}
+	],
 	"diagramSources": [
+		"https://www.mpcstuff.com/content/MPC_Manuals/MPC2000XL_manual.pdf",
 		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
 	]
 }

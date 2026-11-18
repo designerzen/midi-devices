@@ -21,7 +21,7 @@
 		"Accessible music hardware"
 	],
 	"hardwareControls": [],
-	"notice": "Select scales and sounds on the control module. Head tilt chooses pitch and breath controls dynamics. Route the module MIDI output to an external instrument through a DIN MIDI interface. The cited guide does not establish a fixed CC map, so breath CC assignments are intentionally omitted. My Breath My Music is the project/support organization; see its page for supplier information. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"notice": "Select scales and sounds on the control module. Head tilt chooses pitch and breath controls dynamics. Route the module MIDI output to an external instrument through a DIN MIDI interface. The cited guide does not establish a fixed CC map, so breath CC assignments are intentionally omitted. My Breath My Music is the project/support organization; see its page for supplier information. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original simplified schematic. Physical controls are shown without assumed MIDI assignments.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -44,18 +44,82 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
+		"src": "interface.svg",
 		"width": 1000,
-		"height": 300,
-		"elements": []
+		"height": 480,
+		"elements": [
+			{
+				"id": "flute-head-control-breath-mouthpiece",
+				"label": "FLUTE / HEAD CONTROL: Breath mouthpiece",
+				"kind": "input",
+				"position": {
+					"x": 3.1,
+					"y": 21.875,
+					"width": 21.65,
+					"height": 69.79166666666666
+				}
+			},
+			{
+				"id": "flute-head-control-head-tilt-pitch",
+				"label": "FLUTE / HEAD CONTROL: Head tilt / pitch",
+				"kind": "strip",
+				"position": {
+					"x": 24.75,
+					"y": 21.875,
+					"width": 21.65,
+					"height": 69.79166666666666
+				}
+			},
+			{
+				"id": "control-module-note-settings-display",
+				"label": "CONTROL MODULE: Note / settings display",
+				"kind": "screen",
+				"position": {
+					"x": 49.6,
+					"y": 21.875,
+					"width": 47.3,
+					"height": 23.26388888888889
+				}
+			},
+			{
+				"id": "control-module-scale-selection",
+				"label": "CONTROL MODULE: Scale selection",
+				"kind": "button",
+				"position": {
+					"x": 49.6,
+					"y": 45.13888888888889,
+					"width": 47.3,
+					"height": 23.26388888888889
+				}
+			},
+			{
+				"id": "control-module-instrument-selection",
+				"label": "CONTROL MODULE: Instrument selection",
+				"kind": "button",
+				"position": {
+					"x": 49.6,
+					"y": 68.40277777777779,
+					"width": 47.3,
+					"height": 23.26388888888889
+				}
+			}
+		]
 	},
 	"diagrams": {
 		"panel": "panel.svg",
 		"connections": "connections.svg",
 		"interface": "interface.svg"
 	},
-	"connections": [],
+	"connections": [
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "control module"
+		}
+	],
 	"diagramSources": [
+		"https://mybreathmymusic.com/en/magic-flute",
 		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
 	]
 }

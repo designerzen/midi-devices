@@ -1,0 +1,457 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "keith-mcmillen-quneo",
+	"name": "Keith McMillen QuNeo",
+	"manufacturer": "Keith McMillen Instruments",
+	"manufacturerUrl": "https://keithmcmillen.com/",
+	"productUrl": "https://files.keithmcmillen.com/products/quneo/Manuals/QuNeo_FullManual_v2.pdf",
+	"ids": [
+		"keith-mcmillen-quneo"
+	],
+	"portNames": [],
+	"description": "Pressure- and position-sensitive pad controller with touch sliders and rotary sensors.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Keith McMillen QuNeo - hardware / MIDI documentation",
+			"url": "https://files.keithmcmillen.com/products/quneo/Manuals/QuNeo_FullManual_v2.pdf"
+		},
+		{
+			"title": "Keith McMillen QuNeo - setup and support reference",
+			"url": "https://keithmcmillen.com/products/quneo/"
+		},
+		{
+			"title": "Keith McMillen QuNeo - setup and support reference",
+			"url": "https://support.keithmcmillen.com/hc/en-us/articles/203346895-What-do-I-need-the-MIDI-Expander-for"
+		}
+	],
+	"abilities": [
+		"16 pressure / X-Y pads",
+		"Touch sliders",
+		"Rotary touch sensors",
+		"Configurable response",
+		"USB MIDI"
+	],
+	"hardwareControls": [
+		"PAD GRID: Pad 13, Pad 14, Pad 15, Pad 16, Pad 9, Pad 10, Pad 11, Pad 12, Pad 5, Pad 6, Pad 7, Pad 8, Pad 1, Pad 2, Pad 3, Pad 4",
+		"VERTICAL SLIDERS: Slider 1, Slider 2, Slider 3, Slider 4",
+		"ROTARY SENSORS: Left rotary, Right rotary",
+		"HORIZONTAL SLIDERS: Slider 5, Slider 6, Long slider",
+		"TRANSPORT / NAVIGATION: Mode, Up, Down, Left, Right, Stop, Play, Record"
+	],
+	"notice": "Connect via USB and select the input in the host. Use the QuNeo editor to set sensitivity, pads, sliders and rotary assignments. For a KMI MIDI Expander, use the documented Expander mode. Touch surfaces provide an alternative control method, but this is not a promise of suitability for every access need. This discontinued model remains listed for existing hardware; mappings vary by preset and firmware. Select the profile manually if the host does not identify it: no unverified port aliases are supplied. Diagrams are original simplified schematics, not scale drawings. Physical controls without a binding are informational; use MIDI learn for configurable assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Keith McMillen QuNeo schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 800,
+		"height": 950,
+		"elements": [
+			{
+				"id": "pad-grid-pad-13",
+				"label": "PAD GRID: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 3.875,
+					"y": 10.0,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-14",
+				"label": "PAD GRID: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 26.937499999999996,
+					"y": 10.0,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-15",
+				"label": "PAD GRID: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 50.0,
+					"y": 10.0,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-16",
+				"label": "PAD GRID: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 73.0625,
+					"y": 10.0,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-9",
+				"label": "PAD GRID: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 3.875,
+					"y": 22.236842105263158,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-10",
+				"label": "PAD GRID: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 26.937499999999996,
+					"y": 22.236842105263158,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-11",
+				"label": "PAD GRID: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 50.0,
+					"y": 22.236842105263158,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-12",
+				"label": "PAD GRID: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 73.0625,
+					"y": 22.236842105263158,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-5",
+				"label": "PAD GRID: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 3.875,
+					"y": 34.473684210526315,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-6",
+				"label": "PAD GRID: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 26.937499999999996,
+					"y": 34.473684210526315,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-7",
+				"label": "PAD GRID: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 50.0,
+					"y": 34.473684210526315,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-8",
+				"label": "PAD GRID: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 73.0625,
+					"y": 34.473684210526315,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-1",
+				"label": "PAD GRID: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 3.875,
+					"y": 46.71052631578947,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-2",
+				"label": "PAD GRID: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 26.937499999999996,
+					"y": 46.71052631578947,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-3",
+				"label": "PAD GRID: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 50.0,
+					"y": 46.71052631578947,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "pad-grid-pad-4",
+				"label": "PAD GRID: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 73.0625,
+					"y": 46.71052631578947,
+					"width": 23.0625,
+					"height": 12.23684210526316
+				}
+			},
+			{
+				"id": "vertical-sliders-slider-1",
+				"label": "VERTICAL SLIDERS: Slider 1",
+				"kind": "strip",
+				"position": {
+					"x": 3.875,
+					"y": 63.68421052631579,
+					"width": 11.1875,
+					"height": 15.263157894736842
+				}
+			},
+			{
+				"id": "vertical-sliders-slider-2",
+				"label": "VERTICAL SLIDERS: Slider 2",
+				"kind": "strip",
+				"position": {
+					"x": 15.0625,
+					"y": 63.68421052631579,
+					"width": 11.1875,
+					"height": 15.263157894736842
+				}
+			},
+			{
+				"id": "vertical-sliders-slider-3",
+				"label": "VERTICAL SLIDERS: Slider 3",
+				"kind": "strip",
+				"position": {
+					"x": 26.25,
+					"y": 63.68421052631579,
+					"width": 11.1875,
+					"height": 15.263157894736842
+				}
+			},
+			{
+				"id": "vertical-sliders-slider-4",
+				"label": "VERTICAL SLIDERS: Slider 4",
+				"kind": "strip",
+				"position": {
+					"x": 37.4375,
+					"y": 63.68421052631579,
+					"width": 11.1875,
+					"height": 15.263157894736842
+				}
+			},
+			{
+				"id": "rotary-sensors-left-rotary",
+				"label": "ROTARY SENSORS: Left rotary",
+				"kind": "touch",
+				"position": {
+					"x": 51.37500000000001,
+					"y": 63.68421052631579,
+					"width": 22.375,
+					"height": 15.263157894736842
+				}
+			},
+			{
+				"id": "rotary-sensors-right-rotary",
+				"label": "ROTARY SENSORS: Right rotary",
+				"kind": "touch",
+				"position": {
+					"x": 73.75,
+					"y": 63.68421052631579,
+					"width": 22.375,
+					"height": 15.263157894736842
+				}
+			},
+			{
+				"id": "horizontal-sliders-slider-5",
+				"label": "HORIZONTAL SLIDERS: Slider 5",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 3.875,
+					"y": 83.6842105263158,
+					"width": 67.25,
+					"height": 3.859649122807017
+				}
+			},
+			{
+				"id": "horizontal-sliders-slider-6",
+				"label": "HORIZONTAL SLIDERS: Slider 6",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 3.875,
+					"y": 87.54385964912281,
+					"width": 67.25,
+					"height": 3.859649122807017
+				}
+			},
+			{
+				"id": "horizontal-sliders-long-slider",
+				"label": "HORIZONTAL SLIDERS: Long slider",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 3.875,
+					"y": 91.40350877192984,
+					"width": 67.25,
+					"height": 3.859649122807017
+				}
+			},
+			{
+				"id": "transport-navigation-mode",
+				"label": "TRANSPORT / NAVIGATION: Mode",
+				"kind": "button",
+				"position": {
+					"x": 73.875,
+					"y": 83.6842105263158,
+					"width": 5.5625,
+					"height": 5.7894736842105265
+				}
+			},
+			{
+				"id": "transport-navigation-up",
+				"label": "TRANSPORT / NAVIGATION: Up",
+				"kind": "button",
+				"position": {
+					"x": 79.4375,
+					"y": 83.6842105263158,
+					"width": 5.5625,
+					"height": 5.7894736842105265
+				}
+			},
+			{
+				"id": "transport-navigation-down",
+				"label": "TRANSPORT / NAVIGATION: Down",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 83.6842105263158,
+					"width": 5.5625,
+					"height": 5.7894736842105265
+				}
+			},
+			{
+				"id": "transport-navigation-left",
+				"label": "TRANSPORT / NAVIGATION: Left",
+				"kind": "button",
+				"position": {
+					"x": 90.5625,
+					"y": 83.6842105263158,
+					"width": 5.5625,
+					"height": 5.7894736842105265
+				}
+			},
+			{
+				"id": "transport-navigation-right",
+				"label": "TRANSPORT / NAVIGATION: Right",
+				"kind": "button",
+				"position": {
+					"x": 73.875,
+					"y": 89.47368421052632,
+					"width": 5.5625,
+					"height": 5.7894736842105265
+				}
+			},
+			{
+				"id": "transport-navigation-stop",
+				"label": "TRANSPORT / NAVIGATION: Stop",
+				"kind": "button",
+				"position": {
+					"x": 79.4375,
+					"y": 89.47368421052632,
+					"width": 5.5625,
+					"height": 5.7894736842105265
+				}
+			},
+			{
+				"id": "transport-navigation-play",
+				"label": "TRANSPORT / NAVIGATION: Play",
+				"kind": "button",
+				"position": {
+					"x": 85.0,
+					"y": 89.47368421052632,
+					"width": 5.5625,
+					"height": 5.7894736842105265
+				}
+			},
+			{
+				"id": "transport-navigation-record",
+				"label": "TRANSPORT / NAVIGATION: Record",
+				"kind": "button",
+				"position": {
+					"x": 90.5625,
+					"y": 89.47368421052632,
+					"width": 5.5625,
+					"height": 5.7894736842105265
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB / Expander",
+			"connector": "Mini USB",
+			"direction": "bidirectional",
+			"location": "edge"
+		}
+	],
+	"diagramSources": [
+		"https://files.keithmcmillen.com/products/quneo/Manuals/QuNeo_FullManual_v2.pdf",
+		"https://keithmcmillen.com/products/quneo/",
+		"https://support.keithmcmillen.com/hc/en-us/articles/203346895-What-do-I-need-the-MIDI-Expander-for",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

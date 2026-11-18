@@ -1,0 +1,481 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "keith-mcmillen-qunexus",
+	"name": "Keith McMillen QuNexus (original)",
+	"manufacturer": "Keith McMillen Instruments",
+	"manufacturerUrl": "https://keithmcmillen.com/",
+	"productUrl": "https://files.keithmcmillen.com/downloads/qunexus/QuNexus_FullManual_1.0.1.pdf",
+	"ids": [
+		"keith-mcmillen-qunexus"
+	],
+	"portNames": [],
+	"description": "25-key compact controller with per-key pressure and tilt plus MIDI / CV connectivity.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Keith McMillen QuNexus (original) - hardware / MIDI documentation",
+			"url": "https://files.keithmcmillen.com/downloads/qunexus/QuNexus_FullManual_1.0.1.pdf"
+		},
+		{
+			"title": "Keith McMillen QuNexus (original) - setup and support reference",
+			"url": "https://support.keithmcmillen.com/hc/en-us/articles/203346895-What-do-I-need-the-MIDI-Expander-for"
+		}
+	],
+	"abilities": [
+		"25 sensor keys",
+		"Pressure and tilt sensing",
+		"Configurable sensitivity",
+		"USB MIDI",
+		"CV / gate"
+	],
+	"hardwareControls": [
+		"PRESETS / PERFORMANCE: A, B, C, D, Octave -, Octave +, Bend",
+		"SENSOR KEYS: Key 1, Key 2, Key 3, Key 4, Key 5, Key 6, Key 7, Key 8, Key 9, Key 10, Key 11, Key 12, Key 13, Key 14, Key 15, Key 16, Key 17, Key 18, Key 19, Key 20, Key 21, Key 22, Key 23, Key 24, Key 25"
+	],
+	"notice": "This profile describes the original QuNexus documented in the 1.0.1 manual, not QuNexus RED or Galaxy. Connect via USB to a host and choose a compatible editor and firmware. Configure sensitivity and controller layers for the player. DIN MIDI uses the KMI MIDI Expander. Notes, tilt and pressure assignments depend on presets, so the physical keys remain unbound here. Select the profile manually if the host does not identify it: no unverified port aliases are supplied. Diagrams are original simplified schematics, not scale drawings. Physical controls without a binding are informational; use MIDI learn for configurable assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Keith McMillen QuNexus (original) schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 350,
+		"elements": [
+			{
+				"id": "presets-performance-a",
+				"label": "PRESETS / PERFORMANCE: A",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 27.142857142857142,
+					"width": 6.791666666666667,
+					"height": 16.071428571428573
+				}
+			},
+			{
+				"id": "presets-performance-b",
+				"label": "PRESETS / PERFORMANCE: B",
+				"kind": "button",
+				"position": {
+					"x": 9.375,
+					"y": 27.142857142857142,
+					"width": 6.791666666666667,
+					"height": 16.071428571428573
+				}
+			},
+			{
+				"id": "presets-performance-c",
+				"label": "PRESETS / PERFORMANCE: C",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 43.214285714285715,
+					"width": 6.791666666666667,
+					"height": 16.071428571428573
+				}
+			},
+			{
+				"id": "presets-performance-d",
+				"label": "PRESETS / PERFORMANCE: D",
+				"kind": "button",
+				"position": {
+					"x": 9.375,
+					"y": 43.214285714285715,
+					"width": 6.791666666666667,
+					"height": 16.071428571428573
+				}
+			},
+			{
+				"id": "presets-performance-octave",
+				"label": "PRESETS / PERFORMANCE: Octave -",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 59.285714285714285,
+					"width": 6.791666666666667,
+					"height": 16.071428571428573
+				}
+			},
+			{
+				"id": "presets-performance-octave-2",
+				"label": "PRESETS / PERFORMANCE: Octave +",
+				"kind": "button",
+				"position": {
+					"x": 9.375,
+					"y": 59.285714285714285,
+					"width": 6.791666666666667,
+					"height": 16.071428571428573
+				}
+			},
+			{
+				"id": "presets-performance-bend",
+				"label": "PRESETS / PERFORMANCE: Bend",
+				"kind": "strip",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 75.35714285714286,
+					"width": 6.791666666666667,
+					"height": 16.071428571428573
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Touch plate 1",
+				"kind": "key",
+				"position": {
+					"x": 17.5,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Touch plate 3",
+				"kind": "key",
+				"position": {
+					"x": 22.86111111111111,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Touch plate 5",
+				"kind": "key",
+				"position": {
+					"x": 28.22222222222222,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Touch plate 6",
+				"kind": "key",
+				"position": {
+					"x": 33.58333333333333,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Touch plate 8",
+				"kind": "key",
+				"position": {
+					"x": 38.94444444444444,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Touch plate 10",
+				"kind": "key",
+				"position": {
+					"x": 44.30555555555556,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Touch plate 12",
+				"kind": "key",
+				"position": {
+					"x": 49.666666666666664,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Touch plate 13",
+				"kind": "key",
+				"position": {
+					"x": 55.02777777777778,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Touch plate 15",
+				"kind": "key",
+				"position": {
+					"x": 60.38888888888888,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Touch plate 17",
+				"kind": "key",
+				"position": {
+					"x": 65.75,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Touch plate 18",
+				"kind": "key",
+				"position": {
+					"x": 71.1111111111111,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Touch plate 20",
+				"kind": "key",
+				"position": {
+					"x": 76.47222222222221,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Touch plate 22",
+				"kind": "key",
+				"position": {
+					"x": 81.83333333333334,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Touch plate 24",
+				"kind": "key",
+				"position": {
+					"x": 87.19444444444444,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Touch plate 25",
+				"kind": "key",
+				"position": {
+					"x": 92.55555555555554,
+					"y": 24.285714285714285,
+					"width": 5.361111111111111,
+					"height": 65.71428571428571
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Touch plate 2",
+				"kind": "key",
+				"position": {
+					"x": 21.199166666666667,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Touch plate 4",
+				"kind": "key",
+				"position": {
+					"x": 26.560277777777774,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Touch plate 7",
+				"kind": "key",
+				"position": {
+					"x": 37.2825,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Touch plate 9",
+				"kind": "key",
+				"position": {
+					"x": 42.64361111111111,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Touch plate 11",
+				"kind": "key",
+				"position": {
+					"x": 48.00472222222222,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Touch plate 14",
+				"kind": "key",
+				"position": {
+					"x": 58.72694444444445,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Touch plate 16",
+				"kind": "key",
+				"position": {
+					"x": 64.08805555555556,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Touch plate 19",
+				"kind": "key",
+				"position": {
+					"x": 74.81027777777777,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Touch plate 21",
+				"kind": "key",
+				"position": {
+					"x": 80.17138888888888,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Touch plate 23",
+				"kind": "key",
+				"position": {
+					"x": 85.53249999999998,
+					"y": 24.285714285714285,
+					"width": 3.323888888888889,
+					"height": 40.08571428571428
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB host",
+			"connector": "Micro USB",
+			"direction": "bidirectional",
+			"location": "edge"
+		},
+		{
+			"label": "MIDI Expander",
+			"connector": "Mini USB",
+			"direction": "bidirectional",
+			"location": "edge"
+		},
+		{
+			"label": "CV IN 1 / 2",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "edge"
+		},
+		{
+			"label": "Gate / CV outputs",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "edge"
+		}
+	],
+	"diagramSources": [
+		"https://files.keithmcmillen.com/downloads/qunexus/QuNexus_FullManual_1.0.1.pdf",
+		"https://support.keithmcmillen.com/hc/en-us/articles/203346895-What-do-I-need-the-MIDI-Expander-for",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

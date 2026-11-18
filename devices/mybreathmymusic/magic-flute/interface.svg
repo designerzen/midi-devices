@@ -1,1 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title description"><title id="title">Magic Flute Interface</title><desc id="description">Conceptual surface preserving the profile element positions. Virtual assignments require hardware verification.</desc><rect width="1000" height="300" fill="#fff" stroke="#000"/><text x="20" y="35" font-family="sans-serif" font-size="20" fill="#000">Magic Flute / Interface</text><text x="20" y="75" font-family="sans-serif" font-size="14" fill="#000">Conceptual schematic; see profile setup notes for hardware operation.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" role="img" aria-labelledby="title description">
+<title id="title">Magic Flute labelled interface</title><desc id="description">Original simplified component schematic. Components and playing surfaces are separated for clarity; this is not a scale hardware drawing. Musical assignments depend on the device setup or companion app.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect x="0" y="0" width="1000" height="480" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="982" height="462" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Magic Flute</text>
+<text x="975" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">COMPONENT VIEW</text>
+<rect x="25" y="75" width="445" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="32" y="89" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">FLUTE / HEAD CONTROL</text>
+<g id="flute-head-control-breath-mouthpiece" data-kind="input" aria-label="Breath mouthpiece"><title>Breath mouthpiece</title>
+<svg data-symbol="input" x="115.250" y="239.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="139.25" y="436" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Breath mouthpiece</text>
+</g>
+<g id="flute-head-control-head-tilt-pitch" data-kind="strip" aria-label="Head tilt / pitch"><title>Head tilt / pitch</title>
+<rect x="344.75" y="110" width="22" height="305.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
+<path d="M355.75 115L355.75 411.57" fill="none" stroke="#000" stroke-width="1"/>
+<text x="355.75" y="436" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Head tilt / pitch</text>
+</g>
+<rect x="490" y="75" width="485" height="370" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="497" y="89" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">CONTROL MODULE</text>
+<g id="control-module-note-settings-display" data-kind="screen" aria-label="Note / settings display"><title>Note / settings display</title>
+<rect x="501" y="110" width="463" height="86.237" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="505" y="114" width="455" height="78.237" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<text x="732.5" y="212.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Note / settings display</text>
+</g>
+<g id="control-module-scale-selection" data-kind="button" aria-label="Scale selection"><title>Scale selection</title>
+<svg data-symbol="button" x="708.500" y="239.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<text x="732.5" y="324.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Scale selection</text>
+</g>
+<g id="control-module-instrument-selection" data-kind="button" aria-label="Instrument selection"><title>Instrument selection</title>
+<svg data-symbol="button" x="708.500" y="351.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<text x="732.5" y="436" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Instrument selection</text>
+</g>
+</svg>

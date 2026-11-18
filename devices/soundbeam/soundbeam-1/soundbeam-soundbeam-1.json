@@ -53,10 +53,55 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
+		"src": "interface.svg",
 		"width": 1000,
-		"height": 300,
-		"elements": []
+		"height": 350,
+		"elements": [
+			{
+				"id": "mode-mode",
+				"label": "MODE: Mode",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 30.0,
+					"width": 17.8,
+					"height": 57.14285714285714
+				}
+			},
+			{
+				"id": "transpose-transpose",
+				"label": "TRANSPOSE: Transpose",
+				"kind": "knob",
+				"position": {
+					"x": 23.1,
+					"y": 30.0,
+					"width": 17.8,
+					"height": 57.14285714285714
+				}
+			},
+			{
+				"id": "range-range",
+				"label": "RANGE: Range",
+				"kind": "knob",
+				"position": {
+					"x": 43.1,
+					"y": 30.0,
+					"width": 17.8,
+					"height": 57.14285714285714
+				}
+			},
+			{
+				"id": "range-switch-short-long",
+				"label": "RANGE SWITCH: Short / Long",
+				"kind": "switch",
+				"position": {
+					"x": 63.1,
+					"y": 30.0,
+					"width": 33.800000000000004,
+					"height": 57.14285714285714
+				}
+			}
+		]
 	},
 	"productUrl": "https://www.soundbeam.co.uk/soundbeam-1-manual",
 	"diagrams": {
@@ -64,8 +109,16 @@
 		"connections": "connections.svg",
 		"interface": "interface.svg"
 	},
-	"connections": [],
+	"connections": [
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "rear"
+		}
+	],
 	"diagramSources": [
+		"https://www.soundbeam.co.uk/s/Scanned-SB1manual.pdf",
 		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
 	]
 }

@@ -131,14 +131,18 @@ def keyboard(draw,spec,labelled):
             if style in ["keywave","capacitive","buchla"]:draw.line(xx+w/2,y+12,xx+w/2,y+hh-12)
             if labelled and not black:draw.text(xx+w/2,y+height-9,str(n+1),9)
             draw.parts.append("</g>")
-            elements.append({"id":f"key-{n+1}","label":label,"kind":"key","position":{"x":xx/draw.width*100,"y":y/draw.height*100,"width":w/draw.width*100,"height":hh/draw.height*100},"message":{"type":"note","number":first+n},"learnable":True,"dark":black})
+            element={"id":f"key-{n+1}","label":label,"kind":"key","position":{"x":xx/draw.width*100,"y":y/draw.height*100,"width":w/draw.width*100,"height":hh/draw.height*100}}
+            if spec.get("mapKeyboard",True):
+                element.update(message={"type":"note","number":first+n},learnable=True)
+            element["dark"]=black
+            elements.append(element)
     draw.parts.append("</g>")
     return elements
 
 
 def render_device(identifier,spec,profile,folder):
     elements=[];used=set();bindings=profile.get("controls",[])
-    descriptions="Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments."
+    descriptions=spec.get("description", "Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.")
     for labelled,filename in [(False,"panel.svg"),(True,"interface.svg")]:
         draw=Drawing(profile["name"]+(" labelled interface" if labelled else " top panel"),spec["width"],spec["height"],descriptions)
         if spec.get("shell")=="handheld":
@@ -147,7 +151,7 @@ def render_device(identifier,spec,profile,folder):
         else:
             draw.rect(9,9,spec["width"]-18,spec["height"]-18,rx=45 if spec.get("shell")=="arcana" else 12)
         draw.text(25,37,profile["name"],19,"start",bold=True)
-        draw.text(spec["width"]-25,37,"INTERFACE" if labelled else "TOP VIEW",11,"end")
+        draw.text(spec["width"]-25,37,spec.get("viewLabel", "INTERFACE" if labelled else "TOP VIEW"),11,"end")
         used=set();current=[]
         for section in spec["groups"]:
             x,y,w,h=section["box"];labels=section["labels"];cols=section["columns"] or min(4,len(labels));rows=math.ceil(len(labels)/cols)

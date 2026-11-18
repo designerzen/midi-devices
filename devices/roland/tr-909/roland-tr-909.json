@@ -19,7 +19,7 @@
 	],
 	"abilities": [],
 	"hardwareControls": [],
-	"notice": "Connect the original TR-909 through DIN MIDI. Configure MIDI receive channel and sync source on the hardware. Instrument tuning and decay knobs are not generic MIDI CCs. Drum-note assignments and clock transport are omitted from this initial profile; consult the MIDI chart. This is not the TR-09 reissue. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original schematic; virtual keyboard note numbers are illustrative and require MIDI learn or octave adjustment.",
+	"notice": "Connect the original TR-909 through DIN MIDI. Configure MIDI receive channel and sync source on the hardware. Instrument tuning and decay knobs are not generic MIDI CCs. Drum-note assignments and clock transport are omitted from this initial profile; consult the MIDI chart. This is not the TR-09 reissue. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original simplified schematic. Physical controls are shown without assumed MIDI assignments.",
 	"controls": [],
 	"modes": [],
 	"gui": {
@@ -42,18 +42,758 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
-		"width": 1000,
-		"height": 300,
-		"elements": []
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 735,
+		"elements": [
+			{
+				"id": "master-master-volume",
+				"label": "MASTER: Master volume",
+				"kind": "knob",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 12.925170068027212,
+					"width": 7.866666666666666,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "master-tempo",
+				"label": "MASTER: Tempo",
+				"kind": "knob",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 21.428571428571427,
+					"width": 7.866666666666666,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "master-tempo-display",
+				"label": "MASTER: Tempo display",
+				"kind": "screen",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 29.931972789115648,
+					"width": 7.866666666666666,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "master-shuffle-flam",
+				"label": "MASTER: Shuffle / Flam",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 38.435374149659864,
+					"width": 7.866666666666666,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "bass-drum-level",
+				"label": "BASS DRUM: Level",
+				"kind": "knob",
+				"position": {
+					"x": 11.4,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "bass-drum-tune",
+				"label": "BASS DRUM: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 11.4,
+					"y": 21.428571428571427,
+					"width": 7.3999999999999995,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "bass-drum-attack",
+				"label": "BASS DRUM: Attack",
+				"kind": "knob",
+				"position": {
+					"x": 11.4,
+					"y": 29.931972789115648,
+					"width": 7.3999999999999995,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "bass-drum-decay",
+				"label": "BASS DRUM: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 11.4,
+					"y": 38.435374149659864,
+					"width": 7.3999999999999995,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "snare-drum-level",
+				"label": "SNARE DRUM: Level",
+				"kind": "knob",
+				"position": {
+					"x": 20.133333333333333,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "snare-drum-tune",
+				"label": "SNARE DRUM: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 20.133333333333333,
+					"y": 21.428571428571427,
+					"width": 7.3999999999999995,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "snare-drum-tone",
+				"label": "SNARE DRUM: Tone",
+				"kind": "knob",
+				"position": {
+					"x": 20.133333333333333,
+					"y": 29.931972789115648,
+					"width": 7.3999999999999995,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "snare-drum-snappy",
+				"label": "SNARE DRUM: Snappy",
+				"kind": "knob",
+				"position": {
+					"x": 20.133333333333333,
+					"y": 38.435374149659864,
+					"width": 7.3999999999999995,
+					"height": 8.503401360544217
+				}
+			},
+			{
+				"id": "low-tom-level",
+				"label": "LOW TOM: Level",
+				"kind": "knob",
+				"position": {
+					"x": 28.866666666666667,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "low-tom-tune",
+				"label": "LOW TOM: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 28.866666666666667,
+					"y": 24.26303854875283,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "low-tom-decay",
+				"label": "LOW TOM: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 28.866666666666667,
+					"y": 35.60090702947845,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "mid-tom-level",
+				"label": "MID TOM: Level",
+				"kind": "knob",
+				"position": {
+					"x": 37.6,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "mid-tom-tune",
+				"label": "MID TOM: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 37.6,
+					"y": 24.26303854875283,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "mid-tom-decay",
+				"label": "MID TOM: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 37.6,
+					"y": 35.60090702947845,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "hi-tom-level",
+				"label": "HI TOM: Level",
+				"kind": "knob",
+				"position": {
+					"x": 46.33333333333333,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "hi-tom-tune",
+				"label": "HI TOM: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 46.33333333333333,
+					"y": 24.26303854875283,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "hi-tom-decay",
+				"label": "HI TOM: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 46.33333333333333,
+					"y": 35.60090702947845,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "rim-shot-level",
+				"label": "RIM SHOT: Level",
+				"kind": "knob",
+				"position": {
+					"x": 55.06666666666666,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 34.01360544217687
+				}
+			},
+			{
+				"id": "hand-clap-level",
+				"label": "HAND CLAP: Level",
+				"kind": "knob",
+				"position": {
+					"x": 63.800000000000004,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 34.01360544217687
+				}
+			},
+			{
+				"id": "hi-hat-level",
+				"label": "HI HAT: Level",
+				"kind": "knob",
+				"position": {
+					"x": 72.53333333333333,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "hi-hat-closed-decay",
+				"label": "HI HAT: Closed decay",
+				"kind": "knob",
+				"position": {
+					"x": 72.53333333333333,
+					"y": 24.26303854875283,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "hi-hat-open-decay",
+				"label": "HI HAT: Open decay",
+				"kind": "knob",
+				"position": {
+					"x": 72.53333333333333,
+					"y": 35.60090702947845,
+					"width": 7.3999999999999995,
+					"height": 11.337868480725623
+				}
+			},
+			{
+				"id": "crash-level",
+				"label": "CRASH: Level",
+				"kind": "knob",
+				"position": {
+					"x": 81.26666666666667,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 17.006802721088434
+				}
+			},
+			{
+				"id": "crash-tune",
+				"label": "CRASH: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 81.26666666666667,
+					"y": 29.931972789115648,
+					"width": 7.3999999999999995,
+					"height": 17.006802721088434
+				}
+			},
+			{
+				"id": "ride-level",
+				"label": "RIDE: Level",
+				"kind": "knob",
+				"position": {
+					"x": 90.0,
+					"y": 12.925170068027212,
+					"width": 7.3999999999999995,
+					"height": 17.006802721088434
+				}
+			},
+			{
+				"id": "ride-tune",
+				"label": "RIDE: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 90.0,
+					"y": 29.931972789115648,
+					"width": 7.3999999999999995,
+					"height": 17.006802721088434
+				}
+			},
+			{
+				"id": "program-track-shift",
+				"label": "PROGRAM / TRACK: Shift",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-track-play",
+				"label": "PROGRAM / TRACK: Track play",
+				"kind": "button",
+				"position": {
+					"x": 10.055555555555554,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-track-write",
+				"label": "PROGRAM / TRACK: Track write",
+				"kind": "button",
+				"position": {
+					"x": 18.04444444444444,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-pattern-play",
+				"label": "PROGRAM / TRACK: Pattern play",
+				"kind": "button",
+				"position": {
+					"x": 26.033333333333335,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-pattern-write",
+				"label": "PROGRAM / TRACK: Pattern write",
+				"kind": "button",
+				"position": {
+					"x": 34.02222222222222,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-last-step",
+				"label": "PROGRAM / TRACK: Last step",
+				"kind": "button",
+				"position": {
+					"x": 42.01111111111111,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-scale",
+				"label": "PROGRAM / TRACK: Scale",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-back",
+				"label": "PROGRAM / TRACK: Back",
+				"kind": "button",
+				"position": {
+					"x": 57.98888888888888,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-forward",
+				"label": "PROGRAM / TRACK: Forward",
+				"kind": "button",
+				"position": {
+					"x": 65.97777777777777,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-enter",
+				"label": "PROGRAM / TRACK: Enter",
+				"kind": "button",
+				"position": {
+					"x": 73.96666666666667,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-instrument-select",
+				"label": "PROGRAM / TRACK: Instrument select",
+				"kind": "button",
+				"position": {
+					"x": 81.95555555555555,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "program-track-total-accent",
+				"label": "PROGRAM / TRACK: Total accent",
+				"kind": "button",
+				"position": {
+					"x": 89.94444444444444,
+					"y": 53.06122448979592,
+					"width": 7.988888888888888,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "step-keys-step-1",
+				"label": "STEP KEYS: Step 1",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-2",
+				"label": "STEP KEYS: Step 2",
+				"kind": "button",
+				"position": {
+					"x": 8.058333333333334,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-3",
+				"label": "STEP KEYS: Step 3",
+				"kind": "button",
+				"position": {
+					"x": 14.05,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-4",
+				"label": "STEP KEYS: Step 4",
+				"kind": "button",
+				"position": {
+					"x": 20.041666666666664,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-5",
+				"label": "STEP KEYS: Step 5",
+				"kind": "button",
+				"position": {
+					"x": 26.033333333333335,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-6",
+				"label": "STEP KEYS: Step 6",
+				"kind": "button",
+				"position": {
+					"x": 32.025,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-7",
+				"label": "STEP KEYS: Step 7",
+				"kind": "button",
+				"position": {
+					"x": 38.016666666666666,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-8",
+				"label": "STEP KEYS: Step 8",
+				"kind": "button",
+				"position": {
+					"x": 44.00833333333333,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-9",
+				"label": "STEP KEYS: Step 9",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-10",
+				"label": "STEP KEYS: Step 10",
+				"kind": "button",
+				"position": {
+					"x": 55.99166666666666,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-11",
+				"label": "STEP KEYS: Step 11",
+				"kind": "button",
+				"position": {
+					"x": 61.983333333333334,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-12",
+				"label": "STEP KEYS: Step 12",
+				"kind": "button",
+				"position": {
+					"x": 67.975,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-13",
+				"label": "STEP KEYS: Step 13",
+				"kind": "button",
+				"position": {
+					"x": 73.96666666666667,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-14",
+				"label": "STEP KEYS: Step 14",
+				"kind": "button",
+				"position": {
+					"x": 79.95833333333333,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-15",
+				"label": "STEP KEYS: Step 15",
+				"kind": "button",
+				"position": {
+					"x": 85.95,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "step-keys-step-16",
+				"label": "STEP KEYS: Step 16",
+				"kind": "button",
+				"position": {
+					"x": 91.94166666666666,
+					"y": 68.02721088435374,
+					"width": 5.991666666666666,
+					"height": 12.925170068027212
+				}
+			},
+			{
+				"id": "transport-stop-continue",
+				"label": "TRANSPORT: Stop / Continue",
+				"kind": "button",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 87.07482993197279,
+					"width": 10.844444444444443,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "transport-start",
+				"label": "TRANSPORT: Start",
+				"kind": "button",
+				"position": {
+					"x": 12.91111111111111,
+					"y": 87.07482993197279,
+					"width": 10.844444444444443,
+					"height": 8.843537414965986
+				}
+			},
+			{
+				"id": "transport-tap",
+				"label": "TRANSPORT: Tap",
+				"kind": "button",
+				"position": {
+					"x": 23.755555555555556,
+					"y": 87.07482993197279,
+					"width": 10.844444444444443,
+					"height": 8.843537414965986
+				}
+			}
+		]
 	},
 	"diagrams": {
 		"panel": "panel.svg",
 		"connections": "connections.svg",
 		"interface": "interface.svg"
 	},
-	"connections": [],
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "MIDI THRU",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Master OUT L / R",
+			"connector": "6.35 mm jack",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Individual instrument outputs",
+			"connector": "6.35 mm jacks",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Phones",
+			"connector": "6.35 mm stereo jack",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "External instrument input",
+			"connector": "6.35 mm jack",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "Sync IN",
+			"connector": "DIN sync",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "Tape IN",
+			"connector": "6.35 mm jack",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "Tape OUT",
+			"connector": "6.35 mm jack",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Trigger OUT",
+			"connector": "6.35 mm jack",
+			"direction": "output",
+			"location": "rear"
+		}
+	],
 	"diagramSources": [
+		"https://cdn.roland.com/assets/media/pdf/TR-909_OM.pdf",
 		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
 	]
 }

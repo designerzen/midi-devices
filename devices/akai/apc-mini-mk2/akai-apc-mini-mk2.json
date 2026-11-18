@@ -1,0 +1,1074 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "akai-apc-mini-mk2",
+	"name": "Akai APC mini MK2",
+	"manufacturer": "Akai",
+	"manufacturerUrl": "https://www.akaipro.com/",
+	"productUrl": "https://cdn.inmusicbrands.com/akai/apc-mini-mkii/APC%20mini%20mk2%20-%20User%20Guide%20-%20v1.7.pdf",
+	"ids": [
+		"akai-apc-mini-mk2"
+	],
+	"portNames": [],
+	"description": "Compact USB clip launcher with 64 RGB buttons and nine faders.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Akai APC mini MK2 - hardware / MIDI documentation",
+			"url": "https://cdn.inmusicbrands.com/akai/apc-mini-mkii/APC%20mini%20mk2%20-%20User%20Guide%20-%20v1.7.pdf"
+		}
+	],
+	"abilities": [
+		"64 RGB clip buttons",
+		"Nine faders",
+		"Drum mode",
+		"Note mode",
+		"Ableton Live control surface"
+	],
+	"hardwareControls": [
+		"CLIP BUTTONS: Row 1 clip 1, Row 1 clip 2, Row 1 clip 3, Row 1 clip 4, Row 1 clip 5, Row 1 clip 6, Row 1 clip 7, Row 1 clip 8, Row 2 clip 1, Row 2 clip 2, Row 2 clip 3, Row 2 clip 4, Row 2 clip 5, Row 2 clip 6, Row 2 clip 7, Row 2 clip 8, Row 3 clip 1, Row 3 clip 2, Row 3 clip 3, Row 3 clip 4, Row 3 clip 5, Row 3 clip 6, Row 3 clip 7, Row 3 clip 8, Row 4 clip 1, Row 4 clip 2, Row 4 clip 3, Row 4 clip 4, Row 4 clip 5, Row 4 clip 6, Row 4 clip 7, Row 4 clip 8, Row 5 clip 1, Row 5 clip 2, Row 5 clip 3, Row 5 clip 4, Row 5 clip 5, Row 5 clip 6, Row 5 clip 7, Row 5 clip 8, Row 6 clip 1, Row 6 clip 2, Row 6 clip 3, Row 6 clip 4, Row 6 clip 5, Row 6 clip 6, Row 6 clip 7, Row 6 clip 8, Row 7 clip 1, Row 7 clip 2, Row 7 clip 3, Row 7 clip 4, Row 7 clip 5, Row 7 clip 6, Row 7 clip 7, Row 7 clip 8, Row 8 clip 1, Row 8 clip 2, Row 8 clip 3, Row 8 clip 4, Row 8 clip 5, Row 8 clip 6, Row 8 clip 7, Row 8 clip 8",
+		"SCENE LAUNCH: Scene 1, Scene 2, Scene 3, Scene 4, Scene 5, Scene 6, Scene 7, Scene 8",
+		"CLIP STOP / MODES: Track 1, Track 2, Track 3, Track 4, Track 5, Track 6, Track 7, Track 8",
+		"FADERS: Track 1, Track 2, Track 3, Track 4, Track 5, Track 6, Track 7, Track 8, Master",
+		"SHIFT: Shift"
+	],
+	"notice": "Select APC mini mk2 as a control surface in Ableton Live and enable the documented performance input (Port 2) for note playback. Clip Launch, Drum and Note modes use different layouts; fader functions depend on the active mode. These clip buttons are not presented as velocity-sensitive drum pads. No fixed note or CC map is assumed. This is MK2, not the original APC mini. Select the profile manually if the host does not identify it: no unverified port aliases are supplied. Diagrams are original simplified schematics, not scale drawings. Physical controls without a binding are informational; use MIDI learn for configurable assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Akai APC mini MK2 schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 850,
+		"height": 1000,
+		"elements": [
+			{
+				"id": "clip-buttons-row-1-clip-1",
+				"label": "CLIP BUTTONS: Row 1 clip 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 9.5,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-1-clip-2",
+				"label": "CLIP BUTTONS: Row 1 clip 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 9.5,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-1-clip-3",
+				"label": "CLIP BUTTONS: Row 1 clip 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 9.5,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-1-clip-4",
+				"label": "CLIP BUTTONS: Row 1 clip 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 9.5,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-1-clip-5",
+				"label": "CLIP BUTTONS: Row 1 clip 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 9.5,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-1-clip-6",
+				"label": "CLIP BUTTONS: Row 1 clip 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 9.5,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-1-clip-7",
+				"label": "CLIP BUTTONS: Row 1 clip 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 9.5,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-1-clip-8",
+				"label": "CLIP BUTTONS: Row 1 clip 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 9.5,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-2-clip-1",
+				"label": "CLIP BUTTONS: Row 2 clip 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 16.5625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-2-clip-2",
+				"label": "CLIP BUTTONS: Row 2 clip 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 16.5625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-2-clip-3",
+				"label": "CLIP BUTTONS: Row 2 clip 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 16.5625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-2-clip-4",
+				"label": "CLIP BUTTONS: Row 2 clip 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 16.5625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-2-clip-5",
+				"label": "CLIP BUTTONS: Row 2 clip 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 16.5625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-2-clip-6",
+				"label": "CLIP BUTTONS: Row 2 clip 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 16.5625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-2-clip-7",
+				"label": "CLIP BUTTONS: Row 2 clip 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 16.5625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-2-clip-8",
+				"label": "CLIP BUTTONS: Row 2 clip 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 16.5625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-3-clip-1",
+				"label": "CLIP BUTTONS: Row 3 clip 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 23.625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-3-clip-2",
+				"label": "CLIP BUTTONS: Row 3 clip 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 23.625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-3-clip-3",
+				"label": "CLIP BUTTONS: Row 3 clip 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 23.625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-3-clip-4",
+				"label": "CLIP BUTTONS: Row 3 clip 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 23.625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-3-clip-5",
+				"label": "CLIP BUTTONS: Row 3 clip 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 23.625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-3-clip-6",
+				"label": "CLIP BUTTONS: Row 3 clip 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 23.625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-3-clip-7",
+				"label": "CLIP BUTTONS: Row 3 clip 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 23.625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-3-clip-8",
+				"label": "CLIP BUTTONS: Row 3 clip 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 23.625,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-4-clip-1",
+				"label": "CLIP BUTTONS: Row 4 clip 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 30.6875,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-4-clip-2",
+				"label": "CLIP BUTTONS: Row 4 clip 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 30.6875,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-4-clip-3",
+				"label": "CLIP BUTTONS: Row 4 clip 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 30.6875,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-4-clip-4",
+				"label": "CLIP BUTTONS: Row 4 clip 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 30.6875,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-4-clip-5",
+				"label": "CLIP BUTTONS: Row 4 clip 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 30.6875,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-4-clip-6",
+				"label": "CLIP BUTTONS: Row 4 clip 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 30.6875,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-4-clip-7",
+				"label": "CLIP BUTTONS: Row 4 clip 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 30.6875,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-4-clip-8",
+				"label": "CLIP BUTTONS: Row 4 clip 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 30.6875,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-5-clip-1",
+				"label": "CLIP BUTTONS: Row 5 clip 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 37.75,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-5-clip-2",
+				"label": "CLIP BUTTONS: Row 5 clip 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 37.75,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-5-clip-3",
+				"label": "CLIP BUTTONS: Row 5 clip 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 37.75,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-5-clip-4",
+				"label": "CLIP BUTTONS: Row 5 clip 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 37.75,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-5-clip-5",
+				"label": "CLIP BUTTONS: Row 5 clip 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 37.75,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-5-clip-6",
+				"label": "CLIP BUTTONS: Row 5 clip 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 37.75,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-5-clip-7",
+				"label": "CLIP BUTTONS: Row 5 clip 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 37.75,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-5-clip-8",
+				"label": "CLIP BUTTONS: Row 5 clip 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 37.75,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-6-clip-1",
+				"label": "CLIP BUTTONS: Row 6 clip 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 44.8125,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-6-clip-2",
+				"label": "CLIP BUTTONS: Row 6 clip 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 44.8125,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-6-clip-3",
+				"label": "CLIP BUTTONS: Row 6 clip 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 44.8125,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-6-clip-4",
+				"label": "CLIP BUTTONS: Row 6 clip 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 44.8125,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-6-clip-5",
+				"label": "CLIP BUTTONS: Row 6 clip 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 44.8125,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-6-clip-6",
+				"label": "CLIP BUTTONS: Row 6 clip 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 44.8125,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-6-clip-7",
+				"label": "CLIP BUTTONS: Row 6 clip 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 44.8125,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-6-clip-8",
+				"label": "CLIP BUTTONS: Row 6 clip 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 44.8125,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-7-clip-1",
+				"label": "CLIP BUTTONS: Row 7 clip 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 51.87500000000001,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-7-clip-2",
+				"label": "CLIP BUTTONS: Row 7 clip 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 51.87500000000001,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-7-clip-3",
+				"label": "CLIP BUTTONS: Row 7 clip 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 51.87500000000001,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-7-clip-4",
+				"label": "CLIP BUTTONS: Row 7 clip 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 51.87500000000001,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-7-clip-5",
+				"label": "CLIP BUTTONS: Row 7 clip 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 51.87500000000001,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-7-clip-6",
+				"label": "CLIP BUTTONS: Row 7 clip 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 51.87500000000001,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-7-clip-7",
+				"label": "CLIP BUTTONS: Row 7 clip 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 51.87500000000001,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-7-clip-8",
+				"label": "CLIP BUTTONS: Row 7 clip 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 51.87500000000001,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-8-clip-1",
+				"label": "CLIP BUTTONS: Row 8 clip 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 58.9375,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-8-clip-2",
+				"label": "CLIP BUTTONS: Row 8 clip 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 58.9375,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-8-clip-3",
+				"label": "CLIP BUTTONS: Row 8 clip 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 58.9375,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-8-clip-4",
+				"label": "CLIP BUTTONS: Row 8 clip 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 58.9375,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-8-clip-5",
+				"label": "CLIP BUTTONS: Row 8 clip 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 58.9375,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-8-clip-6",
+				"label": "CLIP BUTTONS: Row 8 clip 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 58.9375,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-8-clip-7",
+				"label": "CLIP BUTTONS: Row 8 clip 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 58.9375,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-buttons-row-8-clip-8",
+				"label": "CLIP BUTTONS: Row 8 clip 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 58.9375,
+					"width": 9.970588235294118,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "scene-launch-scene-1",
+				"label": "SCENE LAUNCH: Scene 1",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 9.5,
+					"width": 10.352941176470589,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "scene-launch-scene-2",
+				"label": "SCENE LAUNCH: Scene 2",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 16.5625,
+					"width": 10.352941176470589,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "scene-launch-scene-3",
+				"label": "SCENE LAUNCH: Scene 3",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 23.625,
+					"width": 10.352941176470589,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "scene-launch-scene-4",
+				"label": "SCENE LAUNCH: Scene 4",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 30.6875,
+					"width": 10.352941176470589,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "scene-launch-scene-5",
+				"label": "SCENE LAUNCH: Scene 5",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 37.75,
+					"width": 10.352941176470589,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "scene-launch-scene-6",
+				"label": "SCENE LAUNCH: Scene 6",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 44.8125,
+					"width": 10.352941176470589,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "scene-launch-scene-7",
+				"label": "SCENE LAUNCH: Scene 7",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 51.87500000000001,
+					"width": 10.352941176470589,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "scene-launch-scene-8",
+				"label": "SCENE LAUNCH: Scene 8",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 58.9375,
+					"width": 10.352941176470589,
+					"height": 7.062499999999999
+				}
+			},
+			{
+				"id": "clip-stop-modes-track-1",
+				"label": "CLIP STOP / MODES: Track 1",
+				"kind": "button",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 70.5,
+					"width": 9.970588235294118,
+					"height": 4.5
+				}
+			},
+			{
+				"id": "clip-stop-modes-track-2",
+				"label": "CLIP STOP / MODES: Track 2",
+				"kind": "button",
+				"position": {
+					"x": 13.617647058823529,
+					"y": 70.5,
+					"width": 9.970588235294118,
+					"height": 4.5
+				}
+			},
+			{
+				"id": "clip-stop-modes-track-3",
+				"label": "CLIP STOP / MODES: Track 3",
+				"kind": "button",
+				"position": {
+					"x": 23.588235294117645,
+					"y": 70.5,
+					"width": 9.970588235294118,
+					"height": 4.5
+				}
+			},
+			{
+				"id": "clip-stop-modes-track-4",
+				"label": "CLIP STOP / MODES: Track 4",
+				"kind": "button",
+				"position": {
+					"x": 33.55882352941176,
+					"y": 70.5,
+					"width": 9.970588235294118,
+					"height": 4.5
+				}
+			},
+			{
+				"id": "clip-stop-modes-track-5",
+				"label": "CLIP STOP / MODES: Track 5",
+				"kind": "button",
+				"position": {
+					"x": 43.529411764705884,
+					"y": 70.5,
+					"width": 9.970588235294118,
+					"height": 4.5
+				}
+			},
+			{
+				"id": "clip-stop-modes-track-6",
+				"label": "CLIP STOP / MODES: Track 6",
+				"kind": "button",
+				"position": {
+					"x": 53.5,
+					"y": 70.5,
+					"width": 9.970588235294118,
+					"height": 4.5
+				}
+			},
+			{
+				"id": "clip-stop-modes-track-7",
+				"label": "CLIP STOP / MODES: Track 7",
+				"kind": "button",
+				"position": {
+					"x": 63.47058823529412,
+					"y": 70.5,
+					"width": 9.970588235294118,
+					"height": 4.5
+				}
+			},
+			{
+				"id": "clip-stop-modes-track-8",
+				"label": "CLIP STOP / MODES: Track 8",
+				"kind": "button",
+				"position": {
+					"x": 73.44117647058823,
+					"y": 70.5,
+					"width": 9.970588235294118,
+					"height": 4.5
+				}
+			},
+			{
+				"id": "faders-track-1",
+				"label": "FADERS: Track 1",
+				"kind": "fader",
+				"position": {
+					"x": 3.6470588235294117,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "faders-track-2",
+				"label": "FADERS: Track 2",
+				"kind": "fader",
+				"position": {
+					"x": 13.947712418300654,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "faders-track-3",
+				"label": "FADERS: Track 3",
+				"kind": "fader",
+				"position": {
+					"x": 24.248366013071895,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "faders-track-4",
+				"label": "FADERS: Track 4",
+				"kind": "fader",
+				"position": {
+					"x": 34.54901960784314,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "faders-track-5",
+				"label": "FADERS: Track 5",
+				"kind": "fader",
+				"position": {
+					"x": 44.84967320261438,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "faders-track-6",
+				"label": "FADERS: Track 6",
+				"kind": "fader",
+				"position": {
+					"x": 55.15032679738562,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "faders-track-7",
+				"label": "FADERS: Track 7",
+				"kind": "fader",
+				"position": {
+					"x": 65.45098039215686,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "faders-track-8",
+				"label": "FADERS: Track 8",
+				"kind": "fader",
+				"position": {
+					"x": 75.75163398692811,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "faders-master",
+				"label": "FADERS: Master",
+				"kind": "fader",
+				"position": {
+					"x": 86.05228758169935,
+					"y": 79.5,
+					"width": 10.300653594771243,
+					"height": 17.5
+				}
+			},
+			{
+				"id": "shift-shift",
+				"label": "SHIFT: Shift",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 70.5,
+					"width": 10.352941176470589,
+					"height": 4.5
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB Type-B",
+			"direction": "bidirectional",
+			"location": "rear"
+		}
+	],
+	"diagramSources": [
+		"https://cdn.inmusicbrands.com/akai/apc-mini-mkii/APC%20mini%20mk2%20-%20User%20Guide%20-%20v1.7.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

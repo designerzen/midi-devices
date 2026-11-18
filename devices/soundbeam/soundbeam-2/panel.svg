@@ -1,1 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title description"><title id="title">Soundbeam 2 Panel</title><desc id="description">Conceptual schematic, not a scale drawing of hardware controls.</desc><rect width="1000" height="300" fill="#fff" stroke="#000"/><text x="20" y="35" font-family="sans-serif" font-size="20" fill="#000">Soundbeam 2 / Panel</text><text x="20" y="75" font-family="sans-serif" font-size="14" fill="#000">Conceptual schematic; see profile setup notes for hardware operation.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title description">
+<title id="title">Soundbeam 2 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect x="0" y="0" width="1000" height="620" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="982" height="602" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Soundbeam 2</text>
+<text x="975" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="440" height="100" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="sensor-indicators-sensor-1" data-kind="round-button" aria-label="Sensor 1"><title>Sensor 1</title>
+<svg data-symbol="round-button" x="65.715" y="100.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="17" fill="url(#tactile-dots)"/></g></svg>
+</g>
+<g id="sensor-indicators-sensor-2" data-kind="round-button" aria-label="Sensor 2"><title>Sensor 2</title>
+<svg data-symbol="round-button" x="172.715" y="100.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="17" fill="url(#tactile-dots)"/></g></svg>
+</g>
+<g id="sensor-indicators-sensor-3" data-kind="round-button" aria-label="Sensor 3"><title>Sensor 3</title>
+<svg data-symbol="round-button" x="279.715" y="100.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="17" fill="url(#tactile-dots)"/></g></svg>
+</g>
+<g id="sensor-indicators-sensor-4" data-kind="round-button" aria-label="Sensor 4"><title>Sensor 4</title>
+<svg data-symbol="round-button" x="386.715" y="100.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="17" fill="url(#tactile-dots)"/></g></svg>
+</g>
+<rect x="485" y="65" width="490" height="130" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="display-setup-display" data-kind="screen" aria-label="Setup display"><title>Setup display</title>
+<rect x="496" y="100" width="468" height="69.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<rect x="500" y="104" width="460" height="61.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+</g>
+<rect x="25" y="205" width="390" height="375" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="setup-navigation-setup" data-kind="button" aria-label="Setup"><title>Setup</title>
+<svg data-symbol="button" x="101.500" y="244.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="setup-navigation-sensor" data-kind="button" aria-label="Sensor"><title>Sensor</title>
+<svg data-symbol="button" x="290.500" y="244.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="setup-navigation-up" data-kind="button" aria-label="Up"><title>Up</title>
+<svg data-symbol="button" x="101.500" y="329.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="setup-navigation-left" data-kind="button" aria-label="Left"><title>Left</title>
+<svg data-symbol="button" x="290.500" y="329.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="setup-navigation-right" data-kind="button" aria-label="Right"><title>Right</title>
+<svg data-symbol="button" x="101.500" y="414.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="setup-navigation-down" data-kind="button" aria-label="Down"><title>Down</title>
+<svg data-symbol="button" x="290.500" y="414.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="setup-navigation-save" data-kind="button" aria-label="Save"><title>Save</title>
+<svg data-symbol="button" x="101.500" y="499.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="setup-navigation-midi-utilities" data-kind="button" aria-label="MIDI utilities"><title>MIDI utilities</title>
+<svg data-symbol="button" x="290.500" y="499.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<rect x="435" y="205" width="230" height="375" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="parameters-pitch-sequence" data-kind="button" aria-label="Pitch sequence"><title>Pitch sequence</title>
+<svg data-symbol="button" x="529.715" y="240.000" width="40.570" height="40.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="parameters-range" data-kind="button" aria-label="Range"><title>Range</title>
+<svg data-symbol="button" x="529.715" y="308.000" width="40.570" height="40.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="parameters-divisions" data-kind="button" aria-label="Divisions"><title>Divisions</title>
+<svg data-symbol="button" x="529.715" y="376.000" width="40.570" height="40.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="parameters-trigger-mode" data-kind="button" aria-label="Trigger mode"><title>Trigger mode</title>
+<svg data-symbol="button" x="529.715" y="444.000" width="40.570" height="40.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<g id="parameters-transpose" data-kind="button" aria-label="Transpose"><title>Transpose</title>
+<svg data-symbol="button" x="529.715" y="512.000" width="40.570" height="40.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+</g>
+<rect x="685" y="205" width="290" height="375" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="value-rotary-control-wheel" data-kind="knob" aria-label="Rotary control wheel"><title>Rotary control wheel</title>
+<svg data-symbol="knob" x="806.000" y="372.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+</g>
+</svg>
