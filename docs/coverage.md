@@ -93,6 +93,36 @@ CME adds **10 profiles**, bringing the catalogue to **140 devices from 34 manufa
 
 Select these profiles manually: exact browser port aliases have not been verified. Keyboard keys and configurable performance buttons remain unbound, and polyphonic aftertouch is recorded as a hardware capability without a per-key pressure map. Transport profiles have empty control maps; select the connected instrument's profile for its messages. WIDI Master requires power from an instrument MIDI OUT. WIDI Jack's USB-C socket is for power; U6MIDI Pro's USB-C is a client port. H4MIDI WC requires an optional WIDI Core module for Bluetooth. These entries do not cover every historical CME keyboard or every WIDI model.
 
+## Yamaha keyboards and SEQTRAK
+
+This expansion adds **13 Yamaha profiles**, bringing Yamaha to **15 devices** and the catalogue to **153 devices from 34 manufacturers**. The existing DX7 and reface CS profiles remain available.
+
+| Family | Added models | Coverage and distinctions |
+| --- | --- | --- |
+| [reface](https://usa.yamaha.com/musical-instruments/keyboards/products/synthesizers/reface/) | DX; CP; YC | FM, electric piano and organ models with 37 mini keys; MIDI uses USB or the supplied mini-DIN breakout. DX/CP have sustain inputs; YC has a foot-controller input. Their surfaces do not inherit CS CC mappings. |
+| [MONTAGE M](https://usa.yamaha.com/musical-instruments/keyboards/products/synthesizers/montagem/specs.html) | M6; M7; M8x | 61/76/88 keys; M6/M7 have channel aftertouch, M8x has polyphonic aftertouch. Eight control sliders and knobs, ribbon and Super Knob are illustrated. |
+| [MODX+](https://data.yamaha.com/files/download/other_assets/3/1583913/VFC6440_modx_plus_owners_manual_En_B0.pdf) | MODX6+; MODX7+; MODX8+ | 61/76/88 keys; four physical control sliders select different Part banks. These profiles describe MODX+, separately from original MODX and MODX M. |
+| [CK](https://usa.yamaha.com/musical-instruments/keyboards/products/stagekeyboards/ck/index.html) | CK61; CK76; CK88 | FSB action on CK61/76, GHS weighted action on CK88; nine organ drawbars, three Part levels and four-zone MIDI master setup. Bluetooth audio does not imply BLE MIDI. |
+| [SEQTRAK](https://manual.yamaha.com/mi/de/seqtrak/en/SEQTRAK_user_guide_En_D0_002.html) | SEQTRAK | USB-C, BLE MIDI and the included MIDI conversion cable; 16 step keys, seven Synth keys and track-dependent sound controls. |
+
+Every addition includes manufacturer references and three schematic diagrams. Exact browser port aliases have not been verified, so select these profiles manually. Control maps and key bindings remain empty: Performance Parts, Live Sets, scale/octave settings, MIDI channels and assignment modes affect their messages. MONTAGE M MIDI 2.0 resolution is not represented by this profile format; use a compatible MIDI 1.0 setup. Read the linked manual before choosing USB routing, Local Control and clock settings. This is selected model coverage rather than an exhaustive Yamaha catalogue.
+
+## Expanded manufacturer and controller coverage
+
+This batch adds **12 devices**, including **five new manufacturers**, bringing the catalogue to **165 devices from 39 manufacturers**. Each new manufacturer has a descriptor, website links and source-attributed artwork. Every new device includes panel, labelled interface and connection schematics.
+
+| Manufacturer | Added devices | Coverage and distinctions |
+| --- | --- | --- |
+| [Casio](https://www.casio.com/intl/electronic-musical-instruments/product.CT-S500/) | CT-S500; CT-S1000V | 61-key USB MIDI keyboards; CT-S1000V adds vocal synthesis. Wireless MIDI requires the WU-BT10 accessory; neither keyboard has DIN MIDI sockets. |
+| [Studiologic](https://www.studiologic-music.com/products/sl_keyboards/specs/) | SL73 Studio; SL88 Studio; SL88 Grand | Original SL family with aftertouch, four zones and three programmable sticks. Studio uses TP/100LR action; Grand uses TP/40WOOD. These are separate from SL MK2. |
+| [OXI Instruments](https://docs.oxiinstruments.com/oxi-one-mkii-manual/overview/) | ONE MKII | 128-pad sequencer with TRS type-A MIDI, USB host/device modes, BLE MIDI and CV/gate. PIPE is a proprietary expansion connection. |
+| [Torso Electronics](https://torsoelectronics.com/) | T1; S4 | Algorithmic sequencer and sculpting sampler respectively; both use TRS type-A MIDI. S4 display macros do not represent physical sliders. |
+| [Faderfox](https://faderfox.de/) | EC4; UC4 | 16-encoder and mixed encoder/fader controllers with editable setups. EC4 uses TRS type B; check adapter wiring and encoder mode before connecting. |
+| [Novation](https://userguides.novationmusic.com/hc/en-gb/articles/27840433609362-MIDI-on-Launch-Control-XL-3) | Launch Control XL 3 | 24 encoders, eight faders and DIN routing; Custom Modes and DAW integration use different USB interfaces. |
+| [Arturia](https://www.arturia.com/products/hybrid-synths/beatstep-pro/overview) | BeatStep Pro | Two melodic sequencers, drum sequencing and Control Mode; MIDI and clock use the supplied adapters. |
+
+These are partial hardware/setup profiles. Exact browser port aliases have not been verified, so manual profile selection is required. Controls and key/pad surfaces have no fixed MIDI bindings because setups, projects, channels and modes determine their messages. Schematics group selected controls by function and are not scaled socket-placement drawings. External analog CV, gates, sync and audio connections are inventoried separately from MIDI capability.
+
 ## Connecting older hardware
 
 The Superlative SB01, Roland V-STAGE 76/88 and Korg ARP 2600 FS profiles incorporate individual control and connection inventories from [NYU SynthAccess tactile guides](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides), cross-checked against the manufacturers' manuals. The SB01 and ARP 2600 FS entries explicitly distinguish their MIDI-equipped hardware from the original SH-101 and ARP 2600. The System-100 and Serge guides are not independent MIDI device entries. Analog panel controls are recorded as physical controls without guessed CC assignments.
@@ -102,3 +132,11 @@ Connect hardware MIDI OUT to the interface MIDI IN to receive a performance. Con
 DIN-connected hardware normally appears under the interface's name. These new legacy profiles therefore leave `portNames` empty rather than claiming generic interface aliases. Let the user select the profile for the port manually. App-mediated accessible devices likewise need the correct software routing before a MIDI application can receive their output.
 
 Do not assume that an instrument has MIDI because a later reissue or aftermarket retrofit does. Original pre-MIDI hardware and retrofit-specific implementations need separate, verified profiles. Likewise, do not substitute a Boutique reissue's CC chart for its vintage counterpart.
+
+## Official MIDI manufacturer directory
+
+The [official MIDI Association SysEx ID table](https://midi.org/sysexidtable), retrieved on 19 November 2026, supplies **787 unique named assignments**. Importing the remaining companies adds **756 manufacturer records**. Together with existing entries, the directory has **795 manufacturers**, while detailed hardware coverage remains **165 devices from 39 manufacturers**. The official list includes historical and software companies as well as instrument makers. Registration alone does not establish present trading status, website ownership, a hardware product range or support availability.
+
+Every named assignment is linked to a manufacturer descriptor. Repeated source rows are deduplicated; companies with several assigned IDs retain them all. The single `00` extension marker and reserved entries are recorded separately and do not create manufacturers. A few name variants that normalise to the same company slug share a descriptor and preserve both official names. Companies without a verified match to an existing brand remain separate, rather than inheriting an assumed parent company's ID.
+
+Registry-only pages expose official names, assigned hex IDs and a source link, with no invented devices, logos or company website addresses. Existing company details and device profiles are retained. The manufacturer selector and JSON/XML API include entries with no devices. The source snapshot is in `devices/midi-manufacturers.json`; update and validation instructions are in the [contribution guide](profiles.md#official-manufacturer-ids).

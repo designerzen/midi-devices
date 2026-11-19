@@ -623,31 +623,46 @@
 					try {
 						const company = await read(new URL(`${manufacturerId}/manufacturer.json`, registry))
 						const heading = element("div", undefined, "company-heading")
-						const logo = element("img", undefined, "company-logo")
-						logo.src = new URL(`${manufacturerId}/${company.logo}`, registry)
-						logo.alt = `${company.name} logo`
+						const logo = company.logo ? element("img", undefined, "company-logo") : undefined
+						if (logo) {
+							logo.src = new URL(`${manufacturerId}/${company.logo}`, registry)
+							logo.alt = `${company.name} logo`
+						}
 						const name = element("h1")
 						name.append(companyText(company.name, manufacturerId))
 						name.id = "manufacturer-name"
-						heading.append(logo, name)
+						if (logo) heading.append(logo)
+						heading.append(name)
 						const resources = element("div", undefined, "asset-links")
 						for (const resource of company.links) resources.append(link(resource.label, resource.url))
-						resources.append(link("Logo SVG", logo.src), link("Company JSON", new URL(`${manufacturerId}/manufacturer.json`, registry)), link("All manufacturers", registry))
+						if (logo) resources.append(link("Logo SVG", logo.src))
+						resources.append(link("Company JSON", new URL(`${manufacturerId}/manufacturer.json`, registry)), link("All manufacturers", registry))
 						manufacturerInfo.replaceChildren(heading, element("p", company.description, "description"), resources)
+						if (company.midiManufacturerIds?.length) {
+							manufacturerInfo.append(element("p", `MIDI SysEx manufacturer IDs (hex): ${company.midiManufacturerIds.join(", ")}`))
+						}
 						document.getElementById("all-devices-heading").replaceChildren(companyText(company.name, manufacturerId), document.createTextNode(" products"))
 						document.querySelector("#catalog-section .section-intro").textContent = "All products from this manufacturer in the catalogue, with panel diagrams, MIDI mappings and setup notes."
 					} catch {
 						manufacturerInfo.textContent = "Company information could not be loaded. Reload the page to try again."
 					}
 				}
-				const index = await read(new URL("index.json", registry))
+				const [index, manufacturerIndex] = await Promise.all([
+					read(new URL("index.json", registry)),
+					read(new URL("manufacturers.json", registry))
+				])
 				if (!Array.isArray(index)) throw new Error("Invalid device index")
+				if (!Array.isArray(manufacturerIndex)) throw new Error("Invalid manufacturer index")
 				const entries = new Map()
 				for (const item of index) {
 					const entry = typeof item === "string" ? { id: item, path: item } : item
 					if (entry && typeof entry.id === "string" && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.id) && typeof entry.path === "string" && /^[a-z0-9-]+(?:\/[a-z0-9-]+)?$/.test(entry.path)) entries.set(entry.id, entry)
 				}
 				const ids = [...entries.keys()]
+				for (const { id, name } of manufacturerIndex) {
+					companyIds.set(companyKey(name), id)
+					companyIds.set(companyKey(id), id)
+				}
 				for (const { path } of entries.values()) {
 					const id = path.split("/")[0]
 					companyIds.set(companyKey(id), id)
@@ -672,15 +687,16 @@
 					} catch { failed++ }
 				}
 				status.textContent = `${count} ${count === 1 ? "device profile" : "device profiles"} from ${new Set(loaded.map(({ profile }) => profile.manufacturer)).size} manufacturers.${failed ? ` ${failed} ${failed === 1 ? "profile could" : "profiles could"} not be loaded.` : ""}`
-				if (!ids.length) status.textContent = "No MIDI device profiles are available."
-				const manufacturers = new Map([...deviceCards.values()].map(({ profile, devicePath }) => [devicePath.split("/")[0], profile.manufacturer]))
-				for (const [id, name] of [...manufacturers].sort((a, b) => a[1].localeCompare(b[1]))) {
-					const option = element("option", name)
+				if (manufacturerId && !selectedIds.length) status.textContent = "No device profiles have been added for this manufacturer yet. Its official MIDI ID registration is listed above."
+				else if (!ids.length) status.textContent = "No MIDI device profiles are available."
+				if (!manufacturerId) status.textContent += ` ${manufacturerIndex.length} manufacturers are listed in the directory.`
+				for (const { id, name, midiManufacturerIds = [] } of [...manufacturerIndex].sort((a, b) => a.name.localeCompare(b.name))) {
+					const option = element("option", `${name}${midiManufacturerIds.length ? ` (${midiManufacturerIds.join(", ")})` : ""}`)
 					option.value = id
 					manufacturerFilter.append(option)
 				}
 				manufacturerFilter.value = manufacturerId ?? ""
-				filters.hidden = deviceCards.size === 0
+				filters.hidden = manufacturerIndex.length === 0
 				updateFilters()
 			} catch {
 				status.textContent = "The MIDI device catalog could not be loaded. Reload the page to try again."

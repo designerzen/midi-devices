@@ -1,0 +1,660 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "yamaha-seqtrak",
+	"name": "Yamaha SEQTRAK",
+	"manufacturer": "Yamaha",
+	"manufacturerUrl": "https://usa.yamaha.com/",
+	"productUrl": "https://usa.yamaha.com/products/music_production/music-production-studios/seqtrak/specs.html",
+	"ids": [
+		"yamaha-seqtrak"
+	],
+	"portNames": [],
+	"description": "11-track portable AWM2/FM sequencer and sampler with USB and breakout MIDI.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Specifications",
+			"url": "https://usa.yamaha.com/products/music_production/music-production-studios/seqtrak/specs.html"
+		},
+		{
+			"title": "Panel and connectors",
+			"url": "https://manual.yamaha.com/mi/de/seqtrak/en/SEQTRAK_user_guide_En_D0_002.html"
+		},
+		{
+			"title": "Connections guide",
+			"url": "https://manual.yamaha.com/mi/de/seqtrak/en/SEQTRAK_user_guide_En_D0_015.html"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI via conversion cable",
+		"Bluetooth MIDI",
+		"Step sequencing",
+		"Sampling"
+	],
+	"hardwareControls": [
+		"11 Track knobs and All knob",
+		"16 Drum step keys",
+		"7 Synth keys",
+		"4 Sound Design knobs",
+		"3 FX touch sliders"
+	],
+	"notice": "Use the included MIDI conversion cable for DIN connections or USB-C for MIDI to a computer or supported USB MIDI device. Configure transmit channels and clock routing in the connection settings. BLE MIDI must be routed through operating-system MIDI support before browser detection. Track, scale and octave settings change key behavior; step keys are not assigned a universal drum-note map. Exact browser MIDI port names are not verified; select this profile manually. The selected-control schematics are illustrative. Keys and panel controls remain unbound because channel, octave, mode and assignable functions must be checked against the instrument setup. This is a partial hardware and setup profile, not a complete MIDI implementation.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Yamaha SEQTRAK selected-control schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 650,
+		"elements": [
+			{
+				"id": "tracks-all",
+				"label": "TRACKS: All",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-drum-1",
+				"label": "TRACKS: Drum 1",
+				"kind": "knob",
+				"position": {
+					"x": 7.638888888888888,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-drum-2",
+				"label": "TRACKS: Drum 2",
+				"kind": "knob",
+				"position": {
+					"x": 12.694444444444441,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-drum-3",
+				"label": "TRACKS: Drum 3",
+				"kind": "knob",
+				"position": {
+					"x": 17.75,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-drum-4",
+				"label": "TRACKS: Drum 4",
+				"kind": "knob",
+				"position": {
+					"x": 22.80555555555555,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-drum-5",
+				"label": "TRACKS: Drum 5",
+				"kind": "knob",
+				"position": {
+					"x": 27.861111111111107,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-drum-6",
+				"label": "TRACKS: Drum 6",
+				"kind": "knob",
+				"position": {
+					"x": 32.916666666666664,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-drum-7",
+				"label": "TRACKS: Drum 7",
+				"kind": "knob",
+				"position": {
+					"x": 37.97222222222222,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-synth-1",
+				"label": "TRACKS: Synth 1",
+				"kind": "knob",
+				"position": {
+					"x": 43.02777777777777,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-synth-2",
+				"label": "TRACKS: Synth 2",
+				"kind": "knob",
+				"position": {
+					"x": 48.083333333333336,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-dx",
+				"label": "TRACKS: DX",
+				"kind": "knob",
+				"position": {
+					"x": 53.13888888888889,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "tracks-sampler",
+				"label": "TRACKS: Sampler",
+				"kind": "knob",
+				"position": {
+					"x": 58.194444444444436,
+					"y": 14.615384615384617,
+					"width": 5.055555555555555,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "drum-steps-step-1",
+				"label": "DRUM STEPS: Step 1",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 41.53846153846154,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-2",
+				"label": "DRUM STEPS: Step 2",
+				"kind": "button",
+				"position": {
+					"x": 10.166666666666666,
+					"y": 41.53846153846154,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-3",
+				"label": "DRUM STEPS: Step 3",
+				"kind": "button",
+				"position": {
+					"x": 17.75,
+					"y": 41.53846153846154,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-4",
+				"label": "DRUM STEPS: Step 4",
+				"kind": "button",
+				"position": {
+					"x": 25.333333333333336,
+					"y": 41.53846153846154,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-5",
+				"label": "DRUM STEPS: Step 5",
+				"kind": "button",
+				"position": {
+					"x": 32.916666666666664,
+					"y": 41.53846153846154,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-6",
+				"label": "DRUM STEPS: Step 6",
+				"kind": "button",
+				"position": {
+					"x": 40.5,
+					"y": 41.53846153846154,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-7",
+				"label": "DRUM STEPS: Step 7",
+				"kind": "button",
+				"position": {
+					"x": 48.083333333333336,
+					"y": 41.53846153846154,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-8",
+				"label": "DRUM STEPS: Step 8",
+				"kind": "button",
+				"position": {
+					"x": 55.666666666666664,
+					"y": 41.53846153846154,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-9",
+				"label": "DRUM STEPS: Step 9",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 53.46153846153846,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-10",
+				"label": "DRUM STEPS: Step 10",
+				"kind": "button",
+				"position": {
+					"x": 10.166666666666666,
+					"y": 53.46153846153846,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-11",
+				"label": "DRUM STEPS: Step 11",
+				"kind": "button",
+				"position": {
+					"x": 17.75,
+					"y": 53.46153846153846,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-12",
+				"label": "DRUM STEPS: Step 12",
+				"kind": "button",
+				"position": {
+					"x": 25.333333333333336,
+					"y": 53.46153846153846,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-13",
+				"label": "DRUM STEPS: Step 13",
+				"kind": "button",
+				"position": {
+					"x": 32.916666666666664,
+					"y": 53.46153846153846,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-14",
+				"label": "DRUM STEPS: Step 14",
+				"kind": "button",
+				"position": {
+					"x": 40.5,
+					"y": 53.46153846153846,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-15",
+				"label": "DRUM STEPS: Step 15",
+				"kind": "button",
+				"position": {
+					"x": 48.083333333333336,
+					"y": 53.46153846153846,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "drum-steps-step-16",
+				"label": "DRUM STEPS: Step 16",
+				"kind": "button",
+				"position": {
+					"x": 55.666666666666664,
+					"y": 53.46153846153846,
+					"width": 7.583333333333334,
+					"height": 11.923076923076923
+				}
+			},
+			{
+				"id": "synth-keys-synth-key-1",
+				"label": "SYNTH KEYS: Synth key 1",
+				"kind": "key",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 73.84615384615385,
+					"width": 8.666666666666668,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "synth-keys-synth-key-2",
+				"label": "SYNTH KEYS: Synth key 2",
+				"kind": "key",
+				"position": {
+					"x": 11.25,
+					"y": 73.84615384615385,
+					"width": 8.666666666666668,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "synth-keys-synth-key-3",
+				"label": "SYNTH KEYS: Synth key 3",
+				"kind": "key",
+				"position": {
+					"x": 19.916666666666664,
+					"y": 73.84615384615385,
+					"width": 8.666666666666668,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "synth-keys-synth-key-4",
+				"label": "SYNTH KEYS: Synth key 4",
+				"kind": "key",
+				"position": {
+					"x": 28.583333333333332,
+					"y": 73.84615384615385,
+					"width": 8.666666666666668,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "synth-keys-synth-key-5",
+				"label": "SYNTH KEYS: Synth key 5",
+				"kind": "key",
+				"position": {
+					"x": 37.25,
+					"y": 73.84615384615385,
+					"width": 8.666666666666668,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "synth-keys-synth-key-6",
+				"label": "SYNTH KEYS: Synth key 6",
+				"kind": "key",
+				"position": {
+					"x": 45.916666666666664,
+					"y": 73.84615384615385,
+					"width": 8.666666666666668,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "synth-keys-synth-key-7",
+				"label": "SYNTH KEYS: Synth key 7",
+				"kind": "key",
+				"position": {
+					"x": 54.58333333333333,
+					"y": 73.84615384615385,
+					"width": 8.666666666666668,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "sound-design-knob-1",
+				"label": "SOUND DESIGN: Knob 1",
+				"kind": "knob",
+				"position": {
+					"x": 66.33333333333333,
+					"y": 14.615384615384617,
+					"width": 7.666666666666666,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "sound-design-knob-2",
+				"label": "SOUND DESIGN: Knob 2",
+				"kind": "knob",
+				"position": {
+					"x": 74.0,
+					"y": 14.615384615384617,
+					"width": 7.666666666666666,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "sound-design-knob-3",
+				"label": "SOUND DESIGN: Knob 3",
+				"kind": "knob",
+				"position": {
+					"x": 81.66666666666667,
+					"y": 14.615384615384617,
+					"width": 7.666666666666666,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "sound-design-knob-4",
+				"label": "SOUND DESIGN: Knob 4",
+				"kind": "knob",
+				"position": {
+					"x": 89.33333333333333,
+					"y": 14.615384615384617,
+					"width": 7.666666666666666,
+					"height": 18.461538461538463
+				}
+			},
+			{
+				"id": "effects-fx",
+				"label": "EFFECTS: FX",
+				"kind": "knob",
+				"position": {
+					"x": 66.33333333333333,
+					"y": 41.53846153846154,
+					"width": 7.666666666666666,
+					"height": 23.846153846153847
+				}
+			},
+			{
+				"id": "effects-fx-level",
+				"label": "EFFECTS: FX level",
+				"kind": "strip",
+				"position": {
+					"x": 74.0,
+					"y": 41.53846153846154,
+					"width": 7.666666666666666,
+					"height": 23.846153846153847
+				}
+			},
+			{
+				"id": "effects-high-pass",
+				"label": "EFFECTS: High pass",
+				"kind": "strip",
+				"position": {
+					"x": 81.66666666666667,
+					"y": 41.53846153846154,
+					"width": 7.666666666666666,
+					"height": 23.846153846153847
+				}
+			},
+			{
+				"id": "effects-repeater",
+				"label": "EFFECTS: Repeater",
+				"kind": "strip",
+				"position": {
+					"x": 89.33333333333333,
+					"y": 41.53846153846154,
+					"width": 7.666666666666666,
+					"height": 23.846153846153847
+				}
+			},
+			{
+				"id": "selected-functions-record",
+				"label": "SELECTED FUNCTIONS: Record",
+				"kind": "button",
+				"position": {
+					"x": 66.33333333333333,
+					"y": 73.84615384615385,
+					"width": 10.222222222222223,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "selected-functions-rec-sample",
+				"label": "SELECTED FUNCTIONS: Rec sample",
+				"kind": "button",
+				"position": {
+					"x": 76.55555555555556,
+					"y": 73.84615384615385,
+					"width": 10.222222222222223,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "selected-functions-octave",
+				"label": "SELECTED FUNCTIONS: Octave",
+				"kind": "button",
+				"position": {
+					"x": 86.77777777777777,
+					"y": 73.84615384615385,
+					"width": 10.222222222222223,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "selected-functions-scale",
+				"label": "SELECTED FUNCTIONS: Scale",
+				"kind": "button",
+				"position": {
+					"x": 66.33333333333333,
+					"y": 84.23076923076923,
+					"width": 10.222222222222223,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "selected-functions-key",
+				"label": "SELECTED FUNCTIONS: Key",
+				"kind": "button",
+				"position": {
+					"x": 76.55555555555556,
+					"y": 84.23076923076923,
+					"width": 10.222222222222223,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "selected-functions-undo-redo",
+				"label": "SELECTED FUNCTIONS: Undo / Redo",
+				"kind": "button",
+				"position": {
+					"x": 86.77777777777777,
+					"y": 84.23076923076923,
+					"width": 10.222222222222223,
+					"height": 10.384615384615385
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"interface": "interface.svg",
+		"connections": "connections.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / audio / power",
+			"connector": "USB Type-C",
+			"direction": "bidirectional",
+			"location": "Right side"
+		},
+		{
+			"label": "MIDI IN / OUT",
+			"connector": "Proprietary connector; use included MIDI conversion cable",
+			"direction": "bidirectional",
+			"location": "Right side"
+		},
+		{
+			"label": "PHONES",
+			"connector": "3.5 mm stereo jack",
+			"direction": "output",
+			"location": "Right side"
+		},
+		{
+			"label": "AUDIO IN",
+			"connector": "3.5 mm stereo jack",
+			"direction": "input",
+			"location": "Right side"
+		},
+		{
+			"label": "Bluetooth MIDI",
+			"connector": "Bluetooth Low Energy MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://usa.yamaha.com/products/music_production/music-production-studios/seqtrak/specs.html",
+		"https://manual.yamaha.com/mi/de/seqtrak/en/SEQTRAK_user_guide_En_D0_002.html",
+		"https://manual.yamaha.com/mi/de/seqtrak/en/SEQTRAK_user_guide_En_D0_015.html",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

@@ -20,7 +20,11 @@ The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native
 
 Also included: Novation Launchpad Mini MK3, Launchpad X, Circuit Tracks, Circuit Rhythm, and the original Arturia KeyStep 37. Launchpad X provides its documented Programmer-mode grid and button mappings and LPX MIDI port aliases. The other four profiles provide model-specific schematic surfaces and setup guidance; their USB port names remain unverified and require manual profile selection. Custom layouts and assignable encoders are left unbound rather than given assumed factory assignments. Manufacturer manuals and MIDI setup references are linked in each profile.
 
-The catalogue now contains **140 devices from 34 manufacturers**. CME additions include Xkey 25/37, Xkey Air 25/37, WIDI Master, WIDI Jack, WIDI Uhost, WIDI Bud Pro, U6MIDI Pro and H4MIDI WC, with company metadata, manufacturer artwork, setup references and schematic diagrams. See the [coverage guide](docs/coverage.md#cme-keyboards-and-midi-interfaces) for connection and mapping limits.
+The catalogue contains **165 device profiles from 39 manufacturers**, plus a directory of **795 manufacturers**. The directory covers all **787 named SysEx manufacturer ID assignments** in the [official MIDI Association registry](https://midi.org/sysexidtable) snapshot retrieved on 19 November 2026. Reserved values and the ID-extension marker are excluded. Existing manufacturer names and artwork are preserved; newly imported entries link to the registry and have no device profiles, company website or logo until those are verified. See [manufacturer ID coverage](docs/coverage.md#official-midi-manufacturer-directory). The newest expansion adds Casio CT-S500/CT-S1000V, Studiologic SL73 Studio/SL88 Studio/SL88 Grand, OXI ONE MKII, Torso T1/S4, Faderfox EC4/UC4, Novation Launch Control XL 3 and Arturia BeatStep Pro. Five new manufacturers include company metadata and source-attributed logos. See [expanded manufacturer coverage](docs/coverage.md#expanded-manufacturer-and-controller-coverage) for setup and mapping limits.
+
+Yamaha now has 15 profiles: DX7, the four reface models, MONTAGE M6/M7/M8x, MODX6+/7+/8+, CK61/76/88 and SEQTRAK. The 13 new Yamaha entries include setup references and model-specific control and connection schematics; see [Yamaha coverage](docs/coverage.md#yamaha-keyboards-and-seqtrak) for mapping limits.
+
+CME additions include Xkey 25/37, Xkey Air 25/37, WIDI Master, WIDI Jack, WIDI Uhost, WIDI Bud Pro, U6MIDI Pro and H4MIDI WC, with company metadata, manufacturer artwork, setup references and schematic diagrams. See the [coverage guide](docs/coverage.md#cme-keyboards-and-midi-interfaces) for connection and mapping limits.
 
 The previous expansion adds Elektron Digitakt II and Syntakt; Waldorf Blofeld Desktop and Streichfett; Dreadbox Typhon and Nymphes; Polyend Play+ and Tracker Mini; Sonicware LIVEN XFM and LIVEN Lofi-12; and IK Multimedia iRig Keys 2 and iRig Keys 2 Mini. Each new manufacturer includes company metadata, website and support links, and a shared logo. The profiles include selected-control schematics, connection inventories and manufacturer references; the Typhon profile supplies selected documented firmware 4.2 CC mappings. See the [coverage guide](docs/coverage.md) for model differences and mapping limits.
 
@@ -37,6 +41,8 @@ devices/
   index.json                      [{ "id": "akai-mpk-mini-mk3", "path": "akai/mpk-mini-mk3" }, …]
   profile.schema.json             JSON Schema (draft 2020-12) for every profile
   manufacturer.schema.json        JSON Schema for company descriptors
+  manufacturers.json              complete manufacturer directory index
+  midi-manufacturers.json         official SysEx assignments and source snapshot metadata
   <manufacturer>/manufacturer.json company name, description, website, resources and logo source
   <manufacturer>/logo.svg          manufacturer logo shared by its devices
   <manufacturer>/<model>/
@@ -49,7 +55,7 @@ The `id` inside each profile must match its filename. Asset paths inside a profi
 
 Icons use manufacturer brand artwork, with sources recorded in [resources/manufacturer-logos.json](resources/manufacturer-logos.json). Raster-only sources are traced into SVG paths. Manufacturer logos remain the property of their respective owners. The diagram generator copies each manufacturer's `logo.svg` to its device icons.
 
-Each manufacturer has a catalogue page at its folder URL, such as [`roland/`](https://designerzen.github.io/midi-devices/roland/). It shows a company information panel above every associated product in this catalogue. Product-card manufacturer links and the manufacturer selector open these pages. Company details come from `devices/<manufacturer>/manufacturer.json`, with logo paths relative to that folder; builds publish the raw descriptor alongside the page and include its metadata in the JSON/XML API.
+Each manufacturer has a catalogue page at its folder URL, such as [`roland/`](https://designerzen.github.io/midi-devices/roland/). It shows a company information panel above every associated product in this catalogue. Product-card manufacturer links and the manufacturer selector open these pages. Company details come from `devices/<manufacturer>/manufacturer.json`, with verified logo paths relative to that folder; builds publish the raw descriptor alongside the page and include its metadata in the JSON/XML API. Manufacturer pages and the selector include entries without device profiles. These pages show official SysEx IDs and an empty device state; registry-only entries omit unverified websites and artwork.
 
 ## API
 

@@ -9,6 +9,8 @@
 		"./device-files.js": "./index.js",
 		"./client.js": "./client.js",
 		"./index.json": "./devices/index.json",
+		"./manufacturers.json": "./devices/manufacturers.json",
+		"./midi-manufacturers.json": "./devices/midi-manufacturers.json",
 		"./profile.schema.json": "./devices/profile.schema.json",
 		"./devices/*": "./devices/*"
 	},
@@ -21,6 +23,7 @@
 		"diagrams": "python scripts/generate-diagrams.py",
 		"build": "node scripts/build.js",
 		"validate": "node scripts/validate.js",
+		"manufacturers:import": "python scripts/import-midi-manufacturers.py",
 		"version:patch": "npm version patch --no-git-tag-version",
 		"version:minor": "npm version minor --no-git-tag-version",
 		"version:major": "npm version major --no-git-tag-version",

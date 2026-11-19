@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url"
 import { MIDI_DEVICE_DIRECTORY, createMidiDeviceStore } from "../index.js"
 import { buildApi } from "./api.js"
 import { buildVersion } from "./version.js"
+import { readManufacturers } from "./manufacturers.js"
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..")
 const dist = path.join(root, "dist")
@@ -14,8 +15,11 @@ const build = buildVersion({ version: pkg.version, root })
 const siteUrl = process.env.SITE_URL || pkg.homepage
 const entries = await createMidiDeviceStore(() => [MIDI_DEVICE_DIRECTORY]).entries()
 const index = JSON.stringify(entries, null, "\t") + "\n"
+const manufacturers = readManufacturers(MIDI_DEVICE_DIRECTORY)
+const manufacturerIndex = manufacturers.map(({ id, name, midiManufacturerIds = [] }) => ({ id, name, midiManufacturerIds }))
 
 await writeFile(path.join(MIDI_DEVICE_DIRECTORY, "index.json"), index)
+await writeFile(path.join(MIDI_DEVICE_DIRECTORY, "manufacturers.json"), JSON.stringify(manufacturerIndex, null, "\t") + "\n")
 await rm(dist, { recursive: true, force: true })
 await mkdir(dist, { recursive: true })
 await cp(MIDI_DEVICE_DIRECTORY, dist, { recursive: true })
@@ -27,8 +31,8 @@ const builtPage = page
 	.replaceAll("__BUILD_VERSION__", build.version)
 	.replaceAll("__BUILD_TIME__", build.builtAt)
 await writeFile(path.join(dist, "index.html"), builtPage)
-for (const id of new Set(entries.map((entry) => entry.path.split("/")[0]))) {
-	const descriptor = JSON.parse(readFileSync(path.join(MIDI_DEVICE_DIRECTORY, id, "manufacturer.json"), "utf8"))
+for (const descriptor of manufacturers) {
+	const { id } = descriptor
 	const escape = (value) => value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
 	await writeFile(path.join(dist, id, "index.html"), builtPage
 		.replace('<head>', '<head>\n\t\t<base href="../" />')

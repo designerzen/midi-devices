@@ -2,14 +2,28 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "MIDI device manufacturer",
 	"type": "object",
-	"required": ["schemaVersion", "id", "name", "description", "url", "logo", "links", "logoSource"],
+	"required": ["schemaVersion", "id", "name", "description", "links"],
+	"allOf": [
+		{ "if": { "not": { "required": ["registryOnly"], "properties": { "registryOnly": { "const": true } } } }, "then": { "required": ["url", "logo", "logoSource"] } },
+		{ "if": { "required": ["registryOnly"], "properties": { "registryOnly": { "const": true } } }, "then": { "required": ["midiManufacturerIds", "midiRegistryNames", "midiIdSource"] } },
+		{ "if": { "required": ["logo"] }, "then": { "required": ["logoSource"] } }
+	],
 	"additionalProperties": false,
+	"dependentRequired": {
+		"midiManufacturerIds": ["midiRegistryNames", "midiIdSource"],
+		"midiRegistryNames": ["midiManufacturerIds", "midiIdSource"],
+		"midiIdSource": ["midiManufacturerIds", "midiRegistryNames"]
+	},
 	"properties": {
 		"$schema": { "type": "string" },
 		"schemaVersion": { "const": 1 },
 		"id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
 		"name": { "type": "string", "minLength": 1 },
 		"description": { "type": "string", "minLength": 1 },
+		"registryOnly": { "type": "boolean" },
+		"midiManufacturerIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^(?:0[1-9A-F]|[1-5][0-9A-F]|00 [0-7][0-9A-F] [0-7][0-9A-F])$" } },
+		"midiRegistryNames": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+		"midiIdSource": { "const": "https://midi.org/sysexidtable" },
 		"url": { "type": "string", "pattern": "^https://[^\\s]+$" },
 		"logo": { "const": "logo.svg" },
 		"logoSource": {
