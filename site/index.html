@@ -239,6 +239,8 @@
 				}
 			}
 			const registry = new URL("./", document.baseURI)
+			const companyIds = new Map()
+			const companyKey = (name) => String(name ?? "").toLowerCase().replace(/[^a-z0-9]/g, "")
 			const element = (tag, text, className) => {
 				const node = document.createElement(tag)
 				if (text !== undefined) node.textContent = text
@@ -250,6 +252,9 @@
 				node.href = url
 				return node
 			}
+			const companyText = (name, id = companyIds.get(companyKey(name))) => id
+				? link(name, new URL(`${id}/`, registry))
+				: element("span", name || "Manufacturer not reported")
 			const asset = (folder, name) => {
 				if (typeof name !== "string" || !/^[\w./ -]+\.(svg|png|jpe?g|webp|avif|gif)$/i.test(name) || name.split("/").some((part) => !part || part === "." || part === "..")) return
 				return new URL(name, folder).href
@@ -293,7 +298,7 @@
 				const ports = element("p", undefined, "connection-ports")
 				ports.hidden = true
 				const company = element("p", undefined, "manufacturer")
-				company.append(link(profile.manufacturer, new URL(`${devicePath.split("/")[0]}/`, registry)))
+				company.append(companyText(profile.manufacturer, devicePath.split("/")[0]))
 				title.append(name, company, connection)
 				heading.append(title)
 				card.append(heading, ports, element("p", profile.description, "description"))
@@ -508,7 +513,9 @@
 						const image = element("img", undefined, "diagram")
 						image.src = "midi-device.svg"
 						image.alt = "Generic MIDI device illustration; hardware image unavailable"
-						card.append(name, element("p", ports[0].port.manufacturer || "Manufacturer not reported", "manufacturer"), element("span", "Connected", "connection-status"), image,
+						const company = element("p", undefined, "manufacturer")
+						company.append(companyText(ports[0].port.manufacturer))
+						card.append(name, company, element("span", "Connected", "connection-status"), image,
 							element("p", "We could not match this device to a profile automatically. If you know what it is, choose it from the Device profile list on this card to see its diagrams and controls.", "unmatched"))
 					}
 					card.classList.add("is-connected")
@@ -520,7 +527,10 @@
 						metadata.append(element("h3", `${direction}: ${port.name || "Unnamed MIDI port"}`))
 						const values = element("dl")
 						for (const [label, value] of [["Port name", port.name], ["Manufacturer", port.manufacturer], ["Port ID", port.id], ["Version", port.version], ["Direction", direction], ["Device state", port.state], ["Port connection", port.connection]]) {
-							values.append(element("dt", label), element("dd", value || "Not reported"))
+							const detail = element("dd")
+							if (label === "Manufacturer" && value) detail.append(companyText(value))
+							else detail.textContent = value || "Not reported"
+							values.append(element("dt", label), detail)
 						}
 						metadata.append(values)
 						if (direction === "Input") {
@@ -616,14 +626,15 @@
 						const logo = element("img", undefined, "company-logo")
 						logo.src = new URL(`${manufacturerId}/${company.logo}`, registry)
 						logo.alt = `${company.name} logo`
-						const name = element("h1", company.name)
+						const name = element("h1")
+						name.append(companyText(company.name, manufacturerId))
 						name.id = "manufacturer-name"
 						heading.append(logo, name)
 						const resources = element("div", undefined, "asset-links")
 						for (const resource of company.links) resources.append(link(resource.label, resource.url))
 						resources.append(link("Logo SVG", logo.src), link("Company JSON", new URL(`${manufacturerId}/manufacturer.json`, registry)), link("All manufacturers", registry))
 						manufacturerInfo.replaceChildren(heading, element("p", company.description, "description"), resources)
-						document.getElementById("all-devices-heading").textContent = `${company.name} products`
+						document.getElementById("all-devices-heading").replaceChildren(companyText(company.name, manufacturerId), document.createTextNode(" products"))
 						document.querySelector("#catalog-section .section-intro").textContent = "All products from this manufacturer in the catalogue, with panel diagrams, MIDI mappings and setup notes."
 					} catch {
 						manufacturerInfo.textContent = "Company information could not be loaded. Reload the page to try again."
@@ -637,6 +648,10 @@
 					if (entry && typeof entry.id === "string" && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.id) && typeof entry.path === "string" && /^[a-z0-9-]+(?:\/[a-z0-9-]+)?$/.test(entry.path)) entries.set(entry.id, entry)
 				}
 				const ids = [...entries.keys()]
+				for (const { path } of entries.values()) {
+					const id = path.split("/")[0]
+					companyIds.set(companyKey(id), id)
+				}
 				const selectedIds = manufacturerId ? ids.filter((id) => entries.get(id).path.split("/")[0] === manufacturerId) : ids
 				const results = await Promise.allSettled(selectedIds.map(async (id) => {
 					const profile = await read(new URL(`${entries.get(id).path}/${id}.json`, registry))
@@ -645,6 +660,7 @@
 				}))
 				const loaded = results.filter((result) => result.status === "fulfilled").map((result) => result.value)
 				loaded.sort((a, b) => a.profile.name.localeCompare(b.profile.name))
+				for (const { profile, devicePath } of loaded) companyIds.set(companyKey(profile.manufacturer), devicePath.split("/")[0])
 				let failed = results.length - loaded.length
 				let count = 0
 				for (const { id, profile, devicePath } of loaded) {
