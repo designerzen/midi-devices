@@ -12,7 +12,11 @@
 		"./profile.schema.json": "./devices/profile.schema.json",
 		"./devices/*": "./devices/*"
 	},
-	"files": ["index.js", "client.js", "devices"],
+	"files": [
+		"index.js",
+		"client.js",
+		"devices"
+	],
 	"scripts": {
 		"diagrams": "python scripts/generate-diagrams.py",
 		"build": "node scripts/build.js",
@@ -23,7 +27,14 @@
 	"devDependencies": {
 		"ajv": "^8.17.1"
 	},
-	"keywords": ["midi", "hardware", "synthesizer", "controller", "web-midi", "device-profiles"],
+	"keywords": [
+		"midi",
+		"hardware",
+		"synthesizer",
+		"controller",
+		"web-midi",
+		"device-profiles"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/designerzen/midi-devices.git"

@@ -12,11 +12,21 @@ const entries = await createMidiDeviceStore(() => [MIDI_DEVICE_DIRECTORY]).entri
 
 for (const { id, path: folder } of entries) {
 	const profile = read(`${folder}/${id}.json`)
-	if (!profile.diagrams) errors.push(`${folder}: missing panel, connections and interface diagrams`)
-	if (!validate(profile)) {
-		errors.push(...validate.errors.map((error) => `${folder}/${id}.json${error.instancePath} ${error.message}`))
+	if (!profile.diagrams) {
+		errors.push(`${folder}: missing panel, connections and interface diagrams`)
 	}
-	const assets = [profile.icon ?? "icon.svg", profile.surface?.src ?? "panel.svg", ...Object.values(profile.diagrams ?? {})]
+	if (!validate(profile)) {
+		errors.push(
+			...validate.errors.map(
+				(error) => `${folder}/${id}.json${error.instancePath} ${error.message}`
+			)
+		)
+	}
+	const assets = [
+		profile.icon ?? "icon.svg",
+		profile.surface?.src ?? "panel.svg",
+		...Object.values(profile.diagrams ?? {})
+	]
 	for (const asset of assets) {
 		if (!existsSync(path.join(MIDI_DEVICE_DIRECTORY, folder, asset))) {
 			errors.push(`${folder}: missing ${asset}`)
@@ -24,33 +34,49 @@ for (const { id, path: folder } of entries) {
 	}
 	for (const asset of new Set(Object.values(profile.diagrams ?? {}))) {
 		const file = path.join(MIDI_DEVICE_DIRECTORY, folder, asset)
-		if (!existsSync(file)) continue
+		if (!existsSync(file)) {
+			continue
+		}
 		const svg = readFileSync(file, "utf8")
 		const ids = [...svg.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1])
-		if (new Set(ids).size !== ids.length) errors.push(`${folder}/${asset}: duplicate SVG element IDs`)
-		if (!svg.includes("<title") || !svg.includes("<desc")) errors.push(`${folder}/${asset}: missing accessible title or description`)
+		if (new Set(ids).size !== ids.length) {
+			errors.push(`${folder}/${asset}: duplicate SVG element IDs`)
+		}
+		if (!svg.includes("<title") || !svg.includes("<desc")) {
+			errors.push(`${folder}/${asset}: missing accessible title or description`)
+		}
 		for (const [, colour] of svg.matchAll(/(?:fill|stroke)="([^"]+)"/g)) {
-			if (!["#000", "#fff", "none", "currentColor"].includes(colour)) errors.push(`${folder}/${asset}: non-monochrome colour ${colour}`)
+			if (!["#000", "#fff", "none", "currentColor"].includes(colour)) {
+				errors.push(`${folder}/${asset}: non-monochrome colour ${colour}`)
+			}
 		}
 		// The live surface artwork carries one device-prefixed hit region per surface element.
 		if (asset === profile.surface?.src) {
 			const prefix = `${id}-${path.basename(asset, ".svg")}--surface--`
 			for (const element of profile.surface.elements) {
-				if (!ids.includes(prefix + element.id)) errors.push(`${folder}/${asset}: missing surface element ${element.id}`)
+				if (!ids.includes(prefix + element.id)) {
+					errors.push(`${folder}/${asset}: missing surface element ${element.id}`)
+				}
 			}
 		}
 	}
 	const controlIds = new Set((profile.controls ?? []).map((control) => control.id))
 	for (const element of profile.surface?.elements ?? []) {
-		if (element.control && !controlIds.has(element.control)) errors.push(`${folder}: unknown control ${element.control}`)
+		if (element.control && !controlIds.has(element.control)) {
+			errors.push(`${folder}: unknown control ${element.control}`)
+		}
 		const { x, y, width, height } = element.position
-		if (x + width > 100.001 || y + height > 100.001) errors.push(`${folder}: surface element ${element.id} exceeds the diagram bounds`)
+		if (x + width > 100.001 || y + height > 100.001) {
+			errors.push(`${folder}: surface element ${element.id} exceeds the diagram bounds`)
+		}
 	}
 }
 
 // A JSON file whose id does not match its filename is silently skipped by the loader.
 for (const manufacturer of readdirSync(MIDI_DEVICE_DIRECTORY, { withFileTypes: true })) {
-	if (!manufacturer.isDirectory()) continue
+	if (!manufacturer.isDirectory()) {
+		continue
+	}
 	for (const model of readdirSync(path.join(MIDI_DEVICE_DIRECTORY, manufacturer.name))) {
 		const folder = `${manufacturer.name}/${model}`
 		if (!entries.some((entry) => entry.path === folder)) {
@@ -59,7 +85,9 @@ for (const manufacturer of readdirSync(MIDI_DEVICE_DIRECTORY, { withFileTypes: t
 	}
 }
 
-const committed = existsSync(path.join(MIDI_DEVICE_DIRECTORY, "index.json")) ? read("index.json") : []
+const committed = existsSync(path.join(MIDI_DEVICE_DIRECTORY, "index.json"))
+	? read("index.json")
+	: []
 if (JSON.stringify(committed) !== JSON.stringify(entries)) {
 	errors.push("devices/index.json is out of date; run npm run build")
 }

@@ -3,7 +3,10 @@ import { cp, mkdir, readFile, realpath, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 
-export const MIDI_DEVICE_DIRECTORY = path.join(path.dirname(fileURLToPath(import.meta.url)), "devices")
+export const MIDI_DEVICE_DIRECTORY = path.join(
+	path.dirname(fileURLToPath(import.meta.url)),
+	"devices"
+)
 
 const DEVICE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const MIME = {
