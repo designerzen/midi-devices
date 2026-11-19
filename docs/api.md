@@ -18,7 +18,7 @@ Use GET requests. Every `.json` endpoint below also has an equivalent `.xml` URL
 | `midi/{slug}.json` | The same full profile as the device endpoint, located through an identifier alias |
 | `ports.json` | Metadata and `byId`, `byName`, `bySlug` dictionaries mapping identifiers to device IDs |
 
-Metadata means `apiVersion` (`"v1"`), `dataVersion` (package version), and `generated` (ISO timestamp). Metadata appears on collection responses and the port map, **not** individual device, manufacturer, or alias responses. `dataVersion` is not a unique build identifier; catalogue edits can share a package version.
+Metadata means `apiVersion` (`"v1"`), `dataVersion` (`<package version>+<short commit>`), and `generated` (ISO timestamp). Metadata appears on collection responses and the port map, **not** individual device, manufacturer, or alias responses. `dataVersion` identifies the package release and catalogue commit; rebuilding the same commit with the same package version preserves it. Use `npm run version:patch`, `npm run version:minor`, or `npm run version:major` to bump the package release before building.
 
 A summary contains `id`, `name`, `manufacturer`, `manufacturerId`, `description`, `abilities`, `ids`, `portNames`, and `links`, when supplied by the profile. Full profiles additionally contain control mappings, setup notices, documentation, GUI layout, and panel geometry. See [the profile guide](profiles.md).
 

@@ -1,0 +1,212 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "cme-u6midi-pro",
+	"name": "CME U6MIDI Pro",
+	"manufacturer": "CME",
+	"manufacturerUrl": "https://www.cme-pro.com/",
+	"productUrl": "https://www.cme-pro.com/support-product/u6midi-pro/",
+	"ids": [
+		"cme-u6midi-pro"
+	],
+	"portNames": [],
+	"description": "3-input/3-output DIN and USB MIDI interface with standalone routing.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "U6MIDI Pro support and tools",
+			"url": "https://www.cme-pro.com/support-product/u6midi-pro/"
+		},
+		{
+			"title": "U6MIDI Pro user manual",
+			"url": "https://www.cme-pro.com/wp-content/uploads/2025/02/U6MIDI-Pro-user-manual_English_v06.pdf"
+		}
+	],
+	"abilities": [
+		"USB MIDI interface",
+		"Standalone MIDI routing",
+		"MIDI merging and filtering"
+	],
+	"hardwareControls": [
+		"3 MIDI inputs",
+		"3 MIDI outputs",
+		"Function button"
+	],
+	"notice": "Connect USB-C to a computer for USB MIDI or to a power supply for standalone routing. The USB socket is a client connection and cannot host a USB keyboard. Configure routing with UxMIDI Tools. MIDI IN receives from instrument OUT; MIDI OUT sends to instrument IN. Stored routing and filters determine which messages reach each port. This is a transport profile with no instrument note or CC map. Exact browser port names are unverified; select this profile manually. Diagrams are simplified connection and control schematics, not scale drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "CME U6MIDI Pro schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 470,
+		"elements": [
+			{
+				"id": "midi-inputs-midi-in-1",
+				"label": "MIDI INPUTS: MIDI IN 1",
+				"kind": "input",
+				"position": {
+					"x": 3.1,
+					"y": 20.212765957446805,
+					"width": 14.933333333333335,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "midi-inputs-midi-in-2",
+				"label": "MIDI INPUTS: MIDI IN 2",
+				"kind": "input",
+				"position": {
+					"x": 18.033333333333335,
+					"y": 20.212765957446805,
+					"width": 14.933333333333335,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "midi-inputs-midi-in-3",
+				"label": "MIDI INPUTS: MIDI IN 3",
+				"kind": "input",
+				"position": {
+					"x": 32.96666666666667,
+					"y": 20.212765957446805,
+					"width": 14.933333333333335,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "midi-outputs-midi-out-1",
+				"label": "MIDI OUTPUTS: MIDI OUT 1",
+				"kind": "output",
+				"position": {
+					"x": 51.6,
+					"y": 20.212765957446805,
+					"width": 14.933333333333335,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "midi-outputs-midi-out-2",
+				"label": "MIDI OUTPUTS: MIDI OUT 2",
+				"kind": "output",
+				"position": {
+					"x": 66.53333333333333,
+					"y": 20.212765957446805,
+					"width": 14.933333333333335,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "midi-outputs-midi-out-3",
+				"label": "MIDI OUTPUTS: MIDI OUT 3",
+				"kind": "output",
+				"position": {
+					"x": 81.46666666666668,
+					"y": 20.212765957446805,
+					"width": 14.933333333333335,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "usb-and-power-usb-client-midi-power",
+				"label": "USB AND POWER: USB client MIDI / power",
+				"kind": "bidirectional",
+				"position": {
+					"x": 3.1,
+					"y": 57.446808510638306,
+					"width": 63.800000000000004,
+					"height": 32.97872340425532
+				}
+			},
+			{
+				"id": "function-all-notes-off-reset",
+				"label": "FUNCTION: All notes off / reset",
+				"kind": "button",
+				"position": {
+					"x": 70.6,
+					"y": 57.446808510638306,
+					"width": 25.8,
+					"height": 32.97872340425532
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"interface": "interface.svg",
+		"connections": "connections.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN 1",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI IN 2",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI IN 3",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT 1",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT 2",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT 3",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "USB client MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		}
+	],
+	"diagramSources": [
+		"https://www.cme-pro.com/support-product/u6midi-pro/",
+		"https://www.cme-pro.com/wp-content/uploads/2025/02/U6MIDI-Pro-user-manual_English_v06.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

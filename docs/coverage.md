@@ -67,7 +67,7 @@ This is a curated expansion of widely used controller families, not a sales rank
 
 ## Additional manufacturers and instruments
 
-The latest expansion adds **12 devices across six new manufacturer roots**, bringing the catalogue to **130 devices from 33 manufacturers**. Each root has a company descriptor, shared manufacturer logo, website and support links. Every new profile includes panel, labelled interface and connection diagrams. These schematics show selected physical controls rather than a complete or dimensionally accurate panel inventory.
+An earlier expansion added **12 devices across six new manufacturer roots**, bringing that batch to **130 devices from 33 manufacturers**. Each root has a company descriptor, shared manufacturer logo, website and support links. Every new profile includes panel, labelled interface and connection diagrams. These schematics show selected physical controls rather than a complete or dimensionally accurate panel inventory.
 
 | Manufacturer | Devices | Coverage and distinctions |
 | --- | --- | --- |
@@ -79,6 +79,19 @@ The latest expansion adds **12 devices across six new manufacturer roots**, brin
 | [IK Multimedia](https://ikmultimedia.com/products/irigkeys2) | iRig Keys 2; iRig Keys 2 Mini | 37 versus 25 mini keys; only the 37-key model has wheels and a pedal input; both use 2.5 mm TRS MIDI adapters and configurable knob banks |
 
 Exact browser port aliases have not been verified for these additions, so select profiles manually. The new surfaces carry no guessed note assignments. An empty `controls` array documents setup and physical hardware without claiming a complete MIDI map. Typhon's mapped analog voice controls are the exception: its global hardware Volume knob remains unbound because CC7 adjusts preset volume rather than that global control.
+
+## CME keyboards and MIDI interfaces
+
+CME adds **10 profiles**, bringing the catalogue to **140 devices from 34 manufacturers**. Each includes manufacturer artwork, setup references and panel, labelled interface and connection schematics.
+
+| Family | Devices | Coverage and distinctions |
+| --- | --- | --- |
+| [Original Xkey](https://xkeyair.com/xkey-specs/) | Xkey 25; Xkey 37 | USB keyboards with polyphonic aftertouch; Xkey 37 adds DIN output and pedal inputs through Xcable |
+| [Xkey Air](https://xkeyair.com/xkey-air-specs/) | Xkey Air 25; Xkey Air 37 | USB and BLE MIDI keyboards; establish OS MIDI routing before browser detection |
+| [WIDI](https://www.cme-pro.com/widi-which-device-will-you-connect/) | Master; Jack; Uhost; Bud Pro | DIN, cable-adaptable TRS, USB host/client and USB dongle variants; power requirements differ by model |
+| [USB MIDI](https://www.cme-pro.com/support-product/midi/) | U6MIDI Pro; H4MIDI WC | Three versus two DIN input/output pairs; H4MIDI WC adds USB hosting and optional WIDI Core expansion |
+
+Select these profiles manually: exact browser port aliases have not been verified. Keyboard keys and configurable performance buttons remain unbound, and polyphonic aftertouch is recorded as a hardware capability without a per-key pressure map. Transport profiles have empty control maps; select the connected instrument's profile for its messages. WIDI Master requires power from an instrument MIDI OUT. WIDI Jack's USB-C socket is for power; U6MIDI Pro's USB-C is a client port. H4MIDI WC requires an optional WIDI Core module for Bluetooth. These entries do not cover every historical CME keyboard or every WIDI model.
 
 ## Connecting older hardware
 

@@ -1,0 +1,225 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "cme-h4midi-wc",
+	"name": "CME H4MIDI WC",
+	"manufacturer": "CME",
+	"manufacturerUrl": "https://www.cme-pro.com/",
+	"productUrl": "https://www.cme-pro.com/support-product/h4midi-wc/",
+	"ids": [
+		"cme-h4midi-wc"
+	],
+	"portNames": [],
+	"description": "2-input/2-output DIN and USB MIDI interface with standalone routing and USB hosting.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "H4MIDI WC support and tools",
+			"url": "https://www.cme-pro.com/support-product/h4midi-wc/"
+		},
+		{
+			"title": "H4MIDI WC user manual",
+			"url": "https://www.cme-pro.com/wp-content/uploads/2025/02/H4MIDI-WC-user-manual_English_v05c.pdf"
+		}
+	],
+	"abilities": [
+		"USB MIDI interface",
+		"Standalone MIDI routing",
+		"MIDI merging and filtering",
+		"USB MIDI host",
+		"Optional WIDI Core expansion"
+	],
+	"hardwareControls": [
+		"2 MIDI inputs",
+		"2 MIDI outputs",
+		"Function button"
+	],
+	"notice": "Use USB-A to host a class-compliant USB MIDI device and USB-C for a computer or power. Configure routing with HxMIDI Tools. Bluetooth requires the optional WIDI Core module; it is not built in. MIDI IN receives from instrument OUT; MIDI OUT sends to instrument IN. Stored routing and filters determine which messages reach each port. This is a transport profile with no instrument note or CC map. Exact browser port names are unverified; select this profile manually. Diagrams are simplified connection and control schematics, not scale drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "CME H4MIDI WC schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 470,
+		"elements": [
+			{
+				"id": "midi-inputs-midi-in-1",
+				"label": "MIDI INPUTS: MIDI IN 1",
+				"kind": "input",
+				"position": {
+					"x": 3.1,
+					"y": 20.212765957446805,
+					"width": 22.400000000000002,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "midi-inputs-midi-in-2",
+				"label": "MIDI INPUTS: MIDI IN 2",
+				"kind": "input",
+				"position": {
+					"x": 25.5,
+					"y": 20.212765957446805,
+					"width": 22.400000000000002,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "midi-outputs-midi-out-1",
+				"label": "MIDI OUTPUTS: MIDI OUT 1",
+				"kind": "output",
+				"position": {
+					"x": 51.6,
+					"y": 20.212765957446805,
+					"width": 22.400000000000002,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "midi-outputs-midi-out-2",
+				"label": "MIDI OUTPUTS: MIDI OUT 2",
+				"kind": "output",
+				"position": {
+					"x": 74.0,
+					"y": 20.212765957446805,
+					"width": 22.400000000000002,
+					"height": 24.46808510638298
+				}
+			},
+			{
+				"id": "usb-and-power-usb-client-midi-power",
+				"label": "USB AND POWER: USB client MIDI / power",
+				"kind": "bidirectional",
+				"position": {
+					"x": 3.1,
+					"y": 57.446808510638306,
+					"width": 21.266666666666666,
+					"height": 32.97872340425532
+				}
+			},
+			{
+				"id": "usb-and-power-usb-host-midi",
+				"label": "USB AND POWER: USB HOST MIDI",
+				"kind": "bidirectional",
+				"position": {
+					"x": 24.366666666666667,
+					"y": 57.446808510638306,
+					"width": 21.266666666666666,
+					"height": 32.97872340425532
+				}
+			},
+			{
+				"id": "usb-and-power-dc-power",
+				"label": "USB AND POWER: DC power",
+				"kind": "input",
+				"position": {
+					"x": 45.63333333333333,
+					"y": 57.446808510638306,
+					"width": 21.266666666666666,
+					"height": 32.97872340425532
+				}
+			},
+			{
+				"id": "function-preset",
+				"label": "FUNCTION: Preset",
+				"kind": "button",
+				"position": {
+					"x": 70.6,
+					"y": 57.446808510638306,
+					"width": 12.9,
+					"height": 32.97872340425532
+				}
+			},
+			{
+				"id": "function-widi-optional",
+				"label": "FUNCTION: WIDI (optional)",
+				"kind": "button",
+				"position": {
+					"x": 83.5,
+					"y": 57.446808510638306,
+					"width": 12.9,
+					"height": 32.97872340425532
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"interface": "interface.svg",
+		"connections": "connections.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN 1",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI IN 2",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT 1",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT 2",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "USB client MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "USB HOST MIDI",
+			"connector": "USB-A",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "DC power",
+			"connector": "9 V DC, centre negative",
+			"direction": "input",
+			"location": "Device edge"
+		}
+	],
+	"diagramSources": [
+		"https://www.cme-pro.com/support-product/h4midi-wc/",
+		"https://www.cme-pro.com/wp-content/uploads/2025/02/H4MIDI-WC-user-manual_English_v05c.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

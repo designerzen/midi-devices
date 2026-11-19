@@ -1,0 +1,127 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "cme-widi-uhost",
+	"name": "CME WIDI Uhost",
+	"manufacturer": "CME",
+	"manufacturerUrl": "https://www.cme-pro.com/",
+	"productUrl": "https://www.cme-pro.com/widi-uhost/",
+	"ids": [
+		"cme-widi-uhost"
+	],
+	"portNames": [],
+	"description": "USB MIDI host/client and Bluetooth MIDI bridge.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "WIDI Uhost specifications and setup",
+			"url": "https://www.cme-pro.com/widi-uhost/"
+		}
+	],
+	"abilities": [
+		"Bluetooth MIDI bridging",
+		"Class-compliant USB MIDI hosting"
+	],
+	"hardwareControls": [
+		"USB MIDI",
+		"External power",
+		"Bluetooth MIDI"
+	],
+	"notice": "Use the appropriate USB/OTG cable for a class-compliant USB MIDI instrument or computer. Supply external USB-C power when hosting a bus-powered device. The separate power socket carries no MIDI. Multi-port USB devices use their first MIDI port; see the manufacturer setup guide. This is a MIDI transport profile; connected instruments require their own profiles. No instrument control assignments are supplied. Exact browser port names are unverified; select this profile manually. Diagrams are simplified connection and control schematics, not scale drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "CME WIDI Uhost schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 900,
+		"height": 250,
+		"elements": [
+			{
+				"id": "connections-usb-midi",
+				"label": "CONNECTIONS: USB MIDI",
+				"kind": "bidirectional",
+				"position": {
+					"x": 3.4444444444444446,
+					"y": 38.0,
+					"width": 31.037037037037035,
+					"height": 46.0
+				}
+			},
+			{
+				"id": "connections-external-power",
+				"label": "CONNECTIONS: External power",
+				"kind": "input",
+				"position": {
+					"x": 34.48148148148148,
+					"y": 38.0,
+					"width": 31.037037037037035,
+					"height": 46.0
+				}
+			},
+			{
+				"id": "connections-bluetooth-midi",
+				"label": "CONNECTIONS: Bluetooth MIDI",
+				"kind": "bidirectional",
+				"position": {
+					"x": 65.5185185185185,
+					"y": 38.0,
+					"width": 31.037037037037035,
+					"height": 46.0
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"interface": "interface.svg",
+		"connections": "connections.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI",
+			"connector": "USB-C; host/client role via appropriate cable",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "External power",
+			"connector": "USB-C (power only)",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "Bluetooth MIDI",
+			"connector": "Bluetooth Low Energy MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://www.cme-pro.com/widi-uhost/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

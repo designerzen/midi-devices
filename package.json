@@ -1,6 +1,6 @@
 {
 	"name": "midi-devices",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Open MIDI hardware profiles: controls, port names, panel diagrams, icons and setup notes for MIDI devices",
 	"type": "module",
 	"main": "./index.js",
@@ -12,11 +12,18 @@
 		"./profile.schema.json": "./devices/profile.schema.json",
 		"./devices/*": "./devices/*"
 	},
-	"files": ["index.js", "client.js", "devices"],
+	"files": [
+		"index.js",
+		"client.js",
+		"devices"
+	],
 	"scripts": {
 		"diagrams": "python scripts/generate-diagrams.py",
 		"build": "node scripts/build.js",
 		"validate": "node scripts/validate.js",
+		"version:patch": "npm version patch --no-git-tag-version",
+		"version:minor": "npm version minor --no-git-tag-version",
+		"version:major": "npm version major --no-git-tag-version",
 		"test": "npm run validate && node --test && python scripts/diagrams_test.py",
 		"start": "npm run build && node scripts/server.js",
 		"preview": "npm run build && npx --yes serve dist"
@@ -24,7 +31,14 @@
 	"devDependencies": {
 		"ajv": "^8.17.1"
 	},
-	"keywords": ["midi", "hardware", "synthesizer", "controller", "web-midi", "device-profiles"],
+	"keywords": [
+		"midi",
+		"hardware",
+		"synthesizer",
+		"controller",
+		"web-midi",
+		"device-profiles"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/designerzen/midi-devices.git"

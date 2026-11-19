@@ -1,0 +1,109 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "cme-widi-bud-pro",
+	"name": "CME WIDI Bud Pro",
+	"manufacturer": "CME",
+	"manufacturerUrl": "https://www.cme-pro.com/",
+	"productUrl": "https://www.cme-pro.com/widi-bud-pro/",
+	"ids": [
+		"cme-widi-bud-pro"
+	],
+	"portNames": [],
+	"description": "USB Bluetooth MIDI dongle for a computer or USB host.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "WIDI Bud Pro specifications and setup",
+			"url": "https://www.cme-pro.com/widi-bud-pro/"
+		}
+	],
+	"abilities": [
+		"USB MIDI interface",
+		"Bluetooth MIDI bridging"
+	],
+	"hardwareControls": [
+		"USB MIDI / power",
+		"Bluetooth MIDI"
+	],
+	"notice": "Connect to a computer or compatible USB host and pair with a BLE MIDI device. The dongle exposes USB MIDI to the host; WIDI App configures wireless groups. It has no DIN sockets or instrument keyboard. This is a MIDI transport profile; connected instruments require their own profiles. No instrument control assignments are supplied. Exact browser port names are unverified; select this profile manually. Diagrams are simplified connection and control schematics, not scale drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "CME WIDI Bud Pro schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 900,
+		"height": 250,
+		"elements": [
+			{
+				"id": "connections-usb-midi-power",
+				"label": "CONNECTIONS: USB MIDI / power",
+				"kind": "bidirectional",
+				"position": {
+					"x": 3.4444444444444446,
+					"y": 38.0,
+					"width": 46.55555555555556,
+					"height": 46.0
+				}
+			},
+			{
+				"id": "connections-bluetooth-midi",
+				"label": "CONNECTIONS: Bluetooth MIDI",
+				"kind": "bidirectional",
+				"position": {
+					"x": 50.0,
+					"y": 38.0,
+					"width": 46.55555555555556,
+					"height": 46.0
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"interface": "interface.svg",
+		"connections": "connections.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-A plug",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "Bluetooth MIDI",
+			"connector": "Bluetooth Low Energy MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://www.cme-pro.com/widi-bud-pro/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

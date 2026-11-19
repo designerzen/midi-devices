@@ -1,0 +1,602 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "cme-xkey-air-37",
+	"name": "CME Xkey Air 37",
+	"manufacturer": "CME",
+	"manufacturerUrl": "https://www.cme-pro.com/",
+	"productUrl": "https://xkeyair.com/xkey-air-specs/",
+	"ids": [
+		"cme-xkey-air-37"
+	],
+	"portNames": [],
+	"description": "37-key low-profile velocity-sensitive USB and Bluetooth MIDI keyboard with polyphonic aftertouch.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Xkey Air 37 specifications and setup",
+			"url": "https://xkeyair.com/xkey-air-specs/"
+		}
+	],
+	"abilities": [
+		"Velocity-sensitive notes",
+		"Polyphonic aftertouch",
+		"Pitch bend",
+		"Configurable modulation and sustain",
+		"Bluetooth MIDI"
+	],
+	"hardwareControls": [
+		"37 full-size keys",
+		"Octave buttons",
+		"Pressure-sensitive pitch bend and modulation buttons",
+		"Sustain button"
+	],
+	"notice": "Connect by USB or establish an operating-system BLE MIDI connection before browser detection. Configure assignments with Xkey Plus. The schematic keys and configurable buttons are unbound; no factory note range or CC assignments are assumed. Polyphonic aftertouch is a hardware capability; this profile does not supply a per-key pressure mapping. Bluetooth visibility depends on operating-system MIDI routing; ordinary browser Bluetooth pairing alone does not expose a Web MIDI port. Exact browser port names are unverified; select this profile manually. Diagrams are simplified connection and control schematics, not scale drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "CME Xkey Air 37 schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 400,
+		"elements": [
+			{
+				"id": "performance-octave",
+				"label": "PERFORMANCE: Octave -",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 23.75,
+					"width": 5.65,
+					"height": 22.916666666666668
+				}
+			},
+			{
+				"id": "performance-octave-2",
+				"label": "PERFORMANCE: Octave +",
+				"kind": "button",
+				"position": {
+					"x": 8.75,
+					"y": 23.75,
+					"width": 5.65,
+					"height": 22.916666666666668
+				}
+			},
+			{
+				"id": "performance-pitch-bend",
+				"label": "PERFORMANCE: Pitch bend -",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 46.66666666666667,
+					"width": 5.65,
+					"height": 22.916666666666668
+				}
+			},
+			{
+				"id": "performance-pitch-bend-2",
+				"label": "PERFORMANCE: Pitch bend +",
+				"kind": "button",
+				"position": {
+					"x": 8.75,
+					"y": 46.66666666666667,
+					"width": 5.65,
+					"height": 22.916666666666668
+				}
+			},
+			{
+				"id": "performance-modulation",
+				"label": "PERFORMANCE: Modulation",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 69.58333333333334,
+					"width": 5.65,
+					"height": 22.916666666666668
+				}
+			},
+			{
+				"id": "performance-sustain",
+				"label": "PERFORMANCE: Sustain",
+				"kind": "button",
+				"position": {
+					"x": 8.75,
+					"y": 69.58333333333334,
+					"width": 5.65,
+					"height": 22.916666666666668
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 17.0,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 20.636363636363637,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 24.272727272727273,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 27.90909090909091,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 31.54545454545455,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 35.18181818181819,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 38.81818181818182,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 42.45454545454545,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 46.09090909090909,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 49.727272727272734,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 53.36363636363637,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 56.99999999999999,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 60.63636363636363,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 64.27272727272727,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Key 25",
+				"kind": "key",
+				"position": {
+					"x": 67.9090909090909,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Key 27",
+				"kind": "key",
+				"position": {
+					"x": 71.54545454545455,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-29",
+				"label": "Key 29",
+				"kind": "key",
+				"position": {
+					"x": 75.18181818181819,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-30",
+				"label": "Key 30",
+				"kind": "key",
+				"position": {
+					"x": 78.81818181818183,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-32",
+				"label": "Key 32",
+				"kind": "key",
+				"position": {
+					"x": 82.45454545454545,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-34",
+				"label": "Key 34",
+				"kind": "key",
+				"position": {
+					"x": 86.0909090909091,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-36",
+				"label": "Key 36",
+				"kind": "key",
+				"position": {
+					"x": 89.72727272727273,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-37",
+				"label": "Key 37",
+				"kind": "key",
+				"position": {
+					"x": 93.36363636363637,
+					"y": 25.0,
+					"width": 3.6363636363636367,
+					"height": 67.5
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 19.509090909090908,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 23.145454545454548,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 30.418181818181818,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 34.054545454545455,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 37.690909090909095,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 44.96363636363637,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 48.6,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 55.872727272727275,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 59.509090909090915,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 63.14545454545455,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Key 26",
+				"kind": "key",
+				"position": {
+					"x": 70.41818181818182,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-28",
+				"label": "Key 28",
+				"kind": "key",
+				"position": {
+					"x": 74.05454545454546,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-31",
+				"label": "Key 31",
+				"kind": "key",
+				"position": {
+					"x": 81.32727272727274,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-33",
+				"label": "Key 33",
+				"kind": "key",
+				"position": {
+					"x": 84.96363636363637,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			},
+			{
+				"id": "key-35",
+				"label": "Key 35",
+				"kind": "key",
+				"position": {
+					"x": 88.60000000000001,
+					"y": 25.0,
+					"width": 2.2545454545454544,
+					"height": 41.175
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"interface": "interface.svg",
+		"connections": "connections.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power / charging",
+			"connector": "Micro-USB",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "Bluetooth MIDI",
+			"connector": "Bluetooth Low Energy MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://xkeyair.com/xkey-air-specs/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

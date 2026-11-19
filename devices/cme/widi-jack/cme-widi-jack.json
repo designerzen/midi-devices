@@ -1,0 +1,146 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "cme-widi-jack",
+	"name": "CME WIDI Jack",
+	"manufacturer": "CME",
+	"manufacturerUrl": "https://www.cme-pro.com/",
+	"productUrl": "https://www.cme-pro.com/widi-jack/",
+	"ids": [
+		"cme-widi-jack"
+	],
+	"portNames": [],
+	"description": "TRS/DIN cable-adaptable Bluetooth MIDI interface.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "WIDI Jack specifications and setup",
+			"url": "https://www.cme-pro.com/widi-jack/"
+		}
+	],
+	"abilities": [
+		"Bluetooth MIDI bridging",
+		"TRS type A/B selection",
+		"External USB power"
+	],
+	"hardwareControls": [
+		"MIDI IN",
+		"MIDI OUT",
+		"External power",
+		"Bluetooth MIDI"
+	],
+	"notice": "Use the correct TRS/DIN cable and type A/B switch setting. MIDI-derived power or external USB-C power is required; the USB-C connector does not carry USB MIDI. Configure pairing with WIDI App. This is a MIDI transport profile; connected instruments require their own profiles. No instrument control assignments are supplied. Exact browser port names are unverified; select this profile manually. Diagrams are simplified connection and control schematics, not scale drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "CME WIDI Jack schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 900,
+		"height": 250,
+		"elements": [
+			{
+				"id": "connections-midi-in",
+				"label": "CONNECTIONS: MIDI IN",
+				"kind": "input",
+				"position": {
+					"x": 3.4444444444444446,
+					"y": 38.0,
+					"width": 23.27777777777778,
+					"height": 46.0
+				}
+			},
+			{
+				"id": "connections-midi-out",
+				"label": "CONNECTIONS: MIDI OUT",
+				"kind": "output",
+				"position": {
+					"x": 26.722222222222225,
+					"y": 38.0,
+					"width": 23.27777777777778,
+					"height": 46.0
+				}
+			},
+			{
+				"id": "connections-external-power",
+				"label": "CONNECTIONS: External power",
+				"kind": "input",
+				"position": {
+					"x": 50.0,
+					"y": 38.0,
+					"width": 23.27777777777778,
+					"height": 46.0
+				}
+			},
+			{
+				"id": "connections-bluetooth-midi",
+				"label": "CONNECTIONS: Bluetooth MIDI",
+				"kind": "bidirectional",
+				"position": {
+					"x": 73.27777777777777,
+					"y": 38.0,
+					"width": 23.27777777777778,
+					"height": 46.0
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"interface": "interface.svg",
+		"connections": "connections.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "2.5 mm TRS; use appropriate TRS/DIN cable",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "2.5 mm TRS; use appropriate TRS/DIN cable",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "External power",
+			"connector": "USB-C (power only)",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "Bluetooth MIDI",
+			"connector": "Bluetooth Low Energy MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://www.cme-pro.com/widi-jack/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

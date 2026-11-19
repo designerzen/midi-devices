@@ -1,0 +1,127 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "cme-widi-master",
+	"name": "CME WIDI Master",
+	"manufacturer": "CME",
+	"manufacturerUrl": "https://www.cme-pro.com/",
+	"productUrl": "https://www.cme-pro.com/widi-master/",
+	"ids": [
+		"cme-widi-master"
+	],
+	"portNames": [],
+	"description": "DIN MIDI to Bluetooth MIDI adapter.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "WIDI Master specifications and setup",
+			"url": "https://www.cme-pro.com/widi-master/"
+		}
+	],
+	"abilities": [
+		"Bluetooth MIDI bridging",
+		"MIDI-powered operation"
+	],
+	"hardwareControls": [
+		"MIDI IN",
+		"MIDI OUT / power",
+		"Bluetooth MIDI"
+	],
+	"notice": "Connect the main adapter to the instrument MIDI OUT and its sub-adapter to MIDI IN. Power comes from the instrument MIDI OUT; there is no USB power input. Use WIDI App for pairing and group settings. This is a MIDI transport profile; connected instruments require their own profiles. No instrument control assignments are supplied. Exact browser port names are unverified; select this profile manually. Diagrams are simplified connection and control schematics, not scale drawings.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "CME WIDI Master schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 900,
+		"height": 250,
+		"elements": [
+			{
+				"id": "connections-midi-in",
+				"label": "CONNECTIONS: MIDI IN",
+				"kind": "input",
+				"position": {
+					"x": 3.4444444444444446,
+					"y": 38.0,
+					"width": 31.037037037037035,
+					"height": 46.0
+				}
+			},
+			{
+				"id": "connections-midi-out-power",
+				"label": "CONNECTIONS: MIDI OUT / power",
+				"kind": "output",
+				"position": {
+					"x": 34.48148148148148,
+					"y": 38.0,
+					"width": 31.037037037037035,
+					"height": 46.0
+				}
+			},
+			{
+				"id": "connections-bluetooth-midi",
+				"label": "CONNECTIONS: Bluetooth MIDI",
+				"kind": "bidirectional",
+				"position": {
+					"x": 65.5185185185185,
+					"y": 38.0,
+					"width": 31.037037037037035,
+					"height": 46.0
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"interface": "interface.svg",
+		"connections": "connections.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN plug",
+			"direction": "input",
+			"location": "Detachable sub-adapter"
+		},
+		{
+			"label": "MIDI OUT / power",
+			"connector": "5-pin DIN plug",
+			"direction": "output",
+			"location": "Main adapter"
+		},
+		{
+			"label": "Bluetooth MIDI",
+			"connector": "Bluetooth Low Energy MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://www.cme-pro.com/widi-master/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}
