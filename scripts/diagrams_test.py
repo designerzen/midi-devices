@@ -14,6 +14,35 @@ def profile(folder, identifier):
 
 
 class DeviceDiagrams(unittest.TestCase):
+    def test_irig_variants_keep_model_specific_wheels_and_pedal(self):
+        for model, count in [("irig-keys-2", 37), ("irig-keys-2-mini", 25)]:
+            device = profile(f"ik-multimedia/{model}", f"ik-multimedia-{model}")
+            surface = device["surface"]["elements"]
+            self.assertEqual(sum(e["kind"] == "key" for e in surface), count)
+            self.assertEqual(sum(e["kind"] == "wheel" for e in surface), 2 if count == 37 else 0)
+            self.assertEqual(any(p["label"] == "External pedal" for p in device["connections"]), count == 37)
+            self.assertTrue(all("message" not in e and "control" not in e for e in surface))
+            self.assertTrue(all("2.5 mm" in p["connector"] for p in device["connections"] if p["label"].startswith("MIDI")))
+
+    def test_new_synth_connections_do_not_inherit_unavailable_ports(self):
+        for model in ["liven-xfm", "liven-lofi-12"]:
+            device = profile(f"sonicware/{model}", f"sonicware-{model}")
+            self.assertFalse(any("USB" in p["label"] for p in device["connections"]))
+            self.assertEqual(sum(e["kind"] == "key" for e in device["surface"]["elements"]), 27)
+            self.assertEqual(device["portNames"], [])
+        blofeld = profile("waldorf/blofeld-desktop", "waldorf-blofeld-desktop")
+        self.assertFalse(any(p["label"] == "MIDI OUT" for p in blofeld["connections"]))
+
+    def test_typhon_documented_ccs_do_not_bind_global_volume_to_preset_volume(self):
+        device = profile("dreadbox/typhon", "dreadbox-typhon")
+        controls = {c["id"]: c for c in device["controls"]}
+        self.assertEqual(controls["cutoff"]["cc"], 74)
+        self.assertEqual(controls["resonance"]["cc"], 71)
+        self.assertEqual(controls["wave"]["cc"], 70)
+        volume = next(e for e in device["surface"]["elements"] if e["id"] == "analog-voice-volume")
+        self.assertNotIn("control", volume)
+        self.assertTrue(any(p["label"] == "USB MIDI / power" and p["direction"] == "bidirectional" for p in device["connections"]))
+
     def test_launchkey_mk4_model_sizes_and_fader_inventory(self):
         for count in [25, 37, 49, 61]:
             device = profile(f"novation/launchkey-{count}-mk4", f"novation-launchkey-{count}-mk4")

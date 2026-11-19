@@ -7,6 +7,7 @@ import { MIDI_DEVICE_DIRECTORY, createMidiDeviceStore } from "../index.js"
 
 const read = (file) => JSON.parse(readFileSync(path.join(MIDI_DEVICE_DIRECTORY, file), "utf8"))
 const validate = new Ajv({ allErrors: true, strict: false }).compile(read("profile.schema.json"))
+const validateManufacturer = new Ajv({ allErrors: true, strict: false }).compile(read("manufacturer.schema.json"))
 const errors = []
 const entries = await createMidiDeviceStore(() => [MIDI_DEVICE_DIRECTORY]).entries()
 
@@ -55,6 +56,15 @@ for (const { id, path: folder } of entries) {
 // A JSON file whose id does not match its filename is silently skipped by the loader.
 for (const manufacturer of readdirSync(MIDI_DEVICE_DIRECTORY, { withFileTypes: true })) {
 	if (!manufacturer.isDirectory()) continue
+	const descriptorFile = `${manufacturer.name}/manufacturer.json`
+	try {
+		const descriptor = read(descriptorFile)
+		if (!validateManufacturer(descriptor)) errors.push(...validateManufacturer.errors.map((error) => `${descriptorFile}${error.instancePath} ${error.message}`))
+		if (descriptor.id !== manufacturer.name) errors.push(`${descriptorFile}: id must match manufacturer folder`)
+		if (!existsSync(path.join(MIDI_DEVICE_DIRECTORY, manufacturer.name, descriptor.logo))) errors.push(`${descriptorFile}: missing logo`)
+	} catch (error) {
+		errors.push(`${descriptorFile}: ${error.message}`)
+	}
 	for (const model of readdirSync(path.join(MIDI_DEVICE_DIRECTORY, manufacturer.name), { withFileTypes: true })) {
 		if (!model.isDirectory()) continue
 		const folder = `${manufacturer.name}/${model.name}`

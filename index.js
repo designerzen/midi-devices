@@ -88,7 +88,7 @@ export function createMidiDeviceStore(getRoots) {
 			}
 			const parts = relative.split("/")
 			if (
-				relative !== "profile.schema.json" &&
+				!["profile.schema.json", "manufacturer.schema.json"].includes(relative) &&
 				(parts.length < 2 || !DEVICE_ID.test(parts[0]))
 			) {
 				return null

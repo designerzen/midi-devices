@@ -64,12 +64,25 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 
 	const manufacturers = new Map()
 	for (const device of devices) {
-		const entry = manufacturers.get(device.manufacturerId) ?? {
-			id: device.manufacturerId,
-			name: device.manufacturer,
-			url: device.manufacturerUrl,
-			devices: [],
-			links: { self: `${api}manufacturers/${device.manufacturerId}.json` }
+		let entry = manufacturers.get(device.manufacturerId)
+		if (!entry) {
+			const { $schema, links: resources, ...descriptor } = JSON.parse(readFileSync(
+				path.join(devicesDirectory, device.manufacturerId, "manufacturer.json"), "utf8"
+			))
+			const base = `${site}${device.manufacturerId}/`
+			entry = {
+				...descriptor,
+				resources,
+				devices: [],
+				links: {
+					self: `${api}manufacturers/${device.manufacturerId}.json`,
+					xml: `${api}manufacturers/${device.manufacturerId}.xml`,
+					base,
+					profile: `${base}manufacturer.json`,
+					logo: `${base}${descriptor.logo}`,
+					catalogue: base
+				}
+			}
 		}
 		entry.devices.push(device)
 		manufacturers.set(device.manufacturerId, entry)

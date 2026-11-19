@@ -16,7 +16,9 @@ The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native
 
 Also included: Novation Launchpad Mini MK3, Launchpad X, Circuit Tracks, Circuit Rhythm, and the original Arturia KeyStep 37. Launchpad X provides its documented Programmer-mode grid and button mappings and LPX MIDI port aliases. The other four profiles provide model-specific schematic surfaces and setup guidance; their USB port names remain unverified and require manual profile selection. Custom layouts and assignable encoders are left unbound rather than given assumed factory assignments. Manufacturer manuals and MIDI setup references are linked in each profile.
 
-The catalogue now contains 118 devices. Recent additions include Kontrol S49/S61/S88 MK3 and Maschine MK3 with NI Accessibility Helper setup guidance; SoftStep 2, 12 Step, QuNeo and original QuNexus for alternative foot or touch control; Launchkey 25/37/49/61 MK4, Launchpad Pro MK3, MPK mini IV and APC mini MK2. All include populated schematics and manufacturer references. See the [coverage guide](docs/coverage.md) for software dependencies, access methods and mapping limits.
+The catalogue now contains **130 devices from 33 manufacturers**. The latest expansion adds Elektron Digitakt II and Syntakt; Waldorf Blofeld Desktop and Streichfett; Dreadbox Typhon and Nymphes; Polyend Play+ and Tracker Mini; Sonicware LIVEN XFM and LIVEN Lofi-12; and IK Multimedia iRig Keys 2 and iRig Keys 2 Mini. Each new manufacturer includes company metadata, website and support links, and a shared logo. The profiles include selected-control schematics, connection inventories and manufacturer references; the Typhon profile supplies selected documented firmware 4.2 CC mappings. See the [coverage guide](docs/coverage.md) for model differences and mapping limits.
+
+Other recent additions include Kontrol S49/S61/S88 MK3 and Maschine MK3 with NI Accessibility Helper setup guidance; SoftStep 2, 12 Step, QuNeo and original QuNexus for alternative foot or touch control; Launchkey 25/37/49/61 MK4, Launchpad Pro MK3, MPK mini IV and APC mini MK2. All include populated schematics and manufacturer references. See the [coverage guide](docs/coverage.md) for software dependencies, access methods and mapping limits.
 
 ## Layout
 
@@ -28,6 +30,8 @@ Every profile has a populated schematic surface, including Push 2, MPC2000XL, TR
 devices/
   index.json                      [{ "id": "akai-mpk-mini-mk3", "path": "akai/mpk-mini-mk3" }, …]
   profile.schema.json             JSON Schema (draft 2020-12) for every profile
+  manufacturer.schema.json        JSON Schema for company descriptors
+  <manufacturer>/manufacturer.json company name, description, website, resources and logo source
   <manufacturer>/logo.svg          manufacturer logo shared by its devices
   <manufacturer>/<model>/
     <id>.json                     the device profile
@@ -38,6 +42,8 @@ devices/
 The `id` inside each profile must match its filename. Asset paths inside a profile are relative to its folder.
 
 Icons use manufacturer brand artwork, with sources recorded in [resources/manufacturer-logos.json](resources/manufacturer-logos.json). Raster-only sources are traced into SVG paths. Manufacturer logos remain the property of their respective owners. The diagram generator copies each manufacturer's `logo.svg` to its device icons.
+
+Each manufacturer has a catalogue page at its folder URL, such as [`roland/`](https://designerzen.github.io/midi-devices/roland/). It shows a company information panel above every associated product in this catalogue. Product-card manufacturer links and the manufacturer selector open these pages. Company details come from `devices/<manufacturer>/manufacturer.json`, with logo paths relative to that folder; builds publish the raw descriptor alongside the page and include its metadata in the JSON/XML API.
 
 ## API
 

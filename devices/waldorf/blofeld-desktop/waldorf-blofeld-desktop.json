@@ -1,0 +1,216 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "waldorf-blofeld-desktop",
+	"name": "Waldorf Blofeld Desktop",
+	"manufacturer": "Waldorf",
+	"manufacturerUrl": "https://waldorfmusic.com/",
+	"productUrl": "https://waldorfmusic.com/blofeld-en/",
+	"ids": [
+		"waldorf-blofeld-desktop"
+	],
+	"portNames": [],
+	"description": "Desktop wavetable and virtual analog synthesizer with multitimbral operation.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications and panel",
+			"url": "https://waldorfmusic.com/blofeld-en/"
+		},
+		{
+			"title": "Manufacturer manuals and support",
+			"url": "https://waldorfmusic.com/produkt-faq/"
+		}
+	],
+	"abilities": [
+		"Wavetable synthesis",
+		"Virtual analog synthesis",
+		"Multitimbral operation",
+		"Arpeggiator",
+		"USB MIDI",
+		"DIN MIDI input"
+	],
+	"hardwareControls": [
+		"Graphic display",
+		"Parameter encoders",
+		"Selection encoder",
+		"Volume control"
+	],
+	"notice": "This is the Blofeld Desktop hardware, not Blofeld Keyboard or the Blofeld plug-in. Receive notes over USB MIDI or DIN MIDI IN and set the global or multitimbral part channels to match the sender. The desktop has no DIN MIDI OUT. Multitimbral parts and patch settings determine how incoming notes are used. Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected hardware appears under the MIDI interface name. Physical controls are unbound and this profile does not supply a complete MIDI implementation. Diagrams show selected physical controls with illustrative positions; consult the linked manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Waldorf Blofeld Desktop selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "display-graphic-display",
+				"label": "DISPLAY: Graphic display",
+				"kind": "screen",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 39.0,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "edit-parameter-1",
+				"label": "EDIT: Parameter 1",
+				"kind": "knob",
+				"position": {
+					"x": 44.25,
+					"y": 12.666666666666668,
+					"width": 13.291666666666666,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "edit-parameter-2",
+				"label": "EDIT: Parameter 2",
+				"kind": "knob",
+				"position": {
+					"x": 57.54166666666667,
+					"y": 12.666666666666668,
+					"width": 13.291666666666666,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "edit-parameter-3",
+				"label": "EDIT: Parameter 3",
+				"kind": "knob",
+				"position": {
+					"x": 70.83333333333334,
+					"y": 12.666666666666668,
+					"width": 13.291666666666666,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "edit-parameter-4",
+				"label": "EDIT: Parameter 4",
+				"kind": "knob",
+				"position": {
+					"x": 84.125,
+					"y": 12.666666666666668,
+					"width": 13.291666666666666,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "selection-selection-encoder",
+				"label": "SELECTION: Selection encoder",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 45.33333333333333,
+					"width": 23.708333333333336,
+					"height": 23.333333333333332
+				}
+			},
+			{
+				"id": "selection-play",
+				"label": "SELECTION: Play",
+				"kind": "button",
+				"position": {
+					"x": 26.291666666666668,
+					"y": 45.33333333333333,
+					"width": 23.708333333333336,
+					"height": 23.333333333333332
+				}
+			},
+			{
+				"id": "selection-shift",
+				"label": "SELECTION: Shift",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 45.33333333333333,
+					"width": 23.708333333333336,
+					"height": 23.333333333333332
+				}
+			},
+			{
+				"id": "selection-volume",
+				"label": "SELECTION: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 73.70833333333333,
+					"y": 45.33333333333333,
+					"width": 23.708333333333336,
+					"height": 23.333333333333332
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI",
+			"connector": "USB-B",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT L",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "6.35 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "DC power",
+			"connector": "DC power supply",
+			"direction": "input",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://waldorfmusic.com/blofeld-en/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

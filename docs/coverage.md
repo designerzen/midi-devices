@@ -61,9 +61,24 @@ The Soundbeam catalogue now covers every Soundbeam instrument family listed in t
 
 ## Additional mainstream controller coverage
 
-The latest batch adds **15 profiles**, bringing the catalogue to **118 devices**. Alongside the access-oriented entries above, it includes **Novation Launchpad Pro MK3**, **Akai MPK mini IV** and **Akai APC mini MK2**. Each has panel, labelled interface and connection diagrams. Launchpad Pro modes, APC clip/drum/note modes, and editable MPK pads are not assigned a universal note map. MPK mini IV setup distinguishes its performance, DAW and software ports and documents the DIN output routing setting.
+An earlier batch added **15 profiles**, bringing the catalogue to **118 devices**. Alongside the access-oriented entries above, it included **Novation Launchpad Pro MK3**, **Akai MPK mini IV** and **Akai APC mini MK2**. Each has panel, labelled interface and connection diagrams. Launchpad Pro modes, APC clip/drum/note modes, and editable MPK pads are not assigned a universal note map. MPK mini IV setup distinguishes its performance, DAW and software ports and documents the DIN output routing setting.
 
 This is a curated expansion of widely used controller families, not a sales ranking or a claim of exhaustive popular-device coverage. Manufacturer manuals are linked in every profile. Port aliases are left empty where an exact model-specific name has not been verified; manual profile selection remains available.
+
+## Additional manufacturers and instruments
+
+The latest expansion adds **12 devices across six new manufacturer roots**, bringing the catalogue to **130 devices from 33 manufacturers**. Each root has a company descriptor, shared manufacturer logo, website and support links. Every new profile includes panel, labelled interface and connection diagrams. These schematics show selected physical controls rather than a complete or dimensionally accurate panel inventory.
+
+| Manufacturer | Devices | Coverage and distinctions |
+| --- | --- | --- |
+| [Elektron](https://www.elektron.se/) | Digitakt II; Syntakt | Sampling and/or synthesis with external MIDI sequencing; trig buttons and track-dependent encoder assignments remain unbound |
+| [Waldorf](https://waldorfmusic.com/) | Blofeld Desktop; Streichfett | Separate hardware module profiles; Blofeld Desktop has DIN MIDI input, with MIDI output available over USB rather than a DIN output socket |
+| [Dreadbox](https://dreadbox-fx.com/) | Typhon; Nymphes | Typhon has selected CC mappings from the firmware 4.2 chart and USB routing setup; Nymphes records polyphonic synthesis and expressive MIDI setup without assumed slider assignments |
+| [Polyend](https://polyend.com/) | Play+; Tracker Mini | Model-specific sequencing and MIDI setup; grid and context-sensitive screen controls remain unbound; manuals and firmware are linked through model download pages |
+| [Sonicware](https://sonicware.jp/) | LIVEN XFM; LIVEN Lofi-12 | Distinct FM and sampler engines with four-track sequencers; 27-key button keyboards, DIN MIDI and sync sockets; no USB MIDI socket |
+| [IK Multimedia](https://ikmultimedia.com/products/irigkeys2) | iRig Keys 2; iRig Keys 2 Mini | 37 versus 25 mini keys; only the 37-key model has wheels and a pedal input; both use 2.5 mm TRS MIDI adapters and configurable knob banks |
+
+Exact browser port aliases have not been verified for these additions, so select profiles manually. The new surfaces carry no guessed note assignments. An empty `controls` array documents setup and physical hardware without claiming a complete MIDI map. Typhon's mapped analog voice controls are the exception: its global hardware Volume knob remains unbound because CC7 adjusts preset volume rather than that global control.
 
 ## Connecting older hardware
 

@@ -1,0 +1,326 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "polyend-tracker-mini",
+	"name": "Polyend Tracker Mini",
+	"manufacturer": "Polyend",
+	"manufacturerUrl": "https://polyend.com/",
+	"productUrl": "https://polyend.com/tracker-mini/",
+	"ids": [
+		"polyend-tracker-mini"
+	],
+	"portNames": [],
+	"description": "Portable tracker workstation with stereo sampling, synth engines and external MIDI sequencing.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Product specifications",
+			"url": "https://polyend.com/tracker-mini/"
+		},
+		{
+			"title": "Model manuals and firmware",
+			"url": "https://polyend.com/downloads/tracker-mini-downloads/"
+		}
+	],
+	"abilities": [
+		"Stereo sampling",
+		"Tracker sequencing",
+		"Synth engines",
+		"External MIDI sequencing",
+		"USB MIDI",
+		"TRS MIDI"
+	],
+	"hardwareControls": [
+		"Tracker display",
+		"Eight screen keys",
+		"Directional and plus/minus navigation buttons"
+	],
+	"notice": "This is Tracker Mini, not the original Tracker or Tracker+. In Config > MIDI choose USB or the MIDI sockets for notes, clock and transport, and match the note and CC channels to the external gear. MIDI instruments and assigned CC destinations determine outgoing data. The screen keys are context dependent. Use the supplied TRS MIDI adapter. Features depend on installed firmware; use the model download page for the matching manual. Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected hardware appears under the MIDI interface name. Physical controls are unbound and this profile does not supply a complete MIDI implementation. Diagrams show selected physical controls with illustrative positions; consult the linked manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Polyend Tracker Mini selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "display-tracker-display",
+				"label": "DISPLAY: Tracker display",
+				"kind": "screen",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 94.83333333333334,
+					"height": 30.0
+				}
+			},
+			{
+				"id": "screen-keys-screen-key-1",
+				"label": "SCREEN KEYS: Screen key 1",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 50.0,
+					"width": 11.854166666666668,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "screen-keys-screen-key-2",
+				"label": "SCREEN KEYS: Screen key 2",
+				"kind": "button",
+				"position": {
+					"x": 14.4375,
+					"y": 50.0,
+					"width": 11.854166666666668,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "screen-keys-screen-key-3",
+				"label": "SCREEN KEYS: Screen key 3",
+				"kind": "button",
+				"position": {
+					"x": 26.291666666666668,
+					"y": 50.0,
+					"width": 11.854166666666668,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "screen-keys-screen-key-4",
+				"label": "SCREEN KEYS: Screen key 4",
+				"kind": "button",
+				"position": {
+					"x": 38.145833333333336,
+					"y": 50.0,
+					"width": 11.854166666666668,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "screen-keys-screen-key-5",
+				"label": "SCREEN KEYS: Screen key 5",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 50.0,
+					"width": 11.854166666666668,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "screen-keys-screen-key-6",
+				"label": "SCREEN KEYS: Screen key 6",
+				"kind": "button",
+				"position": {
+					"x": 61.854166666666664,
+					"y": 50.0,
+					"width": 11.854166666666668,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "screen-keys-screen-key-7",
+				"label": "SCREEN KEYS: Screen key 7",
+				"kind": "button",
+				"position": {
+					"x": 73.70833333333333,
+					"y": 50.0,
+					"width": 11.854166666666668,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "screen-keys-screen-key-8",
+				"label": "SCREEN KEYS: Screen key 8",
+				"kind": "button",
+				"position": {
+					"x": 85.5625,
+					"y": 50.0,
+					"width": 11.854166666666668,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "navigation-up",
+				"label": "NAVIGATION: Up",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 70.0,
+					"width": 15.083333333333334,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "navigation-down",
+				"label": "NAVIGATION: Down",
+				"kind": "button",
+				"position": {
+					"x": 17.666666666666668,
+					"y": 70.0,
+					"width": 15.083333333333334,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "navigation-left",
+				"label": "NAVIGATION: Left",
+				"kind": "button",
+				"position": {
+					"x": 32.75,
+					"y": 70.0,
+					"width": 15.083333333333334,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "navigation-right",
+				"label": "NAVIGATION: Right",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 81.0,
+					"width": 15.083333333333334,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "navigation",
+				"label": "NAVIGATION: +",
+				"kind": "button",
+				"position": {
+					"x": 17.666666666666668,
+					"y": 81.0,
+					"width": 15.083333333333334,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "navigation-2",
+				"label": "NAVIGATION: -",
+				"kind": "button",
+				"position": {
+					"x": 32.75,
+					"y": 81.0,
+					"width": 15.083333333333334,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "workflow-menu",
+				"label": "WORKFLOW: Menu",
+				"kind": "button",
+				"position": {
+					"x": 50.5,
+					"y": 70.0,
+					"width": 11.729166666666666,
+					"height": 22.0
+				}
+			},
+			{
+				"id": "workflow-shift",
+				"label": "WORKFLOW: Shift",
+				"kind": "button",
+				"position": {
+					"x": 62.22916666666667,
+					"y": 70.0,
+					"width": 11.729166666666666,
+					"height": 22.0
+				}
+			},
+			{
+				"id": "workflow-play",
+				"label": "WORKFLOW: Play",
+				"kind": "button",
+				"position": {
+					"x": 73.95833333333334,
+					"y": 70.0,
+					"width": 11.729166666666666,
+					"height": 22.0
+				}
+			},
+			{
+				"id": "workflow-record",
+				"label": "WORKFLOW: Record",
+				"kind": "button",
+				"position": {
+					"x": 85.6875,
+					"y": 70.0,
+					"width": 11.729166666666666,
+					"height": 22.0
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "3.5 mm TRS; use supplied MIDI adapter",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "3.5 mm TRS; use supplied MIDI adapter",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Stereo line IN",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Line / headphones OUT",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "microSD",
+			"connector": "microSD card",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://polyend.com/tracker-mini/",
+		"https://polyend.com/downloads/tracker-mini-downloads/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

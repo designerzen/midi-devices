@@ -43,6 +43,11 @@
 			.section-title { font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 0.4rem; }
 			.section-intro { color: var(--muted); margin: 0 0 1.5rem; max-width: 70ch; }
 			.panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+			body[data-manufacturer] #getting-started { display: none; }
+			.company-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+			.company-logo { width: 160px; height: 100px; object-fit: contain; background: white; border-radius: 8px; padding: 12px; }
+			.company-heading h1 { margin: 0; }
+			#manufacturer-info .description { max-width: 75ch; margin-bottom: 1rem; }
 
 			/* Getting started */
 			.steps { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; counter-reset: step; }
@@ -128,6 +133,7 @@
 			<nav aria-label="Site navigation"><a href="https://github.com/designerzen/midi-devices">GitHub</a><a href="https://github.com/designerzen/midi-devices/blob/main/docs/api.md">API docs</a><a href="https://github.com/designerzen/midi-devices/blob/main/docs/profiles.md">Profile guide</a><a href="api/v1/index.json">JSON API</a><a href="index.json">Device index</a><a href="profile.schema.json">Profile schema</a><a href="https://github.com/designerzen/harmoneasy">Harmoneasy</a></nav>
 		</header>
 		<main>
+			<section id="manufacturer-info" class="panel" aria-labelledby="manufacturer-name" hidden></section>
 			<section id="getting-started" aria-labelledby="page-title">
 				<h1 id="page-title">Find out what your MIDI gear can do</h1>
 				<p class="lead">Plug in your keyboard, controller or synth and this page identifies it, shows its panel layout and MIDI controls, and displays every note and knob movement as you play.</p>
@@ -212,6 +218,8 @@
 			const filters = document.getElementById("filters")
 			const search = document.getElementById("device-search")
 			const manufacturerFilter = document.getElementById("manufacturer-filter")
+			const manufacturerId = document.body.dataset.manufacturer
+			const manufacturerInfo = document.getElementById("manufacturer-info")
 			const clearFilters = document.getElementById("clear-filters")
 			const filterStatus = document.getElementById("filter-status")
 			const noResults = document.getElementById("no-results")
@@ -284,7 +292,9 @@
 				connection.hidden = true
 				const ports = element("p", undefined, "connection-ports")
 				ports.hidden = true
-				title.append(name, element("p", profile.manufacturer, "manufacturer"), connection)
+				const company = element("p", undefined, "manufacturer")
+				company.append(link(profile.manufacturer, new URL(`${devicePath.split("/")[0]}/`, registry)))
+				title.append(name, company, connection)
 				heading.append(title)
 				card.append(heading, ports, element("p", profile.description, "description"))
 				card.dataset.connected = "unknown"
@@ -449,9 +459,9 @@
 				const terms = normalise(search.value).split(/\s+/).filter(Boolean)
 				const manufacturer = manufacturerFilter.value
 				let visible = 0
-				for (const [id, { card, profile }] of deviceCards) {
+				for (const [id, { card, profile, devicePath }] of deviceCards) {
 					const text = normalise([id, profile.name, profile.manufacturer].join(" "))
-					const matches = (!manufacturer || profile.manufacturer === manufacturer) && terms.every((term) => text.includes(term))
+					const matches = (!manufacturer || devicePath.split("/")[0] === manufacturer) && terms.every((term) => text.includes(term))
 					card.hidden = !matches
 					if (matches) visible++
 				}
@@ -462,10 +472,16 @@
 				clearFilters.hidden = !filtered
 			}
 			search.addEventListener("input", updateFilters)
-			manufacturerFilter.addEventListener("change", updateFilters)
+			manufacturerFilter.addEventListener("change", () => {
+				location.href = new URL(manufacturerFilter.value ? `${manufacturerFilter.value}/` : "./", registry)
+			})
 			filters.addEventListener("submit", (event) => event.preventDefault())
 			filters.addEventListener("reset", (event) => {
 				event.preventDefault()
+				if (manufacturerId) {
+					location.href = registry
+					return
+				}
 				search.value = ""
 				manufacturerFilter.value = ""
 				updateFilters()
@@ -591,6 +607,28 @@
 				}
 			}
 			try {
+				if (manufacturerId) {
+					manufacturerInfo.hidden = false
+					manufacturerInfo.textContent = "Loading company information…"
+					try {
+						const company = await read(new URL(`${manufacturerId}/manufacturer.json`, registry))
+						const heading = element("div", undefined, "company-heading")
+						const logo = element("img", undefined, "company-logo")
+						logo.src = new URL(`${manufacturerId}/${company.logo}`, registry)
+						logo.alt = `${company.name} logo`
+						const name = element("h1", company.name)
+						name.id = "manufacturer-name"
+						heading.append(logo, name)
+						const resources = element("div", undefined, "asset-links")
+						for (const resource of company.links) resources.append(link(resource.label, resource.url))
+						resources.append(link("Logo SVG", logo.src), link("Company JSON", new URL(`${manufacturerId}/manufacturer.json`, registry)), link("All manufacturers", registry))
+						manufacturerInfo.replaceChildren(heading, element("p", company.description, "description"), resources)
+						document.getElementById("all-devices-heading").textContent = `${company.name} products`
+						document.querySelector("#catalog-section .section-intro").textContent = "All products from this manufacturer in the catalogue, with panel diagrams, MIDI mappings and setup notes."
+					} catch {
+						manufacturerInfo.textContent = "Company information could not be loaded. Reload the page to try again."
+					}
+				}
 				const index = await read(new URL("index.json", registry))
 				if (!Array.isArray(index)) throw new Error("Invalid device index")
 				const entries = new Map()
@@ -599,7 +637,8 @@
 					if (entry && typeof entry.id === "string" && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.id) && typeof entry.path === "string" && /^[a-z0-9-]+(?:\/[a-z0-9-]+)?$/.test(entry.path)) entries.set(entry.id, entry)
 				}
 				const ids = [...entries.keys()]
-				const results = await Promise.allSettled(ids.map(async (id) => {
+				const selectedIds = manufacturerId ? ids.filter((id) => entries.get(id).path.split("/")[0] === manufacturerId) : ids
+				const results = await Promise.allSettled(selectedIds.map(async (id) => {
 					const profile = await read(new URL(`${entries.get(id).path}/${id}.json`, registry))
 					if (profile.schemaVersion !== 1 || typeof profile.name !== "string") throw new Error("Invalid device profile")
 					return { id, profile, devicePath: entries.get(id).path }
@@ -618,12 +657,13 @@
 				}
 				status.textContent = `${count} ${count === 1 ? "device profile" : "device profiles"} from ${new Set(loaded.map(({ profile }) => profile.manufacturer)).size} manufacturers.${failed ? ` ${failed} ${failed === 1 ? "profile could" : "profiles could"} not be loaded.` : ""}`
 				if (!ids.length) status.textContent = "No MIDI device profiles are available."
-				const manufacturers = [...new Set([...deviceCards.values()].map(({ profile }) => profile.manufacturer).filter(Boolean))].sort((a, b) => a.localeCompare(b))
-				for (const manufacturer of manufacturers) {
-					const option = element("option", manufacturer)
-					option.value = manufacturer
+				const manufacturers = new Map([...deviceCards.values()].map(({ profile, devicePath }) => [devicePath.split("/")[0], profile.manufacturer]))
+				for (const [id, name] of [...manufacturers].sort((a, b) => a[1].localeCompare(b[1]))) {
+					const option = element("option", name)
+					option.value = id
 					manufacturerFilter.append(option)
 				}
+				manufacturerFilter.value = manufacturerId ?? ""
 				filters.hidden = deviceCards.size === 0
 				updateFilters()
 			} catch {

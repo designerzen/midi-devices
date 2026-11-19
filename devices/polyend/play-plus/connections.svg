@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 620" role="img" aria-labelledby="title description">
+<title id="title">Polyend Play+ connections</title><desc id="description">Connection inventory. Arrows indicate signal direction relative to the instrument. Locations identify hardware faces; the diagram is not a socket placement drawing. Physical control sections are listed below.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect x="0" y="0" width="1500" height="620" fill="#fff" stroke="none" stroke-width="1.6"/>
+<text x="30" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="20" text-anchor="start" font-weight="bold">Polyend Play+ / CONNECTIONS</text>
+<text x="30" y="63" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="start">Arrows are relative to the device. Locations name the hardware face; sockets are grouped by function.</text>
+<rect x="25" y="90" width="470" height="260" fill="#fff" stroke="#000" stroke-width="1.6" rx="6"/>
+<text x="43" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="13" text-anchor="start" font-weight="bold">INPUTS</text>
+<g id="port-0-1" aria-label="MIDI IN" data-direction="input"><title>MIDI IN</title>
+<svg data-symbol="input" x="39.000" y="142.000" width="34.000" height="34.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="87" y="156" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="13" text-anchor="start" font-weight="bold">MIDI IN</text>
+<text x="87" y="177" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="start">3.5 mm TRS; use supplied MIDI adapter / Rear</text>
+<text x="473" y="156" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8" text-anchor="end">IN &gt;</text>
+</g>
+<rect x="520" y="90" width="470" height="260" fill="#fff" stroke="#000" stroke-width="1.6" rx="6"/>
+<text x="538" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="13" text-anchor="start" font-weight="bold">OUTPUTS</text>
+<g id="port-1-1" aria-label="MIDI OUT" data-direction="output"><title>MIDI OUT</title>
+<svg data-symbol="output" x="534.000" y="142.000" width="34.000" height="34.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="582" y="156" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="13" text-anchor="start" font-weight="bold">MIDI OUT</text>
+<text x="582" y="177" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="start">3.5 mm TRS; use supplied MIDI adapter / Rear</text>
+<text x="968" y="156" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8" text-anchor="end">&gt; OUT</text>
+</g>
+<g id="port-1-2" aria-label="Stereo audio OUT" data-direction="output"><title>Stereo audio OUT</title>
+<svg data-symbol="output" x="534.000" y="204.000" width="34.000" height="34.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="582" y="218" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="13" text-anchor="start" font-weight="bold">Stereo audio OUT</text>
+<text x="582" y="239" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="start">3.5 mm TRS / Rear</text>
+<text x="968" y="218" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8" text-anchor="end">&gt; OUT</text>
+</g>
+<rect x="1015" y="90" width="470" height="260" fill="#fff" stroke="#000" stroke-width="1.6" rx="6"/>
+<text x="1033" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="13" text-anchor="start" font-weight="bold">DATA / POWER / CONTROLS</text>
+<g id="port-2-1" aria-label="USB MIDI / power" data-direction="bidirectional"><title>USB MIDI / power</title>
+<svg data-symbol="bidirectional" x="1029.000" y="142.000" width="34.000" height="34.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="url(#tactile-dots)"/></g></svg>
+<text x="1077" y="156" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="13" text-anchor="start" font-weight="bold">USB MIDI / power</text>
+<text x="1077" y="177" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="start">USB-C / Rear</text>
+<text x="1463" y="156" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8" text-anchor="end">&lt; &gt;</text>
+</g>
+<g id="port-2-2" aria-label="microSD" data-direction="bidirectional"><title>microSD</title>
+<svg data-symbol="bidirectional" x="1029.000" y="204.000" width="34.000" height="34.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="url(#tactile-dots)"/></g></svg>
+<text x="1077" y="218" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="13" text-anchor="start" font-weight="bold">microSD</text>
+<text x="1077" y="239" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="start">microSD card / Rear</text>
+<text x="1463" y="218" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8" text-anchor="end">&lt; &gt;</text>
+</g>
+<text x="25" y="388" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="start" font-weight="bold">PHYSICAL CONTROLS / see interface.svg for labelled positions</text>
+<text x="25" y="412" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">PARAMETER ENCODERS: Encoder 1, Encoder 2, Encoder 3, Encoder 4, Encoder 5, Encoder 6, Encoder 7, Encoder 8</text>
+<text x="25" y="430" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">SEQUENCER GRID: Pad 1, Pad 2, Pad 3, Pad 4, Pad 5, Pad 6, Pad 7, Pad 8, Pad 9, Pad 10, Pad 11, Pad 12, Pad 13, Pad 14, Pad 15, Pad 16, Pad 17, Pad 18, Pad 19, Pad 20, Pad 21, Pad 22, Pad 23, Pad 24,</text>
+<text x="25" y="448" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">Pad 25, Pad 26, Pad 27, Pad 28, Pad 29, Pad 30, Pad 31, Pad 32, Pad 33, Pad 34, Pad 35, Pad 36, Pad 37, Pad 38, Pad 39, Pad 40, Pad 41, Pad 42, Pad 43, Pad 44, Pad 45, Pad 46, Pad 47, Pad 48, Pad 49,</text>
+<text x="25" y="466" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">Pad 50, Pad 51, Pad 52, Pad 53, Pad 54, Pad 55, Pad 56, Pad 57, Pad 58, Pad 59, Pad 60, Pad 61, Pad 62, Pad 63, Pad 64, Pad 65, Pad 66, Pad 67, Pad 68, Pad 69, Pad 70, Pad 71, Pad 72, Pad 73, Pad 74,</text>
+<text x="25" y="484" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">Pad 75, Pad 76, Pad 77, Pad 78, Pad 79, Pad 80, Pad 81, Pad 82, Pad 83, Pad 84, Pad 85, Pad 86, Pad 87, Pad 88, Pad 89, Pad 90, Pad 91, Pad 92, Pad 93, Pad 94, Pad 95, Pad 96, Pad 97, Pad 98, Pad 99,</text>
+<text x="25" y="502" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">Pad 100, Pad 101, Pad 102, Pad 103, Pad 104, Pad 105, Pad 106, Pad 107, Pad 108, Pad 109, Pad 110, Pad 111, Pad 112, Pad 113, Pad 114, Pad 115, Pad 116, Pad 117, Pad 118, Pad 119, Pad 120, Pad 121,</text>
+<text x="25" y="520" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">Pad 122, Pad 123, Pad 124, Pad 125, Pad 126, Pad 127, Pad 128</text>
+<text x="25" y="538" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">TRACK CONTROLS: Track control 1, Track control 2, Track control 3, Track control 4, Track control 5, Track control 6, Track control 7, Track control 8, Track control 9, Track control 10, Track control</text>
+<text x="25" y="556" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">11, Track control 12, Track control 13, Track control 14, Track control 15, Track control 16, Track control 17, Track control 18, Track control 19, Track control 20, Track control 21, Track control</text>
+<text x="25" y="574" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="start">22, Track control 23, Track control 24, Track control 25, Track control 26, Track control 27, Track control 28, Track control 29, Track control 30, Track control 31, Track control 32</text>
+</svg>

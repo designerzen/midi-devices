@@ -1,0 +1,340 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "dreadbox-typhon",
+	"name": "Dreadbox Typhon",
+	"manufacturer": "Dreadbox",
+	"manufacturerUrl": "https://dreadbox-fx.com/",
+	"productUrl": "https://dreadbox-fx.com/typhon/",
+	"ids": [
+		"dreadbox-typhon"
+	],
+	"portNames": [],
+	"description": "USB-powered monophonic analog synthesizer with digital stereo effects and a sequencer.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications and panel",
+			"url": "https://dreadbox-fx.com/typhon/"
+		},
+		{
+			"title": "Manufacturer manuals and support",
+			"url": "https://dreadbox-fx.com/support/"
+		},
+		{
+			"title": "Firmware 4.2 user manual (April 2026)",
+			"url": "https://dreadbox-fx.com/wp-content/uploads/2026/04/Typhon-Users-Manual_2026.pdf"
+		}
+	],
+	"abilities": [
+		"Monophonic analog synthesis",
+		"Stereo effects",
+		"Preset memory",
+		"Step sequencer",
+		"DIN MIDI",
+		"USB MIDI (compatible firmware)"
+	],
+	"hardwareControls": [
+		"Analog voice knobs",
+		"Display and value encoder",
+		"Five parameter sliders"
+	],
+	"notice": "Connect 5-pin DIN MIDI or USB MIDI with compatible firmware. The firmware 4.2 manual documents input/output selection under Menu > Global settings > Port Configuration; select the intended USB or MIDI route and enable the required CC reception/transmission settings. Older firmware can differ; consult the matching manual. Select the MIDI receive channel to match the controller. Sliders edit different parameters as the envelope, modulation, sequencer and effects pages change. Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected hardware appears under the MIDI interface name. Selected analog voice controls use CC numbers from the firmware 4.2 chart; the remaining physical controls are unbound. CC handling can be overriding or additive. The hardware master Volume knob is global and is not mapped to CC7 preset volume. This profile does not supply a complete MIDI implementation. Diagrams show selected physical controls with illustrative positions; consult the linked manufacturer references for the full panel.",
+	"controls": [
+		{
+			"id": "osc2-tune",
+			"label": "Oscillator 2 tuning",
+			"cc": 77,
+			"widget": "slider"
+		},
+		{
+			"id": "wave",
+			"label": "Wave shape",
+			"cc": 70,
+			"widget": "slider"
+		},
+		{
+			"id": "cutoff",
+			"label": "Filter cutoff",
+			"cc": 74,
+			"widget": "slider"
+		},
+		{
+			"id": "resonance",
+			"label": "Filter resonance",
+			"cc": 71,
+			"widget": "slider"
+		},
+		{
+			"id": "filter-eg-level",
+			"label": "Filter envelope level",
+			"cc": 6,
+			"widget": "slider"
+		},
+		{
+			"id": "filter-eg-time",
+			"label": "Filter envelope time",
+			"cc": 12,
+			"widget": "slider"
+		},
+		{
+			"id": "amp-eg-time",
+			"label": "Amplifier envelope time",
+			"cc": 78,
+			"widget": "slider"
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Dreadbox Typhon selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "analog-voice-tune-2",
+				"label": "ANALOG VOICE: Tune 2",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 11.3125,
+					"height": 16.333333333333332
+				},
+				"control": "osc2-tune"
+			},
+			{
+				"id": "analog-voice-wave",
+				"label": "ANALOG VOICE: Wave",
+				"kind": "knob",
+				"position": {
+					"x": 13.895833333333332,
+					"y": 12.666666666666668,
+					"width": 11.3125,
+					"height": 16.333333333333332
+				},
+				"control": "wave"
+			},
+			{
+				"id": "analog-voice-cutoff",
+				"label": "ANALOG VOICE: Cutoff",
+				"kind": "knob",
+				"position": {
+					"x": 25.208333333333332,
+					"y": 12.666666666666668,
+					"width": 11.3125,
+					"height": 16.333333333333332
+				},
+				"control": "cutoff"
+			},
+			{
+				"id": "analog-voice-resonance",
+				"label": "ANALOG VOICE: Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 36.520833333333336,
+					"y": 12.666666666666668,
+					"width": 11.3125,
+					"height": 16.333333333333332
+				},
+				"control": "resonance"
+			},
+			{
+				"id": "analog-voice-eg-level",
+				"label": "ANALOG VOICE: EG level",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 28.999999999999996,
+					"width": 11.3125,
+					"height": 16.333333333333332
+				},
+				"control": "filter-eg-level"
+			},
+			{
+				"id": "analog-voice-filter-time",
+				"label": "ANALOG VOICE: Filter time",
+				"kind": "knob",
+				"position": {
+					"x": 13.895833333333332,
+					"y": 28.999999999999996,
+					"width": 11.3125,
+					"height": 16.333333333333332
+				},
+				"control": "filter-eg-time"
+			},
+			{
+				"id": "analog-voice-amp-time",
+				"label": "ANALOG VOICE: Amp time",
+				"kind": "knob",
+				"position": {
+					"x": 25.208333333333332,
+					"y": 28.999999999999996,
+					"width": 11.3125,
+					"height": 16.333333333333332
+				},
+				"control": "amp-eg-time"
+			},
+			{
+				"id": "analog-voice-volume",
+				"label": "ANALOG VOICE: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 36.520833333333336,
+					"y": 28.999999999999996,
+					"width": 11.3125,
+					"height": 16.333333333333332
+				}
+			},
+			{
+				"id": "edit-display",
+				"label": "EDIT: Display",
+				"kind": "screen",
+				"position": {
+					"x": 50.5,
+					"y": 12.666666666666668,
+					"width": 23.458333333333332,
+					"height": 32.666666666666664
+				}
+			},
+			{
+				"id": "edit-value",
+				"label": "EDIT: Value",
+				"kind": "knob",
+				"position": {
+					"x": 73.95833333333334,
+					"y": 12.666666666666668,
+					"width": 23.458333333333332,
+					"height": 32.666666666666664
+				}
+			},
+			{
+				"id": "parameter-sliders-slider-1",
+				"label": "PARAMETER SLIDERS: Slider 1",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 52.666666666666664,
+					"width": 18.966666666666665,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "parameter-sliders-slider-2",
+				"label": "PARAMETER SLIDERS: Slider 2",
+				"kind": "fader",
+				"position": {
+					"x": 21.550000000000004,
+					"y": 52.666666666666664,
+					"width": 18.966666666666665,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "parameter-sliders-slider-3",
+				"label": "PARAMETER SLIDERS: Slider 3",
+				"kind": "fader",
+				"position": {
+					"x": 40.516666666666666,
+					"y": 52.666666666666664,
+					"width": 18.966666666666665,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "parameter-sliders-slider-4",
+				"label": "PARAMETER SLIDERS: Slider 4",
+				"kind": "fader",
+				"position": {
+					"x": 59.483333333333334,
+					"y": 52.666666666666664,
+					"width": 18.966666666666665,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "parameter-sliders-slider-5",
+				"label": "PARAMETER SLIDERS: Slider 5",
+				"kind": "fader",
+				"position": {
+					"x": 78.45,
+					"y": 52.666666666666664,
+					"width": 18.966666666666665,
+					"height": 35.333333333333336
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio IN",
+			"connector": "3.5 mm mono",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Stereo audio OUT",
+			"connector": "6.35 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://dreadbox-fx.com/typhon/",
+		"https://dreadbox-fx.com/support/",
+		"https://dreadbox-fx.com/wp-content/uploads/2026/04/Typhon-Users-Manual_2026.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

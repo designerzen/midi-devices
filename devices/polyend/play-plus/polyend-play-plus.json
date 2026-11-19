@@ -1,0 +1,1959 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "polyend-play-plus",
+	"name": "Polyend Play+",
+	"manufacturer": "Polyend",
+	"manufacturerUrl": "https://polyend.com/",
+	"productUrl": "https://polyend.com/play-plus/",
+	"ids": [
+		"polyend-play-plus"
+	],
+	"portNames": [],
+	"description": "Sample and synth groovebox with a sequencer grid and configurable external MIDI sequencing.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications and panel",
+			"url": "https://polyend.com/play-plus/"
+		},
+		{
+			"title": "Manufacturer manuals and support",
+			"url": "https://polyend.com/downloads/"
+		}
+	],
+	"abilities": [
+		"Sample playback",
+		"Synth engines",
+		"External MIDI sequencing",
+		"Performance modes",
+		"USB MIDI",
+		"TRS MIDI"
+	],
+	"hardwareControls": [
+		"16 by 8 sequencer grid",
+		"Four columns of track controls",
+		"Parameter encoders"
+	],
+	"notice": "This is Play+, not the original Play. Configure MIDI input/output, channels and clock routing in the MIDI settings. The grid is shared between sequencing, performance and note-entry functions; no fixed grid note map is assumed. Use the supplied MIDI adapter rather than assuming a TRS wiring standard. Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected hardware appears under the MIDI interface name. Physical controls are unbound and this profile does not supply a complete MIDI implementation. Diagrams show selected physical controls with illustrative positions; consult the linked manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Polyend Play+ selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "parameter-encoders-encoder-1",
+				"label": "PARAMETER ENCODERS: Encoder 1",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 11.854166666666668,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "parameter-encoders-encoder-2",
+				"label": "PARAMETER ENCODERS: Encoder 2",
+				"kind": "knob",
+				"position": {
+					"x": 14.4375,
+					"y": 12.666666666666668,
+					"width": 11.854166666666668,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "parameter-encoders-encoder-3",
+				"label": "PARAMETER ENCODERS: Encoder 3",
+				"kind": "knob",
+				"position": {
+					"x": 26.291666666666668,
+					"y": 12.666666666666668,
+					"width": 11.854166666666668,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "parameter-encoders-encoder-4",
+				"label": "PARAMETER ENCODERS: Encoder 4",
+				"kind": "knob",
+				"position": {
+					"x": 38.145833333333336,
+					"y": 12.666666666666668,
+					"width": 11.854166666666668,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "parameter-encoders-encoder-5",
+				"label": "PARAMETER ENCODERS: Encoder 5",
+				"kind": "knob",
+				"position": {
+					"x": 50.0,
+					"y": 12.666666666666668,
+					"width": 11.854166666666668,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "parameter-encoders-encoder-6",
+				"label": "PARAMETER ENCODERS: Encoder 6",
+				"kind": "knob",
+				"position": {
+					"x": 61.854166666666664,
+					"y": 12.666666666666668,
+					"width": 11.854166666666668,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "parameter-encoders-encoder-7",
+				"label": "PARAMETER ENCODERS: Encoder 7",
+				"kind": "knob",
+				"position": {
+					"x": 73.70833333333333,
+					"y": 12.666666666666668,
+					"width": 11.854166666666668,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "parameter-encoders-encoder-8",
+				"label": "PARAMETER ENCODERS: Encoder 8",
+				"kind": "knob",
+				"position": {
+					"x": 85.5625,
+					"y": 12.666666666666668,
+					"width": 11.854166666666668,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-1",
+				"label": "SEQUENCER GRID: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-2",
+				"label": "SEQUENCER GRID: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 7.3125,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-3",
+				"label": "SEQUENCER GRID: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 12.041666666666668,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-4",
+				"label": "SEQUENCER GRID: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 16.770833333333332,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-5",
+				"label": "SEQUENCER GRID: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-6",
+				"label": "SEQUENCER GRID: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 26.229166666666664,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-7",
+				"label": "SEQUENCER GRID: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 30.958333333333332,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-8",
+				"label": "SEQUENCER GRID: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 35.6875,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-9",
+				"label": "SEQUENCER GRID: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 40.416666666666664,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-10",
+				"label": "SEQUENCER GRID: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 45.145833333333336,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-11",
+				"label": "SEQUENCER GRID: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 49.875,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-12",
+				"label": "SEQUENCER GRID: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 54.604166666666664,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-13",
+				"label": "SEQUENCER GRID: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 59.333333333333336,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-14",
+				"label": "SEQUENCER GRID: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 64.0625,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-15",
+				"label": "SEQUENCER GRID: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 68.79166666666666,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-16",
+				"label": "SEQUENCER GRID: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 73.52083333333333,
+					"y": 38.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-17",
+				"label": "SEQUENCER GRID: Pad 17",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-18",
+				"label": "SEQUENCER GRID: Pad 18",
+				"kind": "pad",
+				"position": {
+					"x": 7.3125,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-19",
+				"label": "SEQUENCER GRID: Pad 19",
+				"kind": "pad",
+				"position": {
+					"x": 12.041666666666668,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-20",
+				"label": "SEQUENCER GRID: Pad 20",
+				"kind": "pad",
+				"position": {
+					"x": 16.770833333333332,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-21",
+				"label": "SEQUENCER GRID: Pad 21",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-22",
+				"label": "SEQUENCER GRID: Pad 22",
+				"kind": "pad",
+				"position": {
+					"x": 26.229166666666664,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-23",
+				"label": "SEQUENCER GRID: Pad 23",
+				"kind": "pad",
+				"position": {
+					"x": 30.958333333333332,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-24",
+				"label": "SEQUENCER GRID: Pad 24",
+				"kind": "pad",
+				"position": {
+					"x": 35.6875,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-25",
+				"label": "SEQUENCER GRID: Pad 25",
+				"kind": "pad",
+				"position": {
+					"x": 40.416666666666664,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-26",
+				"label": "SEQUENCER GRID: Pad 26",
+				"kind": "pad",
+				"position": {
+					"x": 45.145833333333336,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-27",
+				"label": "SEQUENCER GRID: Pad 27",
+				"kind": "pad",
+				"position": {
+					"x": 49.875,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-28",
+				"label": "SEQUENCER GRID: Pad 28",
+				"kind": "pad",
+				"position": {
+					"x": 54.604166666666664,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-29",
+				"label": "SEQUENCER GRID: Pad 29",
+				"kind": "pad",
+				"position": {
+					"x": 59.333333333333336,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-30",
+				"label": "SEQUENCER GRID: Pad 30",
+				"kind": "pad",
+				"position": {
+					"x": 64.0625,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-31",
+				"label": "SEQUENCER GRID: Pad 31",
+				"kind": "pad",
+				"position": {
+					"x": 68.79166666666666,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-32",
+				"label": "SEQUENCER GRID: Pad 32",
+				"kind": "pad",
+				"position": {
+					"x": 73.52083333333333,
+					"y": 44.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-33",
+				"label": "SEQUENCER GRID: Pad 33",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-34",
+				"label": "SEQUENCER GRID: Pad 34",
+				"kind": "pad",
+				"position": {
+					"x": 7.3125,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-35",
+				"label": "SEQUENCER GRID: Pad 35",
+				"kind": "pad",
+				"position": {
+					"x": 12.041666666666668,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-36",
+				"label": "SEQUENCER GRID: Pad 36",
+				"kind": "pad",
+				"position": {
+					"x": 16.770833333333332,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-37",
+				"label": "SEQUENCER GRID: Pad 37",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-38",
+				"label": "SEQUENCER GRID: Pad 38",
+				"kind": "pad",
+				"position": {
+					"x": 26.229166666666664,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-39",
+				"label": "SEQUENCER GRID: Pad 39",
+				"kind": "pad",
+				"position": {
+					"x": 30.958333333333332,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-40",
+				"label": "SEQUENCER GRID: Pad 40",
+				"kind": "pad",
+				"position": {
+					"x": 35.6875,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-41",
+				"label": "SEQUENCER GRID: Pad 41",
+				"kind": "pad",
+				"position": {
+					"x": 40.416666666666664,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-42",
+				"label": "SEQUENCER GRID: Pad 42",
+				"kind": "pad",
+				"position": {
+					"x": 45.145833333333336,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-43",
+				"label": "SEQUENCER GRID: Pad 43",
+				"kind": "pad",
+				"position": {
+					"x": 49.875,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-44",
+				"label": "SEQUENCER GRID: Pad 44",
+				"kind": "pad",
+				"position": {
+					"x": 54.604166666666664,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-45",
+				"label": "SEQUENCER GRID: Pad 45",
+				"kind": "pad",
+				"position": {
+					"x": 59.333333333333336,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-46",
+				"label": "SEQUENCER GRID: Pad 46",
+				"kind": "pad",
+				"position": {
+					"x": 64.0625,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-47",
+				"label": "SEQUENCER GRID: Pad 47",
+				"kind": "pad",
+				"position": {
+					"x": 68.79166666666666,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-48",
+				"label": "SEQUENCER GRID: Pad 48",
+				"kind": "pad",
+				"position": {
+					"x": 73.52083333333333,
+					"y": 51.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-49",
+				"label": "SEQUENCER GRID: Pad 49",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-50",
+				"label": "SEQUENCER GRID: Pad 50",
+				"kind": "pad",
+				"position": {
+					"x": 7.3125,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-51",
+				"label": "SEQUENCER GRID: Pad 51",
+				"kind": "pad",
+				"position": {
+					"x": 12.041666666666668,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-52",
+				"label": "SEQUENCER GRID: Pad 52",
+				"kind": "pad",
+				"position": {
+					"x": 16.770833333333332,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-53",
+				"label": "SEQUENCER GRID: Pad 53",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-54",
+				"label": "SEQUENCER GRID: Pad 54",
+				"kind": "pad",
+				"position": {
+					"x": 26.229166666666664,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-55",
+				"label": "SEQUENCER GRID: Pad 55",
+				"kind": "pad",
+				"position": {
+					"x": 30.958333333333332,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-56",
+				"label": "SEQUENCER GRID: Pad 56",
+				"kind": "pad",
+				"position": {
+					"x": 35.6875,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-57",
+				"label": "SEQUENCER GRID: Pad 57",
+				"kind": "pad",
+				"position": {
+					"x": 40.416666666666664,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-58",
+				"label": "SEQUENCER GRID: Pad 58",
+				"kind": "pad",
+				"position": {
+					"x": 45.145833333333336,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-59",
+				"label": "SEQUENCER GRID: Pad 59",
+				"kind": "pad",
+				"position": {
+					"x": 49.875,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-60",
+				"label": "SEQUENCER GRID: Pad 60",
+				"kind": "pad",
+				"position": {
+					"x": 54.604166666666664,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-61",
+				"label": "SEQUENCER GRID: Pad 61",
+				"kind": "pad",
+				"position": {
+					"x": 59.333333333333336,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-62",
+				"label": "SEQUENCER GRID: Pad 62",
+				"kind": "pad",
+				"position": {
+					"x": 64.0625,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-63",
+				"label": "SEQUENCER GRID: Pad 63",
+				"kind": "pad",
+				"position": {
+					"x": 68.79166666666666,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-64",
+				"label": "SEQUENCER GRID: Pad 64",
+				"kind": "pad",
+				"position": {
+					"x": 73.52083333333333,
+					"y": 58.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-65",
+				"label": "SEQUENCER GRID: Pad 65",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-66",
+				"label": "SEQUENCER GRID: Pad 66",
+				"kind": "pad",
+				"position": {
+					"x": 7.3125,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-67",
+				"label": "SEQUENCER GRID: Pad 67",
+				"kind": "pad",
+				"position": {
+					"x": 12.041666666666668,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-68",
+				"label": "SEQUENCER GRID: Pad 68",
+				"kind": "pad",
+				"position": {
+					"x": 16.770833333333332,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-69",
+				"label": "SEQUENCER GRID: Pad 69",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-70",
+				"label": "SEQUENCER GRID: Pad 70",
+				"kind": "pad",
+				"position": {
+					"x": 26.229166666666664,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-71",
+				"label": "SEQUENCER GRID: Pad 71",
+				"kind": "pad",
+				"position": {
+					"x": 30.958333333333332,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-72",
+				"label": "SEQUENCER GRID: Pad 72",
+				"kind": "pad",
+				"position": {
+					"x": 35.6875,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-73",
+				"label": "SEQUENCER GRID: Pad 73",
+				"kind": "pad",
+				"position": {
+					"x": 40.416666666666664,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-74",
+				"label": "SEQUENCER GRID: Pad 74",
+				"kind": "pad",
+				"position": {
+					"x": 45.145833333333336,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-75",
+				"label": "SEQUENCER GRID: Pad 75",
+				"kind": "pad",
+				"position": {
+					"x": 49.875,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-76",
+				"label": "SEQUENCER GRID: Pad 76",
+				"kind": "pad",
+				"position": {
+					"x": 54.604166666666664,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-77",
+				"label": "SEQUENCER GRID: Pad 77",
+				"kind": "pad",
+				"position": {
+					"x": 59.333333333333336,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-78",
+				"label": "SEQUENCER GRID: Pad 78",
+				"kind": "pad",
+				"position": {
+					"x": 64.0625,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-79",
+				"label": "SEQUENCER GRID: Pad 79",
+				"kind": "pad",
+				"position": {
+					"x": 68.79166666666666,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-80",
+				"label": "SEQUENCER GRID: Pad 80",
+				"kind": "pad",
+				"position": {
+					"x": 73.52083333333333,
+					"y": 65.0,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-81",
+				"label": "SEQUENCER GRID: Pad 81",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-82",
+				"label": "SEQUENCER GRID: Pad 82",
+				"kind": "pad",
+				"position": {
+					"x": 7.3125,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-83",
+				"label": "SEQUENCER GRID: Pad 83",
+				"kind": "pad",
+				"position": {
+					"x": 12.041666666666668,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-84",
+				"label": "SEQUENCER GRID: Pad 84",
+				"kind": "pad",
+				"position": {
+					"x": 16.770833333333332,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-85",
+				"label": "SEQUENCER GRID: Pad 85",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-86",
+				"label": "SEQUENCER GRID: Pad 86",
+				"kind": "pad",
+				"position": {
+					"x": 26.229166666666664,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-87",
+				"label": "SEQUENCER GRID: Pad 87",
+				"kind": "pad",
+				"position": {
+					"x": 30.958333333333332,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-88",
+				"label": "SEQUENCER GRID: Pad 88",
+				"kind": "pad",
+				"position": {
+					"x": 35.6875,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-89",
+				"label": "SEQUENCER GRID: Pad 89",
+				"kind": "pad",
+				"position": {
+					"x": 40.416666666666664,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-90",
+				"label": "SEQUENCER GRID: Pad 90",
+				"kind": "pad",
+				"position": {
+					"x": 45.145833333333336,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-91",
+				"label": "SEQUENCER GRID: Pad 91",
+				"kind": "pad",
+				"position": {
+					"x": 49.875,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-92",
+				"label": "SEQUENCER GRID: Pad 92",
+				"kind": "pad",
+				"position": {
+					"x": 54.604166666666664,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-93",
+				"label": "SEQUENCER GRID: Pad 93",
+				"kind": "pad",
+				"position": {
+					"x": 59.333333333333336,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-94",
+				"label": "SEQUENCER GRID: Pad 94",
+				"kind": "pad",
+				"position": {
+					"x": 64.0625,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-95",
+				"label": "SEQUENCER GRID: Pad 95",
+				"kind": "pad",
+				"position": {
+					"x": 68.79166666666666,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-96",
+				"label": "SEQUENCER GRID: Pad 96",
+				"kind": "pad",
+				"position": {
+					"x": 73.52083333333333,
+					"y": 71.75,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-97",
+				"label": "SEQUENCER GRID: Pad 97",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-98",
+				"label": "SEQUENCER GRID: Pad 98",
+				"kind": "pad",
+				"position": {
+					"x": 7.3125,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-99",
+				"label": "SEQUENCER GRID: Pad 99",
+				"kind": "pad",
+				"position": {
+					"x": 12.041666666666668,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-100",
+				"label": "SEQUENCER GRID: Pad 100",
+				"kind": "pad",
+				"position": {
+					"x": 16.770833333333332,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-101",
+				"label": "SEQUENCER GRID: Pad 101",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-102",
+				"label": "SEQUENCER GRID: Pad 102",
+				"kind": "pad",
+				"position": {
+					"x": 26.229166666666664,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-103",
+				"label": "SEQUENCER GRID: Pad 103",
+				"kind": "pad",
+				"position": {
+					"x": 30.958333333333332,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-104",
+				"label": "SEQUENCER GRID: Pad 104",
+				"kind": "pad",
+				"position": {
+					"x": 35.6875,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-105",
+				"label": "SEQUENCER GRID: Pad 105",
+				"kind": "pad",
+				"position": {
+					"x": 40.416666666666664,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-106",
+				"label": "SEQUENCER GRID: Pad 106",
+				"kind": "pad",
+				"position": {
+					"x": 45.145833333333336,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-107",
+				"label": "SEQUENCER GRID: Pad 107",
+				"kind": "pad",
+				"position": {
+					"x": 49.875,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-108",
+				"label": "SEQUENCER GRID: Pad 108",
+				"kind": "pad",
+				"position": {
+					"x": 54.604166666666664,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-109",
+				"label": "SEQUENCER GRID: Pad 109",
+				"kind": "pad",
+				"position": {
+					"x": 59.333333333333336,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-110",
+				"label": "SEQUENCER GRID: Pad 110",
+				"kind": "pad",
+				"position": {
+					"x": 64.0625,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-111",
+				"label": "SEQUENCER GRID: Pad 111",
+				"kind": "pad",
+				"position": {
+					"x": 68.79166666666666,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-112",
+				"label": "SEQUENCER GRID: Pad 112",
+				"kind": "pad",
+				"position": {
+					"x": 73.52083333333333,
+					"y": 78.5,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-113",
+				"label": "SEQUENCER GRID: Pad 113",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-114",
+				"label": "SEQUENCER GRID: Pad 114",
+				"kind": "pad",
+				"position": {
+					"x": 7.3125,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-115",
+				"label": "SEQUENCER GRID: Pad 115",
+				"kind": "pad",
+				"position": {
+					"x": 12.041666666666668,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-116",
+				"label": "SEQUENCER GRID: Pad 116",
+				"kind": "pad",
+				"position": {
+					"x": 16.770833333333332,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-117",
+				"label": "SEQUENCER GRID: Pad 117",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-118",
+				"label": "SEQUENCER GRID: Pad 118",
+				"kind": "pad",
+				"position": {
+					"x": 26.229166666666664,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-119",
+				"label": "SEQUENCER GRID: Pad 119",
+				"kind": "pad",
+				"position": {
+					"x": 30.958333333333332,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-120",
+				"label": "SEQUENCER GRID: Pad 120",
+				"kind": "pad",
+				"position": {
+					"x": 35.6875,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-121",
+				"label": "SEQUENCER GRID: Pad 121",
+				"kind": "pad",
+				"position": {
+					"x": 40.416666666666664,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-122",
+				"label": "SEQUENCER GRID: Pad 122",
+				"kind": "pad",
+				"position": {
+					"x": 45.145833333333336,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-123",
+				"label": "SEQUENCER GRID: Pad 123",
+				"kind": "pad",
+				"position": {
+					"x": 49.875,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-124",
+				"label": "SEQUENCER GRID: Pad 124",
+				"kind": "pad",
+				"position": {
+					"x": 54.604166666666664,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-125",
+				"label": "SEQUENCER GRID: Pad 125",
+				"kind": "pad",
+				"position": {
+					"x": 59.333333333333336,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-126",
+				"label": "SEQUENCER GRID: Pad 126",
+				"kind": "pad",
+				"position": {
+					"x": 64.0625,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-127",
+				"label": "SEQUENCER GRID: Pad 127",
+				"kind": "pad",
+				"position": {
+					"x": 68.79166666666666,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "sequencer-grid-pad-128",
+				"label": "SEQUENCER GRID: Pad 128",
+				"kind": "pad",
+				"position": {
+					"x": 73.52083333333333,
+					"y": 85.25,
+					"width": 4.729166666666667,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-1",
+				"label": "TRACK CONTROLS: Track control 1",
+				"kind": "button",
+				"position": {
+					"x": 80.91666666666667,
+					"y": 38.0,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-2",
+				"label": "TRACK CONTROLS: Track control 2",
+				"kind": "button",
+				"position": {
+					"x": 85.04166666666667,
+					"y": 38.0,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-3",
+				"label": "TRACK CONTROLS: Track control 3",
+				"kind": "button",
+				"position": {
+					"x": 89.16666666666667,
+					"y": 38.0,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-4",
+				"label": "TRACK CONTROLS: Track control 4",
+				"kind": "button",
+				"position": {
+					"x": 93.29166666666666,
+					"y": 38.0,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-5",
+				"label": "TRACK CONTROLS: Track control 5",
+				"kind": "button",
+				"position": {
+					"x": 80.91666666666667,
+					"y": 44.75,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-6",
+				"label": "TRACK CONTROLS: Track control 6",
+				"kind": "button",
+				"position": {
+					"x": 85.04166666666667,
+					"y": 44.75,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-7",
+				"label": "TRACK CONTROLS: Track control 7",
+				"kind": "button",
+				"position": {
+					"x": 89.16666666666667,
+					"y": 44.75,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-8",
+				"label": "TRACK CONTROLS: Track control 8",
+				"kind": "button",
+				"position": {
+					"x": 93.29166666666666,
+					"y": 44.75,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-9",
+				"label": "TRACK CONTROLS: Track control 9",
+				"kind": "button",
+				"position": {
+					"x": 80.91666666666667,
+					"y": 51.5,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-10",
+				"label": "TRACK CONTROLS: Track control 10",
+				"kind": "button",
+				"position": {
+					"x": 85.04166666666667,
+					"y": 51.5,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-11",
+				"label": "TRACK CONTROLS: Track control 11",
+				"kind": "button",
+				"position": {
+					"x": 89.16666666666667,
+					"y": 51.5,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-12",
+				"label": "TRACK CONTROLS: Track control 12",
+				"kind": "button",
+				"position": {
+					"x": 93.29166666666666,
+					"y": 51.5,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-13",
+				"label": "TRACK CONTROLS: Track control 13",
+				"kind": "button",
+				"position": {
+					"x": 80.91666666666667,
+					"y": 58.25,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-14",
+				"label": "TRACK CONTROLS: Track control 14",
+				"kind": "button",
+				"position": {
+					"x": 85.04166666666667,
+					"y": 58.25,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-15",
+				"label": "TRACK CONTROLS: Track control 15",
+				"kind": "button",
+				"position": {
+					"x": 89.16666666666667,
+					"y": 58.25,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-16",
+				"label": "TRACK CONTROLS: Track control 16",
+				"kind": "button",
+				"position": {
+					"x": 93.29166666666666,
+					"y": 58.25,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-17",
+				"label": "TRACK CONTROLS: Track control 17",
+				"kind": "button",
+				"position": {
+					"x": 80.91666666666667,
+					"y": 65.0,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-18",
+				"label": "TRACK CONTROLS: Track control 18",
+				"kind": "button",
+				"position": {
+					"x": 85.04166666666667,
+					"y": 65.0,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-19",
+				"label": "TRACK CONTROLS: Track control 19",
+				"kind": "button",
+				"position": {
+					"x": 89.16666666666667,
+					"y": 65.0,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-20",
+				"label": "TRACK CONTROLS: Track control 20",
+				"kind": "button",
+				"position": {
+					"x": 93.29166666666666,
+					"y": 65.0,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-21",
+				"label": "TRACK CONTROLS: Track control 21",
+				"kind": "button",
+				"position": {
+					"x": 80.91666666666667,
+					"y": 71.75,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-22",
+				"label": "TRACK CONTROLS: Track control 22",
+				"kind": "button",
+				"position": {
+					"x": 85.04166666666667,
+					"y": 71.75,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-23",
+				"label": "TRACK CONTROLS: Track control 23",
+				"kind": "button",
+				"position": {
+					"x": 89.16666666666667,
+					"y": 71.75,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-24",
+				"label": "TRACK CONTROLS: Track control 24",
+				"kind": "button",
+				"position": {
+					"x": 93.29166666666666,
+					"y": 71.75,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-25",
+				"label": "TRACK CONTROLS: Track control 25",
+				"kind": "button",
+				"position": {
+					"x": 80.91666666666667,
+					"y": 78.5,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-26",
+				"label": "TRACK CONTROLS: Track control 26",
+				"kind": "button",
+				"position": {
+					"x": 85.04166666666667,
+					"y": 78.5,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-27",
+				"label": "TRACK CONTROLS: Track control 27",
+				"kind": "button",
+				"position": {
+					"x": 89.16666666666667,
+					"y": 78.5,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-28",
+				"label": "TRACK CONTROLS: Track control 28",
+				"kind": "button",
+				"position": {
+					"x": 93.29166666666666,
+					"y": 78.5,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-29",
+				"label": "TRACK CONTROLS: Track control 29",
+				"kind": "button",
+				"position": {
+					"x": 80.91666666666667,
+					"y": 85.25,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-30",
+				"label": "TRACK CONTROLS: Track control 30",
+				"kind": "button",
+				"position": {
+					"x": 85.04166666666667,
+					"y": 85.25,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-31",
+				"label": "TRACK CONTROLS: Track control 31",
+				"kind": "button",
+				"position": {
+					"x": 89.16666666666667,
+					"y": 85.25,
+					"width": 4.125,
+					"height": 6.75
+				}
+			},
+			{
+				"id": "track-controls-track-control-32",
+				"label": "TRACK CONTROLS: Track control 32",
+				"kind": "button",
+				"position": {
+					"x": 93.29166666666666,
+					"y": 85.25,
+					"width": 4.125,
+					"height": 6.75
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "3.5 mm TRS; use supplied MIDI adapter",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "3.5 mm TRS; use supplied MIDI adapter",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Stereo audio OUT",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "microSD",
+			"connector": "microSD card",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://polyend.com/play-plus/",
+		"https://polyend.com/downloads/play-plus-downloads/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

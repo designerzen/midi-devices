@@ -1,0 +1,226 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "dreadbox-nymphes",
+	"name": "Dreadbox Nymphes",
+	"manufacturer": "Dreadbox",
+	"manufacturerUrl": "https://dreadbox-fx.com/",
+	"productUrl": "https://dreadbox-fx.com/nymphes/",
+	"ids": [
+		"dreadbox-nymphes"
+	],
+	"portNames": [],
+	"description": "Six-voice polyphonic analog desktop synthesizer with digital reverb and USB/DIN MIDI.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications and panel",
+			"url": "https://dreadbox-fx.com/nymphes/"
+		},
+		{
+			"title": "Manufacturer manuals and support",
+			"url": "https://dreadbox-fx.com/support/"
+		},
+		{
+			"title": "Nymphes v2 owner manual",
+			"url": "https://dreadbox-fx.com/wp-content/uploads/2025/04/Nymhes_User_Manual.pdf"
+		}
+	],
+	"abilities": [
+		"Polyphonic analog synthesis",
+		"Digital reverb",
+		"Preset memory",
+		"USB MIDI",
+		"DIN MIDI input",
+		"MPE support",
+		"Polyphonic aftertouch response"
+	],
+	"hardwareControls": [
+		"Voice and filter sliders",
+		"ADSR sliders",
+		"Volume knob"
+	],
+	"notice": "Match the MIDI receive channel and playing mode to the controller using the model manual. MPE and polyphonic aftertouch require suitable controller and instrument configuration. The panel uses shifted functions; slider labels alone do not define fixed CC mappings. USB carries MIDI and power. Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected hardware appears under the MIDI interface name. Physical controls are unbound and this profile does not supply a complete MIDI implementation. Diagrams show selected physical controls with illustrative positions; consult the linked manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Dreadbox Nymphes selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "voice-and-filter-wave",
+				"label": "VOICE AND FILTER: Wave",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "voice-and-filter-level",
+				"label": "VOICE AND FILTER: Level",
+				"kind": "fader",
+				"position": {
+					"x": 18.38888888888889,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "voice-and-filter-sub",
+				"label": "VOICE AND FILTER: Sub",
+				"kind": "fader",
+				"position": {
+					"x": 34.19444444444444,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "voice-and-filter-noise",
+				"label": "VOICE AND FILTER: Noise",
+				"kind": "fader",
+				"position": {
+					"x": 50.0,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "voice-and-filter-cutoff",
+				"label": "VOICE AND FILTER: Cutoff",
+				"kind": "fader",
+				"position": {
+					"x": 65.80555555555556,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "voice-and-filter-resonance",
+				"label": "VOICE AND FILTER: Resonance",
+				"kind": "fader",
+				"position": {
+					"x": 81.6111111111111,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 35.333333333333336
+				}
+			},
+			{
+				"id": "envelopes-attack",
+				"label": "ENVELOPES: Attack",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 55.333333333333336,
+					"width": 16.0,
+					"height": 32.666666666666664
+				}
+			},
+			{
+				"id": "envelopes-decay",
+				"label": "ENVELOPES: Decay",
+				"kind": "fader",
+				"position": {
+					"x": 18.583333333333332,
+					"y": 55.333333333333336,
+					"width": 16.0,
+					"height": 32.666666666666664
+				}
+			},
+			{
+				"id": "envelopes-sustain",
+				"label": "ENVELOPES: Sustain",
+				"kind": "fader",
+				"position": {
+					"x": 34.583333333333336,
+					"y": 55.333333333333336,
+					"width": 16.0,
+					"height": 32.666666666666664
+				}
+			},
+			{
+				"id": "envelopes-release",
+				"label": "ENVELOPES: Release",
+				"kind": "fader",
+				"position": {
+					"x": 50.583333333333336,
+					"y": 55.333333333333336,
+					"width": 16.0,
+					"height": 32.666666666666664
+				}
+			},
+			{
+				"id": "level-volume",
+				"label": "LEVEL: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 69.25,
+					"y": 55.333333333333336,
+					"width": 28.166666666666668,
+					"height": 32.666666666666664
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT",
+			"connector": "Audio output socket",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://dreadbox-fx.com/nymphes/",
+		"https://dreadbox-fx.com/support/",
+		"https://dreadbox-fx.com/wp-content/uploads/2025/04/Nymhes_User_Manual.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

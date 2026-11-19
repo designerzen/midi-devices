@@ -13,14 +13,16 @@ Use GET requests. Every `.json` endpoint below also has an equivalent `.xml` URL
 | `index.json` | Metadata, `count`, endpoint `links`, and `devices` containing summaries |
 | `devices.json` | Metadata, `count`, and `devices` containing full profiles |
 | `devices/{id}.json` | A full profile with `manufacturerId` and `links` |
-| `manufacturers.json` | Metadata, `count`, and `manufacturers`; each has `id`, `name`, optional `url`, `count`, `deviceIds`, and `links.self` |
-| `manufacturers/{id}.json` | `id`, `name`, optional `url`, `links.self`, and `devices` containing summaries |
+| `manufacturers.json` | Metadata, `count`, and `manufacturers`; each has company descriptor fields, `count`, `deviceIds`, and generated `links` |
+| `manufacturers/{id}.json` | Company descriptor fields, generated `links`, and `devices` containing summaries |
 | `midi/{slug}.json` | The same full profile as the device endpoint, located through an identifier alias |
 | `ports.json` | Metadata and `byId`, `byName`, `bySlug` dictionaries mapping identifiers to device IDs |
 
 Metadata means `apiVersion` (`"v1"`), `dataVersion` (package version), and `generated` (ISO timestamp). Metadata appears on collection responses and the port map, **not** individual device, manufacturer, or alias responses. `dataVersion` is not a unique build identifier; catalogue edits can share a package version.
 
 A summary contains `id`, `name`, `manufacturer`, `manufacturerId`, `description`, `abilities`, `ids`, `portNames`, and `links`, when supplied by the profile. Full profiles additionally contain control mappings, setup notices, documentation, GUI layout, and panel geometry. See [the profile guide](profiles.md).
+
+Company fields come from `devices/<manufacturer>/manufacturer.json`: `schemaVersion`, `id`, `name`, `description`, `url`, `logo`, `logoSource`, and `resources` (the descriptor's labelled `links` array). `logo` is relative to `links.base`. Manufacturer `links` include `self`, `xml`, `base`, `profile` (raw descriptor), `logo` (absolute SVG URL), and `catalogue` (company page with associated products).
 
 Device links include `self` (API JSON), `xml` (API XML), `profile` (raw JSON profile), `base` (asset directory), `icon`, `panel`, `manufacturer`, and `catalogue`. Generated `links` are absolute URLs. Fields within the original profile, including `icon`, `surface.src`, and GUI image `src`, remain relative:
 
