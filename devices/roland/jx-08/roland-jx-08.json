@@ -270,493 +270,534 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1500,
 		"height": 680,
 		"elements": [
 			{
-				"id": "lfo-rate",
-				"label": "LFO: Rate",
+				"id": "lfo-rate-knob",
+				"label": "Rate",
 				"kind": "knob",
 				"position": {
 					"x": 2.0666666666666664,
 					"y": 13.970588235294118,
-					"width": 1.820553659461509,
+					"width": 1.8205533333333332,
 					"height": 52.94117647058824
 				},
-				"control": "lfo-rate-knob"
+				"control": "lfo-rate-knob",
+				"learnable": true
 			},
 			{
-				"id": "lfo-delay",
-				"label": "LFO: Delay",
+				"id": "lfo-delay-knob",
+				"label": "Delay",
 				"kind": "knob",
 				"position": {
-					"x": 3.8872203261281753,
+					"x": 3.88722,
 					"y": 13.970588235294118,
-					"width": 1.820553659461509,
+					"width": 1.8205533333333332,
 					"height": 52.94117647058824
 				},
-				"control": "lfo-delay-knob"
+				"control": "lfo-delay-knob",
+				"learnable": true
 			},
 			{
-				"id": "lfo-waveform",
-				"label": "LFO: Waveform",
+				"id": "lfo-waveform-switch",
+				"label": "Waveform",
 				"kind": "fader",
 				"position": {
-					"x": 5.707773985589684,
+					"x": 5.707773333333334,
 					"y": 13.970588235294118,
-					"width": 1.820553659461509,
+					"width": 1.8205533333333332,
 					"height": 52.94117647058824
 				},
-				"control": "lfo-waveform-switch"
+				"control": "lfo-waveform-switch",
+				"learnable": true
 			},
 			{
-				"id": "dco-1-lfo",
-				"label": "DCO 1: LFO",
+				"id": "dco-1-lfo-fader",
+				"label": "LFO",
 				"kind": "fader",
 				"position": {
-					"x": 8.994994311717862,
+					"x": 8.994993333333333,
 					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
+					"width": 2.0161066666666665,
 					"height": 52.94117647058824
 				},
-				"control": "dco-1-lfo-fader"
+				"control": "dco-1-lfo-fader",
+				"learnable": true
 			},
 			{
 				"id": "dco-1-tune",
 				"label": "DCO 1: Tune",
 				"kind": "knob",
 				"position": {
-					"x": 11.011103526734926,
+					"x": 11.011106666666667,
 					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
-					"height": 52.94117647058824
-				}
-			},
-			{
-				"id": "dco-1-range",
-				"label": "DCO 1: Range",
-				"kind": "fader",
-				"position": {
-					"x": 13.02721274175199,
-					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
+					"width": 2.0161066666666665,
 					"height": 52.94117647058824
 				},
-				"control": "dco-1-range-switch"
+				"learnable": true
 			},
 			{
-				"id": "dco-1-waveform",
-				"label": "DCO 1: Waveform",
+				"id": "dco-1-range-switch",
+				"label": "Range",
 				"kind": "fader",
 				"position": {
-					"x": 15.043321956769057,
+					"x": 13.027213333333332,
 					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
+					"width": 2.0161066666666665,
 					"height": 52.94117647058824
 				},
-				"control": "dco-1-waveform-switch"
+				"control": "dco-1-range-switch",
+				"learnable": true
 			},
 			{
-				"id": "dco-1-env",
-				"label": "DCO 1: Env",
+				"id": "dco-1-waveform-switch",
+				"label": "Waveform",
+				"kind": "fader",
+				"position": {
+					"x": 15.04332,
+					"y": 13.970588235294118,
+					"width": 2.0161066666666665,
+					"height": 52.94117647058824
+				},
+				"control": "dco-1-waveform-switch",
+				"learnable": true
+			},
+			{
+				"id": "dco-1-env-knob",
+				"label": "Env",
 				"kind": "knob",
 				"position": {
-					"x": 17.059431171786123,
+					"x": 17.059433333333335,
 					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
+					"width": 2.0161066666666665,
 					"height": 52.94117647058824
 				},
-				"control": "dco-1-env-knob"
+				"control": "dco-1-env-knob",
+				"learnable": true
 			},
 			{
-				"id": "dco-2-lfo",
-				"label": "DCO 2: LFO",
+				"id": "dco-2-lfo-fader",
+				"label": "LFO",
 				"kind": "fader",
 				"position": {
-					"x": 20.542207053469852,
+					"x": 20.54220666666667,
 					"y": 13.970588235294118,
-					"width": 4.25221843003413,
+					"width": 4.2522199999999994,
 					"height": 26.47058823529412
 				},
-				"control": "dco-2-lfo-fader"
+				"control": "dco-2-lfo-fader",
+				"learnable": true
 			},
 			{
 				"id": "dco-2-tune",
 				"label": "DCO 2: Tune",
 				"kind": "knob",
 				"position": {
-					"x": 24.794425483503982,
+					"x": 24.794426666666666,
 					"y": 13.970588235294118,
-					"width": 4.25221843003413,
+					"width": 4.2522199999999994,
 					"height": 26.47058823529412
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "dco-2-fine",
-				"label": "DCO 2: Fine",
+				"id": "dco-2-fine-knob",
+				"label": "Fine",
 				"kind": "knob",
 				"position": {
-					"x": 29.046643913538112,
+					"x": 29.046646666666664,
 					"y": 13.970588235294118,
-					"width": 4.25221843003413,
+					"width": 4.2522199999999994,
 					"height": 26.47058823529412
 				},
-				"control": "dco-2-fine-knob"
+				"control": "dco-2-fine-knob",
+				"learnable": true
 			},
 			{
-				"id": "dco-2-range",
-				"label": "DCO 2: Range",
+				"id": "dco-2-range-switch",
+				"label": "Range",
 				"kind": "fader",
 				"position": {
-					"x": 33.298862343572246,
+					"x": 33.29886,
 					"y": 13.970588235294118,
-					"width": 4.25221843003413,
+					"width": 4.2522199999999994,
 					"height": 26.47058823529412
 				},
-				"control": "dco-2-range-switch"
+				"control": "dco-2-range-switch",
+				"learnable": true
 			},
 			{
-				"id": "dco-2-waveform",
-				"label": "DCO 2: Waveform",
+				"id": "dco-2-waveform-switch",
+				"label": "Waveform",
 				"kind": "fader",
 				"position": {
-					"x": 20.542207053469852,
+					"x": 20.54220666666667,
 					"y": 40.44117647058824,
-					"width": 4.25221843003413,
+					"width": 4.2522199999999994,
 					"height": 26.47058823529412
 				},
-				"control": "dco-2-waveform-switch"
+				"control": "dco-2-waveform-switch",
+				"learnable": true
 			},
 			{
-				"id": "dco-2-cross-mod",
-				"label": "DCO 2: Cross mod",
+				"id": "dco-2-cross-mod-knob",
+				"label": "Cross mod",
 				"kind": "knob",
 				"position": {
-					"x": 24.794425483503982,
+					"x": 24.794426666666666,
 					"y": 40.44117647058824,
-					"width": 4.25221843003413,
+					"width": 4.2522199999999994,
 					"height": 26.47058823529412
 				},
-				"control": "dco-2-cross-mod-knob"
+				"control": "dco-2-cross-mod-knob",
+				"learnable": true
 			},
 			{
-				"id": "dco-2-env",
-				"label": "DCO 2: Env",
+				"id": "dco-2-env-knob",
+				"label": "Env",
 				"kind": "knob",
 				"position": {
-					"x": 29.046643913538112,
+					"x": 29.046646666666664,
 					"y": 40.44117647058824,
-					"width": 4.25221843003413,
+					"width": 4.2522199999999994,
 					"height": 26.47058823529412
 				},
-				"control": "dco-2-env-knob"
+				"control": "dco-2-env-knob",
+				"learnable": true
 			},
 			{
-				"id": "dco-2-mode",
-				"label": "DCO 2: Mode",
-				"kind": "button",
+				"id": "dco-2-mode-switch",
+				"label": "Mode",
+				"kind": "fader",
 				"position": {
-					"x": 33.298862343572246,
+					"x": 33.29886,
 					"y": 40.44117647058824,
-					"width": 4.25221843003413,
+					"width": 4.2522199999999994,
 					"height": 26.47058823529412
 				},
-				"control": "dco-2-mode-switch"
+				"control": "dco-2-mode-switch",
+				"learnable": true
 			},
 			{
-				"id": "mixer-dco-1",
-				"label": "MIXER: DCO 1",
+				"id": "mixer-dco-1-fader",
+				"label": "DCO 1",
 				"kind": "fader",
 				"position": {
-					"x": 39.017747440273034,
+					"x": 39.01774666666667,
 					"y": 13.970588235294118,
-					"width": 1.9427758816837317,
+					"width": 1.9427733333333332,
 					"height": 52.94117647058824
 				},
-				"control": "mixer-dco-1-fader"
+				"control": "mixer-dco-1-fader",
+				"learnable": true
 			},
 			{
-				"id": "mixer-dco-2",
-				"label": "MIXER: DCO 2",
+				"id": "mixer-dco-2-fader",
+				"label": "DCO 2",
 				"kind": "fader",
 				"position": {
-					"x": 40.96052332195677,
+					"x": 40.960519999999995,
 					"y": 13.970588235294118,
-					"width": 1.9427758816837317,
+					"width": 1.9427733333333332,
 					"height": 52.94117647058824
 				},
-				"control": "mixer-dco-2-fader"
+				"control": "mixer-dco-2-fader",
+				"learnable": true
 			},
 			{
-				"id": "mixer-env",
-				"label": "MIXER: Env",
+				"id": "mixer-env-knob",
+				"label": "Env",
 				"kind": "knob",
 				"position": {
-					"x": 42.90329920364051,
+					"x": 42.9033,
 					"y": 13.970588235294118,
-					"width": 1.9427758816837317,
+					"width": 1.9427733333333332,
 					"height": 52.94117647058824
 				},
-				"control": "mixer-env-knob"
+				"control": "mixer-env-knob",
+				"learnable": true
 			},
 			{
-				"id": "mixer-mode",
-				"label": "MIXER: Mode",
-				"kind": "button",
+				"id": "mixer-mode-switch",
+				"label": "Mode",
+				"kind": "fader",
 				"position": {
-					"x": 44.84607508532423,
+					"x": 44.84607333333334,
 					"y": 13.970588235294118,
-					"width": 1.9427758816837317,
+					"width": 1.9427733333333332,
 					"height": 52.94117647058824
 				},
-				"control": "mixer-mode-switch"
+				"control": "mixer-mode-switch",
+				"learnable": true
 			},
 			{
-				"id": "vcf-hpf",
-				"label": "VCF: HPF",
+				"id": "vcf-hpf-fader",
+				"label": "HPF",
 				"kind": "fader",
 				"position": {
-					"x": 48.255517633674636,
+					"x": 48.255520000000004,
 					"y": 13.970588235294118,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "vcf-hpf-fader"
+				"control": "vcf-hpf-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-cutoff",
-				"label": "VCF: Cutoff",
+				"id": "vcf-cutoff-fader",
+				"label": "Cutoff",
 				"kind": "fader",
 				"position": {
-					"x": 51.93037542662117,
+					"x": 51.930373333333335,
 					"y": 13.970588235294118,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "vcf-cutoff-fader"
+				"control": "vcf-cutoff-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-resonance",
-				"label": "VCF: Resonance",
+				"id": "vcf-resonance-fader",
+				"label": "Resonance",
 				"kind": "fader",
 				"position": {
-					"x": 55.605233219567694,
+					"x": 55.605233333333324,
 					"y": 13.970588235294118,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "vcf-resonance-fader"
+				"control": "vcf-resonance-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-lfo",
-				"label": "VCF: LFO",
+				"id": "vcf-lfo-fader",
+				"label": "LFO",
 				"kind": "fader",
 				"position": {
-					"x": 59.28009101251423,
+					"x": 59.28009333333334,
 					"y": 13.970588235294118,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "vcf-lfo-fader"
+				"control": "vcf-lfo-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-key-follow",
-				"label": "VCF: Key follow",
+				"id": "vcf-key-follow-fader",
+				"label": "Key follow",
 				"kind": "fader",
 				"position": {
-					"x": 48.255517633674636,
+					"x": 48.255520000000004,
 					"y": 40.44117647058824,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "vcf-key-follow-fader"
+				"control": "vcf-key-follow-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-env",
-				"label": "VCF: Env",
+				"id": "vcf-env-knob",
+				"label": "Env",
 				"kind": "knob",
 				"position": {
-					"x": 51.93037542662117,
+					"x": 51.930373333333335,
 					"y": 40.44117647058824,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "vcf-env-knob"
+				"control": "vcf-env-knob",
+				"learnable": true
 			},
 			{
-				"id": "vcf-mode",
-				"label": "VCF: Mode",
-				"kind": "button",
-				"position": {
-					"x": 55.605233219567694,
-					"y": 40.44117647058824,
-					"width": 3.67485779294653,
-					"height": 26.47058823529412
-				},
-				"control": "vcf-mode-switch"
-			},
-			{
-				"id": "vca-level",
-				"label": "VCA: Level",
+				"id": "vcf-mode-switch",
+				"label": "Mode",
 				"kind": "fader",
 				"position": {
-					"x": 64.42161547212743,
-					"y": 13.970588235294118,
-					"width": 2.5658703071672355,
-					"height": 52.94117647058824
+					"x": 55.605233333333324,
+					"y": 40.44117647058824,
+					"width": 3.67486,
+					"height": 26.47058823529412
 				},
-				"control": "vca-level-fader"
+				"control": "vcf-mode-switch",
+				"learnable": true
 			},
 			{
-				"id": "vca-mode",
-				"label": "VCA: Mode",
-				"kind": "button",
+				"id": "vca-level-fader",
+				"label": "Level",
+				"kind": "fader",
 				"position": {
-					"x": 66.98748577929466,
+					"x": 64.42161333333334,
 					"y": 13.970588235294118,
-					"width": 2.5658703071672355,
+					"width": 2.5658733333333337,
 					"height": 52.94117647058824
 				},
-				"control": "vca-mode-switch"
+				"control": "vca-level-fader",
+				"learnable": true
+			},
+			{
+				"id": "vca-mode-switch",
+				"label": "Mode",
+				"kind": "fader",
+				"position": {
+					"x": 66.98748666666667,
+					"y": 13.970588235294118,
+					"width": 2.5658733333333337,
+					"height": 52.94117647058824
+				},
+				"control": "vca-mode-switch",
+				"learnable": true
 			},
 			{
 				"id": "envelope-env-1",
 				"label": "ENVELOPE: ENV 1",
 				"kind": "knob",
 				"position": {
-					"x": 71.02002275312856,
+					"x": 71.02002,
 					"y": 13.970588235294118,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "envelope-env-2",
 				"label": "ENVELOPE: ENV 2",
 				"kind": "knob",
 				"position": {
-					"x": 74.69488054607508,
+					"x": 74.69488,
 					"y": 13.970588235294118,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "envelope-attack",
-				"label": "ENVELOPE: Attack",
+				"id": "envelope-attack-fader",
+				"label": "Attack",
 				"kind": "fader",
 				"position": {
-					"x": 78.36973833902161,
+					"x": 78.36974,
 					"y": 13.970588235294118,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "envelope-attack-fader"
+				"control": "envelope-attack-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-decay",
-				"label": "ENVELOPE: Decay",
+				"id": "envelope-decay-fader",
+				"label": "Decay",
 				"kind": "fader",
 				"position": {
-					"x": 82.04459613196813,
+					"x": 82.04459333333332,
 					"y": 13.970588235294118,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "envelope-decay-fader"
+				"control": "envelope-decay-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-sustain",
-				"label": "ENVELOPE: Sustain",
+				"id": "envelope-sustain-fader",
+				"label": "Sustain",
 				"kind": "fader",
 				"position": {
-					"x": 71.02002275312856,
+					"x": 71.02002,
 					"y": 40.44117647058824,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "envelope-sustain-fader"
+				"control": "envelope-sustain-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-release",
-				"label": "ENVELOPE: Release",
+				"id": "envelope-release-fader",
+				"label": "Release",
 				"kind": "fader",
 				"position": {
-					"x": 74.69488054607508,
+					"x": 74.69488,
 					"y": 40.44117647058824,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "envelope-release-fader"
+				"control": "envelope-release-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-key-follow",
-				"label": "ENVELOPE: Key follow",
+				"id": "envelope-key-follow-switch",
+				"label": "Key follow",
 				"kind": "fader",
 				"position": {
-					"x": 78.36973833902161,
+					"x": 78.36974,
 					"y": 40.44117647058824,
-					"width": 3.67485779294653,
+					"width": 3.67486,
 					"height": 26.47058823529412
 				},
-				"control": "envelope-key-follow-switch"
+				"control": "envelope-key-follow-switch",
+				"learnable": true
 			},
 			{
 				"id": "portamento-effects-mode",
 				"label": "PORTAMENTO EFFECTS: Mode",
 				"kind": "knob",
 				"position": {
-					"x": 87.18612059158134,
+					"x": 87.18612,
 					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
-					"height": 52.94117647058824
-				}
-			},
-			{
-				"id": "portamento-effects-time",
-				"label": "PORTAMENTO EFFECTS: Time",
-				"kind": "knob",
-				"position": {
-					"x": 89.2022298065984,
-					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
+					"width": 2.0161066666666665,
 					"height": 52.94117647058824
 				},
-				"control": "portamento-effects-time-knob"
+				"learnable": true
+			},
+			{
+				"id": "portamento-effects-time-knob",
+				"label": "Time",
+				"kind": "knob",
+				"position": {
+					"x": 89.20222666666668,
+					"y": 13.970588235294118,
+					"width": 2.0161066666666665,
+					"height": 52.94117647058824
+				},
+				"control": "portamento-effects-time-knob",
+				"learnable": true
 			},
 			{
 				"id": "portamento-effects-chorus-i",
 				"label": "PORTAMENTO EFFECTS: Chorus I",
 				"kind": "knob",
 				"position": {
-					"x": 91.21833902161548,
+					"x": 91.21834000000001,
 					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
+					"width": 2.0161066666666665,
 					"height": 52.94117647058824
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "portamento-effects-chorus-ii",
 				"label": "PORTAMENTO EFFECTS: Chorus II",
 				"kind": "knob",
 				"position": {
-					"x": 93.23444823663255,
+					"x": 93.23444666666666,
 					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
+					"width": 2.0161066666666665,
 					"height": 52.94117647058824
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "portamento-effects-reverb",
 				"label": "PORTAMENTO EFFECTS: Reverb",
 				"kind": "knob",
 				"position": {
-					"x": 95.25055745164961,
+					"x": 95.25056,
 					"y": 13.970588235294118,
-					"width": 2.0161092150170647,
+					"width": 2.0161066666666665,
 					"height": 52.94117647058824
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-volume",
@@ -767,7 +808,8 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-arpeggio",
@@ -778,7 +820,8 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-note",
@@ -789,18 +832,20 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-sequencer",
 				"label": "MEMORY / PERFORMANCE: Sequencer",
 				"kind": "button",
 				"position": {
-					"x": 16.44666666666667,
+					"x": 16.446666666666665,
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-start",
@@ -811,7 +856,8 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-menu",
@@ -822,29 +868,32 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-value",
 				"label": "MEMORY / PERFORMANCE: Value",
 				"kind": "knob",
 				"position": {
-					"x": 30.826666666666668,
+					"x": 30.826666666666664,
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-part-a",
 				"label": "MEMORY / PERFORMANCE: Part A",
 				"kind": "button",
 				"position": {
-					"x": 35.620000000000005,
+					"x": 35.62,
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-part-b",
@@ -855,7 +904,8 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-dual",
@@ -866,7 +916,8 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-split",
@@ -877,29 +928,32 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-manual",
 				"label": "MEMORY / PERFORMANCE: Manual",
 				"kind": "button",
 				"position": {
-					"x": 54.79333333333334,
+					"x": 54.79333333333333,
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-bank-1",
 				"label": "MEMORY / PERFORMANCE: Bank 1",
 				"kind": "button",
 				"position": {
-					"x": 59.58666666666667,
+					"x": 59.586666666666666,
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-bank-2",
@@ -910,18 +964,20 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-bank-3",
 				"label": "MEMORY / PERFORMANCE: Bank 3",
 				"kind": "button",
 				"position": {
-					"x": 69.17333333333335,
+					"x": 69.17333333333333,
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-bank-4",
@@ -932,7 +988,8 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-number-1",
@@ -943,7 +1000,8 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-number-2",
@@ -954,7 +1012,8 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-number-3",
@@ -965,18 +1024,20 @@
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-number-4",
 				"label": "MEMORY / PERFORMANCE: Number 4",
 				"kind": "button",
 				"position": {
-					"x": 93.14000000000001,
+					"x": 93.13999999999999,
 					"y": 75.0,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-number-5",
@@ -987,7 +1048,8 @@
 					"y": 83.08823529411765,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-number-6",
@@ -998,7 +1060,8 @@
 					"y": 83.08823529411765,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-number-7",
@@ -1009,18 +1072,20 @@
 					"y": 83.08823529411765,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-number-8",
 				"label": "MEMORY / PERFORMANCE: Number 8",
 				"kind": "button",
 				"position": {
-					"x": 16.44666666666667,
+					"x": 16.446666666666665,
 					"y": 83.08823529411765,
 					"width": 4.793333333333334,
 					"height": 8.088235294117647
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

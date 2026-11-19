@@ -1,232 +1,274 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="img" aria-labelledby="title description">
-<title id="title">Roland SH-01A labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="680" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="662" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland SH-01A</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="140" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">CONTROLLERS</text>
-<g id="controllers-ribbon-c1" data-kind="strip" aria-label="Ribbon C1"><title>Ribbon C1</title>
-<rect x="52" y="100" width="22" height="330.875" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M63 105L63 426.875" fill="none" stroke="#000" stroke-width="1"/>
-<text x="63" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.96" text-anchor="middle">Ribbon C1</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="group" aria-labelledby="roland-sh-01a-interface--title" aria-describedby="roland-sh-01a-interface--description" data-device="roland-sh-01a" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-sh-01a-interface--title">Roland SH-01A labelled interface</title><desc id="roland-sh-01a-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-sh-01a-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="662" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland SH-01A</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="65" width="140" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">CONTROLLERS</text>
+<rect x="180" y="65" width="106.667" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="187" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
+<rect x="296.667" y="65" width="153.333" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="303.667" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">VCO</text>
+<rect x="460" y="65" width="194.167" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="467" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">SOURCE MIXER</text>
+<rect x="664.167" y="65" width="194.167" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="671.167" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">VCF</text>
+<rect x="868.333" y="65" width="106.667" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="875.333" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">VCA</text>
+<rect x="985" y="65" width="194.167" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="992" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
+<rect x="1189.167" y="65" width="275.833" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1196.167" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">CONTROLLER</text>
+<rect x="25" y="480" width="1450" height="145" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="494" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MEMORY / PERFORMANCE</text>
 </g>
-<g id="controllers-ribbon-c2" data-kind="strip" aria-label="Ribbon C2"><title>Ribbon C2</title>
-<rect x="116" y="100" width="22" height="330.875" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M127 105L127 426.875" fill="none" stroke="#000" stroke-width="1"/>
-<text x="127" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.96" text-anchor="middle">Ribbon C2</text>
+<g id="roland-sh-01a-interface--controllers-ribbon-c1" data-part="controllers-ribbon-c1" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="CONTROLLERS: Ribbon C1"><title>CONTROLLERS: Ribbon C1</title><g aria-hidden="true">
+<rect x="52" y="100" width="22" height="330.875" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M63 105L63 426.875" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="63" y="451" fill="currentColor" stroke="none" font-size="8.96" text-anchor="middle">Ribbon C1</text>
 </g>
-<rect x="180" y="65" width="106.667" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="187" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
-<g id="lfo-rate" data-kind="fader" aria-label="Rate" data-control="lfo-rate-fader"><title>Rate</title>
-<rect x="204.46" y="100" width="10.413" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.4711111111111115"/>
-<rect x="199.253" y="258.723" width="20.827" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="209.667" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Rate</text>
 </g>
-<g id="lfo-waveform" data-kind="knob" aria-label="Waveform" data-control="lfo-waveform-knob"><title>Waveform</title>
-<circle cx="257" cy="268.545" r="11.833" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M257 259.712L257 264.403" fill="none" stroke="#000" stroke-width="1"/>
-<text x="257" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Waveform</text>
+<g id="roland-sh-01a-interface--controllers-ribbon-c2" data-part="controllers-ribbon-c2" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="CONTROLLERS: Ribbon C2"><title>CONTROLLERS: Ribbon C2</title><g aria-hidden="true">
+<rect x="116" y="100" width="22" height="330.875" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M127 105L127 426.875" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="127" y="451" fill="currentColor" stroke="none" font-size="8.96" text-anchor="middle">Ribbon C2</text>
 </g>
-<rect x="296.667" y="65" width="153.333" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="303.667" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VCO</text>
-<g id="vco-mod-depth" data-kind="fader" aria-label="Mod depth" data-control="vco-mod-depth-fader"><title>Mod depth</title>
-<rect x="316.447" y="100" width="7.773" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.5911111111111107"/>
-<rect x="312.56" y="254.926" width="15.547" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="320.333" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Mod</text>
-<text x="320.333" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">depth</text>
 </g>
-<g id="vco-range" data-kind="knob" aria-label="Range" data-control="vco-range-knob"><title>Range</title>
-<circle cx="355.667" cy="268.545" r="8.833" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M355.667 262.712L355.667 265.453" fill="none" stroke="#000" stroke-width="1"/>
-<text x="355.667" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Range</text>
+<g id="roland-sh-01a-interface--lfo-rate" data-part="lfo-rate" data-kind="fader" role="group" aria-roledescription="slider" aria-label="LFO: Rate"><title>LFO: Rate</title><g aria-hidden="true">
+<rect x="204.46" y="100" width="10.413" height="333.09" rx="3.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="199.253" y="258.723" width="20.827" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="209.667" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Rate</text>
 </g>
-<g id="vco-pulse-width" data-kind="fader" aria-label="Pulse width" data-control="vco-pulse-width-fader"><title>Pulse width</title>
-<rect x="387.113" y="100" width="7.773" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.5911111111111107"/>
-<rect x="383.227" y="254.926" width="15.547" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="391" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Pulse</text>
-<text x="391" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">width</text>
 </g>
-<g id="vco-pwm-source" data-kind="switch" aria-label="PWM source" data-control="vco-pwm-source-switch"><title>PWM source</title>
-<rect x="421.333" y="252.59" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="417.333" y="260.59" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="426.333" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">PWM</text>
-<text x="426.333" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">source</text>
+<g id="roland-sh-01a-interface--lfo-waveform" data-part="lfo-waveform" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Waveform"><title>LFO: Waveform</title><g aria-hidden="true">
+<circle cx="257" cy="268.545" r="11.833" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M257 259.712L257 264.403" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="257" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Waveform</text>
 </g>
-<rect x="460" y="65" width="194.167" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="467" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">SOURCE MIXER</text>
-<g id="source-mixer-pulse" data-kind="fader" aria-label="Pulse" data-control="source-mixer-pulse-fader"><title>Pulse</title>
-<rect x="480.209" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="476.201" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="484.217" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Pulse</text>
 </g>
-<g id="source-mixer-saw" data-kind="fader" aria-label="Saw" data-control="source-mixer-saw-fader"><title>Saw</title>
-<rect x="516.642" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="512.635" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="520.65" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Saw</text>
+<g id="roland-sh-01a-interface--vco-mod-depth" data-part="vco-mod-depth" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VCO: Mod depth"><title>VCO: Mod depth</title><g aria-hidden="true">
+<rect x="316.447" y="100" width="7.773" height="325.18" rx="2.591" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="312.56" y="254.926" width="15.547" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="320.333" y="443.09" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Mod</text>
+<text x="320.333" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">depth</text>
 </g>
-<g id="source-mixer-sub" data-kind="fader" aria-label="Sub" data-control="source-mixer-sub-fader"><title>Sub</title>
-<rect x="553.076" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="549.068" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="557.083" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Sub</text>
 </g>
-<g id="source-mixer-sub-type" data-kind="fader" aria-label="Sub type" data-control="source-mixer-sub-type-switch"><title>Sub type</title>
-<rect x="589.509" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="585.501" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="593.517" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Sub type</text>
+<g id="roland-sh-01a-interface--vco-range" data-part="vco-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO: Range"><title>VCO: Range</title><g aria-hidden="true">
+<circle cx="355.667" cy="268.545" r="8.833" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M355.667 262.712L355.667 265.453" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="355.667" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Range</text>
 </g>
-<g id="source-mixer-noise" data-kind="fader" aria-label="Noise" data-control="source-mixer-noise-fader"><title>Noise</title>
-<rect x="625.942" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="621.935" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="629.95" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Noise</text>
 </g>
-<rect x="664.167" y="65" width="194.167" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="671.167" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VCF</text>
-<g id="vcf-cutoff" data-kind="fader" aria-label="Cutoff" data-control="vcf-cutoff-fader"><title>Cutoff</title>
-<rect x="684.376" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="680.368" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="688.383" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Cutoff</text>
+<g id="roland-sh-01a-interface--vco-pulse-width" data-part="vco-pulse-width" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VCO: Pulse width"><title>VCO: Pulse width</title><g aria-hidden="true">
+<rect x="387.113" y="100" width="7.773" height="325.18" rx="2.591" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="383.227" y="254.926" width="15.547" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="391" y="443.09" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Pulse</text>
+<text x="391" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">width</text>
 </g>
-<g id="vcf-resonance" data-kind="fader" aria-label="Resonance" data-control="vcf-resonance-fader"><title>Resonance</title>
-<rect x="720.809" y="100" width="8.015" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="716.801" y="254.926" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="724.817" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Resonanc</text>
-<text x="724.817" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">e</text>
 </g>
-<g id="vcf-envelope" data-kind="fader" aria-label="Envelope" data-control="vcf-envelope-fader"><title>Envelope</title>
-<rect x="757.242" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="753.235" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="761.25" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Envelope</text>
+<g id="roland-sh-01a-interface--vco-pwm-source" data-part="vco-pwm-source" data-kind="switch" role="group" aria-roledescription="switch" aria-label="VCO: PWM source"><title>VCO: PWM source</title><g aria-hidden="true">
+<rect x="421.333" y="252.59" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="417.333" y="260.59" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="426.333" y="443.09" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">PWM</text>
+<text x="426.333" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">source</text>
 </g>
-<g id="vcf-mod-depth" data-kind="fader" aria-label="Mod depth" data-control="vcf-mod-depth-fader"><title>Mod depth</title>
-<rect x="793.676" y="100" width="8.015" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="789.668" y="254.926" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="797.683" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Mod</text>
-<text x="797.683" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">depth</text>
 </g>
-<g id="vcf-key-follow" data-kind="fader" aria-label="Key follow" data-control="vcf-key-follow-fader"><title>Key follow</title>
-<rect x="830.109" y="100" width="8.015" height="325.18" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="826.101" y="254.926" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="834.117" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Key</text>
-<text x="834.117" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">follow</text>
+<g id="roland-sh-01a-interface--source-mixer-pulse" data-part="source-mixer-pulse" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SOURCE MIXER: Pulse"><title>SOURCE MIXER: Pulse</title><g aria-hidden="true">
+<rect x="480.209" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="476.201" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="484.217" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Pulse</text>
 </g>
-<rect x="868.333" y="65" width="106.667" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="875.333" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VCA</text>
-<g id="vca-envelope-gate" data-kind="switch" aria-label="Envelope Gate" data-control="vca-envelope-gate-switch"><title>Envelope Gate</title>
-<rect x="916.667" y="254.285" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="912.667" y="262.285" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="921.667" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Envelope Gate</text>
 </g>
-<rect x="985" y="65" width="194.167" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="992" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
-<g id="envelope-trigger-mode" data-kind="switch" aria-label="Trigger mode" data-control="envelope-trigger-mode-switch"><title>Trigger mode</title>
-<rect x="1004.217" y="252.59" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="1000.217" y="260.59" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="1009.217" y="443.09" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Trigger</text>
-<text x="1009.217" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">mode</text>
+<g id="roland-sh-01a-interface--source-mixer-saw" data-part="source-mixer-saw" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SOURCE MIXER: Saw"><title>SOURCE MIXER: Saw</title><g aria-hidden="true">
+<rect x="516.642" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="512.635" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="520.65" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Saw</text>
 </g>
-<g id="envelope-attack" data-kind="fader" aria-label="Attack" data-control="envelope-attack-fader"><title>Attack</title>
-<rect x="1041.642" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="1037.635" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1045.65" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Attack</text>
 </g>
-<g id="envelope-decay" data-kind="fader" aria-label="Decay" data-control="envelope-decay-fader"><title>Decay</title>
-<rect x="1078.076" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="1074.068" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1082.083" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Decay</text>
+<g id="roland-sh-01a-interface--source-mixer-sub" data-part="source-mixer-sub" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SOURCE MIXER: Sub"><title>SOURCE MIXER: Sub</title><g aria-hidden="true">
+<rect x="553.076" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="549.068" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="557.083" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Sub</text>
 </g>
-<g id="envelope-sustain" data-kind="fader" aria-label="Sustain" data-control="envelope-sustain-fader"><title>Sustain</title>
-<rect x="1114.509" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="1110.501" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1118.517" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Sustain</text>
 </g>
-<g id="envelope-release" data-kind="fader" aria-label="Release" data-control="envelope-release-fader"><title>Release</title>
-<rect x="1150.942" y="100" width="8.015" height="333.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="2.6717777777777783"/>
-<rect x="1146.935" y="258.723" width="16.031" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1154.95" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="7" text-anchor="middle">Release</text>
+<g id="roland-sh-01a-interface--source-mixer-sub-type" data-part="source-mixer-sub-type" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SOURCE MIXER: Sub type"><title>SOURCE MIXER: Sub type</title><g aria-hidden="true">
+<rect x="589.509" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="585.501" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="593.517" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Sub type</text>
 </g>
-<rect x="1189.167" y="65" width="275.833" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1196.167" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">CONTROLLER</text>
-<g id="controller-transpose" data-kind="knob" aria-label="Transpose"><title>Transpose</title>
-<circle cx="1228.146" cy="177.283" r="16.49" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1228.146 163.793L1228.146 171.511" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1228.146" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">Transpose</text>
 </g>
-<g id="controller-vco-bend-depth" data-kind="fader" aria-label="VCO bend depth" data-control="controller-vco-bend-depth-fader"><title>VCO bend depth</title>
-<rect x="1287.104" y="100" width="14" height="140.131" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1280.104" y="166.103" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1294.104" y="260.565" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">VCO bend</text>
-<text x="1294.104" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">depth</text>
+<g id="roland-sh-01a-interface--source-mixer-noise" data-part="source-mixer-noise" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SOURCE MIXER: Noise"><title>SOURCE MIXER: Noise</title><g aria-hidden="true">
+<rect x="625.942" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="621.935" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="629.95" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Noise</text>
 </g>
-<g id="controller-vcf-bend-depth" data-kind="fader" aria-label="VCF bend depth" data-control="controller-vcf-bend-depth-fader"><title>VCF bend depth</title>
-<rect x="1353.063" y="100" width="14" height="140.131" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1346.063" y="166.103" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1360.063" y="260.565" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">VCF bend</text>
-<text x="1360.063" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">depth</text>
 </g>
-<g id="controller-lfo-depth" data-kind="fader" aria-label="LFO depth" data-control="controller-lfo-depth-fader"><title>LFO depth</title>
-<rect x="1419.021" y="100" width="14" height="150.565" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1412.021" y="171.111" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
-<text x="1426.021" y="271" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">LFO depth</text>
+<g id="roland-sh-01a-interface--vcf-cutoff" data-part="vcf-cutoff" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VCF: Cutoff"><title>VCF: Cutoff</title><g aria-hidden="true">
+<rect x="684.376" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="680.368" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="688.383" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Cutoff</text>
 </g>
-<g id="controller-portamento" data-kind="knob" aria-label="Portamento"><title>Portamento</title>
-<circle cx="1228.146" cy="357.283" r="16.49" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1228.146 343.793L1228.146 351.511" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1228.146" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">Portamento</text>
 </g>
-<g id="controller-portamento-time" data-kind="knob" aria-label="Portamento time" data-control="controller-portamento-time-knob"><title>Portamento time</title>
-<circle cx="1294.104" cy="352.065" r="16.49" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1294.104 338.576L1294.104 346.294" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1294.104" y="440.565" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">Portamento</text>
-<text x="1294.104" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">time</text>
+<g id="roland-sh-01a-interface--vcf-resonance" data-part="vcf-resonance" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VCF: Resonance"><title>VCF: Resonance</title><g aria-hidden="true">
+<rect x="720.809" y="100" width="8.015" height="325.18" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="716.801" y="254.926" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="724.817" y="443.09" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Resonanc</text>
+<text x="724.817" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">e</text>
 </g>
-<g id="controller-menu" data-kind="knob" aria-label="Menu"><title>Menu</title>
-<circle cx="1360.063" cy="357.283" r="16.49" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1360.063 343.793L1360.063 351.511" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1360.063" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.234166666666667" text-anchor="middle">Menu</text>
 </g>
-<rect x="25" y="480" width="1450" height="145" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="494" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MEMORY / PERFORMANCE</text>
-<g id="memory-performance-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="102.9" cy="556.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M102.9 534.285L102.9 547.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="102.9" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Volume</text>
+<g id="roland-sh-01a-interface--vcf-envelope" data-part="vcf-envelope" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VCF: Envelope"><title>VCF: Envelope</title><g aria-hidden="true">
+<rect x="757.242" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="753.235" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="761.25" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Envelope</text>
 </g>
-<g id="memory-performance-manual" data-kind="button" aria-label="Manual"><title>Manual</title>
-<rect x="231.7" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="246.7" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Manual</text>
 </g>
-<g id="memory-performance-function-1" data-kind="button" aria-label="Function 1"><title>Function 1</title>
-<rect x="375.5" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="390.5" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function 1</text>
+<g id="roland-sh-01a-interface--vcf-mod-depth" data-part="vcf-mod-depth" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VCF: Mod depth"><title>VCF: Mod depth</title><g aria-hidden="true">
+<rect x="793.676" y="100" width="8.015" height="325.18" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="789.668" y="254.926" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="797.683" y="443.09" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Mod</text>
+<text x="797.683" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">depth</text>
 </g>
-<g id="memory-performance-function-2" data-kind="button" aria-label="Function 2"><title>Function 2</title>
-<rect x="519.3" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="534.3" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function 2</text>
 </g>
-<g id="memory-performance-function-3" data-kind="button" aria-label="Function 3"><title>Function 3</title>
-<rect x="663.1" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="678.1" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function 3</text>
+<g id="roland-sh-01a-interface--vcf-key-follow" data-part="vcf-key-follow" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VCF: Key follow"><title>VCF: Key follow</title><g aria-hidden="true">
+<rect x="830.109" y="100" width="8.015" height="325.18" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="826.101" y="254.926" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="834.117" y="443.09" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Key</text>
+<text x="834.117" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">follow</text>
 </g>
-<g id="memory-performance-function-4" data-kind="button" aria-label="Function 4"><title>Function 4</title>
-<rect x="806.9" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="821.9" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function 4</text>
 </g>
-<g id="memory-performance-function-5" data-kind="button" aria-label="Function 5"><title>Function 5</title>
-<rect x="950.7" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="965.7" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function 5</text>
+<g id="roland-sh-01a-interface--vca-envelope-gate" data-part="vca-envelope-gate" data-kind="switch" role="group" aria-roledescription="switch" aria-label="VCA: Envelope Gate"><title>VCA: Envelope Gate</title><g aria-hidden="true">
+<rect x="916.667" y="254.285" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="912.667" y="262.285" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="921.667" y="451" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Envelope Gate</text>
 </g>
-<g id="memory-performance-function-6" data-kind="button" aria-label="Function 6"><title>Function 6</title>
-<rect x="1094.5" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1109.5" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function 6</text>
 </g>
-<g id="memory-performance-function-7" data-kind="button" aria-label="Function 7"><title>Function 7</title>
-<rect x="1238.3" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1253.3" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function 7</text>
+<g id="roland-sh-01a-interface--envelope-trigger-mode" data-part="envelope-trigger-mode" data-kind="switch" role="group" aria-roledescription="switch" aria-label="ENVELOPE: Trigger mode"><title>ENVELOPE: Trigger mode</title><g aria-hidden="true">
+<rect x="1004.217" y="252.59" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1000.217" y="260.59" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1009.217" y="443.09" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Trigger</text>
+<text x="1009.217" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">mode</text>
 </g>
-<g id="memory-performance-function-8" data-kind="button" aria-label="Function 8"><title>Function 8</title>
-<rect x="1382.1" y="541.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1397.1" y="616" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function 8</text>
+</g>
+<g id="roland-sh-01a-interface--envelope-attack" data-part="envelope-attack" data-kind="fader" role="group" aria-roledescription="slider" aria-label="ENVELOPE: Attack"><title>ENVELOPE: Attack</title><g aria-hidden="true">
+<rect x="1041.642" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1037.635" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="1045.65" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Attack</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--envelope-decay" data-part="envelope-decay" data-kind="fader" role="group" aria-roledescription="slider" aria-label="ENVELOPE: Decay"><title>ENVELOPE: Decay</title><g aria-hidden="true">
+<rect x="1078.076" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1074.068" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="1082.083" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Decay</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--envelope-sustain" data-part="envelope-sustain" data-kind="fader" role="group" aria-roledescription="slider" aria-label="ENVELOPE: Sustain"><title>ENVELOPE: Sustain</title><g aria-hidden="true">
+<rect x="1114.509" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1110.501" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="1118.517" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Sustain</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--envelope-release" data-part="envelope-release" data-kind="fader" role="group" aria-roledescription="slider" aria-label="ENVELOPE: Release"><title>ENVELOPE: Release</title><g aria-hidden="true">
+<rect x="1150.942" y="100" width="8.015" height="333.09" rx="2.672" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1146.935" y="258.723" width="16.031" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="1154.95" y="451" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Release</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--controller-transpose" data-part="controller-transpose" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLER: Transpose"><title>CONTROLLER: Transpose</title><g aria-hidden="true">
+<circle cx="1228.146" cy="177.283" r="16.49" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1228.146 163.793L1228.146 171.511" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1228.146" y="271" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">Transpose</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--controller-vco-bend-depth" data-part="controller-vco-bend-depth" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CONTROLLER: VCO bend depth"><title>CONTROLLER: VCO bend depth</title><g aria-hidden="true">
+<rect x="1287.104" y="100" width="14" height="140.131" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1280.104" y="166.103" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="1294.104" y="260.565" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">VCO bend</text>
+<text x="1294.104" y="271" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">depth</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--controller-vcf-bend-depth" data-part="controller-vcf-bend-depth" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CONTROLLER: VCF bend depth"><title>CONTROLLER: VCF bend depth</title><g aria-hidden="true">
+<rect x="1353.063" y="100" width="14" height="140.131" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1346.063" y="166.103" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="1360.063" y="260.565" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">VCF bend</text>
+<text x="1360.063" y="271" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">depth</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--controller-lfo-depth" data-part="controller-lfo-depth" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CONTROLLER: LFO depth"><title>CONTROLLER: LFO depth</title><g aria-hidden="true">
+<rect x="1419.021" y="100" width="14" height="150.565" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1412.021" y="171.111" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+<text x="1426.021" y="271" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">LFO depth</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--controller-portamento" data-part="controller-portamento" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLER: Portamento"><title>CONTROLLER: Portamento</title><g aria-hidden="true">
+<circle cx="1228.146" cy="357.283" r="16.49" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1228.146 343.793L1228.146 351.511" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1228.146" y="451" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">Portamento</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--controller-portamento-time" data-part="controller-portamento-time" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLER: Portamento time"><title>CONTROLLER: Portamento time</title><g aria-hidden="true">
+<circle cx="1294.104" cy="352.065" r="16.49" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1294.104 338.576L1294.104 346.294" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1294.104" y="440.565" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">Portamento</text>
+<text x="1294.104" y="451" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">time</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--controller-menu" data-part="controller-menu" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLER: Menu"><title>CONTROLLER: Menu</title><g aria-hidden="true">
+<circle cx="1360.063" cy="357.283" r="16.49" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1360.063 343.793L1360.063 351.511" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1360.063" y="451" fill="currentColor" stroke="none" font-size="9.234166666666667" text-anchor="middle">Menu</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-volume" data-part="memory-performance-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MEMORY / PERFORMANCE: Volume"><title>MEMORY / PERFORMANCE: Volume</title><g aria-hidden="true">
+<circle cx="102.9" cy="556.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M102.9 534.285L102.9 547.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="102.9" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Volume</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-manual" data-part="memory-performance-manual" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Manual"><title>MEMORY / PERFORMANCE: Manual</title><g aria-hidden="true">
+<rect x="231.7" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="246.7" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Manual</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-function-1" data-part="memory-performance-function-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Function 1"><title>MEMORY / PERFORMANCE: Function 1</title><g aria-hidden="true">
+<rect x="375.5" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="390.5" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function 1</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-function-2" data-part="memory-performance-function-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Function 2"><title>MEMORY / PERFORMANCE: Function 2</title><g aria-hidden="true">
+<rect x="519.3" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="534.3" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function 2</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-function-3" data-part="memory-performance-function-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Function 3"><title>MEMORY / PERFORMANCE: Function 3</title><g aria-hidden="true">
+<rect x="663.1" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="678.1" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function 3</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-function-4" data-part="memory-performance-function-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Function 4"><title>MEMORY / PERFORMANCE: Function 4</title><g aria-hidden="true">
+<rect x="806.9" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="821.9" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function 4</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-function-5" data-part="memory-performance-function-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Function 5"><title>MEMORY / PERFORMANCE: Function 5</title><g aria-hidden="true">
+<rect x="950.7" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="965.7" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function 5</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-function-6" data-part="memory-performance-function-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Function 6"><title>MEMORY / PERFORMANCE: Function 6</title><g aria-hidden="true">
+<rect x="1094.5" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1109.5" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function 6</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-function-7" data-part="memory-performance-function-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Function 7"><title>MEMORY / PERFORMANCE: Function 7</title><g aria-hidden="true">
+<rect x="1238.3" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1253.3" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function 7</text>
+</g>
+</g>
+<g id="roland-sh-01a-interface--memory-performance-function-8" data-part="memory-performance-function-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Function 8"><title>MEMORY / PERFORMANCE: Function 8</title><g aria-hidden="true">
+<rect x="1382.1" y="541.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1397.1" y="616" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function 8</text>
+</g>
 </g>
 </svg>

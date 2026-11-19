@@ -1,170 +1,277 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 430" role="img" aria-labelledby="title description">
-<title id="title">ROLI Piano top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1400" height="430" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1382" height="412" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">ROLI Piano</text>
-<text x="1375" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="55" width="430" height="60" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="power-midi-mode-bluetooth-octave-power-mode" data-kind="button" aria-label="Power / Mode"><title>Power / Mode</title>
-<rect x="80.25" y="89" width="6" height="6" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 430" role="group" aria-labelledby="roli-piano-panel--title" aria-describedby="roli-piano-panel--description" data-device="roli-piano" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roli-piano-panel--title">ROLI Piano overhead hardware diagram</title><desc id="roli-piano-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roli-piano-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1382" height="412" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">ROLI Piano</text>
+<text x="1375" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="55" width="430" height="60" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="power-midi-mode-bluetooth-octave-bluetooth" data-kind="button" aria-label="Bluetooth"><title>Bluetooth</title>
-<rect x="184.75" y="89" width="6" height="6" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roli-piano-panel--power-midi-mode-bluetooth-octave-power-mode" data-part="power-midi-mode-bluetooth-octave-power-mode" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="POWER / MIDI MODE / BLUETOOTH / OCTAVE: Power / Mode"><title>POWER / MIDI MODE / BLUETOOTH / OCTAVE: Power / Mode</title><g aria-hidden="true">
+<rect x="80.25" y="89" width="6" height="6" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="power-midi-mode-bluetooth-octave-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="289.25" y="89" width="6" height="6" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roli-piano-panel--surface--power-midi-mode-bluetooth-octave-power-mode" data-surface-control="power-midi-mode-bluetooth-octave-power-mode" aria-hidden="true"><rect x="31" y="85" width="104.5" height="25" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="power-midi-mode-bluetooth-octave-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="393.75" y="89" width="6" height="6" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roli-piano-panel--power-midi-mode-bluetooth-octave-bluetooth" data-part="power-midi-mode-bluetooth-octave-bluetooth" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="POWER / MIDI MODE / BLUETOOTH / OCTAVE: Bluetooth"><title>POWER / MIDI MODE / BLUETOOTH / OCTAVE: Bluetooth</title><g aria-hidden="true">
+<rect x="184.75" y="89" width="6" height="6" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="25" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--power-midi-mode-bluetooth-octave-bluetooth" data-surface-control="power-midi-mode-bluetooth-octave-bluetooth" aria-hidden="true"><rect x="135.5" y="85" width="104.5" height="25" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="71.552" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--power-midi-mode-bluetooth-octave-octave" data-part="power-midi-mode-bluetooth-octave-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="POWER / MIDI MODE / BLUETOOTH / OCTAVE: Octave -"><title>POWER / MIDI MODE / BLUETOOTH / OCTAVE: Octave -</title><g aria-hidden="true">
+<rect x="289.25" y="89" width="6" height="6" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="118.103" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--power-midi-mode-bluetooth-octave-octave" data-surface-control="power-midi-mode-bluetooth-octave-octave" aria-hidden="true"><rect x="240" y="85" width="104.5" height="25" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="164.655" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--power-midi-mode-bluetooth-octave-octave-2" data-part="power-midi-mode-bluetooth-octave-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="POWER / MIDI MODE / BLUETOOTH / OCTAVE: Octave +"><title>POWER / MIDI MODE / BLUETOOTH / OCTAVE: Octave +</title><g aria-hidden="true">
+<rect x="393.75" y="89" width="6" height="6" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="211.207" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--power-midi-mode-bluetooth-octave-octave-2" data-surface-control="power-midi-mode-bluetooth-octave-octave-2" aria-hidden="true"><rect x="344.5" y="85" width="104.5" height="25" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="257.759" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="roli-piano-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="25" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="304.31" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-1" data-surface-control="key-1" aria-hidden="true"><rect x="25" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="350.862" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="71.552" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="397.414" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-3" data-surface-control="key-3" aria-hidden="true"><rect x="71.5517" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="443.966" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="118.103" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="490.517" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-5" data-surface-control="key-5" aria-hidden="true"><rect x="118.1034" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="537.069" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="164.655" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="583.621" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-6" data-surface-control="key-6" aria-hidden="true"><rect x="164.6552" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="630.172" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="211.207" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="676.724" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-8" data-surface-control="key-8" aria-hidden="true"><rect x="211.2069" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="723.276" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="257.759" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="769.828" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-10" data-surface-control="key-10" aria-hidden="true"><rect x="257.7586" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="816.379" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="304.31" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="862.931" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-12" data-surface-control="key-12" aria-hidden="true"><rect x="304.3103" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-34" data-kind="key" aria-label="Key 34"><title>Key 34</title>
-<rect x="909.483" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="350.862" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-36" data-kind="key" aria-label="Key 36"><title>Key 36</title>
-<rect x="956.034" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-13" data-surface-control="key-13" aria-hidden="true"><rect x="350.8621" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-37" data-kind="key" aria-label="Key 37"><title>Key 37</title>
-<rect x="1002.586" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="397.414" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-39" data-kind="key" aria-label="Key 39"><title>Key 39</title>
-<rect x="1049.138" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-15" data-surface-control="key-15" aria-hidden="true"><rect x="397.4138" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-41" data-kind="key" aria-label="Key 41"><title>Key 41</title>
-<rect x="1095.69" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="443.966" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-42" data-kind="key" aria-label="Key 42"><title>Key 42</title>
-<rect x="1142.241" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-17" data-surface-control="key-17" aria-hidden="true"><rect x="443.9655" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-44" data-kind="key" aria-label="Key 44"><title>Key 44</title>
-<rect x="1188.793" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="490.517" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-46" data-kind="key" aria-label="Key 46"><title>Key 46</title>
-<rect x="1235.345" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-18" data-surface-control="key-18" aria-hidden="true"><rect x="490.5172" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-48" data-kind="key" aria-label="Key 48"><title>Key 48</title>
-<rect x="1281.897" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="537.069" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-49" data-kind="key" aria-label="Key 49"><title>Key 49</title>
-<rect x="1328.448" y="120" width="46.552" height="285" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-20" data-surface-control="key-20" aria-hidden="true"><rect x="537.069" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="57.121" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="583.621" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="103.672" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-22" data-surface-control="key-22" aria-hidden="true"><rect x="583.6207" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="196.776" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="630.172" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="243.328" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-24" data-surface-control="key-24" aria-hidden="true"><rect x="630.1724" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="289.879" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="676.724" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="382.983" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-25" data-surface-control="key-25" aria-hidden="true"><rect x="676.7241" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="429.534" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-27" data-part="key-27" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 27"><title>Key 27</title><g aria-hidden="true">
+<rect x="723.276" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="522.638" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-27" data-surface-control="key-27" aria-hidden="true"><rect x="723.2759" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="569.19" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-29" data-part="key-29" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 29"><title>Key 29</title><g aria-hidden="true">
+<rect x="769.828" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="615.741" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-29" data-surface-control="key-29" aria-hidden="true"><rect x="769.8276" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="708.845" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-30" data-part="key-30" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 30"><title>Key 30</title><g aria-hidden="true">
+<rect x="816.379" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="755.397" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-30" data-surface-control="key-30" aria-hidden="true"><rect x="816.3793" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="848.5" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-32" data-part="key-32" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 32"><title>Key 32</title><g aria-hidden="true">
+<rect x="862.931" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-33" data-kind="key" aria-label="Key 33"><title>Key 33</title>
-<rect x="895.052" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-32" data-surface-control="key-32" aria-hidden="true"><rect x="862.931" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-35" data-kind="key" aria-label="Key 35"><title>Key 35</title>
-<rect x="941.603" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-34" data-part="key-34" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 34"><title>Key 34</title><g aria-hidden="true">
+<rect x="909.483" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-38" data-kind="key" aria-label="Key 38"><title>Key 38</title>
-<rect x="1034.707" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-34" data-surface-control="key-34" aria-hidden="true"><rect x="909.4828" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-40" data-kind="key" aria-label="Key 40"><title>Key 40</title>
-<rect x="1081.259" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-36" data-part="key-36" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 36"><title>Key 36</title><g aria-hidden="true">
+<rect x="956.034" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-43" data-kind="key" aria-label="Key 43"><title>Key 43</title>
-<rect x="1174.362" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-36" data-surface-control="key-36" aria-hidden="true"><rect x="956.0345" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-45" data-kind="key" aria-label="Key 45"><title>Key 45</title>
-<rect x="1220.914" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--key-37" data-part="key-37" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 37"><title>Key 37</title><g aria-hidden="true">
+<rect x="1002.586" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-47" data-kind="key" aria-label="Key 47"><title>Key 47</title>
-<rect x="1267.466" y="120" width="28.862" height="173.85" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-panel--surface--key-37" data-surface-control="key-37" aria-hidden="true"><rect x="1002.5862" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-39" data-part="key-39" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 39"><title>Key 39</title><g aria-hidden="true">
+<rect x="1049.138" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roli-piano-panel--surface--key-39" data-surface-control="key-39" aria-hidden="true"><rect x="1049.1379" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-41" data-part="key-41" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 41"><title>Key 41</title><g aria-hidden="true">
+<rect x="1095.69" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roli-piano-panel--surface--key-41" data-surface-control="key-41" aria-hidden="true"><rect x="1095.6897" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-42" data-part="key-42" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 42"><title>Key 42</title><g aria-hidden="true">
+<rect x="1142.241" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roli-piano-panel--surface--key-42" data-surface-control="key-42" aria-hidden="true"><rect x="1142.2414" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-44" data-part="key-44" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 44"><title>Key 44</title><g aria-hidden="true">
+<rect x="1188.793" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roli-piano-panel--surface--key-44" data-surface-control="key-44" aria-hidden="true"><rect x="1188.7931" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-46" data-part="key-46" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 46"><title>Key 46</title><g aria-hidden="true">
+<rect x="1235.345" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roli-piano-panel--surface--key-46" data-surface-control="key-46" aria-hidden="true"><rect x="1235.3448" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-48" data-part="key-48" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 48"><title>Key 48</title><g aria-hidden="true">
+<rect x="1281.897" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roli-piano-panel--surface--key-48" data-surface-control="key-48" aria-hidden="true"><rect x="1281.8966" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-49" data-part="key-49" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 49"><title>Key 49</title><g aria-hidden="true">
+<rect x="1328.448" y="120" width="46.552" height="285" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roli-piano-panel--surface--key-49" data-surface-control="key-49" aria-hidden="true"><rect x="1328.4483" y="120" width="46.5517" height="285" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="57.121" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-2" data-surface-control="key-2" aria-hidden="true"><rect x="57.1207" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="103.672" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-4" data-surface-control="key-4" aria-hidden="true"><rect x="103.6724" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="196.776" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-7" data-surface-control="key-7" aria-hidden="true"><rect x="196.7759" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="243.328" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-9" data-surface-control="key-9" aria-hidden="true"><rect x="243.3276" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="289.879" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-11" data-surface-control="key-11" aria-hidden="true"><rect x="289.8793" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="382.983" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-14" data-surface-control="key-14" aria-hidden="true"><rect x="382.9828" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="429.534" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-16" data-surface-control="key-16" aria-hidden="true"><rect x="429.5345" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="522.638" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-19" data-surface-control="key-19" aria-hidden="true"><rect x="522.6379" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="569.19" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-21" data-surface-control="key-21" aria-hidden="true"><rect x="569.1897" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="615.741" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-23" data-surface-control="key-23" aria-hidden="true"><rect x="615.7414" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-26" data-part="key-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 26"><title>Key 26</title><g aria-hidden="true">
+<rect x="708.845" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-26" data-surface-control="key-26" aria-hidden="true"><rect x="708.8448" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-28" data-part="key-28" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 28"><title>Key 28</title><g aria-hidden="true">
+<rect x="755.397" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-28" data-surface-control="key-28" aria-hidden="true"><rect x="755.3966" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-31" data-part="key-31" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 31"><title>Key 31</title><g aria-hidden="true">
+<rect x="848.5" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-31" data-surface-control="key-31" aria-hidden="true"><rect x="848.5" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-33" data-part="key-33" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 33"><title>Key 33</title><g aria-hidden="true">
+<rect x="895.052" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-33" data-surface-control="key-33" aria-hidden="true"><rect x="895.0517" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-35" data-part="key-35" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 35"><title>Key 35</title><g aria-hidden="true">
+<rect x="941.603" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-35" data-surface-control="key-35" aria-hidden="true"><rect x="941.6034" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-38" data-part="key-38" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 38"><title>Key 38</title><g aria-hidden="true">
+<rect x="1034.707" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-38" data-surface-control="key-38" aria-hidden="true"><rect x="1034.7069" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-40" data-part="key-40" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 40"><title>Key 40</title><g aria-hidden="true">
+<rect x="1081.259" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-40" data-surface-control="key-40" aria-hidden="true"><rect x="1081.2586" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-43" data-part="key-43" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 43"><title>Key 43</title><g aria-hidden="true">
+<rect x="1174.362" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-43" data-surface-control="key-43" aria-hidden="true"><rect x="1174.3621" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-45" data-part="key-45" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 45"><title>Key 45</title><g aria-hidden="true">
+<rect x="1220.914" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-45" data-surface-control="key-45" aria-hidden="true"><rect x="1220.9138" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roli-piano-panel--key-47" data-part="key-47" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 47"><title>Key 47</title><g aria-hidden="true">
+<rect x="1267.466" y="120" width="28.862" height="173.85" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roli-piano-panel--surface--key-47" data-surface-control="key-47" aria-hidden="true"><rect x="1267.4655" y="120" width="28.8621" height="173.85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

@@ -1,226 +1,369 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 970" role="img" aria-labelledby="title description">
-<title id="title">Novation Circuit top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1100" height="970" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1082" height="952" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Novation Circuit</text>
-<text x="1075" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="1050" height="115" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="macros-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="88.667" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M88.667 108.92L88.667 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 970" role="group" aria-labelledby="novation-circuit-panel--title" aria-describedby="novation-circuit-panel--description" data-device="novation-circuit" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="novation-circuit-panel--title">Novation Circuit overhead hardware diagram</title><desc id="novation-circuit-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="novation-circuit-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1082" height="952" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Novation Circuit</text>
+<text x="1075" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="1050" height="115" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="125" y="195" width="850" height="75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="125" y="285" width="850" height="530" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="285" width="85" height="530" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="990" y="285" width="85" height="530" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="125" y="830" width="850" height="90" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="macros-macro-1" data-kind="knob" aria-label="Macro 1"><title>Macro 1</title>
-<circle cx="204" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M204 108.92L204 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--macros-volume" data-part="macros-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Volume"><title>MACROS: Volume</title><g aria-hidden="true">
+<circle cx="88.667" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M88.667 108.92L88.667 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="macros-macro-2" data-kind="knob" aria-label="Macro 2"><title>Macro 2</title>
-<circle cx="319.333" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M319.333 108.92L319.333 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--surface--macros-volume" data-surface-control="macros-volume" aria-hidden="true"><rect x="31" y="95" width="115.3333" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="macros-macro-3" data-kind="knob" aria-label="Macro 3"><title>Macro 3</title>
-<circle cx="434.667" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M434.667 108.92L434.667 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--macros-macro-1" data-part="macros-macro-1" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Macro 1"><title>MACROS: Macro 1</title><g aria-hidden="true">
+<circle cx="204" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M204 108.92L204 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="macros-macro-4" data-kind="knob" aria-label="Macro 4"><title>Macro 4</title>
-<circle cx="550" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M550 108.92L550 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--surface--synth-1-macro-1" data-surface-control="synth-1-macro-1" aria-hidden="true"><rect x="146.3333" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="novation-circuit-panel--surface--synth-2-macro-1" data-surface-control="synth-2-macro-1" aria-hidden="true"><rect x="204" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="macros-macro-5" data-kind="knob" aria-label="Macro 5"><title>Macro 5</title>
-<circle cx="665.333" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M665.333 108.92L665.333 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--macros-macro-2" data-part="macros-macro-2" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Macro 2"><title>MACROS: Macro 2</title><g aria-hidden="true">
+<circle cx="319.333" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M319.333 108.92L319.333 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="macros-macro-6" data-kind="knob" aria-label="Macro 6"><title>Macro 6</title>
-<circle cx="780.667" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M780.667 108.92L780.667 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--surface--synth-1-macro-2" data-surface-control="synth-1-macro-2" aria-hidden="true"><rect x="261.6667" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="novation-circuit-panel--surface--synth-2-macro-2" data-surface-control="synth-2-macro-2" aria-hidden="true"><rect x="319.3333" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="macros-macro-7" data-kind="knob" aria-label="Macro 7"><title>Macro 7</title>
-<circle cx="896" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M896 108.92L896 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--macros-macro-3" data-part="macros-macro-3" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Macro 3"><title>MACROS: Macro 3</title><g aria-hidden="true">
+<circle cx="434.667" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M434.667 108.92L434.667 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="macros-macro-8" data-kind="knob" aria-label="Macro 8"><title>Macro 8</title>
-<circle cx="1011.333" cy="126.285" r="20.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1011.333 108.92L1011.333 119.157" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--surface--synth-1-macro-3" data-surface-control="synth-1-macro-3" aria-hidden="true"><rect x="377" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="novation-circuit-panel--surface--synth-2-macro-3" data-surface-control="synth-2-macro-3" aria-hidden="true"><rect x="434.6667" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="125" y="195" width="850" height="75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="track-select-synth-1" data-kind="button" aria-label="Synth 1"><title>Synth 1</title>
-<rect x="194.548" y="230" width="12.57" height="12.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--macros-macro-4" data-part="macros-macro-4" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Macro 4"><title>MACROS: Macro 4</title><g aria-hidden="true">
+<circle cx="550" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M550 108.92L550 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="track-select-synth-2" data-kind="button" aria-label="Synth 2"><title>Synth 2</title>
-<rect x="334.215" y="230" width="12.57" height="12.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--synth-1-macro-4" data-surface-control="synth-1-macro-4" aria-hidden="true"><rect x="492.3333" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="novation-circuit-panel--surface--synth-2-macro-4" data-surface-control="synth-2-macro-4" aria-hidden="true"><rect x="550" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="track-select-drum-1" data-kind="button" aria-label="Drum 1"><title>Drum 1</title>
-<rect x="473.882" y="230" width="12.57" height="12.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--macros-macro-5" data-part="macros-macro-5" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Macro 5"><title>MACROS: Macro 5</title><g aria-hidden="true">
+<circle cx="665.333" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M665.333 108.92L665.333 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="track-select-drum-2" data-kind="button" aria-label="Drum 2"><title>Drum 2</title>
-<rect x="613.548" y="230" width="12.57" height="12.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--synth-1-macro-5" data-surface-control="synth-1-macro-5" aria-hidden="true"><rect x="607.6667" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="novation-circuit-panel--surface--synth-2-macro-5" data-surface-control="synth-2-macro-5" aria-hidden="true"><rect x="665.3333" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="track-select-drum-3" data-kind="button" aria-label="Drum 3"><title>Drum 3</title>
-<rect x="753.215" y="230" width="12.57" height="12.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--macros-macro-6" data-part="macros-macro-6" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Macro 6"><title>MACROS: Macro 6</title><g aria-hidden="true">
+<circle cx="780.667" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M780.667 108.92L780.667 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="track-select-drum-4" data-kind="button" aria-label="Drum 4"><title>Drum 4</title>
-<rect x="892.882" y="230" width="12.57" height="12.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--synth-1-macro-6" data-surface-control="synth-1-macro-6" aria-hidden="true"><rect x="723" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="novation-circuit-panel--surface--synth-2-macro-6" data-surface-control="synth-2-macro-6" aria-hidden="true"><rect x="780.6667" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="125" y="285" width="850" height="530" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="grid-pad-1" data-kind="pad" aria-label="Pad 1"><title>Pad 1</title>
-<rect x="137" y="321.785" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--macros-macro-7" data-part="macros-macro-7" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Macro 7"><title>MACROS: Macro 7</title><g aria-hidden="true">
+<circle cx="896" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M896 108.92L896 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="grid-pad-2" data-kind="pad" aria-label="Pad 2"><title>Pad 2</title>
-<rect x="241.75" y="321.785" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--synth-1-macro-7" data-surface-control="synth-1-macro-7" aria-hidden="true"><rect x="838.3333" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="novation-circuit-panel--surface--synth-2-macro-7" data-surface-control="synth-2-macro-7" aria-hidden="true"><rect x="896" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-3" data-kind="pad" aria-label="Pad 3"><title>Pad 3</title>
-<rect x="346.5" y="321.785" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--macros-macro-8" data-part="macros-macro-8" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MACROS: Macro 8"><title>MACROS: Macro 8</title><g aria-hidden="true">
+<circle cx="1011.333" cy="126.285" r="20.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1011.333 108.92L1011.333 119.157" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="grid-pad-4" data-kind="pad" aria-label="Pad 4"><title>Pad 4</title>
-<rect x="451.25" y="321.785" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--synth-1-macro-8" data-surface-control="synth-1-macro-8" aria-hidden="true"><rect x="953.6667" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="novation-circuit-panel--surface--synth-2-macro-8" data-surface-control="synth-2-macro-8" aria-hidden="true"><rect x="1011.3333" y="95" width="57.6667" height="80" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-5" data-kind="pad" aria-label="Pad 5"><title>Pad 5</title>
-<rect x="556" y="321.785" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--track-select-synth-1" data-part="track-select-synth-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRACK SELECT: Synth 1"><title>TRACK SELECT: Synth 1</title><g aria-hidden="true">
+<rect x="194.548" y="230" width="12.57" height="12.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-6" data-kind="pad" aria-label="Pad 6"><title>Pad 6</title>
-<rect x="660.75" y="321.785" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--track-select-synth-1" data-surface-control="track-select-synth-1" aria-hidden="true"><rect x="131" y="225" width="139.6667" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-7" data-kind="pad" aria-label="Pad 7"><title>Pad 7</title>
-<rect x="765.5" y="321.785" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--track-select-synth-2" data-part="track-select-synth-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRACK SELECT: Synth 2"><title>TRACK SELECT: Synth 2</title><g aria-hidden="true">
+<rect x="334.215" y="230" width="12.57" height="12.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-8" data-kind="pad" aria-label="Pad 8"><title>Pad 8</title>
-<rect x="870.25" y="321.785" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--track-select-synth-2" data-surface-control="track-select-synth-2" aria-hidden="true"><rect x="270.6667" y="225" width="139.6667" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-9" data-kind="pad" aria-label="Pad 9"><title>Pad 9</title>
-<rect x="137" y="445.535" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--track-select-drum-1" data-part="track-select-drum-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRACK SELECT: Drum 1"><title>TRACK SELECT: Drum 1</title><g aria-hidden="true">
+<rect x="473.882" y="230" width="12.57" height="12.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-10" data-kind="pad" aria-label="Pad 10"><title>Pad 10</title>
-<rect x="241.75" y="445.535" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--drum-1" data-surface-control="drum-1" aria-hidden="true"><rect x="410.3333" y="225" width="139.6667" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-11" data-kind="pad" aria-label="Pad 11"><title>Pad 11</title>
-<rect x="346.5" y="445.535" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--track-select-drum-2" data-part="track-select-drum-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRACK SELECT: Drum 2"><title>TRACK SELECT: Drum 2</title><g aria-hidden="true">
+<rect x="613.548" y="230" width="12.57" height="12.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-12" data-kind="pad" aria-label="Pad 12"><title>Pad 12</title>
-<rect x="451.25" y="445.535" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--drum-2" data-surface-control="drum-2" aria-hidden="true"><rect x="550" y="225" width="139.6667" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-13" data-kind="pad" aria-label="Pad 13"><title>Pad 13</title>
-<rect x="556" y="445.535" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--track-select-drum-3" data-part="track-select-drum-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRACK SELECT: Drum 3"><title>TRACK SELECT: Drum 3</title><g aria-hidden="true">
+<rect x="753.215" y="230" width="12.57" height="12.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-14" data-kind="pad" aria-label="Pad 14"><title>Pad 14</title>
-<rect x="660.75" y="445.535" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--drum-3" data-surface-control="drum-3" aria-hidden="true"><rect x="689.6667" y="225" width="139.6667" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-15" data-kind="pad" aria-label="Pad 15"><title>Pad 15</title>
-<rect x="765.5" y="445.535" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--track-select-drum-4" data-part="track-select-drum-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRACK SELECT: Drum 4"><title>TRACK SELECT: Drum 4</title><g aria-hidden="true">
+<rect x="892.882" y="230" width="12.57" height="12.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-16" data-kind="pad" aria-label="Pad 16"><title>Pad 16</title>
-<rect x="870.25" y="445.535" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--drum-4" data-surface-control="drum-4" aria-hidden="true"><rect x="829.3333" y="225" width="139.6667" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-17" data-kind="pad" aria-label="Pad 17"><title>Pad 17</title>
-<rect x="137" y="569.285" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-1" data-part="grid-pad-1" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 1"><title>GRID: Pad 1</title><g aria-hidden="true">
+<rect x="137" y="321.785" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-18" data-kind="pad" aria-label="Pad 18"><title>Pad 18</title>
-<rect x="241.75" y="569.285" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-0" data-surface-control="key-0" aria-hidden="true"><rect x="131" y="315" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-19" data-kind="pad" aria-label="Pad 19"><title>Pad 19</title>
-<rect x="346.5" y="569.285" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-2" data-part="grid-pad-2" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 2"><title>GRID: Pad 2</title><g aria-hidden="true">
+<rect x="241.75" y="321.785" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-20" data-kind="pad" aria-label="Pad 20"><title>Pad 20</title>
-<rect x="451.25" y="569.285" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-1" data-surface-control="key-1" aria-hidden="true"><rect x="235.75" y="315" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-21" data-kind="pad" aria-label="Pad 21"><title>Pad 21</title>
-<rect x="556" y="569.285" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-3" data-part="grid-pad-3" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 3"><title>GRID: Pad 3</title><g aria-hidden="true">
+<rect x="346.5" y="321.785" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-22" data-kind="pad" aria-label="Pad 22"><title>Pad 22</title>
-<rect x="660.75" y="569.285" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-2" data-surface-control="key-2" aria-hidden="true"><rect x="340.5" y="315" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-23" data-kind="pad" aria-label="Pad 23"><title>Pad 23</title>
-<rect x="765.5" y="569.285" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-4" data-part="grid-pad-4" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 4"><title>GRID: Pad 4</title><g aria-hidden="true">
+<rect x="451.25" y="321.785" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-24" data-kind="pad" aria-label="Pad 24"><title>Pad 24</title>
-<rect x="870.25" y="569.285" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-3" data-surface-control="key-3" aria-hidden="true"><rect x="445.25" y="315" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-25" data-kind="pad" aria-label="Pad 25"><title>Pad 25</title>
-<rect x="137" y="693.035" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-5" data-part="grid-pad-5" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 5"><title>GRID: Pad 5</title><g aria-hidden="true">
+<rect x="556" y="321.785" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-26" data-kind="pad" aria-label="Pad 26"><title>Pad 26</title>
-<rect x="241.75" y="693.035" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-4" data-surface-control="key-4" aria-hidden="true"><rect x="550" y="315" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-27" data-kind="pad" aria-label="Pad 27"><title>Pad 27</title>
-<rect x="346.5" y="693.035" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-6" data-part="grid-pad-6" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 6"><title>GRID: Pad 6</title><g aria-hidden="true">
+<rect x="660.75" y="321.785" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-28" data-kind="pad" aria-label="Pad 28"><title>Pad 28</title>
-<rect x="451.25" y="693.035" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-5" data-surface-control="key-5" aria-hidden="true"><rect x="654.75" y="315" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-29" data-kind="pad" aria-label="Pad 29"><title>Pad 29</title>
-<rect x="556" y="693.035" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-7" data-part="grid-pad-7" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 7"><title>GRID: Pad 7</title><g aria-hidden="true">
+<rect x="765.5" y="321.785" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-30" data-kind="pad" aria-label="Pad 30"><title>Pad 30</title>
-<rect x="660.75" y="693.035" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-6" data-surface-control="key-6" aria-hidden="true"><rect x="759.5" y="315" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="grid-pad-31" data-kind="pad" aria-label="Pad 31"><title>Pad 31</title>
-<rect x="765.5" y="693.035" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-8" data-part="grid-pad-8" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 8"><title>GRID: Pad 8</title><g aria-hidden="true">
+<rect x="870.25" y="321.785" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="grid-pad-32" data-kind="pad" aria-label="Pad 32"><title>Pad 32</title>
-<rect x="870.25" y="693.035" width="92.75" height="92.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-7" data-surface-control="key-7" aria-hidden="true"><rect x="864.25" y="315" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="25" y="285" width="85" height="530" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="functions-note" data-kind="button" aria-label="Note"><title>Note</title>
-<rect x="52.5" y="327.083" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-9" data-part="grid-pad-9" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 9"><title>GRID: Pad 9</title><g aria-hidden="true">
+<rect x="137" y="445.535" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="functions-velocity" data-kind="button" aria-label="Velocity"><title>Velocity</title>
-<rect x="52.5" y="397.797" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-8" data-surface-control="key-8" aria-hidden="true"><rect x="131" y="438.75" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="functions-gate" data-kind="button" aria-label="Gate"><title>Gate</title>
-<rect x="52.5" y="468.511" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-10" data-part="grid-pad-10" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 10"><title>GRID: Pad 10</title><g aria-hidden="true">
+<rect x="241.75" y="445.535" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="functions-nudge" data-kind="button" aria-label="Nudge"><title>Nudge</title>
-<rect x="52.5" y="539.226" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-9" data-surface-control="key-9" aria-hidden="true"><rect x="235.75" y="438.75" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="functions-length" data-kind="button" aria-label="Length"><title>Length</title>
-<rect x="52.5" y="609.94" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-11" data-part="grid-pad-11" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 11"><title>GRID: Pad 11</title><g aria-hidden="true">
+<rect x="346.5" y="445.535" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="functions-scale" data-kind="button" aria-label="Scale"><title>Scale</title>
-<rect x="52.5" y="680.654" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-10" data-surface-control="key-10" aria-hidden="true"><rect x="340.5" y="438.75" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="functions-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<rect x="52.5" y="751.369" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-12" data-part="grid-pad-12" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 12"><title>GRID: Pad 12</title><g aria-hidden="true">
+<rect x="451.25" y="445.535" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="990" y="285" width="85" height="530" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="session-fx" data-kind="button" aria-label="FX"><title>FX</title>
-<rect x="1017.5" y="327.083" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-11" data-surface-control="key-11" aria-hidden="true"><rect x="445.25" y="438.75" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="session-mixer" data-kind="button" aria-label="Mixer"><title>Mixer</title>
-<rect x="1017.5" y="397.797" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-13" data-part="grid-pad-13" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 13"><title>GRID: Pad 13</title><g aria-hidden="true">
+<rect x="556" y="445.535" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="session-patterns" data-kind="button" aria-label="Patterns"><title>Patterns</title>
-<rect x="1017.5" y="468.511" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-12" data-surface-control="key-12" aria-hidden="true"><rect x="550" y="438.75" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="session-sessions" data-kind="button" aria-label="Sessions"><title>Sessions</title>
-<rect x="1017.5" y="539.226" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-14" data-part="grid-pad-14" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 14"><title>GRID: Pad 14</title><g aria-hidden="true">
+<rect x="660.75" y="445.535" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="session-duplicate" data-kind="button" aria-label="Duplicate"><title>Duplicate</title>
-<rect x="1017.5" y="609.94" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-13" data-surface-control="key-13" aria-hidden="true"><rect x="654.75" y="438.75" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="session-clear" data-kind="button" aria-label="Clear"><title>Clear</title>
-<rect x="1017.5" y="680.654" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-15" data-part="grid-pad-15" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 15"><title>GRID: Pad 15</title><g aria-hidden="true">
+<rect x="765.5" y="445.535" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="session-save" data-kind="button" aria-label="Save"><title>Save</title>
-<rect x="1017.5" y="751.369" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-14" data-surface-control="key-14" aria-hidden="true"><rect x="759.5" y="438.75" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="125" y="830" width="850" height="90" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="transport-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="187.048" y="865" width="27.57" height="27.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-16" data-part="grid-pad-16" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 16"><title>GRID: Pad 16</title><g aria-hidden="true">
+<rect x="870.25" y="445.535" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="transport-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="326.715" y="865" width="27.57" height="27.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-15" data-surface-control="key-15" aria-hidden="true"><rect x="864.25" y="438.75" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="transport-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="480.167" cy="878.785" r="11.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M480.167 870.42L480.167 874.807" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--grid-pad-17" data-part="grid-pad-17" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 17"><title>GRID: Pad 17</title><g aria-hidden="true">
+<rect x="137" y="569.285" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="transport-swing" data-kind="knob" aria-label="Swing"><title>Swing</title>
-<circle cx="619.833" cy="878.785" r="11.365" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M619.833 870.42L619.833 874.807" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-circuit-panel--surface--key-16" data-surface-control="key-16" aria-hidden="true"><rect x="131" y="562.5" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="transport-play" data-kind="button" aria-label="Play"><title>Play</title>
-<rect x="745.715" y="865" width="27.57" height="27.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--grid-pad-18" data-part="grid-pad-18" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 18"><title>GRID: Pad 18</title><g aria-hidden="true">
+<rect x="241.75" y="569.285" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="transport-record" data-kind="button" aria-label="Record"><title>Record</title>
-<rect x="885.382" y="865" width="27.57" height="27.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-circuit-panel--surface--key-17" data-surface-control="key-17" aria-hidden="true"><rect x="235.75" y="562.5" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-19" data-part="grid-pad-19" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 19"><title>GRID: Pad 19</title><g aria-hidden="true">
+<rect x="346.5" y="569.285" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-18" data-surface-control="key-18" aria-hidden="true"><rect x="340.5" y="562.5" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-20" data-part="grid-pad-20" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 20"><title>GRID: Pad 20</title><g aria-hidden="true">
+<rect x="451.25" y="569.285" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-19" data-surface-control="key-19" aria-hidden="true"><rect x="445.25" y="562.5" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-21" data-part="grid-pad-21" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 21"><title>GRID: Pad 21</title><g aria-hidden="true">
+<rect x="556" y="569.285" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-20" data-surface-control="key-20" aria-hidden="true"><rect x="550" y="562.5" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-22" data-part="grid-pad-22" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 22"><title>GRID: Pad 22</title><g aria-hidden="true">
+<rect x="660.75" y="569.285" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-21" data-surface-control="key-21" aria-hidden="true"><rect x="654.75" y="562.5" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-23" data-part="grid-pad-23" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 23"><title>GRID: Pad 23</title><g aria-hidden="true">
+<rect x="765.5" y="569.285" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-22" data-surface-control="key-22" aria-hidden="true"><rect x="759.5" y="562.5" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-24" data-part="grid-pad-24" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 24"><title>GRID: Pad 24</title><g aria-hidden="true">
+<rect x="870.25" y="569.285" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-23" data-surface-control="key-23" aria-hidden="true"><rect x="864.25" y="562.5" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-25" data-part="grid-pad-25" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 25"><title>GRID: Pad 25</title><g aria-hidden="true">
+<rect x="137" y="693.035" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-24" data-surface-control="key-24" aria-hidden="true"><rect x="131" y="686.25" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-26" data-part="grid-pad-26" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 26"><title>GRID: Pad 26</title><g aria-hidden="true">
+<rect x="241.75" y="693.035" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-25" data-surface-control="key-25" aria-hidden="true"><rect x="235.75" y="686.25" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-27" data-part="grid-pad-27" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 27"><title>GRID: Pad 27</title><g aria-hidden="true">
+<rect x="346.5" y="693.035" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-26" data-surface-control="key-26" aria-hidden="true"><rect x="340.5" y="686.25" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-28" data-part="grid-pad-28" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 28"><title>GRID: Pad 28</title><g aria-hidden="true">
+<rect x="451.25" y="693.035" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-27" data-surface-control="key-27" aria-hidden="true"><rect x="445.25" y="686.25" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-29" data-part="grid-pad-29" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 29"><title>GRID: Pad 29</title><g aria-hidden="true">
+<rect x="556" y="693.035" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-28" data-surface-control="key-28" aria-hidden="true"><rect x="550" y="686.25" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-30" data-part="grid-pad-30" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 30"><title>GRID: Pad 30</title><g aria-hidden="true">
+<rect x="660.75" y="693.035" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-29" data-surface-control="key-29" aria-hidden="true"><rect x="654.75" y="686.25" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-31" data-part="grid-pad-31" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 31"><title>GRID: Pad 31</title><g aria-hidden="true">
+<rect x="765.5" y="693.035" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-30" data-surface-control="key-30" aria-hidden="true"><rect x="759.5" y="686.25" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--grid-pad-32" data-part="grid-pad-32" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="GRID: Pad 32"><title>GRID: Pad 32</title><g aria-hidden="true">
+<rect x="870.25" y="693.035" width="92.75" height="92.75" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--key-31" data-surface-control="key-31" aria-hidden="true"><rect x="864.25" y="686.25" width="104.75" height="123.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--functions-note" data-part="functions-note" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Note"><title>FUNCTIONS: Note</title><g aria-hidden="true">
+<rect x="52.5" y="327.083" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--functions-note" data-surface-control="functions-note" aria-hidden="true"><rect x="31" y="315" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--functions-velocity" data-part="functions-velocity" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Velocity"><title>FUNCTIONS: Velocity</title><g aria-hidden="true">
+<rect x="52.5" y="397.797" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--functions-velocity" data-surface-control="functions-velocity" aria-hidden="true"><rect x="31" y="385.7143" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--functions-gate" data-part="functions-gate" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Gate"><title>FUNCTIONS: Gate</title><g aria-hidden="true">
+<rect x="52.5" y="468.511" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--functions-gate" data-surface-control="functions-gate" aria-hidden="true"><rect x="31" y="456.4286" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--functions-nudge" data-part="functions-nudge" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Nudge"><title>FUNCTIONS: Nudge</title><g aria-hidden="true">
+<rect x="52.5" y="539.226" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--functions-nudge" data-surface-control="functions-nudge" aria-hidden="true"><rect x="31" y="527.1429" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--functions-length" data-part="functions-length" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Length"><title>FUNCTIONS: Length</title><g aria-hidden="true">
+<rect x="52.5" y="609.94" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--functions-length" data-surface-control="functions-length" aria-hidden="true"><rect x="31" y="597.8571" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--functions-scale" data-part="functions-scale" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Scale"><title>FUNCTIONS: Scale</title><g aria-hidden="true">
+<rect x="52.5" y="680.654" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--functions-scale" data-surface-control="functions-scale" aria-hidden="true"><rect x="31" y="668.5714" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--functions-shift" data-part="functions-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Shift"><title>FUNCTIONS: Shift</title><g aria-hidden="true">
+<rect x="52.5" y="751.369" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--functions-shift" data-surface-control="functions-shift" aria-hidden="true"><rect x="31" y="739.2857" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--session-fx" data-part="session-fx" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SESSION: FX"><title>SESSION: FX</title><g aria-hidden="true">
+<rect x="1017.5" y="327.083" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--session-fx" data-surface-control="session-fx" aria-hidden="true"><rect x="996" y="315" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--session-mixer" data-part="session-mixer" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SESSION: Mixer"><title>SESSION: Mixer</title><g aria-hidden="true">
+<rect x="1017.5" y="397.797" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--session-mixer" data-surface-control="session-mixer" aria-hidden="true"><rect x="996" y="385.7143" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--session-patterns" data-part="session-patterns" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SESSION: Patterns"><title>SESSION: Patterns</title><g aria-hidden="true">
+<rect x="1017.5" y="468.511" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--session-patterns" data-surface-control="session-patterns" aria-hidden="true"><rect x="996" y="456.4286" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--session-sessions" data-part="session-sessions" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SESSION: Sessions"><title>SESSION: Sessions</title><g aria-hidden="true">
+<rect x="1017.5" y="539.226" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--session-sessions" data-surface-control="session-sessions" aria-hidden="true"><rect x="996" y="527.1429" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--session-duplicate" data-part="session-duplicate" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SESSION: Duplicate"><title>SESSION: Duplicate</title><g aria-hidden="true">
+<rect x="1017.5" y="609.94" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--session-duplicate" data-surface-control="session-duplicate" aria-hidden="true"><rect x="996" y="597.8571" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--session-clear" data-part="session-clear" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SESSION: Clear"><title>SESSION: Clear</title><g aria-hidden="true">
+<rect x="1017.5" y="680.654" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--session-clear" data-surface-control="session-clear" aria-hidden="true"><rect x="996" y="668.5714" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--session-save" data-part="session-save" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SESSION: Save"><title>SESSION: Save</title><g aria-hidden="true">
+<rect x="1017.5" y="751.369" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--session-save" data-surface-control="session-save" aria-hidden="true"><rect x="996" y="739.2857" width="73" height="70.7143" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--transport-octave" data-part="transport-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT: Octave -"><title>TRANSPORT: Octave -</title><g aria-hidden="true">
+<rect x="187.048" y="865" width="27.57" height="27.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--transport-octave" data-surface-control="transport-octave" aria-hidden="true"><rect x="131" y="860" width="139.6667" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--transport-octave-2" data-part="transport-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT: Octave +"><title>TRANSPORT: Octave +</title><g aria-hidden="true">
+<rect x="326.715" y="865" width="27.57" height="27.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--transport-octave-2" data-surface-control="transport-octave-2" aria-hidden="true"><rect x="270.6667" y="860" width="139.6667" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--transport-tempo" data-part="transport-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="TRANSPORT: Tempo"><title>TRANSPORT: Tempo</title><g aria-hidden="true">
+<circle cx="480.167" cy="878.785" r="11.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M480.167 870.42L480.167 874.807" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="novation-circuit-panel--surface--transport-tempo" data-surface-control="transport-tempo" aria-hidden="true"><rect x="410.3333" y="860" width="139.6667" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--transport-swing" data-part="transport-swing" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="TRANSPORT: Swing"><title>TRANSPORT: Swing</title><g aria-hidden="true">
+<circle cx="619.833" cy="878.785" r="11.365" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M619.833 870.42L619.833 874.807" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="novation-circuit-panel--surface--transport-swing" data-surface-control="transport-swing" aria-hidden="true"><rect x="550" y="860" width="139.6667" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--transport-play" data-part="transport-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT: Play"><title>TRANSPORT: Play</title><g aria-hidden="true">
+<rect x="745.715" y="865" width="27.57" height="27.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--transport-play" data-surface-control="transport-play" aria-hidden="true"><rect x="689.6667" y="860" width="139.6667" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-circuit-panel--transport-record" data-part="transport-record" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT: Record"><title>TRANSPORT: Record</title><g aria-hidden="true">
+<rect x="885.382" y="865" width="27.57" height="27.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-circuit-panel--surface--transport-record" data-surface-control="transport-record" aria-hidden="true"><rect x="829.3333" y="860" width="139.6667" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </svg>

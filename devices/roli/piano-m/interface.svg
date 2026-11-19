@@ -1,110 +1,138 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 530" role="img" aria-labelledby="title description">
-<title id="title">ROLI Piano M / LUMI Keys labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1000" height="530" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="982" height="512" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">ROLI Piano M / LUMI Keys</text>
-<text x="975" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="30" y="55" width="350" height="70" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="37" y="69" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">CONTROL</text>
-<g id="control-power" data-kind="button" aria-label="Power"><title>Power</title>
-<rect x="88.548" y="90" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="92.333" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Power</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 530" role="group" aria-labelledby="roli-piano-m-interface--title" aria-describedby="roli-piano-m-interface--description" data-device="roli-piano-m" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roli-piano-m-interface--title">ROLI Piano M / LUMI Keys labelled interface</title><desc id="roli-piano-m-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roli-piano-m-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="982" height="512" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">ROLI Piano M / LUMI Keys</text>
+<text x="975" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="30" y="55" width="350" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="37" y="69" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">CONTROL</text>
 </g>
-<g id="control-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="201.215" y="90" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="205" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Octave -</text>
+<g id="roli-piano-m-interface--control-power" data-part="control-power" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CONTROL: Power"><title>CONTROL: Power</title><g aria-hidden="true">
+<rect x="88.548" y="90" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="92.333" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Power</text>
 </g>
-<g id="control-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="313.882" y="90" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="317.667" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Octave +</text>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="30" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="63.571" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">1</text>
+<g id="roli-piano-m-interface--control-octave" data-part="control-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CONTROL: Octave -"><title>CONTROL: Octave -</title><g aria-hidden="true">
+<rect x="201.215" y="90" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="205" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Octave -</text>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="97.143" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="130.714" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">3</text>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="164.286" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="197.857" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">5</text>
+<g id="roli-piano-m-interface--control-octave-2" data-part="control-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CONTROL: Octave +"><title>CONTROL: Octave +</title><g aria-hidden="true">
+<rect x="313.882" y="90" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="317.667" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Octave +</text>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="231.429" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="265" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">6</text>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="298.571" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="332.143" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">8</text>
+<g id="roli-piano-m-interface--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="roli-piano-m-interface--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="30" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="63.571" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">1</text>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="365.714" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="399.286" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">10</text>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="432.857" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="466.429" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">12</text>
+<g id="roli-piano-m-interface--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="97.143" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="130.714" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">3</text>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="500" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="533.571" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">13</text>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="567.143" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="600.714" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">15</text>
+<g id="roli-piano-m-interface--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="164.286" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="197.857" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">5</text>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="634.286" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="667.857" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">17</text>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="701.429" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="735" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">18</text>
+<g id="roli-piano-m-interface--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="231.429" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="265" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">6</text>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="768.571" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="802.143" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">20</text>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="835.714" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="869.286" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">22</text>
+<g id="roli-piano-m-interface--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="298.571" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="332.143" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">8</text>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="902.857" y="120" width="67.143" height="365" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="936.429" y="476" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">24</text>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="76.329" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-m-interface--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="365.714" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="399.286" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">10</text>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="143.471" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="277.757" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-m-interface--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="432.857" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="466.429" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">12</text>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="344.9" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="412.043" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-m-interface--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="500" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="533.571" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">13</text>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="546.329" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="613.471" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-m-interface--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="567.143" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="600.714" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">15</text>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="747.757" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="814.9" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roli-piano-m-interface--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="634.286" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="667.857" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">17</text>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="882.043" y="120" width="41.629" height="222.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+</g>
+<g id="roli-piano-m-interface--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="701.429" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="735" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">18</text>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="768.571" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="802.143" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">20</text>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="835.714" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="869.286" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">22</text>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="902.857" y="120" width="67.143" height="365" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="936.429" y="476" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">24</text>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="76.329" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="143.471" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="277.757" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="344.9" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="412.043" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="546.329" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="613.471" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="747.757" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="814.9" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="roli-piano-m-interface--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="882.043" y="120" width="41.629" height="222.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
 </g>
 </g>
 </svg>

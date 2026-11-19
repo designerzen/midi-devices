@@ -1,274 +1,328 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
-<title id="title">Korg volca keys labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1200" height="720" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1182" height="702" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Korg volca keys</text>
-<text x="1175" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="60" width="1150" height="65" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="74" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">TOP CONNECTIONS</text>
-<g id="top-connections-dc-9v" data-kind="jack" aria-label="DC 9V"><title>DC 9V</title>
-<circle cx="144.8" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="144.8" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="144.8" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">DC 9V</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="group" aria-labelledby="korg-volca-keys-interface--title" aria-describedby="korg-volca-keys-interface--description" data-device="korg-volca-keys" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="korg-volca-keys-interface--title">Korg volca keys labelled interface</title><desc id="korg-volca-keys-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="korg-volca-keys-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1182" height="702" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Korg volca keys</text>
+<text x="1175" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="60" width="1150" height="65" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="74" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">TOP CONNECTIONS</text>
+<rect x="25" y="130" width="170" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MASTER</text>
+<rect x="210" y="130" width="184" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="217" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">VCO</text>
+<rect x="404" y="130" width="184" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="411" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">VCF</text>
+<rect x="598" y="130" width="184" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="605" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
+<rect x="792" y="130" width="184" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="799" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
+<rect x="986" y="130" width="184" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="993" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">DELAY</text>
 </g>
-<g id="top-connections-midi-in" data-kind="jack" aria-label="MIDI IN"><title>MIDI IN</title>
-<circle cx="372.4" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="372.4" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="372.4" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">MIDI IN</text>
+<g id="korg-volca-keys-interface--top-connections-dc-9v" data-part="top-connections-dc-9v" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: DC 9V"><title>TOP CONNECTIONS: DC 9V</title><g aria-hidden="true">
+<circle cx="144.8" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="144.8" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="144.8" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">DC 9V</text>
 </g>
-<g id="top-connections-sync-in" data-kind="jack" aria-label="Sync IN"><title>Sync IN</title>
-<circle cx="600" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="600" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="600" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sync IN</text>
 </g>
-<g id="top-connections-sync-out" data-kind="jack" aria-label="Sync OUT"><title>Sync OUT</title>
-<circle cx="827.6" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="827.6" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="827.6" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sync OUT</text>
+<g id="korg-volca-keys-interface--top-connections-midi-in" data-part="top-connections-midi-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: MIDI IN"><title>TOP CONNECTIONS: MIDI IN</title><g aria-hidden="true">
+<circle cx="372.4" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="372.4" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="372.4" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">MIDI IN</text>
 </g>
-<g id="top-connections-headphones" data-kind="jack" aria-label="Headphones"><title>Headphones</title>
-<circle cx="1055.2" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1055.2" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="1055.2" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Headphones</text>
 </g>
-<rect x="25" y="130" width="170" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MASTER</text>
-<g id="master-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="70.5" cy="207.118" r="19.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M70.5 190.368L70.5 200.206" fill="none" stroke="#000" stroke-width="1"/>
-<text x="70.5" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Volume</text>
+<g id="korg-volca-keys-interface--top-connections-sync-in" data-part="top-connections-sync-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Sync IN"><title>TOP CONNECTIONS: Sync IN</title><g aria-hidden="true">
+<circle cx="600" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="600" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="600" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Sync IN</text>
 </g>
-<g id="master-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="149.5" cy="207.118" r="19.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M149.5 190.368L149.5 200.206" fill="none" stroke="#000" stroke-width="1"/>
-<text x="149.5" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tempo</text>
 </g>
-<g id="master-memory" data-kind="button" aria-label="Memory"><title>Memory</title>
-<rect x="55.5" y="303.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="70.5" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Memory</text>
+<g id="korg-volca-keys-interface--top-connections-sync-out" data-part="top-connections-sync-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Sync OUT"><title>TOP CONNECTIONS: Sync OUT</title><g aria-hidden="true">
+<circle cx="827.6" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="827.6" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="827.6" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Sync OUT</text>
 </g>
-<g id="master-play" data-kind="button" aria-label="Play"><title>Play</title>
-<rect x="134.5" y="303.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="149.5" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Play</text>
 </g>
-<g id="master-record" data-kind="button" aria-label="Record"><title>Record</title>
-<rect x="55.5" y="415.452" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="70.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Record</text>
+<g id="korg-volca-keys-interface--top-connections-headphones" data-part="top-connections-headphones" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Headphones"><title>TOP CONNECTIONS: Headphones</title><g aria-hidden="true">
+<circle cx="1055.2" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1055.2" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1055.2" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Headphones</text>
 </g>
-<g id="master-function" data-kind="button" aria-label="Function"><title>Function</title>
-<rect x="134.5" y="415.452" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="149.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function</text>
 </g>
-<rect x="210" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="217" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VCO</text>
-<g id="vco-voice" data-kind="knob" aria-label="Voice" data-control="vco-voice-knob"><title>Voice</title>
-<circle cx="259" cy="235.035" r="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M259 216.535L259 227.51" fill="none" stroke="#000" stroke-width="1"/>
-<text x="259" y="323.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Voice</text>
+<g id="korg-volca-keys-interface--master-volume" data-part="master-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER: Volume"><title>MASTER: Volume</title><g aria-hidden="true">
+<circle cx="70.5" cy="207.118" r="19.75" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M70.5 190.368L70.5 200.206" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="70.5" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Volume</text>
 </g>
-<g id="vco-octave" data-kind="knob" aria-label="Octave" data-control="vco-octave-knob"><title>Octave</title>
-<circle cx="345" cy="235.035" r="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M345 216.535L345 227.51" fill="none" stroke="#000" stroke-width="1"/>
-<text x="345" y="323.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Octave</text>
 </g>
-<g id="vco-detune" data-kind="knob" aria-label="Detune" data-control="vco-detune-knob"><title>Detune</title>
-<circle cx="259" cy="402.535" r="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M259 384.035L259 395.01" fill="none" stroke="#000" stroke-width="1"/>
-<text x="259" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Detune</text>
+<g id="korg-volca-keys-interface--master-tempo" data-part="master-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER: Tempo"><title>MASTER: Tempo</title><g aria-hidden="true">
+<circle cx="149.5" cy="207.118" r="19.75" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M149.5 190.368L149.5 200.206" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="149.5" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tempo</text>
 </g>
-<g id="vco-eg-intensity" data-kind="knob" aria-label="EG intensity" data-control="vco-eg-intensity-knob"><title>EG intensity</title>
-<circle cx="345" cy="402.535" r="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M345 384.035L345 395.01" fill="none" stroke="#000" stroke-width="1"/>
-<text x="345" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG intensity</text>
 </g>
-<rect x="404" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="411" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VCF</text>
-<g id="vcf-cutoff" data-kind="knob" aria-label="Cutoff" data-control="vcf-cutoff-knob"><title>Cutoff</title>
-<circle cx="496" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M496 185.118L496 198.368" fill="none" stroke="#000" stroke-width="1"/>
-<text x="496" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Cutoff</text>
+<g id="korg-volca-keys-interface--master-memory" data-part="master-memory" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER: Memory"><title>MASTER: Memory</title><g aria-hidden="true">
+<rect x="55.5" y="303.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="70.5" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Memory</text>
 </g>
-<g id="vcf-peak" data-kind="knob" aria-label="Peak"><title>Peak</title>
-<circle cx="496" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M496 296.785L496 310.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="496" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Peak</text>
 </g>
-<g id="vcf-eg-intensity" data-kind="knob" aria-label="EG intensity" data-control="vcf-eg-intensity-knob"><title>EG intensity</title>
-<circle cx="496" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M496 408.452L496 421.702" fill="none" stroke="#000" stroke-width="1"/>
-<text x="496" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG intensity</text>
+<g id="korg-volca-keys-interface--master-play" data-part="master-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER: Play"><title>MASTER: Play</title><g aria-hidden="true">
+<rect x="134.5" y="303.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="149.5" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Play</text>
 </g>
-<rect x="598" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="605" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
-<g id="lfo-rate" data-kind="knob" aria-label="Rate" data-control="lfo-rate-knob"><title>Rate</title>
-<circle cx="690" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M690 185.118L690 198.368" fill="none" stroke="#000" stroke-width="1"/>
-<text x="690" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Rate</text>
 </g>
-<g id="lfo-pitch-intensity" data-kind="knob" aria-label="Pitch intensity" data-control="lfo-pitch-intensity-knob"><title>Pitch intensity</title>
-<circle cx="690" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M690 296.785L690 310.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="690" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pitch intensity</text>
+<g id="korg-volca-keys-interface--master-record" data-part="master-record" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER: Record"><title>MASTER: Record</title><g aria-hidden="true">
+<rect x="55.5" y="415.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="70.5" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Record</text>
 </g>
-<g id="lfo-cutoff-intensity" data-kind="knob" aria-label="Cutoff intensity" data-control="lfo-cutoff-intensity-knob"><title>Cutoff intensity</title>
-<circle cx="690" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M690 408.452L690 421.702" fill="none" stroke="#000" stroke-width="1"/>
-<text x="690" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Cutoff intensity</text>
 </g>
-<rect x="792" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="799" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
-<g id="envelope-attack" data-kind="knob" aria-label="Attack" data-control="envelope-attack-knob"><title>Attack</title>
-<circle cx="884" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M884 185.118L884 198.368" fill="none" stroke="#000" stroke-width="1"/>
-<text x="884" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Attack</text>
+<g id="korg-volca-keys-interface--master-function" data-part="master-function" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER: Function"><title>MASTER: Function</title><g aria-hidden="true">
+<rect x="134.5" y="415.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="149.5" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function</text>
 </g>
-<g id="envelope-decay-release" data-kind="knob" aria-label="Decay Release" data-control="envelope-decay-release-knob"><title>Decay Release</title>
-<circle cx="884" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M884 296.785L884 310.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="884" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Decay Release</text>
 </g>
-<g id="envelope-sustain" data-kind="knob" aria-label="Sustain" data-control="envelope-sustain-knob"><title>Sustain</title>
-<circle cx="884" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M884 408.452L884 421.702" fill="none" stroke="#000" stroke-width="1"/>
-<text x="884" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sustain</text>
+<g id="korg-volca-keys-interface--vco-voice" data-part="vco-voice" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO: Voice"><title>VCO: Voice</title><g aria-hidden="true">
+<circle cx="259" cy="235.035" r="21.5" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M259 216.535L259 227.51" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="259" y="323.5" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Voice</text>
 </g>
-<rect x="986" y="130" width="184" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="993" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">DELAY</text>
-<g id="delay-time" data-kind="knob" aria-label="Time" data-control="delay-time-knob"><title>Time</title>
-<circle cx="1078" cy="235.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1078 213.035L1078 226.285" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1078" y="323.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Time</text>
 </g>
-<g id="delay-feedback" data-kind="knob" aria-label="Feedback" data-control="delay-feedback-knob"><title>Feedback</title>
-<circle cx="1078" cy="402.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1078 380.535L1078 393.785" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1078" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Feedback</text>
+<g id="korg-volca-keys-interface--vco-octave" data-part="vco-octave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO: Octave"><title>VCO: Octave</title><g aria-hidden="true">
+<circle cx="345" cy="235.035" r="21.5" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M345 216.535L345 227.51" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="345" y="323.5" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Octave</text>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Touch plate 1"><title>Touch plate 1</title>
-<rect x="25" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M60.938 537L60.938 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="60.938" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">1</text>
 </g>
-<g id="key-3" data-kind="key" aria-label="Touch plate 3"><title>Touch plate 3</title>
-<rect x="96.875" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M132.812 537L132.812 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="132.812" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">3</text>
+<g id="korg-volca-keys-interface--vco-detune" data-part="vco-detune" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO: Detune"><title>VCO: Detune</title><g aria-hidden="true">
+<circle cx="259" cy="402.535" r="21.5" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M259 384.035L259 395.01" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="259" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Detune</text>
 </g>
-<g id="key-5" data-kind="key" aria-label="Touch plate 5"><title>Touch plate 5</title>
-<rect x="168.75" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M204.688 537L204.688 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="204.688" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">5</text>
 </g>
-<g id="key-6" data-kind="key" aria-label="Touch plate 6"><title>Touch plate 6</title>
-<rect x="240.625" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M276.562 537L276.562 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="276.562" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">6</text>
+<g id="korg-volca-keys-interface--vco-eg-intensity" data-part="vco-eg-intensity" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO: EG intensity"><title>VCO: EG intensity</title><g aria-hidden="true">
+<circle cx="345" cy="402.535" r="21.5" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M345 384.035L345 395.01" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="345" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">EG intensity</text>
 </g>
-<g id="key-8" data-kind="key" aria-label="Touch plate 8"><title>Touch plate 8</title>
-<rect x="312.5" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M348.438 537L348.438 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="348.438" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">8</text>
 </g>
-<g id="key-10" data-kind="key" aria-label="Touch plate 10"><title>Touch plate 10</title>
-<rect x="384.375" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M420.312 537L420.312 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="420.312" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">10</text>
+<g id="korg-volca-keys-interface--vcf-cutoff" data-part="vcf-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF: Cutoff"><title>VCF: Cutoff</title><g aria-hidden="true">
+<circle cx="496" cy="207.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M496 185.118L496 198.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="496" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Cutoff</text>
 </g>
-<g id="key-12" data-kind="key" aria-label="Touch plate 12"><title>Touch plate 12</title>
-<rect x="456.25" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M492.188 537L492.188 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="492.188" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">12</text>
 </g>
-<g id="key-13" data-kind="key" aria-label="Touch plate 13"><title>Touch plate 13</title>
-<rect x="528.125" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M564.062 537L564.062 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="564.062" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">13</text>
+<g id="korg-volca-keys-interface--vcf-peak" data-part="vcf-peak" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF: Peak"><title>VCF: Peak</title><g aria-hidden="true">
+<circle cx="496" cy="318.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M496 296.785L496 310.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="496" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Peak</text>
 </g>
-<g id="key-15" data-kind="key" aria-label="Touch plate 15"><title>Touch plate 15</title>
-<rect x="600" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M635.938 537L635.938 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="635.938" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">15</text>
 </g>
-<g id="key-17" data-kind="key" aria-label="Touch plate 17"><title>Touch plate 17</title>
-<rect x="671.875" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M707.812 537L707.812 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="707.812" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">17</text>
+<g id="korg-volca-keys-interface--vcf-eg-intensity" data-part="vcf-eg-intensity" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF: EG intensity"><title>VCF: EG intensity</title><g aria-hidden="true">
+<circle cx="496" cy="430.452" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M496 408.452L496 421.702" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="496" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">EG intensity</text>
 </g>
-<g id="key-18" data-kind="key" aria-label="Touch plate 18"><title>Touch plate 18</title>
-<rect x="743.75" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M779.688 537L779.688 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="779.688" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">18</text>
 </g>
-<g id="key-20" data-kind="key" aria-label="Touch plate 20"><title>Touch plate 20</title>
-<rect x="815.625" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M851.562 537L851.562 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="851.562" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">20</text>
+<g id="korg-volca-keys-interface--lfo-rate" data-part="lfo-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Rate"><title>LFO: Rate</title><g aria-hidden="true">
+<circle cx="690" cy="207.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M690 185.118L690 198.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="690" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Rate</text>
 </g>
-<g id="key-22" data-kind="key" aria-label="Touch plate 22"><title>Touch plate 22</title>
-<rect x="887.5" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M923.438 537L923.438 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="923.438" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">22</text>
 </g>
-<g id="key-24" data-kind="key" aria-label="Touch plate 24"><title>Touch plate 24</title>
-<rect x="959.375" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M995.312 537L995.312 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="995.312" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">24</text>
+<g id="korg-volca-keys-interface--lfo-pitch-intensity" data-part="lfo-pitch-intensity" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Pitch intensity"><title>LFO: Pitch intensity</title><g aria-hidden="true">
+<circle cx="690" cy="318.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M690 296.785L690 310.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="690" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pitch intensity</text>
 </g>
-<g id="key-25" data-kind="key" aria-label="Touch plate 25"><title>Touch plate 25</title>
-<rect x="1031.25" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M1067.188 537L1067.188 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1067.188" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">25</text>
 </g>
-<g id="key-27" data-kind="key" aria-label="Touch plate 27"><title>Touch plate 27</title>
-<rect x="1103.125" y="525" width="71.875" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M1139.062 537L1139.062 653" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1139.062" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">27</text>
+<g id="korg-volca-keys-interface--lfo-cutoff-intensity" data-part="lfo-cutoff-intensity" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Cutoff intensity"><title>LFO: Cutoff intensity</title><g aria-hidden="true">
+<circle cx="690" cy="430.452" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M690 408.452L690 421.702" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="690" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Cutoff intensity</text>
 </g>
-<g id="key-2" data-kind="key" aria-label="Touch plate 2"><title>Touch plate 2</title>
-<rect x="74.594" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M96.875 537L96.875 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
-<g id="key-4" data-kind="key" aria-label="Touch plate 4"><title>Touch plate 4</title>
-<rect x="146.469" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M168.75 537L168.75 598.4" fill="none" stroke="#000" stroke-width="1"/>
+<g id="korg-volca-keys-interface--envelope-attack" data-part="envelope-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Attack"><title>ENVELOPE: Attack</title><g aria-hidden="true">
+<circle cx="884" cy="207.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M884 185.118L884 198.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="884" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Attack</text>
 </g>
-<g id="key-7" data-kind="key" aria-label="Touch plate 7"><title>Touch plate 7</title>
-<rect x="290.219" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M312.5 537L312.5 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
-<g id="key-9" data-kind="key" aria-label="Touch plate 9"><title>Touch plate 9</title>
-<rect x="362.094" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M384.375 537L384.375 598.4" fill="none" stroke="#000" stroke-width="1"/>
+<g id="korg-volca-keys-interface--envelope-decay-release" data-part="envelope-decay-release" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Decay Release"><title>ENVELOPE: Decay Release</title><g aria-hidden="true">
+<circle cx="884" cy="318.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M884 296.785L884 310.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="884" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Decay Release</text>
 </g>
-<g id="key-11" data-kind="key" aria-label="Touch plate 11"><title>Touch plate 11</title>
-<rect x="433.969" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M456.25 537L456.25 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
-<g id="key-14" data-kind="key" aria-label="Touch plate 14"><title>Touch plate 14</title>
-<rect x="577.719" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M600 537L600 598.4" fill="none" stroke="#000" stroke-width="1"/>
+<g id="korg-volca-keys-interface--envelope-sustain" data-part="envelope-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Sustain"><title>ENVELOPE: Sustain</title><g aria-hidden="true">
+<circle cx="884" cy="430.452" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M884 408.452L884 421.702" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="884" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Sustain</text>
 </g>
-<g id="key-16" data-kind="key" aria-label="Touch plate 16"><title>Touch plate 16</title>
-<rect x="649.594" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M671.875 537L671.875 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
-<g id="key-19" data-kind="key" aria-label="Touch plate 19"><title>Touch plate 19</title>
-<rect x="793.344" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M815.625 537L815.625 598.4" fill="none" stroke="#000" stroke-width="1"/>
+<g id="korg-volca-keys-interface--delay-time" data-part="delay-time" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DELAY: Time"><title>DELAY: Time</title><g aria-hidden="true">
+<circle cx="1078" cy="235.035" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1078 213.035L1078 226.285" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1078" y="323.5" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Time</text>
 </g>
-<g id="key-21" data-kind="key" aria-label="Touch plate 21"><title>Touch plate 21</title>
-<rect x="865.219" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M887.5 537L887.5 598.4" fill="none" stroke="#000" stroke-width="1"/>
 </g>
-<g id="key-23" data-kind="key" aria-label="Touch plate 23"><title>Touch plate 23</title>
-<rect x="937.094" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M959.375 537L959.375 598.4" fill="none" stroke="#000" stroke-width="1"/>
+<g id="korg-volca-keys-interface--delay-feedback" data-part="delay-feedback" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DELAY: Feedback"><title>DELAY: Feedback</title><g aria-hidden="true">
+<circle cx="1078" cy="402.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1078 380.535L1078 393.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1078" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Feedback</text>
 </g>
-<g id="key-26" data-kind="key" aria-label="Touch plate 26"><title>Touch plate 26</title>
-<rect x="1080.844" y="525" width="44.562" height="85.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<path d="M1103.125 537L1103.125 598.4" fill="none" stroke="#000" stroke-width="1"/>
+</g>
+<g id="korg-volca-keys-interface--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="korg-volca-keys-interface--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 1"><title>Touch plate 1</title><g aria-hidden="true">
+<rect x="25" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M60.938 537L60.938 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="60.938" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">1</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 3"><title>Touch plate 3</title><g aria-hidden="true">
+<rect x="96.875" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M132.812 537L132.812 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="132.812" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">3</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 5"><title>Touch plate 5</title><g aria-hidden="true">
+<rect x="168.75" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M204.688 537L204.688 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="204.688" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">5</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 6"><title>Touch plate 6</title><g aria-hidden="true">
+<rect x="240.625" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M276.562 537L276.562 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="276.562" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">6</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 8"><title>Touch plate 8</title><g aria-hidden="true">
+<rect x="312.5" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M348.438 537L348.438 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="348.438" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">8</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 10"><title>Touch plate 10</title><g aria-hidden="true">
+<rect x="384.375" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M420.312 537L420.312 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="420.312" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">10</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 12"><title>Touch plate 12</title><g aria-hidden="true">
+<rect x="456.25" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M492.188 537L492.188 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="492.188" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">12</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 13"><title>Touch plate 13</title><g aria-hidden="true">
+<rect x="528.125" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M564.062 537L564.062 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="564.062" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">13</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 15"><title>Touch plate 15</title><g aria-hidden="true">
+<rect x="600" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M635.938 537L635.938 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="635.938" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">15</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 17"><title>Touch plate 17</title><g aria-hidden="true">
+<rect x="671.875" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M707.812 537L707.812 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="707.812" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">17</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 18"><title>Touch plate 18</title><g aria-hidden="true">
+<rect x="743.75" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M779.688 537L779.688 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="779.688" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">18</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 20"><title>Touch plate 20</title><g aria-hidden="true">
+<rect x="815.625" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M851.562 537L851.562 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="851.562" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">20</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 22"><title>Touch plate 22</title><g aria-hidden="true">
+<rect x="887.5" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M923.438 537L923.438 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="923.438" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">22</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 24"><title>Touch plate 24</title><g aria-hidden="true">
+<rect x="959.375" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M995.312 537L995.312 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="995.312" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">24</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 25"><title>Touch plate 25</title><g aria-hidden="true">
+<rect x="1031.25" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1067.188 537L1067.188 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1067.188" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">25</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-27" data-part="key-27" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 27"><title>Touch plate 27</title><g aria-hidden="true">
+<rect x="1103.125" y="525" width="71.875" height="140" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1139.062 537L1139.062 653" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1139.062" y="656" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">27</text>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 2"><title>Touch plate 2</title><g aria-hidden="true">
+<rect x="74.594" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M96.875 537L96.875 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 4"><title>Touch plate 4</title><g aria-hidden="true">
+<rect x="146.469" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M168.75 537L168.75 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 7"><title>Touch plate 7</title><g aria-hidden="true">
+<rect x="290.219" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M312.5 537L312.5 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 9"><title>Touch plate 9</title><g aria-hidden="true">
+<rect x="362.094" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M384.375 537L384.375 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 11"><title>Touch plate 11</title><g aria-hidden="true">
+<rect x="433.969" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M456.25 537L456.25 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 14"><title>Touch plate 14</title><g aria-hidden="true">
+<rect x="577.719" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M600 537L600 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 16"><title>Touch plate 16</title><g aria-hidden="true">
+<rect x="649.594" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M671.875 537L671.875 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 19"><title>Touch plate 19</title><g aria-hidden="true">
+<rect x="793.344" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M815.625 537L815.625 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 21"><title>Touch plate 21</title><g aria-hidden="true">
+<rect x="865.219" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M887.5 537L887.5 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 23"><title>Touch plate 23</title><g aria-hidden="true">
+<rect x="937.094" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M959.375 537L959.375 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+</g>
+<g id="korg-volca-keys-interface--key-26" data-part="key-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Touch plate 26"><title>Touch plate 26</title><g aria-hidden="true">
+<rect x="1080.844" y="525" width="44.562" height="85.4" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1103.125 537L1103.125 598.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
 </g>
 </g>
 </svg>

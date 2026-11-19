@@ -245,57 +245,77 @@
 	"manufacturerUrl": "https://www.keithmcmillen.com/",
 	"productUrl": "https://www.keithmcmillen.com/products/k-mix/",
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1100,
 		"height": 860,
 		"elements": [
 			{
-				"id": "rotary-touch-rotary-1",
-				"label": "ROTARY TOUCH: Rotary 1",
-				"kind": "button",
+				"id": "rotary-1",
+				"label": "Assignable rotary 1",
+				"kind": "knob",
 				"position": {
 					"x": 5.090909090909091,
 					"y": 13.953488372093023,
 					"width": 15.636363636363637,
 					"height": 15.69767441860465
-				}
+				},
+				"message": {
+					"type": "cc",
+					"number": 50
+				},
+				"learnable": true
 			},
 			{
-				"id": "rotary-touch-rotary-2",
-				"label": "ROTARY TOUCH: Rotary 2",
-				"kind": "button",
+				"id": "rotary-2",
+				"label": "Assignable rotary 2",
+				"kind": "knob",
 				"position": {
 					"x": 20.727272727272727,
 					"y": 13.953488372093023,
 					"width": 15.636363636363637,
 					"height": 15.69767441860465
-				}
+				},
+				"message": {
+					"type": "cc",
+					"number": 51
+				},
+				"learnable": true
 			},
 			{
-				"id": "rotary-touch-rotary-3",
-				"label": "ROTARY TOUCH: Rotary 3",
-				"kind": "button",
+				"id": "rotary-3",
+				"label": "Assignable rotary 3",
+				"kind": "knob",
 				"position": {
 					"x": 36.36363636363637,
 					"y": 13.953488372093023,
 					"width": 15.636363636363637,
 					"height": 15.69767441860465
-				}
+				},
+				"message": {
+					"type": "cc",
+					"number": 52
+				},
+				"learnable": true
 			},
 			{
-				"id": "rotary-touch-rotary-4",
-				"label": "ROTARY TOUCH: Rotary 4",
-				"kind": "button",
+				"id": "rotary-4",
+				"label": "Assignable rotary 4",
+				"kind": "knob",
 				"position": {
 					"x": 52.0,
 					"y": 13.953488372093023,
 					"width": 15.636363636363637,
 					"height": 15.69767441860465
-				}
+				},
+				"message": {
+					"type": "cc",
+					"number": 53
+				},
+				"learnable": true
 			},
 			{
-				"id": "channel-faders-channel-1",
-				"label": "CHANNEL FADERS: Channel 1",
+				"id": "fader-1",
+				"label": "Channel 1 fader",
 				"kind": "fader",
 				"position": {
 					"x": 5.090909090909091,
@@ -303,11 +323,12 @@
 					"width": 7.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-1"
+				"control": "fader-1",
+				"learnable": true
 			},
 			{
-				"id": "channel-faders-channel-2",
-				"label": "CHANNEL FADERS: Channel 2",
+				"id": "fader-2",
+				"label": "Channel 2 fader",
 				"kind": "fader",
 				"position": {
 					"x": 12.909090909090908,
@@ -315,11 +336,12 @@
 					"width": 7.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-2"
+				"control": "fader-2",
+				"learnable": true
 			},
 			{
-				"id": "channel-faders-channel-3",
-				"label": "CHANNEL FADERS: Channel 3",
+				"id": "fader-3",
+				"label": "Channel 3 fader",
 				"kind": "fader",
 				"position": {
 					"x": 20.727272727272727,
@@ -327,11 +349,12 @@
 					"width": 7.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-3"
+				"control": "fader-3",
+				"learnable": true
 			},
 			{
-				"id": "channel-faders-channel-4",
-				"label": "CHANNEL FADERS: Channel 4",
+				"id": "fader-4",
+				"label": "Channel 4 fader",
 				"kind": "fader",
 				"position": {
 					"x": 28.545454545454547,
@@ -339,11 +362,12 @@
 					"width": 7.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-4"
+				"control": "fader-4",
+				"learnable": true
 			},
 			{
-				"id": "channel-faders-channel-5",
-				"label": "CHANNEL FADERS: Channel 5",
+				"id": "fader-5",
+				"label": "Channel 5 fader",
 				"kind": "fader",
 				"position": {
 					"x": 36.36363636363637,
@@ -351,11 +375,12 @@
 					"width": 7.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-5"
+				"control": "fader-5",
+				"learnable": true
 			},
 			{
-				"id": "channel-faders-channel-6",
-				"label": "CHANNEL FADERS: Channel 6",
+				"id": "fader-6",
+				"label": "Channel 6 fader",
 				"kind": "fader",
 				"position": {
 					"x": 44.18181818181818,
@@ -363,11 +388,12 @@
 					"width": 7.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-6"
+				"control": "fader-6",
+				"learnable": true
 			},
 			{
-				"id": "channel-faders-channel-7",
-				"label": "CHANNEL FADERS: Channel 7",
+				"id": "fader-7",
+				"label": "Channel 7 fader",
 				"kind": "fader",
 				"position": {
 					"x": 52.0,
@@ -375,11 +401,12 @@
 					"width": 7.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-7"
+				"control": "fader-7",
+				"learnable": true
 			},
 			{
-				"id": "channel-faders-channel-8",
-				"label": "CHANNEL FADERS: Channel 8",
+				"id": "fader-8",
+				"label": "Channel 8 fader",
 				"kind": "fader",
 				"position": {
 					"x": 59.81818181818181,
@@ -387,99 +414,116 @@
 					"width": 7.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-8"
+				"control": "fader-8",
+				"learnable": true
 			},
 			{
-				"id": "channel-select-1",
-				"label": "CHANNEL SELECT: 1",
+				"id": "mute-1",
+				"label": "Channel 1 mute",
 				"kind": "button",
 				"position": {
 					"x": 5.090909090909091,
 					"y": 88.37209302325581,
 					"width": 7.818181818181818,
 					"height": 4.069767441860465
-				}
+				},
+				"control": "mute-1",
+				"learnable": true
 			},
 			{
-				"id": "channel-select-2",
-				"label": "CHANNEL SELECT: 2",
+				"id": "mute-2",
+				"label": "Channel 2 mute",
 				"kind": "button",
 				"position": {
 					"x": 12.909090909090908,
 					"y": 88.37209302325581,
 					"width": 7.818181818181818,
 					"height": 4.069767441860465
-				}
+				},
+				"control": "mute-2",
+				"learnable": true
 			},
 			{
-				"id": "channel-select-3",
-				"label": "CHANNEL SELECT: 3",
+				"id": "mute-3",
+				"label": "Channel 3 mute",
 				"kind": "button",
 				"position": {
 					"x": 20.727272727272727,
 					"y": 88.37209302325581,
 					"width": 7.818181818181818,
 					"height": 4.069767441860465
-				}
+				},
+				"control": "mute-3",
+				"learnable": true
 			},
 			{
-				"id": "channel-select-4",
-				"label": "CHANNEL SELECT: 4",
+				"id": "mute-4",
+				"label": "Channel 4 mute",
 				"kind": "button",
 				"position": {
 					"x": 28.545454545454547,
 					"y": 88.37209302325581,
 					"width": 7.818181818181818,
 					"height": 4.069767441860465
-				}
+				},
+				"control": "mute-4",
+				"learnable": true
 			},
 			{
-				"id": "channel-select-5",
-				"label": "CHANNEL SELECT: 5",
+				"id": "mute-5",
+				"label": "Channel 5 mute",
 				"kind": "button",
 				"position": {
 					"x": 36.36363636363637,
 					"y": 88.37209302325581,
 					"width": 7.818181818181818,
 					"height": 4.069767441860465
-				}
+				},
+				"control": "mute-5",
+				"learnable": true
 			},
 			{
-				"id": "channel-select-6",
-				"label": "CHANNEL SELECT: 6",
+				"id": "mute-6",
+				"label": "Channel 6 mute",
 				"kind": "button",
 				"position": {
 					"x": 44.18181818181818,
 					"y": 88.37209302325581,
 					"width": 7.818181818181818,
 					"height": 4.069767441860465
-				}
+				},
+				"control": "mute-6",
+				"learnable": true
 			},
 			{
-				"id": "channel-select-7",
-				"label": "CHANNEL SELECT: 7",
+				"id": "mute-7",
+				"label": "Channel 7 mute",
 				"kind": "button",
 				"position": {
 					"x": 52.0,
 					"y": 88.37209302325581,
 					"width": 7.818181818181818,
 					"height": 4.069767441860465
-				}
+				},
+				"control": "mute-7",
+				"learnable": true
 			},
 			{
-				"id": "channel-select-8",
-				"label": "CHANNEL SELECT: 8",
+				"id": "mute-8",
+				"label": "Channel 8 mute",
 				"kind": "button",
 				"position": {
 					"x": 59.81818181818181,
 					"y": 88.37209302325581,
 					"width": 7.818181818181818,
 					"height": 4.069767441860465
-				}
+				},
+				"control": "mute-8",
+				"learnable": true
 			},
 			{
-				"id": "main-main",
-				"label": "MAIN: Main",
+				"id": "fader-9",
+				"label": "Main fader",
 				"kind": "fader",
 				"position": {
 					"x": 85.0909090909091,
@@ -487,7 +531,8 @@
 					"width": 9.818181818181818,
 					"height": 45.93023255813954
 				},
-				"control": "fader-9"
+				"control": "fader-9",
+				"learnable": true
 			},
 			{
 				"id": "navigation-up",
@@ -498,7 +543,8 @@
 					"y": 13.953488372093023,
 					"width": 11.954545454545455,
 					"height": 7.848837209302325
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-down",
@@ -509,7 +555,8 @@
 					"y": 13.953488372093023,
 					"width": 11.954545454545455,
 					"height": 7.848837209302325
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-left",
@@ -520,7 +567,8 @@
 					"y": 21.802325581395348,
 					"width": 11.954545454545455,
 					"height": 7.848837209302325
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-right",
@@ -531,7 +579,8 @@
 					"y": 21.802325581395348,
 					"width": 11.954545454545455,
 					"height": 7.848837209302325
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-input",
@@ -542,7 +591,8 @@
 					"y": 36.627906976744185,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-output",
@@ -553,7 +603,8 @@
 					"y": 36.627906976744185,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-pan",
@@ -564,7 +615,8 @@
 					"y": 43.604651162790695,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-aux-1",
@@ -575,7 +627,8 @@
 					"y": 43.604651162790695,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-aux-2",
@@ -586,7 +639,8 @@
 					"y": 50.58139534883721,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-aux-3",
@@ -597,7 +651,8 @@
 					"y": 50.58139534883721,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-eq",
@@ -608,7 +663,8 @@
 					"y": 57.55813953488372,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-dynamics",
@@ -619,7 +675,8 @@
 					"y": 57.55813953488372,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-reverb",
@@ -630,7 +687,8 @@
 					"y": 64.53488372093024,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-midi",
@@ -641,7 +699,8 @@
 					"y": 64.53488372093024,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-bank-1",
@@ -652,7 +711,8 @@
 					"y": 71.51162790697676,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-bank-2",
@@ -663,7 +723,8 @@
 					"y": 71.51162790697676,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-bank-3",
@@ -674,18 +735,21 @@
 					"y": 78.48837209302324,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "mix-midi-mute",
-				"label": "MIX / MIDI: Mute",
+				"id": "mute-9",
+				"label": "Main mute",
 				"kind": "button",
 				"position": {
 					"x": 76.81818181818181,
 					"y": 78.48837209302324,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"control": "mute-9",
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-solo",
@@ -696,7 +760,8 @@
 					"y": 85.46511627906976,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mix-midi-bypass",
@@ -707,7 +772,8 @@
 					"y": 85.46511627906976,
 					"width": 5.818181818181818,
 					"height": 6.976744186046512
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

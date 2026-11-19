@@ -123,13 +123,13 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1500,
 		"height": 720,
 		"elements": [
 			{
-				"id": "sound-tuning",
-				"label": "SOUND: Tuning",
+				"id": "sound-tuning-knob",
+				"label": "Tuning",
 				"kind": "knob",
 				"position": {
 					"x": 2.0666666666666664,
@@ -137,11 +137,12 @@
 					"width": 11.533333333333333,
 					"height": 15.972222222222221
 				},
-				"control": "sound-tuning-knob"
+				"control": "sound-tuning-knob",
+				"learnable": true
 			},
 			{
-				"id": "sound-cutoff",
-				"label": "SOUND: Cutoff",
+				"id": "sound-cutoff-knob",
+				"label": "Cutoff",
 				"kind": "knob",
 				"position": {
 					"x": 13.600000000000001,
@@ -149,11 +150,12 @@
 					"width": 11.533333333333333,
 					"height": 15.972222222222221
 				},
-				"control": "sound-cutoff-knob"
+				"control": "sound-cutoff-knob",
+				"learnable": true
 			},
 			{
-				"id": "sound-resonance",
-				"label": "SOUND: Resonance",
+				"id": "sound-resonance-knob",
+				"label": "Resonance",
 				"kind": "knob",
 				"position": {
 					"x": 25.133333333333336,
@@ -161,11 +163,12 @@
 					"width": 11.533333333333333,
 					"height": 15.972222222222221
 				},
-				"control": "sound-resonance-knob"
+				"control": "sound-resonance-knob",
+				"learnable": true
 			},
 			{
-				"id": "sound-env-mod",
-				"label": "SOUND: Env mod",
+				"id": "sound-env-mod-knob",
+				"label": "Env mod",
 				"kind": "knob",
 				"position": {
 					"x": 36.666666666666664,
@@ -173,11 +176,12 @@
 					"width": 11.533333333333333,
 					"height": 15.972222222222221
 				},
-				"control": "sound-env-mod-knob"
+				"control": "sound-env-mod-knob",
+				"learnable": true
 			},
 			{
-				"id": "sound-decay",
-				"label": "SOUND: Decay",
+				"id": "sound-decay-knob",
+				"label": "Decay",
 				"kind": "knob",
 				"position": {
 					"x": 48.199999999999996,
@@ -185,11 +189,12 @@
 					"width": 11.533333333333333,
 					"height": 15.972222222222221
 				},
-				"control": "sound-decay-knob"
+				"control": "sound-decay-knob",
+				"learnable": true
 			},
 			{
-				"id": "sound-accent",
-				"label": "SOUND: Accent",
+				"id": "sound-accent-knob",
+				"label": "Accent",
 				"kind": "knob",
 				"position": {
 					"x": 59.73333333333334,
@@ -197,43 +202,47 @@
 					"width": 11.533333333333333,
 					"height": 15.972222222222221
 				},
-				"control": "sound-accent-knob"
+				"control": "sound-accent-knob",
+				"learnable": true
 			},
 			{
-				"id": "effects-overdrive",
-				"label": "EFFECTS: Overdrive",
+				"id": "effects-overdrive-knob",
+				"label": "Overdrive",
 				"kind": "knob",
 				"position": {
 					"x": 73.06666666666666,
 					"y": 13.194444444444445,
-					"width": 8.288888888888888,
+					"width": 8.288886666666667,
 					"height": 15.972222222222221
 				},
-				"control": "effects-overdrive-knob"
+				"control": "effects-overdrive-knob",
+				"learnable": true
 			},
 			{
-				"id": "effects-delay-time",
-				"label": "EFFECTS: Delay time",
+				"id": "effects-delay-time-knob",
+				"label": "Delay time",
 				"kind": "knob",
 				"position": {
-					"x": 81.35555555555555,
+					"x": 81.35555333333333,
 					"y": 13.194444444444445,
-					"width": 8.288888888888888,
+					"width": 8.288886666666667,
 					"height": 15.972222222222221
 				},
-				"control": "effects-delay-time-knob"
+				"control": "effects-delay-time-knob",
+				"learnable": true
 			},
 			{
-				"id": "effects-delay-feedback",
-				"label": "EFFECTS: Delay feedback",
+				"id": "effects-delay-feedback-knob",
+				"label": "Delay feedback",
 				"kind": "knob",
 				"position": {
-					"x": 89.64444444444445,
+					"x": 89.64444666666667,
 					"y": 13.194444444444445,
-					"width": 8.288888888888888,
+					"width": 8.288886666666667,
 					"height": 15.972222222222221
 				},
-				"control": "effects-delay-feedback-knob"
+				"control": "effects-delay-feedback-knob",
+				"learnable": true
 			},
 			{
 				"id": "mode-tempo-volume",
@@ -242,31 +251,34 @@
 				"position": {
 					"x": 2.0666666666666664,
 					"y": 36.11111111111111,
-					"width": 8.622222222222224,
-					"height": 16.89814814814815
-				}
+					"width": 8.62222,
+					"height": 16.898152777777778
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-tempo-waveform",
 				"label": "MODE / TEMPO: Waveform",
 				"kind": "button",
 				"position": {
-					"x": 10.68888888888889,
+					"x": 10.688886666666667,
 					"y": 36.11111111111111,
-					"width": 8.622222222222224,
-					"height": 16.89814814814815
-				}
+					"width": 8.62222,
+					"height": 16.898152777777778
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-tempo-track-group",
 				"label": "MODE / TEMPO: Track group",
 				"kind": "knob",
 				"position": {
-					"x": 19.311111111111114,
+					"x": 19.31111333333333,
 					"y": 36.11111111111111,
-					"width": 8.622222222222224,
-					"height": 16.89814814814815
-				}
+					"width": 8.62222,
+					"height": 16.898152777777778
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-tempo-mode",
@@ -274,32 +286,35 @@
 				"kind": "knob",
 				"position": {
 					"x": 2.0666666666666664,
-					"y": 53.00925925925927,
-					"width": 8.622222222222224,
-					"height": 16.89814814814815
-				}
+					"y": 53.00926388888889,
+					"width": 8.62222,
+					"height": 16.898152777777778
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-tempo-tempo",
 				"label": "MODE / TEMPO: Tempo",
 				"kind": "knob",
 				"position": {
-					"x": 10.68888888888889,
-					"y": 53.00925925925927,
-					"width": 8.622222222222224,
-					"height": 16.89814814814815
-				}
+					"x": 10.688886666666667,
+					"y": 53.00926388888889,
+					"width": 8.62222,
+					"height": 16.898152777777778
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-tempo-value",
 				"label": "MODE / TEMPO: Value",
 				"kind": "knob",
 				"position": {
-					"x": 19.311111111111114,
-					"y": 53.00925925925927,
-					"width": 8.622222222222224,
-					"height": 16.89814814814815
-				}
+					"x": 19.31111333333333,
+					"y": 53.00926388888889,
+					"width": 8.62222,
+					"height": 16.898152777777778
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-tempo-run-stop",
@@ -307,10 +322,11 @@
 				"kind": "button",
 				"position": {
 					"x": 2.0666666666666664,
-					"y": 69.90740740740742,
-					"width": 8.622222222222224,
-					"height": 16.89814814814815
-				}
+					"y": 69.90740277777778,
+					"width": 8.62222,
+					"height": 16.898152777777778
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-pattern-clear",
@@ -321,7 +337,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-pitch-mode",
@@ -332,7 +349,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-function",
@@ -343,7 +361,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-time-mode",
@@ -354,7 +373,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-transpose",
@@ -365,7 +385,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-transpose-2",
@@ -376,7 +397,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-accent",
@@ -387,7 +409,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-slide",
@@ -398,7 +421,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-back",
@@ -409,7 +433,8 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "functions-tap",
@@ -420,150 +445,216 @@
 					"y": 36.11111111111111,
 					"width": 6.819999999999999,
 					"height": 9.027777777777777
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-1",
-				"label": "NOTE / STEP KEYS: 1",
+				"id": "key-1",
+				"label": "Key 1",
 				"kind": "key",
 				"position": {
 					"x": 29.733333333333334,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-2",
-				"label": "NOTE / STEP KEYS: 2",
+				"id": "key-2",
+				"label": "Key 2",
 				"kind": "key",
 				"position": {
-					"x": 34.97948717948719,
+					"x": 34.97948666666667,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-3",
-				"label": "NOTE / STEP KEYS: 3",
+				"id": "key-3",
+				"label": "Key 3",
 				"kind": "key",
 				"position": {
-					"x": 40.225641025641025,
+					"x": 40.22564,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-4",
-				"label": "NOTE / STEP KEYS: 4",
+				"id": "key-4",
+				"label": "Key 4",
 				"kind": "key",
 				"position": {
-					"x": 45.47179487179488,
+					"x": 45.47179333333333,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-5",
-				"label": "NOTE / STEP KEYS: 5",
+				"id": "key-5",
+				"label": "Key 5",
 				"kind": "key",
 				"position": {
-					"x": 50.717948717948715,
+					"x": 50.71794666666667,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-6",
-				"label": "NOTE / STEP KEYS: 6",
+				"id": "key-6",
+				"label": "Key 6",
 				"kind": "key",
 				"position": {
-					"x": 55.96410256410256,
+					"x": 55.9641,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-7",
-				"label": "NOTE / STEP KEYS: 7",
+				"id": "key-7",
+				"label": "Key 7",
 				"kind": "key",
 				"position": {
-					"x": 61.21025641025641,
+					"x": 61.210253333333334,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-8",
-				"label": "NOTE / STEP KEYS: 8",
+				"id": "key-8",
+				"label": "Key 8",
 				"kind": "key",
 				"position": {
-					"x": 66.45641025641027,
+					"x": 66.45641333333333,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-9",
-				"label": "NOTE / STEP KEYS: 9",
+				"id": "key-9",
+				"label": "Key 9",
 				"kind": "key",
 				"position": {
-					"x": 71.7025641025641,
+					"x": 71.70256666666668,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-10",
-				"label": "NOTE / STEP KEYS: 10",
+				"id": "key-10",
+				"label": "Key 10",
 				"kind": "key",
 				"position": {
-					"x": 76.94871794871794,
+					"x": 76.94872000000001,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-11",
-				"label": "NOTE / STEP KEYS: 11",
+				"id": "key-11",
+				"label": "Key 11",
 				"kind": "key",
 				"position": {
-					"x": 82.19487179487179,
+					"x": 82.19487333333333,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-12",
-				"label": "NOTE / STEP KEYS: 12",
+				"id": "key-12",
+				"label": "Key 12",
 				"kind": "key",
 				"position": {
-					"x": 87.44102564102565,
+					"x": 87.44102666666666,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 59
+				},
+				"learnable": true
 			},
 			{
-				"id": "note-step-keys-13",
-				"label": "NOTE / STEP KEYS: 13",
+				"id": "key-13",
+				"label": "Key 13",
 				"kind": "key",
 				"position": {
-					"x": 92.68717948717949,
+					"x": 92.68718,
 					"y": 52.77777777777778,
-					"width": 5.246153846153846,
+					"width": 5.246153333333334,
 					"height": 34.02777777777778
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true
 			}
 		]
 	},

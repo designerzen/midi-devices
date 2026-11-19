@@ -1,223 +1,357 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 770" role="img" aria-labelledby="title description">
-<title id="title">Expressive E Osmose top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1600" height="770" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1582" height="752" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Expressive E Osmose</text>
-<text x="1575" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="300" height="205" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="performance-pitch" data-kind="strip" aria-label="Pitch"><title>Pitch</title>
-<rect x="92" y="100" width="22" height="53.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M103 105L103 149.57" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 770" role="group" aria-labelledby="expressive-e-osmose-panel--title" aria-describedby="expressive-e-osmose-panel--description" data-device="expressive-e-osmose" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="expressive-e-osmose-panel--title">Expressive E Osmose overhead hardware diagram</title><desc id="expressive-e-osmose-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="expressive-e-osmose-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1582" height="752" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Expressive E Osmose</text>
+<text x="1575" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="300" height="205" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="570" y="65" width="650" height="205" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1240" y="65" width="335" height="205" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-mod" data-kind="strip" aria-label="Mod"><title>Mod</title>
-<rect x="236" y="100" width="22" height="53.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M247 105L247 149.57" fill="none" stroke="#000" stroke-width="1"/>
+<g id="expressive-e-osmose-panel--performance-pitch" data-part="performance-pitch" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Pitch"><title>PERFORMANCE: Pitch</title><g aria-hidden="true">
+<rect x="92" y="100" width="22" height="53.57" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M103 105L103 149.57" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="88" y="198.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="expressive-e-osmose-panel--surface--performance-pitch" data-surface-control="performance-pitch" aria-hidden="true"><rect x="31" y="95" width="144" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="232" y="198.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="expressive-e-osmose-panel--performance-mod" data-part="performance-mod" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Mod"><title>PERFORMANCE: Mod</title><g aria-hidden="true">
+<rect x="236" y="100" width="22" height="53.57" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M247 105L247 149.57" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="570" y="65" width="650" height="205" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="display-navigation-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="581" y="100" width="96.333" height="57.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="585" y="104" width="88.333" height="49.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="expressive-e-osmose-panel--surface--performance-mod" data-surface-control="performance-mod" aria-hidden="true"><rect x="175" y="95" width="144" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-navigation-preset" data-kind="knob" aria-label="Preset"><title>Preset</title>
-<circle cx="735.5" cy="128.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M735.5 109.62L735.5 121.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="expressive-e-osmose-panel--performance-octave" data-part="performance-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave -"><title>PERFORMANCE: Octave -</title><g aria-hidden="true">
+<rect x="88" y="198.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-navigation-left" data-kind="button" aria-label="Left"><title>Left</title>
-<rect x="826.833" y="113.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="expressive-e-osmose-panel--surface--performance-octave" data-surface-control="performance-octave" aria-hidden="true"><rect x="31" y="180" width="144" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-navigation-right" data-kind="button" aria-label="Right"><title>Right</title>
-<rect x="933.167" y="113.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="expressive-e-osmose-panel--performance-octave-2" data-part="performance-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave +"><title>PERFORMANCE: Octave +</title><g aria-hidden="true">
+<rect x="232" y="198.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-navigation-up" data-kind="button" aria-label="Up"><title>Up</title>
-<rect x="1039.5" y="113.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="expressive-e-osmose-panel--surface--performance-octave-2" data-surface-control="performance-octave-2" aria-hidden="true"><rect x="175" y="180" width="144" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-navigation-down" data-kind="button" aria-label="Down"><title>Down</title>
-<rect x="1145.833" y="113.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="expressive-e-osmose-panel--display-navigation-display" data-part="display-navigation-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="DISPLAY / NAVIGATION: Display"><title>DISPLAY / NAVIGATION: Display</title><g aria-hidden="true">
+<rect x="581" y="100" width="96.333" height="57.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="585" y="104" width="88.333" height="49.57" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-navigation-menu" data-kind="button" aria-label="Menu"><title>Menu</title>
-<rect x="614.167" y="198.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 </g>
-<g id="display-navigation-encoder-1" data-kind="knob" aria-label="Encoder 1"><title>Encoder 1</title>
-<circle cx="735.5" cy="213.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M735.5 194.62L735.5 206.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="expressive-e-osmose-panel--display-navigation-preset" data-part="display-navigation-preset" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DISPLAY / NAVIGATION: Preset"><title>DISPLAY / NAVIGATION: Preset</title><g aria-hidden="true">
+<circle cx="735.5" cy="128.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M735.5 109.62L735.5 121.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="display-navigation-encoder-2" data-kind="knob" aria-label="Encoder 2"><title>Encoder 2</title>
-<circle cx="841.833" cy="213.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M841.833 194.62L841.833 206.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-preset" data-surface-control="display-navigation-preset" aria-hidden="true"><rect x="682.3333" y="95" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-navigation-encoder-3" data-kind="knob" aria-label="Encoder 3"><title>Encoder 3</title>
-<circle cx="948.167" cy="213.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M948.167 194.62L948.167 206.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="expressive-e-osmose-panel--display-navigation-left" data-part="display-navigation-left" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / NAVIGATION: Left"><title>DISPLAY / NAVIGATION: Left</title><g aria-hidden="true">
+<rect x="826.833" y="113.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-navigation-encoder-4" data-kind="knob" aria-label="Encoder 4"><title>Encoder 4</title>
-<circle cx="1054.5" cy="213.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1054.5 194.62L1054.5 206.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-left" data-surface-control="display-navigation-left" aria-hidden="true"><rect x="788.6667" y="95" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="1240" y="65" width="335" height="205" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="output-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="1299.833" cy="171.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1299.833 149.285L1299.833 162.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="expressive-e-osmose-panel--display-navigation-right" data-part="display-navigation-right" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / NAVIGATION: Right"><title>DISPLAY / NAVIGATION: Right</title><g aria-hidden="true">
+<rect x="933.167" y="113.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="output-config" data-kind="button" aria-label="Config"><title>Config</title>
-<rect x="1392.5" y="156.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-right" data-surface-control="display-navigation-right" aria-hidden="true"><rect x="895" y="95" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="output-mode" data-kind="button" aria-label="Mode"><title>Mode</title>
-<rect x="1500.167" y="156.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="expressive-e-osmose-panel--display-navigation-up" data-part="display-navigation-up" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / NAVIGATION: Up"><title>DISPLAY / NAVIGATION: Up</title><g aria-hidden="true">
+<rect x="1039.5" y="113.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="30" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-up" data-surface-control="display-navigation-up" aria-hidden="true"><rect x="1001.3333" y="95" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="83.103" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--display-navigation-down" data-part="display-navigation-down" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / NAVIGATION: Down"><title>DISPLAY / NAVIGATION: Down</title><g aria-hidden="true">
+<rect x="1145.833" y="113.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="136.207" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-down" data-surface-control="display-navigation-down" aria-hidden="true"><rect x="1107.6667" y="95" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="189.31" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--display-navigation-menu" data-part="display-navigation-menu" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / NAVIGATION: Menu"><title>DISPLAY / NAVIGATION: Menu</title><g aria-hidden="true">
+<rect x="614.167" y="198.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="242.414" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-menu" data-surface-control="display-navigation-menu" aria-hidden="true"><rect x="576" y="180" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="295.517" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--display-navigation-encoder-1" data-part="display-navigation-encoder-1" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DISPLAY / NAVIGATION: Encoder 1"><title>DISPLAY / NAVIGATION: Encoder 1</title><g aria-hidden="true">
+<circle cx="735.5" cy="213.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M735.5 194.62L735.5 206.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="348.621" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-encoder-1" data-surface-control="display-navigation-encoder-1" aria-hidden="true"><rect x="682.3333" y="180" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="401.724" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--display-navigation-encoder-2" data-part="display-navigation-encoder-2" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DISPLAY / NAVIGATION: Encoder 2"><title>DISPLAY / NAVIGATION: Encoder 2</title><g aria-hidden="true">
+<circle cx="841.833" cy="213.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M841.833 194.62L841.833 206.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="454.828" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-encoder-2" data-surface-control="display-navigation-encoder-2" aria-hidden="true"><rect x="788.6667" y="180" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="507.931" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--display-navigation-encoder-3" data-part="display-navigation-encoder-3" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DISPLAY / NAVIGATION: Encoder 3"><title>DISPLAY / NAVIGATION: Encoder 3</title><g aria-hidden="true">
+<circle cx="948.167" cy="213.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M948.167 194.62L948.167 206.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="561.034" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-encoder-3" data-surface-control="display-navigation-encoder-3" aria-hidden="true"><rect x="895" y="180" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="614.138" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--display-navigation-encoder-4" data-part="display-navigation-encoder-4" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DISPLAY / NAVIGATION: Encoder 4"><title>DISPLAY / NAVIGATION: Encoder 4</title><g aria-hidden="true">
+<circle cx="1054.5" cy="213.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1054.5 194.62L1054.5 206.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="667.241" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--display-navigation-encoder-4" data-surface-control="display-navigation-encoder-4" aria-hidden="true"><rect x="1001.3333" y="180" width="106.3333" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="720.345" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--output-volume" data-part="output-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OUTPUT: Volume"><title>OUTPUT: Volume</title><g aria-hidden="true">
+<circle cx="1299.833" cy="171.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1299.833 149.285L1299.833 162.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="773.448" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--output-volume" data-surface-control="output-volume" aria-hidden="true"><rect x="1246" y="95" width="107.6667" height="170" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="826.552" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--output-config" data-part="output-config" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OUTPUT: Config"><title>OUTPUT: Config</title><g aria-hidden="true">
+<rect x="1392.5" y="156.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="879.655" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--output-config" data-surface-control="output-config" aria-hidden="true"><rect x="1353.6667" y="95" width="107.6667" height="170" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="932.759" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--output-mode" data-part="output-mode" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OUTPUT: Mode"><title>OUTPUT: Mode</title><g aria-hidden="true">
+<rect x="1500.167" y="156.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="985.862" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--output-mode" data-surface-control="output-mode" aria-hidden="true"><rect x="1461.3333" y="95" width="107.6667" height="170" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-34" data-kind="key" aria-label="Key 34"><title>Key 34</title>
-<rect x="1038.966" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="expressive-e-osmose-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="30" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-36" data-kind="key" aria-label="Key 36"><title>Key 36</title>
-<rect x="1092.069" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-48" data-surface-control="note-48" aria-hidden="true"><rect x="30" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-37" data-kind="key" aria-label="Key 37"><title>Key 37</title>
-<rect x="1145.172" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="83.103" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-39" data-kind="key" aria-label="Key 39"><title>Key 39</title>
-<rect x="1198.276" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-50" data-surface-control="note-50" aria-hidden="true"><rect x="83.1034" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-41" data-kind="key" aria-label="Key 41"><title>Key 41</title>
-<rect x="1251.379" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="136.207" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-42" data-kind="key" aria-label="Key 42"><title>Key 42</title>
-<rect x="1304.483" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-52" data-surface-control="note-52" aria-hidden="true"><rect x="136.2069" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-44" data-kind="key" aria-label="Key 44"><title>Key 44</title>
-<rect x="1357.586" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="189.31" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-46" data-kind="key" aria-label="Key 46"><title>Key 46</title>
-<rect x="1410.69" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-53" data-surface-control="note-53" aria-hidden="true"><rect x="189.3103" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-48" data-kind="key" aria-label="Key 48"><title>Key 48</title>
-<rect x="1463.793" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="242.414" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-49" data-kind="key" aria-label="Key 49"><title>Key 49</title>
-<rect x="1516.897" y="295" width="53.103" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-55" data-surface-control="note-55" aria-hidden="true"><rect x="242.4138" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="66.641" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="295.517" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="119.745" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-57" data-surface-control="note-57" aria-hidden="true"><rect x="295.5172" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="225.952" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="348.621" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="279.055" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-59" data-surface-control="note-59" aria-hidden="true"><rect x="348.6207" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="332.159" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="401.724" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="438.366" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-60" data-surface-control="note-60" aria-hidden="true"><rect x="401.7241" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="491.469" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="454.828" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="597.676" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-62" data-surface-control="note-62" aria-hidden="true"><rect x="454.8276" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="650.779" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="507.931" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="703.883" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-64" data-surface-control="note-64" aria-hidden="true"><rect x="507.931" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="810.09" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="561.034" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="863.193" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-65" data-surface-control="note-65" aria-hidden="true"><rect x="561.0345" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="969.4" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="614.138" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-33" data-kind="key" aria-label="Key 33"><title>Key 33</title>
-<rect x="1022.503" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-67" data-surface-control="note-67" aria-hidden="true"><rect x="614.1379" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-35" data-kind="key" aria-label="Key 35"><title>Key 35</title>
-<rect x="1075.607" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="667.241" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-38" data-kind="key" aria-label="Key 38"><title>Key 38</title>
-<rect x="1181.814" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-69" data-surface-control="note-69" aria-hidden="true"><rect x="667.2414" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-40" data-kind="key" aria-label="Key 40"><title>Key 40</title>
-<rect x="1234.917" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="720.345" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-43" data-kind="key" aria-label="Key 43"><title>Key 43</title>
-<rect x="1341.124" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-71" data-surface-control="note-71" aria-hidden="true"><rect x="720.3448" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-45" data-kind="key" aria-label="Key 45"><title>Key 45</title>
-<rect x="1394.228" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="773.448" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-47" data-kind="key" aria-label="Key 47"><title>Key 47</title>
-<rect x="1447.331" y="295" width="32.924" height="262.3" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="expressive-e-osmose-panel--surface--note-72" data-surface-control="note-72" aria-hidden="true"><rect x="773.4483" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-27" data-part="key-27" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 27"><title>Key 27</title><g aria-hidden="true">
+<rect x="826.552" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-74" data-surface-control="note-74" aria-hidden="true"><rect x="826.5517" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-29" data-part="key-29" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 29"><title>Key 29</title><g aria-hidden="true">
+<rect x="879.655" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-76" data-surface-control="note-76" aria-hidden="true"><rect x="879.6552" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-30" data-part="key-30" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 30"><title>Key 30</title><g aria-hidden="true">
+<rect x="932.759" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-77" data-surface-control="note-77" aria-hidden="true"><rect x="932.7586" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-32" data-part="key-32" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 32"><title>Key 32</title><g aria-hidden="true">
+<rect x="985.862" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-79" data-surface-control="note-79" aria-hidden="true"><rect x="985.8621" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-34" data-part="key-34" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 34"><title>Key 34</title><g aria-hidden="true">
+<rect x="1038.966" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-81" data-surface-control="note-81" aria-hidden="true"><rect x="1038.9655" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-36" data-part="key-36" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 36"><title>Key 36</title><g aria-hidden="true">
+<rect x="1092.069" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-83" data-surface-control="note-83" aria-hidden="true"><rect x="1092.069" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-37" data-part="key-37" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 37"><title>Key 37</title><g aria-hidden="true">
+<rect x="1145.172" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-84" data-surface-control="note-84" aria-hidden="true"><rect x="1145.1724" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-39" data-part="key-39" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 39"><title>Key 39</title><g aria-hidden="true">
+<rect x="1198.276" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-86" data-surface-control="note-86" aria-hidden="true"><rect x="1198.2759" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-41" data-part="key-41" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 41"><title>Key 41</title><g aria-hidden="true">
+<rect x="1251.379" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-88" data-surface-control="note-88" aria-hidden="true"><rect x="1251.3793" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-42" data-part="key-42" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 42"><title>Key 42</title><g aria-hidden="true">
+<rect x="1304.483" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-89" data-surface-control="note-89" aria-hidden="true"><rect x="1304.4828" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-44" data-part="key-44" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 44"><title>Key 44</title><g aria-hidden="true">
+<rect x="1357.586" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-91" data-surface-control="note-91" aria-hidden="true"><rect x="1357.5862" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-46" data-part="key-46" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 46"><title>Key 46</title><g aria-hidden="true">
+<rect x="1410.69" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-93" data-surface-control="note-93" aria-hidden="true"><rect x="1410.6897" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-48" data-part="key-48" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 48"><title>Key 48</title><g aria-hidden="true">
+<rect x="1463.793" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-95" data-surface-control="note-95" aria-hidden="true"><rect x="1463.7931" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-49" data-part="key-49" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 49"><title>Key 49</title><g aria-hidden="true">
+<rect x="1516.897" y="295" width="53.103" height="430" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-96" data-surface-control="note-96" aria-hidden="true"><rect x="1516.8966" y="295" width="53.1034" height="430" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="66.641" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-49" data-surface-control="note-49" aria-hidden="true"><rect x="66.6414" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="119.745" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-51" data-surface-control="note-51" aria-hidden="true"><rect x="119.7448" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="225.952" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-54" data-surface-control="note-54" aria-hidden="true"><rect x="225.9517" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="279.055" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-56" data-surface-control="note-56" aria-hidden="true"><rect x="279.0552" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="332.159" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-58" data-surface-control="note-58" aria-hidden="true"><rect x="332.1586" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="438.366" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-61" data-surface-control="note-61" aria-hidden="true"><rect x="438.3655" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="491.469" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-63" data-surface-control="note-63" aria-hidden="true"><rect x="491.469" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="597.676" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-66" data-surface-control="note-66" aria-hidden="true"><rect x="597.6759" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="650.779" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-68" data-surface-control="note-68" aria-hidden="true"><rect x="650.7793" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="703.883" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-70" data-surface-control="note-70" aria-hidden="true"><rect x="703.8828" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-26" data-part="key-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 26"><title>Key 26</title><g aria-hidden="true">
+<rect x="810.09" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-73" data-surface-control="note-73" aria-hidden="true"><rect x="810.0897" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-28" data-part="key-28" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 28"><title>Key 28</title><g aria-hidden="true">
+<rect x="863.193" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-75" data-surface-control="note-75" aria-hidden="true"><rect x="863.1931" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-31" data-part="key-31" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 31"><title>Key 31</title><g aria-hidden="true">
+<rect x="969.4" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-78" data-surface-control="note-78" aria-hidden="true"><rect x="969.4" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-33" data-part="key-33" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 33"><title>Key 33</title><g aria-hidden="true">
+<rect x="1022.503" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-80" data-surface-control="note-80" aria-hidden="true"><rect x="1022.5034" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-35" data-part="key-35" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 35"><title>Key 35</title><g aria-hidden="true">
+<rect x="1075.607" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-82" data-surface-control="note-82" aria-hidden="true"><rect x="1075.6069" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-38" data-part="key-38" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 38"><title>Key 38</title><g aria-hidden="true">
+<rect x="1181.814" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-85" data-surface-control="note-85" aria-hidden="true"><rect x="1181.8138" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-40" data-part="key-40" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 40"><title>Key 40</title><g aria-hidden="true">
+<rect x="1234.917" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-87" data-surface-control="note-87" aria-hidden="true"><rect x="1234.9172" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-43" data-part="key-43" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 43"><title>Key 43</title><g aria-hidden="true">
+<rect x="1341.124" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-90" data-surface-control="note-90" aria-hidden="true"><rect x="1341.1241" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-45" data-part="key-45" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 45"><title>Key 45</title><g aria-hidden="true">
+<rect x="1394.228" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-92" data-surface-control="note-92" aria-hidden="true"><rect x="1394.2276" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="expressive-e-osmose-panel--key-47" data-part="key-47" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 47"><title>Key 47</title><g aria-hidden="true">
+<rect x="1447.331" y="295" width="32.924" height="262.3" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="expressive-e-osmose-panel--surface--note-94" data-surface-control="note-94" aria-hidden="true"><rect x="1447.331" y="295" width="32.9241" height="262.3" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

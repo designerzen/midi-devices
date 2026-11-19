@@ -1,154 +1,237 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 860" role="img" aria-labelledby="title description">
-<title id="title">K-Mix Audio Control top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1100" height="860" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1082" height="842" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">K-Mix Audio Control</text>
-<text x="1075" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="50" y="90" width="700" height="170" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="rotary-touch-rotary-1" data-kind="touch" aria-label="Rotary 1"><title>Rotary 1</title>
-<circle cx="142" cy="178.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M142 156.785L142 170.035" fill="none" stroke="#000" stroke-width="1"/>
-<circle cx="142" cy="178.785" r="20" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 860" role="group" aria-labelledby="k-mix-audio-control-panel--title" aria-describedby="k-mix-audio-control-panel--description" data-device="k-mix-audio-control" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="k-mix-audio-control-panel--title">K-Mix Audio Control overhead hardware diagram</title><desc id="k-mix-audio-control-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="k-mix-audio-control-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1082" height="842" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">K-Mix Audio Control</text>
+<text x="1075" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="50" y="90" width="700" height="170" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="50" y="285" width="700" height="430" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="50" y="730" width="700" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="930" y="285" width="120" height="430" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="775" y="90" width="275" height="170" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="775" y="285" width="140" height="515" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="rotary-touch-rotary-2" data-kind="touch" aria-label="Rotary 2"><title>Rotary 2</title>
-<circle cx="314" cy="178.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M314 156.785L314 170.035" fill="none" stroke="#000" stroke-width="1"/>
-<circle cx="314" cy="178.785" r="20" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--rotary-touch-rotary-1" data-part="rotary-touch-rotary-1" data-kind="touch" role="group" aria-roledescription="touch control" aria-label="ROTARY TOUCH: Rotary 1"><title>ROTARY TOUCH: Rotary 1</title><g aria-hidden="true">
+<circle cx="142" cy="178.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M142 156.785L142 170.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<circle cx="142" cy="178.785" r="20" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="rotary-touch-rotary-3" data-kind="touch" aria-label="Rotary 3"><title>Rotary 3</title>
-<circle cx="486" cy="178.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M486 156.785L486 170.035" fill="none" stroke="#000" stroke-width="1"/>
-<circle cx="486" cy="178.785" r="20" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--surface--rotary-1" data-surface-control="rotary-1" aria-hidden="true"><rect x="56" y="120" width="172" height="135" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="rotary-touch-rotary-4" data-kind="touch" aria-label="Rotary 4"><title>Rotary 4</title>
-<circle cx="658" cy="178.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M658 156.785L658 170.035" fill="none" stroke="#000" stroke-width="1"/>
-<circle cx="658" cy="178.785" r="20" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--rotary-touch-rotary-2" data-part="rotary-touch-rotary-2" data-kind="touch" role="group" aria-roledescription="touch control" aria-label="ROTARY TOUCH: Rotary 2"><title>ROTARY TOUCH: Rotary 2</title><g aria-hidden="true">
+<circle cx="314" cy="178.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M314 156.785L314 170.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<circle cx="314" cy="178.785" r="20" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="50" y="285" width="700" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="channel-faders-channel-1" data-kind="fader" aria-label="Channel 1" data-control="fader-1"><title>Channel 1</title>
-<rect x="92" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="85" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--surface--rotary-2" data-surface-control="rotary-2" aria-hidden="true"><rect x="228" y="120" width="172" height="135" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="channel-faders-channel-2" data-kind="fader" aria-label="Channel 2" data-control="fader-2"><title>Channel 2</title>
-<rect x="178" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="171" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--rotary-touch-rotary-3" data-part="rotary-touch-rotary-3" data-kind="touch" role="group" aria-roledescription="touch control" aria-label="ROTARY TOUCH: Rotary 3"><title>ROTARY TOUCH: Rotary 3</title><g aria-hidden="true">
+<circle cx="486" cy="178.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M486 156.785L486 170.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<circle cx="486" cy="178.785" r="20" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="channel-faders-channel-3" data-kind="fader" aria-label="Channel 3" data-control="fader-3"><title>Channel 3</title>
-<rect x="264" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="257" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--surface--rotary-3" data-surface-control="rotary-3" aria-hidden="true"><rect x="400" y="120" width="172" height="135" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="channel-faders-channel-4" data-kind="fader" aria-label="Channel 4" data-control="fader-4"><title>Channel 4</title>
-<rect x="350" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="343" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--rotary-touch-rotary-4" data-part="rotary-touch-rotary-4" data-kind="touch" role="group" aria-roledescription="touch control" aria-label="ROTARY TOUCH: Rotary 4"><title>ROTARY TOUCH: Rotary 4</title><g aria-hidden="true">
+<circle cx="658" cy="178.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M658 156.785L658 170.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<circle cx="658" cy="178.785" r="20" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="channel-faders-channel-5" data-kind="fader" aria-label="Channel 5" data-control="fader-5"><title>Channel 5</title>
-<rect x="436" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="429" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--surface--rotary-4" data-surface-control="rotary-4" aria-hidden="true"><rect x="572" y="120" width="172" height="135" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="channel-faders-channel-6" data-kind="fader" aria-label="Channel 6" data-control="fader-6"><title>Channel 6</title>
-<rect x="522" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="515" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--channel-faders-channel-1" data-part="channel-faders-channel-1" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CHANNEL FADERS: Channel 1"><title>CHANNEL FADERS: Channel 1</title><g aria-hidden="true">
+<rect x="92" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="85" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="channel-faders-channel-7" data-kind="fader" aria-label="Channel 7" data-control="fader-7"><title>Channel 7</title>
-<rect x="608" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="601" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--surface--fader-1" data-surface-control="fader-1" aria-hidden="true"><rect x="56" y="315" width="86" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="channel-faders-channel-8" data-kind="fader" aria-label="Channel 8" data-control="fader-8"><title>Channel 8</title>
-<rect x="694" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="687" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--channel-faders-channel-2" data-part="channel-faders-channel-2" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CHANNEL FADERS: Channel 2"><title>CHANNEL FADERS: Channel 2</title><g aria-hidden="true">
+<rect x="178" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="171" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<rect x="50" y="730" width="700" height="70" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="channel-select-1" data-kind="button" aria-label="1"><title>1</title>
-<rect x="95.215" y="765" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--fader-2" data-surface-control="fader-2" aria-hidden="true"><rect x="142" y="315" width="86" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="channel-select-2" data-kind="button" aria-label="2"><title>2</title>
-<rect x="181.215" y="765" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-faders-channel-3" data-part="channel-faders-channel-3" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CHANNEL FADERS: Channel 3"><title>CHANNEL FADERS: Channel 3</title><g aria-hidden="true">
+<rect x="264" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="257" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="channel-select-3" data-kind="button" aria-label="3"><title>3</title>
-<rect x="267.215" y="765" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--fader-3" data-surface-control="fader-3" aria-hidden="true"><rect x="228" y="315" width="86" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="channel-select-4" data-kind="button" aria-label="4"><title>4</title>
-<rect x="353.215" y="765" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-faders-channel-4" data-part="channel-faders-channel-4" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CHANNEL FADERS: Channel 4"><title>CHANNEL FADERS: Channel 4</title><g aria-hidden="true">
+<rect x="350" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="343" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="channel-select-5" data-kind="button" aria-label="5"><title>5</title>
-<rect x="439.215" y="765" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--fader-4" data-surface-control="fader-4" aria-hidden="true"><rect x="314" y="315" width="86" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="channel-select-6" data-kind="button" aria-label="6"><title>6</title>
-<rect x="525.215" y="765" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-faders-channel-5" data-part="channel-faders-channel-5" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CHANNEL FADERS: Channel 5"><title>CHANNEL FADERS: Channel 5</title><g aria-hidden="true">
+<rect x="436" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="429" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="channel-select-7" data-kind="button" aria-label="7"><title>7</title>
-<rect x="611.215" y="765" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--fader-5" data-surface-control="fader-5" aria-hidden="true"><rect x="400" y="315" width="86" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="channel-select-8" data-kind="button" aria-label="8"><title>8</title>
-<rect x="697.215" y="765" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-faders-channel-6" data-part="channel-faders-channel-6" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CHANNEL FADERS: Channel 6"><title>CHANNEL FADERS: Channel 6</title><g aria-hidden="true">
+<rect x="522" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="515" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<rect x="930" y="285" width="120" height="430" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="main-main" data-kind="fader" aria-label="Main" data-control="fader-9"><title>Main</title>
-<rect x="983" y="320" width="14" height="363.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="976" y="493.354" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="k-mix-audio-control-panel--surface--fader-6" data-surface-control="fader-6" aria-hidden="true"><rect x="486" y="315" width="86" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="775" y="90" width="275" height="170" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="navigation-up" data-kind="button" aria-label="Up"><title>Up</title>
-<rect x="831.75" y="130.035" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-faders-channel-7" data-part="channel-faders-channel-7" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CHANNEL FADERS: Channel 7"><title>CHANNEL FADERS: Channel 7</title><g aria-hidden="true">
+<rect x="608" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="601" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="navigation-down" data-kind="button" aria-label="Down"><title>Down</title>
-<rect x="963.25" y="130.035" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--fader-7" data-surface-control="fader-7" aria-hidden="true"><rect x="572" y="315" width="86" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="navigation-left" data-kind="button" aria-label="Left"><title>Left</title>
-<rect x="831.75" y="197.535" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-faders-channel-8" data-part="channel-faders-channel-8" data-kind="fader" role="group" aria-roledescription="slider" aria-label="CHANNEL FADERS: Channel 8"><title>CHANNEL FADERS: Channel 8</title><g aria-hidden="true">
+<rect x="694" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="687" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="navigation-right" data-kind="button" aria-label="Right"><title>Right</title>
-<rect x="963.25" y="197.535" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--fader-8" data-surface-control="fader-8" aria-hidden="true"><rect x="658" y="315" width="86" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="775" y="285" width="140" height="515" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="mix-midi-input" data-kind="button" aria-label="Input"><title>Input</title>
-<rect x="798" y="322.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-select-1" data-part="channel-select-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CHANNEL SELECT: 1"><title>CHANNEL SELECT: 1</title><g aria-hidden="true">
+<rect x="95.215" y="765" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mix-midi-output" data-kind="button" aria-label="Output"><title>Output</title>
-<rect x="862" y="322.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--mute-1" data-surface-control="mute-1" aria-hidden="true"><rect x="56" y="760" width="86" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mix-midi-pan" data-kind="button" aria-label="Pan"><title>Pan</title>
-<rect x="798" y="382.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-select-2" data-part="channel-select-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CHANNEL SELECT: 2"><title>CHANNEL SELECT: 2</title><g aria-hidden="true">
+<rect x="181.215" y="765" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mix-midi-aux-1" data-kind="button" aria-label="Aux 1"><title>Aux 1</title>
-<rect x="862" y="382.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--mute-2" data-surface-control="mute-2" aria-hidden="true"><rect x="142" y="760" width="86" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mix-midi-aux-2" data-kind="button" aria-label="Aux 2"><title>Aux 2</title>
-<rect x="798" y="442.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-select-3" data-part="channel-select-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CHANNEL SELECT: 3"><title>CHANNEL SELECT: 3</title><g aria-hidden="true">
+<rect x="267.215" y="765" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mix-midi-aux-3" data-kind="button" aria-label="Aux 3"><title>Aux 3</title>
-<rect x="862" y="442.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--mute-3" data-surface-control="mute-3" aria-hidden="true"><rect x="228" y="760" width="86" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mix-midi-eq" data-kind="button" aria-label="EQ"><title>EQ</title>
-<rect x="798" y="502.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-select-4" data-part="channel-select-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CHANNEL SELECT: 4"><title>CHANNEL SELECT: 4</title><g aria-hidden="true">
+<rect x="353.215" y="765" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mix-midi-dynamics" data-kind="button" aria-label="Dynamics"><title>Dynamics</title>
-<rect x="862" y="502.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--mute-4" data-surface-control="mute-4" aria-hidden="true"><rect x="314" y="760" width="86" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mix-midi-reverb" data-kind="button" aria-label="Reverb"><title>Reverb</title>
-<rect x="798" y="562.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-select-5" data-part="channel-select-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CHANNEL SELECT: 5"><title>CHANNEL SELECT: 5</title><g aria-hidden="true">
+<rect x="439.215" y="765" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mix-midi-midi" data-kind="button" aria-label="MIDI"><title>MIDI</title>
-<rect x="862" y="562.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--mute-5" data-surface-control="mute-5" aria-hidden="true"><rect x="400" y="760" width="86" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mix-midi-bank-1" data-kind="button" aria-label="Bank 1"><title>Bank 1</title>
-<rect x="798" y="622.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-select-6" data-part="channel-select-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CHANNEL SELECT: 6"><title>CHANNEL SELECT: 6</title><g aria-hidden="true">
+<rect x="525.215" y="765" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mix-midi-bank-2" data-kind="button" aria-label="Bank 2"><title>Bank 2</title>
-<rect x="862" y="622.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--mute-6" data-surface-control="mute-6" aria-hidden="true"><rect x="486" y="760" width="86" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mix-midi-bank-3" data-kind="button" aria-label="Bank 3"><title>Bank 3</title>
-<rect x="798" y="682.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-select-7" data-part="channel-select-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CHANNEL SELECT: 7"><title>CHANNEL SELECT: 7</title><g aria-hidden="true">
+<rect x="611.215" y="765" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mix-midi-mute" data-kind="button" aria-label="Mute"><title>Mute</title>
-<rect x="862" y="682.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--mute-7" data-surface-control="mute-7" aria-hidden="true"><rect x="572" y="760" width="86" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mix-midi-solo" data-kind="button" aria-label="Solo"><title>Solo</title>
-<rect x="798" y="742.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--channel-select-8" data-part="channel-select-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CHANNEL SELECT: 8"><title>CHANNEL SELECT: 8</title><g aria-hidden="true">
+<rect x="697.215" y="765" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mix-midi-bypass" data-kind="button" aria-label="Bypass"><title>Bypass</title>
-<rect x="862" y="742.438" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="k-mix-audio-control-panel--surface--mute-8" data-surface-control="mute-8" aria-hidden="true"><rect x="658" y="760" width="86" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--main-main" data-part="main-main" data-kind="fader" role="group" aria-roledescription="slider" aria-label="MAIN: Main"><title>MAIN: Main</title><g aria-hidden="true">
+<rect x="983" y="320" width="14" height="363.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="976" y="493.354" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--fader-9" data-surface-control="fader-9" aria-hidden="true"><rect x="936" y="315" width="108" height="395" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--navigation-up" data-part="navigation-up" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NAVIGATION: Up"><title>NAVIGATION: Up</title><g aria-hidden="true">
+<rect x="831.75" y="130.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--navigation-up" data-surface-control="navigation-up" aria-hidden="true"><rect x="781" y="120" width="131.5" height="67.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--navigation-down" data-part="navigation-down" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NAVIGATION: Down"><title>NAVIGATION: Down</title><g aria-hidden="true">
+<rect x="963.25" y="130.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--navigation-down" data-surface-control="navigation-down" aria-hidden="true"><rect x="912.5" y="120" width="131.5" height="67.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--navigation-left" data-part="navigation-left" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NAVIGATION: Left"><title>NAVIGATION: Left</title><g aria-hidden="true">
+<rect x="831.75" y="197.535" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--navigation-left" data-surface-control="navigation-left" aria-hidden="true"><rect x="781" y="187.5" width="131.5" height="67.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--navigation-right" data-part="navigation-right" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NAVIGATION: Right"><title>NAVIGATION: Right</title><g aria-hidden="true">
+<rect x="963.25" y="197.535" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--navigation-right" data-surface-control="navigation-right" aria-hidden="true"><rect x="912.5" y="187.5" width="131.5" height="67.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-input" data-part="mix-midi-input" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Input"><title>MIX / MIDI: Input</title><g aria-hidden="true">
+<rect x="798" y="322.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-input" data-surface-control="mix-midi-input" aria-hidden="true"><rect x="781" y="315" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-output" data-part="mix-midi-output" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Output"><title>MIX / MIDI: Output</title><g aria-hidden="true">
+<rect x="862" y="322.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-output" data-surface-control="mix-midi-output" aria-hidden="true"><rect x="845" y="315" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-pan" data-part="mix-midi-pan" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Pan"><title>MIX / MIDI: Pan</title><g aria-hidden="true">
+<rect x="798" y="382.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-pan" data-surface-control="mix-midi-pan" aria-hidden="true"><rect x="781" y="375" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-aux-1" data-part="mix-midi-aux-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Aux 1"><title>MIX / MIDI: Aux 1</title><g aria-hidden="true">
+<rect x="862" y="382.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-aux-1" data-surface-control="mix-midi-aux-1" aria-hidden="true"><rect x="845" y="375" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-aux-2" data-part="mix-midi-aux-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Aux 2"><title>MIX / MIDI: Aux 2</title><g aria-hidden="true">
+<rect x="798" y="442.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-aux-2" data-surface-control="mix-midi-aux-2" aria-hidden="true"><rect x="781" y="435" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-aux-3" data-part="mix-midi-aux-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Aux 3"><title>MIX / MIDI: Aux 3</title><g aria-hidden="true">
+<rect x="862" y="442.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-aux-3" data-surface-control="mix-midi-aux-3" aria-hidden="true"><rect x="845" y="435" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-eq" data-part="mix-midi-eq" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: EQ"><title>MIX / MIDI: EQ</title><g aria-hidden="true">
+<rect x="798" y="502.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-eq" data-surface-control="mix-midi-eq" aria-hidden="true"><rect x="781" y="495" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-dynamics" data-part="mix-midi-dynamics" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Dynamics"><title>MIX / MIDI: Dynamics</title><g aria-hidden="true">
+<rect x="862" y="502.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-dynamics" data-surface-control="mix-midi-dynamics" aria-hidden="true"><rect x="845" y="495" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-reverb" data-part="mix-midi-reverb" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Reverb"><title>MIX / MIDI: Reverb</title><g aria-hidden="true">
+<rect x="798" y="562.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-reverb" data-surface-control="mix-midi-reverb" aria-hidden="true"><rect x="781" y="555" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-midi" data-part="mix-midi-midi" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: MIDI"><title>MIX / MIDI: MIDI</title><g aria-hidden="true">
+<rect x="862" y="562.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-midi" data-surface-control="mix-midi-midi" aria-hidden="true"><rect x="845" y="555" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-bank-1" data-part="mix-midi-bank-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Bank 1"><title>MIX / MIDI: Bank 1</title><g aria-hidden="true">
+<rect x="798" y="622.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-bank-1" data-surface-control="mix-midi-bank-1" aria-hidden="true"><rect x="781" y="615" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-bank-2" data-part="mix-midi-bank-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Bank 2"><title>MIX / MIDI: Bank 2</title><g aria-hidden="true">
+<rect x="862" y="622.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-bank-2" data-surface-control="mix-midi-bank-2" aria-hidden="true"><rect x="845" y="615" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-bank-3" data-part="mix-midi-bank-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Bank 3"><title>MIX / MIDI: Bank 3</title><g aria-hidden="true">
+<rect x="798" y="682.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-bank-3" data-surface-control="mix-midi-bank-3" aria-hidden="true"><rect x="781" y="675" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-mute" data-part="mix-midi-mute" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Mute"><title>MIX / MIDI: Mute</title><g aria-hidden="true">
+<rect x="862" y="682.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mute-9" data-surface-control="mute-9" aria-hidden="true"><rect x="845" y="675" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-solo" data-part="mix-midi-solo" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Solo"><title>MIX / MIDI: Solo</title><g aria-hidden="true">
+<rect x="798" y="742.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-solo" data-surface-control="mix-midi-solo" aria-hidden="true"><rect x="781" y="735" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="k-mix-audio-control-panel--mix-midi-bypass" data-part="mix-midi-bypass" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MIX / MIDI: Bypass"><title>MIX / MIDI: Bypass</title><g aria-hidden="true">
+<rect x="862" y="742.438" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="k-mix-audio-control-panel--surface--mix-midi-bypass" data-surface-control="mix-midi-bypass" aria-hidden="true"><rect x="845" y="735" width="64" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </svg>

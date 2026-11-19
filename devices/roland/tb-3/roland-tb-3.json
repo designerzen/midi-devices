@@ -166,9 +166,9 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1050,
-		"height": 850,
+		"height": 940,
 		"elements": [
 			{
 				"id": "sound-volume",
@@ -176,58 +176,63 @@
 				"kind": "knob",
 				"position": {
 					"x": 2.9523809523809526,
-					"y": 11.176470588235295,
+					"y": 10.106382978723403,
 					"width": 18.81904761904762,
-					"height": 12.941176470588237
-				}
+					"height": 11.702127659574469
+				},
+				"learnable": true
 			},
 			{
-				"id": "sound-cutoff",
-				"label": "SOUND: Cutoff",
+				"id": "cutoff",
+				"label": "Cutoff",
 				"kind": "knob",
 				"position": {
 					"x": 21.771428571428572,
-					"y": 11.176470588235295,
+					"y": 10.106382978723403,
 					"width": 18.81904761904762,
-					"height": 12.941176470588237
+					"height": 11.702127659574469
 				},
-				"control": "cutoff"
+				"control": "cutoff",
+				"learnable": true
 			},
 			{
-				"id": "sound-resonance",
-				"label": "SOUND: Resonance",
+				"id": "resonance",
+				"label": "Resonance",
 				"kind": "knob",
 				"position": {
 					"x": 40.59047619047619,
-					"y": 11.176470588235295,
+					"y": 10.106382978723403,
 					"width": 18.81904761904762,
-					"height": 12.941176470588237
+					"height": 11.702127659574469
 				},
-				"control": "resonance"
+				"control": "resonance",
+				"learnable": true
 			},
 			{
-				"id": "sound-accent",
-				"label": "SOUND: Accent",
+				"id": "accent",
+				"label": "Accent",
 				"kind": "knob",
 				"position": {
 					"x": 59.409523809523805,
-					"y": 11.176470588235295,
+					"y": 10.106382978723403,
 					"width": 18.81904761904762,
-					"height": 12.941176470588237
+					"height": 11.702127659574469
 				},
-				"control": "accent"
+				"control": "accent",
+				"learnable": true
 			},
 			{
-				"id": "sound-effect",
-				"label": "SOUND: Effect",
+				"id": "effect",
+				"label": "Effect",
 				"kind": "knob",
 				"position": {
 					"x": 78.22857142857143,
-					"y": 11.176470588235295,
+					"y": 10.106382978723403,
 					"width": 18.81904761904762,
-					"height": 12.941176470588237
+					"height": 11.702127659574469
 				},
-				"control": "effect"
+				"control": "effect",
+				"learnable": true
 			},
 			{
 				"id": "modes-keyboard",
@@ -235,10 +240,11 @@
 				"kind": "button",
 				"position": {
 					"x": 2.9523809523809526,
-					"y": 30.0,
+					"y": 27.127659574468083,
 					"width": 18.81904761904762,
-					"height": 7.647058823529412
-				}
+					"height": 6.914893617021277
+				},
+				"learnable": true
 			},
 			{
 				"id": "modes-xy-play",
@@ -246,10 +252,11 @@
 				"kind": "button",
 				"position": {
 					"x": 21.771428571428572,
-					"y": 30.0,
+					"y": 27.127659574468083,
 					"width": 18.81904761904762,
-					"height": 7.647058823529412
-				}
+					"height": 6.914893617021277
+				},
+				"learnable": true
 			},
 			{
 				"id": "modes-env-mod",
@@ -257,21 +264,37 @@
 				"kind": "button",
 				"position": {
 					"x": 40.59047619047619,
-					"y": 30.0,
+					"y": 27.127659574468083,
 					"width": 18.81904761904762,
-					"height": 7.647058823529412
-				}
+					"height": 6.914893617021277
+				},
+				"learnable": true
 			},
 			{
-				"id": "modes-pattern-select",
-				"label": "MODES: Pattern select",
+				"id": "control-pattern-slide",
+				"label": "Pattern slide",
 				"kind": "button",
 				"position": {
 					"x": 59.409523809523805,
-					"y": 30.0,
-					"width": 18.81904761904762,
-					"height": 7.647058823529412
-				}
+					"y": 27.127659574468083,
+					"width": 9.40952380952381,
+					"height": 6.914893617021277
+				},
+				"control": "pattern-slide",
+				"learnable": true
+			},
+			{
+				"id": "control-pattern-accent",
+				"label": "Pattern accent",
+				"kind": "button",
+				"position": {
+					"x": 68.81904761904762,
+					"y": 27.127659574468083,
+					"width": 9.40952380952381,
+					"height": 6.914893617021277
+				},
+				"control": "pattern-accent",
+				"learnable": true
 			},
 			{
 				"id": "modes-scatter",
@@ -279,32 +302,236 @@
 				"kind": "button",
 				"position": {
 					"x": 78.22857142857143,
-					"y": 30.0,
+					"y": 27.127659574468083,
 					"width": 18.81904761904762,
-					"height": 7.647058823529412
-				}
+					"height": 6.914893617021277
+				},
+				"learnable": true
 			},
 			{
-				"id": "touchpad-pressure-sensitive-xy-pad",
-				"label": "TOUCHPAD: Pressure-sensitive XY pad",
-				"kind": "button",
+				"id": "touch-note-0",
+				"label": "Touchpad note 48",
+				"kind": "key",
 				"position": {
 					"x": 2.9523809523809526,
-					"y": 43.529411764705884,
-					"width": 71.23809523809524,
-					"height": 48.8235294117647
-				}
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true
 			},
 			{
-				"id": "tempo-seq-display",
-				"label": "TEMPO / SEQ: Display",
-				"kind": "button",
+				"id": "touch-note-1",
+				"label": "Touchpad note 49",
+				"kind": "key",
 				"position": {
-					"x": 76.76190476190476,
-					"y": 43.529411764705884,
-					"width": 10.142857142857142,
-					"height": 12.205882352941176
-				}
+					"x": 10.076190476190476,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true
+			},
+			{
+				"id": "touch-note-2",
+				"label": "Touchpad note 50",
+				"kind": "key",
+				"position": {
+					"x": 17.2,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true
+			},
+			{
+				"id": "touch-note-3",
+				"label": "Touchpad note 51",
+				"kind": "key",
+				"position": {
+					"x": 24.323809523809526,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true
+			},
+			{
+				"id": "touch-note-4",
+				"label": "Touchpad note 52",
+				"kind": "key",
+				"position": {
+					"x": 31.447619047619046,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true
+			},
+			{
+				"id": "touch-note-5",
+				"label": "Touchpad note 53",
+				"kind": "key",
+				"position": {
+					"x": 38.57142857142858,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true
+			},
+			{
+				"id": "touch-note-6",
+				"label": "Touchpad note 54",
+				"kind": "key",
+				"position": {
+					"x": 45.695238095238096,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true
+			},
+			{
+				"id": "touch-note-7",
+				"label": "Touchpad note 55",
+				"kind": "key",
+				"position": {
+					"x": 52.81904761904762,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true
+			},
+			{
+				"id": "touch-note-8",
+				"label": "Touchpad note 56",
+				"kind": "key",
+				"position": {
+					"x": 59.94285714285714,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true
+			},
+			{
+				"id": "touch-note-9",
+				"label": "Touchpad note 57",
+				"kind": "key",
+				"position": {
+					"x": 67.06666666666668,
+					"y": 63.6436170212766,
+					"width": 7.123809523809524,
+					"height": 19.867021276595747
+				},
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true
+			},
+			{
+				"id": "control-pad-z",
+				"label": "Pad pressure (Z)",
+				"kind": "fader",
+				"position": {
+					"x": 17.2,
+					"y": 39.361702127659576,
+					"width": 14.247619047619049,
+					"height": 22.074468085106382
+				},
+				"control": "pad-z",
+				"learnable": true
+			},
+			{
+				"id": "control-pad-y",
+				"label": "XY Play: pad Y",
+				"kind": "fader",
+				"position": {
+					"x": 2.9523809523809526,
+					"y": 39.361702127659576,
+					"width": 14.247619047619049,
+					"height": 22.074468085106382
+				},
+				"control": "pad-y",
+				"learnable": true
+			},
+			{
+				"id": "control-env-x",
+				"label": "Env Mod: pad X",
+				"kind": "fader",
+				"position": {
+					"x": 45.695238095238096,
+					"y": 39.361702127659576,
+					"width": 14.247619047619049,
+					"height": 22.074468085106382
+				},
+				"control": "env-x",
+				"learnable": true
+			},
+			{
+				"id": "control-env-y",
+				"label": "Env Mod: pad Y",
+				"kind": "fader",
+				"position": {
+					"x": 59.94285714285714,
+					"y": 39.361702127659576,
+					"width": 14.247619047619049,
+					"height": 22.074468085106382
+				},
+				"control": "env-y",
+				"learnable": true
+			},
+			{
+				"id": "control-pitch-bend",
+				"label": "XY Play: pitch bend",
+				"kind": "fader",
+				"position": {
+					"x": 31.447619047619046,
+					"y": 39.361702127659576,
+					"width": 14.247619047619049,
+					"height": 22.074468085106382
+				},
+				"control": "pitch-bend",
+				"learnable": true
 			},
 			{
 				"id": "tempo-seq-value",
@@ -312,10 +539,11 @@
 				"kind": "knob",
 				"position": {
 					"x": 86.90476190476191,
-					"y": 43.529411764705884,
+					"y": 39.361702127659576,
 					"width": 10.142857142857142,
-					"height": 12.205882352941176
-				}
+					"height": 11.037234042553191
+				},
+				"learnable": true
 			},
 			{
 				"id": "tempo-seq-tempo",
@@ -323,10 +551,11 @@
 				"kind": "button",
 				"position": {
 					"x": 76.76190476190476,
-					"y": 55.73529411764706,
+					"y": 50.39893617021277,
 					"width": 10.142857142857142,
-					"height": 12.205882352941176
-				}
+					"height": 11.037234042553191
+				},
+				"learnable": true
 			},
 			{
 				"id": "tempo-seq-start-stop",
@@ -334,10 +563,11 @@
 				"kind": "button",
 				"position": {
 					"x": 86.90476190476191,
-					"y": 55.73529411764706,
+					"y": 50.39893617021277,
 					"width": 10.142857142857142,
-					"height": 12.205882352941176
-				}
+					"height": 11.037234042553191
+				},
+				"learnable": true
 			},
 			{
 				"id": "tempo-seq-record",
@@ -345,10 +575,11 @@
 				"kind": "button",
 				"position": {
 					"x": 76.76190476190476,
-					"y": 67.94117647058823,
+					"y": 61.43617021276596,
 					"width": 10.142857142857142,
-					"height": 12.205882352941176
-				}
+					"height": 11.037234042553191
+				},
+				"learnable": true
 			},
 			{
 				"id": "tempo-seq-step-rec",
@@ -356,10 +587,11 @@
 				"kind": "button",
 				"position": {
 					"x": 86.90476190476191,
-					"y": 67.94117647058823,
+					"y": 61.43617021276596,
 					"width": 10.142857142857142,
-					"height": 12.205882352941176
-				}
+					"height": 11.037234042553191
+				},
+				"learnable": true
 			},
 			{
 				"id": "tempo-seq-realtime-rec",
@@ -367,10 +599,24 @@
 				"kind": "button",
 				"position": {
 					"x": 76.76190476190476,
-					"y": 80.14705882352942,
+					"y": 72.47340425531915,
 					"width": 10.142857142857142,
-					"height": 12.205882352941176
-				}
+					"height": 11.037234042553191
+				},
+				"learnable": true
+			},
+			{
+				"id": "control-tuning",
+				"label": "Tuning",
+				"kind": "fader",
+				"position": {
+					"x": 2.380952380952381,
+					"y": 91.27659574468086,
+					"width": 95.23809523809523,
+					"height": 5.319148936170213
+				},
+				"control": "tuning",
+				"learnable": true
 			}
 		]
 	},

@@ -1,190 +1,310 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 690" role="img" aria-labelledby="title description">
-<title id="title">Arturia MiniLab 3 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="690" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="672" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Arturia MiniLab 3</text>
-<text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="135" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="performance-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<rect x="46.75" y="115.135" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 780" role="group" aria-labelledby="arturia-minilab-3-panel--title" aria-describedby="arturia-minilab-3-panel--description" data-device="arturia-minilab-3" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="arturia-minilab-3-panel--title">Arturia MiniLab 3 overhead hardware diagram</title><desc id="arturia-minilab-3-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="arturia-minilab-3-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1232" height="762" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Arturia MiniLab 3</text>
+<text x="1225" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="135" height="290" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="175" y="65" width="140" height="290" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="330" y="65" width="565" height="205" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="910" y="65" width="305" height="205" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="330" y="285" width="885" height="95" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-hold" data-kind="button" aria-label="Hold"><title>Hold</title>
-<rect x="108.25" y="115.135" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--performance-shift" data-part="performance-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Shift"><title>PERFORMANCE: Shift</title><g aria-hidden="true">
+<rect x="46.75" y="115.135" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="46.75" y="200.135" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--surface--performance-shift" data-surface-control="performance-shift" aria-hidden="true"><rect x="31" y="95" width="61.5" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="108.25" y="200.135" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--performance-hold" data-part="performance-hold" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Hold"><title>PERFORMANCE: Hold</title><g aria-hidden="true">
+<rect x="108.25" y="115.135" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-pitch" data-kind="strip" aria-label="Pitch"><title>Pitch</title>
-<rect x="50.987" y="270" width="21.525" height="56.271" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.175"/>
-<path d="M61.75 275L61.75 322.271" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--surface--performance-hold" data-surface-control="performance-hold" aria-hidden="true"><rect x="92.5" y="95" width="61.5" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-mod" data-kind="strip" aria-label="Mod"><title>Mod</title>
-<rect x="112.487" y="270" width="21.525" height="56.271" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.175"/>
-<path d="M123.25 275L123.25 322.271" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--performance-octave" data-part="performance-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave -"><title>PERFORMANCE: Octave -</title><g aria-hidden="true">
+<rect x="46.75" y="200.135" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="175" y="65" width="140" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="display-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="186" y="100" width="118" height="100.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="190" y="104" width="110" height="92.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="arturia-minilab-3-panel--surface--performance-octave" data-surface-control="performance-octave" aria-hidden="true"><rect x="31" y="180" width="61.5" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-main-encoder" data-kind="knob" aria-label="Main encoder"><title>Main encoder</title>
-<circle cx="245" cy="277.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M245 255.535L245 268.785" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--performance-octave-2" data-part="performance-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave +"><title>PERFORMANCE: Octave +</title><g aria-hidden="true">
+<rect x="108.25" y="200.135" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="330" y="65" width="565" height="205" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="encoders-encoder-1" data-kind="knob" aria-label="Encoder 1"><title>Encoder 1</title>
-<circle cx="405.125" cy="128.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M405.125 109.62L405.125 121.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--surface--performance-octave-2" data-surface-control="performance-octave-2" aria-hidden="true"><rect x="92.5" y="180" width="61.5" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="encoders-encoder-2" data-kind="knob" aria-label="Encoder 2"><title>Encoder 2</title>
-<circle cx="543.375" cy="128.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M543.375 109.62L543.375 121.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--performance-pitch" data-part="performance-pitch" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Pitch"><title>PERFORMANCE: Pitch</title><g aria-hidden="true">
+<rect x="50.987" y="270" width="21.525" height="56.271" rx="7.175" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M61.75 275L61.75 322.271" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="encoders-encoder-3" data-kind="knob" aria-label="Encoder 3"><title>Encoder 3</title>
-<circle cx="681.625" cy="128.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M681.625 109.62L681.625 121.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--surface--fixed-pitch-bend" data-surface-control="fixed-pitch-bend" aria-hidden="true"><rect x="31" y="265" width="61.5" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="encoders-encoder-4" data-kind="knob" aria-label="Encoder 4"><title>Encoder 4</title>
-<circle cx="819.875" cy="128.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M819.875 109.62L819.875 121.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--performance-mod" data-part="performance-mod" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Mod"><title>PERFORMANCE: Mod</title><g aria-hidden="true">
+<rect x="112.487" y="270" width="21.525" height="56.271" rx="7.175" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M123.25 275L123.25 322.271" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="encoders-encoder-5" data-kind="knob" aria-label="Encoder 5"><title>Encoder 5</title>
-<circle cx="405.125" cy="213.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M405.125 194.62L405.125 206.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--surface--fixed-modulation" data-surface-control="fixed-modulation" aria-hidden="true"><rect x="92.5" y="265" width="61.5" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="encoders-encoder-6" data-kind="knob" aria-label="Encoder 6"><title>Encoder 6</title>
-<circle cx="543.375" cy="213.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M543.375 194.62L543.375 206.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--display-display" data-part="display-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="DISPLAY: Display"><title>DISPLAY: Display</title><g aria-hidden="true">
+<rect x="186" y="100" width="118" height="100.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="190" y="104" width="110" height="92.07" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="encoders-encoder-7" data-kind="knob" aria-label="Encoder 7"><title>Encoder 7</title>
-<circle cx="681.625" cy="213.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M681.625 194.62L681.625 206.027" fill="none" stroke="#000" stroke-width="1"/>
 </g>
-<g id="encoders-encoder-8" data-kind="knob" aria-label="Encoder 8"><title>Encoder 8</title>
-<circle cx="819.875" cy="213.785" r="22.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M819.875 194.62L819.875 206.027" fill="none" stroke="#000" stroke-width="1"/>
+<g id="arturia-minilab-3-panel--display-main-encoder" data-part="display-main-encoder" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DISPLAY: Main encoder"><title>DISPLAY: Main encoder</title><g aria-hidden="true">
+<circle cx="245" cy="277.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M245 255.535L245 268.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="910" y="65" width="305" height="205" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="faders-fader-1" data-kind="fader" aria-label="Fader 1"><title>Fader 1</title>
-<rect x="945.625" y="100" width="14" height="139.412" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="938.625" y="165.758" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="arturia-minilab-3-panel--surface--display-main-encoder" data-surface-control="display-main-encoder" aria-hidden="true"><rect x="181" y="222.5" width="128" height="127.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="faders-fader-2" data-kind="fader" aria-label="Fader 2"><title>Fader 2</title>
-<rect x="1018.875" y="100" width="14" height="139.412" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1011.875" y="165.758" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="arturia-minilab-3-panel--encoders-encoder-1" data-part="encoders-encoder-1" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS: Encoder 1"><title>ENCODERS: Encoder 1</title><g aria-hidden="true">
+<circle cx="405.125" cy="128.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M405.125 109.62L405.125 121.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="faders-fader-3" data-kind="fader" aria-label="Fader 3"><title>Fader 3</title>
-<rect x="1092.125" y="100" width="14" height="139.412" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1085.125" y="165.758" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="arturia-minilab-3-panel--surface--knob-1" data-surface-control="knob-1" aria-hidden="true"><rect x="336" y="95" width="138.25" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="faders-fader-4" data-kind="fader" aria-label="Fader 4"><title>Fader 4</title>
-<rect x="1165.375" y="100" width="14" height="139.412" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1158.375" y="165.758" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="arturia-minilab-3-panel--encoders-encoder-2" data-part="encoders-encoder-2" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS: Encoder 2"><title>ENCODERS: Encoder 2</title><g aria-hidden="true">
+<circle cx="543.375" cy="128.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M543.375 109.62L543.375 121.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="330" y="285" width="885" height="95" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="pads-pad-1" data-kind="pad" aria-label="Pad 1"><title>Pad 1</title>
-<rect x="374.277" y="320" width="32.57" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--surface--knob-2" data-surface-control="knob-2" aria-hidden="true"><rect x="474.25" y="95" width="138.25" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-2" data-kind="pad" aria-label="Pad 2"><title>Pad 2</title>
-<rect x="483.402" y="320" width="32.57" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--encoders-encoder-3" data-part="encoders-encoder-3" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS: Encoder 3"><title>ENCODERS: Encoder 3</title><g aria-hidden="true">
+<circle cx="681.625" cy="128.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M681.625 109.62L681.625 121.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-3" data-kind="pad" aria-label="Pad 3"><title>Pad 3</title>
-<rect x="592.528" y="320" width="32.57" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--surface--knob-3" data-surface-control="knob-3" aria-hidden="true"><rect x="612.5" y="95" width="138.25" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-4" data-kind="pad" aria-label="Pad 4"><title>Pad 4</title>
-<rect x="701.653" y="320" width="32.57" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--encoders-encoder-4" data-part="encoders-encoder-4" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS: Encoder 4"><title>ENCODERS: Encoder 4</title><g aria-hidden="true">
+<circle cx="819.875" cy="128.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M819.875 109.62L819.875 121.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-5" data-kind="pad" aria-label="Pad 5"><title>Pad 5</title>
-<rect x="810.778" y="320" width="32.57" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--surface--knob-4" data-surface-control="knob-4" aria-hidden="true"><rect x="750.75" y="95" width="138.25" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-6" data-kind="pad" aria-label="Pad 6"><title>Pad 6</title>
-<rect x="919.903" y="320" width="32.57" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--encoders-encoder-5" data-part="encoders-encoder-5" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS: Encoder 5"><title>ENCODERS: Encoder 5</title><g aria-hidden="true">
+<circle cx="405.125" cy="213.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M405.125 194.62L405.125 206.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-7" data-kind="pad" aria-label="Pad 7"><title>Pad 7</title>
-<rect x="1029.027" y="320" width="32.57" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--surface--knob-5" data-surface-control="knob-5" aria-hidden="true"><rect x="336" y="180" width="138.25" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-8" data-kind="pad" aria-label="Pad 8"><title>Pad 8</title>
-<rect x="1138.152" y="320" width="32.57" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="arturia-minilab-3-panel--encoders-encoder-6" data-part="encoders-encoder-6" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS: Encoder 6"><title>ENCODERS: Encoder 6</title><g aria-hidden="true">
+<circle cx="543.375" cy="213.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M543.375 194.62L543.375 206.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="35" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--knob-6" data-surface-control="knob-6" aria-hidden="true"><rect x="474.25" y="180" width="138.25" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="113.667" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--encoders-encoder-7" data-part="encoders-encoder-7" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS: Encoder 7"><title>ENCODERS: Encoder 7</title><g aria-hidden="true">
+<circle cx="681.625" cy="213.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M681.625 194.62L681.625 206.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="192.333" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--knob-7" data-surface-control="knob-7" aria-hidden="true"><rect x="612.5" y="180" width="138.25" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="271" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--encoders-encoder-8" data-part="encoders-encoder-8" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS: Encoder 8"><title>ENCODERS: Encoder 8</title><g aria-hidden="true">
+<circle cx="819.875" cy="213.785" r="22.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M819.875 194.62L819.875 206.027" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="349.667" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--knob-8" data-surface-control="knob-8" aria-hidden="true"><rect x="750.75" y="180" width="138.25" height="85" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="428.333" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--faders-fader-1" data-part="faders-fader-1" data-kind="fader" role="group" aria-roledescription="slider" aria-label="FADERS: Fader 1"><title>FADERS: Fader 1</title><g aria-hidden="true">
+<rect x="945.625" y="100" width="14" height="139.412" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="938.625" y="165.758" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="507" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--fader-1" data-surface-control="fader-1" aria-hidden="true"><rect x="916" y="95" width="73.25" height="170" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="585.667" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--faders-fader-2" data-part="faders-fader-2" data-kind="fader" role="group" aria-roledescription="slider" aria-label="FADERS: Fader 2"><title>FADERS: Fader 2</title><g aria-hidden="true">
+<rect x="1018.875" y="100" width="14" height="139.412" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1011.875" y="165.758" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="664.333" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--fader-2" data-surface-control="fader-2" aria-hidden="true"><rect x="989.25" y="95" width="73.25" height="170" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="743" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--faders-fader-3" data-part="faders-fader-3" data-kind="fader" role="group" aria-roledescription="slider" aria-label="FADERS: Fader 3"><title>FADERS: Fader 3</title><g aria-hidden="true">
+<rect x="1092.125" y="100" width="14" height="139.412" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1085.125" y="165.758" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="821.667" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--fader-3" data-surface-control="fader-3" aria-hidden="true"><rect x="1062.5" y="95" width="73.25" height="170" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="900.333" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--faders-fader-4" data-part="faders-fader-4" data-kind="fader" role="group" aria-roledescription="slider" aria-label="FADERS: Fader 4"><title>FADERS: Fader 4</title><g aria-hidden="true">
+<rect x="1165.375" y="100" width="14" height="139.412" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1158.375" y="165.758" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="979" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--fader-4" data-surface-control="fader-4" aria-hidden="true"><rect x="1135.75" y="95" width="73.25" height="170" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="1057.667" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--pads-pad-1" data-part="pads-pad-1" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 1"><title>PADS: Pad 1</title><g aria-hidden="true">
+<rect x="374.277" y="320" width="32.57" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="1136.333" y="385" width="78.667" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--pad-1" data-surface-control="pad-1" aria-hidden="true"><rect x="336" y="315" width="109.125" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="89.28" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--pads-pad-2" data-part="pads-pad-2" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 2"><title>PADS: Pad 2</title><g aria-hidden="true">
+<rect x="483.402" y="320" width="32.57" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="167.947" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--pad-2" data-surface-control="pad-2" aria-hidden="true"><rect x="445.125" y="315" width="109.125" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="325.28" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--pads-pad-3" data-part="pads-pad-3" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 3"><title>PADS: Pad 3</title><g aria-hidden="true">
+<rect x="592.528" y="320" width="32.57" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="403.947" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--pad-3" data-surface-control="pad-3" aria-hidden="true"><rect x="554.25" y="315" width="109.125" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="482.613" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--pads-pad-4" data-part="pads-pad-4" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 4"><title>PADS: Pad 4</title><g aria-hidden="true">
+<rect x="701.653" y="320" width="32.57" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="639.947" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--pad-4" data-surface-control="pad-4" aria-hidden="true"><rect x="663.375" y="315" width="109.125" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="718.613" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--pads-pad-5" data-part="pads-pad-5" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 5"><title>PADS: Pad 5</title><g aria-hidden="true">
+<rect x="810.778" y="320" width="32.57" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="875.947" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--pad-5" data-surface-control="pad-5" aria-hidden="true"><rect x="772.5" y="315" width="109.125" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="954.613" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--pads-pad-6" data-part="pads-pad-6" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 6"><title>PADS: Pad 6</title><g aria-hidden="true">
+<rect x="919.903" y="320" width="32.57" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="1033.28" y="385" width="48.773" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-minilab-3-panel--surface--pad-6" data-surface-control="pad-6" aria-hidden="true"><rect x="881.625" y="315" width="109.125" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--pads-pad-7" data-part="pads-pad-7" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 7"><title>PADS: Pad 7</title><g aria-hidden="true">
+<rect x="1029.027" y="320" width="32.57" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--pad-7" data-surface-control="pad-7" aria-hidden="true"><rect x="990.75" y="315" width="109.125" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--pads-pad-8" data-part="pads-pad-8" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 8"><title>PADS: Pad 8</title><g aria-hidden="true">
+<rect x="1138.152" y="320" width="32.57" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--pad-8" data-surface-control="pad-8" aria-hidden="true"><rect x="1099.875" y="315" width="109.125" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="arturia-minilab-3-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="35" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-48" data-surface-control="key-48" aria-hidden="true"><rect x="35" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="113.667" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-50" data-surface-control="key-50" aria-hidden="true"><rect x="113.6667" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="192.333" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-52" data-surface-control="key-52" aria-hidden="true"><rect x="192.3333" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="271" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-53" data-surface-control="key-53" aria-hidden="true"><rect x="271" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="349.667" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-55" data-surface-control="key-55" aria-hidden="true"><rect x="349.6667" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="428.333" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-57" data-surface-control="key-57" aria-hidden="true"><rect x="428.3333" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="507" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-59" data-surface-control="key-59" aria-hidden="true"><rect x="507" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="585.667" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-60" data-surface-control="key-60" aria-hidden="true"><rect x="585.6667" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="664.333" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-62" data-surface-control="key-62" aria-hidden="true"><rect x="664.3333" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="743" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-64" data-surface-control="key-64" aria-hidden="true"><rect x="743" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="821.667" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-65" data-surface-control="key-65" aria-hidden="true"><rect x="821.6667" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="900.333" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-67" data-surface-control="key-67" aria-hidden="true"><rect x="900.3333" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="979" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-69" data-surface-control="key-69" aria-hidden="true"><rect x="979" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="1057.667" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-71" data-surface-control="key-71" aria-hidden="true"><rect x="1057.6667" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="1136.333" y="385" width="78.667" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-72" data-surface-control="key-72" aria-hidden="true"><rect x="1136.3333" y="385" width="78.6667" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="89.28" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-49" data-surface-control="key-49" aria-hidden="true"><rect x="89.28" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="167.947" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-51" data-surface-control="key-51" aria-hidden="true"><rect x="167.9467" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="325.28" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-54" data-surface-control="key-54" aria-hidden="true"><rect x="325.28" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="403.947" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-56" data-surface-control="key-56" aria-hidden="true"><rect x="403.9467" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="482.613" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-58" data-surface-control="key-58" aria-hidden="true"><rect x="482.6133" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="639.947" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-61" data-surface-control="key-61" aria-hidden="true"><rect x="639.9467" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="718.613" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-63" data-surface-control="key-63" aria-hidden="true"><rect x="718.6133" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="875.947" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-66" data-surface-control="key-66" aria-hidden="true"><rect x="875.9467" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="954.613" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-68" data-surface-control="key-68" aria-hidden="true"><rect x="954.6133" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="1033.28" y="385" width="48.773" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--key-70" data-surface-control="key-70" aria-hidden="true"><rect x="1033.28" y="385" width="48.7733" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+</g>
+<g id="arturia-minilab-3-panel--midi-only" data-region="midi-only" aria-label="MIDI-only controls">
+<rect x="25" y="680" width="1200" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="arturia-minilab-3-panel--midi-control-sustain" data-part="midi-control-sustain" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="Sustain pedal (CC64)"><title>Sustain pedal (CC64)</title><g aria-hidden="true">
+<rect x="313.715" y="703" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--control-sustain" data-surface-control="control-sustain" aria-hidden="true"><rect x="25" y="698" width="600" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="arturia-minilab-3-panel--midi-fixed-expression" data-part="midi-fixed-expression" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Pedal in Expression mode (CC11)"><title>Pedal in Expression mode (CC11)</title><g aria-hidden="true">
+<circle cx="925" cy="714.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M925 707.72L925 710.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="arturia-minilab-3-panel--surface--fixed-expression" data-surface-control="fixed-expression" aria-hidden="true"><rect x="625" y="698" width="600" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

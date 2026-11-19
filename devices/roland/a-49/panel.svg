@@ -1,210 +1,366 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 540" role="img" aria-labelledby="title description">
-<title id="title">Roland A-49 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="540" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="522" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland A-49</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="300" height="135" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="d-beam-d-beam" data-kind="touch" aria-label="D-BEAM"><title>D-BEAM</title>
-<circle cx="67" cy="136.805" r="18" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M67 121.805L67 130.505" fill="none" stroke="#000" stroke-width="1"/>
-<circle cx="67" cy="136.805" r="14.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 630" role="group" aria-labelledby="roland-a-49-panel--title" aria-describedby="roland-a-49-panel--description" data-device="roland-a-49" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-a-49-panel--title">Roland A-49 overhead hardware diagram</title><desc id="roland-a-49-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-a-49-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="612" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland A-49</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="300" height="135" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="340" y="65" width="650" height="135" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="225" width="150" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="d-beam-pitch" data-kind="button" aria-label="Pitch"><title>Pitch</title>
-<rect x="124" y="121.805" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--d-beam-d-beam" data-part="d-beam-d-beam" data-kind="touch" role="group" aria-roledescription="touch control" aria-label="D-BEAM: D-BEAM"><title>D-BEAM: D-BEAM</title><g aria-hidden="true">
+<circle cx="67" cy="136.805" r="18" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M67 121.805L67 130.505" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<circle cx="67" cy="136.805" r="14.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="d-beam-volume" data-kind="button" aria-label="Volume"><title>Volume</title>
-<rect x="196" y="121.805" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--surface--d-beam-d-beam" data-surface-control="d-beam-d-beam" aria-hidden="true"><rect x="31" y="95" width="72" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="d-beam-assign" data-kind="button" aria-label="Assign"><title>Assign</title>
-<rect x="268" y="121.805" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--d-beam-pitch" data-part="d-beam-pitch" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="D-BEAM: Pitch"><title>D-BEAM: Pitch</title><g aria-hidden="true">
+<rect x="124" y="121.805" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="340" y="65" width="650" height="135" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="controllers-c1" data-kind="knob" aria-label="C1"><title>C1</title>
-<circle cx="391.571" cy="136.285" r="22.786" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M391.571 116.499L391.571 128.31" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-a-49-panel--surface--d-beam-pitch" data-surface-control="d-beam-pitch" aria-hidden="true"><rect x="103" y="95" width="72" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="controllers-c2" data-kind="knob" aria-label="C2"><title>C2</title>
-<circle cx="482.714" cy="136.285" r="22.786" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M482.714 116.499L482.714 128.31" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-a-49-panel--d-beam-volume" data-part="d-beam-volume" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="D-BEAM: Volume"><title>D-BEAM: Volume</title><g aria-hidden="true">
+<rect x="196" y="121.805" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="controllers-function" data-kind="button" aria-label="Function"><title>Function</title>
-<rect x="558.857" y="121.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--surface--d-beam-volume" data-surface-control="d-beam-volume" aria-hidden="true"><rect x="175" y="95" width="72" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="controllers-supernatural" data-kind="button" aria-label="SuperNATURAL"><title>SuperNATURAL</title>
-<rect x="650" y="121.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--d-beam-assign" data-part="d-beam-assign" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="D-BEAM: Assign"><title>D-BEAM: Assign</title><g aria-hidden="true">
+<rect x="268" y="121.805" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="controllers-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="741.143" y="121.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--surface--d-beam-assign" data-surface-control="d-beam-assign" aria-hidden="true"><rect x="247" y="95" width="72" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="controllers-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="832.286" y="121.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--controllers-c1" data-part="controllers-c1" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLERS: C1"><title>CONTROLLERS: C1</title><g aria-hidden="true">
+<circle cx="391.571" cy="136.285" r="22.786" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M391.571 116.499L391.571 128.31" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="controllers-transpose" data-kind="button" aria-label="Transpose"><title>Transpose</title>
-<rect x="923.429" y="121.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--surface--knob-1" data-surface-control="knob-1" aria-hidden="true"><rect x="346" y="95" width="91.1429" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-a-49-panel--surface--control-cutoff" data-surface-control="control-cutoff" aria-hidden="true"><rect x="346" y="145" width="91.1429" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="25" y="225" width="150" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="performance-pitch-mod-lever" data-kind="joystick" aria-label="Pitch / Mod lever"><title>Pitch / Mod lever</title>
-<rect x="39.625" y="275.709" width="51.75" height="51.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="9"/>
-<path d="M49.975 301.584L81.025 301.584" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M65.5 286.059L65.5 317.109" fill="none" stroke="#000" stroke-width="1"/>
-<circle cx="65.5" cy="301.584" r="9.832" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="65.5" cy="301.584" r="16.56" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="roland-a-49-panel--controllers-c2" data-part="controllers-c2" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLERS: C2"><title>CONTROLLERS: C2</title><g aria-hidden="true">
+<circle cx="482.714" cy="136.285" r="22.786" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M482.714 116.499L482.714 128.31" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-s1" data-kind="button" aria-label="S1"><title>S1</title>
-<rect x="119.5" y="292.042" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--surface--knob-2" data-surface-control="knob-2" aria-hidden="true"><rect x="437.1429" y="95" width="91.1429" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-a-49-panel--surface--control-resonance" data-surface-control="control-resonance" aria-hidden="true"><rect x="437.1429" y="145" width="91.1429" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-s2" data-kind="button" aria-label="S2"><title>S2</title>
-<rect x="50.5" y="412.042" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-a-49-panel--controllers-function" data-part="controllers-function" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CONTROLLERS: Function"><title>CONTROLLERS: Function</title><g aria-hidden="true">
+<rect x="558.857" y="121.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="200" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--controllers-function" data-surface-control="controllers-function" aria-hidden="true"><rect x="528.2857" y="95" width="91.1429" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="243.621" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--controllers-supernatural" data-part="controllers-supernatural" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CONTROLLERS: SuperNATURAL"><title>CONTROLLERS: SuperNATURAL</title><g aria-hidden="true">
+<rect x="650" y="121.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="287.241" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--controllers-supernatural" data-surface-control="controllers-supernatural" aria-hidden="true"><rect x="619.4286" y="95" width="91.1429" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="330.862" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--controllers-octave" data-part="controllers-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CONTROLLERS: Octave -"><title>CONTROLLERS: Octave -</title><g aria-hidden="true">
+<rect x="741.143" y="121.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="374.483" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--controllers-octave" data-surface-control="controllers-octave" aria-hidden="true"><rect x="710.5714" y="95" width="91.1429" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="418.103" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--controllers-octave-2" data-part="controllers-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CONTROLLERS: Octave +"><title>CONTROLLERS: Octave +</title><g aria-hidden="true">
+<rect x="832.286" y="121.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="461.724" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--controllers-octave-2" data-surface-control="controllers-octave-2" aria-hidden="true"><rect x="801.7143" y="95" width="91.1429" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="505.345" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--controllers-transpose" data-part="controllers-transpose" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CONTROLLERS: Transpose"><title>CONTROLLERS: Transpose</title><g aria-hidden="true">
+<rect x="923.429" y="121.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="548.966" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--controllers-transpose" data-surface-control="controllers-transpose" aria-hidden="true"><rect x="892.8571" y="95" width="91.1429" height="100" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="592.586" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--performance-pitch-mod-lever" data-part="performance-pitch-mod-lever" data-kind="joystick" role="group" aria-roledescription="joystick" aria-label="PERFORMANCE: Pitch / Mod lever"><title>PERFORMANCE: Pitch / Mod lever</title><g aria-hidden="true">
+<rect x="39.625" y="275.709" width="51.75" height="51.75" rx="9" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M49.975 301.584L81.025 301.584" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M65.5 286.059L65.5 317.109" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<circle cx="65.5" cy="301.584" r="9.832" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="65.5" cy="301.584" r="16.56" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="636.207" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--lever-pitch-bend" data-surface-control="lever-pitch-bend" aria-hidden="true"><rect x="31" y="255" width="69" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-a-49-panel--surface--lever-modulation" data-surface-control="lever-modulation" aria-hidden="true"><rect x="31" y="315" width="69" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="679.828" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--performance-s1" data-part="performance-s1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: S1"><title>PERFORMANCE: S1</title><g aria-hidden="true">
+<rect x="119.5" y="292.042" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="723.448" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--performance-s1" data-surface-control="performance-s1" aria-hidden="true"><rect x="100" y="255" width="69" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="767.069" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--performance-s2" data-part="performance-s2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: S2"><title>PERFORMANCE: S2</title><g aria-hidden="true">
+<rect x="50.5" y="412.042" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="810.69" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--performance-s2" data-surface-control="performance-s2" aria-hidden="true"><rect x="31" y="375" width="69" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="854.31" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="roland-a-49-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="200" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="897.931" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-48" data-surface-control="key-48" aria-hidden="true"><rect x="200" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="941.552" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="243.621" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="985.172" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-50" data-surface-control="key-50" aria-hidden="true"><rect x="243.6207" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-34" data-kind="key" aria-label="Key 34"><title>Key 34</title>
-<rect x="1028.793" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="287.241" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-36" data-kind="key" aria-label="Key 36"><title>Key 36</title>
-<rect x="1072.414" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-52" data-surface-control="key-52" aria-hidden="true"><rect x="287.2414" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-37" data-kind="key" aria-label="Key 37"><title>Key 37</title>
-<rect x="1116.034" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="330.862" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-39" data-kind="key" aria-label="Key 39"><title>Key 39</title>
-<rect x="1159.655" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-53" data-surface-control="key-53" aria-hidden="true"><rect x="330.8621" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-41" data-kind="key" aria-label="Key 41"><title>Key 41</title>
-<rect x="1203.276" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="374.483" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-42" data-kind="key" aria-label="Key 42"><title>Key 42</title>
-<rect x="1246.897" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-55" data-surface-control="key-55" aria-hidden="true"><rect x="374.4828" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-44" data-kind="key" aria-label="Key 44"><title>Key 44</title>
-<rect x="1290.517" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="418.103" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-46" data-kind="key" aria-label="Key 46"><title>Key 46</title>
-<rect x="1334.138" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-57" data-surface-control="key-57" aria-hidden="true"><rect x="418.1034" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-48" data-kind="key" aria-label="Key 48"><title>Key 48</title>
-<rect x="1377.759" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="461.724" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-49" data-kind="key" aria-label="Key 49"><title>Key 49</title>
-<rect x="1421.379" y="225" width="43.621" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-59" data-surface-control="key-59" aria-hidden="true"><rect x="461.7241" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="230.098" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="505.345" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="273.719" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-60" data-surface-control="key-60" aria-hidden="true"><rect x="505.3448" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="360.96" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="548.966" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="404.581" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-62" data-surface-control="key-62" aria-hidden="true"><rect x="548.9655" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="448.202" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="592.586" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="535.443" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-64" data-surface-control="key-64" aria-hidden="true"><rect x="592.5862" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="579.064" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="636.207" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="666.305" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-65" data-surface-control="key-65" aria-hidden="true"><rect x="636.2069" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="709.926" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="679.828" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="753.547" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-67" data-surface-control="key-67" aria-hidden="true"><rect x="679.8276" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="840.788" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="723.448" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="884.409" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-69" data-surface-control="key-69" aria-hidden="true"><rect x="723.4483" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="971.65" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="767.069" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-33" data-kind="key" aria-label="Key 33"><title>Key 33</title>
-<rect x="1015.271" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-71" data-surface-control="key-71" aria-hidden="true"><rect x="767.069" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-35" data-kind="key" aria-label="Key 35"><title>Key 35</title>
-<rect x="1058.891" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="810.69" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-38" data-kind="key" aria-label="Key 38"><title>Key 38</title>
-<rect x="1146.133" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-72" data-surface-control="key-72" aria-hidden="true"><rect x="810.6897" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-40" data-kind="key" aria-label="Key 40"><title>Key 40</title>
-<rect x="1189.753" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-27" data-part="key-27" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 27"><title>Key 27</title><g aria-hidden="true">
+<rect x="854.31" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-43" data-kind="key" aria-label="Key 43"><title>Key 43</title>
-<rect x="1276.995" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-74" data-surface-control="key-74" aria-hidden="true"><rect x="854.3103" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-45" data-kind="key" aria-label="Key 45"><title>Key 45</title>
-<rect x="1320.616" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--key-29" data-part="key-29" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 29"><title>Key 29</title><g aria-hidden="true">
+<rect x="897.931" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-47" data-kind="key" aria-label="Key 47"><title>Key 47</title>
-<rect x="1364.236" y="225" width="27.045" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="roland-a-49-panel--surface--key-76" data-surface-control="key-76" aria-hidden="true"><rect x="897.931" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-30" data-part="key-30" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 30"><title>Key 30</title><g aria-hidden="true">
+<rect x="941.552" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-77" data-surface-control="key-77" aria-hidden="true"><rect x="941.5517" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-32" data-part="key-32" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 32"><title>Key 32</title><g aria-hidden="true">
+<rect x="985.172" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-79" data-surface-control="key-79" aria-hidden="true"><rect x="985.1724" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-34" data-part="key-34" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 34"><title>Key 34</title><g aria-hidden="true">
+<rect x="1028.793" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-81" data-surface-control="key-81" aria-hidden="true"><rect x="1028.7931" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-36" data-part="key-36" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 36"><title>Key 36</title><g aria-hidden="true">
+<rect x="1072.414" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-83" data-surface-control="key-83" aria-hidden="true"><rect x="1072.4138" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-37" data-part="key-37" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 37"><title>Key 37</title><g aria-hidden="true">
+<rect x="1116.034" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-84" data-surface-control="key-84" aria-hidden="true"><rect x="1116.0345" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-39" data-part="key-39" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 39"><title>Key 39</title><g aria-hidden="true">
+<rect x="1159.655" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-86" data-surface-control="key-86" aria-hidden="true"><rect x="1159.6552" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-41" data-part="key-41" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 41"><title>Key 41</title><g aria-hidden="true">
+<rect x="1203.276" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-88" data-surface-control="key-88" aria-hidden="true"><rect x="1203.2759" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-42" data-part="key-42" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 42"><title>Key 42</title><g aria-hidden="true">
+<rect x="1246.897" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-89" data-surface-control="key-89" aria-hidden="true"><rect x="1246.8966" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-44" data-part="key-44" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 44"><title>Key 44</title><g aria-hidden="true">
+<rect x="1290.517" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-91" data-surface-control="key-91" aria-hidden="true"><rect x="1290.5172" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-46" data-part="key-46" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 46"><title>Key 46</title><g aria-hidden="true">
+<rect x="1334.138" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-93" data-surface-control="key-93" aria-hidden="true"><rect x="1334.1379" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-48" data-part="key-48" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 48"><title>Key 48</title><g aria-hidden="true">
+<rect x="1377.759" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-95" data-surface-control="key-95" aria-hidden="true"><rect x="1377.7586" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-49" data-part="key-49" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 49"><title>Key 49</title><g aria-hidden="true">
+<rect x="1421.379" y="225" width="43.621" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--key-96" data-surface-control="key-96" aria-hidden="true"><rect x="1421.3793" y="225" width="43.6207" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="230.098" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-49" data-surface-control="key-49" aria-hidden="true"><rect x="230.0983" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="273.719" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-51" data-surface-control="key-51" aria-hidden="true"><rect x="273.719" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="360.96" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-54" data-surface-control="key-54" aria-hidden="true"><rect x="360.9603" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="404.581" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-56" data-surface-control="key-56" aria-hidden="true"><rect x="404.581" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="448.202" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-58" data-surface-control="key-58" aria-hidden="true"><rect x="448.2017" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="535.443" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-61" data-surface-control="key-61" aria-hidden="true"><rect x="535.4431" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="579.064" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-63" data-surface-control="key-63" aria-hidden="true"><rect x="579.0638" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="666.305" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-66" data-surface-control="key-66" aria-hidden="true"><rect x="666.3052" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="709.926" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-68" data-surface-control="key-68" aria-hidden="true"><rect x="709.9259" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="753.547" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-70" data-surface-control="key-70" aria-hidden="true"><rect x="753.5466" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-26" data-part="key-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 26"><title>Key 26</title><g aria-hidden="true">
+<rect x="840.788" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-73" data-surface-control="key-73" aria-hidden="true"><rect x="840.7879" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-28" data-part="key-28" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 28"><title>Key 28</title><g aria-hidden="true">
+<rect x="884.409" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-75" data-surface-control="key-75" aria-hidden="true"><rect x="884.4086" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-31" data-part="key-31" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 31"><title>Key 31</title><g aria-hidden="true">
+<rect x="971.65" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-78" data-surface-control="key-78" aria-hidden="true"><rect x="971.65" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-33" data-part="key-33" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 33"><title>Key 33</title><g aria-hidden="true">
+<rect x="1015.271" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-80" data-surface-control="key-80" aria-hidden="true"><rect x="1015.2707" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-35" data-part="key-35" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 35"><title>Key 35</title><g aria-hidden="true">
+<rect x="1058.891" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-82" data-surface-control="key-82" aria-hidden="true"><rect x="1058.8914" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-38" data-part="key-38" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 38"><title>Key 38</title><g aria-hidden="true">
+<rect x="1146.133" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-85" data-surface-control="key-85" aria-hidden="true"><rect x="1146.1328" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-40" data-part="key-40" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 40"><title>Key 40</title><g aria-hidden="true">
+<rect x="1189.753" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-87" data-surface-control="key-87" aria-hidden="true"><rect x="1189.7534" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-43" data-part="key-43" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 43"><title>Key 43</title><g aria-hidden="true">
+<rect x="1276.995" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-90" data-surface-control="key-90" aria-hidden="true"><rect x="1276.9948" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-45" data-part="key-45" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 45"><title>Key 45</title><g aria-hidden="true">
+<rect x="1320.616" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-92" data-surface-control="key-92" aria-hidden="true"><rect x="1320.6155" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--key-47" data-part="key-47" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 47"><title>Key 47</title><g aria-hidden="true">
+<rect x="1364.236" y="225" width="27.045" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-a-49-panel--surface--key-94" data-surface-control="key-94" aria-hidden="true"><rect x="1364.2362" y="225" width="27.0448" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+</g>
+<g id="roland-a-49-panel--midi-only" data-region="midi-only" aria-label="MIDI-only controls">
+<rect x="25" y="530" width="1450" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="roland-a-49-panel--midi-control-sustain" data-part="midi-control-sustain" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="Sustain pedal (CC64)"><title>Sustain pedal (CC64)</title><g aria-hidden="true">
+<rect x="194.965" y="553" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-a-49-panel--surface--control-sustain" data-surface-control="control-sustain" aria-hidden="true"><rect x="25" y="548" width="362.5" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--midi-control-expression" data-part="midi-control-expression" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Expression pedal"><title>Expression pedal</title><g aria-hidden="true">
+<circle cx="568.75" cy="564.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M568.75 557.72L568.75 560.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-a-49-panel--surface--control-expression" data-surface-control="control-expression" aria-hidden="true"><rect x="387.5" y="548" width="362.5" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--midi-control-pressure" data-part="midi-control-pressure" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Assignable channel pressure"><title>Assignable channel pressure</title><g aria-hidden="true">
+<circle cx="931.25" cy="564.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M931.25 557.72L931.25 560.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-a-49-panel--surface--control-pressure" data-surface-control="control-pressure" aria-hidden="true"><rect x="750" y="548" width="362.5" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-a-49-panel--midi-control-program" data-part="midi-control-program" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Program change (0–127)"><title>Program change (0–127)</title><g aria-hidden="true">
+<circle cx="1293.75" cy="564.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1293.75 557.72L1293.75 560.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-a-49-panel--surface--control-program" data-surface-control="control-program" aria-hidden="true"><rect x="1112.5" y="548" width="362.5" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

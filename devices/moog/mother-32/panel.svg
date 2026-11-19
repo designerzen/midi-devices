@@ -1,276 +1,387 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 650" role="img" aria-labelledby="title description">
-<title id="title">Moog Mother-32 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="650" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="632" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Moog Mother-32</text>
-<text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="430" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="vco-modulation-frequency" data-kind="knob" aria-label="Frequency"><title>Frequency</title>
-<circle cx="83.25" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M83.25 124.285L83.25 137.535" fill="none" stroke="#000" stroke-width="1"/>
-</g>
-<g id="vco-modulation-pulse-width" data-kind="knob" aria-label="Pulse width"><title>Pulse width</title>
-<circle cx="187.75" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M187.75 124.285L187.75 137.535" fill="none" stroke="#000" stroke-width="1"/>
-</g>
-<g id="vco-modulation-vco-mod-amt" data-kind="knob" aria-label="VCO mod amt"><title>VCO mod amt</title>
-<circle cx="292.25" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M292.25 124.285L292.25 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 650" role="group" aria-labelledby="moog-mother-32-panel--title" aria-describedby="moog-mother-32-panel--description" data-device="moog-mother-32" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="moog-mother-32-panel--title">Moog Mother-32 overhead hardware diagram</title><desc id="moog-mother-32-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="moog-mother-32-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1232" height="632" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Moog Mother-32</text>
+<text x="1225" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="430" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="465" y="65" width="400" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="355" width="840" height="245" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="885" y="65" width="340" height="535" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="vco-modulation-lfo-rate" data-kind="knob" aria-label="LFO rate"><title>LFO rate</title>
-<circle cx="396.75" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M396.75 124.285L396.75 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--vco-modulation-frequency" data-part="vco-modulation-frequency" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO / MODULATION: Frequency"><title>VCO / MODULATION: Frequency</title><g aria-hidden="true">
+<circle cx="83.25" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M83.25 124.285L83.25 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="vco-modulation-glide" data-kind="knob" aria-label="Glide"><title>Glide</title>
-<circle cx="83.25" cy="266.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M83.25 244.285L83.25 257.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--surface--vco-modulation-frequency" data-surface-control="vco-modulation-frequency" aria-hidden="true"><rect x="31" y="95" width="104.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vco-modulation-wave" data-kind="switch" aria-label="Wave"><title>Wave</title>
-<rect x="182.75" y="254.285" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="178.75" y="262.285" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--vco-modulation-pulse-width" data-part="vco-modulation-pulse-width" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO / MODULATION: Pulse width"><title>VCO / MODULATION: Pulse width</title><g aria-hidden="true">
+<circle cx="187.75" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M187.75 124.285L187.75 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="vco-modulation-mod-source" data-kind="switch" aria-label="Mod source"><title>Mod source</title>
-<rect x="287.25" y="254.285" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="283.25" y="262.285" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--vco-modulation-pulse-width" data-surface-control="vco-modulation-pulse-width" aria-hidden="true"><rect x="135.5" y="95" width="104.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vco-modulation-mod-dest" data-kind="switch" aria-label="Mod dest"><title>Mod dest</title>
-<rect x="391.75" y="254.285" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="387.75" y="262.285" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--vco-modulation-vco-mod-amt" data-part="vco-modulation-vco-mod-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO / MODULATION: VCO mod amt"><title>VCO / MODULATION: VCO mod amt</title><g aria-hidden="true">
+<circle cx="292.25" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M292.25 124.285L292.25 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="465" y="65" width="400" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="vcf-vca-eg-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
-<circle cx="509.8" cy="146.362" r="19.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M509.8 129.962L509.8 139.572" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--surface--vco-modulation-vco-mod-amt" data-surface-control="vco-modulation-vco-mod-amt" aria-hidden="true"><rect x="240" y="95" width="104.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vcf-vca-eg-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<circle cx="587.4" cy="146.362" r="19.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M587.4 129.962L587.4 139.572" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--vco-modulation-lfo-rate" data-part="vco-modulation-lfo-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO / MODULATION: LFO rate"><title>VCO / MODULATION: LFO rate</title><g aria-hidden="true">
+<circle cx="396.75" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M396.75 124.285L396.75 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="vcf-vca-eg-vcf-mod-amt" data-kind="knob" aria-label="VCF mod amt"><title>VCF mod amt</title>
-<circle cx="665" cy="146.362" r="19.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M665 129.962L665 139.572" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--surface--vco-modulation-lfo-rate" data-surface-control="vco-modulation-lfo-rate" aria-hidden="true"><rect x="344.5" y="95" width="104.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vcf-vca-eg-mix" data-kind="knob" aria-label="Mix"><title>Mix</title>
-<circle cx="742.6" cy="146.362" r="19.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M742.6 129.962L742.6 139.572" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--vco-modulation-glide" data-part="vco-modulation-glide" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCO / MODULATION: Glide"><title>VCO / MODULATION: Glide</title><g aria-hidden="true">
+<circle cx="83.25" cy="266.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M83.25 244.285L83.25 257.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="vcf-vca-eg-attack" data-kind="knob" aria-label="Attack"><title>Attack</title>
-<circle cx="820.2" cy="146.362" r="19.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M820.2 129.962L820.2 139.572" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--surface--vco-modulation-glide" data-surface-control="vco-modulation-glide" aria-hidden="true"><rect x="31" y="215" width="104.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vcf-vca-eg-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<circle cx="509.8" cy="266.362" r="19.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M509.8 249.962L509.8 259.572" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--vco-modulation-wave" data-part="vco-modulation-wave" data-kind="switch" role="group" aria-roledescription="switch" aria-label="VCO / MODULATION: Wave"><title>VCO / MODULATION: Wave</title><g aria-hidden="true">
+<rect x="182.75" y="254.285" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="178.75" y="262.285" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="vcf-vca-eg-sustain" data-kind="switch" aria-label="Sustain"><title>Sustain</title>
-<rect x="582.4" y="254.362" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="578.4" y="262.362" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--vco-modulation-wave" data-surface-control="vco-modulation-wave" aria-hidden="true"><rect x="135.5" y="215" width="104.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vcf-vca-eg-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="665" cy="266.362" r="19.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M665 249.962L665 259.572" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--vco-modulation-mod-source" data-part="vco-modulation-mod-source" data-kind="switch" role="group" aria-roledescription="switch" aria-label="VCO / MODULATION: Mod source"><title>VCO / MODULATION: Mod source</title><g aria-hidden="true">
+<rect x="287.25" y="254.285" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="283.25" y="262.285" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="vcf-vca-eg-vcf-mode" data-kind="switch" aria-label="VCF mode"><title>VCF mode</title>
-<rect x="737.6" y="254.362" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="733.6" y="262.362" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--vco-modulation-mod-source" data-surface-control="vco-modulation-mod-source" aria-hidden="true"><rect x="240" y="215" width="104.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vcf-vca-eg-vca-mode" data-kind="switch" aria-label="VCA mode"><title>VCA mode</title>
-<rect x="815.2" y="254.362" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="811.2" y="262.362" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--vco-modulation-mod-dest" data-part="vco-modulation-mod-dest" data-kind="switch" role="group" aria-roledescription="switch" aria-label="VCO / MODULATION: Mod dest"><title>VCO / MODULATION: Mod dest</title><g aria-hidden="true">
+<rect x="391.75" y="254.285" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="387.75" y="262.285" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="25" y="355" width="840" height="245" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="sequencer-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="62.846" cy="429.962" r="15.923" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M62.846 417.039L62.846 424.389" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-mother-32-panel--surface--vco-modulation-mod-dest" data-surface-control="vco-modulation-mod-dest" aria-hidden="true"><rect x="344.5" y="215" width="104.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-run-stop" data-kind="button" aria-label="Run / Stop"><title>Run / Stop</title>
-<rect x="111.538" y="414.962" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-cutoff" data-part="vcf-vca-eg-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF / VCA / EG: Cutoff"><title>VCF / VCA / EG: Cutoff</title><g aria-hidden="true">
+<circle cx="509.8" cy="146.362" r="19.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M509.8 129.962L509.8 139.572" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-hold" data-kind="button" aria-label="Hold"><title>Hold</title>
-<rect x="175.231" y="414.962" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-cutoff" data-surface-control="vcf-vca-eg-cutoff" aria-hidden="true"><rect x="471" y="95" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-reset-accent" data-kind="button" aria-label="Reset / Accent"><title>Reset / Accent</title>
-<rect x="238.923" y="409.924" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-resonance" data-part="vcf-vca-eg-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF / VCA / EG: Resonance"><title>VCF / VCA / EG: Resonance</title><g aria-hidden="true">
+<circle cx="587.4" cy="146.362" r="19.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M587.4 129.962L587.4 139.572" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<rect x="302.615" y="414.962" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-resonance" data-surface-control="vcf-vca-eg-resonance" aria-hidden="true"><rect x="548.6" y="95" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-kb-step" data-kind="button" aria-label="KB / Step"><title>KB / Step</title>
-<rect x="366.308" y="414.962" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-vcf-mod-amt" data-part="vcf-vca-eg-vcf-mod-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF / VCA / EG: VCF mod amt"><title>VCF / VCA / EG: VCF mod amt</title><g aria-hidden="true">
+<circle cx="665" cy="146.362" r="19.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M665 129.962L665 139.572" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-pattern" data-kind="button" aria-label="Pattern"><title>Pattern</title>
-<rect x="430" y="414.962" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-vcf-mod-amt" data-surface-control="vcf-vca-eg-vcf-mod-amt" aria-hidden="true"><rect x="626.2" y="95" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-bank" data-kind="button" aria-label="Bank"><title>Bank</title>
-<rect x="493.692" y="414.962" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-mix" data-part="vcf-vca-eg-mix" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF / VCA / EG: Mix"><title>VCF / VCA / EG: Mix</title><g aria-hidden="true">
+<circle cx="742.6" cy="146.362" r="19.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M742.6 129.962L742.6 139.572" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="546.538" y="404.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-mix" data-surface-control="vcf-vca-eg-mix" aria-hidden="true"><rect x="703.8" y="95" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="610.231" y="404.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-attack" data-part="vcf-vca-eg-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF / VCA / EG: Attack"><title>VCF / VCA / EG: Attack</title><g aria-hidden="true">
+<circle cx="820.2" cy="146.362" r="19.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M820.2 129.962L820.2 139.572" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="673.923" y="404.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-attack" data-surface-control="vcf-vca-eg-attack" aria-hidden="true"><rect x="781.4" y="95" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="737.615" y="404.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-decay" data-part="vcf-vca-eg-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF / VCA / EG: Decay"><title>VCF / VCA / EG: Decay</title><g aria-hidden="true">
+<circle cx="509.8" cy="266.362" r="19.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M509.8 249.962L509.8 259.572" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="801.308" y="404.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-decay" data-surface-control="vcf-vca-eg-decay" aria-hidden="true"><rect x="471" y="215" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="37" y="509.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-sustain" data-part="vcf-vca-eg-sustain" data-kind="switch" role="group" aria-roledescription="switch" aria-label="VCF / VCA / EG: Sustain"><title>VCF / VCA / EG: Sustain</title><g aria-hidden="true">
+<rect x="582.4" y="254.362" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="578.4" y="262.362" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="100.692" y="509.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-sustain" data-surface-control="vcf-vca-eg-sustain" aria-hidden="true"><rect x="548.6" y="215" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="164.385" y="509.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-volume" data-part="vcf-vca-eg-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF / VCA / EG: Volume"><title>VCF / VCA / EG: Volume</title><g aria-hidden="true">
+<circle cx="665" cy="266.362" r="19.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M665 249.962L665 259.572" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="228.077" y="509.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-volume" data-surface-control="vcf-vca-eg-volume" aria-hidden="true"><rect x="626.2" y="215" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="291.769" y="509.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-vcf-mode" data-part="vcf-vca-eg-vcf-mode" data-kind="switch" role="group" aria-roledescription="switch" aria-label="VCF / VCA / EG: VCF mode"><title>VCF / VCA / EG: VCF mode</title><g aria-hidden="true">
+<rect x="737.6" y="254.362" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="733.6" y="262.362" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="355.462" y="509.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-vcf-mode" data-surface-control="vcf-vca-eg-vcf-mode" aria-hidden="true"><rect x="703.8" y="215" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="419.154" y="509.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--vcf-vca-eg-vca-mode" data-part="vcf-vca-eg-vca-mode" data-kind="switch" role="group" aria-roledescription="switch" aria-label="VCF / VCA / EG: VCA mode"><title>VCF / VCA / EG: VCA mode</title><g aria-hidden="true">
+<rect x="815.2" y="254.362" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="811.2" y="262.362" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="482.846" y="509.116" width="51.692" height="51.692" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="moog-mother-32-panel--surface--vcf-vca-eg-vca-mode" data-surface-control="vcf-vca-eg-vca-mode" aria-hidden="true"><rect x="781.4" y="215" width="77.6" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="885" y="65" width="340" height="535" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="patch-bay-ext-audio-in" data-kind="jack" aria-label="Ext audio IN"><title>Ext audio IN</title>
-<circle cx="932" cy="117.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="932" cy="117.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-tempo" data-part="sequencer-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SEQUENCER: Tempo"><title>SEQUENCER: Tempo</title><g aria-hidden="true">
+<circle cx="62.846" cy="429.962" r="15.923" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M62.846 417.039L62.846 424.389" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="patch-bay-mix-cv-in" data-kind="jack" aria-label="Mix CV IN"><title>Mix CV IN</title>
-<circle cx="1014" cy="117.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1014" cy="117.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-tempo" data-surface-control="sequencer-tempo" aria-hidden="true"><rect x="31" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-vca-cv-in" data-kind="jack" aria-label="VCA CV IN"><title>VCA CV IN</title>
-<circle cx="1096" cy="117.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1096" cy="117.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-run-stop" data-part="sequencer-run-stop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Run / Stop"><title>SEQUENCER: Run / Stop</title><g aria-hidden="true">
+<rect x="111.538" y="414.962" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-vcf-cutoff-in" data-kind="jack" aria-label="VCF cutoff IN"><title>VCF cutoff IN</title>
-<circle cx="1178" cy="111.32" r="7.992" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1178" cy="111.32" r="3.73" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-run-stop" data-surface-control="sequencer-run-stop" aria-hidden="true"><rect x="94.6923" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-vcf-res-in" data-kind="jack" aria-label="VCF res IN"><title>VCF res IN</title>
-<circle cx="932" cy="180.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="932" cy="180.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-hold" data-part="sequencer-hold" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Hold"><title>SEQUENCER: Hold</title><g aria-hidden="true">
+<rect x="175.231" y="414.962" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-vcf-mod-in" data-kind="jack" aria-label="VCF mod IN"><title>VCF mod IN</title>
-<circle cx="1014" cy="180.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1014" cy="180.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-hold" data-surface-control="sequencer-hold" aria-hidden="true"><rect x="158.3846" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-vco-1v-oct-in" data-kind="jack" aria-label="VCO 1V/oct IN"><title>VCO 1V/oct IN</title>
-<circle cx="1096" cy="173.82" r="7.992" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1096" cy="173.82" r="3.73" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-reset-accent" data-part="sequencer-reset-accent" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Reset / Accent"><title>SEQUENCER: Reset / Accent</title><g aria-hidden="true">
+<rect x="238.923" y="409.924" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-vco-lin-fm-in" data-kind="jack" aria-label="VCO LIN FM IN"><title>VCO LIN FM IN</title>
-<circle cx="1178" cy="173.82" r="7.992" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1178" cy="173.82" r="3.73" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-reset-accent" data-surface-control="sequencer-reset-accent" aria-hidden="true"><rect x="222.0769" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-vco-mod-in" data-kind="jack" aria-label="VCO mod IN"><title>VCO mod IN</title>
-<circle cx="932" cy="242.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="932" cy="242.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-shift" data-part="sequencer-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Shift"><title>SEQUENCER: Shift</title><g aria-hidden="true">
+<rect x="302.615" y="414.962" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-vco-pwm-in" data-kind="jack" aria-label="VCO PWM IN"><title>VCO PWM IN</title>
-<circle cx="1014" cy="242.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1014" cy="242.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-shift" data-surface-control="sequencer-shift" aria-hidden="true"><rect x="285.7692" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-lfo-rate-in" data-kind="jack" aria-label="LFO rate IN"><title>LFO rate IN</title>
-<circle cx="1096" cy="242.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1096" cy="242.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-kb-step" data-part="sequencer-kb-step" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: KB / Step"><title>SEQUENCER: KB / Step</title><g aria-hidden="true">
+<rect x="366.308" y="414.962" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-tempo-in" data-kind="jack" aria-label="Tempo IN"><title>Tempo IN</title>
-<circle cx="1178" cy="242.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1178" cy="242.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-kb-step" data-surface-control="sequencer-kb-step" aria-hidden="true"><rect x="349.4615" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-run-stop-in" data-kind="jack" aria-label="Run / Stop IN"><title>Run / Stop IN</title>
-<circle cx="932" cy="298.82" r="7.992" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="932" cy="298.82" r="3.73" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-pattern" data-part="sequencer-pattern" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Pattern"><title>SEQUENCER: Pattern</title><g aria-hidden="true">
+<rect x="430" y="414.962" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-reset-in" data-kind="jack" aria-label="Reset IN"><title>Reset IN</title>
-<circle cx="1014" cy="305.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1014" cy="305.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-pattern" data-surface-control="sequencer-pattern" aria-hidden="true"><rect x="413.1538" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-hold-in" data-kind="jack" aria-label="Hold IN"><title>Hold IN</title>
-<circle cx="1096" cy="305.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1096" cy="305.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-bank" data-part="sequencer-bank" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Bank"><title>SEQUENCER: Bank</title><g aria-hidden="true">
+<rect x="493.692" y="414.962" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-eg-gate-in" data-kind="jack" aria-label="EG gate IN"><title>EG gate IN</title>
-<circle cx="1178" cy="305.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1178" cy="305.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-bank" data-surface-control="sequencer-bank" aria-hidden="true"><rect x="476.8462" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-vc-mix-in" data-kind="jack" aria-label="VC mix IN"><title>VC mix IN</title>
-<circle cx="932" cy="367.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="932" cy="367.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-key-1" data-part="sequencer-key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 1"><title>SEQUENCER: Key 1</title><g aria-hidden="true">
+<rect x="546.538" y="404.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-vca-out" data-kind="jack" aria-label="VCA OUT"><title>VCA OUT</title>
-<circle cx="1014" cy="367.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1014" cy="367.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-key-1" data-surface-control="sequencer-key-1" aria-hidden="true"><rect x="540.5385" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-noise-out" data-kind="jack" aria-label="Noise OUT"><title>Noise OUT</title>
-<circle cx="1096" cy="367.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1096" cy="367.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-key-2" data-part="sequencer-key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 2"><title>SEQUENCER: Key 2</title><g aria-hidden="true">
+<rect x="610.231" y="404.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-vcf-out" data-kind="jack" aria-label="VCF OUT"><title>VCF OUT</title>
-<circle cx="1178" cy="367.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1178" cy="367.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-key-2" data-surface-control="sequencer-key-2" aria-hidden="true"><rect x="604.2308" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-vco-saw-out" data-kind="jack" aria-label="VCO saw OUT"><title>VCO saw OUT</title>
-<circle cx="932" cy="430.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="932" cy="430.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-key-3" data-part="sequencer-key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 3"><title>SEQUENCER: Key 3</title><g aria-hidden="true">
+<rect x="673.923" y="404.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-vco-pulse-out" data-kind="jack" aria-label="VCO pulse OUT"><title>VCO pulse OUT</title>
-<circle cx="1014" cy="423.82" r="7.992" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1014" cy="423.82" r="3.73" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-key-3" data-surface-control="sequencer-key-3" aria-hidden="true"><rect x="667.9231" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-lfo-triangle-out" data-kind="jack" aria-label="LFO triangle OUT"><title>LFO triangle OUT</title>
-<circle cx="1096" cy="423.82" r="7.992" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1096" cy="423.82" r="3.73" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-key-4" data-part="sequencer-key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 4"><title>SEQUENCER: Key 4</title><g aria-hidden="true">
+<rect x="737.615" y="404.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-lfo-square-out" data-kind="jack" aria-label="LFO square OUT"><title>LFO square OUT</title>
-<circle cx="1178" cy="423.82" r="7.992" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1178" cy="423.82" r="3.73" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-key-4" data-surface-control="sequencer-key-4" aria-hidden="true"><rect x="731.6154" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-vc-mix-out" data-kind="jack" aria-label="VC mix OUT"><title>VC mix OUT</title>
-<circle cx="932" cy="492.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="932" cy="492.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-key-5" data-part="sequencer-key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 5"><title>SEQUENCER: Key 5</title><g aria-hidden="true">
+<rect x="801.308" y="404.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-assign-out" data-kind="jack" aria-label="Assign OUT"><title>Assign OUT</title>
-<circle cx="1014" cy="492.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1014" cy="492.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-key-5" data-surface-control="sequencer-key-5" aria-hidden="true"><rect x="795.3077" y="385" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-eg-out" data-kind="jack" aria-label="EG OUT"><title>EG OUT</title>
-<circle cx="1096" cy="492.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1096" cy="492.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-key-6" data-part="sequencer-key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 6"><title>SEQUENCER: Key 6</title><g aria-hidden="true">
+<rect x="37" y="509.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-kb-out" data-kind="jack" aria-label="KB OUT"><title>KB OUT</title>
-<circle cx="1178" cy="492.535" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1178" cy="492.535" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-key-6" data-surface-control="sequencer-key-6" aria-hidden="true"><rect x="31" y="490" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-gate-out" data-kind="jack" aria-label="Gate OUT"><title>Gate OUT</title>
-<circle cx="932" cy="555.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="932" cy="555.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-key-7" data-part="sequencer-key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 7"><title>SEQUENCER: Key 7</title><g aria-hidden="true">
+<rect x="100.692" y="509.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-mult-1-out" data-kind="jack" aria-label="Mult 1 OUT"><title>Mult 1 OUT</title>
-<circle cx="1014" cy="555.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1014" cy="555.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-key-7" data-surface-control="sequencer-key-7" aria-hidden="true"><rect x="94.6923" y="490" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bay-mult-2-out" data-kind="jack" aria-label="Mult 2 OUT"><title>Mult 2 OUT</title>
-<circle cx="1096" cy="555.035" r="11.721" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1096" cy="555.035" r="5.47" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--sequencer-key-8" data-part="sequencer-key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 8"><title>SEQUENCER: Key 8</title><g aria-hidden="true">
+<rect x="164.385" y="509.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bay-vc-mix-control-out" data-kind="jack" aria-label="VC mix control OUT"><title>VC mix control OUT</title>
-<circle cx="1178" cy="548.82" r="7.992" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1178" cy="548.82" r="3.73" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="moog-mother-32-panel--surface--sequencer-key-8" data-surface-control="sequencer-key-8" aria-hidden="true"><rect x="158.3846" y="490" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-mother-32-panel--sequencer-key-9" data-part="sequencer-key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 9"><title>SEQUENCER: Key 9</title><g aria-hidden="true">
+<rect x="228.077" y="509.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-mother-32-panel--surface--sequencer-key-9" data-surface-control="sequencer-key-9" aria-hidden="true"><rect x="222.0769" y="490" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-mother-32-panel--sequencer-key-10" data-part="sequencer-key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 10"><title>SEQUENCER: Key 10</title><g aria-hidden="true">
+<rect x="291.769" y="509.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-mother-32-panel--surface--sequencer-key-10" data-surface-control="sequencer-key-10" aria-hidden="true"><rect x="285.7692" y="490" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-mother-32-panel--sequencer-key-11" data-part="sequencer-key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 11"><title>SEQUENCER: Key 11</title><g aria-hidden="true">
+<rect x="355.462" y="509.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-mother-32-panel--surface--sequencer-key-11" data-surface-control="sequencer-key-11" aria-hidden="true"><rect x="349.4615" y="490" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-mother-32-panel--sequencer-key-12" data-part="sequencer-key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 12"><title>SEQUENCER: Key 12</title><g aria-hidden="true">
+<rect x="419.154" y="509.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-mother-32-panel--surface--sequencer-key-12" data-surface-control="sequencer-key-12" aria-hidden="true"><rect x="413.1538" y="490" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-mother-32-panel--sequencer-key-13" data-part="sequencer-key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 13"><title>SEQUENCER: Key 13</title><g aria-hidden="true">
+<rect x="482.846" y="509.116" width="51.692" height="51.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-mother-32-panel--surface--sequencer-key-13" data-surface-control="sequencer-key-13" aria-hidden="true"><rect x="476.8462" y="490" width="63.6923" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-ext-audio-in" data-part="patch-bay-ext-audio-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Ext audio IN"><title>PATCH BAY: Ext audio IN</title><g aria-hidden="true">
+<circle cx="932" cy="117.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="932" cy="117.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-mix-cv-in" data-part="patch-bay-mix-cv-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Mix CV IN"><title>PATCH BAY: Mix CV IN</title><g aria-hidden="true">
+<circle cx="1014" cy="117.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1014" cy="117.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vca-cv-in" data-part="patch-bay-vca-cv-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCA CV IN"><title>PATCH BAY: VCA CV IN</title><g aria-hidden="true">
+<circle cx="1096" cy="117.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1096" cy="117.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vcf-cutoff-in" data-part="patch-bay-vcf-cutoff-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCF cutoff IN"><title>PATCH BAY: VCF cutoff IN</title><g aria-hidden="true">
+<circle cx="1178" cy="111.32" r="7.992" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1178" cy="111.32" r="3.73" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vcf-res-in" data-part="patch-bay-vcf-res-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCF res IN"><title>PATCH BAY: VCF res IN</title><g aria-hidden="true">
+<circle cx="932" cy="180.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="932" cy="180.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vcf-mod-in" data-part="patch-bay-vcf-mod-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCF mod IN"><title>PATCH BAY: VCF mod IN</title><g aria-hidden="true">
+<circle cx="1014" cy="180.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1014" cy="180.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vco-1v-oct-in" data-part="patch-bay-vco-1v-oct-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCO 1V/oct IN"><title>PATCH BAY: VCO 1V/oct IN</title><g aria-hidden="true">
+<circle cx="1096" cy="173.82" r="7.992" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1096" cy="173.82" r="3.73" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vco-lin-fm-in" data-part="patch-bay-vco-lin-fm-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCO LIN FM IN"><title>PATCH BAY: VCO LIN FM IN</title><g aria-hidden="true">
+<circle cx="1178" cy="173.82" r="7.992" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1178" cy="173.82" r="3.73" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vco-mod-in" data-part="patch-bay-vco-mod-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCO mod IN"><title>PATCH BAY: VCO mod IN</title><g aria-hidden="true">
+<circle cx="932" cy="242.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="932" cy="242.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vco-pwm-in" data-part="patch-bay-vco-pwm-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCO PWM IN"><title>PATCH BAY: VCO PWM IN</title><g aria-hidden="true">
+<circle cx="1014" cy="242.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1014" cy="242.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-lfo-rate-in" data-part="patch-bay-lfo-rate-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: LFO rate IN"><title>PATCH BAY: LFO rate IN</title><g aria-hidden="true">
+<circle cx="1096" cy="242.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1096" cy="242.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-tempo-in" data-part="patch-bay-tempo-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Tempo IN"><title>PATCH BAY: Tempo IN</title><g aria-hidden="true">
+<circle cx="1178" cy="242.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1178" cy="242.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-run-stop-in" data-part="patch-bay-run-stop-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Run / Stop IN"><title>PATCH BAY: Run / Stop IN</title><g aria-hidden="true">
+<circle cx="932" cy="298.82" r="7.992" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="932" cy="298.82" r="3.73" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-reset-in" data-part="patch-bay-reset-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Reset IN"><title>PATCH BAY: Reset IN</title><g aria-hidden="true">
+<circle cx="1014" cy="305.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1014" cy="305.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-hold-in" data-part="patch-bay-hold-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Hold IN"><title>PATCH BAY: Hold IN</title><g aria-hidden="true">
+<circle cx="1096" cy="305.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1096" cy="305.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-eg-gate-in" data-part="patch-bay-eg-gate-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: EG gate IN"><title>PATCH BAY: EG gate IN</title><g aria-hidden="true">
+<circle cx="1178" cy="305.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1178" cy="305.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vc-mix-in" data-part="patch-bay-vc-mix-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VC mix IN"><title>PATCH BAY: VC mix IN</title><g aria-hidden="true">
+<circle cx="932" cy="367.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="932" cy="367.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vca-out" data-part="patch-bay-vca-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCA OUT"><title>PATCH BAY: VCA OUT</title><g aria-hidden="true">
+<circle cx="1014" cy="367.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1014" cy="367.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-noise-out" data-part="patch-bay-noise-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Noise OUT"><title>PATCH BAY: Noise OUT</title><g aria-hidden="true">
+<circle cx="1096" cy="367.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1096" cy="367.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vcf-out" data-part="patch-bay-vcf-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCF OUT"><title>PATCH BAY: VCF OUT</title><g aria-hidden="true">
+<circle cx="1178" cy="367.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1178" cy="367.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vco-saw-out" data-part="patch-bay-vco-saw-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCO saw OUT"><title>PATCH BAY: VCO saw OUT</title><g aria-hidden="true">
+<circle cx="932" cy="430.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="932" cy="430.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vco-pulse-out" data-part="patch-bay-vco-pulse-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VCO pulse OUT"><title>PATCH BAY: VCO pulse OUT</title><g aria-hidden="true">
+<circle cx="1014" cy="423.82" r="7.992" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1014" cy="423.82" r="3.73" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-lfo-triangle-out" data-part="patch-bay-lfo-triangle-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: LFO triangle OUT"><title>PATCH BAY: LFO triangle OUT</title><g aria-hidden="true">
+<circle cx="1096" cy="423.82" r="7.992" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1096" cy="423.82" r="3.73" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-lfo-square-out" data-part="patch-bay-lfo-square-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: LFO square OUT"><title>PATCH BAY: LFO square OUT</title><g aria-hidden="true">
+<circle cx="1178" cy="423.82" r="7.992" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1178" cy="423.82" r="3.73" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vc-mix-out" data-part="patch-bay-vc-mix-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VC mix OUT"><title>PATCH BAY: VC mix OUT</title><g aria-hidden="true">
+<circle cx="932" cy="492.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="932" cy="492.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-assign-out" data-part="patch-bay-assign-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Assign OUT"><title>PATCH BAY: Assign OUT</title><g aria-hidden="true">
+<circle cx="1014" cy="492.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1014" cy="492.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-eg-out" data-part="patch-bay-eg-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: EG OUT"><title>PATCH BAY: EG OUT</title><g aria-hidden="true">
+<circle cx="1096" cy="492.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1096" cy="492.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-kb-out" data-part="patch-bay-kb-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: KB OUT"><title>PATCH BAY: KB OUT</title><g aria-hidden="true">
+<circle cx="1178" cy="492.535" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1178" cy="492.535" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-gate-out" data-part="patch-bay-gate-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Gate OUT"><title>PATCH BAY: Gate OUT</title><g aria-hidden="true">
+<circle cx="932" cy="555.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="932" cy="555.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-mult-1-out" data-part="patch-bay-mult-1-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Mult 1 OUT"><title>PATCH BAY: Mult 1 OUT</title><g aria-hidden="true">
+<circle cx="1014" cy="555.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1014" cy="555.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-mult-2-out" data-part="patch-bay-mult-2-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: Mult 2 OUT"><title>PATCH BAY: Mult 2 OUT</title><g aria-hidden="true">
+<circle cx="1096" cy="555.035" r="11.721" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1096" cy="555.035" r="5.47" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="moog-mother-32-panel--patch-bay-vc-mix-control-out" data-part="patch-bay-vc-mix-control-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="PATCH BAY: VC mix control OUT"><title>PATCH BAY: VC mix control OUT</title><g aria-hidden="true">
+<circle cx="1178" cy="548.82" r="7.992" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1178" cy="548.82" r="3.73" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
 </g>
 </svg>

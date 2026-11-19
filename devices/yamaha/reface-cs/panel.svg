@@ -1,228 +1,386 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 680" role="img" aria-labelledby="title description">
-<title id="title">Yamaha reface CS top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1450" height="680" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1432" height="662" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Yamaha reface CS</text>
-<text x="1425" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="165" height="255" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="looper-record" data-kind="switch" aria-label="Record"><title>Record</title>
-<rect x="51.5" y="131.466" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="47.5" y="139.466" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 770" role="group" aria-labelledby="yamaha-reface-cs-panel--title" aria-describedby="yamaha-reface-cs-panel--description" data-device="yamaha-reface-cs" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="yamaha-reface-cs-panel--title">Yamaha reface CS overhead hardware diagram</title><desc id="yamaha-reface-cs-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="yamaha-reface-cs-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1432" height="752" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Yamaha reface CS</text>
+<text x="1425" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="165" height="255" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="200" y="65" width="240" height="255" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="450" y="65" width="220" height="255" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="680" y="65" width="175" height="255" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="865" y="65" width="300" height="255" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1175" y="65" width="240" height="255" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="350" width="90" height="290" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="looper-play" data-kind="switch" aria-label="Play"><title>Play</title>
-<rect x="102.5" y="131.466" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="98.5" y="139.466" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--looper-record" data-part="looper-record" data-kind="switch" role="group" aria-roledescription="switch" aria-label="LOOPER: Record"><title>LOOPER: Record</title><g aria-hidden="true">
+<rect x="51.5" y="131.466" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="47.5" y="139.466" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="looper-pause" data-kind="switch" aria-label="Pause"><title>Pause</title>
-<rect x="153.5" y="131.466" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="149.5" y="139.466" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--looper-record" data-surface-control="looper-record" aria-hidden="true"><rect x="31" y="95" width="51" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="looper-stop" data-kind="switch" aria-label="Stop"><title>Stop</title>
-<rect x="51.5" y="241.466" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="47.5" y="249.466" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--looper-play" data-part="looper-play" data-kind="switch" role="group" aria-roledescription="switch" aria-label="LOOPER: Play"><title>LOOPER: Play</title><g aria-hidden="true">
+<rect x="102.5" y="131.466" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="98.5" y="139.466" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="looper-tempo" data-kind="fader" aria-label="Tempo"><title>Tempo</title>
-<rect x="101.89" y="210" width="11.22" height="82.932" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.74"/>
-<rect x="96.28" y="248.647" width="22.44" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--looper-play" data-surface-control="looper-play" aria-hidden="true"><rect x="82" y="95" width="51" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="200" y="65" width="240" height="255" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="master-lfo-volume" data-kind="fader" aria-label="Volume"><title>Volume</title>
-<rect x="237" y="100" width="14" height="78.977" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="230" y="136.749" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--looper-pause" data-part="looper-pause" data-kind="switch" role="group" aria-roledescription="switch" aria-label="LOOPER: Pause"><title>LOOPER: Pause</title><g aria-hidden="true">
+<rect x="153.5" y="131.466" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="149.5" y="139.466" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="master-lfo-octave" data-kind="switch" aria-label="Octave"><title>Octave</title>
-<rect x="315" y="129.488" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="311" y="137.488" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--looper-pause" data-surface-control="looper-pause" aria-hidden="true"><rect x="133" y="95" width="51" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="master-lfo-portamento" data-kind="fader" aria-label="Portamento"><title>Portamento</title>
-<rect x="389" y="100" width="14" height="78.977" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="382" y="136.749" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--looper-stop" data-part="looper-stop" data-kind="switch" role="group" aria-roledescription="switch" aria-label="LOOPER: Stop"><title>LOOPER: Stop</title><g aria-hidden="true">
+<rect x="51.5" y="241.466" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="47.5" y="249.466" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="master-lfo-lfo-assign" data-kind="switch" aria-label="LFO assign"><title>LFO assign</title>
-<rect x="239" y="239.488" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="235" y="247.488" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--looper-stop" data-surface-control="looper-stop" aria-hidden="true"><rect x="31" y="205" width="51" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="master-lfo-lfo-depth" data-kind="fader" aria-label="LFO depth" data-control="lfo-depth"><title>LFO depth</title>
-<rect x="313" y="210" width="14" height="78.977" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="306" y="246.749" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--looper-tempo" data-part="looper-tempo" data-kind="fader" role="group" aria-roledescription="slider" aria-label="LOOPER: Tempo"><title>LOOPER: Tempo</title><g aria-hidden="true">
+<rect x="101.89" y="210" width="11.22" height="82.932" rx="3.74" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="96.28" y="248.647" width="22.44" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="master-lfo-lfo-speed" data-kind="fader" aria-label="LFO speed" data-control="lfo-speed"><title>LFO speed</title>
-<rect x="389" y="210" width="14" height="78.977" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="382" y="246.749" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--looper-tempo" data-surface-control="looper-tempo" aria-hidden="true"><rect x="82" y="205" width="51" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="450" y="65" width="220" height="255" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="osc-type" data-kind="switch" aria-label="Type"><title>Type</title>
-<rect x="485.667" y="185.016" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="481.667" y="193.016" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--master-lfo-volume" data-part="master-lfo-volume" data-kind="fader" role="group" aria-roledescription="slider" aria-label="MASTER / LFO: Volume"><title>MASTER / LFO: Volume</title><g aria-hidden="true">
+<rect x="237" y="100" width="14" height="78.977" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="230" y="136.749" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="osc-texture" data-kind="fader" aria-label="Texture"><title>Texture</title>
-<rect x="553" y="100" width="14" height="190.031" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="546" y="190.055" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--master-lfo-volume" data-surface-control="master-lfo-volume" aria-hidden="true"><rect x="206" y="95" width="76" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="osc-mod" data-kind="fader" aria-label="Mod" data-control="osc-mod"><title>Mod</title>
-<rect x="622.333" y="100" width="14" height="190.031" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="615.333" y="190.055" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--master-lfo-octave" data-part="master-lfo-octave" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MASTER / LFO: Octave"><title>MASTER / LFO: Octave</title><g aria-hidden="true">
+<rect x="315" y="129.488" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="311" y="137.488" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="680" y="65" width="175" height="255" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="filter-cutoff" data-kind="fader" aria-label="Cutoff" data-control="cutoff"><title>Cutoff</title>
-<rect x="707.19" y="100" width="11.953" height="192.404" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.9844444444444442"/>
-<rect x="701.213" y="191.194" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--master-lfo-octave" data-surface-control="master-lfo-octave" aria-hidden="true"><rect x="282" y="95" width="76" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-resonance" data-kind="fader" aria-label="Resonance" data-control="resonance"><title>Resonance</title>
-<rect x="761.523" y="100" width="11.953" height="192.404" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.9844444444444442"/>
-<rect x="755.547" y="191.194" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--master-lfo-portamento" data-part="master-lfo-portamento" data-kind="fader" role="group" aria-roledescription="slider" aria-label="MASTER / LFO: Portamento"><title>MASTER / LFO: Portamento</title><g aria-hidden="true">
+<rect x="389" y="100" width="14" height="78.977" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="382" y="136.749" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<rect x="865" y="65" width="300" height="255" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="eg-eg-balance" data-kind="fader" aria-label="EG balance"><title>EG balance</title>
-<rect x="912" y="100" width="14" height="78.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="905" y="136.554" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--master-lfo-portamento" data-surface-control="master-lfo-portamento" aria-hidden="true"><rect x="358" y="95" width="76" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="eg-attack" data-kind="fader" aria-label="Attack" data-control="attack"><title>Attack</title>
-<rect x="1008" y="100" width="14" height="78.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1001" y="136.554" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--master-lfo-lfo-assign" data-part="master-lfo-lfo-assign" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MASTER / LFO: LFO assign"><title>MASTER / LFO: LFO assign</title><g aria-hidden="true">
+<rect x="239" y="239.488" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="235" y="247.488" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="eg-decay" data-kind="fader" aria-label="Decay" data-control="decay"><title>Decay</title>
-<rect x="1104" y="100" width="14" height="78.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1097" y="136.554" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--master-lfo-lfo-assign" data-surface-control="master-lfo-lfo-assign" aria-hidden="true"><rect x="206" y="205" width="76" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="eg-sustain" data-kind="fader" aria-label="Sustain"><title>Sustain</title>
-<rect x="912" y="210" width="14" height="78.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="905" y="246.554" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--master-lfo-lfo-depth" data-part="master-lfo-lfo-depth" data-kind="fader" role="group" aria-roledescription="slider" aria-label="MASTER / LFO: LFO depth"><title>MASTER / LFO: LFO depth</title><g aria-hidden="true">
+<rect x="313" y="210" width="14" height="78.977" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="306" y="246.749" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="eg-release" data-kind="fader" aria-label="Release" data-control="release"><title>Release</title>
-<rect x="1008" y="210" width="14" height="78.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1001" y="246.554" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--fader-5" data-surface-control="fader-5" aria-hidden="true"><rect x="282" y="205" width="76" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="1175" y="65" width="240" height="255" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="effect-type" data-kind="switch" aria-label="Type"><title>Type</title>
-<rect x="1214" y="184.488" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="1210" y="192.488" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--master-lfo-lfo-speed" data-part="master-lfo-lfo-speed" data-kind="fader" role="group" aria-roledescription="slider" aria-label="MASTER / LFO: LFO speed"><title>MASTER / LFO: LFO speed</title><g aria-hidden="true">
+<rect x="389" y="210" width="14" height="78.977" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="382" y="246.749" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="effect-depth" data-kind="fader" aria-label="Depth" data-control="effect-depth"><title>Depth</title>
-<rect x="1288" y="100" width="14" height="188.977" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1281" y="189.549" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--fader-6" data-surface-control="fader-6" aria-hidden="true"><rect x="358" y="205" width="76" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="effect-rate" data-kind="fader" aria-label="Rate" data-control="effect-rate"><title>Rate</title>
-<rect x="1364" y="100" width="14" height="188.977" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="1357" y="189.549" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--osc-type" data-part="osc-type" data-kind="switch" role="group" aria-roledescription="switch" aria-label="OSC: Type"><title>OSC: Type</title><g aria-hidden="true">
+<rect x="485.667" y="185.016" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="481.667" y="193.016" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="25" y="350" width="90" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="pitch-pitch-bend" data-kind="wheel" aria-label="Pitch bend"><title>Pitch bend</title>
-<rect x="63" y="385" width="14" height="223.66" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.666666666666667"/>
-<rect x="56" y="491.197" width="28" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--surface--osc-type" data-surface-control="osc-type" aria-hidden="true"><rect x="456" y="95" width="69.3333" height="220" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="135" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--osc-texture" data-part="osc-texture" data-kind="fader" role="group" aria-roledescription="slider" aria-label="OSC: Texture"><title>OSC: Texture</title><g aria-hidden="true">
+<rect x="553" y="100" width="14" height="190.031" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="546" y="190.055" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="193.182" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-3" data-surface-control="fader-3" aria-hidden="true"><rect x="525.3333" y="95" width="69.3333" height="220" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="251.364" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--osc-mod" data-part="osc-mod" data-kind="fader" role="group" aria-roledescription="slider" aria-label="OSC: Mod"><title>OSC: Mod</title><g aria-hidden="true">
+<rect x="622.333" y="100" width="14" height="190.031" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="615.333" y="190.055" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="309.545" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-4" data-surface-control="fader-4" aria-hidden="true"><rect x="594.6667" y="95" width="69.3333" height="220" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="367.727" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--filter-cutoff" data-part="filter-cutoff" data-kind="fader" role="group" aria-roledescription="slider" aria-label="FILTER: Cutoff"><title>FILTER: Cutoff</title><g aria-hidden="true">
+<rect x="707.19" y="100" width="11.953" height="192.404" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="701.213" y="191.194" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="425.909" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-1" data-surface-control="fader-1" aria-hidden="true"><rect x="686" y="95" width="54.3333" height="220" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="484.091" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--filter-resonance" data-part="filter-resonance" data-kind="fader" role="group" aria-roledescription="slider" aria-label="FILTER: Resonance"><title>FILTER: Resonance</title><g aria-hidden="true">
+<rect x="761.523" y="100" width="11.953" height="192.404" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="755.547" y="191.194" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="542.273" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-2" data-surface-control="fader-2" aria-hidden="true"><rect x="740.3333" y="95" width="54.3333" height="220" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="600.455" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--eg-eg-balance" data-part="eg-eg-balance" data-kind="fader" role="group" aria-roledescription="slider" aria-label="EG: EG balance"><title>EG: EG balance</title><g aria-hidden="true">
+<rect x="912" y="100" width="14" height="78.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="905" y="136.554" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="658.636" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-7" data-surface-control="fader-7" aria-hidden="true"><rect x="871" y="95" width="96" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="716.818" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--eg-attack" data-part="eg-attack" data-kind="fader" role="group" aria-roledescription="slider" aria-label="EG: Attack"><title>EG: Attack</title><g aria-hidden="true">
+<rect x="1008" y="100" width="14" height="78.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1001" y="136.554" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="775" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-8" data-surface-control="fader-8" aria-hidden="true"><rect x="967" y="95" width="96" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="833.182" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--eg-decay" data-part="eg-decay" data-kind="fader" role="group" aria-roledescription="slider" aria-label="EG: Decay"><title>EG: Decay</title><g aria-hidden="true">
+<rect x="1104" y="100" width="14" height="78.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1097" y="136.554" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="891.364" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-9" data-surface-control="fader-9" aria-hidden="true"><rect x="1063" y="95" width="96" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="949.545" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--eg-sustain" data-part="eg-sustain" data-kind="fader" role="group" aria-roledescription="slider" aria-label="EG: Sustain"><title>EG: Sustain</title><g aria-hidden="true">
+<rect x="912" y="210" width="14" height="78.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="905" y="246.554" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="1007.727" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-10" data-surface-control="fader-10" aria-hidden="true"><rect x="871" y="205" width="96" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="1065.909" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--eg-release" data-part="eg-release" data-kind="fader" role="group" aria-roledescription="slider" aria-label="EG: Release"><title>EG: Release</title><g aria-hidden="true">
+<rect x="1008" y="210" width="14" height="78.57" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1001" y="246.554" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="1124.091" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-11" data-surface-control="fader-11" aria-hidden="true"><rect x="967" y="205" width="96" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="1182.273" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--effect-type" data-part="effect-type" data-kind="switch" role="group" aria-roledescription="switch" aria-label="EFFECT: Type"><title>EFFECT: Type</title><g aria-hidden="true">
+<rect x="1214" y="184.488" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1210" y="192.488" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-34" data-kind="key" aria-label="Key 34"><title>Key 34</title>
-<rect x="1240.455" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--effect-type" data-surface-control="effect-type" aria-hidden="true"><rect x="1181" y="95" width="76" height="220" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-36" data-kind="key" aria-label="Key 36"><title>Key 36</title>
-<rect x="1298.636" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--effect-depth" data-part="effect-depth" data-kind="fader" role="group" aria-roledescription="slider" aria-label="EFFECT: Depth"><title>EFFECT: Depth</title><g aria-hidden="true">
+<rect x="1288" y="100" width="14" height="188.977" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1281" y="189.549" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-37" data-kind="key" aria-label="Key 37"><title>Key 37</title>
-<rect x="1356.818" y="350" width="58.182" height="290" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-12" data-surface-control="fader-12" aria-hidden="true"><rect x="1257" y="95" width="76" height="220" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="175.145" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--effect-rate" data-part="effect-rate" data-kind="fader" role="group" aria-roledescription="slider" aria-label="EFFECT: Rate"><title>EFFECT: Rate</title><g aria-hidden="true">
+<rect x="1364" y="100" width="14" height="188.977" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1357" y="189.549" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="233.327" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--fader-13" data-surface-control="fader-13" aria-hidden="true"><rect x="1333" y="95" width="76" height="220" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="349.691" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--pitch-pitch-bend" data-part="pitch-pitch-bend" data-kind="wheel" role="group" aria-roledescription="wheel" aria-label="PITCH: Pitch bend"><title>PITCH: Pitch bend</title><g aria-hidden="true">
+<rect x="63" y="385" width="14" height="223.66" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="56" y="491.197" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="407.873" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--pitch-pitch-bend" data-surface-control="pitch-pitch-bend" aria-hidden="true"><rect x="31" y="380" width="78" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="466.055" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="yamaha-reface-cs-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="135" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="582.418" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--key-48" data-surface-control="key-48" aria-hidden="true"><rect x="135" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="640.6" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="193.182" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="756.964" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--key-50" data-surface-control="key-50" aria-hidden="true"><rect x="193.1818" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="815.145" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="251.364" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="873.327" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--key-52" data-surface-control="key-52" aria-hidden="true"><rect x="251.3636" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="989.691" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="309.545" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="1047.873" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--key-53" data-surface-control="key-53" aria-hidden="true"><rect x="309.5455" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="1164.236" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="367.727" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-33" data-kind="key" aria-label="Key 33"><title>Key 33</title>
-<rect x="1222.418" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--surface--key-55" data-surface-control="key-55" aria-hidden="true"><rect x="367.7273" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-35" data-kind="key" aria-label="Key 35"><title>Key 35</title>
-<rect x="1280.6" y="350" width="36.073" height="176.9" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="yamaha-reface-cs-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="425.909" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-57" data-surface-control="key-57" aria-hidden="true"><rect x="425.9091" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="484.091" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-59" data-surface-control="key-59" aria-hidden="true"><rect x="484.0909" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="542.273" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-60" data-surface-control="key-60" aria-hidden="true"><rect x="542.2727" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="600.455" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-62" data-surface-control="key-62" aria-hidden="true"><rect x="600.4545" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="658.636" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-64" data-surface-control="key-64" aria-hidden="true"><rect x="658.6364" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="716.818" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-65" data-surface-control="key-65" aria-hidden="true"><rect x="716.8182" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="775" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-67" data-surface-control="key-67" aria-hidden="true"><rect x="775" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="833.182" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-69" data-surface-control="key-69" aria-hidden="true"><rect x="833.1818" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="891.364" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-71" data-surface-control="key-71" aria-hidden="true"><rect x="891.3636" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="949.545" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-72" data-surface-control="key-72" aria-hidden="true"><rect x="949.5455" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-27" data-part="key-27" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 27"><title>Key 27</title><g aria-hidden="true">
+<rect x="1007.727" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-74" data-surface-control="key-74" aria-hidden="true"><rect x="1007.7273" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-29" data-part="key-29" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 29"><title>Key 29</title><g aria-hidden="true">
+<rect x="1065.909" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-76" data-surface-control="key-76" aria-hidden="true"><rect x="1065.9091" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-30" data-part="key-30" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 30"><title>Key 30</title><g aria-hidden="true">
+<rect x="1124.091" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-77" data-surface-control="key-77" aria-hidden="true"><rect x="1124.0909" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-32" data-part="key-32" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 32"><title>Key 32</title><g aria-hidden="true">
+<rect x="1182.273" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-79" data-surface-control="key-79" aria-hidden="true"><rect x="1182.2727" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-34" data-part="key-34" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 34"><title>Key 34</title><g aria-hidden="true">
+<rect x="1240.455" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-81" data-surface-control="key-81" aria-hidden="true"><rect x="1240.4545" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-36" data-part="key-36" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 36"><title>Key 36</title><g aria-hidden="true">
+<rect x="1298.636" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-83" data-surface-control="key-83" aria-hidden="true"><rect x="1298.6364" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-37" data-part="key-37" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 37"><title>Key 37</title><g aria-hidden="true">
+<rect x="1356.818" y="350" width="58.182" height="290" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-84" data-surface-control="key-84" aria-hidden="true"><rect x="1356.8182" y="350" width="58.1818" height="290" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="175.145" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-49" data-surface-control="key-49" aria-hidden="true"><rect x="175.1455" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="233.327" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-51" data-surface-control="key-51" aria-hidden="true"><rect x="233.3273" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="349.691" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-54" data-surface-control="key-54" aria-hidden="true"><rect x="349.6909" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="407.873" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-56" data-surface-control="key-56" aria-hidden="true"><rect x="407.8727" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="466.055" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-58" data-surface-control="key-58" aria-hidden="true"><rect x="466.0545" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="582.418" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-61" data-surface-control="key-61" aria-hidden="true"><rect x="582.4182" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="640.6" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-63" data-surface-control="key-63" aria-hidden="true"><rect x="640.6" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="756.964" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-66" data-surface-control="key-66" aria-hidden="true"><rect x="756.9636" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="815.145" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-68" data-surface-control="key-68" aria-hidden="true"><rect x="815.1455" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="873.327" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-70" data-surface-control="key-70" aria-hidden="true"><rect x="873.3273" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-26" data-part="key-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 26"><title>Key 26</title><g aria-hidden="true">
+<rect x="989.691" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-73" data-surface-control="key-73" aria-hidden="true"><rect x="989.6909" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-28" data-part="key-28" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 28"><title>Key 28</title><g aria-hidden="true">
+<rect x="1047.873" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-75" data-surface-control="key-75" aria-hidden="true"><rect x="1047.8727" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-31" data-part="key-31" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 31"><title>Key 31</title><g aria-hidden="true">
+<rect x="1164.236" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-78" data-surface-control="key-78" aria-hidden="true"><rect x="1164.2364" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-33" data-part="key-33" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 33"><title>Key 33</title><g aria-hidden="true">
+<rect x="1222.418" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-80" data-surface-control="key-80" aria-hidden="true"><rect x="1222.4182" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--key-35" data-part="key-35" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 35"><title>Key 35</title><g aria-hidden="true">
+<rect x="1280.6" y="350" width="36.073" height="176.9" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--key-82" data-surface-control="key-82" aria-hidden="true"><rect x="1280.6" y="350" width="36.0727" height="176.9" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+</g>
+<g id="yamaha-reface-cs-panel--midi-only" data-region="midi-only" aria-label="MIDI-only controls">
+<rect x="25" y="670" width="1400" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="yamaha-reface-cs-panel--midi-fader-14" data-part="midi-fader-14" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Assignable slider 14"><title>Assignable slider 14</title><g aria-hidden="true">
+<circle cx="165" cy="704.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M165 697.72L165 700.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--fader-14" data-surface-control="fader-14" aria-hidden="true"><rect x="25" y="688" width="280" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--midi-fader-15" data-part="midi-fader-15" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Assignable slider 15"><title>Assignable slider 15</title><g aria-hidden="true">
+<circle cx="445" cy="704.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M445 697.72L445 700.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--fader-15" data-surface-control="fader-15" aria-hidden="true"><rect x="305" y="688" width="280" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--midi-fader-16" data-part="midi-fader-16" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Assignable slider 16"><title>Assignable slider 16</title><g aria-hidden="true">
+<circle cx="725" cy="704.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M725 697.72L725 700.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--fader-16" data-surface-control="fader-16" aria-hidden="true"><rect x="585" y="688" width="280" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--midi-fader-17" data-part="midi-fader-17" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Assignable slider 17"><title>Assignable slider 17</title><g aria-hidden="true">
+<circle cx="1005" cy="704.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1005 697.72L1005 700.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--fader-17" data-surface-control="fader-17" aria-hidden="true"><rect x="865" y="688" width="280" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="yamaha-reface-cs-panel--midi-fader-18" data-part="midi-fader-18" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Assignable slider 18"><title>Assignable slider 18</title><g aria-hidden="true">
+<circle cx="1285" cy="704.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1285 697.72L1285 700.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="yamaha-reface-cs-panel--surface--fader-18" data-surface-control="fader-18" aria-hidden="true"><rect x="1145" y="688" width="280" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

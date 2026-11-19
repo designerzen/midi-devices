@@ -1,253 +1,317 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 790" role="img" aria-labelledby="title description">
-<title id="title">Roland S-1 labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="790" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="772" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland S-1</text>
-<text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="200" height="225" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
-<g id="lfo-rate" data-kind="knob" aria-label="Rate" data-control="lfo-rate"><title>Rate</title>
-<circle cx="62.333" cy="182.543" r="15.667" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M62.333 169.876L62.333 177.06" fill="none" stroke="#000" stroke-width="1"/>
-<text x="62.333" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Rate</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 880" role="group" aria-labelledby="roland-s-1-interface--title" aria-describedby="roland-s-1-interface--description" data-device="roland-s-1" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-s-1-interface--title">Roland S-1 labelled interface</title><desc id="roland-s-1-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-s-1-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1232" height="862" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland S-1</text>
+<text x="1225" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="65" width="200" height="225" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
+<rect x="235" y="65" width="365" height="225" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="242" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">OSCILLATOR</text>
+<rect x="610" y="65" width="315" height="225" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="617" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">FILTER / AMP</text>
+<rect x="935" y="65" width="290" height="225" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="942" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
+<rect x="25" y="310" width="1200" height="130" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="324" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">PERFORMANCE / FX</text>
+<rect x="25" y="460" width="1200" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="474" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">KEYBOARD / STEPS</text>
 </g>
-<g id="lfo-wave" data-kind="knob" aria-label="Wave"><title>Wave</title>
-<circle cx="125" cy="182.543" r="15.667" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M125 169.876L125 177.06" fill="none" stroke="#000" stroke-width="1"/>
-<text x="125" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Wave</text>
+<g id="roland-s-1-interface--lfo-rate" data-part="lfo-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Rate"><title>LFO: Rate</title><g aria-hidden="true">
+<circle cx="62.333" cy="182.543" r="15.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M62.333 169.876L62.333 177.06" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="62.333" y="281" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Rate</text>
 </g>
-<g id="lfo-osc-mod" data-kind="knob" aria-label="Osc mod"><title>Osc mod</title>
-<circle cx="187.667" cy="182.543" r="15.667" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M187.667 169.876L187.667 177.06" fill="none" stroke="#000" stroke-width="1"/>
-<text x="187.667" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Osc mod</text>
 </g>
-<rect x="235" y="65" width="365" height="225" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="242" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">OSCILLATOR</text>
-<g id="oscillator-range" data-kind="knob" aria-label="Range" data-control="oscillator-range"><title>Range</title>
-<circle cx="276.3" cy="181.916" r="17.65" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M276.3 167.266L276.3 175.738" fill="none" stroke="#000" stroke-width="1"/>
-<text x="276.3" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.884" text-anchor="middle">Range</text>
+<g id="roland-s-1-interface--lfo-wave" data-part="lfo-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Wave"><title>LFO: Wave</title><g aria-hidden="true">
+<circle cx="125" cy="182.543" r="15.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M125 169.876L125 177.06" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="125" y="281" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Wave</text>
 </g>
-<g id="oscillator-pulse" data-kind="knob" aria-label="Pulse"><title>Pulse</title>
-<circle cx="346.9" cy="181.916" r="17.65" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M346.9 167.266L346.9 175.738" fill="none" stroke="#000" stroke-width="1"/>
-<text x="346.9" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.884" text-anchor="middle">Pulse</text>
 </g>
-<g id="oscillator-saw" data-kind="knob" aria-label="Saw"><title>Saw</title>
-<circle cx="417.5" cy="181.916" r="17.65" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M417.5 167.266L417.5 175.738" fill="none" stroke="#000" stroke-width="1"/>
-<text x="417.5" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.884" text-anchor="middle">Saw</text>
+<g id="roland-s-1-interface--lfo-osc-mod" data-part="lfo-osc-mod" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Osc mod"><title>LFO: Osc mod</title><g aria-hidden="true">
+<circle cx="187.667" cy="182.543" r="15.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M187.667 169.876L187.667 177.06" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="187.667" y="281" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Osc mod</text>
 </g>
-<g id="oscillator-sub" data-kind="knob" aria-label="Sub"><title>Sub</title>
-<circle cx="488.1" cy="181.916" r="17.65" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M488.1 167.266L488.1 175.738" fill="none" stroke="#000" stroke-width="1"/>
-<text x="488.1" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.884" text-anchor="middle">Sub</text>
 </g>
-<g id="oscillator-noise" data-kind="knob" aria-label="Noise"><title>Noise</title>
-<circle cx="558.7" cy="181.916" r="17.65" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M558.7 167.266L558.7 175.738" fill="none" stroke="#000" stroke-width="1"/>
-<text x="558.7" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.884" text-anchor="middle">Noise</text>
+<g id="roland-s-1-interface--oscillator-range" data-part="oscillator-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Range"><title>OSCILLATOR: Range</title><g aria-hidden="true">
+<circle cx="276.3" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M276.3 167.266L276.3 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="276.3" y="281" fill="currentColor" stroke="none" font-size="9.884" text-anchor="middle">Range</text>
 </g>
-<rect x="610" y="65" width="315" height="225" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="617" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">FILTER / AMP</text>
-<g id="filter-amp-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
-<circle cx="646.3" cy="182.707" r="15.15" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M646.3 170.557L646.3 177.404" fill="none" stroke="#000" stroke-width="1"/>
-<text x="646.3" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.484000000000002" text-anchor="middle">Cutoff</text>
 </g>
-<g id="filter-amp-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<circle cx="706.9" cy="182.707" r="15.15" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M706.9 170.557L706.9 177.404" fill="none" stroke="#000" stroke-width="1"/>
-<text x="706.9" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.484000000000002" text-anchor="middle">Resonance</text>
+<g id="roland-s-1-interface--oscillator-pulse" data-part="oscillator-pulse" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Pulse"><title>OSCILLATOR: Pulse</title><g aria-hidden="true">
+<circle cx="346.9" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M346.9 167.266L346.9 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="346.9" y="281" fill="currentColor" stroke="none" font-size="9.884" text-anchor="middle">Pulse</text>
 </g>
-<g id="filter-amp-env" data-kind="knob" aria-label="Env"><title>Env</title>
-<circle cx="767.5" cy="182.707" r="15.15" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M767.5 170.557L767.5 177.404" fill="none" stroke="#000" stroke-width="1"/>
-<text x="767.5" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.484000000000002" text-anchor="middle">Env</text>
 </g>
-<g id="filter-amp-lfo" data-kind="knob" aria-label="LFO"><title>LFO</title>
-<circle cx="828.1" cy="182.707" r="15.15" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M828.1 170.557L828.1 177.404" fill="none" stroke="#000" stroke-width="1"/>
-<text x="828.1" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.484000000000002" text-anchor="middle">LFO</text>
+<g id="roland-s-1-interface--oscillator-saw" data-part="oscillator-saw" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Saw"><title>OSCILLATOR: Saw</title><g aria-hidden="true">
+<circle cx="417.5" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M417.5 167.266L417.5 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="417.5" y="281" fill="currentColor" stroke="none" font-size="9.884" text-anchor="middle">Saw</text>
 </g>
-<g id="filter-amp-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<circle cx="888.7" cy="182.707" r="15.15" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M888.7 170.557L888.7 177.404" fill="none" stroke="#000" stroke-width="1"/>
-<text x="888.7" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.484000000000002" text-anchor="middle">Level</text>
 </g>
-<rect x="935" y="65" width="290" height="225" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="942" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
-<g id="envelope-attack" data-kind="knob" aria-label="Attack" data-control="envelope-attack"><title>Attack</title>
-<circle cx="987.333" cy="133.785" r="23.167" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M987.333 113.618L987.333 125.677" fill="none" stroke="#000" stroke-width="1"/>
-<text x="987.333" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Attack</text>
+<g id="roland-s-1-interface--oscillator-sub" data-part="oscillator-sub" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Sub"><title>OSCILLATOR: Sub</title><g aria-hidden="true">
+<circle cx="488.1" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M488.1 167.266L488.1 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="488.1" y="281" fill="currentColor" stroke="none" font-size="9.884" text-anchor="middle">Sub</text>
 </g>
-<g id="envelope-decay" data-kind="knob" aria-label="Decay" data-control="envelope-decay"><title>Decay</title>
-<circle cx="1080" cy="133.785" r="23.167" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1080 113.618L1080 125.677" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1080" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Decay</text>
 </g>
-<g id="envelope-sustain" data-kind="knob" aria-label="Sustain" data-control="envelope-sustain"><title>Sustain</title>
-<circle cx="1172.667" cy="133.785" r="23.167" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1172.667 113.618L1172.667 125.677" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1172.667" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sustain</text>
+<g id="roland-s-1-interface--oscillator-noise" data-part="oscillator-noise" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Noise"><title>OSCILLATOR: Noise</title><g aria-hidden="true">
+<circle cx="558.7" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M558.7 167.266L558.7 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="558.7" y="281" fill="currentColor" stroke="none" font-size="9.884" text-anchor="middle">Noise</text>
 </g>
-<g id="envelope-release" data-kind="knob" aria-label="Release" data-control="envelope-release"><title>Release</title>
-<circle cx="987.333" cy="228.785" r="23.167" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M987.333 208.618L987.333 220.677" fill="none" stroke="#000" stroke-width="1"/>
-<text x="987.333" y="281" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Release</text>
 </g>
-<rect x="25" y="310" width="1200" height="130" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="324" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">PERFORMANCE / FX</text>
-<g id="performance-fx-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="90.4" cy="378.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M90.4 356.785L90.4 370.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="90.4" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tempo</text>
+<g id="roland-s-1-interface--filter-amp-cutoff" data-part="filter-amp-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: Cutoff"><title>FILTER / AMP: Cutoff</title><g aria-hidden="true">
+<circle cx="646.3" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M646.3 170.557L646.3 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="646.3" y="281" fill="currentColor" stroke="none" font-size="8.484000000000002" text-anchor="middle">Cutoff</text>
 </g>
-<g id="performance-fx-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="209.2" cy="378.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M209.2 356.785L209.2 370.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="209.2" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Volume</text>
 </g>
-<g id="performance-fx-delay" data-kind="knob" aria-label="Delay"><title>Delay</title>
-<circle cx="328" cy="378.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M328 356.785L328 370.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="328" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Delay</text>
+<g id="roland-s-1-interface--filter-amp-resonance" data-part="filter-amp-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: Resonance"><title>FILTER / AMP: Resonance</title><g aria-hidden="true">
+<circle cx="706.9" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M706.9 170.557L706.9 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="706.9" y="281" fill="currentColor" stroke="none" font-size="8.484000000000002" text-anchor="middle">Resonance</text>
 </g>
-<g id="performance-fx-reverb" data-kind="knob" aria-label="Reverb"><title>Reverb</title>
-<circle cx="446.8" cy="378.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M446.8 356.785L446.8 370.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="446.8" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Reverb</text>
 </g>
-<g id="performance-fx-d-motion" data-kind="button" aria-label="D-Motion"><title>D-Motion</title>
-<rect x="550.6" y="363.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="565.6" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">D-Motion</text>
+<g id="roland-s-1-interface--filter-amp-env" data-part="filter-amp-env" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: Env"><title>FILTER / AMP: Env</title><g aria-hidden="true">
+<circle cx="767.5" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M767.5 170.557L767.5 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="767.5" y="281" fill="currentColor" stroke="none" font-size="8.484000000000002" text-anchor="middle">Env</text>
 </g>
-<g id="performance-fx-pattern" data-kind="button" aria-label="Pattern"><title>Pattern</title>
-<rect x="669.4" y="363.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="684.4" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pattern</text>
 </g>
-<g id="performance-fx-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<rect x="788.2" y="363.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="803.2" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Shift</text>
+<g id="roland-s-1-interface--filter-amp-lfo" data-part="filter-amp-lfo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: LFO"><title>FILTER / AMP: LFO</title><g aria-hidden="true">
+<circle cx="828.1" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M828.1 170.557L828.1 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="828.1" y="281" fill="currentColor" stroke="none" font-size="8.484000000000002" text-anchor="middle">LFO</text>
 </g>
-<g id="performance-fx-play" data-kind="button" aria-label="Play"><title>Play</title>
-<rect x="907" y="363.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="922" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Play</text>
 </g>
-<g id="performance-fx-record" data-kind="button" aria-label="Record"><title>Record</title>
-<rect x="1025.8" y="363.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1040.8" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Record</text>
+<g id="roland-s-1-interface--filter-amp-level" data-part="filter-amp-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: Level"><title>FILTER / AMP: Level</title><g aria-hidden="true">
+<circle cx="888.7" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M888.7 170.557L888.7 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="888.7" y="281" fill="currentColor" stroke="none" font-size="8.484000000000002" text-anchor="middle">Level</text>
 </g>
-<g id="performance-fx-menu" data-kind="button" aria-label="Menu"><title>Menu</title>
-<rect x="1144.6" y="363.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1159.6" y="431" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Menu</text>
 </g>
-<rect x="25" y="460" width="1200" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="474" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">KEYBOARD / STEPS</text>
-<g id="keyboard-steps-1" data-kind="key" aria-label="1"><title>1</title>
-<rect x="37" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="76.692" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">1</text>
+<g id="roland-s-1-interface--envelope-attack" data-part="envelope-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Attack"><title>ENVELOPE: Attack</title><g aria-hidden="true">
+<circle cx="987.333" cy="133.785" r="23.167" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M987.333 113.618L987.333 125.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="987.333" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Attack</text>
 </g>
-<g id="keyboard-steps-2" data-kind="key" aria-label="2"><title>2</title>
-<rect x="128.385" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="168.077" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">2</text>
 </g>
-<g id="keyboard-steps-3" data-kind="key" aria-label="3"><title>3</title>
-<rect x="219.769" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="259.462" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">3</text>
+<g id="roland-s-1-interface--envelope-decay" data-part="envelope-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Decay"><title>ENVELOPE: Decay</title><g aria-hidden="true">
+<circle cx="1080" cy="133.785" r="23.167" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1080 113.618L1080 125.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1080" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Decay</text>
 </g>
-<g id="keyboard-steps-4" data-kind="key" aria-label="4"><title>4</title>
-<rect x="311.154" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="350.846" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">4</text>
 </g>
-<g id="keyboard-steps-5" data-kind="key" aria-label="5"><title>5</title>
-<rect x="402.538" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="442.231" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">5</text>
+<g id="roland-s-1-interface--envelope-sustain" data-part="envelope-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Sustain"><title>ENVELOPE: Sustain</title><g aria-hidden="true">
+<circle cx="1172.667" cy="133.785" r="23.167" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1172.667 113.618L1172.667 125.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1172.667" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Sustain</text>
 </g>
-<g id="keyboard-steps-6" data-kind="key" aria-label="6"><title>6</title>
-<rect x="493.923" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="533.615" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">6</text>
 </g>
-<g id="keyboard-steps-7" data-kind="key" aria-label="7"><title>7</title>
-<rect x="585.308" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="625" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">7</text>
+<g id="roland-s-1-interface--envelope-release" data-part="envelope-release" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Release"><title>ENVELOPE: Release</title><g aria-hidden="true">
+<circle cx="987.333" cy="228.785" r="23.167" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M987.333 208.618L987.333 220.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="987.333" y="281" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Release</text>
 </g>
-<g id="keyboard-steps-8" data-kind="key" aria-label="8"><title>8</title>
-<rect x="676.692" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="716.385" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">8</text>
 </g>
-<g id="keyboard-steps-9" data-kind="key" aria-label="9"><title>9</title>
-<rect x="768.077" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="807.769" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">9</text>
+<g id="roland-s-1-interface--performance-fx-tempo" data-part="performance-fx-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PERFORMANCE / FX: Tempo"><title>PERFORMANCE / FX: Tempo</title><g aria-hidden="true">
+<circle cx="90.4" cy="378.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M90.4 356.785L90.4 370.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="90.4" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tempo</text>
 </g>
-<g id="keyboard-steps-10" data-kind="key" aria-label="10"><title>10</title>
-<rect x="859.462" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="899.154" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">10</text>
 </g>
-<g id="keyboard-steps-11" data-kind="key" aria-label="11"><title>11</title>
-<rect x="950.846" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="990.538" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">11</text>
+<g id="roland-s-1-interface--performance-fx-volume" data-part="performance-fx-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PERFORMANCE / FX: Volume"><title>PERFORMANCE / FX: Volume</title><g aria-hidden="true">
+<circle cx="209.2" cy="378.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M209.2 356.785L209.2 370.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="209.2" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Volume</text>
 </g>
-<g id="keyboard-steps-12" data-kind="key" aria-label="12"><title>12</title>
-<rect x="1042.231" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1081.923" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">12</text>
 </g>
-<g id="keyboard-steps-13" data-kind="key" aria-label="13"><title>13</title>
-<rect x="1133.615" y="501.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1173.308" y="606" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">13</text>
+<g id="roland-s-1-interface--performance-fx-delay" data-part="performance-fx-delay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PERFORMANCE / FX: Delay"><title>PERFORMANCE / FX: Delay</title><g aria-hidden="true">
+<circle cx="328" cy="378.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M328 356.785L328 370.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="328" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Delay</text>
 </g>
-<g id="keyboard-steps-14" data-kind="key" aria-label="14"><title>14</title>
-<rect x="37" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="76.692" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">14</text>
 </g>
-<g id="keyboard-steps-15" data-kind="key" aria-label="15"><title>15</title>
-<rect x="128.385" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="168.077" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">15</text>
+<g id="roland-s-1-interface--performance-fx-reverb" data-part="performance-fx-reverb" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PERFORMANCE / FX: Reverb"><title>PERFORMANCE / FX: Reverb</title><g aria-hidden="true">
+<circle cx="446.8" cy="378.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M446.8 356.785L446.8 370.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="446.8" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Reverb</text>
 </g>
-<g id="keyboard-steps-16" data-kind="key" aria-label="16"><title>16</title>
-<rect x="219.769" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="259.462" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">16</text>
 </g>
-<g id="keyboard-steps-17" data-kind="key" aria-label="17"><title>17</title>
-<rect x="311.154" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="350.846" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">17</text>
+<g id="roland-s-1-interface--performance-fx-d-motion" data-part="performance-fx-d-motion" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: D-Motion"><title>PERFORMANCE / FX: D-Motion</title><g aria-hidden="true">
+<rect x="550.6" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="565.6" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">D-Motion</text>
 </g>
-<g id="keyboard-steps-18" data-kind="key" aria-label="18"><title>18</title>
-<rect x="402.538" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="442.231" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">18</text>
 </g>
-<g id="keyboard-steps-19" data-kind="key" aria-label="19"><title>19</title>
-<rect x="493.923" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="533.615" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">19</text>
+<g id="roland-s-1-interface--performance-fx-pattern" data-part="performance-fx-pattern" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Pattern"><title>PERFORMANCE / FX: Pattern</title><g aria-hidden="true">
+<rect x="669.4" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="684.4" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pattern</text>
 </g>
-<g id="keyboard-steps-20" data-kind="key" aria-label="20"><title>20</title>
-<rect x="585.308" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="625" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">20</text>
 </g>
-<g id="keyboard-steps-21" data-kind="key" aria-label="21"><title>21</title>
-<rect x="676.692" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="716.385" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">21</text>
+<g id="roland-s-1-interface--performance-fx-shift" data-part="performance-fx-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Shift"><title>PERFORMANCE / FX: Shift</title><g aria-hidden="true">
+<rect x="788.2" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="803.2" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Shift</text>
 </g>
-<g id="keyboard-steps-22" data-kind="key" aria-label="22"><title>22</title>
-<rect x="768.077" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="807.769" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">22</text>
 </g>
-<g id="keyboard-steps-23" data-kind="key" aria-label="23"><title>23</title>
-<rect x="859.462" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="899.154" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">23</text>
+<g id="roland-s-1-interface--performance-fx-play" data-part="performance-fx-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Play"><title>PERFORMANCE / FX: Play</title><g aria-hidden="true">
+<rect x="907" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="922" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Play</text>
 </g>
-<g id="keyboard-steps-24" data-kind="key" aria-label="24"><title>24</title>
-<rect x="950.846" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="990.538" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">24</text>
 </g>
-<g id="keyboard-steps-25" data-kind="key" aria-label="25"><title>25</title>
-<rect x="1042.231" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1081.923" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">25</text>
+<g id="roland-s-1-interface--performance-fx-record" data-part="performance-fx-record" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Record"><title>PERFORMANCE / FX: Record</title><g aria-hidden="true">
+<rect x="1025.8" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1040.8" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Record</text>
 </g>
-<g id="keyboard-steps-26" data-kind="key" aria-label="26"><title>26</title>
-<rect x="1133.615" y="621.593" width="79.385" height="79.385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1173.308" y="726" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">26</text>
+</g>
+<g id="roland-s-1-interface--performance-fx-menu" data-part="performance-fx-menu" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Menu"><title>PERFORMANCE / FX: Menu</title><g aria-hidden="true">
+<rect x="1144.6" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1159.6" y="431" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Menu</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-1" data-part="keyboard-steps-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 1"><title>KEYBOARD / STEPS: 1</title><g aria-hidden="true">
+<rect x="37" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="76.692" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">1</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-2" data-part="keyboard-steps-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 2"><title>KEYBOARD / STEPS: 2</title><g aria-hidden="true">
+<rect x="128.385" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="168.077" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">2</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-3" data-part="keyboard-steps-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 3"><title>KEYBOARD / STEPS: 3</title><g aria-hidden="true">
+<rect x="219.769" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="259.462" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">3</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-4" data-part="keyboard-steps-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 4"><title>KEYBOARD / STEPS: 4</title><g aria-hidden="true">
+<rect x="311.154" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="350.846" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">4</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-5" data-part="keyboard-steps-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 5"><title>KEYBOARD / STEPS: 5</title><g aria-hidden="true">
+<rect x="402.538" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="442.231" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">5</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-6" data-part="keyboard-steps-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 6"><title>KEYBOARD / STEPS: 6</title><g aria-hidden="true">
+<rect x="493.923" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="533.615" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">6</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-7" data-part="keyboard-steps-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 7"><title>KEYBOARD / STEPS: 7</title><g aria-hidden="true">
+<rect x="585.308" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="625" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">7</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-8" data-part="keyboard-steps-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 8"><title>KEYBOARD / STEPS: 8</title><g aria-hidden="true">
+<rect x="676.692" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="716.385" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">8</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-9" data-part="keyboard-steps-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 9"><title>KEYBOARD / STEPS: 9</title><g aria-hidden="true">
+<rect x="768.077" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="807.769" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">9</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-10" data-part="keyboard-steps-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 10"><title>KEYBOARD / STEPS: 10</title><g aria-hidden="true">
+<rect x="859.462" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="899.154" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">10</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-11" data-part="keyboard-steps-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 11"><title>KEYBOARD / STEPS: 11</title><g aria-hidden="true">
+<rect x="950.846" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="990.538" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">11</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-12" data-part="keyboard-steps-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 12"><title>KEYBOARD / STEPS: 12</title><g aria-hidden="true">
+<rect x="1042.231" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1081.923" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">12</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-13" data-part="keyboard-steps-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 13"><title>KEYBOARD / STEPS: 13</title><g aria-hidden="true">
+<rect x="1133.615" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1173.308" y="606" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">13</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-14" data-part="keyboard-steps-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 14"><title>KEYBOARD / STEPS: 14</title><g aria-hidden="true">
+<rect x="37" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="76.692" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">14</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-15" data-part="keyboard-steps-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 15"><title>KEYBOARD / STEPS: 15</title><g aria-hidden="true">
+<rect x="128.385" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="168.077" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">15</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-16" data-part="keyboard-steps-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 16"><title>KEYBOARD / STEPS: 16</title><g aria-hidden="true">
+<rect x="219.769" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="259.462" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">16</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-17" data-part="keyboard-steps-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 17"><title>KEYBOARD / STEPS: 17</title><g aria-hidden="true">
+<rect x="311.154" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="350.846" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">17</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-18" data-part="keyboard-steps-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 18"><title>KEYBOARD / STEPS: 18</title><g aria-hidden="true">
+<rect x="402.538" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="442.231" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">18</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-19" data-part="keyboard-steps-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 19"><title>KEYBOARD / STEPS: 19</title><g aria-hidden="true">
+<rect x="493.923" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="533.615" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">19</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-20" data-part="keyboard-steps-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 20"><title>KEYBOARD / STEPS: 20</title><g aria-hidden="true">
+<rect x="585.308" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="625" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">20</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-21" data-part="keyboard-steps-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 21"><title>KEYBOARD / STEPS: 21</title><g aria-hidden="true">
+<rect x="676.692" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="716.385" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">21</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-22" data-part="keyboard-steps-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 22"><title>KEYBOARD / STEPS: 22</title><g aria-hidden="true">
+<rect x="768.077" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="807.769" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">22</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-23" data-part="keyboard-steps-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 23"><title>KEYBOARD / STEPS: 23</title><g aria-hidden="true">
+<rect x="859.462" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="899.154" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">23</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-24" data-part="keyboard-steps-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 24"><title>KEYBOARD / STEPS: 24</title><g aria-hidden="true">
+<rect x="950.846" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="990.538" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">24</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-25" data-part="keyboard-steps-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 25"><title>KEYBOARD / STEPS: 25</title><g aria-hidden="true">
+<rect x="1042.231" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1081.923" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">25</text>
+</g>
+</g>
+<g id="roland-s-1-interface--keyboard-steps-26" data-part="keyboard-steps-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 26"><title>KEYBOARD / STEPS: 26</title><g aria-hidden="true">
+<rect x="1133.615" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1173.308" y="726" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">26</text>
+</g>
+</g>
+<g id="roland-s-1-interface--midi-only" data-region="midi-only" aria-label="MIDI-only controls">
+<rect x="25" y="780" width="1200" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="794" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MIDI ONLY / no dedicated panel control</text>
+<g id="roland-s-1-interface--midi-pitch-bend" data-part="midi-pitch-bend" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Pitch bend"><title>Pitch bend</title><g aria-hidden="true">
+<circle cx="625" cy="814.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M625 807.72L625 810.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="625" y="844" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pitch bend</text>
+</g>
+</g>
 </g>
 </svg>

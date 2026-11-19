@@ -246,376 +246,409 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1500,
 		"height": 680,
 		"elements": [
 			{
-				"id": "controllers-ribbon-c1",
-				"label": "CONTROLLERS: Ribbon C1",
+				"id": "performance-ribbon-c1-touch",
+				"label": "Ribbon C1",
 				"kind": "fader",
 				"position": {
 					"x": 2.0666666666666664,
 					"y": 13.970588235294118,
 					"width": 4.266666666666667,
 					"height": 52.94117647058824
-				}
+				},
+				"control": "performance-ribbon-c1-touch",
+				"learnable": true
 			},
 			{
-				"id": "controllers-ribbon-c2",
-				"label": "CONTROLLERS: Ribbon C2",
+				"id": "performance-ribbon-c2-touch",
+				"label": "Ribbon C2",
 				"kind": "fader",
 				"position": {
 					"x": 6.333333333333334,
 					"y": 13.970588235294118,
 					"width": 4.266666666666667,
 					"height": 52.94117647058824
-				}
+				},
+				"control": "performance-ribbon-c2-touch",
+				"learnable": true
 			},
 			{
-				"id": "lfo-rate",
-				"label": "LFO: Rate",
+				"id": "lfo-rate-fader",
+				"label": "Rate",
 				"kind": "fader",
 				"position": {
 					"x": 12.4,
 					"y": 13.970588235294118,
-					"width": 3.155555555555556,
+					"width": 3.1555533333333337,
 					"height": 52.94117647058824
 				},
-				"control": "lfo-rate-fader"
+				"control": "lfo-rate-fader",
+				"learnable": true
 			},
 			{
-				"id": "lfo-waveform",
-				"label": "LFO: Waveform",
+				"id": "lfo-waveform-knob",
+				"label": "Waveform",
 				"kind": "knob",
 				"position": {
-					"x": 15.555555555555555,
+					"x": 15.555553333333332,
 					"y": 13.970588235294118,
-					"width": 3.155555555555556,
+					"width": 3.1555533333333337,
 					"height": 52.94117647058824
 				},
-				"control": "lfo-waveform-knob"
+				"control": "lfo-waveform-knob",
+				"learnable": true
 			},
 			{
-				"id": "vco-mod-depth",
-				"label": "VCO: Mod depth",
+				"id": "vco-mod-depth-fader",
+				"label": "Mod depth",
 				"kind": "fader",
 				"position": {
-					"x": 20.177777777777777,
+					"x": 20.177780000000002,
 					"y": 13.970588235294118,
-					"width": 2.355555555555555,
+					"width": 2.3555533333333334,
 					"height": 52.94117647058824
 				},
-				"control": "vco-mod-depth-fader"
+				"control": "vco-mod-depth-fader",
+				"learnable": true
 			},
 			{
-				"id": "vco-range",
-				"label": "VCO: Range",
+				"id": "vco-range-knob",
+				"label": "Range",
 				"kind": "knob",
 				"position": {
 					"x": 22.53333333333333,
 					"y": 13.970588235294118,
-					"width": 2.355555555555555,
+					"width": 2.3555533333333334,
 					"height": 52.94117647058824
 				},
-				"control": "vco-range-knob"
+				"control": "vco-range-knob",
+				"learnable": true
 			},
 			{
-				"id": "vco-pulse-width",
-				"label": "VCO: Pulse width",
+				"id": "vco-pulse-width-fader",
+				"label": "Pulse width",
 				"kind": "fader",
 				"position": {
-					"x": 24.88888888888889,
+					"x": 24.888886666666668,
 					"y": 13.970588235294118,
-					"width": 2.355555555555555,
+					"width": 2.3555533333333334,
 					"height": 52.94117647058824
 				},
-				"control": "vco-pulse-width-fader"
+				"control": "vco-pulse-width-fader",
+				"learnable": true
 			},
 			{
-				"id": "vco-pwm-source",
-				"label": "VCO: PWM source",
-				"kind": "button",
+				"id": "vco-pwm-source-switch",
+				"label": "PWM source",
+				"kind": "fader",
 				"position": {
-					"x": 27.244444444444444,
+					"x": 27.244446666666665,
 					"y": 13.970588235294118,
-					"width": 2.355555555555555,
+					"width": 2.3555533333333334,
 					"height": 52.94117647058824
 				},
-				"control": "vco-pwm-source-switch"
+				"control": "vco-pwm-source-switch",
+				"learnable": true
 			},
 			{
-				"id": "source-mixer-pulse",
-				"label": "SOURCE MIXER: Pulse",
+				"id": "source-mixer-pulse-fader",
+				"label": "Pulse",
 				"kind": "fader",
 				"position": {
 					"x": 31.066666666666663,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "source-mixer-pulse-fader"
+				"control": "source-mixer-pulse-fader",
+				"learnable": true
 			},
 			{
-				"id": "source-mixer-saw",
-				"label": "SOURCE MIXER: Saw",
+				"id": "source-mixer-saw-fader",
+				"label": "Saw",
 				"kind": "fader",
 				"position": {
-					"x": 33.495555555555555,
+					"x": 33.49555333333333,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "source-mixer-saw-fader"
+				"control": "source-mixer-saw-fader",
+				"learnable": true
 			},
 			{
-				"id": "source-mixer-sub",
-				"label": "SOURCE MIXER: Sub",
+				"id": "source-mixer-sub-fader",
+				"label": "Sub",
 				"kind": "fader",
 				"position": {
-					"x": 35.92444444444444,
+					"x": 35.92444666666667,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "source-mixer-sub-fader"
+				"control": "source-mixer-sub-fader",
+				"learnable": true
 			},
 			{
-				"id": "source-mixer-sub-type",
-				"label": "SOURCE MIXER: Sub type",
+				"id": "source-mixer-sub-type-switch",
+				"label": "Sub type",
 				"kind": "fader",
 				"position": {
 					"x": 38.353333333333325,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "source-mixer-sub-type-switch"
+				"control": "source-mixer-sub-type-switch",
+				"learnable": true
 			},
 			{
-				"id": "source-mixer-noise",
-				"label": "SOURCE MIXER: Noise",
+				"id": "source-mixer-noise-fader",
+				"label": "Noise",
 				"kind": "fader",
 				"position": {
-					"x": 40.782222222222224,
+					"x": 40.782219999999995,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "source-mixer-noise-fader"
+				"control": "source-mixer-noise-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-cutoff",
-				"label": "VCF: Cutoff",
+				"id": "vcf-cutoff-fader",
+				"label": "Cutoff",
 				"kind": "fader",
 				"position": {
-					"x": 44.677777777777784,
+					"x": 44.67778,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "vcf-cutoff-fader"
+				"control": "vcf-cutoff-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-resonance",
-				"label": "VCF: Resonance",
+				"id": "vcf-resonance-fader",
+				"label": "Resonance",
 				"kind": "fader",
 				"position": {
-					"x": 47.106666666666676,
+					"x": 47.10666666666667,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "vcf-resonance-fader"
+				"control": "vcf-resonance-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-envelope",
-				"label": "VCF: Envelope",
+				"id": "vcf-envelope-fader",
+				"label": "Envelope",
 				"kind": "fader",
 				"position": {
-					"x": 49.53555555555556,
+					"x": 49.53555333333334,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "vcf-envelope-fader"
+				"control": "vcf-envelope-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-mod-depth",
-				"label": "VCF: Mod depth",
+				"id": "vcf-mod-depth-fader",
+				"label": "Mod depth",
 				"kind": "fader",
 				"position": {
-					"x": 51.964444444444446,
+					"x": 51.96444666666666,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "vcf-mod-depth-fader"
+				"control": "vcf-mod-depth-fader",
+				"learnable": true
 			},
 			{
-				"id": "vcf-key-follow",
-				"label": "VCF: Key follow",
+				"id": "vcf-key-follow-fader",
+				"label": "Key follow",
 				"kind": "fader",
 				"position": {
-					"x": 54.39333333333334,
+					"x": 54.393333333333324,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "vcf-key-follow-fader"
+				"control": "vcf-key-follow-fader",
+				"learnable": true
 			},
 			{
-				"id": "vca-envelope-gate",
-				"label": "VCA: Envelope Gate",
-				"kind": "button",
-				"position": {
-					"x": 58.2888888888889,
-					"y": 13.970588235294118,
-					"width": 6.311111111111112,
-					"height": 52.94117647058824
-				},
-				"control": "vca-envelope-gate-switch"
-			},
-			{
-				"id": "envelope-trigger-mode",
-				"label": "ENVELOPE: Trigger mode",
-				"kind": "button",
-				"position": {
-					"x": 66.06666666666668,
-					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
-					"height": 52.94117647058824
-				},
-				"control": "envelope-trigger-mode-switch"
-			},
-			{
-				"id": "envelope-attack",
-				"label": "ENVELOPE: Attack",
+				"id": "vca-envelope-gate-switch",
+				"label": "Envelope Gate",
 				"kind": "fader",
 				"position": {
-					"x": 68.49555555555557,
+					"x": 58.28888666666667,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 6.311113333333333,
 					"height": 52.94117647058824
 				},
-				"control": "envelope-attack-fader"
+				"control": "vca-envelope-gate-switch",
+				"learnable": true
 			},
 			{
-				"id": "envelope-decay",
-				"label": "ENVELOPE: Decay",
+				"id": "envelope-trigger-mode-switch",
+				"label": "Trigger mode",
 				"kind": "fader",
 				"position": {
-					"x": 70.92444444444446,
+					"x": 66.06666666666666,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "envelope-decay-fader"
+				"control": "envelope-trigger-mode-switch",
+				"learnable": true
 			},
 			{
-				"id": "envelope-sustain",
-				"label": "ENVELOPE: Sustain",
+				"id": "envelope-attack-fader",
+				"label": "Attack",
 				"kind": "fader",
 				"position": {
-					"x": 73.35333333333335,
+					"x": 68.49555333333332,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "envelope-sustain-fader"
+				"control": "envelope-attack-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-release",
-				"label": "ENVELOPE: Release",
+				"id": "envelope-decay-fader",
+				"label": "Decay",
 				"kind": "fader",
 				"position": {
-					"x": 75.78222222222225,
+					"x": 70.92444666666667,
 					"y": 13.970588235294118,
-					"width": 2.4288888888888893,
+					"width": 2.428886666666667,
 					"height": 52.94117647058824
 				},
-				"control": "envelope-release-fader"
+				"control": "envelope-decay-fader",
+				"learnable": true
+			},
+			{
+				"id": "envelope-sustain-fader",
+				"label": "Sustain",
+				"kind": "fader",
+				"position": {
+					"x": 73.35333333333332,
+					"y": 13.970588235294118,
+					"width": 2.428886666666667,
+					"height": 52.94117647058824
+				},
+				"control": "envelope-sustain-fader",
+				"learnable": true
+			},
+			{
+				"id": "envelope-release-fader",
+				"label": "Release",
+				"kind": "fader",
+				"position": {
+					"x": 75.78222000000001,
+					"y": 13.970588235294118,
+					"width": 2.428886666666667,
+					"height": 52.94117647058824
+				},
+				"control": "envelope-release-fader",
+				"learnable": true
 			},
 			{
 				"id": "controller-transpose",
 				"label": "CONTROLLER: Transpose",
 				"kind": "knob",
 				"position": {
-					"x": 79.67777777777778,
+					"x": 79.67778,
 					"y": 13.970588235294118,
-					"width": 4.397222222222222,
+					"width": 4.39722,
 					"height": 26.47058823529412
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "controller-vco-bend-depth",
-				"label": "CONTROLLER: VCO bend depth",
+				"id": "controller-vco-bend-depth-fader",
+				"label": "VCO bend depth",
 				"kind": "fader",
 				"position": {
 					"x": 84.075,
 					"y": 13.970588235294118,
-					"width": 4.397222222222222,
+					"width": 4.39722,
 					"height": 26.47058823529412
 				},
-				"control": "controller-vco-bend-depth-fader"
+				"control": "controller-vco-bend-depth-fader",
+				"learnable": true
 			},
 			{
-				"id": "controller-vcf-bend-depth",
-				"label": "CONTROLLER: VCF bend depth",
+				"id": "controller-vcf-bend-depth-fader",
+				"label": "VCF bend depth",
 				"kind": "fader",
 				"position": {
-					"x": 88.47222222222223,
+					"x": 88.47222000000001,
 					"y": 13.970588235294118,
-					"width": 4.397222222222222,
+					"width": 4.39722,
 					"height": 26.47058823529412
 				},
-				"control": "controller-vcf-bend-depth-fader"
+				"control": "controller-vcf-bend-depth-fader",
+				"learnable": true
 			},
 			{
-				"id": "controller-lfo-depth",
-				"label": "CONTROLLER: LFO depth",
+				"id": "controller-lfo-depth-fader",
+				"label": "LFO depth",
 				"kind": "fader",
 				"position": {
-					"x": 92.86944444444445,
+					"x": 92.86944666666666,
 					"y": 13.970588235294118,
-					"width": 4.397222222222222,
+					"width": 4.39722,
 					"height": 26.47058823529412
 				},
-				"control": "controller-lfo-depth-fader"
+				"control": "controller-lfo-depth-fader",
+				"learnable": true
 			},
 			{
 				"id": "controller-portamento",
 				"label": "CONTROLLER: Portamento",
 				"kind": "knob",
 				"position": {
-					"x": 79.67777777777778,
+					"x": 79.67778,
 					"y": 40.44117647058824,
-					"width": 4.397222222222222,
+					"width": 4.39722,
 					"height": 26.47058823529412
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "controller-portamento-time",
-				"label": "CONTROLLER: Portamento time",
+				"id": "controller-portamento-time-knob",
+				"label": "Portamento time",
 				"kind": "knob",
 				"position": {
 					"x": 84.075,
 					"y": 40.44117647058824,
-					"width": 4.397222222222222,
+					"width": 4.39722,
 					"height": 26.47058823529412
 				},
-				"control": "controller-portamento-time-knob"
+				"control": "controller-portamento-time-knob",
+				"learnable": true
 			},
 			{
 				"id": "controller-menu",
 				"label": "CONTROLLER: Menu",
 				"kind": "knob",
 				"position": {
-					"x": 88.47222222222223,
+					"x": 88.47222000000001,
 					"y": 40.44117647058824,
-					"width": 4.397222222222222,
+					"width": 4.39722,
 					"height": 26.47058823529412
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-volume",
@@ -626,7 +659,8 @@
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-manual",
@@ -637,7 +671,8 @@
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-function-1",
@@ -648,18 +683,20 @@
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-function-2",
 				"label": "MEMORY / PERFORMANCE: Function 2",
 				"kind": "button",
 				"position": {
-					"x": 30.826666666666668,
+					"x": 30.826666666666664,
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-function-3",
@@ -670,7 +707,8 @@
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-function-4",
@@ -681,29 +719,32 @@
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-function-5",
 				"label": "MEMORY / PERFORMANCE: Function 5",
 				"kind": "button",
 				"position": {
-					"x": 59.58666666666667,
+					"x": 59.586666666666666,
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-function-6",
 				"label": "MEMORY / PERFORMANCE: Function 6",
 				"kind": "button",
 				"position": {
-					"x": 69.17333333333335,
+					"x": 69.17333333333333,
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-function-7",
@@ -714,7 +755,8 @@
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-function-8",
@@ -725,7 +767,8 @@
 					"y": 75.0,
 					"width": 9.586666666666668,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

@@ -22,7 +22,7 @@ for (const { id, path: folder } of entries) {
 			errors.push(`${folder}: missing ${asset}`)
 		}
 	}
-	for (const [kind, asset] of Object.entries(profile.diagrams ?? {})) {
+	for (const asset of new Set(Object.values(profile.diagrams ?? {}))) {
 		const file = path.join(MIDI_DEVICE_DIRECTORY, folder, asset)
 		if (!existsSync(file)) continue
 		const svg = readFileSync(file, "utf8")
@@ -30,11 +30,13 @@ for (const { id, path: folder } of entries) {
 		if (new Set(ids).size !== ids.length) errors.push(`${folder}/${asset}: duplicate SVG element IDs`)
 		if (!svg.includes("<title") || !svg.includes("<desc")) errors.push(`${folder}/${asset}: missing accessible title or description`)
 		for (const [, colour] of svg.matchAll(/(?:fill|stroke)="([^"]+)"/g)) {
-			if (!["#000", "#fff", "none"].includes(colour)) errors.push(`${folder}/${asset}: non-monochrome colour ${colour}`)
+			if (!["#000", "#fff", "none", "currentColor"].includes(colour)) errors.push(`${folder}/${asset}: non-monochrome colour ${colour}`)
 		}
-		if (kind === "interface") {
-			for (const element of profile.surface?.elements ?? []) {
-				if (!ids.includes(element.id)) errors.push(`${folder}/${asset}: missing surface element ${element.id}`)
+		// The live surface artwork carries one device-prefixed hit region per surface element.
+		if (asset === profile.surface?.src) {
+			const prefix = `${id}-${path.basename(asset, ".svg")}--surface--`
+			for (const element of profile.surface.elements) {
+				if (!ids.includes(prefix + element.id)) errors.push(`${folder}/${asset}: missing surface element ${element.id}`)
 			}
 		}
 	}

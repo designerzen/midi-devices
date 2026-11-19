@@ -1,170 +1,261 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="img" aria-labelledby="title description">
-<title id="title">Roland VP-03 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="680" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="662" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland VP-03</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="140" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="controllers-ribbon-c1" data-kind="strip" aria-label="Ribbon C1"><title>Ribbon C1</title>
-<rect x="52" y="100" width="22" height="330.875" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M63 105L63 426.875" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="group" aria-labelledby="roland-vp-03-panel--title" aria-describedby="roland-vp-03-panel--description" data-device="roland-vp-03" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-vp-03-panel--title">Roland VP-03 overhead hardware diagram</title><desc id="roland-vp-03-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-vp-03-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="662" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland VP-03</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="140" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="180" y="65" width="175" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="365" y="65" width="175" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="550" y="65" width="175" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="735" y="65" width="236.667" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="981.667" y="65" width="236.667" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1228.333" y="65" width="236.667" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="480" width="1450" height="145" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="controllers-ribbon-c2" data-kind="strip" aria-label="Ribbon C2"><title>Ribbon C2</title>
-<rect x="116" y="100" width="22" height="330.875" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M127 105L127 426.875" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-vp-03-panel--controllers-ribbon-c1" data-part="controllers-ribbon-c1" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="CONTROLLERS: Ribbon C1"><title>CONTROLLERS: Ribbon C1</title><g aria-hidden="true">
+<rect x="52" y="100" width="22" height="330.875" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M63 105L63 426.875" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="180" y="65" width="175" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="pitch-shift-time" data-kind="knob" aria-label="Time" data-control="pitch-shift-time-knob"><title>Time</title>
-<circle cx="213.167" cy="268.202" r="13.583" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M213.167 257.619L213.167 263.448" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-vp-03-panel--surface--performance-ribbon-c1-touch" data-surface-control="performance-ribbon-c1-touch" aria-hidden="true"><rect x="31" y="95" width="64" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pitch-shift-pitch-set" data-kind="knob" aria-label="Pitch set" data-control="pitch-shift-pitch-set-knob"><title>Pitch set</title>
-<circle cx="267.5" cy="268.202" r="13.583" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M267.5 257.619L267.5 263.448" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-vp-03-panel--controllers-ribbon-c2" data-part="controllers-ribbon-c2" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="CONTROLLERS: Ribbon C2"><title>CONTROLLERS: Ribbon C2</title><g aria-hidden="true">
+<rect x="116" y="100" width="22" height="330.875" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M127 105L127 426.875" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pitch-shift-auto-off-manual" data-kind="fader" aria-label="Auto Off Manual" data-control="pitch-shift-auto-off-manual-switch"><title>Auto Off Manual</title>
-<rect x="315.857" y="100" width="11.953" height="323.809" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.984444444444444"/>
-<rect x="309.88" y="254.268" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--surface--performance-ribbon-c2-touch" data-surface-control="performance-ribbon-c2-touch" aria-hidden="true"><rect x="95" y="95" width="64" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="365" y="65" width="175" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="balance-direct-mic" data-kind="fader" aria-label="Direct mic" data-control="balance-direct-mic-fader"><title>Direct mic</title>
-<rect x="392.19" y="100" width="11.953" height="332.404" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.984444444444444"/>
-<rect x="386.213" y="258.394" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--pitch-shift-time" data-part="pitch-shift-time" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PITCH SHIFT: Time"><title>PITCH SHIFT: Time</title><g aria-hidden="true">
+<circle cx="213.167" cy="268.202" r="13.583" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M213.167 257.619L213.167 263.448" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="balance-human-voice" data-kind="fader" aria-label="Human voice" data-control="balance-human-voice-fader"><title>Human voice</title>
-<rect x="446.523" y="100" width="11.953" height="332.404" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.984444444444444"/>
-<rect x="440.547" y="258.394" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--surface--pitch-shift-time-knob" data-surface-control="pitch-shift-time-knob" aria-hidden="true"><rect x="186" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="balance-strings" data-kind="fader" aria-label="Strings" data-control="balance-strings-fader"><title>Strings</title>
-<rect x="500.857" y="100" width="11.953" height="332.404" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.984444444444444"/>
-<rect x="494.88" y="258.394" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--pitch-shift-pitch-set" data-part="pitch-shift-pitch-set" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PITCH SHIFT: Pitch set"><title>PITCH SHIFT: Pitch set</title><g aria-hidden="true">
+<circle cx="267.5" cy="268.202" r="13.583" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M267.5 257.619L267.5 263.448" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="550" y="65" width="175" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="vibrato-rate" data-kind="fader" aria-label="Rate" data-control="vibrato-rate-fader"><title>Rate</title>
-<rect x="577.19" y="100" width="11.953" height="332.404" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.984444444444444"/>
-<rect x="571.213" y="258.394" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--surface--pitch-shift-pitch-set-knob" data-surface-control="pitch-shift-pitch-set-knob" aria-hidden="true"><rect x="240.3333" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vibrato-delay" data-kind="fader" aria-label="Delay" data-control="vibrato-delay-fader"><title>Delay</title>
-<rect x="631.523" y="100" width="11.953" height="332.404" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.984444444444444"/>
-<rect x="625.547" y="258.394" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--pitch-shift-auto-off-manual" data-part="pitch-shift-auto-off-manual" data-kind="fader" role="group" aria-roledescription="slider" aria-label="PITCH SHIFT: Auto Off Manual"><title>PITCH SHIFT: Auto Off Manual</title><g aria-hidden="true">
+<rect x="315.857" y="100" width="11.953" height="323.809" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="309.88" y="254.268" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="vibrato-depth" data-kind="fader" aria-label="Depth" data-control="vibrato-depth-fader"><title>Depth</title>
-<rect x="685.857" y="100" width="11.953" height="332.404" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.984444444444444"/>
-<rect x="679.88" y="258.394" width="23.907" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--surface--pitch-shift-auto-off-manual-switch" data-surface-control="pitch-shift-auto-off-manual-switch" aria-hidden="true"><rect x="294.6667" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="735" y="65" width="236.667" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="vocoder-on-off" data-kind="button" aria-label="On Off"><title>On Off</title>
-<rect x="754.083" y="253.057" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--balance-direct-mic" data-part="balance-direct-mic" data-kind="fader" role="group" aria-roledescription="slider" aria-label="BALANCE: Direct mic"><title>BALANCE: Direct mic</title><g aria-hidden="true">
+<rect x="392.19" y="100" width="11.953" height="332.404" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="386.213" y="258.394" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="vocoder-ensemble" data-kind="button" aria-label="Ensemble"><title>Ensemble</title>
-<rect x="810.25" y="253.057" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--balance-direct-mic-fader" data-surface-control="balance-direct-mic-fader" aria-hidden="true"><rect x="371" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vocoder-level" data-kind="fader" aria-label="Level" data-control="vocoder-level-fader"><title>Level</title>
-<rect x="875.238" y="100" width="12.357" height="332.114" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.118888888888889"/>
-<rect x="869.06" y="258.255" width="24.713" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--balance-human-voice" data-part="balance-human-voice" data-kind="fader" role="group" aria-roledescription="slider" aria-label="BALANCE: Human voice"><title>BALANCE: Human voice</title><g aria-hidden="true">
+<rect x="446.523" y="100" width="11.953" height="332.404" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="440.547" y="258.394" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="vocoder-tone" data-kind="fader" aria-label="Tone" data-control="vocoder-tone-fader"><title>Tone</title>
-<rect x="931.405" y="100" width="12.357" height="332.114" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.118888888888889"/>
-<rect x="925.227" y="258.255" width="24.713" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--surface--balance-human-voice-fader" data-surface-control="balance-human-voice-fader" aria-hidden="true"><rect x="425.3333" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="981.667" y="65" width="236.667" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="human-voice-male-8-foot" data-kind="button" aria-label="Male 8 foot"><title>Male 8 foot</title>
-<rect x="1000.75" y="253.057" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--balance-strings" data-part="balance-strings" data-kind="fader" role="group" aria-roledescription="slider" aria-label="BALANCE: Strings"><title>BALANCE: Strings</title><g aria-hidden="true">
+<rect x="500.857" y="100" width="11.953" height="332.404" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="494.88" y="258.394" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="human-voice-female-4-foot" data-kind="button" aria-label="Female 4 foot"><title>Female 4 foot</title>
-<rect x="1056.917" y="248.614" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--balance-strings-fader" data-surface-control="balance-strings-fader" aria-hidden="true"><rect x="479.6667" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="human-voice-ensemble" data-kind="button" aria-label="Ensemble"><title>Ensemble</title>
-<rect x="1113.083" y="253.057" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--vibrato-rate" data-part="vibrato-rate" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VIBRATO: Rate"><title>VIBRATO: Rate</title><g aria-hidden="true">
+<rect x="577.19" y="100" width="11.953" height="332.404" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="571.213" y="258.394" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="human-voice-attack" data-kind="fader" aria-label="Attack" data-control="human-voice-attack-fader"><title>Attack</title>
-<rect x="1178.072" y="100" width="12.357" height="332.114" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.118888888888889"/>
-<rect x="1171.893" y="258.255" width="24.713" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--surface--vibrato-rate-fader" data-surface-control="vibrato-rate-fader" aria-hidden="true"><rect x="556" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="1228.333" y="65" width="236.667" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="strings-on-off" data-kind="button" aria-label="On Off"><title>On Off</title>
-<rect x="1247.417" y="253.057" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--vibrato-delay" data-part="vibrato-delay" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VIBRATO: Delay"><title>VIBRATO: Delay</title><g aria-hidden="true">
+<rect x="631.523" y="100" width="11.953" height="332.404" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="625.547" y="258.394" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="strings-attack" data-kind="fader" aria-label="Attack" data-control="strings-attack-fader"><title>Attack</title>
-<rect x="1312.405" y="100" width="12.357" height="332.114" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.118888888888889"/>
-<rect x="1306.227" y="258.255" width="24.713" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--surface--vibrato-delay-fader" data-surface-control="vibrato-delay-fader" aria-hidden="true"><rect x="610.3333" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="strings-tone" data-kind="fader" aria-label="Tone" data-control="strings-tone-fader"><title>Tone</title>
-<rect x="1368.572" y="100" width="12.357" height="332.114" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.118888888888889"/>
-<rect x="1362.393" y="258.255" width="24.713" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--vibrato-depth" data-part="vibrato-depth" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VIBRATO: Depth"><title>VIBRATO: Depth</title><g aria-hidden="true">
+<rect x="685.857" y="100" width="11.953" height="332.404" rx="3.984" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="679.88" y="258.394" width="23.907" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="strings-release" data-kind="fader" aria-label="Release" data-control="strings-release-fader"><title>Release</title>
-<rect x="1424.738" y="100" width="12.357" height="332.114" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.118888888888889"/>
-<rect x="1418.56" y="258.255" width="24.713" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="roland-vp-03-panel--surface--vibrato-depth-fader" data-surface-control="vibrato-depth-fader" aria-hidden="true"><rect x="664.6667" y="95" width="54.3333" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="25" y="480" width="1450" height="145" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="memory-performance-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="66.95" cy="529.313" r="11.745" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M66.95 520.568L66.95 525.202" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-vp-03-panel--vocoder-on-off" data-part="vocoder-on-off" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="VOCODER: On Off"><title>VOCODER: On Off</title><g aria-hidden="true">
+<rect x="754.083" y="253.057" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="memory-performance-tune" data-kind="knob" aria-label="Tune"><title>Tune</title>
-<circle cx="138.85" cy="529.313" r="11.745" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M138.85 520.568L138.85 525.202" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-vp-03-panel--surface--vocoder-on-off" data-surface-control="vocoder-on-off" aria-hidden="true"><rect x="741" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-mic-power" data-kind="button" aria-label="Mic power"><title>Mic power</title>
-<rect x="196.437" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--vocoder-ensemble" data-part="vocoder-ensemble" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="VOCODER: Ensemble"><title>VOCODER: Ensemble</title><g aria-hidden="true">
+<rect x="810.25" y="253.057" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="memory-performance-c1-mode" data-kind="button" aria-label="C1 mode"><title>C1 mode</title>
-<rect x="268.337" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--vocoder-ensemble" data-surface-control="vocoder-ensemble" aria-hidden="true"><rect x="797.1667" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-memory" data-kind="button" aria-label="Memory"><title>Memory</title>
-<rect x="340.237" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--vocoder-level" data-part="vocoder-level" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VOCODER: Level"><title>VOCODER: Level</title><g aria-hidden="true">
+<rect x="875.238" y="100" width="12.357" height="332.114" rx="4.119" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="869.06" y="258.255" width="24.713" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="memory-performance-play-stop" data-kind="button" aria-label="Play Stop"><title>Play Stop</title>
-<rect x="412.137" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--vocoder-level-fader" data-surface-control="vocoder-level-fader" aria-hidden="true"><rect x="853.3333" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-step-1" data-kind="button" aria-label="Step 1"><title>Step 1</title>
-<rect x="484.037" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--vocoder-tone" data-part="vocoder-tone" data-kind="fader" role="group" aria-roledescription="slider" aria-label="VOCODER: Tone"><title>VOCODER: Tone</title><g aria-hidden="true">
+<rect x="931.405" y="100" width="12.357" height="332.114" rx="4.119" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="925.227" y="258.255" width="24.713" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="memory-performance-step-2" data-kind="button" aria-label="Step 2"><title>Step 2</title>
-<rect x="555.937" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--vocoder-tone-fader" data-surface-control="vocoder-tone-fader" aria-hidden="true"><rect x="909.5" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-step-3" data-kind="button" aria-label="Step 3"><title>Step 3</title>
-<rect x="627.837" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--human-voice-male-8-foot" data-part="human-voice-male-8-foot" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="HUMAN VOICE: Male 8 foot"><title>HUMAN VOICE: Male 8 foot</title><g aria-hidden="true">
+<rect x="1000.75" y="253.057" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="memory-performance-step-4" data-kind="button" aria-label="Step 4"><title>Step 4</title>
-<rect x="699.737" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--human-voice-male-8-foot" data-surface-control="human-voice-male-8-foot" aria-hidden="true"><rect x="987.6667" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-step-5" data-kind="button" aria-label="Step 5"><title>Step 5</title>
-<rect x="771.637" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--human-voice-female-4-foot" data-part="human-voice-female-4-foot" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="HUMAN VOICE: Female 4 foot"><title>HUMAN VOICE: Female 4 foot</title><g aria-hidden="true">
+<rect x="1056.917" y="248.614" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="memory-performance-step-6" data-kind="button" aria-label="Step 6"><title>Step 6</title>
-<rect x="843.537" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--human-voice-female-4-foot" data-surface-control="human-voice-female-4-foot" aria-hidden="true"><rect x="1043.8333" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-step-7" data-kind="button" aria-label="Step 7"><title>Step 7</title>
-<rect x="915.437" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--human-voice-ensemble" data-part="human-voice-ensemble" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="HUMAN VOICE: Ensemble"><title>HUMAN VOICE: Ensemble</title><g aria-hidden="true">
+<rect x="1113.083" y="253.057" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="memory-performance-step-8" data-kind="button" aria-label="Step 8"><title>Step 8</title>
-<rect x="987.337" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--human-voice-ensemble" data-surface-control="human-voice-ensemble" aria-hidden="true"><rect x="1100" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-step-9" data-kind="button" aria-label="Step 9"><title>Step 9</title>
-<rect x="1059.237" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--human-voice-attack" data-part="human-voice-attack" data-kind="fader" role="group" aria-roledescription="slider" aria-label="HUMAN VOICE: Attack"><title>HUMAN VOICE: Attack</title><g aria-hidden="true">
+<rect x="1178.072" y="100" width="12.357" height="332.114" rx="4.119" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1171.893" y="258.255" width="24.713" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="memory-performance-step-10" data-kind="button" aria-label="Step 10"><title>Step 10</title>
-<rect x="1131.137" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--human-voice-attack-fader" data-surface-control="human-voice-attack-fader" aria-hidden="true"><rect x="1156.1667" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-step-11" data-kind="button" aria-label="Step 11"><title>Step 11</title>
-<rect x="1203.037" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--strings-on-off" data-part="strings-on-off" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STRINGS: On Off"><title>STRINGS: On Off</title><g aria-hidden="true">
+<rect x="1247.417" y="253.057" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="memory-performance-step-12" data-kind="button" aria-label="Step 12"><title>Step 12</title>
-<rect x="1274.937" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--strings-on-off" data-surface-control="strings-on-off" aria-hidden="true"><rect x="1234.3333" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-step-13" data-kind="button" aria-label="Step 13"><title>Step 13</title>
-<rect x="1346.837" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--strings-attack" data-part="strings-attack" data-kind="fader" role="group" aria-roledescription="slider" aria-label="STRINGS: Attack"><title>STRINGS: Attack</title><g aria-hidden="true">
+<rect x="1312.405" y="100" width="12.357" height="332.114" rx="4.119" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1306.227" y="258.255" width="24.713" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="memory-performance-step-14" data-kind="button" aria-label="Step 14"><title>Step 14</title>
-<rect x="1418.737" y="515" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--strings-attack-fader" data-surface-control="strings-attack-fader" aria-hidden="true"><rect x="1290.5" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-step-15" data-kind="button" aria-label="Step 15"><title>Step 15</title>
-<rect x="52.637" y="570" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--strings-tone" data-part="strings-tone" data-kind="fader" role="group" aria-roledescription="slider" aria-label="STRINGS: Tone"><title>STRINGS: Tone</title><g aria-hidden="true">
+<rect x="1368.572" y="100" width="12.357" height="332.114" rx="4.119" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1362.393" y="258.255" width="24.713" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
 </g>
-<g id="memory-performance-step-16" data-kind="button" aria-label="Step 16"><title>Step 16</title>
-<rect x="124.537" y="570" width="28.625" height="28.625" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-vp-03-panel--surface--strings-tone-fader" data-surface-control="strings-tone-fader" aria-hidden="true"><rect x="1346.6667" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--strings-release" data-part="strings-release" data-kind="fader" role="group" aria-roledescription="slider" aria-label="STRINGS: Release"><title>STRINGS: Release</title><g aria-hidden="true">
+<rect x="1424.738" y="100" width="12.357" height="332.114" rx="4.119" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1418.56" y="258.255" width="24.713" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="roland-vp-03-panel--surface--strings-release-fader" data-surface-control="strings-release-fader" aria-hidden="true"><rect x="1402.8333" y="95" width="56.1667" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-volume" data-part="memory-performance-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MEMORY / PERFORMANCE: Volume"><title>MEMORY / PERFORMANCE: Volume</title><g aria-hidden="true">
+<circle cx="66.95" cy="529.313" r="11.745" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M66.95 520.568L66.95 525.202" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-volume" data-surface-control="memory-performance-volume" aria-hidden="true"><rect x="31" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-tune" data-part="memory-performance-tune" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MEMORY / PERFORMANCE: Tune"><title>MEMORY / PERFORMANCE: Tune</title><g aria-hidden="true">
+<circle cx="138.85" cy="529.313" r="11.745" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M138.85 520.568L138.85 525.202" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-vp-03-panel--surface--performance-tune-knob" data-surface-control="performance-tune-knob" aria-hidden="true"><rect x="102.9" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-mic-power" data-part="memory-performance-mic-power" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Mic power"><title>MEMORY / PERFORMANCE: Mic power</title><g aria-hidden="true">
+<rect x="196.437" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-mic-power" data-surface-control="memory-performance-mic-power" aria-hidden="true"><rect x="174.8" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-c1-mode" data-part="memory-performance-c1-mode" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: C1 mode"><title>MEMORY / PERFORMANCE: C1 mode</title><g aria-hidden="true">
+<rect x="268.337" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-c1-mode" data-surface-control="memory-performance-c1-mode" aria-hidden="true"><rect x="246.7" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-memory" data-part="memory-performance-memory" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Memory"><title>MEMORY / PERFORMANCE: Memory</title><g aria-hidden="true">
+<rect x="340.237" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-memory" data-surface-control="memory-performance-memory" aria-hidden="true"><rect x="318.6" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-play-stop" data-part="memory-performance-play-stop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Play Stop"><title>MEMORY / PERFORMANCE: Play Stop</title><g aria-hidden="true">
+<rect x="412.137" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-play-stop" data-surface-control="memory-performance-play-stop" aria-hidden="true"><rect x="390.5" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-1" data-part="memory-performance-step-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 1"><title>MEMORY / PERFORMANCE: Step 1</title><g aria-hidden="true">
+<rect x="484.037" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-1" data-surface-control="memory-performance-step-1" aria-hidden="true"><rect x="462.4" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-2" data-part="memory-performance-step-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 2"><title>MEMORY / PERFORMANCE: Step 2</title><g aria-hidden="true">
+<rect x="555.937" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-2" data-surface-control="memory-performance-step-2" aria-hidden="true"><rect x="534.3" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-3" data-part="memory-performance-step-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 3"><title>MEMORY / PERFORMANCE: Step 3</title><g aria-hidden="true">
+<rect x="627.837" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-3" data-surface-control="memory-performance-step-3" aria-hidden="true"><rect x="606.2" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-4" data-part="memory-performance-step-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 4"><title>MEMORY / PERFORMANCE: Step 4</title><g aria-hidden="true">
+<rect x="699.737" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-4" data-surface-control="memory-performance-step-4" aria-hidden="true"><rect x="678.1" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-5" data-part="memory-performance-step-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 5"><title>MEMORY / PERFORMANCE: Step 5</title><g aria-hidden="true">
+<rect x="771.637" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-5" data-surface-control="memory-performance-step-5" aria-hidden="true"><rect x="750" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-6" data-part="memory-performance-step-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 6"><title>MEMORY / PERFORMANCE: Step 6</title><g aria-hidden="true">
+<rect x="843.537" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-6" data-surface-control="memory-performance-step-6" aria-hidden="true"><rect x="821.9" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-7" data-part="memory-performance-step-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 7"><title>MEMORY / PERFORMANCE: Step 7</title><g aria-hidden="true">
+<rect x="915.437" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-7" data-surface-control="memory-performance-step-7" aria-hidden="true"><rect x="893.8" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-8" data-part="memory-performance-step-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 8"><title>MEMORY / PERFORMANCE: Step 8</title><g aria-hidden="true">
+<rect x="987.337" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-8" data-surface-control="memory-performance-step-8" aria-hidden="true"><rect x="965.7" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-9" data-part="memory-performance-step-9" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 9"><title>MEMORY / PERFORMANCE: Step 9</title><g aria-hidden="true">
+<rect x="1059.237" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-9" data-surface-control="memory-performance-step-9" aria-hidden="true"><rect x="1037.6" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-10" data-part="memory-performance-step-10" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 10"><title>MEMORY / PERFORMANCE: Step 10</title><g aria-hidden="true">
+<rect x="1131.137" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-10" data-surface-control="memory-performance-step-10" aria-hidden="true"><rect x="1109.5" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-11" data-part="memory-performance-step-11" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 11"><title>MEMORY / PERFORMANCE: Step 11</title><g aria-hidden="true">
+<rect x="1203.037" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-11" data-surface-control="memory-performance-step-11" aria-hidden="true"><rect x="1181.4" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-12" data-part="memory-performance-step-12" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 12"><title>MEMORY / PERFORMANCE: Step 12</title><g aria-hidden="true">
+<rect x="1274.937" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-12" data-surface-control="memory-performance-step-12" aria-hidden="true"><rect x="1253.3" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-13" data-part="memory-performance-step-13" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 13"><title>MEMORY / PERFORMANCE: Step 13</title><g aria-hidden="true">
+<rect x="1346.837" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-13" data-surface-control="memory-performance-step-13" aria-hidden="true"><rect x="1325.2" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-14" data-part="memory-performance-step-14" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 14"><title>MEMORY / PERFORMANCE: Step 14</title><g aria-hidden="true">
+<rect x="1418.737" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-14" data-surface-control="memory-performance-step-14" aria-hidden="true"><rect x="1397.1" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-15" data-part="memory-performance-step-15" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 15"><title>MEMORY / PERFORMANCE: Step 15</title><g aria-hidden="true">
+<rect x="52.637" y="570" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-15" data-surface-control="memory-performance-step-15" aria-hidden="true"><rect x="31" y="565" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-vp-03-panel--memory-performance-step-16" data-part="memory-performance-step-16" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Step 16"><title>MEMORY / PERFORMANCE: Step 16</title><g aria-hidden="true">
+<rect x="124.537" y="570" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-vp-03-panel--surface--memory-performance-step-16" data-surface-control="memory-performance-step-16" aria-hidden="true"><rect x="102.9" y="565" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </svg>

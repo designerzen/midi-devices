@@ -136,7 +136,7 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1500,
 		"height": 680,
 		"elements": [
@@ -149,7 +149,8 @@
 					"y": 13.970588235294118,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-value",
@@ -160,7 +161,8 @@
 					"y": 13.970588235294118,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-instrument",
@@ -171,7 +173,8 @@
 					"y": 13.970588235294118,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-mode",
@@ -182,7 +185,8 @@
 					"y": 24.558823529411764,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-run-stop",
@@ -193,7 +197,8 @@
 					"y": 24.558823529411764,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-pattern-clear",
@@ -204,7 +209,8 @@
 					"y": 24.558823529411764,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-menu-substep",
@@ -215,7 +221,8 @@
 					"y": 35.147058823529406,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-step-loop",
@@ -226,7 +233,8 @@
 					"y": 35.147058823529406,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-function",
@@ -237,7 +245,8 @@
 					"y": 35.147058823529406,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-tempo",
@@ -248,7 +257,8 @@
 					"y": 45.73529411764706,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-pattern-group",
@@ -259,7 +269,8 @@
 					"y": 45.73529411764706,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-tap-reset",
@@ -270,7 +281,8 @@
 					"y": 45.73529411764706,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-scale",
@@ -281,190 +293,270 @@
 					"y": 56.3235294117647,
 					"width": 5.733333333333333,
 					"height": 10.588235294117647
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "effects-drive",
-				"label": "EFFECTS: Drive",
+				"id": "effects-drive-knob",
+				"label": "Drive",
 				"kind": "knob",
 				"position": {
 					"x": 21.066666666666666,
 					"y": 13.970588235294118,
-					"width": 24.42222222222222,
+					"width": 24.42222,
 					"height": 17.647058823529413
 				},
-				"control": "effects-drive-knob"
+				"control": "effects-drive-knob",
+				"learnable": true
 			},
 			{
-				"id": "effects-time",
-				"label": "EFFECTS: Time",
+				"id": "effects-time-knob",
+				"label": "Time",
 				"kind": "knob",
 				"position": {
 					"x": 21.066666666666666,
 					"y": 31.61764705882353,
-					"width": 24.42222222222222,
+					"width": 24.42222,
 					"height": 17.647058823529413
 				},
-				"control": "effects-time-knob"
+				"control": "effects-time-knob",
+				"learnable": true
 			},
 			{
-				"id": "effects-depth",
-				"label": "EFFECTS: Depth",
+				"id": "effects-depth-knob",
+				"label": "Depth",
 				"kind": "knob",
 				"position": {
 					"x": 21.066666666666666,
 					"y": 49.26470588235294,
-					"width": 24.42222222222222,
+					"width": 24.42222,
 					"height": 17.647058823529413
 				},
-				"control": "effects-depth-knob"
+				"control": "effects-depth-knob",
+				"learnable": true
 			},
 			{
-				"id": "levels-accent",
-				"label": "LEVELS: Accent",
+				"id": "levels-accent-knob",
+				"label": "Accent",
 				"kind": "knob",
 				"position": {
-					"x": 46.95555555555555,
+					"x": 46.955553333333334,
 					"y": 13.970588235294118,
-					"width": 25.15555555555555,
+					"width": 25.155553333333337,
 					"height": 17.647058823529413
 				},
-				"control": "levels-accent-knob"
+				"control": "levels-accent-knob",
+				"learnable": true
 			},
 			{
-				"id": "levels-bass-drum",
-				"label": "LEVELS: Bass drum",
+				"id": "levels-bass-drum-knob",
+				"label": "Bass drum",
 				"kind": "knob",
 				"position": {
-					"x": 72.1111111111111,
+					"x": 72.11111333333334,
 					"y": 13.970588235294118,
-					"width": 25.15555555555555,
+					"width": 25.155553333333337,
 					"height": 17.647058823529413
 				},
-				"control": "levels-bass-drum-knob"
+				"control": "levels-bass-drum-knob",
+				"learnable": true
 			},
 			{
-				"id": "levels-snare",
-				"label": "LEVELS: Snare",
+				"id": "levels-snare-knob",
+				"label": "Snare",
 				"kind": "knob",
 				"position": {
-					"x": 46.95555555555555,
+					"x": 46.955553333333334,
 					"y": 31.61764705882353,
-					"width": 25.15555555555555,
+					"width": 25.155553333333337,
 					"height": 17.647058823529413
 				},
-				"control": "levels-snare-knob"
+				"control": "levels-snare-knob",
+				"learnable": true
 			},
 			{
-				"id": "levels-tom",
-				"label": "LEVELS: Tom",
+				"id": "levels-tom-knob-1",
+				"label": "Tom (part 1)",
 				"kind": "knob",
 				"position": {
-					"x": 72.1111111111111,
+					"x": 72.11111333333334,
 					"y": 31.61764705882353,
-					"width": 25.15555555555555,
-					"height": 17.647058823529413
-				}
-			},
-			{
-				"id": "levels-cymbal",
-				"label": "LEVELS: Cymbal",
-				"kind": "knob",
-				"position": {
-					"x": 46.95555555555555,
-					"y": 49.26470588235294,
-					"width": 25.15555555555555,
+					"width": 12.577779999999999,
 					"height": 17.647058823529413
 				},
-				"control": "levels-cymbal-knob"
+				"control": "levels-tom-knob-1",
+				"learnable": true
 			},
 			{
-				"id": "levels-hi-hat",
-				"label": "LEVELS: Hi hat",
+				"id": "levels-tom-knob-2",
+				"label": "Tom (part 2)",
 				"kind": "knob",
 				"position": {
-					"x": 72.1111111111111,
-					"y": 49.26470588235294,
-					"width": 25.15555555555555,
+					"x": 84.68888666666666,
+					"y": 31.61764705882353,
+					"width": 12.577779999999999,
 					"height": 17.647058823529413
-				}
+				},
+				"control": "levels-tom-knob-2",
+				"learnable": true
 			},
 			{
-				"id": "steps-1",
-				"label": "STEPS: 1",
-				"kind": "button",
+				"id": "levels-cymbal-knob",
+				"label": "Cymbal",
+				"kind": "knob",
+				"position": {
+					"x": 46.955553333333334,
+					"y": 49.26470588235294,
+					"width": 25.155553333333337,
+					"height": 17.647058823529413
+				},
+				"control": "levels-cymbal-knob",
+				"learnable": true
+			},
+			{
+				"id": "levels-hi-hat-knob-1",
+				"label": "Hi hat (part 1)",
+				"kind": "knob",
+				"position": {
+					"x": 72.11111333333334,
+					"y": 49.26470588235294,
+					"width": 12.577779999999999,
+					"height": 17.647058823529413
+				},
+				"control": "levels-hi-hat-knob-1",
+				"learnable": true
+			},
+			{
+				"id": "levels-hi-hat-knob-2",
+				"label": "Hi hat (part 2)",
+				"kind": "knob",
+				"position": {
+					"x": 84.68888666666666,
+					"y": 49.26470588235294,
+					"width": 12.577779999999999,
+					"height": 17.647058823529413
+				},
+				"control": "levels-hi-hat-knob-2",
+				"learnable": true
+			},
+			{
+				"id": "key-1",
+				"label": "Kick",
+				"kind": "key",
 				"position": {
 					"x": 2.0666666666666664,
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 36,
+					"channel": 10
+				},
+				"learnable": true
 			},
 			{
-				"id": "steps-2",
-				"label": "STEPS: 2",
-				"kind": "button",
+				"id": "key-2",
+				"label": "Snare",
+				"kind": "key",
 				"position": {
 					"x": 8.058333333333334,
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 38,
+					"channel": 10
+				},
+				"learnable": true
 			},
 			{
-				"id": "steps-3",
-				"label": "STEPS: 3",
-				"kind": "button",
+				"id": "key-3",
+				"label": "Low tom",
+				"kind": "key",
 				"position": {
 					"x": 14.05,
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 47,
+					"channel": 10
+				},
+				"learnable": true
 			},
 			{
-				"id": "steps-4",
-				"label": "STEPS: 4",
-				"kind": "button",
+				"id": "key-4",
+				"label": "High tom",
+				"kind": "key",
 				"position": {
 					"x": 20.041666666666664,
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 50,
+					"channel": 10
+				},
+				"learnable": true
 			},
 			{
-				"id": "steps-5",
-				"label": "STEPS: 5",
-				"kind": "button",
+				"id": "key-5",
+				"label": "Cymbal",
+				"kind": "key",
 				"position": {
 					"x": 26.033333333333335,
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 49,
+					"channel": 10
+				},
+				"learnable": true
 			},
 			{
-				"id": "steps-6",
-				"label": "STEPS: 6",
-				"kind": "button",
+				"id": "key-6",
+				"label": "Open hat",
+				"kind": "key",
 				"position": {
 					"x": 32.025,
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 46,
+					"channel": 10
+				},
+				"learnable": true
 			},
 			{
-				"id": "steps-7",
-				"label": "STEPS: 7",
-				"kind": "button",
+				"id": "key-7",
+				"label": "Closed hat",
+				"kind": "key",
 				"position": {
 					"x": 38.016666666666666,
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 42,
+					"channel": 10
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-8",
@@ -475,7 +567,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-9",
@@ -486,7 +579,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-10",
@@ -497,7 +591,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-11",
@@ -508,7 +603,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-12",
@@ -519,7 +615,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-13",
@@ -530,7 +627,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-14",
@@ -541,7 +639,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-15",
@@ -552,7 +651,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "steps-16",
@@ -563,7 +663,8 @@
 					"y": 76.47058823529412,
 					"width": 5.991666666666666,
 					"height": 13.970588235294118
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

@@ -1,191 +1,253 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 540" role="img" aria-labelledby="title description">
-<title id="title">Arturia KeyStep labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="540" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="522" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Arturia KeyStep</text>
-<text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="1190" height="130" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">SEQ / ARP</text>
-<g id="seq-arp-seq-arp" data-kind="switch" aria-label="Seq / Arp"><title>Seq / Arp</title>
-<rect x="99.625" y="121.785" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="95.625" y="129.785" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="104.625" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Seq / Arp</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 630" role="group" aria-labelledby="arturia-keystep-interface--title" aria-describedby="arturia-keystep-interface--description" data-device="arturia-keystep" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="arturia-keystep-interface--title">Arturia KeyStep labelled interface</title><desc id="arturia-keystep-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="arturia-keystep-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1232" height="612" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Arturia KeyStep</text>
+<text x="1225" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="65" width="1190" height="130" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">SEQ / ARP</text>
+<rect x="25" y="225" width="130" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="239" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">PERFORMANCE</text>
 </g>
-<g id="seq-arp-mode" data-kind="knob" aria-label="Mode"><title>Mode</title>
-<circle cx="251.875" cy="133.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M251.875 111.785L251.875 125.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="251.875" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Mode</text>
+<g id="arturia-keystep-interface--seq-arp-seq-arp" data-part="seq-arp-seq-arp" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SEQ / ARP: Seq / Arp"><title>SEQ / ARP: Seq / Arp</title><g aria-hidden="true">
+<rect x="99.625" y="121.785" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="95.625" y="129.785" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="104.625" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Seq / Arp</text>
 </g>
-<g id="seq-arp-time-division" data-kind="knob" aria-label="Time division"><title>Time division</title>
-<circle cx="399.125" cy="133.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M399.125 111.785L399.125 125.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="399.125" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Time division</text>
 </g>
-<g id="seq-arp-rate" data-kind="knob" aria-label="Rate"><title>Rate</title>
-<circle cx="546.375" cy="133.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M546.375 111.785L546.375 125.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="546.375" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Rate</text>
+<g id="arturia-keystep-interface--seq-arp-mode" data-part="seq-arp-mode" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SEQ / ARP: Mode"><title>SEQ / ARP: Mode</title><g aria-hidden="true">
+<circle cx="251.875" cy="133.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M251.875 111.785L251.875 125.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="251.875" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mode</text>
 </g>
-<g id="seq-arp-tap-rest" data-kind="button" aria-label="Tap / Rest"><title>Tap / Rest</title>
-<rect x="678.625" y="118.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="693.625" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tap / Rest</text>
 </g>
-<g id="seq-arp-rec" data-kind="button" aria-label="Rec"><title>Rec</title>
-<rect x="825.875" y="118.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="840.875" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Rec</text>
+<g id="arturia-keystep-interface--seq-arp-time-division" data-part="seq-arp-time-division" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SEQ / ARP: Time division"><title>SEQ / ARP: Time division</title><g aria-hidden="true">
+<circle cx="399.125" cy="133.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M399.125 111.785L399.125 125.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="399.125" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Time division</text>
 </g>
-<g id="seq-arp-stop" data-kind="button" aria-label="Stop"><title>Stop</title>
-<rect x="973.125" y="118.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="988.125" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Stop</text>
 </g>
-<g id="seq-arp-play-pause" data-kind="button" aria-label="Play / Pause"><title>Play / Pause</title>
-<rect x="1120.375" y="118.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1135.375" y="186" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Play / Pause</text>
+<g id="arturia-keystep-interface--seq-arp-rate" data-part="seq-arp-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SEQ / ARP: Rate"><title>SEQ / ARP: Rate</title><g aria-hidden="true">
+<circle cx="546.375" cy="133.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M546.375 111.785L546.375 125.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="546.375" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Rate</text>
 </g>
-<rect x="25" y="225" width="130" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="239" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">PERFORMANCE</text>
-<g id="performance-hold" data-kind="button" aria-label="Hold"><title>Hold</title>
-<rect x="45.5" y="272.833" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="60.5" y="331" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.260000000000002" text-anchor="middle">Hold</text>
 </g>
-<g id="performance-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<rect x="104.5" y="272.833" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="119.5" y="331" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.260000000000002" text-anchor="middle">Shift</text>
+<g id="arturia-keystep-interface--seq-arp-tap-rest" data-part="seq-arp-tap-rest" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQ / ARP: Tap / Rest"><title>SEQ / ARP: Tap / Rest</title><g aria-hidden="true">
+<rect x="678.625" y="118.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="693.625" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tap / Rest</text>
 </g>
-<g id="performance-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="45.5" y="352.833" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="60.5" y="411" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.260000000000002" text-anchor="middle">Octave -</text>
 </g>
-<g id="performance-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="104.5" y="352.833" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="119.5" y="411" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.260000000000002" text-anchor="middle">Octave +</text>
+<g id="arturia-keystep-interface--seq-arp-rec" data-part="seq-arp-rec" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQ / ARP: Rec"><title>SEQ / ARP: Rec</title><g aria-hidden="true">
+<rect x="825.875" y="118.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="840.875" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Rec</text>
 </g>
-<g id="performance-pitch" data-kind="strip" aria-label="Pitch"><title>Pitch</title>
-<rect x="50.175" y="420" width="20.65" height="51.666" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="6.883333333333333"/>
-<path d="M60.5 425L60.5 467.666" fill="none" stroke="#000" stroke-width="1"/>
-<text x="60.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.260000000000002" text-anchor="middle">Pitch</text>
 </g>
-<g id="performance-mod" data-kind="strip" aria-label="Mod"><title>Mod</title>
-<rect x="109.175" y="420" width="20.65" height="51.666" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="6.883333333333333"/>
-<path d="M119.5 425L119.5 467.666" fill="none" stroke="#000" stroke-width="1"/>
-<text x="119.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.260000000000002" text-anchor="middle">Mod</text>
+<g id="arturia-keystep-interface--seq-arp-stop" data-part="seq-arp-stop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQ / ARP: Stop"><title>SEQ / ARP: Stop</title><g aria-hidden="true">
+<rect x="973.125" y="118.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="988.125" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Stop</text>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="170" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="197.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">1</text>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="225" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="252.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">3</text>
+<g id="arturia-keystep-interface--seq-arp-play-pause" data-part="seq-arp-play-pause" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQ / ARP: Play / Pause"><title>SEQ / ARP: Play / Pause</title><g aria-hidden="true">
+<rect x="1120.375" y="118.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1135.375" y="186" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Play / Pause</text>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="280" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="307.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">5</text>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="335" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="362.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">6</text>
+<g id="arturia-keystep-interface--performance-hold" data-part="performance-hold" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Hold"><title>PERFORMANCE: Hold</title><g aria-hidden="true">
+<rect x="45.5" y="272.833" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="60.5" y="331" fill="currentColor" stroke="none" font-size="8.260000000000002" text-anchor="middle">Hold</text>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="390" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="417.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">8</text>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="445" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="472.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">10</text>
+<g id="arturia-keystep-interface--performance-shift" data-part="performance-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Shift"><title>PERFORMANCE: Shift</title><g aria-hidden="true">
+<rect x="104.5" y="272.833" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="119.5" y="331" fill="currentColor" stroke="none" font-size="8.260000000000002" text-anchor="middle">Shift</text>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="500" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="527.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">12</text>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="555" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="582.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">13</text>
+<g id="arturia-keystep-interface--performance-octave" data-part="performance-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave -"><title>PERFORMANCE: Octave -</title><g aria-hidden="true">
+<rect x="45.5" y="352.833" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="60.5" y="411" fill="currentColor" stroke="none" font-size="8.260000000000002" text-anchor="middle">Octave -</text>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="610" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="637.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">15</text>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="665" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="692.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">17</text>
+<g id="arturia-keystep-interface--performance-octave-2" data-part="performance-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave +"><title>PERFORMANCE: Octave +</title><g aria-hidden="true">
+<rect x="104.5" y="352.833" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="119.5" y="411" fill="currentColor" stroke="none" font-size="8.260000000000002" text-anchor="middle">Octave +</text>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="720" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="747.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">18</text>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="775" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="802.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">20</text>
+<g id="arturia-keystep-interface--performance-pitch" data-part="performance-pitch" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Pitch"><title>PERFORMANCE: Pitch</title><g aria-hidden="true">
+<rect x="50.175" y="420" width="20.65" height="51.666" rx="6.883" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M60.5 425L60.5 467.666" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="60.5" y="491" fill="currentColor" stroke="none" font-size="8.260000000000002" text-anchor="middle">Pitch</text>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="830" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="857.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">22</text>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="885" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="912.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">24</text>
+<g id="arturia-keystep-interface--performance-mod" data-part="performance-mod" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Mod"><title>PERFORMANCE: Mod</title><g aria-hidden="true">
+<rect x="109.175" y="420" width="20.65" height="51.666" rx="6.883" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M119.5 425L119.5 467.666" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="119.5" y="491" fill="currentColor" stroke="none" font-size="8.260000000000002" text-anchor="middle">Mod</text>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="940" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="967.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">25</text>
 </g>
-<g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="995" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="1022.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">27</text>
+<g id="arturia-keystep-interface--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="arturia-keystep-interface--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="170" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="197.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">1</text>
 </g>
-<g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="1050" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="1077.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">29</text>
 </g>
-<g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="1105" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="1132.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">30</text>
+<g id="arturia-keystep-interface--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="225" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="252.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">3</text>
 </g>
-<g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="1160" y="225" width="55" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
-<text x="1187.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="middle">32</text>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="207.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-keystep-interface--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="280" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="307.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">5</text>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="262.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="372.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-keystep-interface--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="335" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="362.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">6</text>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="427.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="482.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-keystep-interface--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="390" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="417.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">8</text>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="592.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="647.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-keystep-interface--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="445" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="472.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">10</text>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="757.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="812.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-keystep-interface--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="500" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="527.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">12</text>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="867.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="977.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-keystep-interface--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="555" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="582.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">13</text>
 </g>
-<g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="1032.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
 </g>
-<g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="1142.95" y="225" width="34.1" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="arturia-keystep-interface--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="610" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="637.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">15</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="665" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="692.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">17</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="720" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="747.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">18</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="775" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="802.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">20</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="830" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="857.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">22</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="885" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="912.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">24</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="940" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="967.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">25</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-27" data-part="key-27" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 27"><title>Key 27</title><g aria-hidden="true">
+<rect x="995" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1022.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">27</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-29" data-part="key-29" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 29"><title>Key 29</title><g aria-hidden="true">
+<rect x="1050" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1077.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">29</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-30" data-part="key-30" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 30"><title>Key 30</title><g aria-hidden="true">
+<rect x="1105" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1132.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">30</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-32" data-part="key-32" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 32"><title>Key 32</title><g aria-hidden="true">
+<rect x="1160" y="225" width="55" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1187.5" y="491" fill="currentColor" stroke="none" font-size="9" text-anchor="middle">32</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="207.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="262.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="372.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="427.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="482.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="592.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="647.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="757.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="812.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="867.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-26" data-part="key-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 26"><title>Key 26</title><g aria-hidden="true">
+<rect x="977.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-28" data-part="key-28" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 28"><title>Key 28</title><g aria-hidden="true">
+<rect x="1032.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+<g id="arturia-keystep-interface--key-31" data-part="key-31" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 31"><title>Key 31</title><g aria-hidden="true">
+<rect x="1142.95" y="225" width="34.1" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+</g>
+</g>
+<g id="arturia-keystep-interface--midi-only" data-region="midi-only" aria-label="MIDI-only controls">
+<rect x="25" y="530" width="1200" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="544" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MIDI ONLY / no dedicated panel control</text>
+<g id="arturia-keystep-interface--midi-aftertouch" data-part="midi-aftertouch" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Channel aftertouch"><title>Channel aftertouch</title><g aria-hidden="true">
+<circle cx="325" cy="564.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M325 557.72L325 560.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="325" y="594" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Channel aftertouch</text>
+</g>
+</g>
+<g id="arturia-keystep-interface--midi-sustain" data-part="midi-sustain" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="Sustain pedal"><title>Sustain pedal</title><g aria-hidden="true">
+<rect x="913.715" y="553" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="925" y="594" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Sustain pedal</text>
+</g>
 </g>
 </g>
 </svg>

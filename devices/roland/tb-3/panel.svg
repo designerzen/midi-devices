@@ -1,75 +1,135 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 850" role="img" aria-labelledby="title description">
-<title id="title">Roland TB-3 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1050" height="850" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1032" height="832" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland TB-3</text>
-<text x="1025" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="1000" height="145" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="sound-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="129.8" cy="141.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M129.8 119.285L129.8 132.535" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 940" role="group" aria-labelledby="roland-tb-3-panel--title" aria-describedby="roland-tb-3-panel--description" data-device="roland-tb-3" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-tb-3-panel--title">Roland TB-3 overhead hardware diagram</title><desc id="roland-tb-3-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-tb-3-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1032" height="922" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland TB-3</text>
+<text x="1025" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="1000" height="145" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="225" width="1000" height="100" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="340" width="760" height="450" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="800" y="340" width="225" height="450" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sound-cutoff" data-kind="knob" aria-label="Cutoff" data-control="cutoff"><title>Cutoff</title>
-<circle cx="327.4" cy="141.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M327.4 119.285L327.4 132.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-tb-3-panel--sound-volume" data-part="sound-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Volume"><title>SOUND: Volume</title><g aria-hidden="true">
+<circle cx="129.8" cy="141.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M129.8 119.285L129.8 132.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sound-resonance" data-kind="knob" aria-label="Resonance" data-control="resonance"><title>Resonance</title>
-<circle cx="525" cy="141.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M525 119.285L525 132.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-tb-3-panel--surface--sound-volume" data-surface-control="sound-volume" aria-hidden="true"><rect x="31" y="95" width="197.6" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sound-accent" data-kind="knob" aria-label="Accent" data-control="accent"><title>Accent</title>
-<circle cx="722.6" cy="141.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M722.6 119.285L722.6 132.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-tb-3-panel--sound-cutoff" data-part="sound-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Cutoff"><title>SOUND: Cutoff</title><g aria-hidden="true">
+<circle cx="327.4" cy="141.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M327.4 119.285L327.4 132.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sound-effect" data-kind="knob" aria-label="Effect" data-control="effect"><title>Effect</title>
-<circle cx="920.2" cy="141.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M920.2 119.285L920.2 132.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-tb-3-panel--surface--cutoff" data-surface-control="cutoff" aria-hidden="true"><rect x="228.6" y="95" width="197.6" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="25" y="225" width="1000" height="100" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="modes-keyboard" data-kind="button" aria-label="Keyboard"><title>Keyboard</title>
-<rect x="114.8" y="263.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--sound-resonance" data-part="sound-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Resonance"><title>SOUND: Resonance</title><g aria-hidden="true">
+<circle cx="525" cy="141.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M525 119.285L525 132.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="modes-xy-play" data-kind="button" aria-label="XY Play"><title>XY Play</title>
-<rect x="312.4" y="263.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--surface--resonance" data-surface-control="resonance" aria-hidden="true"><rect x="426.2" y="95" width="197.6" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="modes-env-mod" data-kind="button" aria-label="Env mod"><title>Env mod</title>
-<rect x="510" y="263.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--sound-accent" data-part="sound-accent" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Accent"><title>SOUND: Accent</title><g aria-hidden="true">
+<circle cx="722.6" cy="141.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M722.6 119.285L722.6 132.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="modes-pattern-select" data-kind="button" aria-label="Pattern select"><title>Pattern select</title>
-<rect x="707.6" y="263.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--surface--accent" data-surface-control="accent" aria-hidden="true"><rect x="623.8" y="95" width="197.6" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="modes-scatter" data-kind="button" aria-label="Scatter"><title>Scatter</title>
-<rect x="905.2" y="263.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--sound-effect" data-part="sound-effect" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Effect"><title>SOUND: Effect</title><g aria-hidden="true">
+<circle cx="920.2" cy="141.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M920.2 119.285L920.2 132.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="25" y="340" width="760" height="450" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="touchpad-pressure-sensitive-xy-pad" data-kind="xy" aria-label="Pressure-sensitive XY pad"><title>Pressure-sensitive XY pad</title>
-<rect x="238.583" y="402.368" width="332.834" height="332.834" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="9"/>
-<path d="M305.15 568.785L504.85 568.785" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M405 468.935L405 668.635" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-tb-3-panel--surface--effect" data-surface-control="effect" aria-hidden="true"><rect x="821.4" y="95" width="197.6" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="800" y="340" width="225" height="450" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="tempo-seq-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="811" y="375" width="96.5" height="76.32" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="815" y="379" width="88.5" height="68.32" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-tb-3-panel--modes-keyboard" data-part="modes-keyboard" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Keyboard"><title>MODES: Keyboard</title><g aria-hidden="true">
+<rect x="114.8" y="263.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="tempo-seq-value" data-kind="knob" aria-label="Value"><title>Value</title>
-<circle cx="965.75" cy="413.16" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M965.75 391.16L965.75 404.41" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-tb-3-panel--surface--modes-keyboard" data-surface-control="modes-keyboard" aria-hidden="true"><rect x="31" y="255" width="197.6" height="65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="tempo-seq-tempo" data-kind="button" aria-label="Tempo"><title>Tempo</title>
-<rect x="844.25" y="501.91" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--modes-xy-play" data-part="modes-xy-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: XY Play"><title>MODES: XY Play</title><g aria-hidden="true">
+<rect x="312.4" y="263.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="tempo-seq-start-stop" data-kind="button" aria-label="Start / Stop"><title>Start / Stop</title>
-<rect x="950.75" y="501.91" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--surface--modes-xy-play" data-surface-control="modes-xy-play" aria-hidden="true"><rect x="228.6" y="255" width="197.6" height="65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="tempo-seq-record" data-kind="button" aria-label="Record"><title>Record</title>
-<rect x="844.25" y="605.66" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--modes-env-mod" data-part="modes-env-mod" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Env mod"><title>MODES: Env mod</title><g aria-hidden="true">
+<rect x="510" y="263.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="tempo-seq-step-rec" data-kind="button" aria-label="Step rec"><title>Step rec</title>
-<rect x="950.75" y="605.66" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--surface--modes-env-mod" data-surface-control="modes-env-mod" aria-hidden="true"><rect x="426.2" y="255" width="197.6" height="65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="tempo-seq-realtime-rec" data-kind="button" aria-label="Realtime rec"><title>Realtime rec</title>
-<rect x="844.25" y="709.41" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="roland-tb-3-panel--modes-pattern-select" data-part="modes-pattern-select" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Pattern select"><title>MODES: Pattern select</title><g aria-hidden="true">
+<rect x="707.6" y="263.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-tb-3-panel--surface--control-pattern-slide" data-surface-control="control-pattern-slide" aria-hidden="true"><rect x="623.8" y="255" width="98.8" height="65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--control-pattern-accent" data-surface-control="control-pattern-accent" aria-hidden="true"><rect x="722.6" y="255" width="98.8" height="65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--modes-scatter" data-part="modes-scatter" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Scatter"><title>MODES: Scatter</title><g aria-hidden="true">
+<rect x="905.2" y="263.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-tb-3-panel--surface--modes-scatter" data-surface-control="modes-scatter" aria-hidden="true"><rect x="821.4" y="255" width="197.6" height="65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--touchpad-pressure-sensitive-xy-pad" data-part="touchpad-pressure-sensitive-xy-pad" data-kind="xy" role="group" aria-roledescription="touch pad" aria-label="TOUCHPAD: Pressure-sensitive XY pad"><title>TOUCHPAD: Pressure-sensitive XY pad</title><g aria-hidden="true">
+<rect x="238.583" y="402.368" width="332.834" height="332.834" rx="9" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M305.15 568.785L504.85 568.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M405 468.935L405 668.635" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-tb-3-panel--surface--touch-note-0" data-surface-control="touch-note-0" aria-hidden="true"><rect x="31" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-1" data-surface-control="touch-note-1" aria-hidden="true"><rect x="105.8" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-2" data-surface-control="touch-note-2" aria-hidden="true"><rect x="180.6" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-3" data-surface-control="touch-note-3" aria-hidden="true"><rect x="255.4" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-4" data-surface-control="touch-note-4" aria-hidden="true"><rect x="330.2" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-5" data-surface-control="touch-note-5" aria-hidden="true"><rect x="405" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-6" data-surface-control="touch-note-6" aria-hidden="true"><rect x="479.8" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-7" data-surface-control="touch-note-7" aria-hidden="true"><rect x="554.6" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-8" data-surface-control="touch-note-8" aria-hidden="true"><rect x="629.4" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--touch-note-9" data-surface-control="touch-note-9" aria-hidden="true"><rect x="704.2" y="598.25" width="74.8" height="186.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--control-pad-z" data-surface-control="control-pad-z" aria-hidden="true"><rect x="180.6" y="370" width="149.6" height="207.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--control-pad-y" data-surface-control="control-pad-y" aria-hidden="true"><rect x="31" y="370" width="149.6" height="207.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--control-env-x" data-surface-control="control-env-x" aria-hidden="true"><rect x="479.8" y="370" width="149.6" height="207.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--control-env-y" data-surface-control="control-env-y" aria-hidden="true"><rect x="629.4" y="370" width="149.6" height="207.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="roland-tb-3-panel--surface--control-pitch-bend" data-surface-control="control-pitch-bend" aria-hidden="true"><rect x="330.2" y="370" width="149.6" height="207.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--tempo-seq-display" data-part="tempo-seq-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="TEMPO / SEQ: Display"><title>TEMPO / SEQ: Display</title><g aria-hidden="true">
+<rect x="811" y="375" width="96.5" height="76.32" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="815" y="379" width="88.5" height="68.32" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+</g>
+<g id="roland-tb-3-panel--tempo-seq-value" data-part="tempo-seq-value" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="TEMPO / SEQ: Value"><title>TEMPO / SEQ: Value</title><g aria-hidden="true">
+<circle cx="965.75" cy="413.16" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M965.75 391.16L965.75 404.41" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-tb-3-panel--surface--tempo-seq-value" data-surface-control="tempo-seq-value" aria-hidden="true"><rect x="912.5" y="370" width="106.5" height="103.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--tempo-seq-tempo" data-part="tempo-seq-tempo" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / SEQ: Tempo"><title>TEMPO / SEQ: Tempo</title><g aria-hidden="true">
+<rect x="844.25" y="501.91" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-tb-3-panel--surface--tempo-seq-tempo" data-surface-control="tempo-seq-tempo" aria-hidden="true"><rect x="806" y="473.75" width="106.5" height="103.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--tempo-seq-start-stop" data-part="tempo-seq-start-stop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / SEQ: Start / Stop"><title>TEMPO / SEQ: Start / Stop</title><g aria-hidden="true">
+<rect x="950.75" y="501.91" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-tb-3-panel--surface--tempo-seq-start-stop" data-surface-control="tempo-seq-start-stop" aria-hidden="true"><rect x="912.5" y="473.75" width="106.5" height="103.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--tempo-seq-record" data-part="tempo-seq-record" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / SEQ: Record"><title>TEMPO / SEQ: Record</title><g aria-hidden="true">
+<rect x="844.25" y="605.66" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-tb-3-panel--surface--tempo-seq-record" data-surface-control="tempo-seq-record" aria-hidden="true"><rect x="806" y="577.5" width="106.5" height="103.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--tempo-seq-step-rec" data-part="tempo-seq-step-rec" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / SEQ: Step rec"><title>TEMPO / SEQ: Step rec</title><g aria-hidden="true">
+<rect x="950.75" y="605.66" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-tb-3-panel--surface--tempo-seq-step-rec" data-surface-control="tempo-seq-step-rec" aria-hidden="true"><rect x="912.5" y="577.5" width="106.5" height="103.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--tempo-seq-realtime-rec" data-part="tempo-seq-realtime-rec" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / SEQ: Realtime rec"><title>TEMPO / SEQ: Realtime rec</title><g aria-hidden="true">
+<rect x="844.25" y="709.41" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-tb-3-panel--surface--tempo-seq-realtime-rec" data-surface-control="tempo-seq-realtime-rec" aria-hidden="true"><rect x="806" y="681.25" width="106.5" height="103.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-tb-3-panel--midi-only" data-region="midi-only" aria-label="MIDI-only controls">
+<rect x="25" y="840" width="1000" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="roland-tb-3-panel--midi-control-tuning" data-part="midi-control-tuning" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Tuning"><title>Tuning</title><g aria-hidden="true">
+<circle cx="525" cy="874.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M525 867.72L525 870.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-tb-3-panel--surface--control-tuning" data-surface-control="control-tuning" aria-hidden="true"><rect x="25" y="858" width="1000" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
 </g>
 </svg>

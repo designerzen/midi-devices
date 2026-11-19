@@ -1,202 +1,243 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
-<title id="title">Korg volca nubass labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1200" height="720" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1182" height="702" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Korg volca nubass</text>
-<text x="1175" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="60" width="1150" height="65" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="74" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">TOP CONNECTIONS</text>
-<g id="top-connections-dc-9v" data-kind="jack" aria-label="DC 9V"><title>DC 9V</title>
-<circle cx="144.8" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="144.8" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="144.8" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">DC 9V</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="group" aria-labelledby="korg-volca-nubass-interface--title" aria-describedby="korg-volca-nubass-interface--description" data-device="korg-volca-nubass" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="korg-volca-nubass-interface--title">Korg volca nubass labelled interface</title><desc id="korg-volca-nubass-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="korg-volca-nubass-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1182" height="702" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Korg volca nubass</text>
+<text x="1175" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="60" width="1150" height="65" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="74" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">TOP CONNECTIONS</text>
+<rect x="25" y="130" width="170" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MASTER</text>
+<rect x="210" y="130" width="232.5" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="217" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">VTO</text>
+<rect x="452.5" y="130" width="232.5" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="459.5" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">VCF</text>
+<rect x="695" y="130" width="232.5" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="702" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
+<rect x="937.5" y="130" width="232.5" height="370" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="944.5" y="144" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">DRIVE</text>
+<rect x="25" y="525" width="1150" height="140" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="539" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">TOUCH KEYBOARD / STEPS</text>
 </g>
-<g id="top-connections-midi-in" data-kind="jack" aria-label="MIDI IN"><title>MIDI IN</title>
-<circle cx="372.4" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="372.4" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="372.4" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">MIDI IN</text>
+<g id="korg-volca-nubass-interface--top-connections-dc-9v" data-part="top-connections-dc-9v" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: DC 9V"><title>TOP CONNECTIONS: DC 9V</title><g aria-hidden="true">
+<circle cx="144.8" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="144.8" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="144.8" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">DC 9V</text>
 </g>
-<g id="top-connections-sync-in" data-kind="jack" aria-label="Sync IN"><title>Sync IN</title>
-<circle cx="600" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="600" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="600" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sync IN</text>
 </g>
-<g id="top-connections-sync-out" data-kind="jack" aria-label="Sync OUT"><title>Sync OUT</title>
-<circle cx="827.6" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="827.6" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="827.6" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Sync OUT</text>
+<g id="korg-volca-nubass-interface--top-connections-midi-in" data-part="top-connections-midi-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: MIDI IN"><title>TOP CONNECTIONS: MIDI IN</title><g aria-hidden="true">
+<circle cx="372.4" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="372.4" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="372.4" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">MIDI IN</text>
 </g>
-<g id="top-connections-headphones" data-kind="jack" aria-label="Headphones"><title>Headphones</title>
-<circle cx="1055.2" cy="97" r="2.4" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="1055.2" cy="97" r="1.12" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="1055.2" y="116" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Headphones</text>
 </g>
-<rect x="25" y="130" width="170" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MASTER</text>
-<g id="master-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="70.5" cy="207.118" r="19.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M70.5 190.368L70.5 200.206" fill="none" stroke="#000" stroke-width="1"/>
-<text x="70.5" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Volume</text>
+<g id="korg-volca-nubass-interface--top-connections-sync-in" data-part="top-connections-sync-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Sync IN"><title>TOP CONNECTIONS: Sync IN</title><g aria-hidden="true">
+<circle cx="600" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="600" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="600" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Sync IN</text>
 </g>
-<g id="master-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="149.5" cy="207.118" r="19.75" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M149.5 190.368L149.5 200.206" fill="none" stroke="#000" stroke-width="1"/>
-<text x="149.5" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tempo</text>
 </g>
-<g id="master-memory" data-kind="button" aria-label="Memory"><title>Memory</title>
-<rect x="55.5" y="303.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="70.5" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Memory</text>
+<g id="korg-volca-nubass-interface--top-connections-sync-out" data-part="top-connections-sync-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Sync OUT"><title>TOP CONNECTIONS: Sync OUT</title><g aria-hidden="true">
+<circle cx="827.6" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="827.6" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="827.6" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Sync OUT</text>
 </g>
-<g id="master-play" data-kind="button" aria-label="Play"><title>Play</title>
-<rect x="134.5" y="303.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="149.5" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Play</text>
 </g>
-<g id="master-record" data-kind="button" aria-label="Record"><title>Record</title>
-<rect x="55.5" y="415.452" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="70.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Record</text>
+<g id="korg-volca-nubass-interface--top-connections-headphones" data-part="top-connections-headphones" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Headphones"><title>TOP CONNECTIONS: Headphones</title><g aria-hidden="true">
+<circle cx="1055.2" cy="97" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="1055.2" cy="97" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1055.2" y="116" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Headphones</text>
 </g>
-<g id="master-function" data-kind="button" aria-label="Function"><title>Function</title>
-<rect x="134.5" y="415.452" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="149.5" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function</text>
 </g>
-<rect x="210" y="130" width="232.5" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="217" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VTO</text>
-<g id="vto-pitch" data-kind="knob" aria-label="Pitch" data-control="vto-pitch-knob"><title>Pitch</title>
-<circle cx="326.25" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M326.25 185.118L326.25 198.368" fill="none" stroke="#000" stroke-width="1"/>
-<text x="326.25" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pitch</text>
+<g id="korg-volca-nubass-interface--master-volume" data-part="master-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER: Volume"><title>MASTER: Volume</title><g aria-hidden="true">
+<circle cx="70.5" cy="207.118" r="19.75" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M70.5 190.368L70.5 200.206" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="70.5" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Volume</text>
 </g>
-<g id="vto-saturation" data-kind="knob" aria-label="Saturation" data-control="vto-saturation-knob"><title>Saturation</title>
-<circle cx="326.25" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M326.25 296.785L326.25 310.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="326.25" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Saturation</text>
 </g>
-<g id="vto-level" data-kind="knob" aria-label="Level" data-control="vto-level-knob"><title>Level</title>
-<circle cx="326.25" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M326.25 408.452L326.25 421.702" fill="none" stroke="#000" stroke-width="1"/>
-<text x="326.25" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Level</text>
+<g id="korg-volca-nubass-interface--master-tempo" data-part="master-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER: Tempo"><title>MASTER: Tempo</title><g aria-hidden="true">
+<circle cx="149.5" cy="207.118" r="19.75" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M149.5 190.368L149.5 200.206" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="149.5" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tempo</text>
 </g>
-<rect x="452.5" y="130" width="232.5" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="459.5" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">VCF</text>
-<g id="vcf-cutoff" data-kind="knob" aria-label="Cutoff" data-control="vcf-cutoff-knob"><title>Cutoff</title>
-<circle cx="513.625" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M513.625 185.118L513.625 198.368" fill="none" stroke="#000" stroke-width="1"/>
-<text x="513.625" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Cutoff</text>
 </g>
-<g id="vcf-peak" data-kind="knob" aria-label="Peak" data-control="vcf-peak-knob"><title>Peak</title>
-<circle cx="623.875" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M623.875 185.118L623.875 198.368" fill="none" stroke="#000" stroke-width="1"/>
-<text x="623.875" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Peak</text>
+<g id="korg-volca-nubass-interface--master-memory" data-part="master-memory" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER: Memory"><title>MASTER: Memory</title><g aria-hidden="true">
+<rect x="55.5" y="303.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="70.5" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Memory</text>
 </g>
-<g id="vcf-attack" data-kind="knob" aria-label="Attack" data-control="vcf-attack-knob"><title>Attack</title>
-<circle cx="513.625" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M513.625 296.785L513.625 310.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="513.625" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Attack</text>
 </g>
-<g id="vcf-decay" data-kind="knob" aria-label="Decay" data-control="vcf-decay-knob"><title>Decay</title>
-<circle cx="623.875" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M623.875 296.785L623.875 310.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="623.875" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Decay</text>
+<g id="korg-volca-nubass-interface--master-play" data-part="master-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER: Play"><title>MASTER: Play</title><g aria-hidden="true">
+<rect x="134.5" y="303.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="149.5" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Play</text>
 </g>
-<g id="vcf-eg-intensity" data-kind="knob" aria-label="EG intensity" data-control="vcf-eg-intensity-knob"><title>EG intensity</title>
-<circle cx="513.625" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M513.625 408.452L513.625 421.702" fill="none" stroke="#000" stroke-width="1"/>
-<text x="513.625" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG intensity</text>
 </g>
-<rect x="695" y="130" width="232.5" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="702" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">LFO</text>
-<g id="lfo-rate" data-kind="knob" aria-label="Rate" data-control="lfo-rate-knob"><title>Rate</title>
-<circle cx="811.25" cy="235.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M811.25 213.035L811.25 226.285" fill="none" stroke="#000" stroke-width="1"/>
-<text x="811.25" y="323.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Rate</text>
+<g id="korg-volca-nubass-interface--master-record" data-part="master-record" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER: Record"><title>MASTER: Record</title><g aria-hidden="true">
+<rect x="55.5" y="415.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="70.5" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Record</text>
 </g>
-<g id="lfo-intensity" data-kind="knob" aria-label="Intensity" data-control="lfo-intensity-knob"><title>Intensity</title>
-<circle cx="811.25" cy="402.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M811.25 380.535L811.25 393.785" fill="none" stroke="#000" stroke-width="1"/>
-<text x="811.25" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Intensity</text>
 </g>
-<rect x="937.5" y="130" width="232.5" height="370" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="944.5" y="144" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">DRIVE</text>
-<g id="drive-drive" data-kind="knob" aria-label="Drive"><title>Drive</title>
-<circle cx="1053.75" cy="207.118" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1053.75 185.118L1053.75 198.368" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1053.75" y="267.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Drive</text>
+<g id="korg-volca-nubass-interface--master-function" data-part="master-function" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER: Function"><title>MASTER: Function</title><g aria-hidden="true">
+<rect x="134.5" y="415.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="149.5" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function</text>
 </g>
-<g id="drive-tone" data-kind="knob" aria-label="Tone"><title>Tone</title>
-<circle cx="1053.75" cy="318.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1053.75 296.785L1053.75 310.035" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1053.75" y="379.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tone</text>
 </g>
-<g id="drive-accent" data-kind="knob" aria-label="Accent" data-control="drive-accent-knob"><title>Accent</title>
-<circle cx="1053.75" cy="430.452" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1053.75 408.452L1053.75 421.702" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1053.75" y="491" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Accent</text>
+<g id="korg-volca-nubass-interface--vto-pitch" data-part="vto-pitch" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VTO: Pitch"><title>VTO: Pitch</title><g aria-hidden="true">
+<circle cx="326.25" cy="207.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M326.25 185.118L326.25 198.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="326.25" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pitch</text>
 </g>
-<rect x="25" y="525" width="1150" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="539" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">TOUCH KEYBOARD / STEPS</text>
-<g id="touch-keyboard-steps-1" data-kind="key" aria-label="1"><title>1</title>
-<rect x="37" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="66.562" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">1</text>
 </g>
-<g id="touch-keyboard-steps-2" data-kind="key" aria-label="2"><title>2</title>
-<rect x="108.125" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="137.688" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">2</text>
+<g id="korg-volca-nubass-interface--vto-saturation" data-part="vto-saturation" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VTO: Saturation"><title>VTO: Saturation</title><g aria-hidden="true">
+<circle cx="326.25" cy="318.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M326.25 296.785L326.25 310.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="326.25" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Saturation</text>
 </g>
-<g id="touch-keyboard-steps-3" data-kind="key" aria-label="3"><title>3</title>
-<rect x="179.25" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="208.812" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">3</text>
 </g>
-<g id="touch-keyboard-steps-4" data-kind="key" aria-label="4"><title>4</title>
-<rect x="250.375" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="279.938" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">4</text>
+<g id="korg-volca-nubass-interface--vto-level" data-part="vto-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VTO: Level"><title>VTO: Level</title><g aria-hidden="true">
+<circle cx="326.25" cy="430.452" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M326.25 408.452L326.25 421.702" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="326.25" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Level</text>
 </g>
-<g id="touch-keyboard-steps-5" data-kind="key" aria-label="5"><title>5</title>
-<rect x="321.5" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="351.062" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">5</text>
 </g>
-<g id="touch-keyboard-steps-6" data-kind="key" aria-label="6"><title>6</title>
-<rect x="392.625" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="422.188" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">6</text>
+<g id="korg-volca-nubass-interface--vcf-cutoff" data-part="vcf-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF: Cutoff"><title>VCF: Cutoff</title><g aria-hidden="true">
+<circle cx="513.625" cy="207.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M513.625 185.118L513.625 198.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="513.625" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Cutoff</text>
 </g>
-<g id="touch-keyboard-steps-7" data-kind="key" aria-label="7"><title>7</title>
-<rect x="463.75" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="493.312" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">7</text>
 </g>
-<g id="touch-keyboard-steps-8" data-kind="key" aria-label="8"><title>8</title>
-<rect x="534.875" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="564.438" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">8</text>
+<g id="korg-volca-nubass-interface--vcf-peak" data-part="vcf-peak" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF: Peak"><title>VCF: Peak</title><g aria-hidden="true">
+<circle cx="623.875" cy="207.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M623.875 185.118L623.875 198.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="623.875" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Peak</text>
 </g>
-<g id="touch-keyboard-steps-9" data-kind="key" aria-label="9"><title>9</title>
-<rect x="606" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="635.562" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">9</text>
 </g>
-<g id="touch-keyboard-steps-10" data-kind="key" aria-label="10"><title>10</title>
-<rect x="677.125" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="706.688" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">10</text>
+<g id="korg-volca-nubass-interface--vcf-attack" data-part="vcf-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF: Attack"><title>VCF: Attack</title><g aria-hidden="true">
+<circle cx="513.625" cy="318.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M513.625 296.785L513.625 310.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="513.625" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Attack</text>
 </g>
-<g id="touch-keyboard-steps-11" data-kind="key" aria-label="11"><title>11</title>
-<rect x="748.25" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="777.812" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">11</text>
 </g>
-<g id="touch-keyboard-steps-12" data-kind="key" aria-label="12"><title>12</title>
-<rect x="819.375" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="848.938" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">12</text>
+<g id="korg-volca-nubass-interface--vcf-decay" data-part="vcf-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF: Decay"><title>VCF: Decay</title><g aria-hidden="true">
+<circle cx="623.875" cy="318.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M623.875 296.785L623.875 310.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="623.875" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Decay</text>
 </g>
-<g id="touch-keyboard-steps-13" data-kind="key" aria-label="13"><title>13</title>
-<rect x="890.5" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="920.062" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">13</text>
 </g>
-<g id="touch-keyboard-steps-14" data-kind="key" aria-label="14"><title>14</title>
-<rect x="961.625" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="991.188" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">14</text>
+<g id="korg-volca-nubass-interface--vcf-eg-intensity" data-part="vcf-eg-intensity" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCF: EG intensity"><title>VCF: EG intensity</title><g aria-hidden="true">
+<circle cx="513.625" cy="430.452" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M513.625 408.452L513.625 421.702" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="513.625" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">EG intensity</text>
 </g>
-<g id="touch-keyboard-steps-15" data-kind="key" aria-label="15"><title>15</title>
-<rect x="1032.75" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1062.312" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">15</text>
 </g>
-<g id="touch-keyboard-steps-16" data-kind="key" aria-label="16"><title>16</title>
-<rect x="1103.875" y="569.812" width="59.125" height="59.125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1133.438" y="656" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.957500000000001" text-anchor="middle">16</text>
+<g id="korg-volca-nubass-interface--lfo-rate" data-part="lfo-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Rate"><title>LFO: Rate</title><g aria-hidden="true">
+<circle cx="811.25" cy="235.035" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M811.25 213.035L811.25 226.285" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="811.25" y="323.5" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Rate</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--lfo-intensity" data-part="lfo-intensity" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Intensity"><title>LFO: Intensity</title><g aria-hidden="true">
+<circle cx="811.25" cy="402.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M811.25 380.535L811.25 393.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="811.25" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Intensity</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--drive-drive" data-part="drive-drive" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DRIVE: Drive"><title>DRIVE: Drive</title><g aria-hidden="true">
+<circle cx="1053.75" cy="207.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1053.75 185.118L1053.75 198.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1053.75" y="267.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Drive</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--drive-tone" data-part="drive-tone" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DRIVE: Tone"><title>DRIVE: Tone</title><g aria-hidden="true">
+<circle cx="1053.75" cy="318.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1053.75 296.785L1053.75 310.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1053.75" y="379.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tone</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--drive-accent" data-part="drive-accent" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DRIVE: Accent"><title>DRIVE: Accent</title><g aria-hidden="true">
+<circle cx="1053.75" cy="430.452" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1053.75 408.452L1053.75 421.702" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1053.75" y="491" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Accent</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-1" data-part="touch-keyboard-steps-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 1"><title>TOUCH KEYBOARD / STEPS: 1</title><g aria-hidden="true">
+<rect x="37" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="66.562" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">1</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-2" data-part="touch-keyboard-steps-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 2"><title>TOUCH KEYBOARD / STEPS: 2</title><g aria-hidden="true">
+<rect x="108.125" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="137.688" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">2</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-3" data-part="touch-keyboard-steps-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 3"><title>TOUCH KEYBOARD / STEPS: 3</title><g aria-hidden="true">
+<rect x="179.25" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="208.812" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">3</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-4" data-part="touch-keyboard-steps-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 4"><title>TOUCH KEYBOARD / STEPS: 4</title><g aria-hidden="true">
+<rect x="250.375" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="279.938" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">4</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-5" data-part="touch-keyboard-steps-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 5"><title>TOUCH KEYBOARD / STEPS: 5</title><g aria-hidden="true">
+<rect x="321.5" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="351.062" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">5</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-6" data-part="touch-keyboard-steps-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 6"><title>TOUCH KEYBOARD / STEPS: 6</title><g aria-hidden="true">
+<rect x="392.625" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="422.188" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">6</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-7" data-part="touch-keyboard-steps-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 7"><title>TOUCH KEYBOARD / STEPS: 7</title><g aria-hidden="true">
+<rect x="463.75" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="493.312" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">7</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-8" data-part="touch-keyboard-steps-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 8"><title>TOUCH KEYBOARD / STEPS: 8</title><g aria-hidden="true">
+<rect x="534.875" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="564.438" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">8</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-9" data-part="touch-keyboard-steps-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 9"><title>TOUCH KEYBOARD / STEPS: 9</title><g aria-hidden="true">
+<rect x="606" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="635.562" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">9</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-10" data-part="touch-keyboard-steps-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 10"><title>TOUCH KEYBOARD / STEPS: 10</title><g aria-hidden="true">
+<rect x="677.125" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="706.688" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">10</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-11" data-part="touch-keyboard-steps-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 11"><title>TOUCH KEYBOARD / STEPS: 11</title><g aria-hidden="true">
+<rect x="748.25" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="777.812" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">11</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-12" data-part="touch-keyboard-steps-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 12"><title>TOUCH KEYBOARD / STEPS: 12</title><g aria-hidden="true">
+<rect x="819.375" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="848.938" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">12</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-13" data-part="touch-keyboard-steps-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 13"><title>TOUCH KEYBOARD / STEPS: 13</title><g aria-hidden="true">
+<rect x="890.5" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="920.062" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">13</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-14" data-part="touch-keyboard-steps-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 14"><title>TOUCH KEYBOARD / STEPS: 14</title><g aria-hidden="true">
+<rect x="961.625" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="991.188" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">14</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-15" data-part="touch-keyboard-steps-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 15"><title>TOUCH KEYBOARD / STEPS: 15</title><g aria-hidden="true">
+<rect x="1032.75" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1062.312" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">15</text>
+</g>
+</g>
+<g id="korg-volca-nubass-interface--touch-keyboard-steps-16" data-part="touch-keyboard-steps-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="TOUCH KEYBOARD / STEPS: 16"><title>TOUCH KEYBOARD / STEPS: 16</title><g aria-hidden="true">
+<rect x="1103.875" y="569.812" width="59.125" height="59.125" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1133.438" y="656" fill="currentColor" stroke="none" font-size="9.957500000000001" text-anchor="middle">16</text>
+</g>
 </g>
 </svg>

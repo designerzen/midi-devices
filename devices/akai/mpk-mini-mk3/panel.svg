@@ -1,180 +1,285 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 735" role="img" aria-labelledby="title description">
-<title id="title">Akai MPK mini mk3 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="735" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="717" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Akai MPK mini mk3</text>
-<text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="110" height="575" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="performance-joystick" data-kind="xy" aria-label="Joystick"><title>Joystick</title>
-<rect x="57.172" y="102.028" width="45.656" height="45.656" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="9"/>
-<path d="M66.303 124.856L93.697 124.856" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M80 111.16L80 138.553" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 735" role="group" aria-labelledby="akai-mpk-mini-mk3-panel--title" aria-describedby="akai-mpk-mini-mk3-panel--description" data-device="akai-mpk-mini-mk3" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="akai-mpk-mini-mk3-panel--title">Akai MPK mini mk3 overhead hardware diagram</title><desc id="akai-mpk-mini-mk3-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="akai-mpk-mini-mk3-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1232" height="717" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Akai MPK mini mk3</text>
+<text x="1225" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="110" height="575" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="150" y="65" width="470" height="250" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="635" y="65" width="580" height="250" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="150" y="325" width="1065" height="85" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="65" y="186.999" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--performance-joystick" data-part="performance-joystick" data-kind="xy" role="group" aria-roledescription="touch pad" aria-label="PERFORMANCE: Joystick"><title>PERFORMANCE: Joystick</title><g aria-hidden="true">
+<rect x="57.172" y="102.028" width="45.656" height="45.656" rx="9" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M66.303 124.856L93.697 124.856" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M80 111.16L80 138.553" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="65" y="264.142" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--fixed-pitch-bend" data-surface-control="fixed-pitch-bend" aria-hidden="true"><rect x="31" y="95" width="98" height="77.1429" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-arp-on-off" data-kind="button" aria-label="Arp on/off"><title>Arp on/off</title>
-<rect x="65" y="341.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--performance-octave" data-part="performance-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave -"><title>PERFORMANCE: Octave -</title><g aria-hidden="true">
+<rect x="65" y="186.999" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-tap-tempo" data-kind="button" aria-label="Tap tempo"><title>Tap tempo</title>
-<rect x="65" y="418.428" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--performance-octave" data-surface-control="performance-octave" aria-hidden="true"><rect x="31" y="172.1429" width="98" height="77.1429" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-full-level" data-kind="button" aria-label="Full level"><title>Full level</title>
-<rect x="65" y="495.571" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--performance-octave-2" data-part="performance-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave +"><title>PERFORMANCE: Octave +</title><g aria-hidden="true">
+<rect x="65" y="264.142" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-note-repeat" data-kind="button" aria-label="Note repeat"><title>Note repeat</title>
-<rect x="65" y="572.714" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--performance-octave-2" data-surface-control="performance-octave-2" aria-hidden="true"><rect x="31" y="249.2857" width="98" height="77.1429" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="150" y="65" width="470" height="250" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="pads-pad-1" data-kind="pad" aria-label="Pad 1"><title>Pad 1</title>
-<rect x="173.215" y="100" width="80.07" height="80.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--performance-arp-on-off" data-part="performance-arp-on-off" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Arp on/off"><title>PERFORMANCE: Arp on/off</title><g aria-hidden="true">
+<rect x="65" y="341.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="pads-pad-2" data-kind="pad" aria-label="Pad 2"><title>Pad 2</title>
-<rect x="287.715" y="100" width="80.07" height="80.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--performance-arp-on-off" data-surface-control="performance-arp-on-off" aria-hidden="true"><rect x="31" y="326.4286" width="98" height="77.1429" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-3" data-kind="pad" aria-label="Pad 3"><title>Pad 3</title>
-<rect x="402.215" y="100" width="80.07" height="80.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--performance-tap-tempo" data-part="performance-tap-tempo" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Tap tempo"><title>PERFORMANCE: Tap tempo</title><g aria-hidden="true">
+<rect x="65" y="418.428" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="pads-pad-4" data-kind="pad" aria-label="Pad 4"><title>Pad 4</title>
-<rect x="516.715" y="100" width="80.07" height="80.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--performance-tap-tempo" data-surface-control="performance-tap-tempo" aria-hidden="true"><rect x="31" y="403.5714" width="98" height="77.1429" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-5" data-kind="pad" aria-label="Pad 5"><title>Pad 5</title>
-<rect x="173.215" y="207.5" width="80.07" height="80.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--performance-full-level" data-part="performance-full-level" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Full level"><title>PERFORMANCE: Full level</title><g aria-hidden="true">
+<rect x="65" y="495.571" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="pads-pad-6" data-kind="pad" aria-label="Pad 6"><title>Pad 6</title>
-<rect x="287.715" y="207.5" width="80.07" height="80.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--performance-full-level" data-surface-control="performance-full-level" aria-hidden="true"><rect x="31" y="480.7143" width="98" height="77.1429" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-7" data-kind="pad" aria-label="Pad 7"><title>Pad 7</title>
-<rect x="402.215" y="207.5" width="80.07" height="80.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--performance-note-repeat" data-part="performance-note-repeat" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Note repeat"><title>PERFORMANCE: Note repeat</title><g aria-hidden="true">
+<rect x="65" y="572.714" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="pads-pad-8" data-kind="pad" aria-label="Pad 8"><title>Pad 8</title>
-<rect x="516.715" y="207.5" width="80.07" height="80.07" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--performance-note-repeat" data-surface-control="performance-note-repeat" aria-hidden="true"><rect x="31" y="557.8571" width="98" height="77.1429" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="635" y="65" width="580" height="250" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="knobs-knob-1" data-kind="knob" aria-label="Knob 1"><title>Knob 1</title>
-<circle cx="712" cy="140.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M712 118.035L712 131.285" fill="none" stroke="#000" stroke-width="1"/>
+<g id="akai-mpk-mini-mk3-panel--pads-pad-1" data-part="pads-pad-1" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 1"><title>PADS: Pad 1</title><g aria-hidden="true">
+<rect x="173.215" y="100" width="80.07" height="80.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="knobs-knob-2" data-kind="knob" aria-label="Knob 2"><title>Knob 2</title>
-<circle cx="854" cy="140.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M854 118.035L854 131.285" fill="none" stroke="#000" stroke-width="1"/>
+<g id="akai-mpk-mini-mk3-panel--surface--pad-1" data-surface-control="pad-1" aria-hidden="true"><rect x="156" y="95" width="114.5" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="knobs-knob-3" data-kind="knob" aria-label="Knob 3"><title>Knob 3</title>
-<circle cx="996" cy="140.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M996 118.035L996 131.285" fill="none" stroke="#000" stroke-width="1"/>
+<g id="akai-mpk-mini-mk3-panel--pads-pad-2" data-part="pads-pad-2" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 2"><title>PADS: Pad 2</title><g aria-hidden="true">
+<rect x="287.715" y="100" width="80.07" height="80.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="knobs-knob-4" data-kind="knob" aria-label="Knob 4"><title>Knob 4</title>
-<circle cx="1138" cy="140.035" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1138 118.035L1138 131.285" fill="none" stroke="#000" stroke-width="1"/>
+<g id="akai-mpk-mini-mk3-panel--surface--pad-2" data-surface-control="pad-2" aria-hidden="true"><rect x="270.5" y="95" width="114.5" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="knobs-knob-5" data-kind="knob" aria-label="Knob 5"><title>Knob 5</title>
-<circle cx="712" cy="247.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M712 225.535L712 238.785" fill="none" stroke="#000" stroke-width="1"/>
+<g id="akai-mpk-mini-mk3-panel--pads-pad-3" data-part="pads-pad-3" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 3"><title>PADS: Pad 3</title><g aria-hidden="true">
+<rect x="402.215" y="100" width="80.07" height="80.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="knobs-knob-6" data-kind="knob" aria-label="Knob 6"><title>Knob 6</title>
-<circle cx="854" cy="247.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M854 225.535L854 238.785" fill="none" stroke="#000" stroke-width="1"/>
+<g id="akai-mpk-mini-mk3-panel--surface--pad-3" data-surface-control="pad-3" aria-hidden="true"><rect x="385" y="95" width="114.5" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="knobs-knob-7" data-kind="knob" aria-label="Knob 7"><title>Knob 7</title>
-<circle cx="996" cy="247.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M996 225.535L996 238.785" fill="none" stroke="#000" stroke-width="1"/>
+<g id="akai-mpk-mini-mk3-panel--pads-pad-4" data-part="pads-pad-4" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 4"><title>PADS: Pad 4</title><g aria-hidden="true">
+<rect x="516.715" y="100" width="80.07" height="80.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="knobs-knob-8" data-kind="knob" aria-label="Knob 8"><title>Knob 8</title>
-<circle cx="1138" cy="247.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1138 225.535L1138 238.785" fill="none" stroke="#000" stroke-width="1"/>
+<g id="akai-mpk-mini-mk3-panel--surface--pad-4" data-surface-control="pad-4" aria-hidden="true"><rect x="499.5" y="95" width="114.5" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="150" y="325" width="1065" height="85" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="program-prog-select" data-kind="button" aria-label="Prog select"><title>Prog select</title>
-<rect x="276.34" y="360" width="22.57" height="22.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--pads-pad-5" data-part="pads-pad-5" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 5"><title>PADS: Pad 5</title><g aria-hidden="true">
+<rect x="173.215" y="207.5" width="80.07" height="80.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="program-cc" data-kind="button" aria-label="CC"><title>CC</title>
-<rect x="539.59" y="360" width="22.57" height="22.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--pad-5" data-surface-control="pad-5" aria-hidden="true"><rect x="156" y="202.5" width="114.5" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="program-prog-change" data-kind="button" aria-label="Prog change"><title>Prog change</title>
-<rect x="802.84" y="360" width="22.57" height="22.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--pads-pad-6" data-part="pads-pad-6" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 6"><title>PADS: Pad 6</title><g aria-hidden="true">
+<rect x="287.715" y="207.5" width="80.07" height="80.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="program-bank-a-b" data-kind="button" aria-label="Bank A/B"><title>Bank A/B</title>
-<rect x="1066.09" y="360" width="22.57" height="22.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="akai-mpk-mini-mk3-panel--surface--pad-6" data-surface-control="pad-6" aria-hidden="true"><rect x="270.5" y="202.5" width="114.5" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="150" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--pads-pad-7" data-part="pads-pad-7" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 7"><title>PADS: Pad 7</title><g aria-hidden="true">
+<rect x="402.215" y="207.5" width="80.07" height="80.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="221" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--pad-7" data-surface-control="pad-7" aria-hidden="true"><rect x="385" y="202.5" width="114.5" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="292" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--pads-pad-8" data-part="pads-pad-8" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 8"><title>PADS: Pad 8</title><g aria-hidden="true">
+<rect x="516.715" y="207.5" width="80.07" height="80.07" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="363" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--pad-8" data-surface-control="pad-8" aria-hidden="true"><rect x="499.5" y="202.5" width="114.5" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="434" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--knobs-knob-1" data-part="knobs-knob-1" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 1"><title>KNOBS: Knob 1</title><g aria-hidden="true">
+<circle cx="712" cy="140.035" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M712 118.035L712 131.285" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="505" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--knob-1" data-surface-control="knob-1" aria-hidden="true"><rect x="641" y="95" width="142" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="576" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--knobs-knob-2" data-part="knobs-knob-2" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 2"><title>KNOBS: Knob 2</title><g aria-hidden="true">
+<circle cx="854" cy="140.035" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M854 118.035L854 131.285" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="647" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--knob-2" data-surface-control="knob-2" aria-hidden="true"><rect x="783" y="95" width="142" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="718" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--knobs-knob-3" data-part="knobs-knob-3" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 3"><title>KNOBS: Knob 3</title><g aria-hidden="true">
+<circle cx="996" cy="140.035" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M996 118.035L996 131.285" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="789" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--knob-3" data-surface-control="knob-3" aria-hidden="true"><rect x="925" y="95" width="142" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="860" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--knobs-knob-4" data-part="knobs-knob-4" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 4"><title>KNOBS: Knob 4</title><g aria-hidden="true">
+<circle cx="1138" cy="140.035" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1138 118.035L1138 131.285" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="931" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--knob-4" data-surface-control="knob-4" aria-hidden="true"><rect x="1067" y="95" width="142" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="1002" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--knobs-knob-5" data-part="knobs-knob-5" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 5"><title>KNOBS: Knob 5</title><g aria-hidden="true">
+<circle cx="712" cy="247.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M712 225.535L712 238.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="1073" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--knob-5" data-surface-control="knob-5" aria-hidden="true"><rect x="641" y="202.5" width="142" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="1144" y="420" width="71" height="275" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--knobs-knob-6" data-part="knobs-knob-6" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 6"><title>KNOBS: Knob 6</title><g aria-hidden="true">
+<circle cx="854" cy="247.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M854 225.535L854 238.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="198.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--knob-6" data-surface-control="knob-6" aria-hidden="true"><rect x="783" y="202.5" width="142" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="269.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--knobs-knob-7" data-part="knobs-knob-7" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 7"><title>KNOBS: Knob 7</title><g aria-hidden="true">
+<circle cx="996" cy="247.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M996 225.535L996 238.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="411.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--knob-7" data-surface-control="knob-7" aria-hidden="true"><rect x="925" y="202.5" width="142" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="482.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--knobs-knob-8" data-part="knobs-knob-8" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 8"><title>KNOBS: Knob 8</title><g aria-hidden="true">
+<circle cx="1138" cy="247.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1138 225.535L1138 238.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="553.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--knob-8" data-surface-control="knob-8" aria-hidden="true"><rect x="1067" y="202.5" width="142" height="107.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="695.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--program-prog-select" data-part="program-prog-select" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAM: Prog select"><title>PROGRAM: Prog select</title><g aria-hidden="true">
+<rect x="276.34" y="360" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="766.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--program-prog-select" data-surface-control="program-prog-select" aria-hidden="true"><rect x="156" y="355" width="263.25" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="908.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--program-cc" data-part="program-cc" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAM: CC"><title>PROGRAM: CC</title><g aria-hidden="true">
+<rect x="539.59" y="360" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="979.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--surface--program-cc" data-surface-control="program-cc" aria-hidden="true"><rect x="419.25" y="355" width="263.25" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="1050.99" y="420" width="44.02" height="167.75" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="akai-mpk-mini-mk3-panel--program-prog-change" data-part="program-prog-change" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAM: Prog change"><title>PROGRAM: Prog change</title><g aria-hidden="true">
+<rect x="802.84" y="360" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--fixed-program" data-surface-control="fixed-program" aria-hidden="true"><rect x="682.5" y="355" width="263.25" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--program-bank-a-b" data-part="program-bank-a-b" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAM: Bank A/B"><title>PROGRAM: Bank A/B</title><g aria-hidden="true">
+<rect x="1066.09" y="360" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--program-bank-a-b" data-surface-control="program-bank-a-b" aria-hidden="true"><rect x="945.75" y="355" width="263.25" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="akai-mpk-mini-mk3-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="150" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-48" data-surface-control="key-48" aria-hidden="true"><rect x="150" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="221" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-50" data-surface-control="key-50" aria-hidden="true"><rect x="221" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="292" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-52" data-surface-control="key-52" aria-hidden="true"><rect x="292" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="363" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-53" data-surface-control="key-53" aria-hidden="true"><rect x="363" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="434" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-55" data-surface-control="key-55" aria-hidden="true"><rect x="434" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="505" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-57" data-surface-control="key-57" aria-hidden="true"><rect x="505" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="576" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-59" data-surface-control="key-59" aria-hidden="true"><rect x="576" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="647" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-60" data-surface-control="key-60" aria-hidden="true"><rect x="647" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="718" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-62" data-surface-control="key-62" aria-hidden="true"><rect x="718" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="789" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-64" data-surface-control="key-64" aria-hidden="true"><rect x="789" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="860" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-65" data-surface-control="key-65" aria-hidden="true"><rect x="860" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="931" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-67" data-surface-control="key-67" aria-hidden="true"><rect x="931" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="1002" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-69" data-surface-control="key-69" aria-hidden="true"><rect x="1002" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="1073" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-71" data-surface-control="key-71" aria-hidden="true"><rect x="1073" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="1144" y="420" width="71" height="275" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-72" data-surface-control="key-72" aria-hidden="true"><rect x="1144" y="420" width="71" height="275" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="198.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-49" data-surface-control="key-49" aria-hidden="true"><rect x="198.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="269.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-51" data-surface-control="key-51" aria-hidden="true"><rect x="269.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="411.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-54" data-surface-control="key-54" aria-hidden="true"><rect x="411.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="482.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-56" data-surface-control="key-56" aria-hidden="true"><rect x="482.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="553.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-58" data-surface-control="key-58" aria-hidden="true"><rect x="553.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="695.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-61" data-surface-control="key-61" aria-hidden="true"><rect x="695.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="766.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-63" data-surface-control="key-63" aria-hidden="true"><rect x="766.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="908.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-66" data-surface-control="key-66" aria-hidden="true"><rect x="908.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="979.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-68" data-surface-control="key-68" aria-hidden="true"><rect x="979.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="akai-mpk-mini-mk3-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="1050.99" y="420" width="44.02" height="167.75" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="akai-mpk-mini-mk3-panel--surface--key-70" data-surface-control="key-70" aria-hidden="true"><rect x="1050.99" y="420" width="44.02" height="167.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

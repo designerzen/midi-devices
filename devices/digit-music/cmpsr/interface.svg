@@ -1,52 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 1040" role="img" aria-labelledby="title description">
-<title id="title">DIGIT CMPSR labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="530" height="1040" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<path d="M80 9H450Q520 9 515 90L470 970Q465 1031 410 1031H120Q65 1031 60 970L15 90Q10 9 80 9Z" fill="#fff" stroke="#000" stroke-width="2"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">DIGIT CMPSR</text>
-<text x="505" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="85" y="85" width="360" height="310" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="92" y="99" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">JOYSTICK</text>
-<g id="joystick-expressive-joystick" data-kind="joystick" aria-label="Expressive joystick"><title>Expressive joystick</title>
-<rect x="158.083" y="136.868" width="213.834" height="213.834" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="9"/>
-<path d="M200.85 243.785L329.15 243.785" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M265 179.635L265 307.935" fill="none" stroke="#000" stroke-width="1"/>
-<circle cx="265" cy="243.785" r="40.629" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="265" cy="243.785" r="68.427" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<text x="265" y="386" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Expressive joystick</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 1040" role="group" aria-labelledby="digit-cmpsr-interface--title" aria-describedby="digit-cmpsr-interface--description" data-device="digit-cmpsr" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="digit-cmpsr-interface--title">DIGIT CMPSR labelled interface</title><desc id="digit-cmpsr-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="digit-cmpsr-interface--chassis" aria-hidden="true">
+<path d="M80 9H450Q520 9 515 90L470 970Q465 1031 410 1031H120Q65 1031 60 970L15 90Q10 9 80 9Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">DIGIT CMPSR</text>
+<text x="505" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="85" y="85" width="360" height="310" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="92" y="99" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">JOYSTICK</text>
+<rect x="85" y="420" width="360" height="555" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="92" y="434" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">BUTTONS</text>
 </g>
-<rect x="85" y="420" width="360" height="555" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="92" y="434" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">BUTTONS</text>
-<g id="buttons-1-settings" data-kind="pad" aria-label="1 Settings"><title>1 Settings</title>
-<rect x="126.715" y="455" width="102.57" height="102.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="178" y="576" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">1 Settings</text>
+<g id="digit-cmpsr-interface--joystick-expressive-joystick" data-part="joystick-expressive-joystick" data-kind="joystick" role="group" aria-roledescription="joystick" aria-label="JOYSTICK: Expressive joystick"><title>JOYSTICK: Expressive joystick</title><g aria-hidden="true">
+<rect x="158.083" y="136.868" width="213.834" height="213.834" rx="9" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M200.85 243.785L329.15 243.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M265 179.635L265 307.935" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<circle cx="265" cy="243.785" r="40.629" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="265" cy="243.785" r="68.427" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="265" y="386" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Expressive joystick</text>
 </g>
-<g id="buttons-2-midi-cc" data-kind="pad" aria-label="2 MIDI CC"><title>2 MIDI CC</title>
-<rect x="300.715" y="455" width="102.57" height="102.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="352" y="576" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">2 MIDI CC</text>
 </g>
-<g id="buttons-3-smart-sustain" data-kind="pad" aria-label="3 Smart sustain"><title>3 Smart sustain</title>
-<rect x="126.715" y="585" width="102.57" height="102.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="178" y="706" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">3 Smart sustain</text>
+<g id="digit-cmpsr-interface--buttons-1-settings" data-part="buttons-1-settings" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="BUTTONS: 1 Settings"><title>BUTTONS: 1 Settings</title><g aria-hidden="true">
+<rect x="126.715" y="455" width="102.57" height="102.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="178" y="576" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">1 Settings</text>
 </g>
-<g id="buttons-4-chords" data-kind="pad" aria-label="4 Chords"><title>4 Chords</title>
-<rect x="300.715" y="585" width="102.57" height="102.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="352" y="706" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">4 Chords</text>
 </g>
-<g id="buttons-5-chord-extensions" data-kind="pad" aria-label="5 Chord extensions"><title>5 Chord extensions</title>
-<rect x="126.715" y="715" width="102.57" height="102.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="178" y="836" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">5 Chord extensions</text>
+<g id="digit-cmpsr-interface--buttons-2-midi-cc" data-part="buttons-2-midi-cc" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="BUTTONS: 2 MIDI CC"><title>BUTTONS: 2 MIDI CC</title><g aria-hidden="true">
+<rect x="300.715" y="455" width="102.57" height="102.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="352" y="576" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">2 MIDI CC</text>
 </g>
-<g id="buttons-6-inversions" data-kind="pad" aria-label="6 Inversions"><title>6 Inversions</title>
-<rect x="300.715" y="715" width="102.57" height="102.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="352" y="836" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">6 Inversions</text>
 </g>
-<g id="buttons-7-octave" data-kind="pad" aria-label="7 Octave -"><title>7 Octave -</title>
-<rect x="126.715" y="845" width="102.57" height="102.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="178" y="966" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">7 Octave -</text>
+<g id="digit-cmpsr-interface--buttons-3-smart-sustain" data-part="buttons-3-smart-sustain" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="BUTTONS: 3 Smart sustain"><title>BUTTONS: 3 Smart sustain</title><g aria-hidden="true">
+<rect x="126.715" y="585" width="102.57" height="102.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="178" y="706" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">3 Smart sustain</text>
 </g>
-<g id="buttons-8-octave" data-kind="pad" aria-label="8 Octave +"><title>8 Octave +</title>
-<rect x="300.715" y="845" width="102.57" height="102.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="352" y="966" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">8 Octave +</text>
+</g>
+<g id="digit-cmpsr-interface--buttons-4-chords" data-part="buttons-4-chords" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="BUTTONS: 4 Chords"><title>BUTTONS: 4 Chords</title><g aria-hidden="true">
+<rect x="300.715" y="585" width="102.57" height="102.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="352" y="706" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">4 Chords</text>
+</g>
+</g>
+<g id="digit-cmpsr-interface--buttons-5-chord-extensions" data-part="buttons-5-chord-extensions" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="BUTTONS: 5 Chord extensions"><title>BUTTONS: 5 Chord extensions</title><g aria-hidden="true">
+<rect x="126.715" y="715" width="102.57" height="102.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="178" y="836" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">5 Chord extensions</text>
+</g>
+</g>
+<g id="digit-cmpsr-interface--buttons-6-inversions" data-part="buttons-6-inversions" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="BUTTONS: 6 Inversions"><title>BUTTONS: 6 Inversions</title><g aria-hidden="true">
+<rect x="300.715" y="715" width="102.57" height="102.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="352" y="836" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">6 Inversions</text>
+</g>
+</g>
+<g id="digit-cmpsr-interface--buttons-7-octave" data-part="buttons-7-octave" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="BUTTONS: 7 Octave -"><title>BUTTONS: 7 Octave -</title><g aria-hidden="true">
+<rect x="126.715" y="845" width="102.57" height="102.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="178" y="966" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">7 Octave -</text>
+</g>
+</g>
+<g id="digit-cmpsr-interface--buttons-8-octave" data-part="buttons-8-octave" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="BUTTONS: 8 Octave +"><title>BUTTONS: 8 Octave +</title><g aria-hidden="true">
+<rect x="300.715" y="845" width="102.57" height="102.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="352" y="966" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">8 Octave +</text>
+</g>
 </g>
 </svg>

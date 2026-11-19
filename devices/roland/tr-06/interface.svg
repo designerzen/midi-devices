@@ -1,177 +1,216 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="img" aria-labelledby="title description">
-<title id="title">Roland TR-06 labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="680" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="662" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland TR-06</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="270" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MASTER</text>
-<g id="master-volume" data-kind="knob~button" aria-label="Volume"><title>Volume</title>
-<rect x="51.715" y="100" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="74" y="163" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Volume</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="group" aria-labelledby="roland-tr-06-interface--title" aria-describedby="roland-tr-06-interface--description" data-device="roland-tr-06" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-tr-06-interface--title">Roland TR-06 labelled interface</title><desc id="roland-tr-06-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-tr-06-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="662" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland TR-06</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="65" width="270" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MASTER</text>
+<rect x="310" y="65" width="378.333" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="317" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">EFFECTS</text>
+<rect x="698.333" y="65" width="766.667" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="705.333" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">LEVELS</text>
+<rect x="25" y="490" width="1450" height="130" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="504" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">STEPS</text>
 </g>
-<g id="master-value" data-kind="knob~button" aria-label="Value"><title>Value</title>
-<rect x="137.715" y="100" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="160" y="163" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Value</text>
+<g id="roland-tr-06-interface--master-volume" data-part="master-volume" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Volume"><title>MASTER: Volume</title><g aria-hidden="true">
+<rect x="51.715" y="100" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="74" y="163" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Volume</text>
 </g>
-<g id="master-instrument" data-kind="knob~button" aria-label="Instrument"><title>Instrument</title>
-<rect x="223.715" y="100" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="246" y="163" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Instrument</text>
 </g>
-<g id="master-mode" data-kind="knob~button" aria-label="Mode"><title>Mode</title>
-<rect x="51.715" y="172" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="74" y="235" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Mode</text>
+<g id="roland-tr-06-interface--master-value" data-part="master-value" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Value"><title>MASTER: Value</title><g aria-hidden="true">
+<rect x="137.715" y="100" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="160" y="163" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Value</text>
 </g>
-<g id="master-run-stop" data-kind="knob~button" aria-label="Run Stop"><title>Run Stop</title>
-<rect x="137.715" y="172" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="160" y="235" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Run Stop</text>
 </g>
-<g id="master-pattern-clear" data-kind="knob~button" aria-label="Pattern clear"><title>Pattern clear</title>
-<rect x="223.715" y="172" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="246" y="235" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pattern clear</text>
+<g id="roland-tr-06-interface--master-instrument" data-part="master-instrument" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Instrument"><title>MASTER: Instrument</title><g aria-hidden="true">
+<rect x="223.715" y="100" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="246" y="163" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Instrument</text>
 </g>
-<g id="master-menu-substep" data-kind="knob~button" aria-label="Menu Substep"><title>Menu Substep</title>
-<rect x="51.715" y="244" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="74" y="307" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Menu Substep</text>
 </g>
-<g id="master-step-loop" data-kind="knob~button" aria-label="Step loop"><title>Step loop</title>
-<rect x="137.715" y="244" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="160" y="307" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Step loop</text>
+<g id="roland-tr-06-interface--master-mode" data-part="master-mode" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Mode"><title>MASTER: Mode</title><g aria-hidden="true">
+<rect x="51.715" y="172" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="74" y="235" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mode</text>
 </g>
-<g id="master-function" data-kind="knob~button" aria-label="Function"><title>Function</title>
-<rect x="223.715" y="244" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="246" y="307" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function</text>
 </g>
-<g id="master-tempo" data-kind="knob~button" aria-label="Tempo"><title>Tempo</title>
-<rect x="51.715" y="316" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="74" y="379" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tempo</text>
+<g id="roland-tr-06-interface--master-run-stop" data-part="master-run-stop" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Run Stop"><title>MASTER: Run Stop</title><g aria-hidden="true">
+<rect x="137.715" y="172" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="160" y="235" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Run Stop</text>
 </g>
-<g id="master-pattern-group" data-kind="knob~button" aria-label="Pattern group"><title>Pattern group</title>
-<rect x="137.715" y="316" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="160" y="379" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pattern group</text>
 </g>
-<g id="master-tap-reset" data-kind="knob~button" aria-label="Tap Reset"><title>Tap Reset</title>
-<rect x="223.715" y="316" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="246" y="379" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tap Reset</text>
+<g id="roland-tr-06-interface--master-pattern-clear" data-part="master-pattern-clear" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Pattern clear"><title>MASTER: Pattern clear</title><g aria-hidden="true">
+<rect x="223.715" y="172" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="246" y="235" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pattern clear</text>
 </g>
-<g id="master-scale" data-kind="knob~button" aria-label="Scale"><title>Scale</title>
-<rect x="51.715" y="388" width="44.57" height="44.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="74" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Scale</text>
 </g>
-<rect x="310" y="65" width="378.333" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="317" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">EFFECTS</text>
-<g id="effects-drive" data-kind="knob" aria-label="Drive" data-control="effects-drive-knob"><title>Drive</title>
-<circle cx="499.167" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M499.167 124.285L499.167 137.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="499.167" y="211" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Drive</text>
+<g id="roland-tr-06-interface--master-menu-substep" data-part="master-menu-substep" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Menu Substep"><title>MASTER: Menu Substep</title><g aria-hidden="true">
+<rect x="51.715" y="244" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="74" y="307" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Menu Substep</text>
 </g>
-<g id="effects-time" data-kind="knob" aria-label="Time" data-control="effects-time-knob"><title>Time</title>
-<circle cx="499.167" cy="266.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M499.167 244.285L499.167 257.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="499.167" y="331" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Time</text>
 </g>
-<g id="effects-depth" data-kind="knob" aria-label="Depth" data-control="effects-depth-knob"><title>Depth</title>
-<circle cx="499.167" cy="386.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M499.167 364.285L499.167 377.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="499.167" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Depth</text>
+<g id="roland-tr-06-interface--master-step-loop" data-part="master-step-loop" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Step loop"><title>MASTER: Step loop</title><g aria-hidden="true">
+<rect x="137.715" y="244" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="160" y="307" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Step loop</text>
 </g>
-<rect x="698.333" y="65" width="766.667" height="395" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="705.333" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">LEVELS</text>
-<g id="levels-accent" data-kind="knob" aria-label="Accent" data-control="levels-accent-knob"><title>Accent</title>
-<circle cx="893" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M893 124.285L893 137.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="893" y="211" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Accent</text>
 </g>
-<g id="levels-bass-drum" data-kind="knob" aria-label="Bass drum" data-control="levels-bass-drum-knob"><title>Bass drum</title>
-<circle cx="1270.333" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1270.333 124.285L1270.333 137.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1270.333" y="211" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Bass drum</text>
+<g id="roland-tr-06-interface--master-function" data-part="master-function" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Function"><title>MASTER: Function</title><g aria-hidden="true">
+<rect x="223.715" y="244" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="246" y="307" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function</text>
 </g>
-<g id="levels-snare" data-kind="knob" aria-label="Snare" data-control="levels-snare-knob"><title>Snare</title>
-<circle cx="893" cy="266.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M893 244.285L893 257.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="893" y="331" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Snare</text>
 </g>
-<g id="levels-tom" data-kind="knob" aria-label="Tom"><title>Tom</title>
-<circle cx="1270.333" cy="266.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1270.333 244.285L1270.333 257.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1270.333" y="331" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tom</text>
+<g id="roland-tr-06-interface--master-tempo" data-part="master-tempo" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Tempo"><title>MASTER: Tempo</title><g aria-hidden="true">
+<rect x="51.715" y="316" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="74" y="379" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tempo</text>
 </g>
-<g id="levels-cymbal" data-kind="knob" aria-label="Cymbal" data-control="levels-cymbal-knob"><title>Cymbal</title>
-<circle cx="893" cy="386.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M893 364.285L893 377.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="893" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Cymbal</text>
 </g>
-<g id="levels-hi-hat" data-kind="knob" aria-label="Hi hat"><title>Hi hat</title>
-<circle cx="1270.333" cy="386.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1270.333 364.285L1270.333 377.535" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1270.333" y="451" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Hi hat</text>
+<g id="roland-tr-06-interface--master-pattern-group" data-part="master-pattern-group" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Pattern group"><title>MASTER: Pattern group</title><g aria-hidden="true">
+<rect x="137.715" y="316" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="160" y="379" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pattern group</text>
 </g>
-<rect x="25" y="490" width="1450" height="130" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="504" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">STEPS</text>
-<g id="steps-1" data-kind="button" aria-label="1"><title>1</title>
-<rect x="60.938" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="75.938" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">1</text>
 </g>
-<g id="steps-2" data-kind="button" aria-label="2"><title>2</title>
-<rect x="150.812" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="165.812" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">2</text>
+<g id="roland-tr-06-interface--master-tap-reset" data-part="master-tap-reset" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Tap Reset"><title>MASTER: Tap Reset</title><g aria-hidden="true">
+<rect x="223.715" y="316" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="246" y="379" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tap Reset</text>
 </g>
-<g id="steps-3" data-kind="button" aria-label="3"><title>3</title>
-<rect x="240.688" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="255.688" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">3</text>
 </g>
-<g id="steps-4" data-kind="button" aria-label="4"><title>4</title>
-<rect x="330.562" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="345.562" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">4</text>
+<g id="roland-tr-06-interface--master-scale" data-part="master-scale" data-kind="knob~button" role="group" aria-roledescription="control" aria-label="MASTER: Scale"><title>MASTER: Scale</title><g aria-hidden="true">
+<rect x="51.715" y="388" width="44.57" height="44.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="74" y="451" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Scale</text>
 </g>
-<g id="steps-5" data-kind="button" aria-label="5"><title>5</title>
-<rect x="420.438" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="435.438" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">5</text>
 </g>
-<g id="steps-6" data-kind="button" aria-label="6"><title>6</title>
-<rect x="510.312" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="525.312" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">6</text>
+<g id="roland-tr-06-interface--effects-drive" data-part="effects-drive" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="EFFECTS: Drive"><title>EFFECTS: Drive</title><g aria-hidden="true">
+<circle cx="499.167" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M499.167 124.285L499.167 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="499.167" y="211" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Drive</text>
 </g>
-<g id="steps-7" data-kind="button" aria-label="7"><title>7</title>
-<rect x="600.188" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="615.188" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">7</text>
 </g>
-<g id="steps-8" data-kind="button" aria-label="8"><title>8</title>
-<rect x="690.062" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="705.062" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">8</text>
+<g id="roland-tr-06-interface--effects-time" data-part="effects-time" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="EFFECTS: Time"><title>EFFECTS: Time</title><g aria-hidden="true">
+<circle cx="499.167" cy="266.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M499.167 244.285L499.167 257.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="499.167" y="331" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Time</text>
 </g>
-<g id="steps-9" data-kind="button" aria-label="9"><title>9</title>
-<rect x="779.938" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="794.938" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">9</text>
 </g>
-<g id="steps-10" data-kind="button" aria-label="10"><title>10</title>
-<rect x="869.812" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="884.812" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">10</text>
+<g id="roland-tr-06-interface--effects-depth" data-part="effects-depth" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="EFFECTS: Depth"><title>EFFECTS: Depth</title><g aria-hidden="true">
+<circle cx="499.167" cy="386.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M499.167 364.285L499.167 377.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="499.167" y="451" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Depth</text>
 </g>
-<g id="steps-11" data-kind="button" aria-label="11"><title>11</title>
-<rect x="959.688" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="974.688" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">11</text>
 </g>
-<g id="steps-12" data-kind="button" aria-label="12"><title>12</title>
-<rect x="1049.562" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1064.562" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">12</text>
+<g id="roland-tr-06-interface--levels-accent" data-part="levels-accent" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LEVELS: Accent"><title>LEVELS: Accent</title><g aria-hidden="true">
+<circle cx="893" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M893 124.285L893 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="893" y="211" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Accent</text>
 </g>
-<g id="steps-13" data-kind="button" aria-label="13"><title>13</title>
-<rect x="1139.438" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1154.438" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">13</text>
 </g>
-<g id="steps-14" data-kind="button" aria-label="14"><title>14</title>
-<rect x="1229.312" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1244.312" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">14</text>
+<g id="roland-tr-06-interface--levels-bass-drum" data-part="levels-bass-drum" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LEVELS: Bass drum"><title>LEVELS: Bass drum</title><g aria-hidden="true">
+<circle cx="1270.333" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1270.333 124.285L1270.333 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1270.333" y="211" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Bass drum</text>
 </g>
-<g id="steps-15" data-kind="button" aria-label="15"><title>15</title>
-<rect x="1319.188" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1334.188" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">15</text>
 </g>
-<g id="steps-16" data-kind="button" aria-label="16"><title>16</title>
-<rect x="1409.062" y="543.785" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1424.062" y="611" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">16</text>
+<g id="roland-tr-06-interface--levels-snare" data-part="levels-snare" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LEVELS: Snare"><title>LEVELS: Snare</title><g aria-hidden="true">
+<circle cx="893" cy="266.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M893 244.285L893 257.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="893" y="331" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Snare</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--levels-tom" data-part="levels-tom" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LEVELS: Tom"><title>LEVELS: Tom</title><g aria-hidden="true">
+<circle cx="1270.333" cy="266.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1270.333 244.285L1270.333 257.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1270.333" y="331" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tom</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--levels-cymbal" data-part="levels-cymbal" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LEVELS: Cymbal"><title>LEVELS: Cymbal</title><g aria-hidden="true">
+<circle cx="893" cy="386.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M893 364.285L893 377.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="893" y="451" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Cymbal</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--levels-hi-hat" data-part="levels-hi-hat" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LEVELS: Hi hat"><title>LEVELS: Hi hat</title><g aria-hidden="true">
+<circle cx="1270.333" cy="386.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1270.333 364.285L1270.333 377.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1270.333" y="451" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Hi hat</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-1" data-part="steps-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 1"><title>STEPS: 1</title><g aria-hidden="true">
+<rect x="60.938" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="75.938" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">1</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-2" data-part="steps-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 2"><title>STEPS: 2</title><g aria-hidden="true">
+<rect x="150.812" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="165.812" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">2</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-3" data-part="steps-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 3"><title>STEPS: 3</title><g aria-hidden="true">
+<rect x="240.688" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="255.688" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">3</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-4" data-part="steps-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 4"><title>STEPS: 4</title><g aria-hidden="true">
+<rect x="330.562" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="345.562" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">4</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-5" data-part="steps-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 5"><title>STEPS: 5</title><g aria-hidden="true">
+<rect x="420.438" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="435.438" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">5</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-6" data-part="steps-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 6"><title>STEPS: 6</title><g aria-hidden="true">
+<rect x="510.312" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="525.312" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">6</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-7" data-part="steps-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 7"><title>STEPS: 7</title><g aria-hidden="true">
+<rect x="600.188" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="615.188" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">7</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-8" data-part="steps-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 8"><title>STEPS: 8</title><g aria-hidden="true">
+<rect x="690.062" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="705.062" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">8</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-9" data-part="steps-9" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 9"><title>STEPS: 9</title><g aria-hidden="true">
+<rect x="779.938" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="794.938" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">9</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-10" data-part="steps-10" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 10"><title>STEPS: 10</title><g aria-hidden="true">
+<rect x="869.812" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="884.812" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">10</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-11" data-part="steps-11" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 11"><title>STEPS: 11</title><g aria-hidden="true">
+<rect x="959.688" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="974.688" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">11</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-12" data-part="steps-12" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 12"><title>STEPS: 12</title><g aria-hidden="true">
+<rect x="1049.562" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1064.562" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">12</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-13" data-part="steps-13" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 13"><title>STEPS: 13</title><g aria-hidden="true">
+<rect x="1139.438" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1154.438" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">13</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-14" data-part="steps-14" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 14"><title>STEPS: 14</title><g aria-hidden="true">
+<rect x="1229.312" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1244.312" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">14</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-15" data-part="steps-15" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 15"><title>STEPS: 15</title><g aria-hidden="true">
+<rect x="1319.188" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1334.188" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">15</text>
+</g>
+</g>
+<g id="roland-tr-06-interface--steps-16" data-part="steps-16" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 16"><title>STEPS: 16</title><g aria-hidden="true">
+<rect x="1409.062" y="543.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1424.062" y="611" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">16</text>
+</g>
 </g>
 </svg>

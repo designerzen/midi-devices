@@ -1,482 +1,752 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 780" role="img" aria-labelledby="title description">
-<title id="title">Moog Subsequent 37 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="780" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="762" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Moog Subsequent 37</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="155" height="250" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="programming-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="36" y="100" width="61.5" height="27.439" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="40" y="104" width="53.5" height="19.439" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-</g>
-<g id="programming-value" data-kind="knob" aria-label="Value"><title>Value</title>
-<circle cx="138.25" cy="113.719" r="11.318" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M138.25 105.401L138.25 109.758" fill="none" stroke="#000" stroke-width="1"/>
-</g>
-<g id="programming-cursor" data-kind="button" aria-label="Cursor"><title>Cursor</title>
-<rect x="53.031" y="153.75" width="27.439" height="27.439" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-</g>
-<g id="programming-preset" data-kind="button" aria-label="Preset"><title>Preset</title>
-<rect x="124.531" y="153.75" width="27.439" height="27.439" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-</g>
-<g id="programming-panel" data-kind="button" aria-label="Panel"><title>Panel</title>
-<rect x="53.031" y="207.5" width="27.439" height="27.439" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-</g>
-<g id="programming-save" data-kind="button" aria-label="Save"><title>Save</title>
-<rect x="124.531" y="207.5" width="27.439" height="27.439" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-</g>
-<g id="programming-compare" data-kind="button" aria-label="Compare"><title>Compare</title>
-<rect x="53.031" y="261.25" width="27.439" height="27.439" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-</g>
-<g id="programming-init" data-kind="button" aria-label="Init"><title>Init</title>
-<rect x="124.531" y="261.25" width="27.439" height="27.439" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-</g>
-<rect x="25" y="325" width="155" height="125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="arp-glide-rate" data-kind="knob" aria-label="Rate"><title>Rate</title>
-<circle cx="54.833" cy="371.045" r="9.392" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M54.833 364.653L54.833 367.758" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 780" role="group" aria-labelledby="moog-subsequent-37-panel--title" aria-describedby="moog-subsequent-37-panel--description" data-device="moog-subsequent-37" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="moog-subsequent-37-panel--title">Moog Subsequent 37 overhead hardware diagram</title><desc id="moog-subsequent-37-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="moog-subsequent-37-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="762" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Moog Subsequent 37</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="155" height="250" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="325" width="155" height="125" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="190" y="65" width="135" height="385" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="480" y="65" width="135" height="245" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="335" y="65" width="135" height="385" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="625" y="65" width="135" height="245" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="480" y="325" width="280" height="125" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="770" y="65" width="130" height="385" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="910" y="65" width="175" height="385" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1095" y="65" width="180" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1285" y="65" width="180" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1285" y="380" width="180" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="490" width="115" height="190" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="arp-glide-range" data-kind="knob" aria-label="Range"><title>Range</title>
-<circle cx="102.5" cy="371.045" r="9.392" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M102.5 364.653L102.5 367.758" fill="none" stroke="#000" stroke-width="1"/>
-</g>
-<g id="arp-glide-pattern" data-kind="knob" aria-label="Pattern"><title>Pattern</title>
-<circle cx="150.167" cy="371.045" r="9.392" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M150.167 364.653L150.167 367.758" fill="none" stroke="#000" stroke-width="1"/>
-</g>
-<g id="arp-glide-gate" data-kind="knob" aria-label="Gate"><title>Gate</title>
-<circle cx="54.833" cy="416.045" r="9.392" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M54.833 409.653L54.833 412.758" fill="none" stroke="#000" stroke-width="1"/>
-</g>
-<g id="arp-glide-glide" data-kind="knob" aria-label="Glide"><title>Glide</title>
-<circle cx="102.5" cy="416.045" r="9.392" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M102.5 409.653L102.5 412.758" fill="none" stroke="#000" stroke-width="1"/>
-</g>
-<rect x="190" y="65" width="135" height="385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="mod-1-rate" data-kind="knob" aria-label="Rate"><title>Rate</title>
-<circle cx="226.75" cy="131.385" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M226.75 119.01L226.75 126.004" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--programming-display" data-part="programming-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="PROGRAMMING: Display"><title>PROGRAMMING: Display</title><g aria-hidden="true">
+<rect x="36" y="100" width="61.5" height="27.439" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="40" y="104" width="53.5" height="19.439" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mod-1-wave" data-kind="knob" aria-label="Wave"><title>Wave</title>
-<circle cx="288.25" cy="131.385" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M288.25 119.01L288.25 126.004" fill="none" stroke="#000" stroke-width="1"/>
 </g>
-<g id="mod-1-pitch-amt" data-kind="knob" aria-label="Pitch amt"><title>Pitch amt</title>
-<circle cx="226.75" cy="218.885" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M226.75 206.51L226.75 213.504" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--programming-value" data-part="programming-value" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PROGRAMMING: Value"><title>PROGRAMMING: Value</title><g aria-hidden="true">
+<circle cx="138.25" cy="113.719" r="11.318" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M138.25 105.401L138.25 109.758" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="mod-1-filter-amt" data-kind="knob" aria-label="Filter amt"><title>Filter amt</title>
-<circle cx="288.25" cy="218.885" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M288.25 206.51L288.25 213.504" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--programming-value" data-surface-control="programming-value" aria-hidden="true"><rect x="102.5" y="95" width="71.5" height="53.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mod-1-mod-amt" data-kind="knob" aria-label="Mod amt"><title>Mod amt</title>
-<circle cx="226.75" cy="306.385" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M226.75 294.01L226.75 301.004" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--programming-cursor" data-part="programming-cursor" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAMMING: Cursor"><title>PROGRAMMING: Cursor</title><g aria-hidden="true">
+<rect x="53.031" y="153.75" width="27.439" height="27.439" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mod-1-source" data-kind="button" aria-label="Source"><title>Source</title>
-<rect x="273.25" y="291.385" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--programming-cursor" data-surface-control="programming-cursor" aria-hidden="true"><rect x="31" y="148.75" width="71.5" height="53.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mod-1-dest" data-kind="button" aria-label="Dest"><title>Dest</title>
-<rect x="211.75" y="378.885" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--programming-preset" data-part="programming-preset" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAMMING: Preset"><title>PROGRAMMING: Preset</title><g aria-hidden="true">
+<rect x="124.531" y="153.75" width="27.439" height="27.439" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mod-1-sync" data-kind="button" aria-label="Sync"><title>Sync</title>
-<rect x="273.25" y="378.885" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--programming-preset" data-surface-control="programming-preset" aria-hidden="true"><rect x="102.5" y="148.75" width="71.5" height="53.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="480" y="65" width="135" height="245" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="osc-1-octave" data-kind="knob" aria-label="Octave"><title>Octave</title>
-<circle cx="516.75" cy="122.635" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M516.75 110.26L516.75 117.254" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--programming-panel" data-part="programming-panel" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAMMING: Panel"><title>PROGRAMMING: Panel</title><g aria-hidden="true">
+<rect x="53.031" y="207.5" width="27.439" height="27.439" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="osc-1-wave" data-kind="knob" aria-label="Wave"><title>Wave</title>
-<circle cx="578.25" cy="122.635" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M578.25 110.26L578.25 117.254" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--programming-panel" data-surface-control="programming-panel" aria-hidden="true"><rect x="31" y="202.5" width="71.5" height="53.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="osc-1-frequency" data-kind="knob" aria-label="Frequency"><title>Frequency</title>
-<circle cx="516.75" cy="192.635" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M516.75 180.26L516.75 187.254" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--programming-save" data-part="programming-save" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAMMING: Save"><title>PROGRAMMING: Save</title><g aria-hidden="true">
+<rect x="124.531" y="207.5" width="27.439" height="27.439" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="osc-1-beat-freq" data-kind="knob" aria-label="Beat freq"><title>Beat freq</title>
-<circle cx="578.25" cy="192.635" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M578.25 180.26L578.25 187.254" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--programming-save" data-surface-control="programming-save" aria-hidden="true"><rect x="102.5" y="202.5" width="71.5" height="53.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="osc-1-sync" data-kind="button" aria-label="Sync"><title>Sync</title>
-<rect x="501.75" y="247.635" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--programming-compare" data-part="programming-compare" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAMMING: Compare"><title>PROGRAMMING: Compare</title><g aria-hidden="true">
+<rect x="53.031" y="261.25" width="27.439" height="27.439" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="osc-1-duo" data-kind="button" aria-label="Duo"><title>Duo</title>
-<rect x="563.25" y="247.635" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--programming-compare" data-surface-control="programming-compare" aria-hidden="true"><rect x="31" y="256.25" width="71.5" height="53.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="335" y="65" width="135" height="385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="mod-2-rate" data-kind="knob" aria-label="Rate"><title>Rate</title>
-<circle cx="371.75" cy="131.385" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M371.75 119.01L371.75 126.004" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--programming-init" data-part="programming-init" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PROGRAMMING: Init"><title>PROGRAMMING: Init</title><g aria-hidden="true">
+<rect x="124.531" y="261.25" width="27.439" height="27.439" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="mod-2-wave" data-kind="knob" aria-label="Wave"><title>Wave</title>
-<circle cx="433.25" cy="131.385" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M433.25 119.01L433.25 126.004" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--programming-init" data-surface-control="programming-init" aria-hidden="true"><rect x="102.5" y="256.25" width="71.5" height="53.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mod-2-pitch-amt" data-kind="knob" aria-label="Pitch amt"><title>Pitch amt</title>
-<circle cx="371.75" cy="218.885" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M371.75 206.51L371.75 213.504" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--arp-glide-rate" data-part="arp-glide-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARP / GLIDE: Rate"><title>ARP / GLIDE: Rate</title><g aria-hidden="true">
+<circle cx="54.833" cy="371.045" r="9.392" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M54.833 364.653L54.833 367.758" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="mod-2-filter-amt" data-kind="knob" aria-label="Filter amt"><title>Filter amt</title>
-<circle cx="433.25" cy="218.885" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M433.25 206.51L433.25 213.504" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--arp-glide-rate" data-surface-control="arp-glide-rate" aria-hidden="true"><rect x="31" y="355" width="47.6667" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mod-2-mod-amt" data-kind="knob" aria-label="Mod amt"><title>Mod amt</title>
-<circle cx="371.75" cy="306.385" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M371.75 294.01L371.75 301.004" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--arp-glide-range" data-part="arp-glide-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARP / GLIDE: Range"><title>ARP / GLIDE: Range</title><g aria-hidden="true">
+<circle cx="102.5" cy="371.045" r="9.392" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M102.5 364.653L102.5 367.758" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="mod-2-source" data-kind="button" aria-label="Source"><title>Source</title>
-<rect x="418.25" y="291.385" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--arp-glide-range" data-surface-control="arp-glide-range" aria-hidden="true"><rect x="78.6667" y="355" width="47.6667" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mod-2-dest" data-kind="button" aria-label="Dest"><title>Dest</title>
-<rect x="356.75" y="378.885" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--arp-glide-pattern" data-part="arp-glide-pattern" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARP / GLIDE: Pattern"><title>ARP / GLIDE: Pattern</title><g aria-hidden="true">
+<circle cx="150.167" cy="371.045" r="9.392" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M150.167 364.653L150.167 367.758" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="mod-2-sync" data-kind="button" aria-label="Sync"><title>Sync</title>
-<rect x="418.25" y="378.885" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--arp-glide-pattern" data-surface-control="arp-glide-pattern" aria-hidden="true"><rect x="126.3333" y="355" width="47.6667" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="625" y="65" width="135" height="245" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="osc-2-octave" data-kind="knob" aria-label="Octave"><title>Octave</title>
-<circle cx="661.75" cy="122.635" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M661.75 110.26L661.75 117.254" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--arp-glide-gate" data-part="arp-glide-gate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARP / GLIDE: Gate"><title>ARP / GLIDE: Gate</title><g aria-hidden="true">
+<circle cx="54.833" cy="416.045" r="9.392" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M54.833 409.653L54.833 412.758" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="osc-2-wave" data-kind="knob" aria-label="Wave"><title>Wave</title>
-<circle cx="723.25" cy="122.635" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M723.25 110.26L723.25 117.254" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--arp-glide-gate" data-surface-control="arp-glide-gate" aria-hidden="true"><rect x="31" y="400" width="47.6667" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="osc-2-frequency" data-kind="knob" aria-label="Frequency"><title>Frequency</title>
-<circle cx="661.75" cy="192.635" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M661.75 180.26L661.75 187.254" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--arp-glide-glide" data-part="arp-glide-glide" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARP / GLIDE: Glide"><title>ARP / GLIDE: Glide</title><g aria-hidden="true">
+<circle cx="102.5" cy="416.045" r="9.392" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M102.5 409.653L102.5 412.758" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="osc-2-beat-freq" data-kind="knob" aria-label="Beat freq"><title>Beat freq</title>
-<circle cx="723.25" cy="192.635" r="15.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M723.25 180.26L723.25 187.254" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--arp-glide-glide" data-surface-control="arp-glide-glide" aria-hidden="true"><rect x="78.6667" y="400" width="47.6667" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="osc-2-sync" data-kind="button" aria-label="Sync"><title>Sync</title>
-<rect x="646.75" y="247.635" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-1-rate" data-part="mod-1-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 1: Rate"><title>MOD 1: Rate</title><g aria-hidden="true">
+<circle cx="226.75" cy="131.385" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M226.75 119.01L226.75 126.004" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="osc-2-duo" data-kind="button" aria-label="Duo"><title>Duo</title>
-<rect x="708.25" y="247.635" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-1-rate" data-surface-control="mod-1-rate" aria-hidden="true"><rect x="196" y="95" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="480" y="325" width="280" height="125" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="presets-1" data-kind="button" aria-label="1"><title>1</title>
-<rect x="492" y="360.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-1-wave" data-part="mod-1-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 1: Wave"><title>MOD 1: Wave</title><g aria-hidden="true">
+<circle cx="288.25" cy="131.385" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M288.25 119.01L288.25 126.004" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="presets-2" data-kind="button" aria-label="2"><title>2</title>
-<rect x="525.5" y="360.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-1-wave" data-surface-control="mod-1-wave" aria-hidden="true"><rect x="257.5" y="95" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="presets-3" data-kind="button" aria-label="3"><title>3</title>
-<rect x="559" y="360.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-1-pitch-amt" data-part="mod-1-pitch-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 1: Pitch amt"><title>MOD 1: Pitch amt</title><g aria-hidden="true">
+<circle cx="226.75" cy="218.885" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M226.75 206.51L226.75 213.504" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="presets-4" data-kind="button" aria-label="4"><title>4</title>
-<rect x="592.5" y="360.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-1-pitch-amt" data-surface-control="mod-1-pitch-amt" aria-hidden="true"><rect x="196" y="182.5" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="presets-5" data-kind="button" aria-label="5"><title>5</title>
-<rect x="626" y="360.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-1-filter-amt" data-part="mod-1-filter-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 1: Filter amt"><title>MOD 1: Filter amt</title><g aria-hidden="true">
+<circle cx="288.25" cy="218.885" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M288.25 206.51L288.25 213.504" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="presets-6" data-kind="button" aria-label="6"><title>6</title>
-<rect x="659.5" y="360.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-1-filter-amt" data-surface-control="mod-1-filter-amt" aria-hidden="true"><rect x="257.5" y="182.5" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="presets-7" data-kind="button" aria-label="7"><title>7</title>
-<rect x="693" y="360.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-1-mod-amt" data-part="mod-1-mod-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 1: Mod amt"><title>MOD 1: Mod amt</title><g aria-hidden="true">
+<circle cx="226.75" cy="306.385" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M226.75 294.01L226.75 301.004" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="presets-8" data-kind="button" aria-label="8"><title>8</title>
-<rect x="726.5" y="360.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-1-mod-amt" data-surface-control="mod-1-mod-amt" aria-hidden="true"><rect x="196" y="270" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="presets-9" data-kind="button" aria-label="9"><title>9</title>
-<rect x="492" y="405.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-1-source" data-part="mod-1-source" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MOD 1: Source"><title>MOD 1: Source</title><g aria-hidden="true">
+<rect x="273.25" y="291.385" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="presets-10" data-kind="button" aria-label="10"><title>10</title>
-<rect x="525.5" y="405.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-1-source" data-surface-control="mod-1-source" aria-hidden="true"><rect x="257.5" y="270" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="presets-11" data-kind="button" aria-label="11"><title>11</title>
-<rect x="559" y="405.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-1-dest" data-part="mod-1-dest" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MOD 1: Dest"><title>MOD 1: Dest</title><g aria-hidden="true">
+<rect x="211.75" y="378.885" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="presets-12" data-kind="button" aria-label="12"><title>12</title>
-<rect x="592.5" y="405.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-1-dest" data-surface-control="mod-1-dest" aria-hidden="true"><rect x="196" y="357.5" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="presets-13" data-kind="button" aria-label="13"><title>13</title>
-<rect x="626" y="405.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-1-sync" data-part="mod-1-sync" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MOD 1: Sync"><title>MOD 1: Sync</title><g aria-hidden="true">
+<rect x="273.25" y="378.885" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="presets-14" data-kind="button" aria-label="14"><title>14</title>
-<rect x="659.5" y="405.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-1-sync" data-surface-control="mod-1-sync" aria-hidden="true"><rect x="257.5" y="357.5" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="presets-15" data-kind="button" aria-label="15"><title>15</title>
-<rect x="693" y="405.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--osc-1-octave" data-part="osc-1-octave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSC 1: Octave"><title>OSC 1: Octave</title><g aria-hidden="true">
+<circle cx="516.75" cy="122.635" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M516.75 110.26L516.75 117.254" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="presets-16" data-kind="button" aria-label="16"><title>16</title>
-<rect x="726.5" y="405.295" width="21.5" height="21.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--osc-1-octave" data-surface-control="osc-1-octave" aria-hidden="true"><rect x="486" y="95" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="770" y="65" width="130" height="385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="mixer-osc-1" data-kind="knob" aria-label="Osc 1"><title>Osc 1</title>
-<circle cx="835" cy="121.285" r="16.765" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M835 107.52L835 115.417" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--osc-1-wave" data-part="osc-1-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSC 1: Wave"><title>OSC 1: Wave</title><g aria-hidden="true">
+<circle cx="578.25" cy="122.635" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M578.25 110.26L578.25 117.254" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="mixer-sub" data-kind="knob" aria-label="Sub"><title>Sub</title>
-<circle cx="835" cy="191.285" r="16.765" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M835 177.52L835 185.417" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-1-wave" data-surface-control="osc-1-wave" aria-hidden="true"><rect x="547.5" y="95" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mixer-osc-2" data-kind="knob" aria-label="Osc 2"><title>Osc 2</title>
-<circle cx="835" cy="261.285" r="16.765" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M835 247.52L835 255.417" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--osc-1-frequency" data-part="osc-1-frequency" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSC 1: Frequency"><title>OSC 1: Frequency</title><g aria-hidden="true">
+<circle cx="516.75" cy="192.635" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M516.75 180.26L516.75 187.254" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="mixer-noise" data-kind="knob" aria-label="Noise"><title>Noise</title>
-<circle cx="835" cy="331.285" r="16.765" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M835 317.52L835 325.417" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-1-frequency" data-surface-control="osc-1-frequency" aria-hidden="true"><rect x="486" y="165" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mixer-feedback" data-kind="knob" aria-label="Feedback"><title>Feedback</title>
-<circle cx="835" cy="401.285" r="16.765" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M835 387.52L835 395.417" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--osc-1-beat-freq" data-part="osc-1-beat-freq" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSC 1: Beat freq"><title>OSC 1: Beat freq</title><g aria-hidden="true">
+<circle cx="578.25" cy="192.635" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M578.25 180.26L578.25 187.254" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="910" y="65" width="175" height="385" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="filter-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
-<circle cx="956.75" cy="144.618" r="20.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M956.75 127.243L956.75 137.487" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-1-beat-freq" data-surface-control="osc-1-beat-freq" aria-hidden="true"><rect x="547.5" y="165" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<circle cx="1038.25" cy="144.618" r="20.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1038.25 127.243L1038.25 137.487" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--osc-1-sync" data-part="osc-1-sync" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OSC 1: Sync"><title>OSC 1: Sync</title><g aria-hidden="true">
+<rect x="501.75" y="247.635" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="filter-multidrive" data-kind="knob" aria-label="Multidrive"><title>Multidrive</title>
-<circle cx="956.75" cy="261.285" r="20.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M956.75 243.91L956.75 254.154" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-1-sync" data-surface-control="osc-1-sync" aria-hidden="true"><rect x="486" y="235" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-eg-amt" data-kind="knob" aria-label="EG amt"><title>EG amt</title>
-<circle cx="1038.25" cy="261.285" r="20.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1038.25 243.91L1038.25 254.154" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--osc-1-duo" data-part="osc-1-duo" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OSC 1: Duo"><title>OSC 1: Duo</title><g aria-hidden="true">
+<rect x="563.25" y="247.635" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="filter-kb-track" data-kind="knob" aria-label="KB track"><title>KB track</title>
-<circle cx="956.75" cy="377.952" r="20.375" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M956.75 360.577L956.75 370.82" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-1-duo" data-surface-control="osc-1-duo" aria-hidden="true"><rect x="547.5" y="235" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-slope" data-kind="button" aria-label="Slope"><title>Slope</title>
-<rect x="1023.25" y="362.952" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-2-rate" data-part="mod-2-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 2: Rate"><title>MOD 2: Rate</title><g aria-hidden="true">
+<circle cx="371.75" cy="131.385" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M371.75 119.01L371.75 126.004" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="1095" y="65" width="180" height="300" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="filter-eg-attack" data-kind="knob" aria-label="Attack"><title>Attack</title>
-<circle cx="1129" cy="114.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1129 105.64L1129 110.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--mod-2-rate" data-surface-control="mod-2-rate" aria-hidden="true"><rect x="341" y="95" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-eg-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<circle cx="1185" cy="114.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1185 105.64L1185 110.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--mod-2-wave" data-part="mod-2-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 2: Wave"><title>MOD 2: Wave</title><g aria-hidden="true">
+<circle cx="433.25" cy="131.385" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M433.25 119.01L433.25 126.004" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-eg-sustain" data-kind="knob" aria-label="Sustain"><title>Sustain</title>
-<circle cx="1241" cy="114.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1241 105.64L1241 110.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--mod-2-wave" data-surface-control="mod-2-wave" aria-hidden="true"><rect x="402.5" y="95" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-eg-release" data-kind="knob" aria-label="Release"><title>Release</title>
-<circle cx="1129" cy="167.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1129 158.64L1129 163.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--mod-2-pitch-amt" data-part="mod-2-pitch-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 2: Pitch amt"><title>MOD 2: Pitch amt</title><g aria-hidden="true">
+<circle cx="371.75" cy="218.885" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M371.75 206.51L371.75 213.504" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-eg-delay" data-kind="knob" aria-label="Delay"><title>Delay</title>
-<circle cx="1185" cy="167.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1185 158.64L1185 163.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--mod-2-pitch-amt" data-surface-control="mod-2-pitch-amt" aria-hidden="true"><rect x="341" y="182.5" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-eg-hold" data-kind="knob" aria-label="Hold"><title>Hold</title>
-<circle cx="1241" cy="167.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1241 158.64L1241 163.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--mod-2-filter-amt" data-part="mod-2-filter-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 2: Filter amt"><title>MOD 2: Filter amt</title><g aria-hidden="true">
+<circle cx="433.25" cy="218.885" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M433.25 206.51L433.25 213.504" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-eg-vel-amt" data-kind="knob" aria-label="Vel amt"><title>Vel amt</title>
-<circle cx="1129" cy="220.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1129 211.64L1129 216.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--mod-2-filter-amt" data-surface-control="mod-2-filter-amt" aria-hidden="true"><rect x="402.5" y="182.5" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-eg-kb-track" data-kind="knob" aria-label="KB track"><title>KB track</title>
-<circle cx="1185" cy="220.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1185 211.64L1185 216.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--mod-2-mod-amt" data-part="mod-2-mod-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD 2: Mod amt"><title>MOD 2: Mod amt</title><g aria-hidden="true">
+<circle cx="371.75" cy="306.385" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M371.75 294.01L371.75 301.004" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-eg-multi-trig" data-kind="button" aria-label="Multi trig"><title>Multi trig</title>
-<rect x="1226.43" y="206" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-2-mod-amt" data-surface-control="mod-2-mod-amt" aria-hidden="true"><rect x="341" y="270" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-eg-reset" data-kind="button" aria-label="Reset"><title>Reset</title>
-<rect x="1114.43" y="259" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-2-source" data-part="mod-2-source" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MOD 2: Source"><title>MOD 2: Source</title><g aria-hidden="true">
+<rect x="418.25" y="291.385" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="filter-eg-sync" data-kind="button" aria-label="Sync"><title>Sync</title>
-<rect x="1170.43" y="259" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-2-source" data-surface-control="mod-2-source" aria-hidden="true"><rect x="402.5" y="270" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-eg-loop" data-kind="button" aria-label="Loop"><title>Loop</title>
-<rect x="1226.43" y="259" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--mod-2-dest" data-part="mod-2-dest" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MOD 2: Dest"><title>MOD 2: Dest</title><g aria-hidden="true">
+<rect x="356.75" y="378.885" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="filter-eg-latch" data-kind="button" aria-label="Latch"><title>Latch</title>
-<rect x="1114.43" y="312" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--mod-2-dest" data-surface-control="mod-2-dest" aria-hidden="true"><rect x="341" y="357.5" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="1285" y="65" width="180" height="300" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="amp-eg-attack" data-kind="knob" aria-label="Attack"><title>Attack</title>
-<circle cx="1319" cy="114.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1319 105.64L1319 110.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--mod-2-sync" data-part="mod-2-sync" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MOD 2: Sync"><title>MOD 2: Sync</title><g aria-hidden="true">
+<rect x="418.25" y="378.885" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="amp-eg-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<circle cx="1375" cy="114.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1375 105.64L1375 110.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--mod-2-sync" data-surface-control="mod-2-sync" aria-hidden="true"><rect x="402.5" y="357.5" width="61.5" height="87.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="amp-eg-sustain" data-kind="knob" aria-label="Sustain"><title>Sustain</title>
-<circle cx="1431" cy="114.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1431 105.64L1431 110.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--osc-2-octave" data-part="osc-2-octave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSC 2: Octave"><title>OSC 2: Octave</title><g aria-hidden="true">
+<circle cx="661.75" cy="122.635" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M661.75 110.26L661.75 117.254" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="amp-eg-release" data-kind="knob" aria-label="Release"><title>Release</title>
-<circle cx="1319" cy="167.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1319 158.64L1319 163.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-2-octave" data-surface-control="osc-2-octave" aria-hidden="true"><rect x="631" y="95" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="amp-eg-delay" data-kind="knob" aria-label="Delay"><title>Delay</title>
-<circle cx="1375" cy="167.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1375 158.64L1375 163.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--osc-2-wave" data-part="osc-2-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSC 2: Wave"><title>OSC 2: Wave</title><g aria-hidden="true">
+<circle cx="723.25" cy="122.635" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M723.25 110.26L723.25 117.254" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="amp-eg-hold" data-kind="knob" aria-label="Hold"><title>Hold</title>
-<circle cx="1431" cy="167.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1431 158.64L1431 163.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-2-wave" data-surface-control="osc-2-wave" aria-hidden="true"><rect x="692.5" y="95" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="amp-eg-vel-amt" data-kind="knob" aria-label="Vel amt"><title>Vel amt</title>
-<circle cx="1319" cy="220.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1319 211.64L1319 216.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--osc-2-frequency" data-part="osc-2-frequency" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSC 2: Frequency"><title>OSC 2: Frequency</title><g aria-hidden="true">
+<circle cx="661.75" cy="192.635" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M661.75 180.26L661.75 187.254" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="amp-eg-kb-track" data-kind="knob" aria-label="KB track"><title>KB track</title>
-<circle cx="1375" cy="220.57" r="11.931" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1375 211.64L1375 216.395" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-2-frequency" data-surface-control="osc-2-frequency" aria-hidden="true"><rect x="631" y="165" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="amp-eg-multi-trig" data-kind="button" aria-label="Multi trig"><title>Multi trig</title>
-<rect x="1416.43" y="206" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--osc-2-beat-freq" data-part="osc-2-beat-freq" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSC 2: Beat freq"><title>OSC 2: Beat freq</title><g aria-hidden="true">
+<circle cx="723.25" cy="192.635" r="15.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M723.25 180.26L723.25 187.254" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="amp-eg-reset" data-kind="button" aria-label="Reset"><title>Reset</title>
-<rect x="1304.43" y="259" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--osc-2-beat-freq" data-surface-control="osc-2-beat-freq" aria-hidden="true"><rect x="692.5" y="165" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="amp-eg-sync" data-kind="button" aria-label="Sync"><title>Sync</title>
-<rect x="1360.43" y="259" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--osc-2-sync" data-part="osc-2-sync" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OSC 2: Sync"><title>OSC 2: Sync</title><g aria-hidden="true">
+<rect x="646.75" y="247.635" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="amp-eg-loop" data-kind="button" aria-label="Loop"><title>Loop</title>
-<rect x="1416.43" y="259" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--surface--osc-2-sync" data-surface-control="osc-2-sync" aria-hidden="true"><rect x="631" y="235" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="amp-eg-latch" data-kind="button" aria-label="Latch"><title>Latch</title>
-<rect x="1304.43" y="312" width="29.141" height="29.141" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--osc-2-duo" data-part="osc-2-duo" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OSC 2: Duo"><title>OSC 2: Duo</title><g aria-hidden="true">
+<rect x="708.25" y="247.635" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="1285" y="380" width="180" height="70" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="output-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="1333" cy="418.785" r="4.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1333 417.62L1333 417.327" fill="none" stroke="#000" stroke-width="1"/>
+<g id="moog-subsequent-37-panel--surface--osc-2-duo" data-surface-control="osc-2-duo" aria-hidden="true"><rect x="692.5" y="235" width="61.5" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="output-mute" data-kind="button" aria-label="Mute"><title>Mute</title>
-<rect x="1413.215" y="415" width="7.57" height="7.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="moog-subsequent-37-panel--presets-1" data-part="presets-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 1"><title>PRESETS: 1</title><g aria-hidden="true">
+<rect x="492" y="360.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="25" y="490" width="115" height="190" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="performance-pitch" data-kind="wheel" aria-label="Pitch"><title>Pitch</title>
-<rect x="51.085" y="525" width="11.33" height="127.853" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.776666666666667"/>
-<rect x="45.42" y="585.209" width="22.66" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="moog-subsequent-37-panel--surface--presets-1" data-surface-control="presets-1" aria-hidden="true"><rect x="486" y="355" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-mod" data-kind="wheel" aria-label="Mod"><title>Mod</title>
-<rect x="102.585" y="525" width="11.33" height="127.853" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3.776666666666667"/>
-<rect x="96.92" y="585.209" width="22.66" height="7" class="line" fill="#000" stroke="#000" stroke-width="1.6"/>
+<g id="moog-subsequent-37-panel--presets-2" data-part="presets-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 2"><title>PRESETS: 2</title><g aria-hidden="true">
+<rect x="525.5" y="360.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="165" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-2" data-surface-control="presets-2" aria-hidden="true"><rect x="519.5" y="355" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="224.091" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-3" data-part="presets-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 3"><title>PRESETS: 3</title><g aria-hidden="true">
+<rect x="559" y="360.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="283.182" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-3" data-surface-control="presets-3" aria-hidden="true"><rect x="553" y="355" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="342.273" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-4" data-part="presets-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 4"><title>PRESETS: 4</title><g aria-hidden="true">
+<rect x="592.5" y="360.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="401.364" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-4" data-surface-control="presets-4" aria-hidden="true"><rect x="586.5" y="355" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="460.455" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-5" data-part="presets-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 5"><title>PRESETS: 5</title><g aria-hidden="true">
+<rect x="626" y="360.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="519.545" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-5" data-surface-control="presets-5" aria-hidden="true"><rect x="620" y="355" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="578.636" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-6" data-part="presets-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 6"><title>PRESETS: 6</title><g aria-hidden="true">
+<rect x="659.5" y="360.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="637.727" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-6" data-surface-control="presets-6" aria-hidden="true"><rect x="653.5" y="355" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="696.818" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-7" data-part="presets-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 7"><title>PRESETS: 7</title><g aria-hidden="true">
+<rect x="693" y="360.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="755.909" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-7" data-surface-control="presets-7" aria-hidden="true"><rect x="687" y="355" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="815" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-8" data-part="presets-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 8"><title>PRESETS: 8</title><g aria-hidden="true">
+<rect x="726.5" y="360.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="874.091" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-8" data-surface-control="presets-8" aria-hidden="true"><rect x="720.5" y="355" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="933.182" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-9" data-part="presets-9" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 9"><title>PRESETS: 9</title><g aria-hidden="true">
+<rect x="492" y="405.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="992.273" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-9" data-surface-control="presets-9" aria-hidden="true"><rect x="486" y="400" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="1051.364" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-10" data-part="presets-10" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 10"><title>PRESETS: 10</title><g aria-hidden="true">
+<rect x="525.5" y="405.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="1110.455" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-10" data-surface-control="presets-10" aria-hidden="true"><rect x="519.5" y="400" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="1169.545" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-11" data-part="presets-11" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 11"><title>PRESETS: 11</title><g aria-hidden="true">
+<rect x="559" y="405.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="1228.636" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-11" data-surface-control="presets-11" aria-hidden="true"><rect x="553" y="400" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-34" data-kind="key" aria-label="Key 34"><title>Key 34</title>
-<rect x="1287.727" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-12" data-part="presets-12" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 12"><title>PRESETS: 12</title><g aria-hidden="true">
+<rect x="592.5" y="405.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-36" data-kind="key" aria-label="Key 36"><title>Key 36</title>
-<rect x="1346.818" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-12" data-surface-control="presets-12" aria-hidden="true"><rect x="586.5" y="400" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-37" data-kind="key" aria-label="Key 37"><title>Key 37</title>
-<rect x="1405.909" y="470" width="59.091" height="270" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-13" data-part="presets-13" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 13"><title>PRESETS: 13</title><g aria-hidden="true">
+<rect x="626" y="405.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="205.773" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-13" data-surface-control="presets-13" aria-hidden="true"><rect x="620" y="400" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="264.864" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-14" data-part="presets-14" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 14"><title>PRESETS: 14</title><g aria-hidden="true">
+<rect x="659.5" y="405.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="383.045" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-14" data-surface-control="presets-14" aria-hidden="true"><rect x="653.5" y="400" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="442.136" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-15" data-part="presets-15" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 15"><title>PRESETS: 15</title><g aria-hidden="true">
+<rect x="693" y="405.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="501.227" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-15" data-surface-control="presets-15" aria-hidden="true"><rect x="687" y="400" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="619.409" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--presets-16" data-part="presets-16" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PRESETS: 16"><title>PRESETS: 16</title><g aria-hidden="true">
+<rect x="726.5" y="405.295" width="21.5" height="21.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="678.5" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--presets-16" data-surface-control="presets-16" aria-hidden="true"><rect x="720.5" y="400" width="33.5" height="45" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="796.682" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--mixer-osc-1" data-part="mixer-osc-1" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Osc 1"><title>MIXER: Osc 1</title><g aria-hidden="true">
+<circle cx="835" cy="121.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M835 107.52L835 115.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="855.773" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--mixer-osc-1" data-surface-control="mixer-osc-1" aria-hidden="true"><rect x="776" y="95" width="118" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="914.864" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--mixer-sub" data-part="mixer-sub" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Sub"><title>MIXER: Sub</title><g aria-hidden="true">
+<circle cx="835" cy="191.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M835 177.52L835 185.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="1033.045" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--mixer-sub" data-surface-control="mixer-sub" aria-hidden="true"><rect x="776" y="165" width="118" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="1092.136" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--mixer-osc-2" data-part="mixer-osc-2" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Osc 2"><title>MIXER: Osc 2</title><g aria-hidden="true">
+<circle cx="835" cy="261.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M835 247.52L835 255.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="1210.318" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--mixer-osc-2" data-surface-control="mixer-osc-2" aria-hidden="true"><rect x="776" y="235" width="118" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-33" data-kind="key" aria-label="Key 33"><title>Key 33</title>
-<rect x="1269.409" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--mixer-noise" data-part="mixer-noise" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Noise"><title>MIXER: Noise</title><g aria-hidden="true">
+<circle cx="835" cy="331.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M835 317.52L835 325.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-35" data-kind="key" aria-label="Key 35"><title>Key 35</title>
-<rect x="1328.5" y="470" width="36.636" height="164.7" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="moog-subsequent-37-panel--surface--mixer-noise" data-surface-control="mixer-noise" aria-hidden="true"><rect x="776" y="305" width="118" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--mixer-feedback" data-part="mixer-feedback" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Feedback"><title>MIXER: Feedback</title><g aria-hidden="true">
+<circle cx="835" cy="401.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M835 387.52L835 395.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--mixer-feedback" data-surface-control="mixer-feedback" aria-hidden="true"><rect x="776" y="375" width="118" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-cutoff" data-part="filter-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER: Cutoff"><title>FILTER: Cutoff</title><g aria-hidden="true">
+<circle cx="956.75" cy="144.618" r="20.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M956.75 127.243L956.75 137.487" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-cutoff" data-surface-control="filter-cutoff" aria-hidden="true"><rect x="916" y="95" width="81.5" height="116.6667" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-resonance" data-part="filter-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER: Resonance"><title>FILTER: Resonance</title><g aria-hidden="true">
+<circle cx="1038.25" cy="144.618" r="20.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1038.25 127.243L1038.25 137.487" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-resonance" data-surface-control="filter-resonance" aria-hidden="true"><rect x="997.5" y="95" width="81.5" height="116.6667" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-multidrive" data-part="filter-multidrive" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER: Multidrive"><title>FILTER: Multidrive</title><g aria-hidden="true">
+<circle cx="956.75" cy="261.285" r="20.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M956.75 243.91L956.75 254.154" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-multidrive" data-surface-control="filter-multidrive" aria-hidden="true"><rect x="916" y="211.6667" width="81.5" height="116.6667" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-amt" data-part="filter-eg-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER: EG amt"><title>FILTER: EG amt</title><g aria-hidden="true">
+<circle cx="1038.25" cy="261.285" r="20.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1038.25 243.91L1038.25 254.154" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-amt" data-surface-control="filter-eg-amt" aria-hidden="true"><rect x="997.5" y="211.6667" width="81.5" height="116.6667" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-kb-track" data-part="filter-kb-track" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER: KB track"><title>FILTER: KB track</title><g aria-hidden="true">
+<circle cx="956.75" cy="377.952" r="20.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M956.75 360.577L956.75 370.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-kb-track" data-surface-control="filter-kb-track" aria-hidden="true"><rect x="916" y="328.3333" width="81.5" height="116.6667" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-slope" data-part="filter-slope" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER: Slope"><title>FILTER: Slope</title><g aria-hidden="true">
+<rect x="1023.25" y="362.952" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-slope" data-surface-control="filter-slope" aria-hidden="true"><rect x="997.5" y="328.3333" width="81.5" height="116.6667" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-attack" data-part="filter-eg-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER EG: Attack"><title>FILTER EG: Attack</title><g aria-hidden="true">
+<circle cx="1129" cy="114.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1129 105.64L1129 110.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-attack" data-surface-control="filter-eg-attack" aria-hidden="true"><rect x="1101" y="95" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-decay" data-part="filter-eg-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER EG: Decay"><title>FILTER EG: Decay</title><g aria-hidden="true">
+<circle cx="1185" cy="114.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1185 105.64L1185 110.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-decay" data-surface-control="filter-eg-decay" aria-hidden="true"><rect x="1157" y="95" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-sustain" data-part="filter-eg-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER EG: Sustain"><title>FILTER EG: Sustain</title><g aria-hidden="true">
+<circle cx="1241" cy="114.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1241 105.64L1241 110.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-sustain" data-surface-control="filter-eg-sustain" aria-hidden="true"><rect x="1213" y="95" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-release" data-part="filter-eg-release" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER EG: Release"><title>FILTER EG: Release</title><g aria-hidden="true">
+<circle cx="1129" cy="167.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1129 158.64L1129 163.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-release" data-surface-control="filter-eg-release" aria-hidden="true"><rect x="1101" y="148" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-delay" data-part="filter-eg-delay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER EG: Delay"><title>FILTER EG: Delay</title><g aria-hidden="true">
+<circle cx="1185" cy="167.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1185 158.64L1185 163.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-delay" data-surface-control="filter-eg-delay" aria-hidden="true"><rect x="1157" y="148" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-hold" data-part="filter-eg-hold" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER EG: Hold"><title>FILTER EG: Hold</title><g aria-hidden="true">
+<circle cx="1241" cy="167.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1241 158.64L1241 163.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-hold" data-surface-control="filter-eg-hold" aria-hidden="true"><rect x="1213" y="148" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-vel-amt" data-part="filter-eg-vel-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER EG: Vel amt"><title>FILTER EG: Vel amt</title><g aria-hidden="true">
+<circle cx="1129" cy="220.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1129 211.64L1129 216.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-vel-amt" data-surface-control="filter-eg-vel-amt" aria-hidden="true"><rect x="1101" y="201" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-kb-track" data-part="filter-eg-kb-track" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER EG: KB track"><title>FILTER EG: KB track</title><g aria-hidden="true">
+<circle cx="1185" cy="220.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1185 211.64L1185 216.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-kb-track" data-surface-control="filter-eg-kb-track" aria-hidden="true"><rect x="1157" y="201" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-multi-trig" data-part="filter-eg-multi-trig" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER EG: Multi trig"><title>FILTER EG: Multi trig</title><g aria-hidden="true">
+<rect x="1226.43" y="206" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-multi-trig" data-surface-control="filter-eg-multi-trig" aria-hidden="true"><rect x="1213" y="201" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-reset" data-part="filter-eg-reset" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER EG: Reset"><title>FILTER EG: Reset</title><g aria-hidden="true">
+<rect x="1114.43" y="259" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-reset" data-surface-control="filter-eg-reset" aria-hidden="true"><rect x="1101" y="254" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-sync" data-part="filter-eg-sync" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER EG: Sync"><title>FILTER EG: Sync</title><g aria-hidden="true">
+<rect x="1170.43" y="259" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-sync" data-surface-control="filter-eg-sync" aria-hidden="true"><rect x="1157" y="254" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-loop" data-part="filter-eg-loop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER EG: Loop"><title>FILTER EG: Loop</title><g aria-hidden="true">
+<rect x="1226.43" y="259" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-loop" data-surface-control="filter-eg-loop" aria-hidden="true"><rect x="1213" y="254" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--filter-eg-latch" data-part="filter-eg-latch" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER EG: Latch"><title>FILTER EG: Latch</title><g aria-hidden="true">
+<rect x="1114.43" y="312" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--filter-eg-latch" data-surface-control="filter-eg-latch" aria-hidden="true"><rect x="1101" y="307" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-attack" data-part="amp-eg-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="AMP EG: Attack"><title>AMP EG: Attack</title><g aria-hidden="true">
+<circle cx="1319" cy="114.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1319 105.64L1319 110.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-attack" data-surface-control="amp-eg-attack" aria-hidden="true"><rect x="1291" y="95" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-decay" data-part="amp-eg-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="AMP EG: Decay"><title>AMP EG: Decay</title><g aria-hidden="true">
+<circle cx="1375" cy="114.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1375 105.64L1375 110.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-decay" data-surface-control="amp-eg-decay" aria-hidden="true"><rect x="1347" y="95" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-sustain" data-part="amp-eg-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="AMP EG: Sustain"><title>AMP EG: Sustain</title><g aria-hidden="true">
+<circle cx="1431" cy="114.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1431 105.64L1431 110.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-sustain" data-surface-control="amp-eg-sustain" aria-hidden="true"><rect x="1403" y="95" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-release" data-part="amp-eg-release" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="AMP EG: Release"><title>AMP EG: Release</title><g aria-hidden="true">
+<circle cx="1319" cy="167.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1319 158.64L1319 163.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-release" data-surface-control="amp-eg-release" aria-hidden="true"><rect x="1291" y="148" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-delay" data-part="amp-eg-delay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="AMP EG: Delay"><title>AMP EG: Delay</title><g aria-hidden="true">
+<circle cx="1375" cy="167.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1375 158.64L1375 163.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-delay" data-surface-control="amp-eg-delay" aria-hidden="true"><rect x="1347" y="148" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-hold" data-part="amp-eg-hold" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="AMP EG: Hold"><title>AMP EG: Hold</title><g aria-hidden="true">
+<circle cx="1431" cy="167.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1431 158.64L1431 163.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-hold" data-surface-control="amp-eg-hold" aria-hidden="true"><rect x="1403" y="148" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-vel-amt" data-part="amp-eg-vel-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="AMP EG: Vel amt"><title>AMP EG: Vel amt</title><g aria-hidden="true">
+<circle cx="1319" cy="220.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1319 211.64L1319 216.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-vel-amt" data-surface-control="amp-eg-vel-amt" aria-hidden="true"><rect x="1291" y="201" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-kb-track" data-part="amp-eg-kb-track" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="AMP EG: KB track"><title>AMP EG: KB track</title><g aria-hidden="true">
+<circle cx="1375" cy="220.57" r="11.931" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1375 211.64L1375 216.395" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-kb-track" data-surface-control="amp-eg-kb-track" aria-hidden="true"><rect x="1347" y="201" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-multi-trig" data-part="amp-eg-multi-trig" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="AMP EG: Multi trig"><title>AMP EG: Multi trig</title><g aria-hidden="true">
+<rect x="1416.43" y="206" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-multi-trig" data-surface-control="amp-eg-multi-trig" aria-hidden="true"><rect x="1403" y="201" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-reset" data-part="amp-eg-reset" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="AMP EG: Reset"><title>AMP EG: Reset</title><g aria-hidden="true">
+<rect x="1304.43" y="259" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-reset" data-surface-control="amp-eg-reset" aria-hidden="true"><rect x="1291" y="254" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-sync" data-part="amp-eg-sync" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="AMP EG: Sync"><title>AMP EG: Sync</title><g aria-hidden="true">
+<rect x="1360.43" y="259" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-sync" data-surface-control="amp-eg-sync" aria-hidden="true"><rect x="1347" y="254" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-loop" data-part="amp-eg-loop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="AMP EG: Loop"><title>AMP EG: Loop</title><g aria-hidden="true">
+<rect x="1416.43" y="259" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-loop" data-surface-control="amp-eg-loop" aria-hidden="true"><rect x="1403" y="254" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--amp-eg-latch" data-part="amp-eg-latch" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="AMP EG: Latch"><title>AMP EG: Latch</title><g aria-hidden="true">
+<rect x="1304.43" y="312" width="29.141" height="29.141" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--amp-eg-latch" data-surface-control="amp-eg-latch" aria-hidden="true"><rect x="1291" y="307" width="56" height="53" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--output-volume" data-part="output-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OUTPUT: Volume"><title>OUTPUT: Volume</title><g aria-hidden="true">
+<circle cx="1333" cy="418.785" r="4.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1333 417.62L1333 417.327" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--output-volume" data-surface-control="output-volume" aria-hidden="true"><rect x="1291" y="410" width="84" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--output-mute" data-part="output-mute" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OUTPUT: Mute"><title>OUTPUT: Mute</title><g aria-hidden="true">
+<rect x="1413.215" y="415" width="7.57" height="7.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--output-mute" data-surface-control="output-mute" aria-hidden="true"><rect x="1375" y="410" width="84" height="35" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--performance-pitch" data-part="performance-pitch" data-kind="wheel" role="group" aria-roledescription="wheel" aria-label="PERFORMANCE: Pitch"><title>PERFORMANCE: Pitch</title><g aria-hidden="true">
+<rect x="51.085" y="525" width="11.33" height="127.853" rx="3.777" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="45.42" y="585.209" width="22.66" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--performance-pitch" data-surface-control="performance-pitch" aria-hidden="true"><rect x="31" y="520" width="51.5" height="155" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--performance-mod" data-part="performance-mod" data-kind="wheel" role="group" aria-roledescription="wheel" aria-label="PERFORMANCE: Mod"><title>PERFORMANCE: Mod</title><g aria-hidden="true">
+<rect x="102.585" y="525" width="11.33" height="127.853" rx="3.777" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="96.92" y="585.209" width="22.66" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--performance-mod" data-surface-control="performance-mod" aria-hidden="true"><rect x="82.5" y="520" width="51.5" height="155" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="moog-subsequent-37-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="165" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-48" data-surface-control="note-48" aria-hidden="true"><rect x="165" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="224.091" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-50" data-surface-control="note-50" aria-hidden="true"><rect x="224.0909" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="283.182" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-52" data-surface-control="note-52" aria-hidden="true"><rect x="283.1818" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="342.273" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-53" data-surface-control="note-53" aria-hidden="true"><rect x="342.2727" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="401.364" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-55" data-surface-control="note-55" aria-hidden="true"><rect x="401.3636" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="460.455" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-57" data-surface-control="note-57" aria-hidden="true"><rect x="460.4545" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="519.545" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-59" data-surface-control="note-59" aria-hidden="true"><rect x="519.5455" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="578.636" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-60" data-surface-control="note-60" aria-hidden="true"><rect x="578.6364" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="637.727" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-62" data-surface-control="note-62" aria-hidden="true"><rect x="637.7273" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="696.818" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-64" data-surface-control="note-64" aria-hidden="true"><rect x="696.8182" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="755.909" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-65" data-surface-control="note-65" aria-hidden="true"><rect x="755.9091" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="815" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-67" data-surface-control="note-67" aria-hidden="true"><rect x="815" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="874.091" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-69" data-surface-control="note-69" aria-hidden="true"><rect x="874.0909" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="933.182" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-71" data-surface-control="note-71" aria-hidden="true"><rect x="933.1818" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="992.273" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-72" data-surface-control="note-72" aria-hidden="true"><rect x="992.2727" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-27" data-part="key-27" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 27"><title>Key 27</title><g aria-hidden="true">
+<rect x="1051.364" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-74" data-surface-control="note-74" aria-hidden="true"><rect x="1051.3636" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-29" data-part="key-29" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 29"><title>Key 29</title><g aria-hidden="true">
+<rect x="1110.455" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-76" data-surface-control="note-76" aria-hidden="true"><rect x="1110.4545" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-30" data-part="key-30" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 30"><title>Key 30</title><g aria-hidden="true">
+<rect x="1169.545" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-77" data-surface-control="note-77" aria-hidden="true"><rect x="1169.5455" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-32" data-part="key-32" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 32"><title>Key 32</title><g aria-hidden="true">
+<rect x="1228.636" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-79" data-surface-control="note-79" aria-hidden="true"><rect x="1228.6364" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-34" data-part="key-34" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 34"><title>Key 34</title><g aria-hidden="true">
+<rect x="1287.727" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-81" data-surface-control="note-81" aria-hidden="true"><rect x="1287.7273" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-36" data-part="key-36" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 36"><title>Key 36</title><g aria-hidden="true">
+<rect x="1346.818" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-83" data-surface-control="note-83" aria-hidden="true"><rect x="1346.8182" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-37" data-part="key-37" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 37"><title>Key 37</title><g aria-hidden="true">
+<rect x="1405.909" y="470" width="59.091" height="270" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-84" data-surface-control="note-84" aria-hidden="true"><rect x="1405.9091" y="470" width="59.0909" height="270" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="205.773" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-49" data-surface-control="note-49" aria-hidden="true"><rect x="205.7727" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="264.864" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-51" data-surface-control="note-51" aria-hidden="true"><rect x="264.8636" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="383.045" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-54" data-surface-control="note-54" aria-hidden="true"><rect x="383.0455" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="442.136" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-56" data-surface-control="note-56" aria-hidden="true"><rect x="442.1364" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="501.227" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-58" data-surface-control="note-58" aria-hidden="true"><rect x="501.2273" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="619.409" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-61" data-surface-control="note-61" aria-hidden="true"><rect x="619.4091" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="678.5" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-63" data-surface-control="note-63" aria-hidden="true"><rect x="678.5" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="796.682" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-66" data-surface-control="note-66" aria-hidden="true"><rect x="796.6818" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="855.773" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-68" data-surface-control="note-68" aria-hidden="true"><rect x="855.7727" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="914.864" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-70" data-surface-control="note-70" aria-hidden="true"><rect x="914.8636" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-26" data-part="key-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 26"><title>Key 26</title><g aria-hidden="true">
+<rect x="1033.045" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-73" data-surface-control="note-73" aria-hidden="true"><rect x="1033.0455" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-28" data-part="key-28" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 28"><title>Key 28</title><g aria-hidden="true">
+<rect x="1092.136" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-75" data-surface-control="note-75" aria-hidden="true"><rect x="1092.1364" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-31" data-part="key-31" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 31"><title>Key 31</title><g aria-hidden="true">
+<rect x="1210.318" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-78" data-surface-control="note-78" aria-hidden="true"><rect x="1210.3182" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-33" data-part="key-33" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 33"><title>Key 33</title><g aria-hidden="true">
+<rect x="1269.409" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-80" data-surface-control="note-80" aria-hidden="true"><rect x="1269.4091" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="moog-subsequent-37-panel--key-35" data-part="key-35" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 35"><title>Key 35</title><g aria-hidden="true">
+<rect x="1328.5" y="470" width="36.636" height="164.7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="moog-subsequent-37-panel--surface--note-82" data-surface-control="note-82" aria-hidden="true"><rect x="1328.5" y="470" width="36.6364" height="164.7" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

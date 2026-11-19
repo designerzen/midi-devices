@@ -289,9 +289,9 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1500,
-		"height": 680,
+		"height": 770,
 		"elements": [
 			{
 				"id": "lfo-amp",
@@ -299,519 +299,563 @@
 				"kind": "knob",
 				"position": {
 					"x": 2.0666666666666664,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
-				}
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
+				},
+				"learnable": true
 			},
 			{
-				"id": "lfo-delay",
-				"label": "LFO: Delay",
+				"id": "lfo-delay-knob",
+				"label": "Delay",
 				"kind": "knob",
 				"position": {
-					"x": 3.881329179646937,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
+					"x": 3.8813266666666664,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "lfo-delay-knob"
+				"control": "lfo-delay-knob",
+				"learnable": true
 			},
 			{
-				"id": "lfo-wave",
-				"label": "LFO: Wave",
+				"id": "lfo-wave-knob",
+				"label": "Wave",
 				"kind": "knob",
 				"position": {
-					"x": 5.695991692627208,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
+					"x": 5.695993333333333,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "lfo-wave-knob"
+				"control": "lfo-wave-knob",
+				"learnable": true
 			},
 			{
-				"id": "lfo-rate",
-				"label": "LFO: Rate",
+				"id": "lfo-rate-fader",
+				"label": "Rate",
 				"kind": "fader",
 				"position": {
-					"x": 7.5106542056074765,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
+					"x": 7.510653333333334,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "lfo-rate-fader"
+				"control": "lfo-rate-fader",
+				"learnable": true
 			},
 			{
-				"id": "lfo-key-trigger",
-				"label": "LFO: Key trigger",
-				"kind": "button",
-				"position": {
-					"x": 9.325316718587748,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
-				},
-				"control": "lfo-key-trigger-switch"
-			},
-			{
-				"id": "position-lfo",
-				"label": "POSITION: LFO",
+				"id": "lfo-key-trigger-switch",
+				"label": "Key trigger",
 				"kind": "fader",
 				"position": {
-					"x": 12.606645898234687,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 9.32532,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "position-lfo-fader"
+				"control": "lfo-key-trigger-switch",
+				"learnable": true
+			},
+			{
+				"id": "position-lfo-fader",
+				"label": "LFO",
+				"kind": "fader",
+				"position": {
+					"x": 12.606646666666668,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
+				},
+				"control": "position-lfo-fader",
+				"learnable": true
 			},
 			{
 				"id": "position-lfo-polarity",
 				"label": "POSITION: LFO polarity",
 				"kind": "button",
 				"position": {
-					"x": 15.928971962616826,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
-				}
+					"x": 15.928973333333332,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
-				"id": "position-random",
-				"label": "POSITION: Random",
+				"id": "position-random-knob",
+				"label": "Random",
 				"kind": "knob",
 				"position": {
-					"x": 19.251298026998963,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 19.2513,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "position-random-knob"
+				"control": "position-random-knob",
+				"learnable": true
 			},
 			{
-				"id": "position-spread",
-				"label": "POSITION: Spread",
+				"id": "position-spread-knob",
+				"label": "Spread",
 				"kind": "knob",
 				"position": {
-					"x": 22.573624091381102,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 22.573626666666666,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "position-spread-knob"
+				"control": "position-spread-knob",
+				"learnable": true
 			},
 			{
-				"id": "position-position",
-				"label": "POSITION: Position",
+				"id": "position-position-fader",
+				"label": "Position",
 				"kind": "fader",
 				"position": {
-					"x": 12.606645898234687,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 12.606646666666668,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "position-position-fader"
+				"control": "position-position-fader",
+				"learnable": true
 			},
 			{
-				"id": "position-env",
-				"label": "POSITION: Env",
+				"id": "position-env-fader",
+				"label": "Env",
 				"kind": "fader",
 				"position": {
-					"x": 15.928971962616826,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 15.928973333333332,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "position-env-fader"
+				"control": "position-env-fader",
+				"learnable": true
 			},
 			{
 				"id": "position-env-polarity",
 				"label": "POSITION: Env polarity",
 				"kind": "button",
 				"position": {
-					"x": 19.251298026998963,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
-				}
+					"x": 19.2513,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
 				"id": "oscillator-layer-1-wave",
 				"label": "OSCILLATOR: Layer 1 wave",
 				"kind": "knob",
 				"position": {
-					"x": 27.362616822429906,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
-				}
+					"x": 27.36262,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
-				"id": "oscillator-range",
-				"label": "OSCILLATOR: Range",
+				"id": "oscillator-range-switch",
+				"label": "Range",
 				"kind": "fader",
 				"position": {
-					"x": 30.68494288681205,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 30.68494,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "oscillator-range-switch"
+				"control": "oscillator-range-switch",
+				"learnable": true
 			},
 			{
 				"id": "oscillator-layer-2-wave",
 				"label": "OSCILLATOR: Layer 2 wave",
 				"kind": "knob",
 				"position": {
-					"x": 34.007268951194185,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
-				}
+					"x": 34.007266666666666,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
-				"id": "oscillator-layer-2-octave",
-				"label": "OSCILLATOR: Layer 2 octave",
+				"id": "oscillator-layer-2-octave-switch",
+				"label": "Layer 2 octave",
 				"kind": "fader",
 				"position": {
-					"x": 37.32959501557633,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 37.329593333333335,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "oscillator-layer-2-octave-switch"
+				"control": "oscillator-layer-2-octave-switch",
+				"learnable": true
 			},
 			{
-				"id": "oscillator-layer-mix",
-				"label": "OSCILLATOR: Layer mix",
+				"id": "oscillator-layer-mix-fader",
+				"label": "Layer mix",
 				"kind": "fader",
 				"position": {
-					"x": 27.362616822429906,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 27.36262,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "oscillator-layer-mix-fader"
+				"control": "oscillator-layer-mix-fader",
+				"learnable": true
 			},
 			{
-				"id": "oscillator-mix-env",
-				"label": "OSCILLATOR: Mix env",
+				"id": "oscillator-mix-env-knob",
+				"label": "Mix env",
 				"kind": "knob",
 				"position": {
-					"x": 30.68494288681205,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 30.68494,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "oscillator-mix-env-knob"
+				"control": "oscillator-mix-env-knob",
+				"learnable": true
 			},
 			{
-				"id": "oscillator-mix-lfo",
-				"label": "OSCILLATOR: Mix LFO",
+				"id": "oscillator-mix-lfo-knob",
+				"label": "Mix LFO",
 				"kind": "knob",
 				"position": {
-					"x": 34.007268951194185,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 34.007266666666666,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "oscillator-mix-lfo-knob"
+				"control": "oscillator-mix-lfo-knob",
+				"learnable": true
 			},
 			{
-				"id": "waveshaper-pitch-lfo",
-				"label": "WAVESHAPER: Pitch LFO",
+				"id": "waveshaper-pitch-lfo-knob",
+				"label": "Pitch LFO",
 				"kind": "knob",
 				"position": {
-					"x": 42.11858774662514,
-					"y": 13.970588235294118,
-					"width": 1.7413291796469368,
-					"height": 52.94117647058824
+					"x": 42.118586666666666,
+					"y": 12.337662337662337,
+					"width": 1.7413266666666667,
+					"height": 46.75324675324675
 				},
-				"control": "waveshaper-pitch-lfo-knob"
+				"control": "waveshaper-pitch-lfo-knob",
+				"learnable": true
 			},
 			{
-				"id": "waveshaper-lfo",
-				"label": "WAVESHAPER: LFO",
+				"id": "waveshaper-lfo-knob",
+				"label": "LFO",
 				"kind": "knob",
 				"position": {
-					"x": 43.85991692627208,
-					"y": 13.970588235294118,
-					"width": 1.7413291796469368,
-					"height": 52.94117647058824
+					"x": 43.85992,
+					"y": 12.337662337662337,
+					"width": 1.7413266666666667,
+					"height": 46.75324675324675
 				},
-				"control": "waveshaper-lfo-knob"
+				"control": "waveshaper-lfo-knob",
+				"learnable": true
 			},
 			{
-				"id": "waveshaper-shape",
-				"label": "WAVESHAPER: Shape",
+				"id": "waveshaper-shape-knob",
+				"label": "Shape",
 				"kind": "knob",
 				"position": {
-					"x": 45.60124610591901,
-					"y": 13.970588235294118,
-					"width": 1.7413291796469368,
-					"height": 52.94117647058824
+					"x": 45.60124666666667,
+					"y": 12.337662337662337,
+					"width": 1.7413266666666667,
+					"height": 46.75324675324675
 				},
-				"control": "waveshaper-shape-knob"
+				"control": "waveshaper-shape-knob",
+				"learnable": true
 			},
 			{
-				"id": "waveshaper-env",
-				"label": "WAVESHAPER: Env",
+				"id": "waveshaper-env-knob",
+				"label": "Env",
 				"kind": "knob",
 				"position": {
-					"x": 47.34257528556595,
-					"y": 13.970588235294118,
-					"width": 1.7413291796469368,
-					"height": 52.94117647058824
+					"x": 47.342573333333334,
+					"y": 12.337662337662337,
+					"width": 1.7413266666666667,
+					"height": 46.75324675324675
 				},
-				"control": "waveshaper-env-knob"
+				"control": "waveshaper-env-knob",
+				"learnable": true
 			},
 			{
-				"id": "filter-cutoff",
-				"label": "FILTER: Cutoff",
+				"id": "filter-cutoff-fader",
+				"label": "Cutoff",
 				"kind": "fader",
 				"position": {
-					"x": 50.55057113187955,
-					"y": 13.970588235294118,
-					"width": 3.8493250259605407,
-					"height": 26.47058823529412
+					"x": 50.55057333333334,
+					"y": 12.337662337662337,
+					"width": 3.8493266666666663,
+					"height": 23.376623376623375
 				},
-				"control": "filter-cutoff-fader"
+				"control": "filter-cutoff-fader",
+				"learnable": true
 			},
 			{
-				"id": "filter-resonance",
-				"label": "FILTER: Resonance",
+				"id": "filter-resonance-fader",
+				"label": "Resonance",
 				"kind": "fader",
 				"position": {
-					"x": 54.39989615784009,
-					"y": 13.970588235294118,
-					"width": 3.8493250259605407,
-					"height": 26.47058823529412
+					"x": 54.399893333333324,
+					"y": 12.337662337662337,
+					"width": 3.8493266666666663,
+					"height": 23.376623376623375
 				},
-				"control": "filter-resonance-fader"
+				"control": "filter-resonance-fader",
+				"learnable": true
 			},
 			{
-				"id": "filter-env",
-				"label": "FILTER: Env",
+				"id": "filter-env-fader",
+				"label": "Env",
 				"kind": "fader",
 				"position": {
-					"x": 58.24922118380063,
-					"y": 13.970588235294118,
-					"width": 3.8493250259605407,
-					"height": 26.47058823529412
+					"x": 58.24922,
+					"y": 12.337662337662337,
+					"width": 3.8493266666666663,
+					"height": 23.376623376623375
 				},
-				"control": "filter-env-fader"
+				"control": "filter-env-fader",
+				"learnable": true
 			},
 			{
-				"id": "filter-lfo",
-				"label": "FILTER: LFO",
+				"id": "filter-lfo-fader",
+				"label": "LFO",
 				"kind": "fader",
 				"position": {
-					"x": 62.098546209761174,
-					"y": 13.970588235294118,
-					"width": 3.8493250259605407,
-					"height": 26.47058823529412
+					"x": 62.098546666666664,
+					"y": 12.337662337662337,
+					"width": 3.8493266666666663,
+					"height": 23.376623376623375
 				},
-				"control": "filter-lfo-fader"
+				"control": "filter-lfo-fader",
+				"learnable": true
 			},
 			{
-				"id": "filter-drive",
-				"label": "FILTER: Drive",
+				"id": "filter-drive-switch",
+				"label": "Drive",
 				"kind": "fader",
 				"position": {
-					"x": 50.55057113187955,
-					"y": 40.44117647058824,
-					"width": 3.8493250259605407,
-					"height": 26.47058823529412
+					"x": 50.55057333333334,
+					"y": 35.714285714285715,
+					"width": 3.8493266666666663,
+					"height": 23.376623376623375
 				},
-				"control": "filter-drive-switch"
+				"control": "filter-drive-switch",
+				"learnable": true
 			},
 			{
-				"id": "filter-hpf",
-				"label": "FILTER: HPF",
+				"id": "filter-hpf-knob",
+				"label": "HPF",
 				"kind": "knob",
 				"position": {
-					"x": 54.39989615784009,
-					"y": 40.44117647058824,
-					"width": 3.8493250259605407,
-					"height": 26.47058823529412
+					"x": 54.399893333333324,
+					"y": 35.714285714285715,
+					"width": 3.8493266666666663,
+					"height": 23.376623376623375
 				},
-				"control": "filter-hpf-knob"
+				"control": "filter-hpf-knob",
+				"learnable": true
 			},
 			{
 				"id": "filter-type",
 				"label": "FILTER: Type",
 				"kind": "knob",
 				"position": {
-					"x": 58.24922118380063,
-					"y": 40.44117647058824,
-					"width": 3.8493250259605407,
-					"height": 26.47058823529412
-				}
+					"x": 58.24922,
+					"y": 35.714285714285715,
+					"width": 3.8493266666666663,
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
-				"id": "filter-key-follow",
-				"label": "FILTER: Key follow",
+				"id": "filter-key-follow-knob",
+				"label": "Key follow",
 				"kind": "knob",
 				"position": {
-					"x": 62.098546209761174,
-					"y": 40.44117647058824,
-					"width": 3.8493250259605407,
-					"height": 26.47058823529412
+					"x": 62.098546666666664,
+					"y": 35.714285714285715,
+					"width": 3.8493266666666663,
+					"height": 23.376623376623375
 				},
-				"control": "filter-key-follow-knob"
+				"control": "filter-key-follow-knob",
+				"learnable": true
 			},
 			{
-				"id": "amp-level",
-				"label": "AMP: Level",
+				"id": "amp-level-fader",
+				"label": "Level",
 				"kind": "fader",
 				"position": {
-					"x": 67.41453790238837,
-					"y": 13.970588235294118,
-					"width": 4.556178608515058,
-					"height": 52.94117647058824
+					"x": 67.41454,
+					"y": 12.337662337662337,
+					"width": 4.5561799999999995,
+					"height": 46.75324675324675
 				},
-				"control": "amp-level-fader"
+				"control": "amp-level-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-attack",
-				"label": "ENVELOPE: Attack",
+				"id": "envelope-attack-fader",
+				"label": "Attack",
 				"kind": "fader",
 				"position": {
-					"x": 73.4373831775701,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 73.43737999999999,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "envelope-attack-fader"
+				"control": "envelope-attack-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-decay",
-				"label": "ENVELOPE: Decay",
+				"id": "envelope-decay-fader",
+				"label": "Decay",
 				"kind": "fader",
 				"position": {
-					"x": 76.75970924195224,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 76.75970666666667,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "envelope-decay-fader"
+				"control": "envelope-decay-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-sustain",
-				"label": "ENVELOPE: Sustain",
+				"id": "envelope-sustain-fader",
+				"label": "Sustain",
 				"kind": "fader",
 				"position": {
-					"x": 80.08203530633438,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 80.08203333333333,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "envelope-sustain-fader"
+				"control": "envelope-sustain-fader",
+				"learnable": true
 			},
 			{
-				"id": "envelope-release",
-				"label": "ENVELOPE: Release",
+				"id": "envelope-release-fader",
+				"label": "Release",
 				"kind": "fader",
 				"position": {
-					"x": 83.40436137071652,
-					"y": 13.970588235294118,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 83.40436,
+					"y": 12.337662337662337,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "envelope-release-fader"
+				"control": "envelope-release-fader",
+				"learnable": true
 			},
 			{
 				"id": "envelope-portamento",
 				"label": "ENVELOPE: Portamento",
 				"kind": "knob",
 				"position": {
-					"x": 73.4373831775701,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
-				}
+					"x": 73.43737999999999,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
-				"id": "envelope-portamento-time",
-				"label": "ENVELOPE: Portamento time",
+				"id": "envelope-portamento-time-knob",
+				"label": "Portamento time",
 				"kind": "knob",
 				"position": {
-					"x": 76.75970924195224,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
+					"x": 76.75970666666667,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
 				},
-				"control": "envelope-portamento-time-knob"
+				"control": "envelope-portamento-time-knob",
+				"learnable": true
 			},
 			{
 				"id": "envelope-env-select",
 				"label": "ENVELOPE: ENV select",
 				"kind": "button",
 				"position": {
-					"x": 80.08203530633438,
-					"y": 40.44117647058824,
-					"width": 3.3223260643821395,
-					"height": 26.47058823529412
-				}
+					"x": 80.08203333333333,
+					"y": 35.714285714285715,
+					"width": 3.3223266666666667,
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
-				"id": "effects-delay",
-				"label": "EFFECTS: Delay",
+				"id": "effects-delay-fader",
+				"label": "Delay",
 				"kind": "fader",
 				"position": {
-					"x": 88.19335410176532,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
+					"x": 88.19335333333333,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "effects-delay-fader"
+				"control": "effects-delay-fader",
+				"learnable": true
 			},
 			{
-				"id": "effects-time",
-				"label": "EFFECTS: Time",
+				"id": "effects-time-fader",
+				"label": "Time",
 				"kind": "fader",
 				"position": {
-					"x": 90.00801661474557,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
+					"x": 90.00801333333334,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "effects-time-fader"
+				"control": "effects-time-fader",
+				"learnable": true
 			},
 			{
-				"id": "effects-feedback",
-				"label": "EFFECTS: Feedback",
+				"id": "effects-feedback-fader",
+				"label": "Feedback",
 				"kind": "fader",
 				"position": {
-					"x": 91.82267912772586,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
+					"x": 91.82268,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "effects-feedback-fader"
+				"control": "effects-feedback-fader",
+				"learnable": true
 			},
 			{
-				"id": "effects-reverb",
-				"label": "EFFECTS: Reverb",
+				"id": "effects-reverb-knob",
+				"label": "Reverb",
 				"kind": "knob",
 				"position": {
-					"x": 93.63734164070613,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
+					"x": 93.63734,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "effects-reverb-knob"
+				"control": "effects-reverb-knob",
+				"learnable": true
 			},
 			{
-				"id": "effects-reverb-time",
-				"label": "EFFECTS: Reverb time",
+				"id": "effects-reverb-time-knob",
+				"label": "Reverb time",
 				"kind": "knob",
 				"position": {
-					"x": 95.4520041536864,
-					"y": 13.970588235294118,
-					"width": 1.8146625129802703,
-					"height": 52.94117647058824
+					"x": 95.45200666666666,
+					"y": 12.337662337662337,
+					"width": 1.81466,
+					"height": 46.75324675324675
 				},
-				"control": "effects-reverb-time-knob"
+				"control": "effects-reverb-time-knob",
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-volume",
@@ -819,10 +863,11 @@
 				"kind": "knob",
 				"position": {
 					"x": 2.0666666666666664,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-note",
@@ -830,10 +875,11 @@
 				"kind": "button",
 				"position": {
 					"x": 6.860000000000001,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-arpeggio",
@@ -841,21 +887,23 @@
 				"kind": "button",
 				"position": {
 					"x": 11.653333333333334,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-sequencer",
 				"label": "MEMORY / PERFORMANCE: Sequencer",
 				"kind": "button",
 				"position": {
-					"x": 16.44666666666667,
-					"y": 75.0,
+					"x": 16.446666666666665,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-start",
@@ -863,10 +911,11 @@
 				"kind": "button",
 				"position": {
 					"x": 21.240000000000002,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-menu",
@@ -874,32 +923,35 @@
 				"kind": "button",
 				"position": {
 					"x": 26.033333333333335,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-value",
 				"label": "MEMORY / PERFORMANCE: Value",
 				"kind": "knob",
 				"position": {
-					"x": 30.826666666666668,
-					"y": 75.0,
+					"x": 30.826666666666664,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-hold",
 				"label": "MEMORY / PERFORMANCE: Hold",
 				"kind": "button",
 				"position": {
-					"x": 35.620000000000005,
-					"y": 75.0,
+					"x": 35.62,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-dual",
@@ -907,10 +959,11 @@
 				"kind": "button",
 				"position": {
 					"x": 40.413333333333334,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-split",
@@ -918,10 +971,11 @@
 				"kind": "button",
 				"position": {
 					"x": 45.20666666666667,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-lower",
@@ -929,32 +983,35 @@
 				"kind": "button",
 				"position": {
 					"x": 50.0,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-upper",
 				"label": "MEMORY / PERFORMANCE: Upper",
 				"kind": "button",
 				"position": {
-					"x": 54.79333333333334,
-					"y": 75.0,
+					"x": 54.79333333333333,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-bank-1-4",
 				"label": "MEMORY / PERFORMANCE: Bank 1 4",
 				"kind": "button",
 				"position": {
-					"x": 59.58666666666667,
-					"y": 75.0,
+					"x": 59.586666666666666,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-bank-5-8",
@@ -962,21 +1019,23 @@
 				"kind": "button",
 				"position": {
 					"x": 64.38000000000001,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-manual",
 				"label": "MEMORY / PERFORMANCE: Manual",
 				"kind": "button",
 				"position": {
-					"x": 69.17333333333335,
-					"y": 75.0,
+					"x": 69.17333333333333,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-delay-reverb",
@@ -984,10 +1043,11 @@
 				"kind": "button",
 				"position": {
 					"x": 73.96666666666667,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-chorus-i",
@@ -995,10 +1055,11 @@
 				"kind": "button",
 				"position": {
 					"x": 78.76,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-chorus-ii",
@@ -1006,10 +1067,11 @@
 				"kind": "button",
 				"position": {
 					"x": 83.55333333333334,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-patch-1",
@@ -1017,21 +1079,23 @@
 				"kind": "button",
 				"position": {
 					"x": 88.34666666666668,
-					"y": 75.0,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-patch-2",
 				"label": "MEMORY / PERFORMANCE: Patch 2",
 				"kind": "button",
 				"position": {
-					"x": 93.14000000000001,
-					"y": 75.0,
+					"x": 93.13999999999999,
+					"y": 66.23376623376623,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-patch-3",
@@ -1039,10 +1103,11 @@
 				"kind": "button",
 				"position": {
 					"x": 2.0666666666666664,
-					"y": 83.08823529411765,
+					"y": 73.37662337662337,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-patch-4",
@@ -1050,10 +1115,11 @@
 				"kind": "button",
 				"position": {
 					"x": 6.860000000000001,
-					"y": 83.08823529411765,
+					"y": 73.37662337662337,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-patch-5",
@@ -1061,21 +1127,423 @@
 				"kind": "button",
 				"position": {
 					"x": 11.653333333333334,
-					"y": 83.08823529411765,
+					"y": 73.37662337662337,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
 			},
 			{
 				"id": "memory-performance-patch-6",
 				"label": "MEMORY / PERFORMANCE: Patch 6",
 				"kind": "button",
 				"position": {
-					"x": 16.44666666666667,
-					"y": 83.08823529411765,
+					"x": 16.446666666666665,
+					"y": 73.37662337662337,
 					"width": 4.793333333333334,
-					"height": 8.088235294117647
-				}
+					"height": 7.142857142857142
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-1",
+				"label": "Keyboard note 48",
+				"kind": "key",
+				"position": {
+					"x": 1.6666666666666667,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-2",
+				"label": "Keyboard note 49",
+				"kind": "key",
+				"position": {
+					"x": 5.533333333333333,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-3",
+				"label": "Keyboard note 50",
+				"kind": "key",
+				"position": {
+					"x": 9.4,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-4",
+				"label": "Keyboard note 51",
+				"kind": "key",
+				"position": {
+					"x": 13.266666666666666,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-5",
+				"label": "Keyboard note 52",
+				"kind": "key",
+				"position": {
+					"x": 17.133333333333333,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-6",
+				"label": "Keyboard note 53",
+				"kind": "key",
+				"position": {
+					"x": 21.0,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-7",
+				"label": "Keyboard note 54",
+				"kind": "key",
+				"position": {
+					"x": 24.866666666666667,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-8",
+				"label": "Keyboard note 55",
+				"kind": "key",
+				"position": {
+					"x": 28.733333333333334,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-9",
+				"label": "Keyboard note 56",
+				"kind": "key",
+				"position": {
+					"x": 32.6,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-10",
+				"label": "Keyboard note 57",
+				"kind": "key",
+				"position": {
+					"x": 36.46666666666666,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-11",
+				"label": "Keyboard note 58",
+				"kind": "key",
+				"position": {
+					"x": 40.33333333333333,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-12",
+				"label": "Keyboard note 59",
+				"kind": "key",
+				"position": {
+					"x": 44.2,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 59
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-13",
+				"label": "Keyboard note 60",
+				"kind": "key",
+				"position": {
+					"x": 48.06666666666667,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-14",
+				"label": "Keyboard note 61",
+				"kind": "key",
+				"position": {
+					"x": 51.93333333333333,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 61
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-15",
+				"label": "Keyboard note 62",
+				"kind": "key",
+				"position": {
+					"x": 55.800000000000004,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 62
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-16",
+				"label": "Keyboard note 63",
+				"kind": "key",
+				"position": {
+					"x": 59.66666666666667,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 63
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-17",
+				"label": "Keyboard note 64",
+				"kind": "key",
+				"position": {
+					"x": 63.53333333333333,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 64
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-18",
+				"label": "Keyboard note 65",
+				"kind": "key",
+				"position": {
+					"x": 67.4,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 65
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-19",
+				"label": "Keyboard note 66",
+				"kind": "key",
+				"position": {
+					"x": 71.26666666666667,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 66
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-20",
+				"label": "Keyboard note 67",
+				"kind": "key",
+				"position": {
+					"x": 75.13333333333333,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 67
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-21",
+				"label": "Keyboard note 68",
+				"kind": "key",
+				"position": {
+					"x": 79.0,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 68
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-22",
+				"label": "Keyboard note 69",
+				"kind": "key",
+				"position": {
+					"x": 82.86666666666666,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 69
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-23",
+				"label": "Keyboard note 70",
+				"kind": "key",
+				"position": {
+					"x": 86.73333333333333,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 70
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-24",
+				"label": "Keyboard note 71",
+				"kind": "key",
+				"position": {
+					"x": 90.60000000000001,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 71
+				},
+				"learnable": true
+			},
+			{
+				"id": "keyboard-25",
+				"label": "Keyboard note 72",
+				"kind": "key",
+				"position": {
+					"x": 94.46666666666667,
+					"y": 89.35064935064935,
+					"width": 3.8666666666666667,
+					"height": 6.493506493506493
+				},
+				"message": {
+					"type": "note",
+					"number": 72
+				},
+				"learnable": true
 			}
 		]
 	},

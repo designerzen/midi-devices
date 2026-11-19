@@ -1,350 +1,559 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 720" role="img" aria-labelledby="title description">
-<title id="title">ASM Hydrasynth Explorer top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="720" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="702" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">ASM Hydrasynth Explorer</text>
-<text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="120" height="140" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="master-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="85" cy="138.785" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M85 116.785L85 130.035" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 720" role="group" aria-labelledby="asm-hydrasynth-explorer-panel--title" aria-describedby="asm-hydrasynth-explorer-panel--description" data-device="asm-hydrasynth-explorer" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="asm-hydrasynth-explorer-panel--title">ASM Hydrasynth Explorer overhead hardware diagram</title><desc id="asm-hydrasynth-explorer-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="asm-hydrasynth-explorer-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1232" height="702" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">ASM Hydrasynth Explorer</text>
+<text x="1225" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="120" height="140" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="160" y="65" width="330" height="160" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="160" y="240" width="330" height="150" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="505" y="65" width="200" height="325" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="720" y="65" width="495" height="155" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="720" y="235" width="495" height="155" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="415" width="95" height="265" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="160" y="65" width="330" height="160" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="arpeggiator-mode" data-kind="knob" aria-label="Mode"><title>Mode</title>
-<circle cx="197.8" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M197.8 106.801L197.8 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--master-volume" data-part="master-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER: Volume"><title>MASTER: Volume</title><g aria-hidden="true">
+<circle cx="85" cy="138.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M85 116.785L85 130.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="arpeggiator-octave" data-kind="knob" aria-label="Octave"><title>Octave</title>
-<circle cx="261.4" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M261.4 106.801L261.4 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-volume" data-surface-control="master-volume" aria-hidden="true"><rect x="31" y="95" width="108" height="105" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="arpeggiator-division" data-kind="knob" aria-label="Division"><title>Division</title>
-<circle cx="325" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M325 106.801L325 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-mode" data-part="arpeggiator-mode" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARPEGGIATOR: Mode"><title>ARPEGGIATOR: Mode</title><g aria-hidden="true">
+<circle cx="197.8" cy="118.719" r="14.918" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M197.8 106.801L197.8 113.498" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="arpeggiator-swing" data-kind="knob" aria-label="Swing"><title>Swing</title>
-<circle cx="388.6" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M388.6 106.801L388.6 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-mode" data-surface-control="arpeggiator-mode" aria-hidden="true"><rect x="166" y="95" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="arpeggiator-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="452.2" cy="118.719" r="14.918" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M452.2 106.801L452.2 113.498" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-octave" data-part="arpeggiator-octave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARPEGGIATOR: Octave"><title>ARPEGGIATOR: Octave</title><g aria-hidden="true">
+<circle cx="261.4" cy="118.719" r="14.918" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M261.4 106.801L261.4 113.498" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="arpeggiator-on" data-kind="button" aria-label="On"><title>On</title>
-<rect x="182.8" y="166.219" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-octave" data-surface-control="arpeggiator-octave" aria-hidden="true"><rect x="229.6" y="95" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="arpeggiator-latch" data-kind="button" aria-label="Latch"><title>Latch</title>
-<rect x="246.4" y="166.219" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-division" data-part="arpeggiator-division" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARPEGGIATOR: Division"><title>ARPEGGIATOR: Division</title><g aria-hidden="true">
+<circle cx="325" cy="118.719" r="14.918" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M325 106.801L325 113.498" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="arpeggiator-triplet" data-kind="button" aria-label="Triplet"><title>Triplet</title>
-<rect x="310" y="166.219" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-division" data-surface-control="arpeggiator-division" aria-hidden="true"><rect x="293.2" y="95" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="arpeggiator-tap" data-kind="button" aria-label="Tap"><title>Tap</title>
-<rect x="373.6" y="166.219" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-swing" data-part="arpeggiator-swing" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARPEGGIATOR: Swing"><title>ARPEGGIATOR: Swing</title><g aria-hidden="true">
+<circle cx="388.6" cy="118.719" r="14.918" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M388.6 106.801L388.6 113.498" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="160" y="240" width="330" height="150" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="filter-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
-<circle cx="219" cy="290.035" r="12.265" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M219 280.77L219 285.742" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-swing" data-surface-control="arpeggiator-swing" aria-hidden="true"><rect x="356.8" y="95" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<circle cx="325" cy="290.035" r="12.265" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M325 280.77L325 285.742" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-tempo" data-part="arpeggiator-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ARPEGGIATOR: Tempo"><title>ARPEGGIATOR: Tempo</title><g aria-hidden="true">
+<circle cx="452.2" cy="118.719" r="14.918" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M452.2 106.801L452.2 113.498" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-drive-morph" data-kind="knob" aria-label="Drive / Morph"><title>Drive / Morph</title>
-<circle cx="431" cy="290.035" r="12.265" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M431 280.77L431 285.742" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-tempo" data-surface-control="arpeggiator-tempo" aria-hidden="true"><rect x="420.4" y="95" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-filter-1" data-kind="button" aria-label="Filter 1"><title>Filter 1</title>
-<rect x="204" y="332.535" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-on" data-part="arpeggiator-on" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="ARPEGGIATOR: On"><title>ARPEGGIATOR: On</title><g aria-hidden="true">
+<rect x="182.8" y="166.219" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="filter-filter-2" data-kind="button" aria-label="Filter 2"><title>Filter 2</title>
-<rect x="310" y="332.535" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-on" data-surface-control="arpeggiator-on" aria-hidden="true"><rect x="166" y="157.5" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="505" y="65" width="200" height="325" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="patch-main-system-patch-display" data-kind="screen" aria-label="Patch display"><title>Patch display</title>
-<rect x="516" y="100" width="84" height="30.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="520" y="104" width="76" height="22.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-latch" data-part="arpeggiator-latch" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="ARPEGGIATOR: Latch"><title>ARPEGGIATOR: Latch</title><g aria-hidden="true">
+<rect x="246.4" y="166.219" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-main-system-patch-select" data-kind="knob" aria-label="Patch select"><title>Patch select</title>
-<circle cx="652" cy="115.285" r="12.445" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M652 105.84L652 110.929" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-latch" data-surface-control="arpeggiator-latch" aria-hidden="true"><rect x="229.6" y="157.5" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-main-system-home" data-kind="button" aria-label="Home"><title>Home</title>
-<rect x="543" y="158.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-triplet" data-part="arpeggiator-triplet" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="ARPEGGIATOR: Triplet"><title>ARPEGGIATOR: Triplet</title><g aria-hidden="true">
+<rect x="310" y="166.219" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-main-system-save" data-kind="button" aria-label="Save"><title>Save</title>
-<rect x="637" y="158.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-triplet" data-surface-control="arpeggiator-triplet" aria-hidden="true"><rect x="293.2" y="157.5" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-main-system-system" data-kind="button" aria-label="System"><title>System</title>
-<rect x="543" y="216.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--arpeggiator-tap" data-part="arpeggiator-tap" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="ARPEGGIATOR: Tap"><title>ARPEGGIATOR: Tap</title><g aria-hidden="true">
+<rect x="373.6" y="166.219" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-main-system-voice" data-kind="button" aria-label="Voice"><title>Voice</title>
-<rect x="637" y="216.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--arpeggiator-tap" data-surface-control="arpeggiator-tap" aria-hidden="true"><rect x="356.8" y="157.5" width="63.6" height="62.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-main-system-init" data-kind="button" aria-label="Init"><title>Init</title>
-<rect x="543" y="274.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--filter-cutoff" data-part="filter-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER: Cutoff"><title>FILTER: Cutoff</title><g aria-hidden="true">
+<circle cx="219" cy="290.035" r="12.265" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M219 280.77L219 285.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="patch-main-system-random" data-kind="button" aria-label="Random"><title>Random</title>
-<rect x="637" y="274.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--filter-cutoff" data-surface-control="filter-cutoff" aria-hidden="true"><rect x="166" y="270" width="106" height="57.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-main-system-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<rect x="543" y="332.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--filter-resonance" data-part="filter-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER: Resonance"><title>FILTER: Resonance</title><g aria-hidden="true">
+<circle cx="325" cy="290.035" r="12.265" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M325 280.77L325 285.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="720" y="65" width="495" height="155" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="master-control-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="731" y="100" width="70.5" height="32.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="735" y="104" width="62.5" height="24.57" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--filter-resonance" data-surface-control="filter-resonance" aria-hidden="true"><rect x="272" y="270" width="106" height="57.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="master-control-control-1" data-kind="knob" aria-label="Control 1"><title>Control 1</title>
-<circle cx="846.75" cy="116.285" r="13.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M846.75 106.12L846.75 111.677" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--filter-drive-morph" data-part="filter-drive-morph" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER: Drive / Morph"><title>FILTER: Drive / Morph</title><g aria-hidden="true">
+<circle cx="431" cy="290.035" r="12.265" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M431 280.77L431 285.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="master-control-control-2" data-kind="knob" aria-label="Control 2"><title>Control 2</title>
-<circle cx="927.25" cy="116.285" r="13.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M927.25 106.12L927.25 111.677" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--filter-drive-morph" data-surface-control="filter-drive-morph" aria-hidden="true"><rect x="378" y="270" width="106" height="57.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="master-control-control-3" data-kind="knob" aria-label="Control 3"><title>Control 3</title>
-<circle cx="1007.75" cy="116.285" r="13.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1007.75 106.12L1007.75 111.677" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--filter-filter-1" data-part="filter-filter-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER: Filter 1"><title>FILTER: Filter 1</title><g aria-hidden="true">
+<rect x="204" y="332.535" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="master-control-control-4" data-kind="knob" aria-label="Control 4"><title>Control 4</title>
-<circle cx="1088.25" cy="116.285" r="13.165" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1088.25 106.12L1088.25 111.677" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--filter-filter-1" data-surface-control="filter-filter-1" aria-hidden="true"><rect x="166" y="327.5" width="106" height="57.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="master-control-control-button-1" data-kind="button" aria-label="Control button 1"><title>Control button 1</title>
-<rect x="1158.68" y="100" width="20.14" height="20.14" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--filter-filter-2" data-part="filter-filter-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER: Filter 2"><title>FILTER: Filter 2</title><g aria-hidden="true">
+<rect x="310" y="332.535" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="master-control-control-button-2" data-kind="button" aria-label="Control button 2"><title>Control button 2</title>
-<rect x="756.18" y="160" width="20.14" height="20.14" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--filter-filter-2" data-surface-control="filter-filter-2" aria-hidden="true"><rect x="272" y="327.5" width="106" height="57.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="master-control-control-button-3" data-kind="button" aria-label="Control button 3"><title>Control button 3</title>
-<rect x="836.68" y="160" width="20.14" height="20.14" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-patch-display" data-part="patch-main-system-patch-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="PATCH / MAIN SYSTEM: Patch display"><title>PATCH / MAIN SYSTEM: Patch display</title><g aria-hidden="true">
+<rect x="516" y="100" width="84" height="30.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="520" y="104" width="76" height="22.57" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="master-control-control-button-4" data-kind="button" aria-label="Control button 4"><title>Control button 4</title>
-<rect x="917.18" y="160" width="20.14" height="20.14" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 </g>
-<g id="master-control-page" data-kind="button" aria-label="Page -"><title>Page -</title>
-<rect x="992.75" y="161.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-patch-select" data-part="patch-main-system-patch-select" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PATCH / MAIN SYSTEM: Patch select"><title>PATCH / MAIN SYSTEM: Patch select</title><g aria-hidden="true">
+<circle cx="652" cy="115.285" r="12.445" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M652 105.84L652 110.929" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="master-control-page-2" data-kind="button" aria-label="Page +"><title>Page +</title>
-<rect x="1073.25" y="161.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--patch-main-system-patch-select" data-surface-control="patch-main-system-patch-select" aria-hidden="true"><rect x="605" y="95" width="94" height="58" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="master-control-browse" data-kind="button" aria-label="Browse"><title>Browse</title>
-<rect x="1153.75" y="161.285" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-home" data-part="patch-main-system-home" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / MAIN SYSTEM: Home"><title>PATCH / MAIN SYSTEM: Home</title><g aria-hidden="true">
+<rect x="543" y="158.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="720" y="235" width="495" height="155" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="module-select-osc-1" data-kind="button" aria-label="Osc 1"><title>Osc 1</title>
-<rect x="741.605" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--patch-main-system-home" data-surface-control="patch-main-system-home" aria-hidden="true"><rect x="511" y="153" width="94" height="58" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-osc-2" data-kind="button" aria-label="Osc 2"><title>Osc 2</title>
-<rect x="789.905" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-save" data-part="patch-main-system-save" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / MAIN SYSTEM: Save"><title>PATCH / MAIN SYSTEM: Save</title><g aria-hidden="true">
+<rect x="637" y="158.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-osc-3" data-kind="button" aria-label="Osc 3"><title>Osc 3</title>
-<rect x="838.205" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--patch-main-system-save" data-surface-control="patch-main-system-save" aria-hidden="true"><rect x="605" y="153" width="94" height="58" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-mutant-1" data-kind="button" aria-label="Mutant 1"><title>Mutant 1</title>
-<rect x="886.505" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-system" data-part="patch-main-system-system" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / MAIN SYSTEM: System"><title>PATCH / MAIN SYSTEM: System</title><g aria-hidden="true">
+<rect x="543" y="216.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-mutant-2" data-kind="button" aria-label="Mutant 2"><title>Mutant 2</title>
-<rect x="934.805" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--patch-main-system-system" data-surface-control="patch-main-system-system" aria-hidden="true"><rect x="511" y="211" width="94" height="58" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-mutant-3" data-kind="button" aria-label="Mutant 3"><title>Mutant 3</title>
-<rect x="983.105" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-voice" data-part="patch-main-system-voice" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / MAIN SYSTEM: Voice"><title>PATCH / MAIN SYSTEM: Voice</title><g aria-hidden="true">
+<rect x="637" y="216.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-mutant-4" data-kind="button" aria-label="Mutant 4"><title>Mutant 4</title>
-<rect x="1031.405" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--patch-main-system-voice" data-surface-control="patch-main-system-voice" aria-hidden="true"><rect x="605" y="211" width="94" height="58" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-ring-noise" data-kind="button" aria-label="Ring noise"><title>Ring noise</title>
-<rect x="1079.705" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-init" data-part="patch-main-system-init" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / MAIN SYSTEM: Init"><title>PATCH / MAIN SYSTEM: Init</title><g aria-hidden="true">
+<rect x="543" y="274.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-mixer" data-kind="button" aria-label="Mixer"><title>Mixer</title>
-<rect x="1128.005" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--patch-main-system-init" data-surface-control="patch-main-system-init" aria-hidden="true"><rect x="511" y="269" width="94" height="58" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-filter-1" data-kind="button" aria-label="Filter 1"><title>Filter 1</title>
-<rect x="1176.305" y="270" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-random" data-part="patch-main-system-random" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / MAIN SYSTEM: Random"><title>PATCH / MAIN SYSTEM: Random</title><g aria-hidden="true">
+<rect x="637" y="274.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-filter-2" data-kind="button" aria-label="Filter 2"><title>Filter 2</title>
-<rect x="741.605" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--patch-main-system-random" data-surface-control="patch-main-system-random" aria-hidden="true"><rect x="605" y="269" width="94" height="58" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-amp" data-kind="button" aria-label="Amp"><title>Amp</title>
-<rect x="789.905" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--patch-main-system-shift" data-part="patch-main-system-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / MAIN SYSTEM: Shift"><title>PATCH / MAIN SYSTEM: Shift</title><g aria-hidden="true">
+<rect x="543" y="332.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-pre-fx" data-kind="button" aria-label="Pre FX"><title>Pre FX</title>
-<rect x="838.205" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--patch-main-system-shift" data-surface-control="patch-main-system-shift" aria-hidden="true"><rect x="511" y="327" width="94" height="58" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-delay" data-kind="button" aria-label="Delay"><title>Delay</title>
-<rect x="886.505" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-display" data-part="master-control-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="MASTER CONTROL: Display"><title>MASTER CONTROL: Display</title><g aria-hidden="true">
+<rect x="731" y="100" width="70.5" height="32.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="735" y="104" width="62.5" height="24.57" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-reverb" data-kind="button" aria-label="Reverb"><title>Reverb</title>
-<rect x="934.805" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
 </g>
-<g id="module-select-post-fx" data-kind="button" aria-label="Post FX"><title>Post FX</title>
-<rect x="983.105" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-control-1" data-part="master-control-control-1" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER CONTROL: Control 1"><title>MASTER CONTROL: Control 1</title><g aria-hidden="true">
+<circle cx="846.75" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M846.75 106.12L846.75 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="module-select-env-1" data-kind="button" aria-label="Env 1"><title>Env 1</title>
-<rect x="1031.405" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-control-1" data-surface-control="master-control-control-1" aria-hidden="true"><rect x="806.5" y="95" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-env-2" data-kind="button" aria-label="Env 2"><title>Env 2</title>
-<rect x="1079.705" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-control-2" data-part="master-control-control-2" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER CONTROL: Control 2"><title>MASTER CONTROL: Control 2</title><g aria-hidden="true">
+<circle cx="927.25" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M927.25 106.12L927.25 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="module-select-env-3" data-kind="button" aria-label="Env 3"><title>Env 3</title>
-<rect x="1128.005" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-control-2" data-surface-control="master-control-control-2" aria-hidden="true"><rect x="887" y="95" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-env-4" data-kind="button" aria-label="Env 4"><title>Env 4</title>
-<rect x="1176.305" y="310" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-control-3" data-part="master-control-control-3" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER CONTROL: Control 3"><title>MASTER CONTROL: Control 3</title><g aria-hidden="true">
+<circle cx="1007.75" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1007.75 106.12L1007.75 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="module-select-env-5" data-kind="button" aria-label="Env 5"><title>Env 5</title>
-<rect x="741.605" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-control-3" data-surface-control="master-control-control-3" aria-hidden="true"><rect x="967.5" y="95" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-lfo-1" data-kind="button" aria-label="LFO 1"><title>LFO 1</title>
-<rect x="789.905" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-control-4" data-part="master-control-control-4" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MASTER CONTROL: Control 4"><title>MASTER CONTROL: Control 4</title><g aria-hidden="true">
+<circle cx="1088.25" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1088.25 106.12L1088.25 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="module-select-lfo-2" data-kind="button" aria-label="LFO 2"><title>LFO 2</title>
-<rect x="838.205" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-control-4" data-surface-control="master-control-control-4" aria-hidden="true"><rect x="1048" y="95" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-lfo-3" data-kind="button" aria-label="LFO 3"><title>LFO 3</title>
-<rect x="886.505" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-control-button-1" data-part="master-control-control-button-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER CONTROL: Control button 1"><title>MASTER CONTROL: Control button 1</title><g aria-hidden="true">
+<rect x="1158.68" y="100" width="20.14" height="20.14" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-lfo-4" data-kind="button" aria-label="LFO 4"><title>LFO 4</title>
-<rect x="934.805" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-control-button-1" data-surface-control="master-control-control-button-1" aria-hidden="true"><rect x="1128.5" y="95" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-lfo-5" data-kind="button" aria-label="LFO 5"><title>LFO 5</title>
-<rect x="983.105" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-control-button-2" data-part="master-control-control-button-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER CONTROL: Control button 2"><title>MASTER CONTROL: Control button 2</title><g aria-hidden="true">
+<rect x="756.18" y="160" width="20.14" height="20.14" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="module-select-mod-matrix" data-kind="button" aria-label="Mod matrix"><title>Mod matrix</title>
-<rect x="1031.405" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-control-button-2" data-surface-control="master-control-control-button-2" aria-hidden="true"><rect x="726" y="155" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="module-select-voice" data-kind="button" aria-label="Voice"><title>Voice</title>
-<rect x="1079.705" y="350" width="17.09" height="17.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-control-button-3" data-part="master-control-control-button-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER CONTROL: Control button 3"><title>MASTER CONTROL: Control button 3</title><g aria-hidden="true">
+<rect x="836.68" y="160" width="20.14" height="20.14" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="25" y="415" width="95" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="performance-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<rect x="37" y="481.295" width="29.5" height="29.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-control-button-3" data-surface-control="master-control-control-button-3" aria-hidden="true"><rect x="806.5" y="155" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<rect x="78.5" y="481.295" width="29.5" height="29.5" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-control-button-4" data-part="master-control-control-button-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER CONTROL: Control button 4"><title>MASTER CONTROL: Control button 4</title><g aria-hidden="true">
+<rect x="917.18" y="160" width="20.14" height="20.14" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-pitch" data-kind="strip" aria-label="Pitch"><title>Pitch</title>
-<rect x="44.487" y="565" width="14.525" height="88.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.841666666666666"/>
-<path d="M51.75 570L51.75 649.09" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-control-button-4" data-surface-control="master-control-control-button-4" aria-hidden="true"><rect x="887" y="155" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-mod" data-kind="strip" aria-label="Mod"><title>Mod</title>
-<rect x="85.987" y="565" width="14.525" height="88.09" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="4.841666666666666"/>
-<path d="M93.25 570L93.25 649.09" fill="none" stroke="#000" stroke-width="1"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-page" data-part="master-control-page" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER CONTROL: Page -"><title>MASTER CONTROL: Page -</title><g aria-hidden="true">
+<rect x="992.75" y="161.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="135" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-page" data-surface-control="master-control-page" aria-hidden="true"><rect x="967.5" y="155" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="184.091" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-page-2" data-part="master-control-page-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER CONTROL: Page +"><title>MASTER CONTROL: Page +</title><g aria-hidden="true">
+<rect x="1073.25" y="161.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="233.182" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-page-2" data-surface-control="master-control-page-2" aria-hidden="true"><rect x="1048" y="155" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="282.273" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--master-control-browse" data-part="master-control-browse" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MASTER CONTROL: Browse"><title>MASTER CONTROL: Browse</title><g aria-hidden="true">
+<rect x="1153.75" y="161.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="331.364" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--master-control-browse" data-surface-control="master-control-browse" aria-hidden="true"><rect x="1128.5" y="155" width="80.5" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="380.455" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-osc-1" data-part="module-select-osc-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Osc 1"><title>MODULE SELECT: Osc 1</title><g aria-hidden="true">
+<rect x="741.605" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="429.545" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-osc-1" data-surface-control="module-select-osc-1" aria-hidden="true"><rect x="726" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="478.636" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-osc-2" data-part="module-select-osc-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Osc 2"><title>MODULE SELECT: Osc 2</title><g aria-hidden="true">
+<rect x="789.905" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="527.727" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-osc-2" data-surface-control="module-select-osc-2" aria-hidden="true"><rect x="774.3" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="576.818" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-osc-3" data-part="module-select-osc-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Osc 3"><title>MODULE SELECT: Osc 3</title><g aria-hidden="true">
+<rect x="838.205" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="625.909" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-osc-3" data-surface-control="module-select-osc-3" aria-hidden="true"><rect x="822.6" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="675" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-mutant-1" data-part="module-select-mutant-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Mutant 1"><title>MODULE SELECT: Mutant 1</title><g aria-hidden="true">
+<rect x="886.505" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="724.091" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-mutant-1" data-surface-control="module-select-mutant-1" aria-hidden="true"><rect x="870.9" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="773.182" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-mutant-2" data-part="module-select-mutant-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Mutant 2"><title>MODULE SELECT: Mutant 2</title><g aria-hidden="true">
+<rect x="934.805" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="822.273" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-mutant-2" data-surface-control="module-select-mutant-2" aria-hidden="true"><rect x="919.2" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-27" data-kind="key" aria-label="Key 27"><title>Key 27</title>
-<rect x="871.364" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-mutant-3" data-part="module-select-mutant-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Mutant 3"><title>MODULE SELECT: Mutant 3</title><g aria-hidden="true">
+<rect x="983.105" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-29" data-kind="key" aria-label="Key 29"><title>Key 29</title>
-<rect x="920.455" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-mutant-3" data-surface-control="module-select-mutant-3" aria-hidden="true"><rect x="967.5" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-30" data-kind="key" aria-label="Key 30"><title>Key 30</title>
-<rect x="969.545" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-mutant-4" data-part="module-select-mutant-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Mutant 4"><title>MODULE SELECT: Mutant 4</title><g aria-hidden="true">
+<rect x="1031.405" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-32" data-kind="key" aria-label="Key 32"><title>Key 32</title>
-<rect x="1018.636" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-mutant-4" data-surface-control="module-select-mutant-4" aria-hidden="true"><rect x="1015.8" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-34" data-kind="key" aria-label="Key 34"><title>Key 34</title>
-<rect x="1067.727" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-ring-noise" data-part="module-select-ring-noise" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Ring noise"><title>MODULE SELECT: Ring noise</title><g aria-hidden="true">
+<rect x="1079.705" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-36" data-kind="key" aria-label="Key 36"><title>Key 36</title>
-<rect x="1116.818" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-ring-noise" data-surface-control="module-select-ring-noise" aria-hidden="true"><rect x="1064.1" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-37" data-kind="key" aria-label="Key 37"><title>Key 37</title>
-<rect x="1165.909" y="415" width="49.091" height="265" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-mixer" data-part="module-select-mixer" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Mixer"><title>MODULE SELECT: Mixer</title><g aria-hidden="true">
+<rect x="1128.005" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="168.873" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-mixer" data-surface-control="module-select-mixer" aria-hidden="true"><rect x="1112.4" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="217.964" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-filter-1" data-part="module-select-filter-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Filter 1"><title>MODULE SELECT: Filter 1</title><g aria-hidden="true">
+<rect x="1176.305" y="270" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="316.145" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-filter-1" data-surface-control="module-select-filter-1" aria-hidden="true"><rect x="1160.7" y="265" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="365.236" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-filter-2" data-part="module-select-filter-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Filter 2"><title>MODULE SELECT: Filter 2</title><g aria-hidden="true">
+<rect x="741.605" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="414.327" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-filter-2" data-surface-control="module-select-filter-2" aria-hidden="true"><rect x="726" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="512.509" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-amp" data-part="module-select-amp" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Amp"><title>MODULE SELECT: Amp</title><g aria-hidden="true">
+<rect x="789.905" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="561.6" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-amp" data-surface-control="module-select-amp" aria-hidden="true"><rect x="774.3" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="659.782" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-pre-fx" data-part="module-select-pre-fx" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Pre FX"><title>MODULE SELECT: Pre FX</title><g aria-hidden="true">
+<rect x="838.205" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="708.873" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-pre-fx" data-surface-control="module-select-pre-fx" aria-hidden="true"><rect x="822.6" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="757.964" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-delay" data-part="module-select-delay" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Delay"><title>MODULE SELECT: Delay</title><g aria-hidden="true">
+<rect x="886.505" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-26" data-kind="key" aria-label="Key 26"><title>Key 26</title>
-<rect x="856.145" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-delay" data-surface-control="module-select-delay" aria-hidden="true"><rect x="870.9" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-28" data-kind="key" aria-label="Key 28"><title>Key 28</title>
-<rect x="905.236" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-reverb" data-part="module-select-reverb" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Reverb"><title>MODULE SELECT: Reverb</title><g aria-hidden="true">
+<rect x="934.805" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-31" data-kind="key" aria-label="Key 31"><title>Key 31</title>
-<rect x="1003.418" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-reverb" data-surface-control="module-select-reverb" aria-hidden="true"><rect x="919.2" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-33" data-kind="key" aria-label="Key 33"><title>Key 33</title>
-<rect x="1052.509" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--module-select-post-fx" data-part="module-select-post-fx" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Post FX"><title>MODULE SELECT: Post FX</title><g aria-hidden="true">
+<rect x="983.105" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-35" data-kind="key" aria-label="Key 35"><title>Key 35</title>
-<rect x="1101.6" y="415" width="30.436" height="161.65" class="line" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-post-fx" data-surface-control="module-select-post-fx" aria-hidden="true"><rect x="967.5" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-env-1" data-part="module-select-env-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Env 1"><title>MODULE SELECT: Env 1</title><g aria-hidden="true">
+<rect x="1031.405" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-env-1" data-surface-control="module-select-env-1" aria-hidden="true"><rect x="1015.8" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-env-2" data-part="module-select-env-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Env 2"><title>MODULE SELECT: Env 2</title><g aria-hidden="true">
+<rect x="1079.705" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-env-2" data-surface-control="module-select-env-2" aria-hidden="true"><rect x="1064.1" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-env-3" data-part="module-select-env-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Env 3"><title>MODULE SELECT: Env 3</title><g aria-hidden="true">
+<rect x="1128.005" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-env-3" data-surface-control="module-select-env-3" aria-hidden="true"><rect x="1112.4" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-env-4" data-part="module-select-env-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Env 4"><title>MODULE SELECT: Env 4</title><g aria-hidden="true">
+<rect x="1176.305" y="310" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-env-4" data-surface-control="module-select-env-4" aria-hidden="true"><rect x="1160.7" y="305" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-env-5" data-part="module-select-env-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Env 5"><title>MODULE SELECT: Env 5</title><g aria-hidden="true">
+<rect x="741.605" y="350" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-env-5" data-surface-control="module-select-env-5" aria-hidden="true"><rect x="726" y="345" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-lfo-1" data-part="module-select-lfo-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: LFO 1"><title>MODULE SELECT: LFO 1</title><g aria-hidden="true">
+<rect x="789.905" y="350" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-lfo-1" data-surface-control="module-select-lfo-1" aria-hidden="true"><rect x="774.3" y="345" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-lfo-2" data-part="module-select-lfo-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: LFO 2"><title>MODULE SELECT: LFO 2</title><g aria-hidden="true">
+<rect x="838.205" y="350" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-lfo-2" data-surface-control="module-select-lfo-2" aria-hidden="true"><rect x="822.6" y="345" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-lfo-3" data-part="module-select-lfo-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: LFO 3"><title>MODULE SELECT: LFO 3</title><g aria-hidden="true">
+<rect x="886.505" y="350" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-lfo-3" data-surface-control="module-select-lfo-3" aria-hidden="true"><rect x="870.9" y="345" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-lfo-4" data-part="module-select-lfo-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: LFO 4"><title>MODULE SELECT: LFO 4</title><g aria-hidden="true">
+<rect x="934.805" y="350" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-lfo-4" data-surface-control="module-select-lfo-4" aria-hidden="true"><rect x="919.2" y="345" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-lfo-5" data-part="module-select-lfo-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: LFO 5"><title>MODULE SELECT: LFO 5</title><g aria-hidden="true">
+<rect x="983.105" y="350" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-lfo-5" data-surface-control="module-select-lfo-5" aria-hidden="true"><rect x="967.5" y="345" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-mod-matrix" data-part="module-select-mod-matrix" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Mod matrix"><title>MODULE SELECT: Mod matrix</title><g aria-hidden="true">
+<rect x="1031.405" y="350" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-mod-matrix" data-surface-control="module-select-mod-matrix" aria-hidden="true"><rect x="1015.8" y="345" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--module-select-voice" data-part="module-select-voice" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODULE SELECT: Voice"><title>MODULE SELECT: Voice</title><g aria-hidden="true">
+<rect x="1079.705" y="350" width="17.09" height="17.09" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--module-select-voice" data-surface-control="module-select-voice" aria-hidden="true"><rect x="1064.1" y="345" width="48.3" height="40" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--performance-octave" data-part="performance-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave -"><title>PERFORMANCE: Octave -</title><g aria-hidden="true">
+<rect x="37" y="481.295" width="29.5" height="29.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--performance-octave" data-surface-control="performance-octave" aria-hidden="true"><rect x="31" y="445" width="41.5" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--performance-octave-2" data-part="performance-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave +"><title>PERFORMANCE: Octave +</title><g aria-hidden="true">
+<rect x="78.5" y="481.295" width="29.5" height="29.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--performance-octave-2" data-surface-control="performance-octave-2" aria-hidden="true"><rect x="72.5" y="445" width="41.5" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--performance-pitch" data-part="performance-pitch" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Pitch"><title>PERFORMANCE: Pitch</title><g aria-hidden="true">
+<rect x="44.487" y="565" width="14.525" height="88.09" rx="4.842" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M51.75 570L51.75 649.09" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--performance-pitch" data-surface-control="performance-pitch" aria-hidden="true"><rect x="31" y="560" width="41.5" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--performance-mod" data-part="performance-mod" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Mod"><title>PERFORMANCE: Mod</title><g aria-hidden="true">
+<rect x="85.987" y="565" width="14.525" height="88.09" rx="4.842" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M93.25 570L93.25 649.09" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--performance-mod" data-surface-control="performance-mod" aria-hidden="true"><rect x="72.5" y="560" width="41.5" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="asm-hydrasynth-explorer-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="135" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-48" data-surface-control="note-48" aria-hidden="true"><rect x="135" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="184.091" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-50" data-surface-control="note-50" aria-hidden="true"><rect x="184.0909" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="233.182" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-52" data-surface-control="note-52" aria-hidden="true"><rect x="233.1818" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="282.273" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-53" data-surface-control="note-53" aria-hidden="true"><rect x="282.2727" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="331.364" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-55" data-surface-control="note-55" aria-hidden="true"><rect x="331.3636" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="380.455" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-57" data-surface-control="note-57" aria-hidden="true"><rect x="380.4545" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="429.545" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-59" data-surface-control="note-59" aria-hidden="true"><rect x="429.5455" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="478.636" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-60" data-surface-control="note-60" aria-hidden="true"><rect x="478.6364" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="527.727" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-62" data-surface-control="note-62" aria-hidden="true"><rect x="527.7273" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="576.818" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-64" data-surface-control="note-64" aria-hidden="true"><rect x="576.8182" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="625.909" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-65" data-surface-control="note-65" aria-hidden="true"><rect x="625.9091" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="675" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-67" data-surface-control="note-67" aria-hidden="true"><rect x="675" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="724.091" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-69" data-surface-control="note-69" aria-hidden="true"><rect x="724.0909" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="773.182" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-71" data-surface-control="note-71" aria-hidden="true"><rect x="773.1818" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="822.273" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-72" data-surface-control="note-72" aria-hidden="true"><rect x="822.2727" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-27" data-part="key-27" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 27"><title>Key 27</title><g aria-hidden="true">
+<rect x="871.364" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-74" data-surface-control="note-74" aria-hidden="true"><rect x="871.3636" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-29" data-part="key-29" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 29"><title>Key 29</title><g aria-hidden="true">
+<rect x="920.455" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-76" data-surface-control="note-76" aria-hidden="true"><rect x="920.4545" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-30" data-part="key-30" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 30"><title>Key 30</title><g aria-hidden="true">
+<rect x="969.545" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-77" data-surface-control="note-77" aria-hidden="true"><rect x="969.5455" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-32" data-part="key-32" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 32"><title>Key 32</title><g aria-hidden="true">
+<rect x="1018.636" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-79" data-surface-control="note-79" aria-hidden="true"><rect x="1018.6364" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-34" data-part="key-34" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 34"><title>Key 34</title><g aria-hidden="true">
+<rect x="1067.727" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-81" data-surface-control="note-81" aria-hidden="true"><rect x="1067.7273" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-36" data-part="key-36" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 36"><title>Key 36</title><g aria-hidden="true">
+<rect x="1116.818" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-83" data-surface-control="note-83" aria-hidden="true"><rect x="1116.8182" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-37" data-part="key-37" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 37"><title>Key 37</title><g aria-hidden="true">
+<rect x="1165.909" y="415" width="49.091" height="265" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-84" data-surface-control="note-84" aria-hidden="true"><rect x="1165.9091" y="415" width="49.0909" height="265" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="168.873" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-49" data-surface-control="note-49" aria-hidden="true"><rect x="168.8727" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="217.964" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-51" data-surface-control="note-51" aria-hidden="true"><rect x="217.9636" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="316.145" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-54" data-surface-control="note-54" aria-hidden="true"><rect x="316.1455" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="365.236" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-56" data-surface-control="note-56" aria-hidden="true"><rect x="365.2364" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="414.327" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-58" data-surface-control="note-58" aria-hidden="true"><rect x="414.3273" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="512.509" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-61" data-surface-control="note-61" aria-hidden="true"><rect x="512.5091" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="561.6" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-63" data-surface-control="note-63" aria-hidden="true"><rect x="561.6" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="659.782" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-66" data-surface-control="note-66" aria-hidden="true"><rect x="659.7818" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="708.873" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-68" data-surface-control="note-68" aria-hidden="true"><rect x="708.8727" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="757.964" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-70" data-surface-control="note-70" aria-hidden="true"><rect x="757.9636" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-26" data-part="key-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 26"><title>Key 26</title><g aria-hidden="true">
+<rect x="856.145" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-73" data-surface-control="note-73" aria-hidden="true"><rect x="856.1455" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-28" data-part="key-28" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 28"><title>Key 28</title><g aria-hidden="true">
+<rect x="905.236" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-75" data-surface-control="note-75" aria-hidden="true"><rect x="905.2364" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-31" data-part="key-31" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 31"><title>Key 31</title><g aria-hidden="true">
+<rect x="1003.418" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-78" data-surface-control="note-78" aria-hidden="true"><rect x="1003.4182" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-33" data-part="key-33" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 33"><title>Key 33</title><g aria-hidden="true">
+<rect x="1052.509" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-80" data-surface-control="note-80" aria-hidden="true"><rect x="1052.5091" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="asm-hydrasynth-explorer-panel--key-35" data-part="key-35" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 35"><title>Key 35</title><g aria-hidden="true">
+<rect x="1101.6" y="415" width="30.436" height="161.65" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="asm-hydrasynth-explorer-panel--surface--note-82" data-surface-control="note-82" aria-hidden="true"><rect x="1101.6" y="415" width="30.4364" height="161.65" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

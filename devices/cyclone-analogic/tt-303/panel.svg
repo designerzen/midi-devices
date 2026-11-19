@@ -1,130 +1,203 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title description">
-<title id="title">Cyclone Analogic TT-303 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1200" height="600" class="line" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1182" height="582" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Cyclone Analogic TT-303</text>
-<text x="1175" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="1150" height="155" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="sound-waveform" data-kind="switch" aria-label="Waveform"><title>Waveform</title>
-<rect x="97.125" y="134.285" width="10" height="24" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="93.125" y="142.285" width="18" height="7" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="group" aria-labelledby="cyclone-analogic-tt-303-panel--title" aria-describedby="cyclone-analogic-tt-303-panel--description" data-device="cyclone-analogic-tt-303" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="cyclone-analogic-tt-303-panel--title">Cyclone Analogic TT-303 overhead hardware diagram</title><desc id="cyclone-analogic-tt-303-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="cyclone-analogic-tt-303-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1182" height="582" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Cyclone Analogic TT-303</text>
+<text x="1175" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="1150" height="155" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="235" width="320" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="360" y="235" width="815" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sound-tuning" data-kind="knob" aria-label="Tuning"><title>Tuning</title>
-<circle cx="244.375" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M244.375 124.285L244.375 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--sound-waveform" data-part="sound-waveform" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SOUND: Waveform"><title>SOUND: Waveform</title><g aria-hidden="true">
+<rect x="97.125" y="134.285" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="93.125" y="142.285" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sound-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
-<circle cx="386.625" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M386.625 124.285L386.625 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sound-waveform" data-surface-control="sound-waveform" aria-hidden="true"><rect x="31" y="95" width="142.25" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sound-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<circle cx="528.875" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M528.875 124.285L528.875 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--sound-tuning" data-part="sound-tuning" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Tuning"><title>SOUND: Tuning</title><g aria-hidden="true">
+<circle cx="244.375" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M244.375 124.285L244.375 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sound-env-mod" data-kind="knob" aria-label="Env mod"><title>Env mod</title>
-<circle cx="671.125" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M671.125 124.285L671.125 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sound-tuning" data-surface-control="sound-tuning" aria-hidden="true"><rect x="173.25" y="95" width="142.25" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sound-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<circle cx="813.375" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M813.375 124.285L813.375 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--sound-cutoff" data-part="sound-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Cutoff"><title>SOUND: Cutoff</title><g aria-hidden="true">
+<circle cx="386.625" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M386.625 124.285L386.625 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sound-accent" data-kind="knob" aria-label="Accent"><title>Accent</title>
-<circle cx="955.625" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M955.625 124.285L955.625 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sound-cutoff" data-surface-control="sound-cutoff" aria-hidden="true"><rect x="315.5" y="95" width="142.25" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sound-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<circle cx="1097.875" cy="146.285" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M1097.875 124.285L1097.875 137.535" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--sound-resonance" data-part="sound-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Resonance"><title>SOUND: Resonance</title><g aria-hidden="true">
+<circle cx="528.875" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M528.875 124.285L528.875 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="25" y="235" width="320" height="300" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="mode-pattern-track" data-kind="knob" aria-label="Track"><title>Track</title>
-<circle cx="82.333" cy="322.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M82.333 300.535L82.333 313.785" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sound-resonance" data-surface-control="sound-resonance" aria-hidden="true"><rect x="457.75" y="95" width="142.25" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mode-pattern-mode" data-kind="knob" aria-label="Mode"><title>Mode</title>
-<circle cx="185" cy="322.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M185 300.535L185 313.785" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--sound-env-mod" data-part="sound-env-mod" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Env mod"><title>SOUND: Env mod</title><g aria-hidden="true">
+<circle cx="671.125" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M671.125 124.285L671.125 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="mode-pattern-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<circle cx="287.667" cy="322.535" r="25" class="line" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<path d="M287.667 300.535L287.667 313.785" fill="none" stroke="#000" stroke-width="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sound-env-mod" data-surface-control="sound-env-mod" aria-hidden="true"><rect x="600" y="95" width="142.25" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mode-pattern-pattern-group" data-kind="button" aria-label="Pattern group"><title>Pattern group</title>
-<rect x="67.333" y="440.035" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--sound-decay" data-part="sound-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Decay"><title>SOUND: Decay</title><g aria-hidden="true">
+<circle cx="813.375" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M813.375 124.285L813.375 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="mode-pattern-run-stop" data-kind="button" aria-label="Run / Stop"><title>Run / Stop</title>
-<rect x="170" y="440.035" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sound-decay" data-surface-control="sound-decay" aria-hidden="true"><rect x="742.25" y="95" width="142.25" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="mode-pattern-pattern-clear" data-kind="button" aria-label="Pattern clear"><title>Pattern clear</title>
-<rect x="272.667" y="440.035" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--sound-accent" data-part="sound-accent" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Accent"><title>SOUND: Accent</title><g aria-hidden="true">
+<circle cx="955.625" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M955.625 124.285L955.625 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="360" y="235" width="815" height="300" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="sequencer-pitch-mode" data-kind="button" aria-label="Pitch mode"><title>Pitch mode</title>
-<rect x="381.885" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sound-accent" data-surface-control="sound-accent" aria-hidden="true"><rect x="884.5" y="95" width="142.25" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-time-mode" data-kind="button" aria-label="Time mode"><title>Time mode</title>
-<rect x="443.654" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--sound-volume" data-part="sound-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Volume"><title>SOUND: Volume</title><g aria-hidden="true">
+<circle cx="1097.875" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1097.875 124.285L1097.875 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-function" data-kind="button" aria-label="Function"><title>Function</title>
-<rect x="505.423" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sound-volume" data-surface-control="sound-volume" aria-hidden="true"><rect x="1026.75" y="95" width="142.25" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-transpose" data-kind="button" aria-label="Transpose -"><title>Transpose -</title>
-<rect x="567.192" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--mode-pattern-track" data-part="mode-pattern-track" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODE / PATTERN: Track"><title>MODE / PATTERN: Track</title><g aria-hidden="true">
+<circle cx="82.333" cy="322.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M82.333 300.535L82.333 313.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-transpose-2" data-kind="button" aria-label="Transpose +"><title>Transpose +</title>
-<rect x="628.962" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--surface--mode-pattern-track" data-surface-control="mode-pattern-track" aria-hidden="true"><rect x="31" y="265" width="102.6667" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-accent" data-kind="button" aria-label="Accent"><title>Accent</title>
-<rect x="690.731" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--mode-pattern-mode" data-part="mode-pattern-mode" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODE / PATTERN: Mode"><title>MODE / PATTERN: Mode</title><g aria-hidden="true">
+<circle cx="185" cy="322.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M185 300.535L185 313.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-slide" data-kind="button" aria-label="Slide"><title>Slide</title>
-<rect x="752.5" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--surface--mode-pattern-mode" data-surface-control="mode-pattern-mode" aria-hidden="true"><rect x="133.6667" y="265" width="102.6667" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-back" data-kind="button" aria-label="Back"><title>Back</title>
-<rect x="814.269" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--mode-pattern-tempo" data-part="mode-pattern-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODE / PATTERN: Tempo"><title>MODE / PATTERN: Tempo</title><g aria-hidden="true">
+<circle cx="287.667" cy="322.535" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M287.667 300.535L287.667 313.785" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="sequencer-tap" data-kind="button" aria-label="Tap"><title>Tap</title>
-<rect x="876.038" y="308.864" width="30" height="30" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="cyclone-analogic-tt-303-panel--surface--mode-pattern-tempo" data-surface-control="mode-pattern-tempo" aria-hidden="true"><rect x="236.3333" y="265" width="102.6667" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="927.923" y="298.979" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--mode-pattern-pattern-group" data-part="mode-pattern-pattern-group" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODE / PATTERN: Pattern group"><title>MODE / PATTERN: Pattern group</title><g aria-hidden="true">
+<rect x="67.333" y="440.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="989.692" y="298.979" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--mode-pattern-pattern-group" data-surface-control="mode-pattern-pattern-group" aria-hidden="true"><rect x="31" y="397.5" width="102.6667" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="1051.462" y="298.979" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--mode-pattern-run-stop" data-part="mode-pattern-run-stop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODE / PATTERN: Run / Stop"><title>MODE / PATTERN: Run / Stop</title><g aria-hidden="true">
+<rect x="170" y="440.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="1113.231" y="298.979" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--mode-pattern-run-stop" data-surface-control="mode-pattern-run-stop" aria-hidden="true"><rect x="133.6667" y="397.5" width="102.6667" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="372" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--mode-pattern-pattern-clear" data-part="mode-pattern-pattern-clear" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODE / PATTERN: Pattern clear"><title>MODE / PATTERN: Pattern clear</title><g aria-hidden="true">
+<rect x="272.667" y="440.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="433.769" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--mode-pattern-pattern-clear" data-surface-control="mode-pattern-pattern-clear" aria-hidden="true"><rect x="236.3333" y="397.5" width="102.6667" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="495.538" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--sequencer-pitch-mode" data-part="sequencer-pitch-mode" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Pitch mode"><title>SEQUENCER: Pitch mode</title><g aria-hidden="true">
+<rect x="381.885" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="557.308" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-pitch-mode" data-surface-control="sequencer-pitch-mode" aria-hidden="true"><rect x="366" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="619.077" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--sequencer-time-mode" data-part="sequencer-time-mode" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Time mode"><title>SEQUENCER: Time mode</title><g aria-hidden="true">
+<rect x="443.654" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="680.846" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-time-mode" data-surface-control="sequencer-time-mode" aria-hidden="true"><rect x="427.7692" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="742.615" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--sequencer-function" data-part="sequencer-function" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Function"><title>SEQUENCER: Function</title><g aria-hidden="true">
+<rect x="505.423" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="sequencer-key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="804.385" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-function" data-surface-control="sequencer-function" aria-hidden="true"><rect x="489.5385" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="sequencer-key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="866.154" y="431.479" width="49.769" height="49.769" class="line" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="cyclone-analogic-tt-303-panel--sequencer-transpose" data-part="sequencer-transpose" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Transpose -"><title>SEQUENCER: Transpose -</title><g aria-hidden="true">
+<rect x="567.192" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-transpose" data-surface-control="sequencer-transpose" aria-hidden="true"><rect x="551.3077" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-transpose-2" data-part="sequencer-transpose-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Transpose +"><title>SEQUENCER: Transpose +</title><g aria-hidden="true">
+<rect x="628.962" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-transpose-2" data-surface-control="sequencer-transpose-2" aria-hidden="true"><rect x="613.0769" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-accent" data-part="sequencer-accent" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Accent"><title>SEQUENCER: Accent</title><g aria-hidden="true">
+<rect x="690.731" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-accent" data-surface-control="sequencer-accent" aria-hidden="true"><rect x="674.8462" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-slide" data-part="sequencer-slide" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Slide"><title>SEQUENCER: Slide</title><g aria-hidden="true">
+<rect x="752.5" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-slide" data-surface-control="sequencer-slide" aria-hidden="true"><rect x="736.6154" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-back" data-part="sequencer-back" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Back"><title>SEQUENCER: Back</title><g aria-hidden="true">
+<rect x="814.269" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-back" data-surface-control="sequencer-back" aria-hidden="true"><rect x="798.3846" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-tap" data-part="sequencer-tap" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Tap"><title>SEQUENCER: Tap</title><g aria-hidden="true">
+<rect x="876.038" y="308.864" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--sequencer-tap" data-surface-control="sequencer-tap" aria-hidden="true"><rect x="860.1538" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-1" data-part="sequencer-key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 1"><title>SEQUENCER: Key 1</title><g aria-hidden="true">
+<rect x="927.923" y="298.979" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-0" data-surface-control="key-0" aria-hidden="true"><rect x="921.9231" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-2" data-part="sequencer-key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 2"><title>SEQUENCER: Key 2</title><g aria-hidden="true">
+<rect x="989.692" y="298.979" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-1" data-surface-control="key-1" aria-hidden="true"><rect x="983.6923" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-3" data-part="sequencer-key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 3"><title>SEQUENCER: Key 3</title><g aria-hidden="true">
+<rect x="1051.462" y="298.979" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-2" data-surface-control="key-2" aria-hidden="true"><rect x="1045.4615" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-4" data-part="sequencer-key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 4"><title>SEQUENCER: Key 4</title><g aria-hidden="true">
+<rect x="1113.231" y="298.979" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-3" data-surface-control="key-3" aria-hidden="true"><rect x="1107.2308" y="265" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-5" data-part="sequencer-key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 5"><title>SEQUENCER: Key 5</title><g aria-hidden="true">
+<rect x="372" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-4" data-surface-control="key-4" aria-hidden="true"><rect x="366" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-6" data-part="sequencer-key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 6"><title>SEQUENCER: Key 6</title><g aria-hidden="true">
+<rect x="433.769" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-5" data-surface-control="key-5" aria-hidden="true"><rect x="427.7692" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-7" data-part="sequencer-key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 7"><title>SEQUENCER: Key 7</title><g aria-hidden="true">
+<rect x="495.538" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-6" data-surface-control="key-6" aria-hidden="true"><rect x="489.5385" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-8" data-part="sequencer-key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 8"><title>SEQUENCER: Key 8</title><g aria-hidden="true">
+<rect x="557.308" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-7" data-surface-control="key-7" aria-hidden="true"><rect x="551.3077" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-9" data-part="sequencer-key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 9"><title>SEQUENCER: Key 9</title><g aria-hidden="true">
+<rect x="619.077" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-8" data-surface-control="key-8" aria-hidden="true"><rect x="613.0769" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-10" data-part="sequencer-key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 10"><title>SEQUENCER: Key 10</title><g aria-hidden="true">
+<rect x="680.846" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-9" data-surface-control="key-9" aria-hidden="true"><rect x="674.8462" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-11" data-part="sequencer-key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 11"><title>SEQUENCER: Key 11</title><g aria-hidden="true">
+<rect x="742.615" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-10" data-surface-control="key-10" aria-hidden="true"><rect x="736.6154" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-12" data-part="sequencer-key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 12"><title>SEQUENCER: Key 12</title><g aria-hidden="true">
+<rect x="804.385" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-11" data-surface-control="key-11" aria-hidden="true"><rect x="798.3846" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="cyclone-analogic-tt-303-panel--sequencer-key-13" data-part="sequencer-key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="SEQUENCER: Key 13"><title>SEQUENCER: Key 13</title><g aria-hidden="true">
+<rect x="866.154" y="431.479" width="49.769" height="49.769" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="cyclone-analogic-tt-303-panel--surface--key-12" data-surface-control="key-12" aria-hidden="true"><rect x="860.1538" y="397.5" width="61.7692" height="132.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </svg>
