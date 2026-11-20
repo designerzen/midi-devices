@@ -1,0 +1,169 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-ep-127",
+	"name": "Teenage Engineering EP-127 kopedal",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/ep-127",
+	"ids": [
+		"teenage-engineering-ep-127"
+	],
+	"portNames": [],
+	"description": "Pressure-sensitive foot controller with USB, BLE and TRS MIDI output.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "EP-127 kopedal user guide",
+			"url": "https://teenage.engineering/guides/ep-127"
+		}
+	],
+	"abilities": [
+		"USB MIDI output",
+		"Bluetooth LE MIDI",
+		"TRS MIDI output",
+		"Expression pedal input"
+	],
+	"hardwareControls": [
+		"Left force button",
+		"Display",
+		"Right force button",
+		"Bluetooth / channel",
+		"Mode",
+		"MIDI / HID state"
+	],
+	"notice": "Select MIDI state using the switch in the battery compartment; HID state is separate. The BT button selects channel 1 or 2. FX mode sends CC12/13, loop mode CC82/83, music mode CC1/64, and metronome mode sends clock start/stop. These are outgoing controller messages; the profile does not present them as incoming remote controls. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "EP-127 kopedal selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "foot-controls-left-force-button",
+				"label": "FOOT CONTROLS: Left force button",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 46.92307692307692
+				}
+			},
+			{
+				"id": "foot-controls-display",
+				"label": "FOOT CONTROLS: Display",
+				"kind": "screen",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 46.92307692307692
+				}
+			},
+			{
+				"id": "foot-controls-right-force-button",
+				"label": "FOOT CONTROLS: Right force button",
+				"kind": "pad",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 46.92307692307692
+				}
+			},
+			{
+				"id": "setup-bluetooth-channel",
+				"label": "SETUP: Bluetooth / channel",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 70.0,
+					"width": 31.26666666666667,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "setup-mode",
+				"label": "SETUP: Mode",
+				"kind": "button",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 70.0,
+					"width": 31.26666666666667,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "setup-midi-hid-state",
+				"label": "SETUP: MIDI / HID state",
+				"kind": "switch",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 70.0,
+					"width": 31.26666666666667,
+					"height": 17.692307692307693
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / HID / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Top"
+		},
+		{
+			"label": "Wireless MIDI / HID",
+			"connector": "Bluetooth LE",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		},
+		{
+			"label": "MIDI output",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Expression pedal",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "Top"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/ep-127",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

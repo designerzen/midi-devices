@@ -1,0 +1,354 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-ep-136",
+	"name": "Teenage Engineering EP-136 K.O.-sidekick",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/ep-136",
+	"ids": [
+		"teenage-engineering-ep-136"
+	],
+	"portNames": [],
+	"description": "Two-channel performance mixer with USB MIDI and effects automation.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "EP-136 K.O.-sidekick user guide",
+			"url": "https://teenage.engineering/guides/ep-136/hardware-overview"
+		},
+		{
+			"title": "EP-136 K.O.-sidekick reference",
+			"url": "https://teenage.engineering/guides/ep-136/system-settings"
+		}
+	],
+	"abilities": [
+		"USB MIDI controller",
+		"Remote mixer control",
+		"Effects automation"
+	],
+	"hardwareControls": [
+		"1 Gain",
+		"2 Gain",
+		"1 High",
+		"2 High",
+		"1 Mid",
+		"2 Mid",
+		"1 Low",
+		"2 Low",
+		"1 Fader",
+		"2 Fader",
+		"1 Cue",
+		"2 Cue",
+		"1 FX",
+		"2 FX",
+		"Display",
+		"Force pad",
+		"Mod stick",
+		"Select"
+	],
+	"notice": "USB provides MIDI input/output; there are no dedicated TRS MIDI sockets. Incoming and outgoing CC maps differ. Included mappings are incoming channel faders on channels 1-2. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [
+		{
+			"id": "channel-1",
+			"label": "Channel 1 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 1
+			}
+		},
+		{
+			"id": "channel-2",
+			"label": "Channel 2 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 2
+			}
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "EP-136 K.O.-sidekick selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "channels-1-gain",
+				"label": "CHANNELS: 1 Gain",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-2-gain",
+				"label": "CHANNELS: 2 Gain",
+				"kind": "knob",
+				"position": {
+					"x": 32.5,
+					"y": 14.615384615384617,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-1-high",
+				"label": "CHANNELS: 1 High",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 25.054945054945055,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-2-high",
+				"label": "CHANNELS: 2 High",
+				"kind": "knob",
+				"position": {
+					"x": 32.5,
+					"y": 25.054945054945055,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-1-mid",
+				"label": "CHANNELS: 1 Mid",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 35.494505494505496,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-2-mid",
+				"label": "CHANNELS: 2 Mid",
+				"kind": "knob",
+				"position": {
+					"x": 32.5,
+					"y": 35.494505494505496,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-1-low",
+				"label": "CHANNELS: 1 Low",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 45.934065934065934,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-2-low",
+				"label": "CHANNELS: 2 Low",
+				"kind": "knob",
+				"position": {
+					"x": 32.5,
+					"y": 45.934065934065934,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-1-fader",
+				"label": "CHANNELS: 1 Fader",
+				"kind": "fader",
+				"position": {
+					"x": 3.1,
+					"y": 56.37362637362637,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-2-fader",
+				"label": "CHANNELS: 2 Fader",
+				"kind": "fader",
+				"position": {
+					"x": 32.5,
+					"y": 56.37362637362637,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-1-cue",
+				"label": "CHANNELS: 1 Cue",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 66.81318681318682,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-2-cue",
+				"label": "CHANNELS: 2 Cue",
+				"kind": "button",
+				"position": {
+					"x": 32.5,
+					"y": 66.81318681318682,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-1-fx",
+				"label": "CHANNELS: 1 FX",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 77.25274725274726,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "channels-2-fx",
+				"label": "CHANNELS: 2 FX",
+				"kind": "button",
+				"position": {
+					"x": 32.5,
+					"y": 77.25274725274726,
+					"width": 29.4,
+					"height": 10.43956043956044
+				}
+			},
+			{
+				"id": "performance-display",
+				"label": "PERFORMANCE: Display",
+				"kind": "screen",
+				"position": {
+					"x": 65.10000000000001,
+					"y": 14.615384615384617,
+					"width": 31.8,
+					"height": 18.269230769230766
+				}
+			},
+			{
+				"id": "performance-force-pad",
+				"label": "PERFORMANCE: Force pad",
+				"kind": "pad",
+				"position": {
+					"x": 65.10000000000001,
+					"y": 32.88461538461539,
+					"width": 31.8,
+					"height": 18.269230769230766
+				}
+			},
+			{
+				"id": "performance-mod-stick",
+				"label": "PERFORMANCE: Mod stick",
+				"kind": "joystick",
+				"position": {
+					"x": 65.10000000000001,
+					"y": 51.153846153846146,
+					"width": 31.8,
+					"height": 18.269230769230766
+				}
+			},
+			{
+				"id": "performance-select",
+				"label": "PERFORMANCE: Select",
+				"kind": "button",
+				"position": {
+					"x": 65.10000000000001,
+					"y": 69.42307692307692,
+					"width": 31.8,
+					"height": 18.269230769230766
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / audio / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo input 1",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Stereo input 2",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Aux / session input",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "Bottom"
+		},
+		{
+			"label": "Mix output",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "Bottom"
+		},
+		{
+			"label": "Cue output",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/ep-136/hardware-overview",
+		"https://teenage.engineering/guides/ep-136/system-settings",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

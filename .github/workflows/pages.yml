@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
+      - name: Assign unique main build version
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: npm run version:build
       - run: npm test
       - if: github.event_name != 'pull_request'
         id: pages

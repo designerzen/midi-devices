@@ -1,5 +1,22 @@
 const normalise = (value) => String(value ?? "").trim().toLowerCase()
 
+export function midiPortDetails({ direction, port }) {
+	return [["Port name", port.name], ["Manufacturer", port.manufacturer], ["Port ID", port.id], ["Version", port.version], ["Direction", direction], ["Device state", port.state], ["Port connection", port.connection]]
+		.map(([label, value]) => [label, value || "Not reported"])
+}
+
+export function unmatchedDeviceEmail(ports) {
+	const name = ports[0]?.port.name || "Unnamed MIDI device"
+	const subject = `Unmatched MIDI device: ${name}`
+	const body = [
+		"Please add a profile for this MIDI device.",
+		"Device model / additional notes: ",
+		...ports.map((entry) => midiPortDetails(entry).map(([label, value]) => `${label}: ${value}`).join("\r\n")),
+		"These are the details reported by Web MIDI. USB hardware IDs and other hardware specifications are not exposed by the browser."
+	].join("\r\n\r\n")
+	return `mailto:midi@aweseomthing.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+}
+
 export function describeMidiMessage(data) {
 	const [status, a = 0, b = 0] = data
 	if (status === undefined) return "Empty MIDI message"

@@ -133,6 +133,26 @@ DIN-connected hardware normally appears under the interface's name. These new le
 
 Do not assume that an instrument has MIDI because a later reissue or aftermarket retrofit does. Original pre-MIDI hardware and retrofit-specific implementations need separate, verified profiles. Likewise, do not substitute a Boutique reissue's CC chart for its vintage counterpart.
 
+## Teenage Engineering MIDI products
+
+This expansion adds **27 profiles**, bringing Teenage Engineering to **28** and the catalogue to **192 devices**. Coverage was checked against the manufacturer's guides on 19 November 2026. Each addition includes manufacturer artwork, source links, selected-control schematics and connection inventories.
+
+| Family | Added profiles | MIDI coverage |
+| --- | --- | --- |
+| Synthesizers and sequencers | OP-1 field, OP-Z, OP-XY | USB and BLE MIDI; OP-XY also has dedicated MIDI input and selectable MIDI multi-out |
+| EP samplers | EP-133 K.O. II, EP-133 K.O. II Supreme, EP-1320 medieval, EP-40 riddim | USB and TRS MIDI; separate product identities and project-dependent pad assignments |
+| Mixers and recorder | TX-6, TP-7, EP-136 K.O.-sidekick | USB MIDI remote control and controller modes; incoming and outgoing maps differ |
+| Amplifier and foot control | EP-35 K.O.amp, EP-127 kopedal | Input-level CCs on the amplifier; USB, BLE and TRS output with mode-dependent messages on the pedal |
+| Modular keyboards | POM-16, POM-170 | Type A TRS MIDI output, four monophonic tracks; no MIDI input or USB MIDI |
+| Interfaces and expansions | Original standalone oplab, OP-Z oplab module, OP-Z line module | Standalone USB/DIN/CV routing versus expansions requiring an OP-Z |
+| Wireless controller | ortho remote | BLE MIDI; establish the operating-system MIDI connection before browser use |
+| Choir | Bogdan, Carlo, Gisela, Hatshepsut, Ivana, Leila, Miki, Olga | Separate voices controlled through BLE MIDI; USB is for charging |
+| Firmware endpoint | CM-15 | Documented MIDI updater endpoint; no published musical note/CC map |
+
+The original OP-1 remains distinct from OP-1 field. New browser port aliases remain empty until observed on hardware or explicitly documented. Select these profiles manually; BLE and external TRS/DIN routes need a compatible host/interface first. Selected incoming CCs are provided where verified, while configurable keys, pads and encoders remain unbound. These profiles do not claim complete MIDI implementation charts.
+
+Sources: [official guide directory](https://teenage.engineering/guides), [POM-16 MIDI guide](https://teenage.engineering/guides/po-modular/16), [POM-170 connections](https://teenage.engineering/guides/po-modular/170), [ortho remote MIDI setup](https://teenage.engineering/guides/or-1), and the individual profile references. Standard pocket operators, POM-400, rumble module, EP-2350 fx mic and analog/audio accessories are omitted because their guides do not document a usable MIDI endpoint. OB-4's original announcement proposed BLE MIDI support, but the current guide supplies no musical MIDI implementation; it and OD-11 are not treated as generic MIDI instruments merely because they support a wireless remote.
+
 ## Official MIDI manufacturer directory
 
 The [official MIDI Association SysEx ID table](https://midi.org/sysexidtable), retrieved on 19 November 2026, supplies **787 unique named assignments**. Importing the remaining companies adds **756 manufacturer records**. Together with existing entries, the directory has **795 manufacturers**, while detailed hardware coverage remains **165 devices from 39 manufacturers**. The official list includes historical and software companies as well as instrument makers. Registration alone does not establish present trading status, website ownership, a hardware product range or support availability.

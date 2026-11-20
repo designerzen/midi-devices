@@ -21,6 +21,8 @@
 			a:focus-visible, summary:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 3px; }
 			button { font: inherit; font-weight: 650; cursor: pointer; color: var(--bg); background: var(--accent); border: 1px solid transparent; border-radius: 8px; padding: 0.65rem 1rem; }
 			button:hover { background: var(--accent-strong); }
+			.email-device { display: inline-block; font-weight: 650; color: var(--bg); background: var(--accent); border-radius: 8px; padding: 0.65rem 1rem; text-decoration: none; }
+			.email-device:hover { color: var(--bg); background: var(--accent-strong); }
 			button:disabled { cursor: progress; opacity: 0.6; }
 			button.secondary { color: var(--text); background: transparent; border-color: var(--border-strong); }
 			button.secondary:hover { background: var(--surface-raised); }
@@ -195,7 +197,7 @@
 			<p>MIDI resources: <a href="https://midi.org/">The MIDI Association</a> · <a href="https://midi.org/specs">Official MIDI specifications</a> · <a href="https://midi.org/midi-1-0-detailed-specification">MIDI 1.0 detailed specification</a></p>
 		</footer>
 		<script type="module">
-			import { connectedMidiDevices, describeMidiMessage } from "./midi-connections.js?v=__BUILD_COMMIT__"
+			import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail } from "./midi-connections.js?v=__BUILD_COMMIT__"
 			const connectedCards = document.getElementById("connected-devices")
 			const connectedEmpty = document.getElementById("connected-empty")
 			const assignments = new Map()
@@ -521,14 +523,15 @@
 					card.classList.add("is-connected")
 					card.dataset.connected = "true"
 					const metadata = element("details", undefined, "port-metadata")
+					metadata.open = !device
 					metadata.append(element("summary", `MIDI port metadata (${ports.length})`))
 					const activitySummary = element("div")
 					for (const { direction, port } of ports) {
 						metadata.append(element("h3", `${direction}: ${port.name || "Unnamed MIDI port"}`))
 						const values = element("dl")
-						for (const [label, value] of [["Port name", port.name], ["Manufacturer", port.manufacturer], ["Port ID", port.id], ["Version", port.version], ["Direction", direction], ["Device state", port.state], ["Port connection", port.connection]]) {
+						for (const [label, value] of midiPortDetails({ direction, port })) {
 							const detail = element("dd")
-							if (label === "Manufacturer" && value) detail.append(companyText(value))
+							if (label === "Manufacturer" && port.manufacturer) detail.append(companyText(value))
 							else detail.textContent = value || "Not reported"
 							values.append(element("dt", label), detail)
 						}
@@ -563,6 +566,19 @@
 					})
 					picker.append(select)
 					metadata.after(picker)
+					if (!device) {
+						const report = element("section", undefined, "unmatched")
+						const heading = element("h3", "Help add this device")
+						heading.id = `connected-${index}-report`
+						report.setAttribute("aria-labelledby", heading.id)
+						const email = element("a", "Email device details", "email-device")
+						email.href = unmatchedDeviceEmail(ports)
+						report.append(heading,
+							element("p", "The details above include everything Web MIDI reports about these ports. USB hardware IDs and other hardware specifications are not available in the browser."),
+							email,
+							element("p", "Opens a draft to midi@aweseomthing.co.uk with these details. Add the device model or any notes, then send it from your email app."))
+						card.append(report)
+					}
 					return card
 				})
 				connectedCards.replaceChildren(...cards)
@@ -714,7 +730,7 @@
 					midiStatus.textContent = unsupported
 				} else {
 					detectMidi.hidden = midiOptions.hidden = false
-					midiStatus.textContent = "Nothing is sent anywhere. Your MIDI data stays in this browser."
+					midiStatus.textContent = "Your MIDI data stays in this browser. You can choose to share unmatched device details by email."
 				}
 			}
 		</script>

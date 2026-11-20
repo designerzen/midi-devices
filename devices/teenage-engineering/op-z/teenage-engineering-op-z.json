@@ -1,0 +1,629 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-op-z",
+	"name": "Teenage Engineering OP-Z",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/op-z",
+	"ids": [
+		"teenage-engineering-op-z"
+	],
+	"portNames": [],
+	"description": "Compact 16-track synthesizer and sequencer with USB and BLE MIDI.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "OP-Z user guide",
+			"url": "https://teenage.engineering/guides/op-z"
+		},
+		{
+			"title": "OP-Z reference",
+			"url": "https://teenage.engineering/guides/op-z/midi"
+		}
+	],
+	"abilities": [
+		"USB MIDI host and device",
+		"Bluetooth LE MIDI",
+		"16 configurable MIDI tracks"
+	],
+	"hardwareControls": [
+		"Green encoder",
+		"Blue encoder",
+		"Yellow encoder",
+		"Red encoder",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+		"9",
+		"10",
+		"11",
+		"12",
+		"13",
+		"14",
+		"15",
+		"16",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+		"9",
+		"10",
+		"11",
+		"12",
+		"13",
+		"14",
+		"15",
+		"16",
+		"17",
+		"18",
+		"19",
+		"20",
+		"21",
+		"22",
+		"23",
+		"24"
+	],
+	"notice": "Enable MIDI input/output and clock with tempo + screen settings. Track channels and CCs can be edited in midi.json. TRS MIDI requires the optional oplab or line module; the base unit has no dedicated TRS MIDI sockets. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "OP-Z selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "encoders-green-encoder",
+				"label": "ENCODERS: Green encoder",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 19.230769230769234
+				}
+			},
+			{
+				"id": "encoders-blue-encoder",
+				"label": "ENCODERS: Blue encoder",
+				"kind": "knob",
+				"position": {
+					"x": 26.55,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 19.230769230769234
+				}
+			},
+			{
+				"id": "encoders-yellow-encoder",
+				"label": "ENCODERS: Yellow encoder",
+				"kind": "knob",
+				"position": {
+					"x": 50.0,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 19.230769230769234
+				}
+			},
+			{
+				"id": "encoders-red-encoder",
+				"label": "ENCODERS: Red encoder",
+				"kind": "knob",
+				"position": {
+					"x": 73.45,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 19.230769230769234
+				}
+			},
+			{
+				"id": "track-step-buttons-1",
+				"label": "TRACK / STEP BUTTONS: 1",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-2",
+				"label": "TRACK / STEP BUTTONS: 2",
+				"kind": "button",
+				"position": {
+					"x": 8.9625,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-3",
+				"label": "TRACK / STEP BUTTONS: 3",
+				"kind": "button",
+				"position": {
+					"x": 14.825,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-4",
+				"label": "TRACK / STEP BUTTONS: 4",
+				"kind": "button",
+				"position": {
+					"x": 20.6875,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-5",
+				"label": "TRACK / STEP BUTTONS: 5",
+				"kind": "button",
+				"position": {
+					"x": 26.55,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-6",
+				"label": "TRACK / STEP BUTTONS: 6",
+				"kind": "button",
+				"position": {
+					"x": 32.4125,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-7",
+				"label": "TRACK / STEP BUTTONS: 7",
+				"kind": "button",
+				"position": {
+					"x": 38.275,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-8",
+				"label": "TRACK / STEP BUTTONS: 8",
+				"kind": "button",
+				"position": {
+					"x": 44.1375,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-9",
+				"label": "TRACK / STEP BUTTONS: 9",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-10",
+				"label": "TRACK / STEP BUTTONS: 10",
+				"kind": "button",
+				"position": {
+					"x": 55.862500000000004,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-11",
+				"label": "TRACK / STEP BUTTONS: 11",
+				"kind": "button",
+				"position": {
+					"x": 61.724999999999994,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-12",
+				"label": "TRACK / STEP BUTTONS: 12",
+				"kind": "button",
+				"position": {
+					"x": 67.5875,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-13",
+				"label": "TRACK / STEP BUTTONS: 13",
+				"kind": "button",
+				"position": {
+					"x": 73.45,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-14",
+				"label": "TRACK / STEP BUTTONS: 14",
+				"kind": "button",
+				"position": {
+					"x": 79.3125,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-15",
+				"label": "TRACK / STEP BUTTONS: 15",
+				"kind": "button",
+				"position": {
+					"x": 85.175,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "track-step-buttons-16",
+				"label": "TRACK / STEP BUTTONS: 16",
+				"kind": "button",
+				"position": {
+					"x": 91.03750000000001,
+					"y": 42.30769230769231,
+					"width": 5.8625,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "keyboard-buttons-1",
+				"label": "KEYBOARD BUTTONS: 1",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-2",
+				"label": "KEYBOARD BUTTONS: 2",
+				"kind": "button",
+				"position": {
+					"x": 10.916666666666668,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-3",
+				"label": "KEYBOARD BUTTONS: 3",
+				"kind": "button",
+				"position": {
+					"x": 18.733333333333334,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-4",
+				"label": "KEYBOARD BUTTONS: 4",
+				"kind": "button",
+				"position": {
+					"x": 26.55,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-5",
+				"label": "KEYBOARD BUTTONS: 5",
+				"kind": "button",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-6",
+				"label": "KEYBOARD BUTTONS: 6",
+				"kind": "button",
+				"position": {
+					"x": 42.18333333333334,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-7",
+				"label": "KEYBOARD BUTTONS: 7",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-8",
+				"label": "KEYBOARD BUTTONS: 8",
+				"kind": "button",
+				"position": {
+					"x": 57.81666666666667,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-9",
+				"label": "KEYBOARD BUTTONS: 9",
+				"kind": "button",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-10",
+				"label": "KEYBOARD BUTTONS: 10",
+				"kind": "button",
+				"position": {
+					"x": 73.45,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-11",
+				"label": "KEYBOARD BUTTONS: 11",
+				"kind": "button",
+				"position": {
+					"x": 81.26666666666668,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-12",
+				"label": "KEYBOARD BUTTONS: 12",
+				"kind": "button",
+				"position": {
+					"x": 89.08333333333334,
+					"y": 66.92307692307692,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-13",
+				"label": "KEYBOARD BUTTONS: 13",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-14",
+				"label": "KEYBOARD BUTTONS: 14",
+				"kind": "button",
+				"position": {
+					"x": 10.916666666666668,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-15",
+				"label": "KEYBOARD BUTTONS: 15",
+				"kind": "button",
+				"position": {
+					"x": 18.733333333333334,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-16",
+				"label": "KEYBOARD BUTTONS: 16",
+				"kind": "button",
+				"position": {
+					"x": 26.55,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-17",
+				"label": "KEYBOARD BUTTONS: 17",
+				"kind": "button",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-18",
+				"label": "KEYBOARD BUTTONS: 18",
+				"kind": "button",
+				"position": {
+					"x": 42.18333333333334,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-19",
+				"label": "KEYBOARD BUTTONS: 19",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-20",
+				"label": "KEYBOARD BUTTONS: 20",
+				"kind": "button",
+				"position": {
+					"x": 57.81666666666667,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-21",
+				"label": "KEYBOARD BUTTONS: 21",
+				"kind": "button",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-22",
+				"label": "KEYBOARD BUTTONS: 22",
+				"kind": "button",
+				"position": {
+					"x": 73.45,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-23",
+				"label": "KEYBOARD BUTTONS: 23",
+				"kind": "button",
+				"position": {
+					"x": 81.26666666666668,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "keyboard-buttons-24",
+				"label": "KEYBOARD BUTTONS: 24",
+				"kind": "button",
+				"position": {
+					"x": 89.08333333333334,
+					"y": 77.3076923076923,
+					"width": 7.816666666666667,
+					"height": 10.384615384615385
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / audio / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Wireless MIDI",
+			"connector": "Bluetooth LE MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		},
+		{
+			"label": "Stereo output / headphones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Expansion module slot",
+			"connector": "OP-Z module connector",
+			"direction": "bidirectional",
+			"location": "Underside"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/op-z",
+		"https://teenage.engineering/guides/op-z/midi",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

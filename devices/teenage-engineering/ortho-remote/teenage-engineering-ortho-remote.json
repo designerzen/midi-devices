@@ -1,0 +1,113 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-ortho-remote",
+	"name": "Teenage Engineering ortho remote",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/orthoremote",
+	"ids": [
+		"teenage-engineering-ortho-remote"
+	],
+	"portNames": [],
+	"description": "Wireless rotary and push controller with BLE MIDI and HID support.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "ortho remote user guide",
+			"url": "https://teenage.engineering/guides/or-1"
+		}
+	],
+	"abilities": [
+		"Bluetooth LE MIDI controller",
+		"Rotary and push control"
+	],
+	"hardwareControls": [
+		"Main dial / push",
+		"Pairing button",
+		"Battery status button"
+	],
+	"notice": "Pair as a BLE MIDI device through the operating system MIDI setup or a compatible BLE MIDI host. Ordinary Bluetooth audio/HID pairing does not establish a MIDI route. The maker does not officially support Windows. No USB or DIN sockets are present; fixed controller numbers are not supplied. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "ortho remote selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "controls-main-dial-push",
+				"label": "CONTROLS: Main dial / push",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			},
+			{
+				"id": "controls-pairing-button",
+				"label": "CONTROLS: Pairing button",
+				"kind": "button",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			},
+			{
+				"id": "controls-battery-status-button",
+				"label": "CONTROLS: Battery status button",
+				"kind": "button",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Wireless MIDI",
+			"connector": "Bluetooth LE MIDI",
+			"direction": "output",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/or-1",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

@@ -1,10 +1,33 @@
 import assert from "node:assert/strict"
 import test from "node:test"
-import { connectedMidiDevices, describeMidiMessage } from "../site/midi-connections.js"
+import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail } from "../site/midi-connections.js"
 
 const devices = [["arcana-strum", { profile: { name: "Arcana Strum", ids: ["arcana-strum"], portNames: ["ArcanaStrum"] }, devicePath: "arcana/strum" }]]
 const port = (id, name = "ArcanaStrum", manufacturer = "Arcana") => ({ id, name, manufacturer, version: "1.0", state: "connected", connection: "closed" })
 const access = (inputs, outputs = []) => ({ inputs: new Map(inputs.map((p) => [p.id, p])), outputs: new Map(outputs.map((p) => [p.id, p])) })
+
+test("unmatched device email preserves all port details and safely encodes special characters", () => {
+	const ports = [
+		{ direction: "Input", port: port("in?&#", "Keys & Pads + α", "Maker & Co") },
+		{ direction: "Output", port: port("out-2", "Keys output", "") }
+	]
+	const email = new URL(unmatchedDeviceEmail(ports))
+	assert.equal(email.pathname, "midi@aweseomthing.co.uk")
+	assert.equal(email.searchParams.get("subject"), "Unmatched MIDI device: Keys & Pads + α")
+	const body = email.searchParams.get("body")
+	for (const entry of ports) {
+		for (const [label, value] of midiPortDetails(entry)) assert.ok(body.includes(`${label}: ${value}`))
+	}
+	assert.ok(body.includes("Manufacturer: Not reported"))
+	assert.ok(body.includes("Device model / additional notes:"))
+})
+
+test("unreported device details have useful email fallbacks", () => {
+	const ports = [{ direction: "Input", port: {} }]
+	const email = new URL(unmatchedDeviceEmail(ports))
+	assert.equal(email.searchParams.get("subject"), "Unmatched MIDI device: Unnamed MIDI device")
+	assert.ok(email.searchParams.get("body").includes("Port ID: Not reported"))
+})
 
 test("recognized inputs and outputs get a profile and retain all live metadata", () => {
 	const input = port("input-1")

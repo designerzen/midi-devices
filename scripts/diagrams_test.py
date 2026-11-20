@@ -14,6 +14,37 @@ def profile(folder, identifier):
 
 
 class DeviceDiagrams(unittest.TestCase):
+    def test_teenage_engineering_transport_and_mapping_boundaries(self):
+        root = ROOT / "devices/teenage-engineering"
+        devices = {p.parent.name: json.loads(p.read_text(encoding="utf-8")) for p in root.glob("*/*.json")}
+        self.assertEqual(len(devices), 28)
+        for model, device in devices.items():
+            if model == "op-1":
+                continue
+            self.assertEqual(device["portNames"], [], model)
+            self.assertTrue(all("message" not in e and "control" not in e for e in device["surface"]["elements"]), model)
+        for model in ["pom-16", "pom-170"]:
+            device = devices[model]
+            midi = [p for p in device["connections"] if "MIDI" in p["label"]]
+            self.assertEqual(len(midi), 1)
+            self.assertEqual(midi[0]["direction"], "output")
+            self.assertIn("Type A", midi[0]["connector"])
+            self.assertFalse(any("USB" in p["connector"] for p in device["connections"]))
+        for model in ["line-module", "oplab-module"]:
+            self.assertIn("Requires an OP-Z", devices[model]["notice"])
+            self.assertFalse(any("USB" in p["connector"] for p in devices[model]["connections"]))
+        for model, device in devices.items():
+            if model.startswith("choir-"):
+                self.assertEqual(device["controls"], [])
+                self.assertTrue(any(p["connector"] == "Bluetooth LE MIDI" for p in device["connections"]))
+                self.assertEqual(next(p for p in device["connections"] if "USB" in p["connector"])["label"], "Charging")
+        self.assertEqual(devices["cm-15"]["controls"], [])
+        levels = devices["ep-35"]["controls"]
+        self.assertEqual([c["message"]["channel"] for c in levels], list(range(1, 7)))
+        self.assertTrue(all(c["message"]["number"] == 7 for c in levels))
+        for model in ["op-1-field", "op-xy"]:
+            self.assertEqual(sum(e["kind"] == "key" for e in devices[model]["surface"]["elements"]), 24)
+
     def test_irig_variants_keep_model_specific_wheels_and_pedal(self):
         for model, count in [("irig-keys-2", 37), ("irig-keys-2-mini", 25)]:
             device = profile(f"ik-multimedia/{model}", f"ik-multimedia-{model}")

@@ -1,0 +1,473 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-ep-40",
+	"name": "Teenage Engineering EP-40 riddim",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/ep-40",
+	"ids": [
+		"teenage-engineering-ep-40"
+	],
+	"portNames": [],
+	"description": "Sample-based performance instrument with sequencing and sound shaping.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "EP-40 riddim user guide",
+			"url": "https://teenage.engineering/guides/ep-40/hardware-overview"
+		},
+		{
+			"title": "EP-40 riddim reference",
+			"url": "https://teenage.engineering/guides/ep-40/system"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"TRS MIDI input/output",
+		"MIDI note sequencing and clock"
+	],
+	"hardwareControls": [
+		"Display",
+		"X",
+		"Y",
+		"Volume",
+		"Fader",
+		"A",
+		"B",
+		"C",
+		"D",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+		"9",
+		"10",
+		"11",
+		"12",
+		"Sound",
+		"Main",
+		"Tempo",
+		"Sample",
+		"Record",
+		"Play",
+		"Shift",
+		"Erase"
+	],
+	"notice": "Set MIDI channels, clock direction and pad note assignments in the device settings. Pad assignments depend on the project, so this profile supplies no fixed pad note map. Analog sync sockets do not carry MIDI. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "EP-40 riddim selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "display-sound-display",
+				"label": "DISPLAY / SOUND: Display",
+				"kind": "screen",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 8.846153846153847
+				}
+			},
+			{
+				"id": "display-sound-x",
+				"label": "DISPLAY / SOUND: X",
+				"kind": "knob",
+				"position": {
+					"x": 26.55,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 8.846153846153847
+				}
+			},
+			{
+				"id": "display-sound-y",
+				"label": "DISPLAY / SOUND: Y",
+				"kind": "knob",
+				"position": {
+					"x": 50.0,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 8.846153846153847
+				}
+			},
+			{
+				"id": "display-sound-volume",
+				"label": "DISPLAY / SOUND: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 73.45,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 8.846153846153847
+				}
+			},
+			{
+				"id": "display-sound-fader",
+				"label": "DISPLAY / SOUND: Fader",
+				"kind": "fader",
+				"position": {
+					"x": 3.1,
+					"y": 23.46153846153846,
+					"width": 23.45,
+					"height": 8.846153846153847
+				}
+			},
+			{
+				"id": "groups-a",
+				"label": "GROUPS: A",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 40.76923076923077,
+					"width": 10.9,
+					"height": 23.46153846153846
+				}
+			},
+			{
+				"id": "groups-b",
+				"label": "GROUPS: B",
+				"kind": "button",
+				"position": {
+					"x": 14.000000000000002,
+					"y": 40.76923076923077,
+					"width": 10.9,
+					"height": 23.46153846153846
+				}
+			},
+			{
+				"id": "groups-c",
+				"label": "GROUPS: C",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 64.23076923076924,
+					"width": 10.9,
+					"height": 23.46153846153846
+				}
+			},
+			{
+				"id": "groups-d",
+				"label": "GROUPS: D",
+				"kind": "button",
+				"position": {
+					"x": 14.000000000000002,
+					"y": 64.23076923076924,
+					"width": 10.9,
+					"height": 23.46153846153846
+				}
+			},
+			{
+				"id": "sample-pads-1",
+				"label": "SAMPLE PADS: 1",
+				"kind": "pad",
+				"position": {
+					"x": 28.1,
+					"y": 40.76923076923077,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-2",
+				"label": "SAMPLE PADS: 2",
+				"kind": "pad",
+				"position": {
+					"x": 42.699999999999996,
+					"y": 40.76923076923077,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-3",
+				"label": "SAMPLE PADS: 3",
+				"kind": "pad",
+				"position": {
+					"x": 57.3,
+					"y": 40.76923076923077,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-4",
+				"label": "SAMPLE PADS: 4",
+				"kind": "pad",
+				"position": {
+					"x": 28.1,
+					"y": 52.5,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-5",
+				"label": "SAMPLE PADS: 5",
+				"kind": "pad",
+				"position": {
+					"x": 42.699999999999996,
+					"y": 52.5,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-6",
+				"label": "SAMPLE PADS: 6",
+				"kind": "pad",
+				"position": {
+					"x": 57.3,
+					"y": 52.5,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-7",
+				"label": "SAMPLE PADS: 7",
+				"kind": "pad",
+				"position": {
+					"x": 28.1,
+					"y": 64.23076923076924,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-8",
+				"label": "SAMPLE PADS: 8",
+				"kind": "pad",
+				"position": {
+					"x": 42.699999999999996,
+					"y": 64.23076923076924,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-9",
+				"label": "SAMPLE PADS: 9",
+				"kind": "pad",
+				"position": {
+					"x": 57.3,
+					"y": 64.23076923076924,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-10",
+				"label": "SAMPLE PADS: 10",
+				"kind": "pad",
+				"position": {
+					"x": 28.1,
+					"y": 75.96153846153845,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-11",
+				"label": "SAMPLE PADS: 11",
+				"kind": "pad",
+				"position": {
+					"x": 42.699999999999996,
+					"y": 75.96153846153845,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "sample-pads-12",
+				"label": "SAMPLE PADS: 12",
+				"kind": "pad",
+				"position": {
+					"x": 57.3,
+					"y": 75.96153846153845,
+					"width": 14.6,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "functions-sound",
+				"label": "FUNCTIONS: Sound",
+				"kind": "button",
+				"position": {
+					"x": 75.1,
+					"y": 40.76923076923077,
+					"width": 10.9,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "functions-main",
+				"label": "FUNCTIONS: Main",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 40.76923076923077,
+					"width": 10.9,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "functions-tempo",
+				"label": "FUNCTIONS: Tempo",
+				"kind": "button",
+				"position": {
+					"x": 75.1,
+					"y": 52.5,
+					"width": 10.9,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "functions-sample",
+				"label": "FUNCTIONS: Sample",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 52.5,
+					"width": 10.9,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "functions-record",
+				"label": "FUNCTIONS: Record",
+				"kind": "button",
+				"position": {
+					"x": 75.1,
+					"y": 64.23076923076924,
+					"width": 10.9,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "functions-play",
+				"label": "FUNCTIONS: Play",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 64.23076923076924,
+					"width": 10.9,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "functions-shift",
+				"label": "FUNCTIONS: Shift",
+				"kind": "button",
+				"position": {
+					"x": 75.1,
+					"y": 75.96153846153845,
+					"width": 10.9,
+					"height": 11.73076923076923
+				}
+			},
+			{
+				"id": "functions-erase",
+				"label": "FUNCTIONS: Erase",
+				"kind": "button",
+				"position": {
+					"x": 86.0,
+					"y": 75.96153846153845,
+					"width": 10.9,
+					"height": 11.73076923076923
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / audio / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo line input",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo output / headphones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "MIDI input",
+			"connector": "3.5 mm TRS MIDI",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "MIDI output",
+			"connector": "3.5 mm TRS MIDI",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Sync input",
+			"connector": "3.5 mm sync",
+			"direction": "input",
+			"location": "Top"
+		},
+		{
+			"label": "Sync output",
+			"connector": "3.5 mm sync",
+			"direction": "output",
+			"location": "Top"
+		},
+		{
+			"label": "Wireless MIDI",
+			"connector": "Bluetooth LE MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/ep-40/hardware-overview",
+		"https://teenage.engineering/guides/ep-40/system",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

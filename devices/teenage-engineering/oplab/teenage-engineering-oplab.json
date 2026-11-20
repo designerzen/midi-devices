@@ -1,0 +1,235 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-oplab",
+	"name": "Teenage Engineering oplab (original)",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/oplab",
+	"ids": [
+		"teenage-engineering-oplab"
+	],
+	"portNames": [],
+	"description": "Discontinued standalone USB, DIN MIDI, CV/gate and sync interface.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "oplab (original) user guide",
+			"url": "https://teenage.engineering/guides/oplab"
+		}
+	],
+	"abilities": [
+		"USB MIDI device",
+		"Two USB MIDI host ports",
+		"DIN MIDI input/output",
+		"MIDI and CV/gate conversion"
+	],
+	"hardwareControls": [
+		"Mode selector",
+		"A",
+		"B",
+		"Select",
+		"User",
+		"Hz/V / V/oct",
+		"Gate / S-trig"
+	],
+	"notice": "This is the original standalone oplab board, not the OP-Z oplab module. Select a routing mode; CV/gate conversion has channel and voltage restrictions described in the guide. DIN sync is distinct from DIN MIDI. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "oplab (original) selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "routing-controls-mode-selector",
+				"label": "ROUTING CONTROLS: Mode selector",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "routing-controls-a",
+				"label": "ROUTING CONTROLS: A",
+				"kind": "button",
+				"position": {
+					"x": 26.55,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "routing-controls-b",
+				"label": "ROUTING CONTROLS: B",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "routing-controls-select",
+				"label": "ROUTING CONTROLS: Select",
+				"kind": "button",
+				"position": {
+					"x": 73.45,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "routing-controls-user",
+				"label": "ROUTING CONTROLS: User",
+				"kind": "switch",
+				"position": {
+					"x": 3.1,
+					"y": 51.153846153846146,
+					"width": 23.45,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "routing-controls-hz-v-v-oct",
+				"label": "ROUTING CONTROLS: Hz/V / V/oct",
+				"kind": "switch",
+				"position": {
+					"x": 26.55,
+					"y": 51.153846153846146,
+					"width": 23.45,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "routing-controls-gate-s-trig",
+				"label": "ROUTING CONTROLS: Gate / S-trig",
+				"kind": "switch",
+				"position": {
+					"x": 50.0,
+					"y": 51.153846153846146,
+					"width": 23.45,
+					"height": 36.53846153846153
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB device",
+			"connector": "Mini USB",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "USB host A",
+			"connector": "USB-A",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "USB host B",
+			"connector": "USB-A",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "MIDI input",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "MIDI output",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Sync 24 output",
+			"connector": "DIN sync",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "CV 1 input",
+			"connector": "3.5 mm CV",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "CV 1 output",
+			"connector": "3.5 mm CV",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "CV 2 input",
+			"connector": "3.5 mm CV",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "CV 2 output",
+			"connector": "3.5 mm CV",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Gate input",
+			"connector": "3.5 mm gate",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Gate output",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "DC power",
+			"connector": "5 V DC",
+			"direction": "input",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/oplab",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

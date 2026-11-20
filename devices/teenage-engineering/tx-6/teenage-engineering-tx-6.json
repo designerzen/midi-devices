@@ -1,0 +1,668 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-tx-6",
+	"name": "Teenage Engineering TX-6",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/tx-6",
+	"ids": [
+		"teenage-engineering-tx-6"
+	],
+	"portNames": [],
+	"description": "Six-channel stereo mixer, audio interface and MIDI controller.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "TX-6 user guide",
+			"url": "https://teenage.engineering/guides/tx-6"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"Bluetooth LE MIDI",
+		"MIDI controller mode",
+		"Remote mixer and synth control"
+	],
+	"hardwareControls": [
+		"1 Upper",
+		"2 Upper",
+		"3 Upper",
+		"4 Upper",
+		"5 Upper",
+		"6 Upper",
+		"1 Middle",
+		"2 Middle",
+		"3 Middle",
+		"4 Middle",
+		"5 Middle",
+		"6 Middle",
+		"1 Lower",
+		"2 Lower",
+		"3 Lower",
+		"4 Lower",
+		"5 Lower",
+		"6 Lower",
+		"1 Fader",
+		"2 Fader",
+		"3 Fader",
+		"4 Fader",
+		"5 Fader",
+		"6 Fader",
+		"1 Track",
+		"2 Track",
+		"3 Track",
+		"4 Track",
+		"5 Track",
+		"6 Track",
+		"Display",
+		"Encoder",
+		"FX I",
+		"FX II",
+		"Shift",
+		"Aux",
+		"Cue"
+	],
+	"notice": "Incoming mixer controls and outgoing controller-mode CCs are different maps. Included controls are incoming track volume on channels 1-6 and main output volume on channel 7; controller-mode faders transmit CC1-6 on channel 1. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [
+		{
+			"id": "track-1-volume",
+			"label": "Track 1 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-2-volume",
+			"label": "Track 2 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-3-volume",
+			"label": "Track 3 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-4-volume",
+			"label": "Track 4 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-5-volume",
+			"label": "Track 5 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-6-volume",
+			"label": "Track 6 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 6
+			}
+		},
+		{
+			"id": "main-volume",
+			"label": "Main volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 7
+			}
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "TX-6 selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "channel-strips-1-upper",
+				"label": "CHANNEL STRIPS: 1 Upper",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-2-upper",
+				"label": "CHANNEL STRIPS: 2 Upper",
+				"kind": "knob",
+				"position": {
+					"x": 18.733333333333334,
+					"y": 14.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-3-upper",
+				"label": "CHANNEL STRIPS: 3 Upper",
+				"kind": "knob",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 14.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-4-upper",
+				"label": "CHANNEL STRIPS: 4 Upper",
+				"kind": "knob",
+				"position": {
+					"x": 50.0,
+					"y": 14.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-5-upper",
+				"label": "CHANNEL STRIPS: 5 Upper",
+				"kind": "knob",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 14.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-6-upper",
+				"label": "CHANNEL STRIPS: 6 Upper",
+				"kind": "knob",
+				"position": {
+					"x": 81.26666666666668,
+					"y": 14.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-1-middle",
+				"label": "CHANNEL STRIPS: 1 Middle",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 24.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-2-middle",
+				"label": "CHANNEL STRIPS: 2 Middle",
+				"kind": "knob",
+				"position": {
+					"x": 18.733333333333334,
+					"y": 24.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-3-middle",
+				"label": "CHANNEL STRIPS: 3 Middle",
+				"kind": "knob",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 24.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-4-middle",
+				"label": "CHANNEL STRIPS: 4 Middle",
+				"kind": "knob",
+				"position": {
+					"x": 50.0,
+					"y": 24.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-5-middle",
+				"label": "CHANNEL STRIPS: 5 Middle",
+				"kind": "knob",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 24.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-6-middle",
+				"label": "CHANNEL STRIPS: 6 Middle",
+				"kind": "knob",
+				"position": {
+					"x": 81.26666666666668,
+					"y": 24.615384615384617,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-1-lower",
+				"label": "CHANNEL STRIPS: 1 Lower",
+				"kind": "knob",
+				"position": {
+					"x": 3.1,
+					"y": 34.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-2-lower",
+				"label": "CHANNEL STRIPS: 2 Lower",
+				"kind": "knob",
+				"position": {
+					"x": 18.733333333333334,
+					"y": 34.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-3-lower",
+				"label": "CHANNEL STRIPS: 3 Lower",
+				"kind": "knob",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 34.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-4-lower",
+				"label": "CHANNEL STRIPS: 4 Lower",
+				"kind": "knob",
+				"position": {
+					"x": 50.0,
+					"y": 34.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-5-lower",
+				"label": "CHANNEL STRIPS: 5 Lower",
+				"kind": "knob",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 34.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-6-lower",
+				"label": "CHANNEL STRIPS: 6 Lower",
+				"kind": "knob",
+				"position": {
+					"x": 81.26666666666668,
+					"y": 34.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-1-fader",
+				"label": "CHANNEL STRIPS: 1 Fader",
+				"kind": "fader",
+				"position": {
+					"x": 3.1,
+					"y": 44.61538461538462,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-2-fader",
+				"label": "CHANNEL STRIPS: 2 Fader",
+				"kind": "fader",
+				"position": {
+					"x": 18.733333333333334,
+					"y": 44.61538461538462,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-3-fader",
+				"label": "CHANNEL STRIPS: 3 Fader",
+				"kind": "fader",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 44.61538461538462,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-4-fader",
+				"label": "CHANNEL STRIPS: 4 Fader",
+				"kind": "fader",
+				"position": {
+					"x": 50.0,
+					"y": 44.61538461538462,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-5-fader",
+				"label": "CHANNEL STRIPS: 5 Fader",
+				"kind": "fader",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 44.61538461538462,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-6-fader",
+				"label": "CHANNEL STRIPS: 6 Fader",
+				"kind": "fader",
+				"position": {
+					"x": 81.26666666666668,
+					"y": 44.61538461538462,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-1-track",
+				"label": "CHANNEL STRIPS: 1 Track",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 54.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-2-track",
+				"label": "CHANNEL STRIPS: 2 Track",
+				"kind": "button",
+				"position": {
+					"x": 18.733333333333334,
+					"y": 54.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-3-track",
+				"label": "CHANNEL STRIPS: 3 Track",
+				"kind": "button",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 54.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-4-track",
+				"label": "CHANNEL STRIPS: 4 Track",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 54.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-5-track",
+				"label": "CHANNEL STRIPS: 5 Track",
+				"kind": "button",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 54.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "channel-strips-6-track",
+				"label": "CHANNEL STRIPS: 6 Track",
+				"kind": "button",
+				"position": {
+					"x": 81.26666666666668,
+					"y": 54.61538461538461,
+					"width": 15.633333333333335,
+					"height": 10.0
+				}
+			},
+			{
+				"id": "master-effects-display",
+				"label": "MASTER / EFFECTS: Display",
+				"kind": "screen",
+				"position": {
+					"x": 3.1,
+					"y": 73.07692307692307,
+					"width": 13.4,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "master-effects-encoder",
+				"label": "MASTER / EFFECTS: Encoder",
+				"kind": "knob",
+				"position": {
+					"x": 16.5,
+					"y": 73.07692307692307,
+					"width": 13.4,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "master-effects-fx-i",
+				"label": "MASTER / EFFECTS: FX I",
+				"kind": "button",
+				"position": {
+					"x": 29.9,
+					"y": 73.07692307692307,
+					"width": 13.4,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "master-effects-fx-ii",
+				"label": "MASTER / EFFECTS: FX II",
+				"kind": "button",
+				"position": {
+					"x": 43.3,
+					"y": 73.07692307692307,
+					"width": 13.4,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "master-effects-shift",
+				"label": "MASTER / EFFECTS: Shift",
+				"kind": "button",
+				"position": {
+					"x": 56.699999999999996,
+					"y": 73.07692307692307,
+					"width": 13.4,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "master-effects-aux",
+				"label": "MASTER / EFFECTS: Aux",
+				"kind": "button",
+				"position": {
+					"x": 70.1,
+					"y": 73.07692307692307,
+					"width": 13.4,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "master-effects-cue",
+				"label": "MASTER / EFFECTS: Cue",
+				"kind": "button",
+				"position": {
+					"x": 83.5,
+					"y": 73.07692307692307,
+					"width": 13.4,
+					"height": 16.153846153846153
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / audio / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Wireless MIDI",
+			"connector": "Bluetooth LE MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		},
+		{
+			"label": "Stereo input 1",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo input 2",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo input 3",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo input 4",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo input 5",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo input 6",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Main output",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Aux output",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Cue output",
+			"connector": "3.5 mm TRS",
+			"direction": "output",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/tx-6",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

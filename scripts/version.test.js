@@ -1,7 +1,18 @@
 import assert from "node:assert/strict"
 import { execFileSync } from "node:child_process"
 import test from "node:test"
-import { buildVersion } from "./version.js"
+import { buildVersion, mainBuildVersion } from "./version.js"
+
+test("main builds advance the patch version for each workflow run", () => {
+	assert.equal(mainBuildVersion("1.0.1", "42"), "1.0.43")
+	assert.equal(mainBuildVersion("1.0.1", "43"), "1.0.44")
+	assert.equal(mainBuildVersion("2.3.0", "42"), "2.3.42")
+	assert.equal(mainBuildVersion("1.0.1", "42"), mainBuildVersion("1.0.1", "42"))
+	for (const run of [undefined, "", "0", "-1", "1.5", "invalid"]) {
+		assert.throws(() => mainBuildVersion("1.0.1", run), /GITHUB_RUN_NUMBER/)
+	}
+	assert.throws(() => mainBuildVersion("1.0.1-beta.1", "42"), /stable major.minor.patch/)
+})
 
 test("build version follows the deployment commit on Cloudflare and GitHub", () => {
 	const cloudflare = "a".repeat(40)

@@ -1,0 +1,566 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-op-1-field",
+	"name": "Teenage Engineering OP-1 field",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/op-1",
+	"ids": [
+		"teenage-engineering-op-1-field"
+	],
+	"portNames": [],
+	"description": "Portable synthesizer, sampler and tape workstation with USB and Bluetooth MIDI.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "OP-1 field user guide",
+			"url": "https://teenage.engineering/guides/op-1"
+		}
+	],
+	"abilities": [
+		"USB MIDI host and device",
+		"Bluetooth LE MIDI",
+		"Notes, clock and remote control"
+	],
+	"hardwareControls": [
+		"Synth",
+		"Drum",
+		"Tape",
+		"Mixer",
+		"Record",
+		"Play",
+		"Stop",
+		"Shift",
+		"Display",
+		"Blue encoder",
+		"Green encoder",
+		"White encoder",
+		"Orange encoder",
+		"24-key keyboard"
+	],
+	"notice": "Distinct from the original mini-USB OP-1. Configure COM MIDI routing and pair BLE devices in the MIDI connection list. Selected remote CCs follow the current guide; controller mode assignments and keyboard octave are configurable. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [
+		{
+			"id": "volume",
+			"label": "Mixer volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 7
+		},
+		{
+			"id": "mute",
+			"label": "Mixer mute",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 9
+		},
+		{
+			"id": "pan",
+			"label": "Mixer pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 10
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "OP-1 field selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "modes-transport-synth",
+				"label": "MODES / TRANSPORT: Synth",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 10.95,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "modes-transport-drum",
+				"label": "MODES / TRANSPORT: Drum",
+				"kind": "button",
+				"position": {
+					"x": 14.05,
+					"y": 14.615384615384617,
+					"width": 10.95,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "modes-transport-tape",
+				"label": "MODES / TRANSPORT: Tape",
+				"kind": "button",
+				"position": {
+					"x": 25.0,
+					"y": 14.615384615384617,
+					"width": 10.95,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "modes-transport-mixer",
+				"label": "MODES / TRANSPORT: Mixer",
+				"kind": "button",
+				"position": {
+					"x": 35.949999999999996,
+					"y": 14.615384615384617,
+					"width": 10.95,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "modes-transport-record",
+				"label": "MODES / TRANSPORT: Record",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 30.384615384615383,
+					"width": 10.95,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "modes-transport-play",
+				"label": "MODES / TRANSPORT: Play",
+				"kind": "button",
+				"position": {
+					"x": 14.05,
+					"y": 30.384615384615383,
+					"width": 10.95,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "modes-transport-stop",
+				"label": "MODES / TRANSPORT: Stop",
+				"kind": "button",
+				"position": {
+					"x": 25.0,
+					"y": 30.384615384615383,
+					"width": 10.95,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "modes-transport-shift",
+				"label": "MODES / TRANSPORT: Shift",
+				"kind": "button",
+				"position": {
+					"x": 35.949999999999996,
+					"y": 30.384615384615383,
+					"width": 10.95,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "display-encoders-display",
+				"label": "DISPLAY / ENCODERS: Display",
+				"kind": "screen",
+				"position": {
+					"x": 50.1,
+					"y": 14.615384615384617,
+					"width": 11.700000000000001,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "display-encoders-blue-encoder",
+				"label": "DISPLAY / ENCODERS: Blue encoder",
+				"kind": "knob",
+				"position": {
+					"x": 61.8,
+					"y": 14.615384615384617,
+					"width": 11.700000000000001,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "display-encoders-green-encoder",
+				"label": "DISPLAY / ENCODERS: Green encoder",
+				"kind": "knob",
+				"position": {
+					"x": 73.5,
+					"y": 14.615384615384617,
+					"width": 11.700000000000001,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "display-encoders-white-encoder",
+				"label": "DISPLAY / ENCODERS: White encoder",
+				"kind": "knob",
+				"position": {
+					"x": 85.2,
+					"y": 14.615384615384617,
+					"width": 11.700000000000001,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "display-encoders-orange-encoder",
+				"label": "DISPLAY / ENCODERS: Orange encoder",
+				"kind": "knob",
+				"position": {
+					"x": 50.1,
+					"y": 30.384615384615383,
+					"width": 11.700000000000001,
+					"height": 15.769230769230768
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 3.0,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 9.714285714285714,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 16.428571428571427,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 23.142857142857142,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 29.857142857142854,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 36.57142857142857,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 43.285714285714285,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 50.0,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 56.71428571428571,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 63.42857142857142,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 70.14285714285712,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 76.85714285714286,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 83.57142857142857,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 90.28571428571428,
+					"y": 53.84615384615385,
+					"width": 6.714285714285714,
+					"height": 35.38461538461539
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 7.632857142857143,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 14.347142857142856,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 27.775714285714287,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 34.49,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 41.20428571428572,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 54.63285714285714,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 61.347142857142856,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 74.77571428571427,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 81.48999999999998,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 88.20428571428572,
+					"y": 53.84615384615385,
+					"width": 4.162857142857143,
+					"height": 21.584615384615383
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / audio / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Wireless MIDI",
+			"connector": "Bluetooth LE MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		},
+		{
+			"label": "Stereo line input",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo output / headphones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/op-1",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

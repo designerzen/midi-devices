@@ -8,13 +8,17 @@ The test page displays the package version, deployed commit and build time. Each
 
 ## Bumping the version
 
-Run `npm run version:patch` for fixes and catalogue updates, `npm run version:minor` for new compatible functionality, or `npm run version:major` for breaking package changes. These commands update `package.json` and the local npm lockfile without creating a Git commit or tag. Commit the package version change with the release changes, then build and deploy as usual. Builds use that version in the page, `version.json`, and API `dataVersion`; building alone does not bump it. The API URL version (`api/v1`) and profile `schemaVersion` are separate format versions.
+Every push to `main` automatically runs `npm run version:build` before validation and building in GitHub Actions. It sets the CI package and lockfile version to `<major>.<minor>.<base patch + GITHUB_RUN_NUMBER>`: with a committed base of `1.0.1`, workflow runs 42 and 43 build `1.0.43` and `1.0.44`. The page, `version.json`, and API `dataVersion` all use this generated version. Manual workflow runs on main use the same mechanism; rerunning a workflow run preserves its version. Workflow numbers include pull-request runs, so deployed versions can skip numbers. Version changes stay in the CI checkout without creating commits or tags.
+
+Local and pull-request builds keep the committed package version. Use `npm run version:patch`, `npm run version:minor`, or `npm run version:major` to change the committed base version when needed; these update `package.json` and the local npm lockfile without creating a Git commit or tag. The API URL version (`api/v1`) and profile `schemaVersion` are separate format versions.
 
 Click **Detect connected devices** to show dedicated cards for every browser-visible MIDI input and output, including unmatched devices. Recognized profiles show hardware diagrams and capabilities; every card includes live port metadata and a session-only profile selector. Inputs are opened for monitoring, with per-input event counts and a live table of the latest 200 messages (UTC time, input name, decoded message, and raw hexadecimal bytes). Enable **Include SysEx** and refresh detection to request the additional browser permission. Connect/disconnect changes update the cards automatically. Input/output pairing is based on the available profile, name and manufacturer; Web MIDI does not supply a physical USB identity.
 
 Read the [complete API reference](docs/api.md) for response shapes, every client method, identifier matching, errors, caching, and self-hosting. The [profile and contribution guide](docs/profiles.md) explains MIDI mappings, panel geometry, and how to add devices and manufacturers.
 
 See [classic MIDI and accessible hardware coverage](docs/coverage.md) for the DX7, D-50, JUNO-106, M1, TR-909 and other landmark devices, plus Soundbeam, Magic Flute, Skoog and Skwitch. The guide explains DIN MIDI interfaces, companion-app dependencies, and partial mappings.
+
+Teenage Engineering has 28 profiles, covering the OP synthesizers, MIDI-capable EP products, TX-6 and TP-7, POM-16/170, oplab interfaces and OP-Z expansions, ortho remote, all eight choir voices, and the CM-15 firmware endpoint. See [Teenage Engineering coverage](docs/coverage.md#teenage-engineering-midi-products) for connection requirements and mapping limits.
 
 The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native Instruments KOMPLETE KONTROL A25/A49, and Nektar SE49/SE61. These keyboard profiles cover basic performance messages; their setup notes explain configurable controls and manual selection where port aliases have not been verified.
 

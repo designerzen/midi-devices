@@ -1,0 +1,149 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-cm-15",
+	"name": "Teenage Engineering CM-15",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/cm-15",
+	"ids": [
+		"teenage-engineering-cm-15"
+	],
+	"portNames": [],
+	"description": "Portable condenser microphone with USB audio and a MIDI firmware-update endpoint.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "CM-15 user guide",
+			"url": "https://teenage.engineering/guides/cm-15"
+		}
+	],
+	"abilities": [
+		"USB audio",
+		"Firmware updates through the Web MIDI updater"
+	],
+	"hardwareControls": [
+		"Microphone capsule",
+		"Gain pad",
+		"Power",
+		"Status indicator",
+		"Built-in stand"
+	],
+	"notice": "Included for its documented MIDI updater connection. The manufacturer does not publish a musical note or CC performance map; this is a firmware/setup reference, with no invented MIDI controls. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "CM-15 selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "microphone-side-controls-microphone-capsule",
+				"label": "MICROPHONE / SIDE CONTROLS: Microphone capsule",
+				"kind": "speaker",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "microphone-side-controls-gain-pad",
+				"label": "MICROPHONE / SIDE CONTROLS: Gain pad",
+				"kind": "switch3",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "microphone-side-controls-power",
+				"label": "MICROPHONE / SIDE CONTROLS: Power",
+				"kind": "switch",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "microphone-side-controls-status-indicator",
+				"label": "MICROPHONE / SIDE CONTROLS: Status indicator",
+				"kind": "screen",
+				"position": {
+					"x": 3.1,
+					"y": 51.153846153846146,
+					"width": 31.26666666666667,
+					"height": 36.53846153846153
+				}
+			},
+			{
+				"id": "microphone-side-controls-built-in-stand",
+				"label": "MICROPHONE / SIDE CONTROLS: Built-in stand",
+				"kind": "strip",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 51.153846153846146,
+					"width": 31.26666666666667,
+					"height": 36.53846153846153
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB audio / firmware update / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Microphone output",
+			"connector": "Mini XLR",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Stereo output / headphones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/cm-15",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}
