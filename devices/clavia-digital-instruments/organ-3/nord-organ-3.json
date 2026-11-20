@@ -1,0 +1,2139 @@
+{
+	"schemaVersion": 1,
+	"id": "nord-organ-3",
+	"name": "Nord Organ 3",
+	"manufacturer": "Nord / Clavia Digital Instruments",
+	"manufacturerUrl": "https://www.nordkeyboards.com/",
+	"productUrl": "https://www.nordkeyboards.com/products/nord-organ-3/",
+	"description": "Dual-manual organ with two 61-key keyboards, four drawbar sets and rotary-speaker control.",
+	"ids": [
+		"nord-organ-3"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Nord Organ 3 specifications and connections",
+			"url": "https://www.nordkeyboards.com/products/nord-organ-3/specifications/"
+		},
+		{
+			"title": "Official Nord Organ 3 manual, MIDI chart and downloads",
+			"url": "https://www.nordkeyboards.com/products/nord-organ-3/downloads/"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI input/output",
+		"MIDI notes, program changes and selected CCs"
+	],
+	"hardwareControls": [
+		"Upper 61-key manual",
+		"Lower 61-key manual",
+		"UPPER DRAWBARS A: 16 ft, 5 1/3 ft, 8 ft, 4 ft, 2 2/3 ft, 2 ft, 1 3/5 ft, 1 1/3 ft, 1 ft",
+		"UPPER DRAWBARS B: 16 ft, 5 1/3 ft, 8 ft, 4 ft, 2 2/3 ft, 2 ft, 1 3/5 ft, 1 1/3 ft, 1 ft",
+		"LOWER DRAWBARS A: 16 ft, 5 1/3 ft, 8 ft, 4 ft, 2 2/3 ft, 2 ft, 1 3/5 ft, 1 1/3 ft, 1 ft",
+		"LOWER DRAWBARS B: 16 ft, 5 1/3 ft, 8 ft, 4 ft, 2 2/3 ft, 2 ft, 1 3/5 ft, 1 1/3 ft, 1 ft",
+		"PROGRAM / ROTARY / EFFECTS: Display, Program dial, Master level, Rotary speed, Rotary drive, Vibrato / chorus, Percussion, Reverb amount"
+	],
+	"notice": "Upper, lower and pedal manuals have separate configurable MIDI channels. The additional Bass Pedal MIDI IN is distinct from the ordinary MIDI input. Swell uses CC4, not the CC11 expression assignment used by several Nord piano models. Match the instrument MIDI channel and receive filters before sending notes or CCs. USB carries MIDI/data rather than audio; connect the audio outputs separately. Consult the download page for the correct Windows USB driver. Port aliases have not been verified on hardware; select the profile manually. The drawings are selected-control schematics rather than scale panel plans. Keyboard and panel controls remain unbound; splits, octave shifts and layer routing can change their behavior. Only the listed CCs are supplied, not the full MIDI implementation.",
+	"controls": [
+		{
+			"id": "sustain",
+			"label": "Sustain (selected manual channel)",
+			"cc": 64,
+			"widget": "slider",
+			"min": 0,
+			"max": 127
+		},
+		{
+			"id": "swell",
+			"label": "Swell pedal (selected manual channel)",
+			"cc": 4,
+			"widget": "slider",
+			"min": 0,
+			"max": 127
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Nord Organ 3 selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and official documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 940,
+		"elements": [
+			{
+				"id": "upper-drawbars-a-16-ft",
+				"label": "UPPER DRAWBARS A: 16 ft",
+				"kind": "fader",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-a-5-1-3-ft",
+				"label": "UPPER DRAWBARS A: 5 1/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 4.45925925925926,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-a-8-ft",
+				"label": "UPPER DRAWBARS A: 8 ft",
+				"kind": "fader",
+				"position": {
+					"x": 6.851851851851852,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-a-4-ft",
+				"label": "UPPER DRAWBARS A: 4 ft",
+				"kind": "fader",
+				"position": {
+					"x": 9.244444444444444,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-a-2-2-3-ft",
+				"label": "UPPER DRAWBARS A: 2 2/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 11.637037037037036,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-a-2-ft",
+				"label": "UPPER DRAWBARS A: 2 ft",
+				"kind": "fader",
+				"position": {
+					"x": 14.029629629629628,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-a-1-3-5-ft",
+				"label": "UPPER DRAWBARS A: 1 3/5 ft",
+				"kind": "fader",
+				"position": {
+					"x": 16.42222222222222,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-a-1-1-3-ft",
+				"label": "UPPER DRAWBARS A: 1 1/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 18.814814814814813,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-a-1-ft",
+				"label": "UPPER DRAWBARS A: 1 ft",
+				"kind": "fader",
+				"position": {
+					"x": 21.207407407407405,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-16-ft",
+				"label": "UPPER DRAWBARS B: 16 ft",
+				"kind": "fader",
+				"position": {
+					"x": 25.733333333333334,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-5-1-3-ft",
+				"label": "UPPER DRAWBARS B: 5 1/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 28.125925925925927,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-8-ft",
+				"label": "UPPER DRAWBARS B: 8 ft",
+				"kind": "fader",
+				"position": {
+					"x": 30.518518518518515,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-4-ft",
+				"label": "UPPER DRAWBARS B: 4 ft",
+				"kind": "fader",
+				"position": {
+					"x": 32.911111111111104,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-2-2-3-ft",
+				"label": "UPPER DRAWBARS B: 2 2/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 35.303703703703704,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-2-ft",
+				"label": "UPPER DRAWBARS B: 2 ft",
+				"kind": "fader",
+				"position": {
+					"x": 37.696296296296296,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-1-3-5-ft",
+				"label": "UPPER DRAWBARS B: 1 3/5 ft",
+				"kind": "fader",
+				"position": {
+					"x": 40.08888888888889,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-1-1-3-ft",
+				"label": "UPPER DRAWBARS B: 1 1/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 42.481481481481474,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "upper-drawbars-b-1-ft",
+				"label": "UPPER DRAWBARS B: 1 ft",
+				"kind": "fader",
+				"position": {
+					"x": 44.87407407407407,
+					"y": 10.106382978723403,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-16-ft",
+				"label": "LOWER DRAWBARS A: 16 ft",
+				"kind": "fader",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-5-1-3-ft",
+				"label": "LOWER DRAWBARS A: 5 1/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 4.45925925925926,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-8-ft",
+				"label": "LOWER DRAWBARS A: 8 ft",
+				"kind": "fader",
+				"position": {
+					"x": 6.851851851851852,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-4-ft",
+				"label": "LOWER DRAWBARS A: 4 ft",
+				"kind": "fader",
+				"position": {
+					"x": 9.244444444444444,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-2-2-3-ft",
+				"label": "LOWER DRAWBARS A: 2 2/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 11.637037037037036,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-2-ft",
+				"label": "LOWER DRAWBARS A: 2 ft",
+				"kind": "fader",
+				"position": {
+					"x": 14.029629629629628,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-1-3-5-ft",
+				"label": "LOWER DRAWBARS A: 1 3/5 ft",
+				"kind": "fader",
+				"position": {
+					"x": 16.42222222222222,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-1-1-3-ft",
+				"label": "LOWER DRAWBARS A: 1 1/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 18.814814814814813,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-a-1-ft",
+				"label": "LOWER DRAWBARS A: 1 ft",
+				"kind": "fader",
+				"position": {
+					"x": 21.207407407407405,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-16-ft",
+				"label": "LOWER DRAWBARS B: 16 ft",
+				"kind": "fader",
+				"position": {
+					"x": 25.733333333333334,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-5-1-3-ft",
+				"label": "LOWER DRAWBARS B: 5 1/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 28.125925925925927,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-8-ft",
+				"label": "LOWER DRAWBARS B: 8 ft",
+				"kind": "fader",
+				"position": {
+					"x": 30.518518518518515,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-4-ft",
+				"label": "LOWER DRAWBARS B: 4 ft",
+				"kind": "fader",
+				"position": {
+					"x": 32.911111111111104,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-2-2-3-ft",
+				"label": "LOWER DRAWBARS B: 2 2/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 35.303703703703704,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-2-ft",
+				"label": "LOWER DRAWBARS B: 2 ft",
+				"kind": "fader",
+				"position": {
+					"x": 37.696296296296296,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-1-3-5-ft",
+				"label": "LOWER DRAWBARS B: 1 3/5 ft",
+				"kind": "fader",
+				"position": {
+					"x": 40.08888888888889,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-1-1-3-ft",
+				"label": "LOWER DRAWBARS B: 1 1/3 ft",
+				"kind": "fader",
+				"position": {
+					"x": 42.481481481481474,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "lower-drawbars-b-1-ft",
+				"label": "LOWER DRAWBARS B: 1 ft",
+				"kind": "fader",
+				"position": {
+					"x": 44.87407407407407,
+					"y": 25.53191489361702,
+					"width": 2.3925925925925924,
+					"height": 9.574468085106384
+				}
+			},
+			{
+				"id": "program-rotary-effects-display",
+				"label": "PROGRAM / ROTARY / EFFECTS: Display",
+				"kind": "screen",
+				"position": {
+					"x": 49.4,
+					"y": 10.106382978723403,
+					"width": 12.133333333333333,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "program-rotary-effects-program-dial",
+				"label": "PROGRAM / ROTARY / EFFECTS: Program dial",
+				"kind": "knob",
+				"position": {
+					"x": 61.53333333333333,
+					"y": 10.106382978723403,
+					"width": 12.133333333333333,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "program-rotary-effects-master-level",
+				"label": "PROGRAM / ROTARY / EFFECTS: Master level",
+				"kind": "knob",
+				"position": {
+					"x": 73.66666666666667,
+					"y": 10.106382978723403,
+					"width": 12.133333333333333,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "program-rotary-effects-rotary-speed",
+				"label": "PROGRAM / ROTARY / EFFECTS: Rotary speed",
+				"kind": "button",
+				"position": {
+					"x": 85.8,
+					"y": 10.106382978723403,
+					"width": 12.133333333333333,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "program-rotary-effects-rotary-drive",
+				"label": "PROGRAM / ROTARY / EFFECTS: Rotary drive",
+				"kind": "knob",
+				"position": {
+					"x": 49.4,
+					"y": 22.606382978723406,
+					"width": 12.133333333333333,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "program-rotary-effects-vibrato-chorus",
+				"label": "PROGRAM / ROTARY / EFFECTS: Vibrato / chorus",
+				"kind": "button",
+				"position": {
+					"x": 61.53333333333333,
+					"y": 22.606382978723406,
+					"width": 12.133333333333333,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "program-rotary-effects-percussion",
+				"label": "PROGRAM / ROTARY / EFFECTS: Percussion",
+				"kind": "button",
+				"position": {
+					"x": 73.66666666666667,
+					"y": 22.606382978723406,
+					"width": 12.133333333333333,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "program-rotary-effects-reverb-amount",
+				"label": "PROGRAM / ROTARY / EFFECTS: Reverb amount",
+				"kind": "knob",
+				"position": {
+					"x": 85.8,
+					"y": 22.606382978723406,
+					"width": 12.133333333333333,
+					"height": 12.5
+				}
+			},
+			{
+				"id": "upper-key-1",
+				"label": "Upper manual: Key 1",
+				"kind": "key",
+				"position": {
+					"x": 2.3333333333333335,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-3",
+				"label": "Upper manual: Key 3",
+				"kind": "key",
+				"position": {
+					"x": 4.981481481481482,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-5",
+				"label": "Upper manual: Key 5",
+				"kind": "key",
+				"position": {
+					"x": 7.629629629629629,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-6",
+				"label": "Upper manual: Key 6",
+				"kind": "key",
+				"position": {
+					"x": 10.277777777777777,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-8",
+				"label": "Upper manual: Key 8",
+				"kind": "key",
+				"position": {
+					"x": 12.925925925925927,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-10",
+				"label": "Upper manual: Key 10",
+				"kind": "key",
+				"position": {
+					"x": 15.574074074074073,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-12",
+				"label": "Upper manual: Key 12",
+				"kind": "key",
+				"position": {
+					"x": 18.22222222222222,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-13",
+				"label": "Upper manual: Key 13",
+				"kind": "key",
+				"position": {
+					"x": 20.87037037037037,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-15",
+				"label": "Upper manual: Key 15",
+				"kind": "key",
+				"position": {
+					"x": 23.51851851851852,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-17",
+				"label": "Upper manual: Key 17",
+				"kind": "key",
+				"position": {
+					"x": 26.166666666666664,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-18",
+				"label": "Upper manual: Key 18",
+				"kind": "key",
+				"position": {
+					"x": 28.814814814814817,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-20",
+				"label": "Upper manual: Key 20",
+				"kind": "key",
+				"position": {
+					"x": 31.462962962962965,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-22",
+				"label": "Upper manual: Key 22",
+				"kind": "key",
+				"position": {
+					"x": 34.11111111111111,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-24",
+				"label": "Upper manual: Key 24",
+				"kind": "key",
+				"position": {
+					"x": 36.75925925925926,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-25",
+				"label": "Upper manual: Key 25",
+				"kind": "key",
+				"position": {
+					"x": 39.407407407407405,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-27",
+				"label": "Upper manual: Key 27",
+				"kind": "key",
+				"position": {
+					"x": 42.05555555555556,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-29",
+				"label": "Upper manual: Key 29",
+				"kind": "key",
+				"position": {
+					"x": 44.7037037037037,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-30",
+				"label": "Upper manual: Key 30",
+				"kind": "key",
+				"position": {
+					"x": 47.35185185185185,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-32",
+				"label": "Upper manual: Key 32",
+				"kind": "key",
+				"position": {
+					"x": 50.0,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-34",
+				"label": "Upper manual: Key 34",
+				"kind": "key",
+				"position": {
+					"x": 52.648148148148145,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-36",
+				"label": "Upper manual: Key 36",
+				"kind": "key",
+				"position": {
+					"x": 55.2962962962963,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-37",
+				"label": "Upper manual: Key 37",
+				"kind": "key",
+				"position": {
+					"x": 57.94444444444444,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-39",
+				"label": "Upper manual: Key 39",
+				"kind": "key",
+				"position": {
+					"x": 60.592592592592595,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-41",
+				"label": "Upper manual: Key 41",
+				"kind": "key",
+				"position": {
+					"x": 63.24074074074074,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-42",
+				"label": "Upper manual: Key 42",
+				"kind": "key",
+				"position": {
+					"x": 65.88888888888889,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-44",
+				"label": "Upper manual: Key 44",
+				"kind": "key",
+				"position": {
+					"x": 68.53703703703704,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-46",
+				"label": "Upper manual: Key 46",
+				"kind": "key",
+				"position": {
+					"x": 71.18518518518519,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-48",
+				"label": "Upper manual: Key 48",
+				"kind": "key",
+				"position": {
+					"x": 73.83333333333333,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-49",
+				"label": "Upper manual: Key 49",
+				"kind": "key",
+				"position": {
+					"x": 76.48148148148148,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-51",
+				"label": "Upper manual: Key 51",
+				"kind": "key",
+				"position": {
+					"x": 79.12962962962963,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-53",
+				"label": "Upper manual: Key 53",
+				"kind": "key",
+				"position": {
+					"x": 81.77777777777779,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-54",
+				"label": "Upper manual: Key 54",
+				"kind": "key",
+				"position": {
+					"x": 84.42592592592592,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-56",
+				"label": "Upper manual: Key 56",
+				"kind": "key",
+				"position": {
+					"x": 87.07407407407408,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-58",
+				"label": "Upper manual: Key 58",
+				"kind": "key",
+				"position": {
+					"x": 89.72222222222221,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-60",
+				"label": "Upper manual: Key 60",
+				"kind": "key",
+				"position": {
+					"x": 92.37037037037035,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-61",
+				"label": "Upper manual: Key 61",
+				"kind": "key",
+				"position": {
+					"x": 95.01851851851852,
+					"y": 41.48936170212766,
+					"width": 2.648148148148148,
+					"height": 21.808510638297875
+				},
+				"dark": false
+			},
+			{
+				"id": "upper-key-2",
+				"label": "Upper manual: Key 2",
+				"kind": "key",
+				"position": {
+					"x": 4.160555555555556,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-4",
+				"label": "Upper manual: Key 4",
+				"kind": "key",
+				"position": {
+					"x": 6.808703703703703,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-7",
+				"label": "Upper manual: Key 7",
+				"kind": "key",
+				"position": {
+					"x": 12.104999999999999,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-9",
+				"label": "Upper manual: Key 9",
+				"kind": "key",
+				"position": {
+					"x": 14.75314814814815,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-11",
+				"label": "Upper manual: Key 11",
+				"kind": "key",
+				"position": {
+					"x": 17.401296296296294,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-14",
+				"label": "Upper manual: Key 14",
+				"kind": "key",
+				"position": {
+					"x": 22.697592592592596,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-16",
+				"label": "Upper manual: Key 16",
+				"kind": "key",
+				"position": {
+					"x": 25.34574074074074,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-19",
+				"label": "Upper manual: Key 19",
+				"kind": "key",
+				"position": {
+					"x": 30.642037037037035,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-21",
+				"label": "Upper manual: Key 21",
+				"kind": "key",
+				"position": {
+					"x": 33.29018518518518,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-23",
+				"label": "Upper manual: Key 23",
+				"kind": "key",
+				"position": {
+					"x": 35.93833333333334,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-26",
+				"label": "Upper manual: Key 26",
+				"kind": "key",
+				"position": {
+					"x": 41.23462962962962,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-28",
+				"label": "Upper manual: Key 28",
+				"kind": "key",
+				"position": {
+					"x": 43.882777777777775,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-31",
+				"label": "Upper manual: Key 31",
+				"kind": "key",
+				"position": {
+					"x": 49.17907407407407,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-33",
+				"label": "Upper manual: Key 33",
+				"kind": "key",
+				"position": {
+					"x": 51.827222222222225,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-35",
+				"label": "Upper manual: Key 35",
+				"kind": "key",
+				"position": {
+					"x": 54.47537037037037,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-38",
+				"label": "Upper manual: Key 38",
+				"kind": "key",
+				"position": {
+					"x": 59.77166666666667,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-40",
+				"label": "Upper manual: Key 40",
+				"kind": "key",
+				"position": {
+					"x": 62.41981481481481,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-43",
+				"label": "Upper manual: Key 43",
+				"kind": "key",
+				"position": {
+					"x": 67.7161111111111,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-45",
+				"label": "Upper manual: Key 45",
+				"kind": "key",
+				"position": {
+					"x": 70.36425925925927,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-47",
+				"label": "Upper manual: Key 47",
+				"kind": "key",
+				"position": {
+					"x": 73.01240740740741,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-50",
+				"label": "Upper manual: Key 50",
+				"kind": "key",
+				"position": {
+					"x": 78.3087037037037,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-52",
+				"label": "Upper manual: Key 52",
+				"kind": "key",
+				"position": {
+					"x": 80.95685185185187,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-55",
+				"label": "Upper manual: Key 55",
+				"kind": "key",
+				"position": {
+					"x": 86.25314814814816,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-57",
+				"label": "Upper manual: Key 57",
+				"kind": "key",
+				"position": {
+					"x": 88.9012962962963,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "upper-key-59",
+				"label": "Upper manual: Key 59",
+				"kind": "key",
+				"position": {
+					"x": 91.54944444444443,
+					"y": 41.48936170212766,
+					"width": 1.6418518518518517,
+					"height": 13.303191489361701
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-1",
+				"label": "Lower manual: Key 1",
+				"kind": "key",
+				"position": {
+					"x": 2.3333333333333335,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-3",
+				"label": "Lower manual: Key 3",
+				"kind": "key",
+				"position": {
+					"x": 4.981481481481482,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-5",
+				"label": "Lower manual: Key 5",
+				"kind": "key",
+				"position": {
+					"x": 7.629629629629629,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-6",
+				"label": "Lower manual: Key 6",
+				"kind": "key",
+				"position": {
+					"x": 10.277777777777777,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-8",
+				"label": "Lower manual: Key 8",
+				"kind": "key",
+				"position": {
+					"x": 12.925925925925927,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-10",
+				"label": "Lower manual: Key 10",
+				"kind": "key",
+				"position": {
+					"x": 15.574074074074073,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-12",
+				"label": "Lower manual: Key 12",
+				"kind": "key",
+				"position": {
+					"x": 18.22222222222222,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-13",
+				"label": "Lower manual: Key 13",
+				"kind": "key",
+				"position": {
+					"x": 20.87037037037037,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-15",
+				"label": "Lower manual: Key 15",
+				"kind": "key",
+				"position": {
+					"x": 23.51851851851852,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-17",
+				"label": "Lower manual: Key 17",
+				"kind": "key",
+				"position": {
+					"x": 26.166666666666664,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-18",
+				"label": "Lower manual: Key 18",
+				"kind": "key",
+				"position": {
+					"x": 28.814814814814817,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-20",
+				"label": "Lower manual: Key 20",
+				"kind": "key",
+				"position": {
+					"x": 31.462962962962965,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-22",
+				"label": "Lower manual: Key 22",
+				"kind": "key",
+				"position": {
+					"x": 34.11111111111111,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-24",
+				"label": "Lower manual: Key 24",
+				"kind": "key",
+				"position": {
+					"x": 36.75925925925926,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-25",
+				"label": "Lower manual: Key 25",
+				"kind": "key",
+				"position": {
+					"x": 39.407407407407405,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-27",
+				"label": "Lower manual: Key 27",
+				"kind": "key",
+				"position": {
+					"x": 42.05555555555556,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-29",
+				"label": "Lower manual: Key 29",
+				"kind": "key",
+				"position": {
+					"x": 44.7037037037037,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-30",
+				"label": "Lower manual: Key 30",
+				"kind": "key",
+				"position": {
+					"x": 47.35185185185185,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-32",
+				"label": "Lower manual: Key 32",
+				"kind": "key",
+				"position": {
+					"x": 50.0,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-34",
+				"label": "Lower manual: Key 34",
+				"kind": "key",
+				"position": {
+					"x": 52.648148148148145,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-36",
+				"label": "Lower manual: Key 36",
+				"kind": "key",
+				"position": {
+					"x": 55.2962962962963,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-37",
+				"label": "Lower manual: Key 37",
+				"kind": "key",
+				"position": {
+					"x": 57.94444444444444,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-39",
+				"label": "Lower manual: Key 39",
+				"kind": "key",
+				"position": {
+					"x": 60.592592592592595,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-41",
+				"label": "Lower manual: Key 41",
+				"kind": "key",
+				"position": {
+					"x": 63.24074074074074,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-42",
+				"label": "Lower manual: Key 42",
+				"kind": "key",
+				"position": {
+					"x": 65.88888888888889,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-44",
+				"label": "Lower manual: Key 44",
+				"kind": "key",
+				"position": {
+					"x": 68.53703703703704,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-46",
+				"label": "Lower manual: Key 46",
+				"kind": "key",
+				"position": {
+					"x": 71.18518518518519,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-48",
+				"label": "Lower manual: Key 48",
+				"kind": "key",
+				"position": {
+					"x": 73.83333333333333,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-49",
+				"label": "Lower manual: Key 49",
+				"kind": "key",
+				"position": {
+					"x": 76.48148148148148,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-51",
+				"label": "Lower manual: Key 51",
+				"kind": "key",
+				"position": {
+					"x": 79.12962962962963,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-53",
+				"label": "Lower manual: Key 53",
+				"kind": "key",
+				"position": {
+					"x": 81.77777777777779,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-54",
+				"label": "Lower manual: Key 54",
+				"kind": "key",
+				"position": {
+					"x": 84.42592592592592,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-56",
+				"label": "Lower manual: Key 56",
+				"kind": "key",
+				"position": {
+					"x": 87.07407407407408,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-58",
+				"label": "Lower manual: Key 58",
+				"kind": "key",
+				"position": {
+					"x": 89.72222222222221,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-60",
+				"label": "Lower manual: Key 60",
+				"kind": "key",
+				"position": {
+					"x": 92.37037037037035,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-61",
+				"label": "Lower manual: Key 61",
+				"kind": "key",
+				"position": {
+					"x": 95.01851851851852,
+					"y": 69.14893617021278,
+					"width": 2.648148148148148,
+					"height": 25.53191489361702
+				},
+				"dark": false
+			},
+			{
+				"id": "lower-key-2",
+				"label": "Lower manual: Key 2",
+				"kind": "key",
+				"position": {
+					"x": 4.160555555555556,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-4",
+				"label": "Lower manual: Key 4",
+				"kind": "key",
+				"position": {
+					"x": 6.808703703703703,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-7",
+				"label": "Lower manual: Key 7",
+				"kind": "key",
+				"position": {
+					"x": 12.104999999999999,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-9",
+				"label": "Lower manual: Key 9",
+				"kind": "key",
+				"position": {
+					"x": 14.75314814814815,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-11",
+				"label": "Lower manual: Key 11",
+				"kind": "key",
+				"position": {
+					"x": 17.401296296296294,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-14",
+				"label": "Lower manual: Key 14",
+				"kind": "key",
+				"position": {
+					"x": 22.697592592592596,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-16",
+				"label": "Lower manual: Key 16",
+				"kind": "key",
+				"position": {
+					"x": 25.34574074074074,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-19",
+				"label": "Lower manual: Key 19",
+				"kind": "key",
+				"position": {
+					"x": 30.642037037037035,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-21",
+				"label": "Lower manual: Key 21",
+				"kind": "key",
+				"position": {
+					"x": 33.29018518518518,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-23",
+				"label": "Lower manual: Key 23",
+				"kind": "key",
+				"position": {
+					"x": 35.93833333333334,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-26",
+				"label": "Lower manual: Key 26",
+				"kind": "key",
+				"position": {
+					"x": 41.23462962962962,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-28",
+				"label": "Lower manual: Key 28",
+				"kind": "key",
+				"position": {
+					"x": 43.882777777777775,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-31",
+				"label": "Lower manual: Key 31",
+				"kind": "key",
+				"position": {
+					"x": 49.17907407407407,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-33",
+				"label": "Lower manual: Key 33",
+				"kind": "key",
+				"position": {
+					"x": 51.827222222222225,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-35",
+				"label": "Lower manual: Key 35",
+				"kind": "key",
+				"position": {
+					"x": 54.47537037037037,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-38",
+				"label": "Lower manual: Key 38",
+				"kind": "key",
+				"position": {
+					"x": 59.77166666666667,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-40",
+				"label": "Lower manual: Key 40",
+				"kind": "key",
+				"position": {
+					"x": 62.41981481481481,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-43",
+				"label": "Lower manual: Key 43",
+				"kind": "key",
+				"position": {
+					"x": 67.7161111111111,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-45",
+				"label": "Lower manual: Key 45",
+				"kind": "key",
+				"position": {
+					"x": 70.36425925925927,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-47",
+				"label": "Lower manual: Key 47",
+				"kind": "key",
+				"position": {
+					"x": 73.01240740740741,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-50",
+				"label": "Lower manual: Key 50",
+				"kind": "key",
+				"position": {
+					"x": 78.3087037037037,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-52",
+				"label": "Lower manual: Key 52",
+				"kind": "key",
+				"position": {
+					"x": 80.95685185185187,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-55",
+				"label": "Lower manual: Key 55",
+				"kind": "key",
+				"position": {
+					"x": 86.25314814814816,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-57",
+				"label": "Lower manual: Key 57",
+				"kind": "key",
+				"position": {
+					"x": 88.9012962962963,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			},
+			{
+				"id": "lower-key-59",
+				"label": "Lower manual: Key 59",
+				"kind": "key",
+				"position": {
+					"x": 91.54944444444443,
+					"y": 69.14893617021278,
+					"width": 1.6418518518518517,
+					"height": 15.574468085106382
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / sound transfer",
+			"connector": "USB-B",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI input",
+			"connector": "5-pin DIN MIDI",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI output",
+			"connector": "5-pin DIN MIDI",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio output 1",
+			"connector": "6.35 mm TS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio output 2",
+			"connector": "6.35 mm TS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "6.35 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Monitor input",
+			"connector": "3.5 mm stereo",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Sustain pedal",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Rotary control",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Swell pedal",
+			"connector": "6.35 mm TRS",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Mains power",
+			"connector": "IEC C14",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Bass pedal MIDI input",
+			"connector": "5-pin DIN MIDI",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "External rotary speaker",
+			"connector": "11-pin Leslie",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "High level output",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Aux output",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.nordkeyboards.com/products/nord-organ-3/specifications/",
+		"https://www.nordkeyboards.com/products/nord-organ-3/downloads/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

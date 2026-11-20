@@ -115,23 +115,25 @@ def draw_control(draw, kind, label, x, y, w, h, labelled, identifier, binding=No
 
 def keyboard(draw,spec,labelled):
     count,x,y,width,height=spec["keyboard"];style=spec["style"]
+    prefix=spec.get("keyPrefix", "")
     first=spec.get("firstNote",48)
     notes=list(range(count));whites=[n for n in notes if (first+n)%12 not in [1,3,6,8,10]]
     ww=width/len(whites);positions={n:i for i,n in enumerate(whites)};elements=[]
-    draw.parts.append('<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>')
+    keyboard_label=spec.get("keyboardLabel", "Keyboard").rstrip(": ")
+    draw.parts.append(f'<g id="{escape(prefix)}keyboard" aria-label="{escape(keyboard_label)}"><title>{escape(keyboard_label)}</title>')
     for black in [False,True]:
         for n in notes:
             is_black=(first+n)%12 in [1,3,6,8,10]
             if black!=is_black:continue
             xx=x+(sum(v<n for v in whites)-.31)*ww if black else x+positions[n]*ww
             w=ww*.62 if black else ww;hh=height*.61 if black else height
-            label=("Keywave" if style=="keywave" else "Touch plate" if style in ["buchla","capacitive"] else "Key")+f" {n+1}"
-            draw.parts.append(f'<g id="key-{n+1}" data-kind="key" aria-label="{label}"><title>{label}</title>')
+            label=spec.get("keyboardLabel", "")+("Keywave" if style=="keywave" else "Touch plate" if style in ["buchla","capacitive"] else "Key")+f" {n+1}"
+            draw.parts.append(f'<g id="{escape(prefix)}key-{n+1}" data-kind="key" aria-label="{label}"><title>{label}</title>')
             draw.rect(xx,y,w,hh,fill="#000" if black and style not in ["keywave","buchla","capacitive"] else "#fff",rx=7 if style=="keywave" else 0)
             if style in ["keywave","capacitive","buchla"]:draw.line(xx+w/2,y+12,xx+w/2,y+hh-12)
             if labelled and not black:draw.text(xx+w/2,y+height-9,str(n+1),9)
             draw.parts.append("</g>")
-            element={"id":f"key-{n+1}","label":label,"kind":"key","position":{"x":xx/draw.width*100,"y":y/draw.height*100,"width":w/draw.width*100,"height":hh/draw.height*100}}
+            element={"id":f"{prefix}key-{n+1}","label":label,"kind":"key","position":{"x":xx/draw.width*100,"y":y/draw.height*100,"width":w/draw.width*100,"height":hh/draw.height*100}}
             if spec.get("mapKeyboard",True):
                 element.update(message={"type":"note","number":first+n},learnable=True)
             element["dark"]=black
@@ -183,6 +185,8 @@ def render_device(identifier,spec,profile,folder):
                 if binding:e["control"]=binding
                 current.append(e)
         if "keyboard" in spec:current+=keyboard(draw,spec,labelled)
+        for manual in spec.get("keyboards", []):
+            current+=keyboard(draw,{**spec,**manual},labelled)
         draw.save(folder/filename)
         if labelled:elements=current
     return elements

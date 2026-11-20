@@ -153,6 +153,25 @@ The original OP-1 remains distinct from OP-1 field. New browser port aliases rem
 
 Sources: [official guide directory](https://teenage.engineering/guides), [POM-16 MIDI guide](https://teenage.engineering/guides/po-modular/16), [POM-170 connections](https://teenage.engineering/guides/po-modular/170), [ortho remote MIDI setup](https://teenage.engineering/guides/or-1), and the individual profile references. Standard pocket operators, POM-400, rumble module, EP-2350 fx mic and analog/audio accessories are omitted because their guides do not document a usable MIDI endpoint. OB-4's original announcement proposed BLE MIDI support, but the current guide supplies no musical MIDI implementation; it and OD-11 are not treated as generic MIDI instruments merely because they support a wireless remote.
 
+## Nord keyboards and percussion
+
+This expansion adds **13 Nord profiles** across all eight families in the [current Nord product range](https://www.nordkeyboards.com/products/), checked on 20 November 2026. The catalogue now contains **205 devices from 40 device manufacturers**. The existing `clavia-digital-instruments` directory and official SysEx ID `33` remain stable; its display name is **Nord / Clavia Digital Instruments**.
+
+| Family | Profiles | Model distinctions |
+| --- | --- | --- |
+| Stage 4 | 88, 73, Compact | 88/73 hammer-action variants; Compact has 73 waterfall keys; all have aftertouch, pitch stick and modulation wheel |
+| Electro 7 | 61, 73, HP | 61/73 waterfall variants and 73-key HP hammer action; pitch stick and wheel are absent on the 61 |
+| Piano 6 | 73, 88 | Separate hammer-action keyboard sizes; no pitch stick or modulation wheel |
+| Grand 2 | 88-key | Kawai hammer action, distinct from Piano 6 |
+| Organ 3 | Dual manual | Two 61-key manuals, four drawbar sets and an additional bass-pedal MIDI input |
+| Wave 2 | 61-key | Four synth layers and four level faders |
+| Lead A1 | 49-key keyboard | Four synth slots; this entry is not the legacy A1R rack module |
+| Drum 3P | Six-pad percussion synth | DIN MIDI and kick trigger input; no USB port |
+
+Each profile includes manufacturer artwork, selected-control panel/interface/connection schematics, official specifications and a link to current manuals. Keyboard models support USB and DIN MIDI; audio requires a separate connection. Drum 3P needs a MIDI interface and uses configurable pad notes/channels. The dedicated five-pin Triple Pedal 2 socket on Stage 4, Piano 6 and Grand 2 is a pedal connector, not another MIDI input.
+
+Select these profiles manually until exact browser port aliases are verified. Only selected documented CCs are included: sustain, expression or incoming Morph where applicable, and Organ 3 swell (CC4). Physical keys, wheels, drawbars and configurable controls remain unbound. Global/layer/manual channels and receive filters determine destinations. NRPN sequences, complete parameter maps, factory pad notes and SysEx editing are omitted. See each family's official manual on its downloads page; Windows USB routing may require Nord's driver. Legacy Nord generations are outside this current-range expansion.
+
 ## Official MIDI manufacturer directory
 
 The [official MIDI Association SysEx ID table](https://midi.org/sysexidtable), retrieved on 19 November 2026, supplies **787 unique named assignments**. Importing the remaining companies adds **756 manufacturer records**. Together with existing entries, the directory has **795 manufacturers**, while detailed hardware coverage remains **165 devices from 39 manufacturers**. The official list includes historical and software companies as well as instrument makers. Registration alone does not establish present trading status, website ownership, a hardware product range or support availability.

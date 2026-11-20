@@ -14,6 +14,33 @@ def profile(folder, identifier):
 
 
 class DeviceDiagrams(unittest.TestCase):
+    def test_nord_variants_preserve_keybeds_and_midi_connections(self):
+        expected = {"stage-4-88": 88, "stage-4-73": 73, "stage-4-compact": 73,
+                    "electro-7-61": 61, "electro-7-73": 73, "electro-7-hp": 73,
+                    "piano-6-73": 73, "piano-6-88": 88, "grand-2": 88,
+                    "organ-3": 122, "wave-2": 61, "lead-a1": 49, "drum-3p": 0}
+        for model, count in expected.items():
+            device = profile(f"clavia-digital-instruments/{model}", f"nord-{model}")
+            with self.subTest(model=model):
+                elements = device["surface"]["elements"]
+                self.assertEqual(sum(e["kind"] == "key" for e in elements), count)
+                self.assertEqual(device["portNames"], [])
+                self.assertTrue(all("control" not in e and "message" not in e for e in elements))
+                self.assertEqual(any(p["connector"] == "USB-B" for p in device["connections"]), model != "drum-3p")
+                for direction in ["input", "output"]:
+                    self.assertTrue(any(p["connector"] == "5-pin DIN MIDI" and p["direction"] == direction for p in device["connections"]))
+                wheels = sum(e["kind"] == "wheel" for e in elements)
+                self.assertEqual(wheels, int(model in {"stage-4-88", "stage-4-73", "stage-4-compact", "electro-7-73", "electro-7-hp", "wave-2", "lead-a1"}))
+        organ = profile("clavia-digital-instruments/organ-3", "nord-organ-3")
+        keys = [e for e in organ["surface"]["elements"] if e["kind"] == "key"]
+        self.assertEqual(sum(e["id"].startswith("upper-") for e in keys), 61)
+        self.assertEqual(sum(e["id"].startswith("lower-") for e in keys), 61)
+        self.assertEqual(len({e["id"] for e in keys}), 122)
+        self.assertEqual(next(c["cc"] for c in organ["controls"] if c["id"] == "swell"), 4)
+        drum = profile("clavia-digital-instruments/drum-3p", "nord-drum-3p")
+        self.assertEqual(sum(e["kind"] == "pad" for e in drum["surface"]["elements"]), 6)
+        self.assertEqual(drum["controls"], [])
+
     def test_teenage_engineering_transport_and_mapping_boundaries(self):
         root = ROOT / "devices/teenage-engineering"
         devices = {p.parent.name: json.loads(p.read_text(encoding="utf-8")) for p in root.glob("*/*.json")}

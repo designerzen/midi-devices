@@ -20,6 +20,8 @@ See [classic MIDI and accessible hardware coverage](docs/coverage.md) for the DX
 
 Teenage Engineering has 28 profiles, covering the OP synthesizers, MIDI-capable EP products, TX-6 and TP-7, POM-16/170, oplab interfaces and OP-Z expansions, ortho remote, all eight choir voices, and the CM-15 firmware endpoint. See [Teenage Engineering coverage](docs/coverage.md#teenage-engineering-midi-products) for connection requirements and mapping limits.
 
+Nord adds 13 current model profiles across Stage 4, Electro 7, Piano 6, Grand 2, Organ 3, Wave 2, Lead A1 and Drum 3P. The existing Clavia manufacturer entry now appears as Nord / Clavia Digital Instruments. See [Nord coverage](docs/coverage.md#nord-keyboards-and-percussion) for variants, MIDI routing and mapping limits.
+
 The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native Instruments KOMPLETE KONTROL A25/A49, and Nektar SE49/SE61. These keyboard profiles cover basic performance messages; their setup notes explain configurable controls and manual selection where port aliases have not been verified.
 
 Also included: Novation Launchpad Mini MK3, Launchpad X, Circuit Tracks, Circuit Rhythm, and the original Arturia KeyStep 37. Launchpad X provides its documented Programmer-mode grid and button mappings and LPX MIDI port aliases. The other four profiles provide model-specific schematic surfaces and setup guidance; their USB port names remain unverified and require manual profile selection. Custom layouts and assignable encoders are left unbound rather than given assumed factory assignments. Manufacturer manuals and MIDI setup references are linked in each profile.
