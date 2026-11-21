@@ -24,6 +24,8 @@ await rm(dist, { recursive: true, force: true })
 await mkdir(dist, { recursive: true })
 await cp(MIDI_DEVICE_DIRECTORY, dist, { recursive: true })
 await cp(path.join(root, "site"), dist, { recursive: true })
+const svgControlsPath = path.join(dist, "svg-controls.js")
+await writeFile(svgControlsPath, readFileSync(svgControlsPath, "utf8").replaceAll("__BUILD_COMMIT__", build.commit))
 const page = readFileSync(path.join(dist, "index.html"), "utf8")
 const builtPage = page
 	.replaceAll("__BUILD_COMMIT__", build.commit)

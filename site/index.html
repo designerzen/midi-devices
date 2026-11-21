@@ -85,6 +85,13 @@
 
 			/* Device cards */
 			#catalog, #connected-devices { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 1.25rem; align-items: start; }
+			#connected-devices { grid-template-columns: 1fr; }
+			.live-controls { margin-top: 1rem; }
+			.control-toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: 0.75rem; margin-bottom: 1rem; }
+			.control-toolbar label { display: grid; gap: 0.35rem; font-size: 0.9rem; flex: 1 1 160px; }
+			.control-toolbar button { font-size: 0.9rem; }
+			.live-controls > p { color: var(--muted); font-size: 0.9rem; }
+			.live-controls .control-status { color: var(--accent-strong); min-height: 1.6em; }
 			article { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; min-width: 0; }
 			article.is-connected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 			.device-heading { display: flex; align-items: center; gap: 0.9rem; }
@@ -201,6 +208,10 @@
 		</footer>
 		<script type="module">
 			import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail, unmatchedDeviceAgentPrompt, DEVICE_PROFILE_EMAIL } from "./midi-connections.js?v=__BUILD_COMMIT__"
+			import { createSvgControls } from "./svg-controls.js?v=__BUILD_COMMIT__"
+			const liveSurfaces = new Map()
+			const learnedMappings = new Map()
+			const disposeSurfaces = () => { for (const { surface } of liveSurfaces.values()) surface.dispose(); liveSurfaces.clear() }
 			const connectedCards = document.getElementById("connected-devices")
 			const connectedEmpty = document.getElementById("connected-empty")
 			const assignments = new Map()
@@ -236,6 +247,8 @@
 			const midiOptions = document.getElementById("midi-options")
 			const steps = document.getElementById("steps")
 			let midiAccess
+			let portSignature
+			const currentPortSignature = () => JSON.stringify([...midiAccess.inputs.values(), ...midiAccess.outputs.values()].map(port => [port.type, port.id, port.state, port.name, port.manufacturer]))
 			// Steps before `current` are done, later ones are upcoming.
 			const setStep = (current) => {
 				for (const step of steps.children) {
@@ -437,6 +450,7 @@
 				for (const port of midiAccess.inputs.values()) {
 					if (port.state !== "connected" || inputListeners.has(port)) continue
 					const listener = (event) => {
+						for (const { surface, inputs } of liveSurfaces.values()) if (inputs.includes(port)) surface.receive(event.data)
 						const time = new Date().toISOString().slice(11, 23)
 						const message = describeMidiMessage(event.data)
 						receivedEvents++
@@ -499,14 +513,27 @@
 			})
 			const updateConnections = () => {
 				if (!midiAccess) return
+				portSignature = currentPortSignature()
 				const matches = new Map()
 				const devices = [...deviceCards.entries()]
 				const groups = connectedMidiDevices(midiAccess, devices, assignments)
+				disposeSurfaces()
 				activityNodes.clear()
 				const cards = groups.map(({ id, device, ports }, index) => {
 					let card
 					if (device) {
 						card = render(id, device.profile, device.devicePath, `connected-${index}`)
+						const mappingKey = JSON.stringify([id, ...ports.map(entry => entry.key)])
+						if (!learnedMappings.has(mappingKey)) learnedMappings.set(mappingKey, new Map())
+						const surface = createSvgControls({
+							profile: device.profile,
+							url: asset(new URL(`${device.devicePath}/`, registry), device.profile.surface?.src),
+							ports, sysexEnabled: midiAccess.sysexEnabled, learned: learnedMappings.get(mappingKey)
+						})
+						const diagram = card.querySelector(".diagram")
+						if (diagram) diagram.replaceWith(surface.element)
+						else card.querySelector(".device-heading").after(surface.element)
+						liveSurfaces.set(mappingKey, { surface, inputs: ports.filter(entry => entry.direction === "Input").map(entry => entry.port) })
 						card.querySelector(".connection-status").hidden = false
 						if (!matches.has(id)) matches.set(id, new Set())
 						for (const { direction, port } of ports) matches.get(id).add(`${direction}: ${port.name || port.id}`)
@@ -545,7 +572,7 @@
 							activitySummary.append(activity)
 						}
 					}
-					const panelImage = card.querySelector(".diagram")
+					const panelImage = card.querySelector(".live-controls, .diagram")
 					if (panelImage?.parentElement === card) panelImage.after(activitySummary, metadata)
 					else card.append(activitySummary, metadata)
 					const picker = element("label", undefined, "profile-picker")
@@ -653,7 +680,8 @@
 						inputListeners.delete(port)
 					}
 					failures.clear()
-					midiAccess.onstatechange = updateConnections
+					// Opening a port also emits statechange; retain held notes and UI state.
+					midiAccess.onstatechange = () => { if (currentPortSignature() !== portSignature) updateConnections() }
 					updateConnections()
 					detectMidi.textContent = "Refresh connections"
 					detectMidi.classList.replace("primary", "secondary")
