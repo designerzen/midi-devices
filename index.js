@@ -9,6 +9,11 @@ export const MIDI_DEVICE_DIRECTORY = path.join(
 )
 
 const DEVICE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
+const ROOT_FILES = new Set([
+	"profile.schema.json", "manufacturer.schema.json", "index.schema.json",
+	"manufacturers.schema.json", "midi-manufacturers.schema.json", "api.schema.json",
+	"manufacturers.json", "midi-manufacturers.json"
+])
 const MIME = {
 	".json": "application/json",
 	".svg": "image/svg+xml",
@@ -91,7 +96,7 @@ export function createMidiDeviceStore(getRoots) {
 			}
 			const parts = relative.split("/")
 			if (
-				!["profile.schema.json", "manufacturer.schema.json", "manufacturers.json", "midi-manufacturers.json"].includes(relative) &&
+				!ROOT_FILES.has(relative) &&
 				(parts.length < 2 || !DEVICE_ID.test(parts[0]))
 			) {
 				return null
@@ -174,7 +179,7 @@ export function midiDeviceFilesPlugin() {
 			const destination = path.resolve(config.root, config.build.outDir, "midi-devices")
 			await mkdir(destination, { recursive: true })
 			for (const entry of readdirSync(MIDI_DEVICE_DIRECTORY, { withFileTypes: true })) {
-				if (entry.isDirectory() || entry.name === "profile.schema.json") {
+				if (entry.isDirectory() || ROOT_FILES.has(entry.name)) {
 					await cp(
 						path.join(MIDI_DEVICE_DIRECTORY, entry.name),
 						path.join(destination, entry.name),

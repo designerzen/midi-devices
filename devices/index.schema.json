@@ -1,0 +1,23 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "MIDI device directory index",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"required": [
+			"id",
+			"path"
+		],
+		"additionalProperties": false,
+		"properties": {
+			"id": {
+				"$ref": "manufacturer.schema.json#/properties/id"
+			},
+			"path": {
+				"type": "string",
+				"pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9]+(?:-[a-z0-9]+)*$"
+			}
+		}
+	},
+	"uniqueItems": true
+}

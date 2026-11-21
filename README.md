@@ -18,6 +18,8 @@ Unknown-device cards include **Create a device profile with an agent**, an expan
 
 Read the [complete API reference](docs/api.md) for response shapes, every client method, identifier matching, errors, caching, and self-hosting. The [profile and contribution guide](docs/profiles.md) explains MIDI mappings, panel geometry, and how to add devices and manufacturers.
 
+[JSON Schemas](docs/api.md#json-schemas) cover device profiles, manufacturers, raw directory indexes, the official SysEx registry and API v1 responses. They are published with the catalogue and available as package exports; validation runs on the raw data and generated API responses.
+
 See the [GitHub control-library research](docs/control-libraries.md) for Behringer Mini/Micro editors, deeper Circuit controls and Volca functionality. The catalogue includes ten Behringer Mini/Micro models, expanded Circuit-family CC mappings and additional Volca Sample 2 controls, with manufacturer sources and explicit stock-firmware and adapter requirements.
 
 See [classic MIDI and accessible hardware coverage](docs/coverage.md) for the DX7, D-50, JUNO-106, M1, TR-909 and other landmark devices, plus Soundbeam, Magic Flute, Skoog and Skwitch. The guide explains DIN MIDI interfaces, companion-app dependencies, and partial mappings.

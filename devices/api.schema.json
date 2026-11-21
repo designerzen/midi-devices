@@ -1,0 +1,662 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "MIDI devices API v1 JSON responses",
+	"description": "Schemas for generated API responses and query errors. MIDI alias endpoints use the device definition. External references resolve beside this file. XML contains the same data but is not a JSON Schema document.",
+	"oneOf": [
+		{
+			"$ref": "#/$defs/index"
+		},
+		{
+			"$ref": "#/$defs/devices"
+		},
+		{
+			"$ref": "#/$defs/device"
+		},
+		{
+			"$ref": "#/$defs/manufacturers"
+		},
+		{
+			"$ref": "#/$defs/manufacturer"
+		},
+		{
+			"$ref": "#/$defs/ports"
+		},
+		{
+			"$ref": "#/$defs/error"
+		}
+	],
+	"$defs": {
+		"deviceLinks": {
+			"type": "object",
+			"required": [
+				"self",
+				"xml",
+				"profile",
+				"base",
+				"icon",
+				"panel",
+				"manufacturer",
+				"catalogue"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"self": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"xml": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"profile": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"base": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"icon": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"panel": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"connections": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"interface": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"logo": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"manufacturer": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"catalogue": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				}
+			}
+		},
+		"device": {
+			"type": "object",
+			"required": [
+				"schemaVersion",
+				"name",
+				"gui",
+				"id",
+				"manufacturerId",
+				"links"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"id": {
+					"$ref": "profile.schema.json#/properties/id"
+				},
+				"schemaVersion": {
+					"$ref": "profile.schema.json#/properties/schemaVersion"
+				},
+				"name": {
+					"$ref": "profile.schema.json#/properties/name"
+				},
+				"manufacturer": {
+					"$ref": "profile.schema.json#/properties/manufacturer"
+				},
+				"manufacturerUrl": {
+					"$ref": "profile.schema.json#/properties/manufacturerUrl"
+				},
+				"productUrl": {
+					"$ref": "profile.schema.json#/properties/productUrl"
+				},
+				"description": {
+					"$ref": "profile.schema.json#/properties/description"
+				},
+				"ids": {
+					"$ref": "profile.schema.json#/properties/ids"
+				},
+				"portNames": {
+					"$ref": "profile.schema.json#/properties/portNames"
+				},
+				"icon": {
+					"$ref": "profile.schema.json#/properties/icon"
+				},
+				"diagramSources": {
+					"$ref": "profile.schema.json#/properties/diagramSources"
+				},
+				"diagrams": {
+					"$ref": "profile.schema.json#/properties/diagrams"
+				},
+				"connections": {
+					"$ref": "profile.schema.json#/properties/connections"
+				},
+				"abilities": {
+					"$ref": "profile.schema.json#/properties/abilities"
+				},
+				"hardwareControls": {
+					"$ref": "profile.schema.json#/properties/hardwareControls"
+				},
+				"notice": {
+					"$ref": "profile.schema.json#/properties/notice"
+				},
+				"documentation": {
+					"$ref": "profile.schema.json#/properties/documentation"
+				},
+				"controls": {
+					"$ref": "profile.schema.json#/properties/controls"
+				},
+				"modes": {
+					"$ref": "profile.schema.json#/properties/modes"
+				},
+				"gui": {
+					"$ref": "profile.schema.json#/properties/gui"
+				},
+				"surface": {
+					"$ref": "profile.schema.json#/properties/surface"
+				},
+				"manufacturerId": {
+					"$ref": "manufacturer.schema.json#/properties/id"
+				},
+				"links": {
+					"$ref": "#/$defs/deviceLinks"
+				}
+			}
+		},
+		"deviceSummary": {
+			"type": "object",
+			"required": [
+				"id",
+				"name",
+				"manufacturerId",
+				"links"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"id": {
+					"$ref": "profile.schema.json#/properties/id"
+				},
+				"name": {
+					"$ref": "profile.schema.json#/properties/name"
+				},
+				"manufacturer": {
+					"$ref": "profile.schema.json#/properties/manufacturer"
+				},
+				"description": {
+					"$ref": "profile.schema.json#/properties/description"
+				},
+				"abilities": {
+					"$ref": "profile.schema.json#/properties/abilities"
+				},
+				"ids": {
+					"$ref": "profile.schema.json#/properties/ids"
+				},
+				"portNames": {
+					"$ref": "profile.schema.json#/properties/portNames"
+				},
+				"manufacturerId": {
+					"$ref": "manufacturer.schema.json#/properties/id"
+				},
+				"links": {
+					"$ref": "#/$defs/deviceLinks"
+				}
+			}
+		},
+		"manufacturerLinks": {
+			"type": "object",
+			"required": [
+				"self",
+				"xml",
+				"base",
+				"profile",
+				"catalogue"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"self": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"xml": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"base": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"profile": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"logo": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				},
+				"catalogue": {
+					"type": "string",
+					"pattern": "^https?://[^\\s]+$"
+				}
+			}
+		},
+		"manufacturer": {
+			"type": "object",
+			"required": [
+				"schemaVersion",
+				"id",
+				"name",
+				"description",
+				"resources",
+				"links",
+				"devices"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"schemaVersion": {
+					"$ref": "manufacturer.schema.json#/properties/schemaVersion"
+				},
+				"id": {
+					"$ref": "manufacturer.schema.json#/properties/id"
+				},
+				"name": {
+					"$ref": "manufacturer.schema.json#/properties/name"
+				},
+				"description": {
+					"$ref": "manufacturer.schema.json#/properties/description"
+				},
+				"registryOnly": {
+					"$ref": "manufacturer.schema.json#/properties/registryOnly"
+				},
+				"midiManufacturerIds": {
+					"$ref": "manufacturer.schema.json#/properties/midiManufacturerIds"
+				},
+				"midiRegistryNames": {
+					"$ref": "manufacturer.schema.json#/properties/midiRegistryNames"
+				},
+				"midiIdSource": {
+					"$ref": "manufacturer.schema.json#/properties/midiIdSource"
+				},
+				"url": {
+					"$ref": "manufacturer.schema.json#/properties/url"
+				},
+				"logo": {
+					"$ref": "manufacturer.schema.json#/properties/logo"
+				},
+				"logoSource": {
+					"$ref": "manufacturer.schema.json#/properties/logoSource"
+				},
+				"resources": {
+					"$ref": "manufacturer.schema.json#/properties/links"
+				},
+				"links": {
+					"$ref": "#/$defs/manufacturerLinks"
+				},
+				"devices": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/deviceSummary"
+					}
+				}
+			},
+			"allOf": [
+				{
+					"$ref": "manufacturer.schema.json#/allOf/0"
+				},
+				{
+					"$ref": "manufacturer.schema.json#/allOf/1"
+				},
+				{
+					"$ref": "manufacturer.schema.json#/allOf/2"
+				}
+			],
+			"dependentRequired": {
+				"midiManufacturerIds": [
+					"midiRegistryNames",
+					"midiIdSource"
+				],
+				"midiRegistryNames": [
+					"midiManufacturerIds",
+					"midiIdSource"
+				],
+				"midiIdSource": [
+					"midiManufacturerIds",
+					"midiRegistryNames"
+				]
+			}
+		},
+		"manufacturerSummary": {
+			"type": "object",
+			"required": [
+				"schemaVersion",
+				"id",
+				"name",
+				"description",
+				"resources",
+				"links",
+				"count",
+				"deviceIds"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"schemaVersion": {
+					"$ref": "manufacturer.schema.json#/properties/schemaVersion"
+				},
+				"id": {
+					"$ref": "manufacturer.schema.json#/properties/id"
+				},
+				"name": {
+					"$ref": "manufacturer.schema.json#/properties/name"
+				},
+				"description": {
+					"$ref": "manufacturer.schema.json#/properties/description"
+				},
+				"registryOnly": {
+					"$ref": "manufacturer.schema.json#/properties/registryOnly"
+				},
+				"midiManufacturerIds": {
+					"$ref": "manufacturer.schema.json#/properties/midiManufacturerIds"
+				},
+				"midiRegistryNames": {
+					"$ref": "manufacturer.schema.json#/properties/midiRegistryNames"
+				},
+				"midiIdSource": {
+					"$ref": "manufacturer.schema.json#/properties/midiIdSource"
+				},
+				"url": {
+					"$ref": "manufacturer.schema.json#/properties/url"
+				},
+				"logo": {
+					"$ref": "manufacturer.schema.json#/properties/logo"
+				},
+				"logoSource": {
+					"$ref": "manufacturer.schema.json#/properties/logoSource"
+				},
+				"resources": {
+					"$ref": "manufacturer.schema.json#/properties/links"
+				},
+				"links": {
+					"$ref": "#/$defs/manufacturerLinks"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"deviceIds": {
+					"type": "array",
+					"items": {
+						"$ref": "manufacturer.schema.json#/properties/id"
+					},
+					"uniqueItems": true
+				}
+			},
+			"allOf": [
+				{
+					"$ref": "manufacturer.schema.json#/allOf/0"
+				},
+				{
+					"$ref": "manufacturer.schema.json#/allOf/1"
+				},
+				{
+					"$ref": "manufacturer.schema.json#/allOf/2"
+				}
+			],
+			"dependentRequired": {
+				"midiManufacturerIds": [
+					"midiRegistryNames",
+					"midiIdSource"
+				],
+				"midiRegistryNames": [
+					"midiManufacturerIds",
+					"midiIdSource"
+				],
+				"midiIdSource": [
+					"midiManufacturerIds",
+					"midiRegistryNames"
+				]
+			}
+		},
+		"index": {
+			"type": "object",
+			"required": [
+				"apiVersion",
+				"dataVersion",
+				"generated",
+				"count",
+				"links",
+				"devices"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"apiVersion": {
+					"const": "v1"
+				},
+				"dataVersion": {
+					"type": "string",
+					"minLength": 1
+				},
+				"generated": {
+					"type": "string",
+					"pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"links": {
+					"type": "object",
+					"required": [
+						"self",
+						"devices",
+						"device",
+						"manufacturers",
+						"midiManufacturers",
+						"manufacturer",
+						"midi",
+						"ports",
+						"schema",
+						"client"
+					],
+					"additionalProperties": false,
+					"properties": {
+						"self": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"devices": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"device": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"manufacturers": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"midiManufacturers": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"manufacturer": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"midi": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"ports": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"schema": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"client": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"apiSchema": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"manufacturerSchema": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"deviceIndexSchema": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"manufacturerIndexSchema": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						},
+						"midiManufacturersSchema": {
+							"type": "string",
+							"pattern": "^https?://[^\\s]+$"
+						}
+					}
+				},
+				"devices": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/deviceSummary"
+					}
+				}
+			}
+		},
+		"devices": {
+			"type": "object",
+			"required": [
+				"apiVersion",
+				"dataVersion",
+				"generated",
+				"count",
+				"devices"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"apiVersion": {
+					"const": "v1"
+				},
+				"dataVersion": {
+					"type": "string",
+					"minLength": 1
+				},
+				"generated": {
+					"type": "string",
+					"pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"devices": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/device"
+					}
+				}
+			}
+		},
+		"manufacturers": {
+			"type": "object",
+			"required": [
+				"apiVersion",
+				"dataVersion",
+				"generated",
+				"count",
+				"manufacturers"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"apiVersion": {
+					"const": "v1"
+				},
+				"dataVersion": {
+					"type": "string",
+					"minLength": 1
+				},
+				"generated": {
+					"type": "string",
+					"pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"manufacturers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/manufacturerSummary"
+					}
+				}
+			}
+		},
+		"ports": {
+			"type": "object",
+			"required": [
+				"apiVersion",
+				"dataVersion",
+				"generated",
+				"byId",
+				"byName",
+				"bySlug"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"apiVersion": {
+					"const": "v1"
+				},
+				"dataVersion": {
+					"type": "string",
+					"minLength": 1
+				},
+				"generated": {
+					"type": "string",
+					"pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+				},
+				"byId": {
+					"type": "object",
+					"additionalProperties": {
+						"$ref": "manufacturer.schema.json#/properties/id"
+					}
+				},
+				"byName": {
+					"type": "object",
+					"additionalProperties": {
+						"$ref": "manufacturer.schema.json#/properties/id"
+					}
+				},
+				"bySlug": {
+					"type": "object",
+					"additionalProperties": {
+						"$ref": "manufacturer.schema.json#/properties/id"
+					}
+				}
+			}
+		},
+		"error": {
+			"type": "object",
+			"required": [
+				"error"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"error": {
+					"type": "string",
+					"minLength": 1
+				}
+			}
+		}
+	}
+}

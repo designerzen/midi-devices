@@ -2,14 +2,19 @@
 // assets exist, and that devices/index.json is current.
 import { existsSync, readFileSync, readdirSync } from "node:fs"
 import path from "node:path"
-import Ajv from "ajv/dist/2020.js"
 import { MIDI_DEVICE_DIRECTORY, createMidiDeviceStore } from "../index.js"
 import { readManufacturers } from "./manufacturers.js"
+import { createSchemaValidator } from "./schemas.js"
 
 const read = (file) => JSON.parse(readFileSync(path.join(MIDI_DEVICE_DIRECTORY, file), "utf8"))
-const validate = new Ajv({ allErrors: true, strict: false }).compile(read("profile.schema.json"))
-const validateManufacturer = new Ajv({ allErrors: true, strict: false }).compile(read("manufacturer.schema.json"))
+const schemas = createSchemaValidator()
+const validate = schemas.getSchema("profile.schema.json")
+const validateManufacturer = schemas.getSchema("manufacturer.schema.json")
 const errors = []
+for (const file of ["index.json", "manufacturers.json", "midi-manufacturers.json"]) {
+	const check = schemas.getSchema(file.replace(".json", ".schema.json"))
+	if (!check(read(file))) errors.push(...check.errors.map((error) => `${file}${error.instancePath} ${error.message}`))
+}
 const entries = await createMidiDeviceStore(() => [MIDI_DEVICE_DIRECTORY]).entries()
 
 for (const { id, path: folder } of entries) {

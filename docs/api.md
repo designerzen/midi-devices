@@ -40,6 +40,27 @@ const panelUrl = new URL(device.surface.src, device.links.base).href
 
 Unknown paths normally return the static host's HTTP 404 page, which may be HTML. Always check `response.ok` before parsing JSON. HTTP headers, caching, and CORS are controlled by your static host; the JSON generator does not configure them. Breaking API shape changes will use a new version directory.
 
+## JSON Schemas
+
+Draft 2020-12 schemas are published beside the raw registry files and exported by the npm package:
+
+| Schema at the site root / package export | Validates |
+| --- | --- |
+| `profile.schema.json` | Raw device profiles, including MIDI controls, GUI and surfaces |
+| `manufacturer.schema.json` | Raw company descriptors, including registry-only entries |
+| `index.schema.json` | Raw device directory index (`index.json`) |
+| `manufacturers.schema.json` | Raw manufacturer directory index (`manufacturers.json`) |
+| `midi-manufacturers.schema.json` | Official SysEx assignment snapshot and exclusions |
+| `api.schema.json` | API v1 index, device collection, individual device/alias, manufacturer collection, individual manufacturer, port map and query error responses |
+
+API `index.json` advertises these through `links.schema`, `links.manufacturerSchema`, `links.deviceIndexSchema`, `links.manufacturerIndexSchema`, `links.midiManufacturersSchema` and `links.apiSchema`. Resolve them from the advertised URLs rather than relative to `api/v1/`.
+
+`api.schema.json` accepts the supported response shapes through `oneOf`. To validate one endpoint specifically, use its fragment: `#/$defs/index`, `#/$defs/devices`, `#/$defs/device`, `#/$defs/manufacturers`, `#/$defs/manufacturer`, `#/$defs/ports` or `#/$defs/error`. MIDI alias and successful query responses use `#/$defs/device`.
+
+Schemas have relative references to the adjacent device/manufacturer schemas. Register referenced schemas with your validator using their filenames as keys, or configure a resolver that loads relative URLs. The API schema references the original nested control and surface definitions, so it enforces the same MIDI message rules. API links must be absolute HTTP(S) URLs; profile asset paths remain relative.
+
+`npm run validate` checks the raw indexes and profiles. The API build validates every JSON response before writing its JSON/XML files. Structural schemas complement the catalogue's existing checks for matching IDs, count consistency, assets and MIDI alias collisions; they do not establish hardware behavior. XML is the typed serialization described below, not a JSON Schema document.
+
 ## XML format
 
 For example, fetch `devices/korg-minilogue.xml` for the same device data as `devices/korg-minilogue.json`. XML uses a `<response>` root, object properties as `<field key="…">`, and array entries as `<item>`. Every element has a `type` attribute (`object`, `array`, `string`, `number`, `boolean`, or `null`). This preserves numeric mapping keys, empty arrays and objects, nulls, and primitive types. Text and keys are XML-escaped. Links inside XML contain the same values as JSON, including the explicit `links.xml` device URL.

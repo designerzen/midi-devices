@@ -1,0 +1,73 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Official MIDI SysEx manufacturer registry snapshot",
+	"type": "object",
+	"required": [
+		"source",
+		"retrievedAt",
+		"count",
+		"assignments",
+		"excluded"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"source": {
+			"const": "https://midi.org/sysexidtable"
+		},
+		"retrievedAt": {
+			"type": "string",
+			"pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+		},
+		"count": {
+			"type": "integer",
+			"minimum": 0
+		},
+		"assignments": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [
+					"hex",
+					"name",
+					"manufacturerId"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"hex": {
+						"$ref": "manufacturer.schema.json#/properties/midiManufacturerIds/items"
+					},
+					"name": {
+						"type": "string",
+						"minLength": 1
+					},
+					"manufacturerId": {
+						"$ref": "manufacturer.schema.json#/properties/id"
+					}
+				}
+			},
+			"uniqueItems": true
+		},
+		"excluded": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [
+					"hex",
+					"reason"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"hex": {
+						"type": "string",
+						"pattern": "^(?:[0-7][0-9A-F]|00 [0-7][0-9A-F] [0-7][0-9A-F])$"
+					},
+					"reason": {
+						"type": "string",
+						"minLength": 1
+					}
+				}
+			},
+			"uniqueItems": true
+		}
+	}
+}
