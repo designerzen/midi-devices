@@ -1,0 +1,736 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "novation-launch-control-xl-3",
+	"name": "Novation Launch Control XL 3",
+	"manufacturer": "Novation",
+	"manufacturerUrl": "https://novationmusic.com/",
+	"productUrl": "https://userguides.novationmusic.com/hc/en-gb/articles/26190536231570-Launch-Control-XL-3-s-Specifications",
+	"ids": [
+		"novation-launch-control-xl-3"
+	],
+	"portNames": [],
+	"description": "Configurable MIDI/DAW controller with 24 encoders and eight faders.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Specifications",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/26190536231570-Launch-Control-XL-3-s-Specifications"
+		},
+		{
+			"title": "MIDI routing",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/27840433609362-MIDI-on-Launch-Control-XL-3"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"DIN MIDI",
+		"Custom modes",
+		"DAW integration"
+	],
+	"hardwareControls": [
+		"ENCODERS: Encoder 1, Encoder 2, Encoder 3, Encoder 4, Encoder 5, Encoder 6, Encoder 7, Encoder 8, Encoder 9, Encoder 10, Encoder 11, Encoder 12, Encoder 13, Encoder 14, Encoder 15, Encoder 16, Encoder 17, Encoder 18, Encoder 19, Encoder 20, Encoder 21, Encoder 22, Encoder 23, Encoder 24",
+		"FADERS: Fader 1, Fader 2, Fader 3, Fader 4, Fader 5, Fader 6, Fader 7, Fader 8",
+		"CHANNEL BUTTONS: Button 1, Button 2, Button 3, Button 4, Button 5, Button 6, Button 7, Button 8, Button 9, Button 10, Button 11, Button 12, Button 13, Button 14, Button 15, Button 16",
+		"DISPLAY: OLED",
+		"NAVIGATION: Page up, Page down, Track left, Track right, Record, Play, Shift, Mode"
+	],
+	"notice": "Use the MIDI interface for Custom Modes and the separate DAW interface for DAW integration. Enable intended USB/DIN output routes in the Custom Mode. Editable assignments are not treated as universal factory messages. Exact browser port aliases are unverified; select this profile manually. This partial profile documents hardware and setup. Controls remain unbound because messages depend on the selected setup, channel, track or mode. Consult the linked manufacturer references for MIDI assignments and complete hardware details.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Novation Launch Control XL 3 schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 700,
+		"elements": [
+			{
+				"id": "encoders-encoder-1",
+				"label": "ENCODERS: Encoder 1",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 13.571428571428571,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-2",
+				"label": "ENCODERS: Encoder 2",
+				"kind": "knob",
+				"position": {
+					"x": 11.3125,
+					"y": 13.571428571428571,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-3",
+				"label": "ENCODERS: Encoder 3",
+				"kind": "knob",
+				"position": {
+					"x": 20.041666666666664,
+					"y": 13.571428571428571,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-4",
+				"label": "ENCODERS: Encoder 4",
+				"kind": "knob",
+				"position": {
+					"x": 28.770833333333336,
+					"y": 13.571428571428571,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-5",
+				"label": "ENCODERS: Encoder 5",
+				"kind": "knob",
+				"position": {
+					"x": 37.5,
+					"y": 13.571428571428571,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-6",
+				"label": "ENCODERS: Encoder 6",
+				"kind": "knob",
+				"position": {
+					"x": 46.229166666666664,
+					"y": 13.571428571428571,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-7",
+				"label": "ENCODERS: Encoder 7",
+				"kind": "knob",
+				"position": {
+					"x": 54.95833333333333,
+					"y": 13.571428571428571,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-8",
+				"label": "ENCODERS: Encoder 8",
+				"kind": "knob",
+				"position": {
+					"x": 63.6875,
+					"y": 13.571428571428571,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-9",
+				"label": "ENCODERS: Encoder 9",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 25.238095238095244,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-10",
+				"label": "ENCODERS: Encoder 10",
+				"kind": "knob",
+				"position": {
+					"x": 11.3125,
+					"y": 25.238095238095244,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-11",
+				"label": "ENCODERS: Encoder 11",
+				"kind": "knob",
+				"position": {
+					"x": 20.041666666666664,
+					"y": 25.238095238095244,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-12",
+				"label": "ENCODERS: Encoder 12",
+				"kind": "knob",
+				"position": {
+					"x": 28.770833333333336,
+					"y": 25.238095238095244,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-13",
+				"label": "ENCODERS: Encoder 13",
+				"kind": "knob",
+				"position": {
+					"x": 37.5,
+					"y": 25.238095238095244,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-14",
+				"label": "ENCODERS: Encoder 14",
+				"kind": "knob",
+				"position": {
+					"x": 46.229166666666664,
+					"y": 25.238095238095244,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-15",
+				"label": "ENCODERS: Encoder 15",
+				"kind": "knob",
+				"position": {
+					"x": 54.95833333333333,
+					"y": 25.238095238095244,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-16",
+				"label": "ENCODERS: Encoder 16",
+				"kind": "knob",
+				"position": {
+					"x": 63.6875,
+					"y": 25.238095238095244,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-17",
+				"label": "ENCODERS: Encoder 17",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 36.90476190476191,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-18",
+				"label": "ENCODERS: Encoder 18",
+				"kind": "knob",
+				"position": {
+					"x": 11.3125,
+					"y": 36.90476190476191,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-19",
+				"label": "ENCODERS: Encoder 19",
+				"kind": "knob",
+				"position": {
+					"x": 20.041666666666664,
+					"y": 36.90476190476191,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-20",
+				"label": "ENCODERS: Encoder 20",
+				"kind": "knob",
+				"position": {
+					"x": 28.770833333333336,
+					"y": 36.90476190476191,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-21",
+				"label": "ENCODERS: Encoder 21",
+				"kind": "knob",
+				"position": {
+					"x": 37.5,
+					"y": 36.90476190476191,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-22",
+				"label": "ENCODERS: Encoder 22",
+				"kind": "knob",
+				"position": {
+					"x": 46.229166666666664,
+					"y": 36.90476190476191,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-23",
+				"label": "ENCODERS: Encoder 23",
+				"kind": "knob",
+				"position": {
+					"x": 54.95833333333333,
+					"y": 36.90476190476191,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "encoders-encoder-24",
+				"label": "ENCODERS: Encoder 24",
+				"kind": "knob",
+				"position": {
+					"x": 63.6875,
+					"y": 36.90476190476191,
+					"width": 8.729166666666668,
+					"height": 11.666666666666666
+				}
+			},
+			{
+				"id": "faders-fader-1",
+				"label": "FADERS: Fader 1",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 56.42857142857143,
+					"width": 8.729166666666668,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "faders-fader-2",
+				"label": "FADERS: Fader 2",
+				"kind": "fader",
+				"position": {
+					"x": 11.3125,
+					"y": 56.42857142857143,
+					"width": 8.729166666666668,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "faders-fader-3",
+				"label": "FADERS: Fader 3",
+				"kind": "fader",
+				"position": {
+					"x": 20.041666666666664,
+					"y": 56.42857142857143,
+					"width": 8.729166666666668,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "faders-fader-4",
+				"label": "FADERS: Fader 4",
+				"kind": "fader",
+				"position": {
+					"x": 28.770833333333336,
+					"y": 56.42857142857143,
+					"width": 8.729166666666668,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "faders-fader-5",
+				"label": "FADERS: Fader 5",
+				"kind": "fader",
+				"position": {
+					"x": 37.5,
+					"y": 56.42857142857143,
+					"width": 8.729166666666668,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "faders-fader-6",
+				"label": "FADERS: Fader 6",
+				"kind": "fader",
+				"position": {
+					"x": 46.229166666666664,
+					"y": 56.42857142857143,
+					"width": 8.729166666666668,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "faders-fader-7",
+				"label": "FADERS: Fader 7",
+				"kind": "fader",
+				"position": {
+					"x": 54.95833333333333,
+					"y": 56.42857142857143,
+					"width": 8.729166666666668,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "faders-fader-8",
+				"label": "FADERS: Fader 8",
+				"kind": "fader",
+				"position": {
+					"x": 63.6875,
+					"y": 56.42857142857143,
+					"width": 8.729166666666668,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "channel-buttons-button-1",
+				"label": "CHANNEL BUTTONS: Button 1",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 85.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-2",
+				"label": "CHANNEL BUTTONS: Button 2",
+				"kind": "button",
+				"position": {
+					"x": 11.3125,
+					"y": 85.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-3",
+				"label": "CHANNEL BUTTONS: Button 3",
+				"kind": "button",
+				"position": {
+					"x": 20.041666666666664,
+					"y": 85.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-4",
+				"label": "CHANNEL BUTTONS: Button 4",
+				"kind": "button",
+				"position": {
+					"x": 28.770833333333336,
+					"y": 85.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-5",
+				"label": "CHANNEL BUTTONS: Button 5",
+				"kind": "button",
+				"position": {
+					"x": 37.5,
+					"y": 85.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-6",
+				"label": "CHANNEL BUTTONS: Button 6",
+				"kind": "button",
+				"position": {
+					"x": 46.229166666666664,
+					"y": 85.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-7",
+				"label": "CHANNEL BUTTONS: Button 7",
+				"kind": "button",
+				"position": {
+					"x": 54.95833333333333,
+					"y": 85.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-8",
+				"label": "CHANNEL BUTTONS: Button 8",
+				"kind": "button",
+				"position": {
+					"x": 63.6875,
+					"y": 85.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-9",
+				"label": "CHANNEL BUTTONS: Button 9",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 90.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-10",
+				"label": "CHANNEL BUTTONS: Button 10",
+				"kind": "button",
+				"position": {
+					"x": 11.3125,
+					"y": 90.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-11",
+				"label": "CHANNEL BUTTONS: Button 11",
+				"kind": "button",
+				"position": {
+					"x": 20.041666666666664,
+					"y": 90.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-12",
+				"label": "CHANNEL BUTTONS: Button 12",
+				"kind": "button",
+				"position": {
+					"x": 28.770833333333336,
+					"y": 90.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-13",
+				"label": "CHANNEL BUTTONS: Button 13",
+				"kind": "button",
+				"position": {
+					"x": 37.5,
+					"y": 90.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-14",
+				"label": "CHANNEL BUTTONS: Button 14",
+				"kind": "button",
+				"position": {
+					"x": 46.229166666666664,
+					"y": 90.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-15",
+				"label": "CHANNEL BUTTONS: Button 15",
+				"kind": "button",
+				"position": {
+					"x": 54.95833333333333,
+					"y": 90.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "channel-buttons-button-16",
+				"label": "CHANNEL BUTTONS: Button 16",
+				"kind": "button",
+				"position": {
+					"x": 63.6875,
+					"y": 90.0,
+					"width": 8.729166666666668,
+					"height": 5.0
+				}
+			},
+			{
+				"id": "display-oled",
+				"label": "DISPLAY: OLED",
+				"kind": "screen",
+				"position": {
+					"x": 75.5,
+					"y": 13.571428571428571,
+					"width": 21.5,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "navigation-page-up",
+				"label": "NAVIGATION: Page up",
+				"kind": "button",
+				"position": {
+					"x": 75.5,
+					"y": 42.857142857142854,
+					"width": 10.75,
+					"height": 13.035714285714286
+				}
+			},
+			{
+				"id": "navigation-page-down",
+				"label": "NAVIGATION: Page down",
+				"kind": "button",
+				"position": {
+					"x": 86.25,
+					"y": 42.857142857142854,
+					"width": 10.75,
+					"height": 13.035714285714286
+				}
+			},
+			{
+				"id": "navigation-track-left",
+				"label": "NAVIGATION: Track left",
+				"kind": "button",
+				"position": {
+					"x": 75.5,
+					"y": 55.892857142857146,
+					"width": 10.75,
+					"height": 13.035714285714286
+				}
+			},
+			{
+				"id": "navigation-track-right",
+				"label": "NAVIGATION: Track right",
+				"kind": "button",
+				"position": {
+					"x": 86.25,
+					"y": 55.892857142857146,
+					"width": 10.75,
+					"height": 13.035714285714286
+				}
+			},
+			{
+				"id": "navigation-record",
+				"label": "NAVIGATION: Record",
+				"kind": "button",
+				"position": {
+					"x": 75.5,
+					"y": 68.92857142857143,
+					"width": 10.75,
+					"height": 13.035714285714286
+				}
+			},
+			{
+				"id": "navigation-play",
+				"label": "NAVIGATION: Play",
+				"kind": "button",
+				"position": {
+					"x": 86.25,
+					"y": 68.92857142857143,
+					"width": 10.75,
+					"height": 13.035714285714286
+				}
+			},
+			{
+				"id": "navigation-shift",
+				"label": "NAVIGATION: Shift",
+				"kind": "button",
+				"position": {
+					"x": 75.5,
+					"y": 81.96428571428571,
+					"width": 10.75,
+					"height": 13.035714285714286
+				}
+			},
+			{
+				"id": "navigation-mode",
+				"label": "NAVIGATION: Mode",
+				"kind": "button",
+				"position": {
+					"x": 86.25,
+					"y": 81.96428571428571,
+					"width": 10.75,
+					"height": 13.035714285714286
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT 2 / THRU",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Device edge"
+		}
+	],
+	"diagramSources": [
+		"https://userguides.novationmusic.com/hc/en-gb/articles/26190536231570-Launch-Control-XL-3-s-Specifications",
+		"https://userguides.novationmusic.com/hc/en-gb/articles/27840433609362-MIDI-on-Launch-Control-XL-3",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

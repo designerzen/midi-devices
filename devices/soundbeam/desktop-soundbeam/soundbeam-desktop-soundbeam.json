@@ -1,0 +1,363 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "soundbeam-desktop-soundbeam",
+	"name": "Desktop Soundbeam",
+	"manufacturer": "Soundbeam",
+	"manufacturerUrl": "https://www.soundbeam.co.uk/",
+	"ids": [
+		"soundbeam-desktop-soundbeam"
+	],
+	"portNames": [],
+	"description": "Accessible computer-based Soundbeam system with a dedicated interface, sensors and Windows software.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Desktop Soundbeam official manuals and support",
+			"url": "https://www.soundbeam.co.uk/desktop-soundbeam-manual-updates"
+		},
+		{
+			"title": "Desktop Soundbeam handbook",
+			"url": "https://www.soundbeam.co.uk/s/Manual-xnk7.pdf"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware",
+		"Touch-free musical interaction",
+		"Configurable MIDI performance"
+	],
+	"hardwareControls": [
+		"Sensor interface",
+		"Software-configured pitch and MIDI routing"
+	],
+	"notice": "Install the matching Desktop Soundbeam software and interface driver, then configure sensor input, MIDI routing and sound destinations in that software. The manufacturer specifies 32-bit Windows XP, Vista or Windows 7 and states development ended in spring 2012. Do not assume compatibility with modern Windows or a class-compliant USB MIDI connection. Notes, channels and expression depend on the selected setup; this profile supplies setup guidance rather than a fixed note or CC map. Select this profile manually: port names have not been verified. The panel is an original conceptual schematic, not a scaled drawing of the physical controls.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Desktop Soundbeam conceptual schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 410,
+		"elements": [
+			{
+				"id": "front-test-test",
+				"label": "FRONT / TEST: Test",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 23.170731707317074,
+					"width": 6.166666666666667,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-test-enable",
+				"label": "FRONT / TEST: Enable",
+				"kind": "button",
+				"position": {
+					"x": 8.75,
+					"y": 23.170731707317074,
+					"width": 6.166666666666667,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-switch-inputs-switch-1",
+				"label": "FRONT / SWITCH INPUTS: Switch 1",
+				"kind": "input",
+				"position": {
+					"x": 16.75,
+					"y": 23.170731707317074,
+					"width": 8.0,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-switch-inputs-switch-2",
+				"label": "FRONT / SWITCH INPUTS: Switch 2",
+				"kind": "input",
+				"position": {
+					"x": 24.75,
+					"y": 23.170731707317074,
+					"width": 8.0,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-switch-inputs-switch-3",
+				"label": "FRONT / SWITCH INPUTS: Switch 3",
+				"kind": "input",
+				"position": {
+					"x": 32.75,
+					"y": 23.170731707317074,
+					"width": 8.0,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-switch-inputs-switch-4",
+				"label": "FRONT / SWITCH INPUTS: Switch 4",
+				"kind": "input",
+				"position": {
+					"x": 40.75,
+					"y": 23.170731707317074,
+					"width": 8.0,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-switch-inputs-switch-5",
+				"label": "FRONT / SWITCH INPUTS: Switch 5",
+				"kind": "input",
+				"position": {
+					"x": 48.75,
+					"y": 23.170731707317074,
+					"width": 8.0,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-switch-inputs-switch-6",
+				"label": "FRONT / SWITCH INPUTS: Switch 6",
+				"kind": "input",
+				"position": {
+					"x": 56.75,
+					"y": 23.170731707317074,
+					"width": 8.0,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-switch-inputs-switch-7",
+				"label": "FRONT / SWITCH INPUTS: Switch 7",
+				"kind": "input",
+				"position": {
+					"x": 64.75,
+					"y": 23.170731707317074,
+					"width": 8.0,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-switch-inputs-switch-8",
+				"label": "FRONT / SWITCH INPUTS: Switch 8",
+				"kind": "input",
+				"position": {
+					"x": 72.75,
+					"y": 23.170731707317074,
+					"width": 8.0,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-power-on-off",
+				"label": "FRONT / POWER: On / off",
+				"kind": "power",
+				"position": {
+					"x": 82.58333333333333,
+					"y": 23.170731707317074,
+					"width": 7.416666666666667,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "front-power-power",
+				"label": "FRONT / POWER: Power",
+				"kind": "input",
+				"position": {
+					"x": 90.0,
+					"y": 23.170731707317074,
+					"width": 7.416666666666667,
+					"height": 25.609756097560975
+				}
+			},
+			{
+				"id": "rear-sensors-sensor-4",
+				"label": "REAR / SENSORS: Sensor 4",
+				"kind": "bidirectional",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 60.97560975609756,
+					"width": 8.5,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-sensors-sensor-3",
+				"label": "REAR / SENSORS: Sensor 3",
+				"kind": "bidirectional",
+				"position": {
+					"x": 11.083333333333334,
+					"y": 60.97560975609756,
+					"width": 8.5,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-sensors-sensor-2",
+				"label": "REAR / SENSORS: Sensor 2",
+				"kind": "bidirectional",
+				"position": {
+					"x": 19.583333333333332,
+					"y": 60.97560975609756,
+					"width": 8.5,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-sensors-sensor-1",
+				"label": "REAR / SENSORS: Sensor 1",
+				"kind": "bidirectional",
+				"position": {
+					"x": 28.083333333333332,
+					"y": 60.97560975609756,
+					"width": 8.5,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-usb-usb",
+				"label": "REAR / USB: USB",
+				"kind": "bidirectional",
+				"position": {
+					"x": 38.416666666666664,
+					"y": 60.97560975609756,
+					"width": 8.166666666666666,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-midi-out-3",
+				"label": "REAR / MIDI: OUT 3",
+				"kind": "output",
+				"position": {
+					"x": 48.41666666666667,
+					"y": 60.97560975609756,
+					"width": 8.166666666666666,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-midi-in-3",
+				"label": "REAR / MIDI: IN 3",
+				"kind": "input",
+				"position": {
+					"x": 56.58333333333333,
+					"y": 60.97560975609756,
+					"width": 8.166666666666666,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-midi-out-2",
+				"label": "REAR / MIDI: OUT 2",
+				"kind": "output",
+				"position": {
+					"x": 64.75,
+					"y": 60.97560975609756,
+					"width": 8.166666666666666,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-midi-in-2",
+				"label": "REAR / MIDI: IN 2",
+				"kind": "input",
+				"position": {
+					"x": 72.91666666666666,
+					"y": 60.97560975609756,
+					"width": 8.166666666666666,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-midi-out-1",
+				"label": "REAR / MIDI: OUT 1",
+				"kind": "output",
+				"position": {
+					"x": 81.08333333333333,
+					"y": 60.97560975609756,
+					"width": 8.166666666666666,
+					"height": 29.268292682926827
+				}
+			},
+			{
+				"id": "rear-midi-in-1",
+				"label": "REAR / MIDI: IN 1",
+				"kind": "input",
+				"position": {
+					"x": 89.25,
+					"y": 60.97560975609756,
+					"width": 8.166666666666666,
+					"height": 29.268292682926827
+				}
+			}
+		]
+	},
+	"productUrl": "https://www.soundbeam.co.uk/desktop-soundbeam-manual-updates",
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Sensor 1 - 4",
+			"connector": "Dedicated sensor sockets",
+			"direction": "bidirectional",
+			"location": "rear"
+		},
+		{
+			"label": "Switch 1 - 8",
+			"connector": "Variable voltage switch sockets",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "MIDI IN 1 - 3",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "MIDI OUT 1 - 3",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "USB",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "rear"
+		},
+		{
+			"label": "Power",
+			"connector": "DC inlet",
+			"direction": "input",
+			"location": "front"
+		}
+	],
+	"diagramSources": [
+		"https://www.soundbeam.co.uk/s/Manual-xnk7.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

@@ -1,0 +1,119 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-choir-leila",
+	"name": "Teenage Engineering choir Leila",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/choir",
+	"ids": [
+		"teenage-engineering-choir-leila"
+	],
+	"portNames": [],
+	"description": "Wooden choir speaker with a soprano voice and BLE MIDI performance.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "choir Leila user guide",
+			"url": "https://teenage.engineering/guides/choir"
+		}
+	],
+	"abilities": [
+		"Bluetooth LE MIDI note performance",
+		"Built-in voice and loudspeaker"
+	],
+	"hardwareControls": [
+		"Speaker-box power button",
+		"Tap gesture for play/pause",
+		"Tilt gesture for volume"
+	],
+	"notice": "Connect through a compatible BLE MIDI host to play the choir voice. USB-C is documented for charging, not USB MIDI performance. Establish an operating-system MIDI route before browser use. Voice ranges differ by member; no guessed note/channel or CC assignments are supplied. This diagram is a control inventory, not the doll silhouette. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "choir Leila selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "speaker-box-gestures-voice-loudspeaker",
+				"label": "SPEAKER BOX / GESTURES: Voice loudspeaker",
+				"kind": "speaker",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			},
+			{
+				"id": "speaker-box-gestures-power-button",
+				"label": "SPEAKER BOX / GESTURES: Power button",
+				"kind": "button",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			},
+			{
+				"id": "speaker-box-gestures-tap-tilt-gestures",
+				"label": "SPEAKER BOX / GESTURES: Tap / tilt gestures",
+				"kind": "touch",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Wireless MIDI",
+			"connector": "Bluetooth LE MIDI",
+			"direction": "input",
+			"location": "Wireless"
+		},
+		{
+			"label": "Charging",
+			"connector": "USB-C power",
+			"direction": "input",
+			"location": "Speaker box (back or inside doll)"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/choir",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

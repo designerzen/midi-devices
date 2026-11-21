@@ -1,0 +1,269 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "keith-mcmillen-12-step",
+	"name": "Keith McMillen 12 Step",
+	"manufacturer": "Keith McMillen Instruments",
+	"manufacturerUrl": "https://keithmcmillen.com/",
+	"productUrl": "https://files.keithmcmillen.com/products/12step/editor/12_Step_Manual_V2.0.pdf",
+	"ids": [
+		"keith-mcmillen-12-step"
+	],
+	"portNames": [],
+	"description": "Chromatic foot controller with 13 pressure- and tilt-sensitive playing keys.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Keith McMillen 12 Step - hardware / MIDI documentation",
+			"url": "https://files.keithmcmillen.com/products/12step/editor/12_Step_Manual_V2.0.pdf"
+		},
+		{
+			"title": "Keith McMillen 12 Step - setup and support reference",
+			"url": "https://support.keithmcmillen.com/hc/en-us/articles/204981235-How-do-12-Step-and-SoftStep-compare-to-each-other"
+		},
+		{
+			"title": "Keith McMillen 12 Step - setup and support reference",
+			"url": "https://support.keithmcmillen.com/hc/en-us/articles/203346895-What-do-I-need-the-MIDI-Expander-for"
+		}
+	],
+	"abilities": [
+		"Foot-operated notes and chords",
+		"Pressure and tilt sensing",
+		"Configurable sensitivity",
+		"Up to five notes per key",
+		"USB MIDI"
+	],
+	"hardwareControls": [
+		"CHROMATIC FOOT KEYS: Foot key 1, Foot key 2, Foot key 3, Foot key 4, Foot key 5, Foot key 6, Foot key 7, Foot key 8, Foot key 9, Foot key 10, Foot key 11, Foot key 12, Foot key 13",
+		"SELECT: Select",
+		"DISPLAY: Preset display"
+	],
+	"notice": "Connect the main USB port to a host; DIN hardware requires a KMI MIDI Expander. Use the 12 Step editor to assign notes/chords, pressure and tilt, then store the preset. Hold Select to choose presets or octave changes. This is the original 12 Step, not 12 Step2; direct TRS MIDI and CV outputs are not included. Foot operation offers an alternative to hand playing for some musicians. Playing keys are unbound because presets can output chords and different note ranges. Select the profile manually if the host does not identify it: no unverified port aliases are supplied. Diagrams are original simplified schematics, not scale drawings. Physical controls without a binding are informational; use MIDI learn for configurable assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Keith McMillen 12 Step schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 400,
+		"elements": [
+			{
+				"id": "chromatic-foot-keys-foot-key-1",
+				"label": "CHROMATIC FOOT KEYS: Foot key 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.083333333333333,
+					"y": 55.55,
+					"width": 9.899999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-2",
+				"label": "CHROMATIC FOOT KEYS: Foot key 2",
+				"kind": "pad",
+				"position": {
+					"x": 9.302083333333332,
+					"y": 23.75,
+					"width": 6.1875,
+					"height": 29.812499999999996
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-3",
+				"label": "CHROMATIC FOOT KEYS: Foot key 3",
+				"kind": "pad",
+				"position": {
+					"x": 12.395833333333334,
+					"y": 55.55,
+					"width": 9.899999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-4",
+				"label": "CHROMATIC FOOT KEYS: Foot key 4",
+				"kind": "pad",
+				"position": {
+					"x": 19.614583333333332,
+					"y": 23.75,
+					"width": 6.1875,
+					"height": 29.812499999999996
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-5",
+				"label": "CHROMATIC FOOT KEYS: Foot key 5",
+				"kind": "pad",
+				"position": {
+					"x": 22.708333333333332,
+					"y": 55.55,
+					"width": 9.899999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-6",
+				"label": "CHROMATIC FOOT KEYS: Foot key 6",
+				"kind": "pad",
+				"position": {
+					"x": 33.020833333333336,
+					"y": 55.55,
+					"width": 9.899999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-7",
+				"label": "CHROMATIC FOOT KEYS: Foot key 7",
+				"kind": "pad",
+				"position": {
+					"x": 40.239583333333336,
+					"y": 23.75,
+					"width": 6.1875,
+					"height": 29.812499999999996
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-8",
+				"label": "CHROMATIC FOOT KEYS: Foot key 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.333333333333336,
+					"y": 55.55,
+					"width": 9.899999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-9",
+				"label": "CHROMATIC FOOT KEYS: Foot key 9",
+				"kind": "pad",
+				"position": {
+					"x": 50.55208333333333,
+					"y": 23.75,
+					"width": 6.1875,
+					"height": 29.812499999999996
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-10",
+				"label": "CHROMATIC FOOT KEYS: Foot key 10",
+				"kind": "pad",
+				"position": {
+					"x": 53.645833333333336,
+					"y": 55.55,
+					"width": 9.899999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-11",
+				"label": "CHROMATIC FOOT KEYS: Foot key 11",
+				"kind": "pad",
+				"position": {
+					"x": 60.864583333333336,
+					"y": 23.75,
+					"width": 6.1875,
+					"height": 29.812499999999996
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-12",
+				"label": "CHROMATIC FOOT KEYS: Foot key 12",
+				"kind": "pad",
+				"position": {
+					"x": 63.95833333333333,
+					"y": 55.55,
+					"width": 9.899999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "chromatic-foot-keys-foot-key-13",
+				"label": "CHROMATIC FOOT KEYS: Foot key 13",
+				"kind": "pad",
+				"position": {
+					"x": 74.27083333333333,
+					"y": 55.55,
+					"width": 9.899999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "select-select",
+				"label": "SELECT: Select",
+				"kind": "button",
+				"position": {
+					"x": 85.91666666666666,
+					"y": 23.75,
+					"width": 11.5,
+					"height": 23.75
+				}
+			},
+			{
+				"id": "display-preset-display",
+				"label": "DISPLAY: Preset display",
+				"kind": "screen",
+				"position": {
+					"x": 85.91666666666666,
+					"y": 58.75,
+					"width": 11.5,
+					"height": 31.25
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB host connection",
+			"connector": "USB Type-B",
+			"direction": "bidirectional",
+			"location": "edge"
+		},
+		{
+			"label": "MIDI Expander connection",
+			"connector": "Mini USB (KMI accessory)",
+			"direction": "bidirectional",
+			"location": "edge"
+		},
+		{
+			"label": "Expression pedal",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "edge"
+		}
+	],
+	"diagramSources": [
+		"https://files.keithmcmillen.com/products/12step/editor/12_Step_Manual_V2.0.pdf",
+		"https://support.keithmcmillen.com/hc/en-us/articles/204981235-How-do-12-Step-and-SoftStep-compare-to-each-other",
+		"https://support.keithmcmillen.com/hc/en-us/articles/203346895-What-do-I-need-the-MIDI-Expander-for",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

@@ -1,0 +1,384 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "faderfox-uc4",
+	"name": "Faderfox UC4",
+	"manufacturer": "Faderfox",
+	"manufacturerUrl": "https://faderfox.de/",
+	"productUrl": "https://faderfox.de/uc4.html",
+	"ids": [
+		"faderfox-uc4"
+	],
+	"portNames": [],
+	"description": "Programmable compact MIDI controller with 8 push encoders, 8 faders and a crossfader.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Controls and specifications",
+			"url": "https://faderfox.de/uc4.html"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"Hardware MIDI",
+		"Programmable controller banks",
+		"Relative and absolute encoder modes"
+	],
+	"hardwareControls": [
+		"PUSH ENCODERS: Encoder 1, Encoder 2, Encoder 3, Encoder 4, Encoder 5, Encoder 6, Encoder 7, Encoder 8",
+		"DISPLAY: 4-digit display",
+		"FUNCTIONS: Function 1, Function 2, Function 3, Function 4, Function 5, Function 6, Function 7, Function 8",
+		"FADERS: Fader 1, Fader 2, Fader 3, Fader 4, Fader 5, Fader 6, Fader 7, Fader 8",
+		"CROSSFADER: Crossfader"
+	],
+	"notice": "Select the intended setup and controller group; encoder push and turn actions may send different messages. Match relative/absolute and high-resolution settings to the receiving software. Check the manufacturer MIDI adapter wiring; EC4 uses TRS type B. No universal factory CC map is assumed. Exact browser port aliases are unverified; select this profile manually. This partial profile documents hardware and setup. Controls remain unbound because messages depend on the selected setup, channel, track or mode. Consult the linked manufacturer references for MIDI assignments and complete hardware details.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Faderfox UC4 schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 700,
+		"elements": [
+			{
+				"id": "push-encoders-encoder-1",
+				"label": "PUSH ENCODERS: Encoder 1",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 13.571428571428571,
+					"width": 8.208333333333332,
+					"height": 37.857142857142854
+				}
+			},
+			{
+				"id": "push-encoders-encoder-2",
+				"label": "PUSH ENCODERS: Encoder 2",
+				"kind": "knob",
+				"position": {
+					"x": 10.791666666666666,
+					"y": 13.571428571428571,
+					"width": 8.208333333333332,
+					"height": 37.857142857142854
+				}
+			},
+			{
+				"id": "push-encoders-encoder-3",
+				"label": "PUSH ENCODERS: Encoder 3",
+				"kind": "knob",
+				"position": {
+					"x": 19.0,
+					"y": 13.571428571428571,
+					"width": 8.208333333333332,
+					"height": 37.857142857142854
+				}
+			},
+			{
+				"id": "push-encoders-encoder-4",
+				"label": "PUSH ENCODERS: Encoder 4",
+				"kind": "knob",
+				"position": {
+					"x": 27.208333333333336,
+					"y": 13.571428571428571,
+					"width": 8.208333333333332,
+					"height": 37.857142857142854
+				}
+			},
+			{
+				"id": "push-encoders-encoder-5",
+				"label": "PUSH ENCODERS: Encoder 5",
+				"kind": "knob",
+				"position": {
+					"x": 35.41666666666667,
+					"y": 13.571428571428571,
+					"width": 8.208333333333332,
+					"height": 37.857142857142854
+				}
+			},
+			{
+				"id": "push-encoders-encoder-6",
+				"label": "PUSH ENCODERS: Encoder 6",
+				"kind": "knob",
+				"position": {
+					"x": 43.625,
+					"y": 13.571428571428571,
+					"width": 8.208333333333332,
+					"height": 37.857142857142854
+				}
+			},
+			{
+				"id": "push-encoders-encoder-7",
+				"label": "PUSH ENCODERS: Encoder 7",
+				"kind": "knob",
+				"position": {
+					"x": 51.83333333333333,
+					"y": 13.571428571428571,
+					"width": 8.208333333333332,
+					"height": 37.857142857142854
+				}
+			},
+			{
+				"id": "push-encoders-encoder-8",
+				"label": "PUSH ENCODERS: Encoder 8",
+				"kind": "knob",
+				"position": {
+					"x": 60.04166666666667,
+					"y": 13.571428571428571,
+					"width": 8.208333333333332,
+					"height": 37.857142857142854
+				}
+			},
+			{
+				"id": "display-4-digit-display",
+				"label": "DISPLAY: 4-digit display",
+				"kind": "screen",
+				"position": {
+					"x": 71.33333333333334,
+					"y": 13.571428571428571,
+					"width": 25.666666666666664,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "functions-function-1",
+				"label": "FUNCTIONS: Function 1",
+				"kind": "button",
+				"position": {
+					"x": 71.33333333333334,
+					"y": 42.857142857142854,
+					"width": 12.833333333333332,
+					"height": 12.321428571428573
+				}
+			},
+			{
+				"id": "functions-function-2",
+				"label": "FUNCTIONS: Function 2",
+				"kind": "button",
+				"position": {
+					"x": 84.16666666666667,
+					"y": 42.857142857142854,
+					"width": 12.833333333333332,
+					"height": 12.321428571428573
+				}
+			},
+			{
+				"id": "functions-function-3",
+				"label": "FUNCTIONS: Function 3",
+				"kind": "button",
+				"position": {
+					"x": 71.33333333333334,
+					"y": 55.17857142857143,
+					"width": 12.833333333333332,
+					"height": 12.321428571428573
+				}
+			},
+			{
+				"id": "functions-function-4",
+				"label": "FUNCTIONS: Function 4",
+				"kind": "button",
+				"position": {
+					"x": 84.16666666666667,
+					"y": 55.17857142857143,
+					"width": 12.833333333333332,
+					"height": 12.321428571428573
+				}
+			},
+			{
+				"id": "functions-function-5",
+				"label": "FUNCTIONS: Function 5",
+				"kind": "button",
+				"position": {
+					"x": 71.33333333333334,
+					"y": 67.5,
+					"width": 12.833333333333332,
+					"height": 12.321428571428573
+				}
+			},
+			{
+				"id": "functions-function-6",
+				"label": "FUNCTIONS: Function 6",
+				"kind": "button",
+				"position": {
+					"x": 84.16666666666667,
+					"y": 67.5,
+					"width": 12.833333333333332,
+					"height": 12.321428571428573
+				}
+			},
+			{
+				"id": "functions-function-7",
+				"label": "FUNCTIONS: Function 7",
+				"kind": "button",
+				"position": {
+					"x": 71.33333333333334,
+					"y": 79.82142857142858,
+					"width": 12.833333333333332,
+					"height": 12.321428571428573
+				}
+			},
+			{
+				"id": "functions-function-8",
+				"label": "FUNCTIONS: Function 8",
+				"kind": "button",
+				"position": {
+					"x": 84.16666666666667,
+					"y": 79.82142857142858,
+					"width": 12.833333333333332,
+					"height": 12.321428571428573
+				}
+			},
+			{
+				"id": "faders-fader-1",
+				"label": "FADERS: Fader 1",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 60.0,
+					"width": 8.208333333333332,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "faders-fader-2",
+				"label": "FADERS: Fader 2",
+				"kind": "fader",
+				"position": {
+					"x": 10.791666666666666,
+					"y": 60.0,
+					"width": 8.208333333333332,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "faders-fader-3",
+				"label": "FADERS: Fader 3",
+				"kind": "fader",
+				"position": {
+					"x": 19.0,
+					"y": 60.0,
+					"width": 8.208333333333332,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "faders-fader-4",
+				"label": "FADERS: Fader 4",
+				"kind": "fader",
+				"position": {
+					"x": 27.208333333333336,
+					"y": 60.0,
+					"width": 8.208333333333332,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "faders-fader-5",
+				"label": "FADERS: Fader 5",
+				"kind": "fader",
+				"position": {
+					"x": 35.41666666666667,
+					"y": 60.0,
+					"width": 8.208333333333332,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "faders-fader-6",
+				"label": "FADERS: Fader 6",
+				"kind": "fader",
+				"position": {
+					"x": 43.625,
+					"y": 60.0,
+					"width": 8.208333333333332,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "faders-fader-7",
+				"label": "FADERS: Fader 7",
+				"kind": "fader",
+				"position": {
+					"x": 51.83333333333333,
+					"y": 60.0,
+					"width": 8.208333333333332,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "faders-fader-8",
+				"label": "FADERS: Fader 8",
+				"kind": "fader",
+				"position": {
+					"x": 60.04166666666667,
+					"y": 60.0,
+					"width": 8.208333333333332,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "crossfader-crossfader",
+				"label": "CROSSFADER: Crossfader",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 91.42857142857143,
+					"width": 65.66666666666666,
+					"height": 3.571428571428571
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB; use supplied cable",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "Minijack MIDI; use manufacturer adapter",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "Minijack MIDI; use manufacturer adapter",
+			"direction": "output",
+			"location": "Device edge"
+		}
+	],
+	"diagramSources": [
+		"https://faderfox.de/uc4.html",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

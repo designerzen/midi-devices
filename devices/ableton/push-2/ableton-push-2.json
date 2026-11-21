@@ -1,0 +1,1616 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "ableton-push-2",
+	"name": "Ableton Push 2",
+	"manufacturer": "Ableton",
+	"manufacturerUrl": "https://www.ableton.com/",
+	"ids": [
+		"ableton-push-2"
+	],
+	"portNames": [],
+	"description": "USB pad controller with display and deep Ableton Live integration.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Ableton Push 2: manufacturer or original documentation",
+			"url": "https://github.com/Ableton/push-interface"
+		}
+	],
+	"abilities": [],
+	"hardwareControls": [],
+	"notice": "Use the Ableton Push 2 control-surface integration in Live, or implement the published MIDI/display interface. Pad mappings differ between Live layouts and user mode. This listing intentionally provides no guessed note map or display protocol implementation. Use the software routing described above. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original simplified schematic. Physical controls are shown without assumed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Ableton Push 2 schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1100,
+		"height": 1000,
+		"elements": [
+			{
+				"id": "encoders-encoder-1",
+				"label": "ENCODERS: Encoder 1",
+				"kind": "knob",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 8.5,
+					"width": 7.704545454545454,
+					"height": 6.0
+				}
+			},
+			{
+				"id": "encoders-encoder-2",
+				"label": "ENCODERS: Encoder 2",
+				"kind": "knob",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 8.5,
+					"width": 7.704545454545454,
+					"height": 6.0
+				}
+			},
+			{
+				"id": "encoders-encoder-3",
+				"label": "ENCODERS: Encoder 3",
+				"kind": "knob",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 8.5,
+					"width": 7.704545454545454,
+					"height": 6.0
+				}
+			},
+			{
+				"id": "encoders-encoder-4",
+				"label": "ENCODERS: Encoder 4",
+				"kind": "knob",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 8.5,
+					"width": 7.704545454545454,
+					"height": 6.0
+				}
+			},
+			{
+				"id": "encoders-encoder-5",
+				"label": "ENCODERS: Encoder 5",
+				"kind": "knob",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 8.5,
+					"width": 7.704545454545454,
+					"height": 6.0
+				}
+			},
+			{
+				"id": "encoders-encoder-6",
+				"label": "ENCODERS: Encoder 6",
+				"kind": "knob",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 8.5,
+					"width": 7.704545454545454,
+					"height": 6.0
+				}
+			},
+			{
+				"id": "encoders-encoder-7",
+				"label": "ENCODERS: Encoder 7",
+				"kind": "knob",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 8.5,
+					"width": 7.704545454545454,
+					"height": 6.0
+				}
+			},
+			{
+				"id": "encoders-encoder-8",
+				"label": "ENCODERS: Encoder 8",
+				"kind": "knob",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 8.5,
+					"width": 7.704545454545454,
+					"height": 6.0
+				}
+			},
+			{
+				"id": "display-color-display",
+				"label": "DISPLAY: Color display",
+				"kind": "screen",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 18.5,
+					"width": 61.63636363636363,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "upper-display-buttons-upper-1",
+				"label": "UPPER DISPLAY BUTTONS: Upper 1",
+				"kind": "button",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 33.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "upper-display-buttons-upper-2",
+				"label": "UPPER DISPLAY BUTTONS: Upper 2",
+				"kind": "button",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 33.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "upper-display-buttons-upper-3",
+				"label": "UPPER DISPLAY BUTTONS: Upper 3",
+				"kind": "button",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 33.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "upper-display-buttons-upper-4",
+				"label": "UPPER DISPLAY BUTTONS: Upper 4",
+				"kind": "button",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 33.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "upper-display-buttons-upper-5",
+				"label": "UPPER DISPLAY BUTTONS: Upper 5",
+				"kind": "button",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 33.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "upper-display-buttons-upper-6",
+				"label": "UPPER DISPLAY BUTTONS: Upper 6",
+				"kind": "button",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 33.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "upper-display-buttons-upper-7",
+				"label": "UPPER DISPLAY BUTTONS: Upper 7",
+				"kind": "button",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 33.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "upper-display-buttons-upper-8",
+				"label": "UPPER DISPLAY BUTTONS: Upper 8",
+				"kind": "button",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 33.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "lower-display-buttons-lower-1",
+				"label": "LOWER DISPLAY BUTTONS: Lower 1",
+				"kind": "button",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 41.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "lower-display-buttons-lower-2",
+				"label": "LOWER DISPLAY BUTTONS: Lower 2",
+				"kind": "button",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 41.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "lower-display-buttons-lower-3",
+				"label": "LOWER DISPLAY BUTTONS: Lower 3",
+				"kind": "button",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 41.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "lower-display-buttons-lower-4",
+				"label": "LOWER DISPLAY BUTTONS: Lower 4",
+				"kind": "button",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 41.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "lower-display-buttons-lower-5",
+				"label": "LOWER DISPLAY BUTTONS: Lower 5",
+				"kind": "button",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 41.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "lower-display-buttons-lower-6",
+				"label": "LOWER DISPLAY BUTTONS: Lower 6",
+				"kind": "button",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 41.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "lower-display-buttons-lower-7",
+				"label": "LOWER DISPLAY BUTTONS: Lower 7",
+				"kind": "button",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 41.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "lower-display-buttons-lower-8",
+				"label": "LOWER DISPLAY BUTTONS: Lower 8",
+				"kind": "button",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 41.5,
+					"width": 7.704545454545454,
+					"height": 4.0
+				}
+			},
+			{
+				"id": "performance-pads-row-1-pad-1",
+				"label": "PERFORMANCE PADS: Row 1 pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 49.5,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-1-pad-2",
+				"label": "PERFORMANCE PADS: Row 1 pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 49.5,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-1-pad-3",
+				"label": "PERFORMANCE PADS: Row 1 pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 49.5,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-1-pad-4",
+				"label": "PERFORMANCE PADS: Row 1 pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 49.5,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-1-pad-5",
+				"label": "PERFORMANCE PADS: Row 1 pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 49.5,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-1-pad-6",
+				"label": "PERFORMANCE PADS: Row 1 pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 49.5,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-1-pad-7",
+				"label": "PERFORMANCE PADS: Row 1 pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 49.5,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-1-pad-8",
+				"label": "PERFORMANCE PADS: Row 1 pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 49.5,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-2-pad-1",
+				"label": "PERFORMANCE PADS: Row 2 pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 55.43749999999999,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-2-pad-2",
+				"label": "PERFORMANCE PADS: Row 2 pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 55.43749999999999,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-2-pad-3",
+				"label": "PERFORMANCE PADS: Row 2 pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 55.43749999999999,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-2-pad-4",
+				"label": "PERFORMANCE PADS: Row 2 pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 55.43749999999999,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-2-pad-5",
+				"label": "PERFORMANCE PADS: Row 2 pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 55.43749999999999,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-2-pad-6",
+				"label": "PERFORMANCE PADS: Row 2 pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 55.43749999999999,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-2-pad-7",
+				"label": "PERFORMANCE PADS: Row 2 pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 55.43749999999999,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-2-pad-8",
+				"label": "PERFORMANCE PADS: Row 2 pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 55.43749999999999,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-3-pad-1",
+				"label": "PERFORMANCE PADS: Row 3 pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 61.375,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-3-pad-2",
+				"label": "PERFORMANCE PADS: Row 3 pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 61.375,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-3-pad-3",
+				"label": "PERFORMANCE PADS: Row 3 pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 61.375,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-3-pad-4",
+				"label": "PERFORMANCE PADS: Row 3 pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 61.375,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-3-pad-5",
+				"label": "PERFORMANCE PADS: Row 3 pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 61.375,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-3-pad-6",
+				"label": "PERFORMANCE PADS: Row 3 pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 61.375,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-3-pad-7",
+				"label": "PERFORMANCE PADS: Row 3 pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 61.375,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-3-pad-8",
+				"label": "PERFORMANCE PADS: Row 3 pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 61.375,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-4-pad-1",
+				"label": "PERFORMANCE PADS: Row 4 pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 67.3125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-4-pad-2",
+				"label": "PERFORMANCE PADS: Row 4 pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 67.3125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-4-pad-3",
+				"label": "PERFORMANCE PADS: Row 4 pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 67.3125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-4-pad-4",
+				"label": "PERFORMANCE PADS: Row 4 pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 67.3125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-4-pad-5",
+				"label": "PERFORMANCE PADS: Row 4 pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 67.3125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-4-pad-6",
+				"label": "PERFORMANCE PADS: Row 4 pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 67.3125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-4-pad-7",
+				"label": "PERFORMANCE PADS: Row 4 pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 67.3125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-4-pad-8",
+				"label": "PERFORMANCE PADS: Row 4 pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 67.3125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-5-pad-1",
+				"label": "PERFORMANCE PADS: Row 5 pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 73.25,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-5-pad-2",
+				"label": "PERFORMANCE PADS: Row 5 pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 73.25,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-5-pad-3",
+				"label": "PERFORMANCE PADS: Row 5 pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 73.25,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-5-pad-4",
+				"label": "PERFORMANCE PADS: Row 5 pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 73.25,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-5-pad-5",
+				"label": "PERFORMANCE PADS: Row 5 pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 73.25,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-5-pad-6",
+				"label": "PERFORMANCE PADS: Row 5 pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 73.25,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-5-pad-7",
+				"label": "PERFORMANCE PADS: Row 5 pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 73.25,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-5-pad-8",
+				"label": "PERFORMANCE PADS: Row 5 pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 73.25,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-6-pad-1",
+				"label": "PERFORMANCE PADS: Row 6 pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 79.1875,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-6-pad-2",
+				"label": "PERFORMANCE PADS: Row 6 pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 79.1875,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-6-pad-3",
+				"label": "PERFORMANCE PADS: Row 6 pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 79.1875,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-6-pad-4",
+				"label": "PERFORMANCE PADS: Row 6 pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 79.1875,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-6-pad-5",
+				"label": "PERFORMANCE PADS: Row 6 pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 79.1875,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-6-pad-6",
+				"label": "PERFORMANCE PADS: Row 6 pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 79.1875,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-6-pad-7",
+				"label": "PERFORMANCE PADS: Row 6 pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 79.1875,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-6-pad-8",
+				"label": "PERFORMANCE PADS: Row 6 pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 79.1875,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-7-pad-1",
+				"label": "PERFORMANCE PADS: Row 7 pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 85.125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-7-pad-2",
+				"label": "PERFORMANCE PADS: Row 7 pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 85.125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-7-pad-3",
+				"label": "PERFORMANCE PADS: Row 7 pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 85.125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-7-pad-4",
+				"label": "PERFORMANCE PADS: Row 7 pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 85.125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-7-pad-5",
+				"label": "PERFORMANCE PADS: Row 7 pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 85.125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-7-pad-6",
+				"label": "PERFORMANCE PADS: Row 7 pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 85.125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-7-pad-7",
+				"label": "PERFORMANCE PADS: Row 7 pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 85.125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-7-pad-8",
+				"label": "PERFORMANCE PADS: Row 7 pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 85.125,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-8-pad-1",
+				"label": "PERFORMANCE PADS: Row 8 pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 17.363636363636363,
+					"y": 91.0625,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-8-pad-2",
+				"label": "PERFORMANCE PADS: Row 8 pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 25.068181818181817,
+					"y": 91.0625,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-8-pad-3",
+				"label": "PERFORMANCE PADS: Row 8 pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.77272727272727,
+					"y": 91.0625,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-8-pad-4",
+				"label": "PERFORMANCE PADS: Row 8 pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 40.47727272727273,
+					"y": 91.0625,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-8-pad-5",
+				"label": "PERFORMANCE PADS: Row 8 pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 48.18181818181818,
+					"y": 91.0625,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-8-pad-6",
+				"label": "PERFORMANCE PADS: Row 8 pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.88636363636363,
+					"y": 91.0625,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-8-pad-7",
+				"label": "PERFORMANCE PADS: Row 8 pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 63.590909090909086,
+					"y": 91.0625,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "performance-pads-row-8-pad-8",
+				"label": "PERFORMANCE PADS: Row 8 pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 71.29545454545455,
+					"y": 91.0625,
+					"width": 7.704545454545454,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "tempo-swing-tempo",
+				"label": "TEMPO / SWING: Tempo",
+				"kind": "knob",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 8.5,
+					"width": 6.2727272727272725,
+					"height": 13.5
+				}
+			},
+			{
+				"id": "tempo-swing-swing",
+				"label": "TEMPO / SWING: Swing",
+				"kind": "knob",
+				"position": {
+					"x": 9.090909090909092,
+					"y": 8.5,
+					"width": 6.2727272727272725,
+					"height": 13.5
+				}
+			},
+			{
+				"id": "timing-edit-tap-tempo",
+				"label": "TIMING / EDIT: Tap tempo",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 26.5,
+					"width": 6.2727272727272725,
+					"height": 4.75
+				}
+			},
+			{
+				"id": "timing-edit-metronome",
+				"label": "TIMING / EDIT: Metronome",
+				"kind": "button",
+				"position": {
+					"x": 9.090909090909092,
+					"y": 26.5,
+					"width": 6.2727272727272725,
+					"height": 4.75
+				}
+			},
+			{
+				"id": "timing-edit-delete",
+				"label": "TIMING / EDIT: Delete",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 31.25,
+					"width": 6.2727272727272725,
+					"height": 4.75
+				}
+			},
+			{
+				"id": "timing-edit-undo",
+				"label": "TIMING / EDIT: Undo",
+				"kind": "button",
+				"position": {
+					"x": 9.090909090909092,
+					"y": 31.25,
+					"width": 6.2727272727272725,
+					"height": 4.75
+				}
+			},
+			{
+				"id": "timing-edit-mute",
+				"label": "TIMING / EDIT: Mute",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 36.0,
+					"width": 6.2727272727272725,
+					"height": 4.75
+				}
+			},
+			{
+				"id": "timing-edit-solo",
+				"label": "TIMING / EDIT: Solo",
+				"kind": "button",
+				"position": {
+					"x": 9.090909090909092,
+					"y": 36.0,
+					"width": 6.2727272727272725,
+					"height": 4.75
+				}
+			},
+			{
+				"id": "timing-edit-stop-clip",
+				"label": "TIMING / EDIT: Stop clip",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 40.75,
+					"width": 6.2727272727272725,
+					"height": 4.75
+				}
+			},
+			{
+				"id": "timing-edit-convert",
+				"label": "TIMING / EDIT: Convert",
+				"kind": "button",
+				"position": {
+					"x": 9.090909090909092,
+					"y": 40.75,
+					"width": 6.2727272727272725,
+					"height": 4.75
+				}
+			},
+			{
+				"id": "touch-strip-touch-strip",
+				"label": "TOUCH STRIP: Touch strip",
+				"kind": "strip",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 49.5,
+					"width": 4.818181818181818,
+					"height": 34.5
+				}
+			},
+			{
+				"id": "play-record-new",
+				"label": "PLAY / RECORD: New",
+				"kind": "button",
+				"position": {
+					"x": 9.181818181818182,
+					"y": 49.5,
+					"width": 6.181818181818182,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "play-record-duplicate",
+				"label": "PLAY / RECORD: Duplicate",
+				"kind": "button",
+				"position": {
+					"x": 9.181818181818182,
+					"y": 55.43749999999999,
+					"width": 6.181818181818182,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "play-record-automate",
+				"label": "PLAY / RECORD: Automate",
+				"kind": "button",
+				"position": {
+					"x": 9.181818181818182,
+					"y": 61.375,
+					"width": 6.181818181818182,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "play-record-fixed-length",
+				"label": "PLAY / RECORD: Fixed length",
+				"kind": "button",
+				"position": {
+					"x": 9.181818181818182,
+					"y": 67.3125,
+					"width": 6.181818181818182,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "play-record-quantize",
+				"label": "PLAY / RECORD: Quantize",
+				"kind": "button",
+				"position": {
+					"x": 9.181818181818182,
+					"y": 73.25,
+					"width": 6.181818181818182,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "play-record-double-loop",
+				"label": "PLAY / RECORD: Double loop",
+				"kind": "button",
+				"position": {
+					"x": 9.181818181818182,
+					"y": 79.1875,
+					"width": 6.181818181818182,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "play-record-record",
+				"label": "PLAY / RECORD: Record",
+				"kind": "button",
+				"position": {
+					"x": 9.181818181818182,
+					"y": 85.125,
+					"width": 6.181818181818182,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "play-record-play",
+				"label": "PLAY / RECORD: Play",
+				"kind": "button",
+				"position": {
+					"x": 9.181818181818182,
+					"y": 91.0625,
+					"width": 6.181818181818182,
+					"height": 5.9375
+				}
+			},
+			{
+				"id": "modes-master",
+				"label": "MODES: Master",
+				"kind": "knob",
+				"position": {
+					"x": 81.0,
+					"y": 8.5,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-user",
+				"label": "MODES: User",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 8.5,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-setup",
+				"label": "MODES: Setup",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 13.785714285714286,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-add-device",
+				"label": "MODES: Add device",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 13.785714285714286,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-add-track",
+				"label": "MODES: Add track",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 19.071428571428573,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-device",
+				"label": "MODES: Device",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 19.071428571428573,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-mix",
+				"label": "MODES: Mix",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 24.357142857142854,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-browse",
+				"label": "MODES: Browse",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 24.357142857142854,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-clip",
+				"label": "MODES: Clip",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 29.642857142857142,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-session",
+				"label": "MODES: Session",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 29.642857142857142,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-note",
+				"label": "MODES: Note",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 34.92857142857142,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-scale",
+				"label": "MODES: Scale",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 34.92857142857142,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "modes-layout",
+				"label": "MODES: Layout",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 40.214285714285715,
+					"width": 8.09090909090909,
+					"height": 5.285714285714286
+				}
+			},
+			{
+				"id": "navigation-repeat-up",
+				"label": "NAVIGATION / REPEAT: Up",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 49.5,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-left",
+				"label": "NAVIGATION / REPEAT: Left",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 49.5,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-right",
+				"label": "NAVIGATION / REPEAT: Right",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 54.77777777777778,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-down",
+				"label": "NAVIGATION / REPEAT: Down",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 54.77777777777778,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-octave-up",
+				"label": "NAVIGATION / REPEAT: Octave up",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 60.05555555555555,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-octave-down",
+				"label": "NAVIGATION / REPEAT: Octave down",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 60.05555555555555,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-repeat",
+				"label": "NAVIGATION / REPEAT: Repeat",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 65.33333333333333,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-accent",
+				"label": "NAVIGATION / REPEAT: Accent",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 65.33333333333333,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-shift",
+				"label": "NAVIGATION / REPEAT: Shift",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 70.61111111111111,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-select",
+				"label": "NAVIGATION / REPEAT: Select",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 70.61111111111111,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-1-4",
+				"label": "NAVIGATION / REPEAT: 1/4",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 75.8888888888889,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-1-4-t",
+				"label": "NAVIGATION / REPEAT: 1/4 T",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 75.8888888888889,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-1-8",
+				"label": "NAVIGATION / REPEAT: 1/8",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 81.16666666666667,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-1-8-t",
+				"label": "NAVIGATION / REPEAT: 1/8 T",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 81.16666666666667,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-1-16",
+				"label": "NAVIGATION / REPEAT: 1/16",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 86.44444444444444,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-1-16-t",
+				"label": "NAVIGATION / REPEAT: 1/16 T",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 86.44444444444444,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-1-32",
+				"label": "NAVIGATION / REPEAT: 1/32",
+				"kind": "button",
+				"position": {
+					"x": 81.0,
+					"y": 91.72222222222221,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			},
+			{
+				"id": "navigation-repeat-1-32-t",
+				"label": "NAVIGATION / REPEAT: 1/32 T",
+				"kind": "button",
+				"position": {
+					"x": 89.0909090909091,
+					"y": 91.72222222222221,
+					"width": 8.09090909090909,
+					"height": 5.277777777777778
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB",
+			"connector": "USB Type-B",
+			"direction": "bidirectional",
+			"location": "rear"
+		},
+		{
+			"label": "Pedal 1",
+			"connector": "6.35 mm jack",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "Pedal 2",
+			"connector": "6.35 mm jack",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "DC power",
+			"connector": "DC inlet",
+			"direction": "input",
+			"location": "rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.ableton.com/en/manual/using-push-2/",
+		"https://github.com/Ableton/push-interface",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

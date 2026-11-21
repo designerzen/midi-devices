@@ -1,7 +1,9 @@
-// Generates the static JSON API served from GitHub Pages under api/v1/.
+// Generates the static JSON and XML API served under api/v1/.
 import { readFileSync } from "node:fs"
 import { mkdir, writeFile } from "node:fs/promises"
 import path from "node:path"
+import { toXml } from "./xml.js"
+import { readManufacturers } from "./manufacturers.js"
 
 export const API_VERSION = "v1"
 
@@ -20,16 +22,14 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 	await mkdir(path.join(out, "devices"), { recursive: true })
 	await mkdir(path.join(out, "manufacturers"), { recursive: true })
 	await mkdir(path.join(out, "midi"), { recursive: true })
-	const write = (file, data) =>
-		writeFile(path.join(out, file), JSON.stringify(data, null, "\t") + "\n")
-	const meta = {
-		apiVersion: API_VERSION,
-		dataVersion: version,
-		generated: new Date().toISOString()
+	const write = async (file, data) => {
+		await writeFile(path.join(out, file), JSON.stringify(data, null, "\t") + "\n")
+		await writeFile(path.join(out, file.replace(/\.json$/, ".xml")), toXml(data))
 	}
+	const meta = { apiVersion: API_VERSION, dataVersion: version, generated: new Date().toISOString() }
 
 	const devices = entries.map(({ id, path: folder }) => {
-		const { $schema: _schema, ...profile } = JSON.parse(
+		const { $schema, ...profile } = JSON.parse(
 			readFileSync(path.join(devicesDirectory, folder, `${id}.json`), "utf8")
 		)
 		const base = `${site}${folder}/`
@@ -38,16 +38,13 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 			manufacturerId: folder.split("/")[0],
 			links: {
 				self: `${api}devices/${id}.json`,
+				xml: `${api}devices/${id}.xml`,
 				profile: `${base}${id}.json`,
 				base,
 				icon: `${base}${profile.icon ?? "icon.svg"}`,
 				panel: `${base}${profile.diagrams?.panel ?? "panel.svg"}`,
-				...(profile.diagrams?.connections
-					? { connections: `${base}${profile.diagrams.connections}` }
-					: {}),
-				...(profile.diagrams?.interface
-					? { interface: `${base}${profile.diagrams.interface}` }
-					: {}),
+				...(profile.diagrams?.connections ? { connections: `${base}${profile.diagrams.connections}` } : {}),
+				...(profile.diagrams?.interface ? { interface: `${base}${profile.diagrams.interface}` } : {}),
 				...(profile.diagrams?.logo ? { logo: `${base}${profile.diagrams.logo}` } : {}),
 				manufacturer: `${api}manufacturers/${folder.split("/")[0]}.json`,
 				catalogue: `${site}#device-${id}`
@@ -66,28 +63,33 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 		links: device.links
 	})
 
-	const manufacturers = new Map()
-	for (const device of devices) {
-		const entry = manufacturers.get(device.manufacturerId) ?? {
-			id: device.manufacturerId,
-			name: device.manufacturer,
-			url: device.manufacturerUrl,
+	const manufacturers = new Map(readManufacturers(devicesDirectory).map(({ $schema, links: resources, ...descriptor }) => {
+		const base = `${site}${descriptor.id}/`
+		return [descriptor.id, {
+			...descriptor,
+			resources,
 			devices: [],
-			links: { self: `${api}manufacturers/${device.manufacturerId}.json` }
-		}
-		entry.devices.push(device)
-		manufacturers.set(device.manufacturerId, entry)
+			links: {
+				self: `${api}manufacturers/${descriptor.id}.json`,
+				xml: `${api}manufacturers/${descriptor.id}.xml`,
+				base,
+				profile: `${base}manufacturer.json`,
+				...(descriptor.logo ? { logo: `${base}${descriptor.logo}` } : {}),
+				catalogue: base
+			}
+		}]
+	}))
+	for (const device of devices) {
+		const manufacturer = manufacturers.get(device.manufacturerId)
+		if (!manufacturer) throw new Error(`Missing manufacturer: ${device.manufacturerId}`)
+		manufacturer.devices.push(device)
 	}
 
 	// Matches the exact, case-insensitive rules of matchMidiDeviceProfile: IDs first, then port names.
 	const ports = { byId: {}, byName: {} }
 	for (const device of devices) {
-		for (const value of device.ids ?? [device.id]) {
-			ports.byId[normalise(value)] ??= device.id
-		}
-		for (const value of device.portNames ?? []) {
-			ports.byName[normalise(value)] ??= device.id
-		}
+		for (const value of device.ids ?? [device.id]) ports.byId[normalise(value)] ??= device.id
+		for (const value of device.portNames ?? []) ports.byName[normalise(value)] ??= device.id
 	}
 
 	// Every device ID and port name gets a URL of its own, so a known MIDI identifier is one request.
@@ -95,25 +97,17 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 	for (const device of devices) {
 		for (const value of [device.id, ...(device.ids ?? []), ...(device.portNames ?? [])]) {
 			const slug = midiSlug(value)
-			if (!slug) {
-				continue
-			}
+			if (!slug) continue
 			const owner = aliases.get(slug)
 			if (owner && owner !== device.id) {
-				throw new Error(
-					`MIDI identifier "${value}" (${slug}) is claimed by ${owner} and ${device.id}`
-				)
+				throw new Error(`MIDI identifier "${value}" (${slug}) is claimed by ${owner} and ${device.id}`)
 			}
 			aliases.set(slug, device.id)
 		}
 	}
 	const byId = new Map(devices.map((device) => [device.id, device]))
-	for (const [slug, id] of aliases) {
-		await write(`midi/${slug}.json`, byId.get(id))
-	}
-	for (const device of devices) {
-		await write(`devices/${device.id}.json`, device)
-	}
+	for (const [slug, id] of aliases) await write(`midi/${slug}.json`, byId.get(id))
+	for (const device of devices) await write(`devices/${device.id}.json`, device)
 	for (const manufacturer of manufacturers.values()) {
 		await write(`manufacturers/${manufacturer.id}.json`, {
 			...manufacturer,
@@ -130,11 +124,7 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 			deviceIds: devices.map((device) => device.id)
 		}))
 	})
-	await write("ports.json", {
-		...meta,
-		...ports,
-		bySlug: Object.fromEntries([...aliases].sort())
-	})
+	await write("ports.json", { ...meta, ...ports, bySlug: Object.fromEntries([...aliases].sort()) })
 	await write("index.json", {
 		...meta,
 		count: devices.length,
@@ -143,6 +133,7 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 			devices: `${api}devices.json`,
 			device: `${api}devices/{id}.json`,
 			manufacturers: `${api}manufacturers.json`,
+			midiManufacturers: `${site}midi-manufacturers.json`,
 			manufacturer: `${api}manufacturers/{id}.json`,
 			midi: `${api}midi/{slug}.json`,
 			ports: `${api}ports.json`,

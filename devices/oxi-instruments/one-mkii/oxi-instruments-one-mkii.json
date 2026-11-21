@@ -1,0 +1,1651 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "oxi-instruments-one-mkii",
+	"name": "OXI Instruments ONE MKII",
+	"manufacturer": "OXI Instruments",
+	"manufacturerUrl": "https://oxiinstruments.com/",
+	"productUrl": "https://docs.oxiinstruments.com/oxi-one-mkii-manual/overview/",
+	"ids": [
+		"oxi-instruments-one-mkii"
+	],
+	"portNames": [],
+	"description": "Grid-based MIDI and CV sequencer with USB host/device modes and BLE MIDI.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Hardware overview",
+			"url": "https://docs.oxiinstruments.com/oxi-one-mkii-manual/overview/"
+		},
+		{
+			"title": "Connectivity",
+			"url": "https://docs.oxiinstruments.com/oxi-one-mkii-manual/connectivity/"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"TRS MIDI",
+		"Bluetooth MIDI",
+		"CV / gate sequencing"
+	],
+	"hardwareControls": [
+		"DISPLAY: OLED",
+		"ENCODERS: Encoder 1, Encoder 2, Encoder 3, Encoder 4",
+		"TRANSPORT: Stop, Play, Shift, Back",
+		"GRID: Row 1 Col 1, Row 1 Col 2, Row 1 Col 3, Row 1 Col 4, Row 1 Col 5, Row 1 Col 6, Row 1 Col 7, Row 1 Col 8, Row 1 Col 9, Row 1 Col 10, Row 1 Col 11, Row 1 Col 12, Row 1 Col 13, Row 1 Col 14, Row 1 Col 15, Row 1 Col 16, Row 2 Col 1, Row 2 Col 2, Row 2 Col 3, Row 2 Col 4, Row 2 Col 5, Row 2 Col 6, Row 2 Col 7, Row 2 Col 8, Row 2 Col 9, Row 2 Col 10, Row 2 Col 11, Row 2 Col 12, Row 2 Col 13, Row 2 Col 14, Row 2 Col 15, Row 2 Col 16, Row 3 Col 1, Row 3 Col 2, Row 3 Col 3, Row 3 Col 4, Row 3 Col 5, Row 3 Col 6, Row 3 Col 7, Row 3 Col 8, Row 3 Col 9, Row 3 Col 10, Row 3 Col 11, Row 3 Col 12, Row 3 Col 13, Row 3 Col 14, Row 3 Col 15, Row 3 Col 16, Row 4 Col 1, Row 4 Col 2, Row 4 Col 3, Row 4 Col 4, Row 4 Col 5, Row 4 Col 6, Row 4 Col 7, Row 4 Col 8, Row 4 Col 9, Row 4 Col 10, Row 4 Col 11, Row 4 Col 12, Row 4 Col 13, Row 4 Col 14, Row 4 Col 15, Row 4 Col 16, Row 5 Col 1, Row 5 Col 2, Row 5 Col 3, Row 5 Col 4, Row 5 Col 5, Row 5 Col 6, Row 5 Col 7, Row 5 Col 8, Row 5 Col 9, Row 5 Col 10, Row 5 Col 11, Row 5 Col 12, Row 5 Col 13, Row 5 Col 14, Row 5 Col 15, Row 5 Col 16, Row 6 Col 1, Row 6 Col 2, Row 6 Col 3, Row 6 Col 4, Row 6 Col 5, Row 6 Col 6, Row 6 Col 7, Row 6 Col 8, Row 6 Col 9, Row 6 Col 10, Row 6 Col 11, Row 6 Col 12, Row 6 Col 13, Row 6 Col 14, Row 6 Col 15, Row 6 Col 16, Row 7 Col 1, Row 7 Col 2, Row 7 Col 3, Row 7 Col 4, Row 7 Col 5, Row 7 Col 6, Row 7 Col 7, Row 7 Col 8, Row 7 Col 9, Row 7 Col 10, Row 7 Col 11, Row 7 Col 12, Row 7 Col 13, Row 7 Col 14, Row 7 Col 15, Row 7 Col 16, Row 8 Col 1, Row 8 Col 2, Row 8 Col 3, Row 8 Col 4, Row 8 Col 5, Row 8 Col 6, Row 8 Col 7, Row 8 Col 8, Row 8 Col 9, Row 8 Col 10, Row 8 Col 11, Row 8 Col 12, Row 8 Col 13, Row 8 Col 14, Row 8 Col 15, Row 8 Col 16"
+	],
+	"notice": "Select USB device mode for a computer or the documented USB host mode for an external controller. Use type-A TRS MIDI adapters. PIPE is an OXI expansion connection, not a display output. Grid notes and CCs depend on sequencer mode and scale; no fixed pad note map is supplied. Audio comes from connected instruments. Exact browser port aliases are unverified; select this profile manually. This partial profile documents hardware and setup. Controls remain unbound because messages depend on the selected setup, channel, track or mode. Consult the linked manufacturer references for MIDI assignments and complete hardware details.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "OXI Instruments ONE MKII schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 700,
+		"elements": [
+			{
+				"id": "display-oled",
+				"label": "DISPLAY: OLED",
+				"kind": "screen",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 13.571428571428571,
+					"width": 19.833333333333332,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "encoders-encoder-1",
+				"label": "ENCODERS: Encoder 1",
+				"kind": "knob",
+				"position": {
+					"x": 25.5,
+					"y": 13.571428571428571,
+					"width": 7.041666666666667,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "encoders-encoder-2",
+				"label": "ENCODERS: Encoder 2",
+				"kind": "knob",
+				"position": {
+					"x": 32.54166666666667,
+					"y": 13.571428571428571,
+					"width": 7.041666666666667,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "encoders-encoder-3",
+				"label": "ENCODERS: Encoder 3",
+				"kind": "knob",
+				"position": {
+					"x": 39.58333333333333,
+					"y": 13.571428571428571,
+					"width": 7.041666666666667,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "encoders-encoder-4",
+				"label": "ENCODERS: Encoder 4",
+				"kind": "knob",
+				"position": {
+					"x": 46.625,
+					"y": 13.571428571428571,
+					"width": 7.041666666666667,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "transport-stop",
+				"label": "TRANSPORT: Stop",
+				"kind": "button",
+				"position": {
+					"x": 56.75,
+					"y": 13.571428571428571,
+					"width": 10.0625,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "transport-play",
+				"label": "TRANSPORT: Play",
+				"kind": "button",
+				"position": {
+					"x": 66.8125,
+					"y": 13.571428571428571,
+					"width": 10.0625,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "transport-shift",
+				"label": "TRANSPORT: Shift",
+				"kind": "button",
+				"position": {
+					"x": 76.875,
+					"y": 13.571428571428571,
+					"width": 10.0625,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "transport-back",
+				"label": "TRANSPORT: Back",
+				"kind": "button",
+				"position": {
+					"x": 86.9375,
+					"y": 13.571428571428571,
+					"width": 10.0625,
+					"height": 17.857142857142858
+				}
+			},
+			{
+				"id": "grid-row-1-col-1",
+				"label": "GRID: Row 1 Col 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-2",
+				"label": "GRID: Row 1 Col 2",
+				"kind": "pad",
+				"position": {
+					"x": 8.484375,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-3",
+				"label": "GRID: Row 1 Col 3",
+				"kind": "pad",
+				"position": {
+					"x": 14.385416666666668,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-4",
+				"label": "GRID: Row 1 Col 4",
+				"kind": "pad",
+				"position": {
+					"x": 20.286458333333332,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-5",
+				"label": "GRID: Row 1 Col 5",
+				"kind": "pad",
+				"position": {
+					"x": 26.187500000000004,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-6",
+				"label": "GRID: Row 1 Col 6",
+				"kind": "pad",
+				"position": {
+					"x": 32.088541666666664,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-7",
+				"label": "GRID: Row 1 Col 7",
+				"kind": "pad",
+				"position": {
+					"x": 37.98958333333333,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-8",
+				"label": "GRID: Row 1 Col 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.890625,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-9",
+				"label": "GRID: Row 1 Col 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.791666666666664,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-10",
+				"label": "GRID: Row 1 Col 10",
+				"kind": "pad",
+				"position": {
+					"x": 55.69270833333333,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-11",
+				"label": "GRID: Row 1 Col 11",
+				"kind": "pad",
+				"position": {
+					"x": 61.59375,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-12",
+				"label": "GRID: Row 1 Col 12",
+				"kind": "pad",
+				"position": {
+					"x": 67.49479166666667,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-13",
+				"label": "GRID: Row 1 Col 13",
+				"kind": "pad",
+				"position": {
+					"x": 73.39583333333334,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-14",
+				"label": "GRID: Row 1 Col 14",
+				"kind": "pad",
+				"position": {
+					"x": 79.296875,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-15",
+				"label": "GRID: Row 1 Col 15",
+				"kind": "pad",
+				"position": {
+					"x": 85.19791666666666,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-1-col-16",
+				"label": "GRID: Row 1 Col 16",
+				"kind": "pad",
+				"position": {
+					"x": 91.09895833333333,
+					"y": 40.0,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-1",
+				"label": "GRID: Row 2 Col 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-2",
+				"label": "GRID: Row 2 Col 2",
+				"kind": "pad",
+				"position": {
+					"x": 8.484375,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-3",
+				"label": "GRID: Row 2 Col 3",
+				"kind": "pad",
+				"position": {
+					"x": 14.385416666666668,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-4",
+				"label": "GRID: Row 2 Col 4",
+				"kind": "pad",
+				"position": {
+					"x": 20.286458333333332,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-5",
+				"label": "GRID: Row 2 Col 5",
+				"kind": "pad",
+				"position": {
+					"x": 26.187500000000004,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-6",
+				"label": "GRID: Row 2 Col 6",
+				"kind": "pad",
+				"position": {
+					"x": 32.088541666666664,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-7",
+				"label": "GRID: Row 2 Col 7",
+				"kind": "pad",
+				"position": {
+					"x": 37.98958333333333,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-8",
+				"label": "GRID: Row 2 Col 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.890625,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-9",
+				"label": "GRID: Row 2 Col 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.791666666666664,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-10",
+				"label": "GRID: Row 2 Col 10",
+				"kind": "pad",
+				"position": {
+					"x": 55.69270833333333,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-11",
+				"label": "GRID: Row 2 Col 11",
+				"kind": "pad",
+				"position": {
+					"x": 61.59375,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-12",
+				"label": "GRID: Row 2 Col 12",
+				"kind": "pad",
+				"position": {
+					"x": 67.49479166666667,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-13",
+				"label": "GRID: Row 2 Col 13",
+				"kind": "pad",
+				"position": {
+					"x": 73.39583333333334,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-14",
+				"label": "GRID: Row 2 Col 14",
+				"kind": "pad",
+				"position": {
+					"x": 79.296875,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-15",
+				"label": "GRID: Row 2 Col 15",
+				"kind": "pad",
+				"position": {
+					"x": 85.19791666666666,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-2-col-16",
+				"label": "GRID: Row 2 Col 16",
+				"kind": "pad",
+				"position": {
+					"x": 91.09895833333333,
+					"y": 46.875,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-1",
+				"label": "GRID: Row 3 Col 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-2",
+				"label": "GRID: Row 3 Col 2",
+				"kind": "pad",
+				"position": {
+					"x": 8.484375,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-3",
+				"label": "GRID: Row 3 Col 3",
+				"kind": "pad",
+				"position": {
+					"x": 14.385416666666668,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-4",
+				"label": "GRID: Row 3 Col 4",
+				"kind": "pad",
+				"position": {
+					"x": 20.286458333333332,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-5",
+				"label": "GRID: Row 3 Col 5",
+				"kind": "pad",
+				"position": {
+					"x": 26.187500000000004,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-6",
+				"label": "GRID: Row 3 Col 6",
+				"kind": "pad",
+				"position": {
+					"x": 32.088541666666664,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-7",
+				"label": "GRID: Row 3 Col 7",
+				"kind": "pad",
+				"position": {
+					"x": 37.98958333333333,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-8",
+				"label": "GRID: Row 3 Col 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.890625,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-9",
+				"label": "GRID: Row 3 Col 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.791666666666664,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-10",
+				"label": "GRID: Row 3 Col 10",
+				"kind": "pad",
+				"position": {
+					"x": 55.69270833333333,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-11",
+				"label": "GRID: Row 3 Col 11",
+				"kind": "pad",
+				"position": {
+					"x": 61.59375,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-12",
+				"label": "GRID: Row 3 Col 12",
+				"kind": "pad",
+				"position": {
+					"x": 67.49479166666667,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-13",
+				"label": "GRID: Row 3 Col 13",
+				"kind": "pad",
+				"position": {
+					"x": 73.39583333333334,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-14",
+				"label": "GRID: Row 3 Col 14",
+				"kind": "pad",
+				"position": {
+					"x": 79.296875,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-15",
+				"label": "GRID: Row 3 Col 15",
+				"kind": "pad",
+				"position": {
+					"x": 85.19791666666666,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-3-col-16",
+				"label": "GRID: Row 3 Col 16",
+				"kind": "pad",
+				"position": {
+					"x": 91.09895833333333,
+					"y": 53.75,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-1",
+				"label": "GRID: Row 4 Col 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-2",
+				"label": "GRID: Row 4 Col 2",
+				"kind": "pad",
+				"position": {
+					"x": 8.484375,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-3",
+				"label": "GRID: Row 4 Col 3",
+				"kind": "pad",
+				"position": {
+					"x": 14.385416666666668,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-4",
+				"label": "GRID: Row 4 Col 4",
+				"kind": "pad",
+				"position": {
+					"x": 20.286458333333332,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-5",
+				"label": "GRID: Row 4 Col 5",
+				"kind": "pad",
+				"position": {
+					"x": 26.187500000000004,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-6",
+				"label": "GRID: Row 4 Col 6",
+				"kind": "pad",
+				"position": {
+					"x": 32.088541666666664,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-7",
+				"label": "GRID: Row 4 Col 7",
+				"kind": "pad",
+				"position": {
+					"x": 37.98958333333333,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-8",
+				"label": "GRID: Row 4 Col 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.890625,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-9",
+				"label": "GRID: Row 4 Col 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.791666666666664,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-10",
+				"label": "GRID: Row 4 Col 10",
+				"kind": "pad",
+				"position": {
+					"x": 55.69270833333333,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-11",
+				"label": "GRID: Row 4 Col 11",
+				"kind": "pad",
+				"position": {
+					"x": 61.59375,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-12",
+				"label": "GRID: Row 4 Col 12",
+				"kind": "pad",
+				"position": {
+					"x": 67.49479166666667,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-13",
+				"label": "GRID: Row 4 Col 13",
+				"kind": "pad",
+				"position": {
+					"x": 73.39583333333334,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-14",
+				"label": "GRID: Row 4 Col 14",
+				"kind": "pad",
+				"position": {
+					"x": 79.296875,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-15",
+				"label": "GRID: Row 4 Col 15",
+				"kind": "pad",
+				"position": {
+					"x": 85.19791666666666,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-4-col-16",
+				"label": "GRID: Row 4 Col 16",
+				"kind": "pad",
+				"position": {
+					"x": 91.09895833333333,
+					"y": 60.62499999999999,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-1",
+				"label": "GRID: Row 5 Col 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-2",
+				"label": "GRID: Row 5 Col 2",
+				"kind": "pad",
+				"position": {
+					"x": 8.484375,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-3",
+				"label": "GRID: Row 5 Col 3",
+				"kind": "pad",
+				"position": {
+					"x": 14.385416666666668,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-4",
+				"label": "GRID: Row 5 Col 4",
+				"kind": "pad",
+				"position": {
+					"x": 20.286458333333332,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-5",
+				"label": "GRID: Row 5 Col 5",
+				"kind": "pad",
+				"position": {
+					"x": 26.187500000000004,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-6",
+				"label": "GRID: Row 5 Col 6",
+				"kind": "pad",
+				"position": {
+					"x": 32.088541666666664,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-7",
+				"label": "GRID: Row 5 Col 7",
+				"kind": "pad",
+				"position": {
+					"x": 37.98958333333333,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-8",
+				"label": "GRID: Row 5 Col 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.890625,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-9",
+				"label": "GRID: Row 5 Col 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.791666666666664,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-10",
+				"label": "GRID: Row 5 Col 10",
+				"kind": "pad",
+				"position": {
+					"x": 55.69270833333333,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-11",
+				"label": "GRID: Row 5 Col 11",
+				"kind": "pad",
+				"position": {
+					"x": 61.59375,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-12",
+				"label": "GRID: Row 5 Col 12",
+				"kind": "pad",
+				"position": {
+					"x": 67.49479166666667,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-13",
+				"label": "GRID: Row 5 Col 13",
+				"kind": "pad",
+				"position": {
+					"x": 73.39583333333334,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-14",
+				"label": "GRID: Row 5 Col 14",
+				"kind": "pad",
+				"position": {
+					"x": 79.296875,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-15",
+				"label": "GRID: Row 5 Col 15",
+				"kind": "pad",
+				"position": {
+					"x": 85.19791666666666,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-5-col-16",
+				"label": "GRID: Row 5 Col 16",
+				"kind": "pad",
+				"position": {
+					"x": 91.09895833333333,
+					"y": 67.5,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-1",
+				"label": "GRID: Row 6 Col 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-2",
+				"label": "GRID: Row 6 Col 2",
+				"kind": "pad",
+				"position": {
+					"x": 8.484375,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-3",
+				"label": "GRID: Row 6 Col 3",
+				"kind": "pad",
+				"position": {
+					"x": 14.385416666666668,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-4",
+				"label": "GRID: Row 6 Col 4",
+				"kind": "pad",
+				"position": {
+					"x": 20.286458333333332,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-5",
+				"label": "GRID: Row 6 Col 5",
+				"kind": "pad",
+				"position": {
+					"x": 26.187500000000004,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-6",
+				"label": "GRID: Row 6 Col 6",
+				"kind": "pad",
+				"position": {
+					"x": 32.088541666666664,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-7",
+				"label": "GRID: Row 6 Col 7",
+				"kind": "pad",
+				"position": {
+					"x": 37.98958333333333,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-8",
+				"label": "GRID: Row 6 Col 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.890625,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-9",
+				"label": "GRID: Row 6 Col 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.791666666666664,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-10",
+				"label": "GRID: Row 6 Col 10",
+				"kind": "pad",
+				"position": {
+					"x": 55.69270833333333,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-11",
+				"label": "GRID: Row 6 Col 11",
+				"kind": "pad",
+				"position": {
+					"x": 61.59375,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-12",
+				"label": "GRID: Row 6 Col 12",
+				"kind": "pad",
+				"position": {
+					"x": 67.49479166666667,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-13",
+				"label": "GRID: Row 6 Col 13",
+				"kind": "pad",
+				"position": {
+					"x": 73.39583333333334,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-14",
+				"label": "GRID: Row 6 Col 14",
+				"kind": "pad",
+				"position": {
+					"x": 79.296875,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-15",
+				"label": "GRID: Row 6 Col 15",
+				"kind": "pad",
+				"position": {
+					"x": 85.19791666666666,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-6-col-16",
+				"label": "GRID: Row 6 Col 16",
+				"kind": "pad",
+				"position": {
+					"x": 91.09895833333333,
+					"y": 74.375,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-1",
+				"label": "GRID: Row 7 Col 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-2",
+				"label": "GRID: Row 7 Col 2",
+				"kind": "pad",
+				"position": {
+					"x": 8.484375,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-3",
+				"label": "GRID: Row 7 Col 3",
+				"kind": "pad",
+				"position": {
+					"x": 14.385416666666668,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-4",
+				"label": "GRID: Row 7 Col 4",
+				"kind": "pad",
+				"position": {
+					"x": 20.286458333333332,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-5",
+				"label": "GRID: Row 7 Col 5",
+				"kind": "pad",
+				"position": {
+					"x": 26.187500000000004,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-6",
+				"label": "GRID: Row 7 Col 6",
+				"kind": "pad",
+				"position": {
+					"x": 32.088541666666664,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-7",
+				"label": "GRID: Row 7 Col 7",
+				"kind": "pad",
+				"position": {
+					"x": 37.98958333333333,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-8",
+				"label": "GRID: Row 7 Col 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.890625,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-9",
+				"label": "GRID: Row 7 Col 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.791666666666664,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-10",
+				"label": "GRID: Row 7 Col 10",
+				"kind": "pad",
+				"position": {
+					"x": 55.69270833333333,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-11",
+				"label": "GRID: Row 7 Col 11",
+				"kind": "pad",
+				"position": {
+					"x": 61.59375,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-12",
+				"label": "GRID: Row 7 Col 12",
+				"kind": "pad",
+				"position": {
+					"x": 67.49479166666667,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-13",
+				"label": "GRID: Row 7 Col 13",
+				"kind": "pad",
+				"position": {
+					"x": 73.39583333333334,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-14",
+				"label": "GRID: Row 7 Col 14",
+				"kind": "pad",
+				"position": {
+					"x": 79.296875,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-15",
+				"label": "GRID: Row 7 Col 15",
+				"kind": "pad",
+				"position": {
+					"x": 85.19791666666666,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-7-col-16",
+				"label": "GRID: Row 7 Col 16",
+				"kind": "pad",
+				"position": {
+					"x": 91.09895833333333,
+					"y": 81.25,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-1",
+				"label": "GRID: Row 8 Col 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-2",
+				"label": "GRID: Row 8 Col 2",
+				"kind": "pad",
+				"position": {
+					"x": 8.484375,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-3",
+				"label": "GRID: Row 8 Col 3",
+				"kind": "pad",
+				"position": {
+					"x": 14.385416666666668,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-4",
+				"label": "GRID: Row 8 Col 4",
+				"kind": "pad",
+				"position": {
+					"x": 20.286458333333332,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-5",
+				"label": "GRID: Row 8 Col 5",
+				"kind": "pad",
+				"position": {
+					"x": 26.187500000000004,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-6",
+				"label": "GRID: Row 8 Col 6",
+				"kind": "pad",
+				"position": {
+					"x": 32.088541666666664,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-7",
+				"label": "GRID: Row 8 Col 7",
+				"kind": "pad",
+				"position": {
+					"x": 37.98958333333333,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-8",
+				"label": "GRID: Row 8 Col 8",
+				"kind": "pad",
+				"position": {
+					"x": 43.890625,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-9",
+				"label": "GRID: Row 8 Col 9",
+				"kind": "pad",
+				"position": {
+					"x": 49.791666666666664,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-10",
+				"label": "GRID: Row 8 Col 10",
+				"kind": "pad",
+				"position": {
+					"x": 55.69270833333333,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-11",
+				"label": "GRID: Row 8 Col 11",
+				"kind": "pad",
+				"position": {
+					"x": 61.59375,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-12",
+				"label": "GRID: Row 8 Col 12",
+				"kind": "pad",
+				"position": {
+					"x": 67.49479166666667,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-13",
+				"label": "GRID: Row 8 Col 13",
+				"kind": "pad",
+				"position": {
+					"x": 73.39583333333334,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-14",
+				"label": "GRID: Row 8 Col 14",
+				"kind": "pad",
+				"position": {
+					"x": 79.296875,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-15",
+				"label": "GRID: Row 8 Col 15",
+				"kind": "pad",
+				"position": {
+					"x": 85.19791666666666,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			},
+			{
+				"id": "grid-row-8-col-16",
+				"label": "GRID: Row 8 Col 16",
+				"kind": "pad",
+				"position": {
+					"x": 91.09895833333333,
+					"y": 88.125,
+					"width": 5.901041666666667,
+					"height": 6.875000000000001
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "TRS type A",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "TRS type A",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "CV OUT 1-8",
+			"connector": "Eight analog CV jacks",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "GATE OUT 1-8",
+			"connector": "Eight gate jacks",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "CLK IN",
+			"connector": "Clock / reset input",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "CLK OUT",
+			"connector": "Clock / reset output",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "CV IN",
+			"connector": "Analog CV input",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "PIPE",
+			"connector": "Mini HDMI; proprietary OXI Pipe interface",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "Bluetooth MIDI",
+			"connector": "BLE MIDI",
+			"direction": "bidirectional",
+			"location": "Wireless"
+		}
+	],
+	"diagramSources": [
+		"https://docs.oxiinstruments.com/oxi-one-mkii-manual/overview/",
+		"https://docs.oxiinstruments.com/oxi-one-mkii-manual/connectivity/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

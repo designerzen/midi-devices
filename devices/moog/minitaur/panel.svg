@@ -1,135 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="group" aria-labelledby="moog-minitaur-panel--title" aria-describedby="moog-minitaur-panel--description" data-device="moog-minitaur" data-diagram-style="wireframe" style="background: #fff; color: #000;">
-<title id="moog-minitaur-panel--title">Moog Minitaur overhead hardware diagram</title><desc id="moog-minitaur-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
-<g id="moog-minitaur-panel--chassis" aria-hidden="true">
-<rect x="9" y="9" width="982" height="582" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Moog Minitaur</text>
-<text x="975" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="790" height="155" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="25" y="235" width="790" height="150" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="25" y="400" width="790" height="150" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="830" y="65" width="145" height="485" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="title description">
+<title id="title">Moog Minitaur top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect x="0" y="0" width="1000" height="600" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="982" height="582" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Moog Minitaur</text>
+<text x="975" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="790" height="155" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="oscillators-filter-vco-2-freq" data-kind="knob" aria-label="VCO 2 freq"><title>VCO 2 freq</title>
+<svg data-symbol="knob" x="104.250" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--oscillators-filter-vco-2-freq" data-part="oscillators-filter-vco-2-freq" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS / FILTER: VCO 2 freq"><title>OSCILLATORS / FILTER: VCO 2 freq</title><g aria-hidden="true">
-<circle cx="128.25" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M128.25 124.285L128.25 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="oscillators-filter-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
+<svg data-symbol="knob" x="298.750" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--oscillators-filter-vco-2-freq" data-surface-control="oscillators-filter-vco-2-freq" aria-hidden="true"><rect x="31" y="95" width="194.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="oscillators-filter-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
+<svg data-symbol="knob" x="493.250" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--oscillators-filter-cutoff" data-part="oscillators-filter-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS / FILTER: Cutoff"><title>OSCILLATORS / FILTER: Cutoff</title><g aria-hidden="true">
-<circle cx="322.75" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M322.75 124.285L322.75 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="oscillators-filter-eg-amount" data-kind="knob" aria-label="EG amount"><title>EG amount</title>
+<svg data-symbol="knob" x="687.750" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--oscillators-filter-cutoff" data-surface-control="oscillators-filter-cutoff" aria-hidden="true"><rect x="225.5" y="95" width="194.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<rect x="25" y="235" width="790" height="150" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="mix-envelopes-vco-1-level" data-kind="knob" aria-label="VCO 1 level"><title>VCO 1 level</title>
+<svg data-symbol="knob" x="84.800" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--oscillators-filter-resonance" data-part="oscillators-filter-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS / FILTER: Resonance"><title>OSCILLATORS / FILTER: Resonance</title><g aria-hidden="true">
-<circle cx="517.25" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M517.25 124.285L517.25 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="mix-envelopes-vco-2-level" data-kind="knob" aria-label="VCO 2 level"><title>VCO 2 level</title>
+<svg data-symbol="knob" x="240.400" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--oscillators-filter-resonance" data-surface-control="oscillators-filter-resonance" aria-hidden="true"><rect x="420" y="95" width="194.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="mix-envelopes-vcf-attack" data-kind="knob" aria-label="VCF attack"><title>VCF attack</title>
+<svg data-symbol="knob" x="396.000" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--oscillators-filter-eg-amount" data-part="oscillators-filter-eg-amount" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS / FILTER: EG amount"><title>OSCILLATORS / FILTER: EG amount</title><g aria-hidden="true">
-<circle cx="711.75" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M711.75 124.285L711.75 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="mix-envelopes-vcf-decay-release" data-kind="knob" aria-label="VCF decay / release"><title>VCF decay / release</title>
+<svg data-symbol="knob" x="551.600" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--oscillators-filter-eg-amount" data-surface-control="oscillators-filter-eg-amount" aria-hidden="true"><rect x="614.5" y="95" width="194.5" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="mix-envelopes-vcf-sustain" data-kind="knob" aria-label="VCF sustain"><title>VCF sustain</title>
+<svg data-symbol="knob" x="707.200" y="289.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--mix-envelopes-vco-1-level" data-part="mix-envelopes-vco-1-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / ENVELOPES: VCO 1 level"><title>MIX / ENVELOPES: VCO 1 level</title><g aria-hidden="true">
-<circle cx="108.8" cy="313.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M108.8 291.785L108.8 305.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<rect x="25" y="400" width="790" height="150" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="modulation-envelopes-lfo-rate" data-kind="knob" aria-label="LFO rate"><title>LFO rate</title>
+<svg data-symbol="knob" x="71.833" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--mix-envelopes-vco-1-level" data-surface-control="mix-envelopes-vco-1-level" aria-hidden="true"><rect x="31" y="265" width="155.6" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modulation-envelopes-vco-lfo-amt" data-kind="knob" aria-label="VCO LFO amt"><title>VCO LFO amt</title>
+<svg data-symbol="knob" x="201.500" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--mix-envelopes-vco-2-level" data-part="mix-envelopes-vco-2-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / ENVELOPES: VCO 2 level"><title>MIX / ENVELOPES: VCO 2 level</title><g aria-hidden="true">
-<circle cx="264.4" cy="313.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M264.4 291.785L264.4 305.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modulation-envelopes-vcf-lfo-amt" data-kind="knob" aria-label="VCF LFO amt"><title>VCF LFO amt</title>
+<svg data-symbol="knob" x="331.167" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--mix-envelopes-vco-2-level" data-surface-control="mix-envelopes-vco-2-level" aria-hidden="true"><rect x="186.6" y="265" width="155.6" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modulation-envelopes-vca-attack" data-kind="knob" aria-label="VCA attack"><title>VCA attack</title>
+<svg data-symbol="knob" x="460.833" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--mix-envelopes-vcf-attack" data-part="mix-envelopes-vcf-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / ENVELOPES: VCF attack"><title>MIX / ENVELOPES: VCF attack</title><g aria-hidden="true">
-<circle cx="420" cy="313.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M420 291.785L420 305.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modulation-envelopes-vca-decay-release" data-kind="knob" aria-label="VCA decay / release"><title>VCA decay / release</title>
+<svg data-symbol="knob" x="590.500" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--mix-envelopes-vcf-attack" data-surface-control="mix-envelopes-vcf-attack" aria-hidden="true"><rect x="342.2" y="265" width="155.6" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modulation-envelopes-vca-sustain" data-kind="knob" aria-label="VCA sustain"><title>VCA sustain</title>
+<svg data-symbol="knob" x="720.167" y="454.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--mix-envelopes-vcf-decay-release" data-part="mix-envelopes-vcf-decay-release" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / ENVELOPES: VCF decay / release"><title>MIX / ENVELOPES: VCF decay / release</title><g aria-hidden="true">
-<circle cx="575.6" cy="313.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M575.6 291.785L575.6 305.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<rect x="830" y="65" width="145" height="485" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="output-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
+<svg data-symbol="knob" x="878.715" y="100.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--mix-envelopes-vcf-decay-release" data-surface-control="mix-envelopes-vcf-decay-release" aria-hidden="true"><rect x="497.8" y="265" width="155.6" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="output-vco-1-wave" data-kind="button" aria-label="VCO 1 wave"><title>VCO 1 wave</title>
+<svg data-symbol="button" x="878.715" y="175.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--mix-envelopes-vcf-sustain" data-part="mix-envelopes-vcf-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / ENVELOPES: VCF sustain"><title>MIX / ENVELOPES: VCF sustain</title><g aria-hidden="true">
-<circle cx="731.2" cy="313.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M731.2 291.785L731.2 305.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="output-vco-2-wave" data-kind="button" aria-label="VCO 2 wave"><title>VCO 2 wave</title>
+<svg data-symbol="button" x="878.715" y="250.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--mix-envelopes-vcf-sustain" data-surface-control="mix-envelopes-vcf-sustain" aria-hidden="true"><rect x="653.4" y="265" width="155.6" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="output-release" data-kind="button" aria-label="Release"><title>Release</title>
+<svg data-symbol="button" x="878.715" y="325.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--modulation-envelopes-lfo-rate" data-part="modulation-envelopes-lfo-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODULATION / ENVELOPES: LFO rate"><title>MODULATION / ENVELOPES: LFO rate</title><g aria-hidden="true">
-<circle cx="95.833" cy="478.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M95.833 456.785L95.833 470.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="output-glide-rate" data-kind="knob" aria-label="Glide rate"><title>Glide rate</title>
+<svg data-symbol="knob" x="878.715" y="400.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="moog-minitaur-panel--surface--modulation-envelopes-lfo-rate" data-surface-control="modulation-envelopes-lfo-rate" aria-hidden="true"><rect x="31" y="430" width="129.6667" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--modulation-envelopes-vco-lfo-amt" data-part="modulation-envelopes-vco-lfo-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODULATION / ENVELOPES: VCO LFO amt"><title>MODULATION / ENVELOPES: VCO LFO amt</title><g aria-hidden="true">
-<circle cx="225.5" cy="478.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M225.5 456.785L225.5 470.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="moog-minitaur-panel--surface--modulation-envelopes-vco-lfo-amt" data-surface-control="modulation-envelopes-vco-lfo-amt" aria-hidden="true"><rect x="160.6667" y="430" width="129.6667" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--modulation-envelopes-vcf-lfo-amt" data-part="modulation-envelopes-vcf-lfo-amt" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODULATION / ENVELOPES: VCF LFO amt"><title>MODULATION / ENVELOPES: VCF LFO amt</title><g aria-hidden="true">
-<circle cx="355.167" cy="478.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M355.167 456.785L355.167 470.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="moog-minitaur-panel--surface--modulation-envelopes-vcf-lfo-amt" data-surface-control="modulation-envelopes-vcf-lfo-amt" aria-hidden="true"><rect x="290.3333" y="430" width="129.6667" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--modulation-envelopes-vca-attack" data-part="modulation-envelopes-vca-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODULATION / ENVELOPES: VCA attack"><title>MODULATION / ENVELOPES: VCA attack</title><g aria-hidden="true">
-<circle cx="484.833" cy="478.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M484.833 456.785L484.833 470.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="moog-minitaur-panel--surface--modulation-envelopes-vca-attack" data-surface-control="modulation-envelopes-vca-attack" aria-hidden="true"><rect x="420" y="430" width="129.6667" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--modulation-envelopes-vca-decay-release" data-part="modulation-envelopes-vca-decay-release" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODULATION / ENVELOPES: VCA decay / release"><title>MODULATION / ENVELOPES: VCA decay / release</title><g aria-hidden="true">
-<circle cx="614.5" cy="478.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M614.5 456.785L614.5 470.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="moog-minitaur-panel--surface--modulation-envelopes-vca-decay-release" data-surface-control="modulation-envelopes-vca-decay-release" aria-hidden="true"><rect x="549.6667" y="430" width="129.6667" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--modulation-envelopes-vca-sustain" data-part="modulation-envelopes-vca-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODULATION / ENVELOPES: VCA sustain"><title>MODULATION / ENVELOPES: VCA sustain</title><g aria-hidden="true">
-<circle cx="744.167" cy="478.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M744.167 456.785L744.167 470.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="moog-minitaur-panel--surface--modulation-envelopes-vca-sustain" data-surface-control="modulation-envelopes-vca-sustain" aria-hidden="true"><rect x="679.3333" y="430" width="129.6667" height="115" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--output-volume" data-part="output-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OUTPUT: Volume"><title>OUTPUT: Volume</title><g aria-hidden="true">
-<circle cx="902.5" cy="123.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M902.5 108.22L902.5 117.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="moog-minitaur-panel--surface--output-volume" data-surface-control="output-volume" aria-hidden="true"><rect x="836" y="95" width="133" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--output-vco-1-wave" data-part="output-vco-1-wave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OUTPUT: VCO 1 wave"><title>OUTPUT: VCO 1 wave</title><g aria-hidden="true">
-<rect x="887.5" y="183.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="moog-minitaur-panel--surface--output-vco-1-wave" data-surface-control="output-vco-1-wave" aria-hidden="true"><rect x="836" y="170" width="133" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--output-vco-2-wave" data-part="output-vco-2-wave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OUTPUT: VCO 2 wave"><title>OUTPUT: VCO 2 wave</title><g aria-hidden="true">
-<rect x="887.5" y="258.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="moog-minitaur-panel--surface--output-vco-2-wave" data-surface-control="output-vco-2-wave" aria-hidden="true"><rect x="836" y="245" width="133" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--output-release" data-part="output-release" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OUTPUT: Release"><title>OUTPUT: Release</title><g aria-hidden="true">
-<rect x="887.5" y="333.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="moog-minitaur-panel--surface--output-release" data-surface-control="output-release" aria-hidden="true"><rect x="836" y="320" width="133" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--output-glide-rate" data-part="output-glide-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OUTPUT: Glide rate"><title>OUTPUT: Glide rate</title><g aria-hidden="true">
-<circle cx="902.5" cy="423.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M902.5 408.22L902.5 417.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="moog-minitaur-panel--surface--output-glide-rate" data-surface-control="output-glide-rate" aria-hidden="true"><rect x="836" y="395" width="133" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="moog-minitaur-panel--output-glide" data-part="output-glide" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OUTPUT: Glide"><title>OUTPUT: Glide</title><g aria-hidden="true">
-<rect x="887.5" y="483.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="moog-minitaur-panel--surface--output-glide" data-surface-control="output-glide" aria-hidden="true"><rect x="836" y="470" width="133" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="output-glide" data-kind="button" aria-label="Glide"><title>Glide</title>
+<svg data-symbol="button" x="878.715" y="475.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
 </svg>

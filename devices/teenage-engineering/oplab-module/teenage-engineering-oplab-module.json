@@ -1,0 +1,138 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-oplab-module",
+	"name": "Teenage Engineering OP-Z oplab module",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/op-z/modules/oplab",
+	"ids": [
+		"teenage-engineering-oplab-module"
+	],
+	"portNames": [],
+	"description": "OP-Z expansion module with TRS MIDI and CV/gate outputs.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "OP-Z oplab module user guide",
+			"url": "https://teenage.engineering/guides/op-z/modules/oplab"
+		}
+	],
+	"abilities": [
+		"OP-Z TRS MIDI expansion",
+		"MIDI input/output",
+		"Selectable trigger and PO sync modes"
+	],
+	"hardwareControls": [
+		"Input mode",
+		"Output mode",
+		"Lock"
+	],
+	"notice": "Requires an OP-Z; this module is not a standalone USB MIDI device. Set the input/output selectors to MIDI and use Type A TRS MIDI cables or the appropriate DIN adapter. MIDI, trigger and PO-sync are alternative modes of the shared sockets. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "OP-Z oplab module selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "module-controls-input-mode",
+				"label": "MODULE CONTROLS: Input mode",
+				"kind": "switch",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			},
+			{
+				"id": "module-controls-output-mode",
+				"label": "MODULE CONTROLS: Output mode",
+				"kind": "switch3",
+				"position": {
+					"x": 34.36666666666667,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			},
+			{
+				"id": "module-controls-lock",
+				"label": "MODULE CONTROLS: Lock",
+				"kind": "switch",
+				"position": {
+					"x": 65.63333333333333,
+					"y": 14.615384615384617,
+					"width": 31.26666666666667,
+					"height": 73.07692307692307
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI / trig input",
+			"connector": "3.5 mm TRS MIDI Type A / trig",
+			"direction": "input",
+			"location": "Module edge"
+		},
+		{
+			"label": "MIDI / trig / PO output",
+			"connector": "3.5 mm TRS MIDI Type A / sync",
+			"direction": "output",
+			"location": "Module edge"
+		},
+		{
+			"label": "OP-Z expansion connector",
+			"connector": "Internal module connector",
+			"direction": "bidirectional",
+			"location": "Inside OP-Z"
+		},
+		{
+			"label": "CV / CV2 output",
+			"connector": "3.5 mm CV",
+			"direction": "output",
+			"location": "Module edge"
+		},
+		{
+			"label": "Gate / CV3 output",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "Module edge"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/op-z/modules/oplab",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

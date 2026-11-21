@@ -1,0 +1,1856 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "novation-launchpad-x",
+	"name": "Novation Launchpad X",
+	"manufacturer": "Novation",
+	"manufacturerUrl": "https://novationmusic.com/",
+	"ids": [
+		"novation-launchpad-x"
+	],
+	"portNames": [
+		"LPX MIDI In",
+		"LPX MIDI Out"
+	],
+	"description": "USB grid controller with 64 velocity-sensitive RGB pads, Note mode and Programmer mode.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "USB MIDI interfaces",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/24001489325330-MIDI-on-Launchpad-X"
+		},
+		{
+			"title": "Programmer-mode MIDI layout",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/24001475492498-Controlling-the-Launchpad-X-surface"
+		}
+	],
+	"abilities": [
+		"Custom MIDI layouts",
+		"Session control",
+		"Programmer mode",
+		"Velocity-sensitive notes",
+		"Polyphonic aftertouch"
+	],
+	"hardwareControls": [
+		"64 pads",
+		"Eight top buttons",
+		"Eight scene launch buttons",
+		"USB-C"
+	],
+	"notice": "Use the LPX MIDI interface for musical and Programmer-mode data; the LPX DAW interface is for Session integration. This profile maps the 64 grid notes, top-row CC91-98 and scene CC89 down to CC19 in Programmer mode on channel 1. Hold Session and choose the bottom scene button to enter Programmer mode. These bindings do not apply to Note, Session or edited Custom layouts. LED colours, DAW integration and polyphonic pressure are not implemented by this control map; LED output requires routing MIDI to the hardware. Diagrams are original schematics with illustrative positions, not scaled hardware drawings.",
+	"controls": [
+		{
+			"id": "programmer-pad-81",
+			"label": "Programmer pad 81",
+			"message": {
+				"type": "note",
+				"number": 81,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-82",
+			"label": "Programmer pad 82",
+			"message": {
+				"type": "note",
+				"number": 82,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-83",
+			"label": "Programmer pad 83",
+			"message": {
+				"type": "note",
+				"number": 83,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-84",
+			"label": "Programmer pad 84",
+			"message": {
+				"type": "note",
+				"number": 84,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-85",
+			"label": "Programmer pad 85",
+			"message": {
+				"type": "note",
+				"number": 85,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-86",
+			"label": "Programmer pad 86",
+			"message": {
+				"type": "note",
+				"number": 86,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-87",
+			"label": "Programmer pad 87",
+			"message": {
+				"type": "note",
+				"number": 87,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-88",
+			"label": "Programmer pad 88",
+			"message": {
+				"type": "note",
+				"number": 88,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-71",
+			"label": "Programmer pad 71",
+			"message": {
+				"type": "note",
+				"number": 71,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-72",
+			"label": "Programmer pad 72",
+			"message": {
+				"type": "note",
+				"number": 72,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-73",
+			"label": "Programmer pad 73",
+			"message": {
+				"type": "note",
+				"number": 73,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-74",
+			"label": "Programmer pad 74",
+			"message": {
+				"type": "note",
+				"number": 74,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-75",
+			"label": "Programmer pad 75",
+			"message": {
+				"type": "note",
+				"number": 75,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-76",
+			"label": "Programmer pad 76",
+			"message": {
+				"type": "note",
+				"number": 76,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-77",
+			"label": "Programmer pad 77",
+			"message": {
+				"type": "note",
+				"number": 77,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-78",
+			"label": "Programmer pad 78",
+			"message": {
+				"type": "note",
+				"number": 78,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-61",
+			"label": "Programmer pad 61",
+			"message": {
+				"type": "note",
+				"number": 61,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-62",
+			"label": "Programmer pad 62",
+			"message": {
+				"type": "note",
+				"number": 62,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-63",
+			"label": "Programmer pad 63",
+			"message": {
+				"type": "note",
+				"number": 63,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-64",
+			"label": "Programmer pad 64",
+			"message": {
+				"type": "note",
+				"number": 64,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-65",
+			"label": "Programmer pad 65",
+			"message": {
+				"type": "note",
+				"number": 65,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-66",
+			"label": "Programmer pad 66",
+			"message": {
+				"type": "note",
+				"number": 66,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-67",
+			"label": "Programmer pad 67",
+			"message": {
+				"type": "note",
+				"number": 67,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-68",
+			"label": "Programmer pad 68",
+			"message": {
+				"type": "note",
+				"number": 68,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-51",
+			"label": "Programmer pad 51",
+			"message": {
+				"type": "note",
+				"number": 51,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-52",
+			"label": "Programmer pad 52",
+			"message": {
+				"type": "note",
+				"number": 52,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-53",
+			"label": "Programmer pad 53",
+			"message": {
+				"type": "note",
+				"number": 53,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-54",
+			"label": "Programmer pad 54",
+			"message": {
+				"type": "note",
+				"number": 54,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-55",
+			"label": "Programmer pad 55",
+			"message": {
+				"type": "note",
+				"number": 55,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-56",
+			"label": "Programmer pad 56",
+			"message": {
+				"type": "note",
+				"number": 56,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-57",
+			"label": "Programmer pad 57",
+			"message": {
+				"type": "note",
+				"number": 57,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-58",
+			"label": "Programmer pad 58",
+			"message": {
+				"type": "note",
+				"number": 58,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-41",
+			"label": "Programmer pad 41",
+			"message": {
+				"type": "note",
+				"number": 41,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-42",
+			"label": "Programmer pad 42",
+			"message": {
+				"type": "note",
+				"number": 42,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-43",
+			"label": "Programmer pad 43",
+			"message": {
+				"type": "note",
+				"number": 43,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-44",
+			"label": "Programmer pad 44",
+			"message": {
+				"type": "note",
+				"number": 44,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-45",
+			"label": "Programmer pad 45",
+			"message": {
+				"type": "note",
+				"number": 45,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-46",
+			"label": "Programmer pad 46",
+			"message": {
+				"type": "note",
+				"number": 46,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-47",
+			"label": "Programmer pad 47",
+			"message": {
+				"type": "note",
+				"number": 47,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-48",
+			"label": "Programmer pad 48",
+			"message": {
+				"type": "note",
+				"number": 48,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-31",
+			"label": "Programmer pad 31",
+			"message": {
+				"type": "note",
+				"number": 31,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-32",
+			"label": "Programmer pad 32",
+			"message": {
+				"type": "note",
+				"number": 32,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-33",
+			"label": "Programmer pad 33",
+			"message": {
+				"type": "note",
+				"number": 33,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-34",
+			"label": "Programmer pad 34",
+			"message": {
+				"type": "note",
+				"number": 34,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-35",
+			"label": "Programmer pad 35",
+			"message": {
+				"type": "note",
+				"number": 35,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-36",
+			"label": "Programmer pad 36",
+			"message": {
+				"type": "note",
+				"number": 36,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-37",
+			"label": "Programmer pad 37",
+			"message": {
+				"type": "note",
+				"number": 37,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-38",
+			"label": "Programmer pad 38",
+			"message": {
+				"type": "note",
+				"number": 38,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-21",
+			"label": "Programmer pad 21",
+			"message": {
+				"type": "note",
+				"number": 21,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-22",
+			"label": "Programmer pad 22",
+			"message": {
+				"type": "note",
+				"number": 22,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-23",
+			"label": "Programmer pad 23",
+			"message": {
+				"type": "note",
+				"number": 23,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-24",
+			"label": "Programmer pad 24",
+			"message": {
+				"type": "note",
+				"number": 24,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-25",
+			"label": "Programmer pad 25",
+			"message": {
+				"type": "note",
+				"number": 25,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-26",
+			"label": "Programmer pad 26",
+			"message": {
+				"type": "note",
+				"number": 26,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-27",
+			"label": "Programmer pad 27",
+			"message": {
+				"type": "note",
+				"number": 27,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-28",
+			"label": "Programmer pad 28",
+			"message": {
+				"type": "note",
+				"number": 28,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-11",
+			"label": "Programmer pad 11",
+			"message": {
+				"type": "note",
+				"number": 11,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-12",
+			"label": "Programmer pad 12",
+			"message": {
+				"type": "note",
+				"number": 12,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-13",
+			"label": "Programmer pad 13",
+			"message": {
+				"type": "note",
+				"number": 13,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-14",
+			"label": "Programmer pad 14",
+			"message": {
+				"type": "note",
+				"number": 14,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-15",
+			"label": "Programmer pad 15",
+			"message": {
+				"type": "note",
+				"number": 15,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-16",
+			"label": "Programmer pad 16",
+			"message": {
+				"type": "note",
+				"number": 16,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-17",
+			"label": "Programmer pad 17",
+			"message": {
+				"type": "note",
+				"number": 17,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-pad-18",
+			"label": "Programmer pad 18",
+			"message": {
+				"type": "note",
+				"number": 18,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-top-1",
+			"label": "Up (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 91,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-top-2",
+			"label": "Down (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 92,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-top-3",
+			"label": "Left (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 93,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-top-4",
+			"label": "Right (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 94,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-top-5",
+			"label": "Session (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 95,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-top-6",
+			"label": "Note (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 96,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-top-7",
+			"label": "Custom (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 97,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-top-8",
+			"label": "Capture MIDI (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 98,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-scene-1",
+			"label": "Scene 1 (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 89,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-scene-2",
+			"label": "Scene 2 (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 79,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-scene-3",
+			"label": "Scene 3 (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 69,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-scene-4",
+			"label": "Scene 4 (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 59,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-scene-5",
+			"label": "Scene 5 (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 49,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-scene-6",
+			"label": "Scene 6 (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 39,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-scene-7",
+			"label": "Scene 7 (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 1
+			},
+			"widget": "button"
+		},
+		{
+			"id": "programmer-scene-8",
+			"label": "Scene 8 (Programmer mode)",
+			"message": {
+				"type": "cc",
+				"number": 19,
+				"channel": 1
+			},
+			"widget": "button"
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Novation Launchpad X schematic panel"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Hardware setup and documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 1050,
+		"elements": [
+			{
+				"id": "top-buttons-up",
+				"label": "TOP BUTTONS: Up",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				},
+				"control": "programmer-top-1"
+			},
+			{
+				"id": "top-buttons-down",
+				"label": "TOP BUTTONS: Down",
+				"kind": "button",
+				"position": {
+					"x": 13.5125,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				},
+				"control": "programmer-top-2"
+			},
+			{
+				"id": "top-buttons-left",
+				"label": "TOP BUTTONS: Left",
+				"kind": "button",
+				"position": {
+					"x": 23.925,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				},
+				"control": "programmer-top-3"
+			},
+			{
+				"id": "top-buttons-right",
+				"label": "TOP BUTTONS: Right",
+				"kind": "button",
+				"position": {
+					"x": 34.3375,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				},
+				"control": "programmer-top-4"
+			},
+			{
+				"id": "top-buttons-session",
+				"label": "TOP BUTTONS: Session",
+				"kind": "button",
+				"position": {
+					"x": 44.75,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				},
+				"control": "programmer-top-5"
+			},
+			{
+				"id": "top-buttons-note",
+				"label": "TOP BUTTONS: Note",
+				"kind": "button",
+				"position": {
+					"x": 55.1625,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				},
+				"control": "programmer-top-6"
+			},
+			{
+				"id": "top-buttons-custom",
+				"label": "TOP BUTTONS: Custom",
+				"kind": "button",
+				"position": {
+					"x": 65.575,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				},
+				"control": "programmer-top-7"
+			},
+			{
+				"id": "top-buttons-capture-midi",
+				"label": "TOP BUTTONS: Capture MIDI",
+				"kind": "button",
+				"position": {
+					"x": 75.9875,
+					"y": 9.047619047619047,
+					"width": 10.4125,
+					"height": 6.190476190476191
+				},
+				"control": "programmer-top-8"
+			},
+			{
+				"id": "grid-pad-1",
+				"label": "GRID: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-81"
+			},
+			{
+				"id": "grid-pad-2",
+				"label": "GRID: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-82"
+			},
+			{
+				"id": "grid-pad-3",
+				"label": "GRID: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-83"
+			},
+			{
+				"id": "grid-pad-4",
+				"label": "GRID: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-84"
+			},
+			{
+				"id": "grid-pad-5",
+				"label": "GRID: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-85"
+			},
+			{
+				"id": "grid-pad-6",
+				"label": "GRID: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-86"
+			},
+			{
+				"id": "grid-pad-7",
+				"label": "GRID: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-87"
+			},
+			{
+				"id": "grid-pad-8",
+				"label": "GRID: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 19.523809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-88"
+			},
+			{
+				"id": "grid-pad-9",
+				"label": "GRID: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-71"
+			},
+			{
+				"id": "grid-pad-10",
+				"label": "GRID: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-72"
+			},
+			{
+				"id": "grid-pad-11",
+				"label": "GRID: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-73"
+			},
+			{
+				"id": "grid-pad-12",
+				"label": "GRID: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-74"
+			},
+			{
+				"id": "grid-pad-13",
+				"label": "GRID: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-75"
+			},
+			{
+				"id": "grid-pad-14",
+				"label": "GRID: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-76"
+			},
+			{
+				"id": "grid-pad-15",
+				"label": "GRID: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-77"
+			},
+			{
+				"id": "grid-pad-16",
+				"label": "GRID: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 29.107142857142858,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-78"
+			},
+			{
+				"id": "grid-pad-17",
+				"label": "GRID: Pad 17",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-61"
+			},
+			{
+				"id": "grid-pad-18",
+				"label": "GRID: Pad 18",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-62"
+			},
+			{
+				"id": "grid-pad-19",
+				"label": "GRID: Pad 19",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-63"
+			},
+			{
+				"id": "grid-pad-20",
+				"label": "GRID: Pad 20",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-64"
+			},
+			{
+				"id": "grid-pad-21",
+				"label": "GRID: Pad 21",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-65"
+			},
+			{
+				"id": "grid-pad-22",
+				"label": "GRID: Pad 22",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-66"
+			},
+			{
+				"id": "grid-pad-23",
+				"label": "GRID: Pad 23",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-67"
+			},
+			{
+				"id": "grid-pad-24",
+				"label": "GRID: Pad 24",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 38.69047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-68"
+			},
+			{
+				"id": "grid-pad-25",
+				"label": "GRID: Pad 25",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-51"
+			},
+			{
+				"id": "grid-pad-26",
+				"label": "GRID: Pad 26",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-52"
+			},
+			{
+				"id": "grid-pad-27",
+				"label": "GRID: Pad 27",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-53"
+			},
+			{
+				"id": "grid-pad-28",
+				"label": "GRID: Pad 28",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-54"
+			},
+			{
+				"id": "grid-pad-29",
+				"label": "GRID: Pad 29",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-55"
+			},
+			{
+				"id": "grid-pad-30",
+				"label": "GRID: Pad 30",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-56"
+			},
+			{
+				"id": "grid-pad-31",
+				"label": "GRID: Pad 31",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-57"
+			},
+			{
+				"id": "grid-pad-32",
+				"label": "GRID: Pad 32",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 48.273809523809526,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-58"
+			},
+			{
+				"id": "grid-pad-33",
+				"label": "GRID: Pad 33",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-41"
+			},
+			{
+				"id": "grid-pad-34",
+				"label": "GRID: Pad 34",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-42"
+			},
+			{
+				"id": "grid-pad-35",
+				"label": "GRID: Pad 35",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-43"
+			},
+			{
+				"id": "grid-pad-36",
+				"label": "GRID: Pad 36",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-44"
+			},
+			{
+				"id": "grid-pad-37",
+				"label": "GRID: Pad 37",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-45"
+			},
+			{
+				"id": "grid-pad-38",
+				"label": "GRID: Pad 38",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-46"
+			},
+			{
+				"id": "grid-pad-39",
+				"label": "GRID: Pad 39",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-47"
+			},
+			{
+				"id": "grid-pad-40",
+				"label": "GRID: Pad 40",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 57.85714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-48"
+			},
+			{
+				"id": "grid-pad-41",
+				"label": "GRID: Pad 41",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-31"
+			},
+			{
+				"id": "grid-pad-42",
+				"label": "GRID: Pad 42",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-32"
+			},
+			{
+				"id": "grid-pad-43",
+				"label": "GRID: Pad 43",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-33"
+			},
+			{
+				"id": "grid-pad-44",
+				"label": "GRID: Pad 44",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-34"
+			},
+			{
+				"id": "grid-pad-45",
+				"label": "GRID: Pad 45",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-35"
+			},
+			{
+				"id": "grid-pad-46",
+				"label": "GRID: Pad 46",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-36"
+			},
+			{
+				"id": "grid-pad-47",
+				"label": "GRID: Pad 47",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-37"
+			},
+			{
+				"id": "grid-pad-48",
+				"label": "GRID: Pad 48",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 67.44047619047619,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-38"
+			},
+			{
+				"id": "grid-pad-49",
+				"label": "GRID: Pad 49",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-21"
+			},
+			{
+				"id": "grid-pad-50",
+				"label": "GRID: Pad 50",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-22"
+			},
+			{
+				"id": "grid-pad-51",
+				"label": "GRID: Pad 51",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-23"
+			},
+			{
+				"id": "grid-pad-52",
+				"label": "GRID: Pad 52",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-24"
+			},
+			{
+				"id": "grid-pad-53",
+				"label": "GRID: Pad 53",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-25"
+			},
+			{
+				"id": "grid-pad-54",
+				"label": "GRID: Pad 54",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-26"
+			},
+			{
+				"id": "grid-pad-55",
+				"label": "GRID: Pad 55",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-27"
+			},
+			{
+				"id": "grid-pad-56",
+				"label": "GRID: Pad 56",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 77.02380952380953,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-28"
+			},
+			{
+				"id": "grid-pad-57",
+				"label": "GRID: Pad 57",
+				"kind": "pad",
+				"position": {
+					"x": 3.1,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-11"
+			},
+			{
+				"id": "grid-pad-58",
+				"label": "GRID: Pad 58",
+				"kind": "pad",
+				"position": {
+					"x": 13.5125,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-12"
+			},
+			{
+				"id": "grid-pad-59",
+				"label": "GRID: Pad 59",
+				"kind": "pad",
+				"position": {
+					"x": 23.925,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-13"
+			},
+			{
+				"id": "grid-pad-60",
+				"label": "GRID: Pad 60",
+				"kind": "pad",
+				"position": {
+					"x": 34.3375,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-14"
+			},
+			{
+				"id": "grid-pad-61",
+				"label": "GRID: Pad 61",
+				"kind": "pad",
+				"position": {
+					"x": 44.75,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-15"
+			},
+			{
+				"id": "grid-pad-62",
+				"label": "GRID: Pad 62",
+				"kind": "pad",
+				"position": {
+					"x": 55.1625,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-16"
+			},
+			{
+				"id": "grid-pad-63",
+				"label": "GRID: Pad 63",
+				"kind": "pad",
+				"position": {
+					"x": 65.575,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-17"
+			},
+			{
+				"id": "grid-pad-64",
+				"label": "GRID: Pad 64",
+				"kind": "pad",
+				"position": {
+					"x": 75.9875,
+					"y": 86.60714285714286,
+					"width": 10.4125,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-pad-18"
+			},
+			{
+				"id": "scene-launch-scene-1",
+				"label": "SCENE LAUNCH: Scene 1",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 19.523809523809526,
+					"width": 8.3,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-scene-1"
+			},
+			{
+				"id": "scene-launch-scene-2",
+				"label": "SCENE LAUNCH: Scene 2",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 29.107142857142858,
+					"width": 8.3,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-scene-2"
+			},
+			{
+				"id": "scene-launch-scene-3",
+				"label": "SCENE LAUNCH: Scene 3",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 38.69047619047619,
+					"width": 8.3,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-scene-3"
+			},
+			{
+				"id": "scene-launch-scene-4",
+				"label": "SCENE LAUNCH: Scene 4",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 48.273809523809526,
+					"width": 8.3,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-scene-4"
+			},
+			{
+				"id": "scene-launch-scene-5",
+				"label": "SCENE LAUNCH: Scene 5",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 57.85714285714286,
+					"width": 8.3,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-scene-5"
+			},
+			{
+				"id": "scene-launch-scene-6",
+				"label": "SCENE LAUNCH: Scene 6",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 67.44047619047619,
+					"width": 8.3,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-scene-6"
+			},
+			{
+				"id": "scene-launch-scene-7",
+				"label": "SCENE LAUNCH: Scene 7",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 77.02380952380953,
+					"width": 8.3,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-scene-7"
+			},
+			{
+				"id": "scene-launch-scene-8",
+				"label": "SCENE LAUNCH: Scene 8",
+				"kind": "button",
+				"position": {
+					"x": 88.6,
+					"y": 86.60714285714286,
+					"width": 8.3,
+					"height": 9.583333333333334
+				},
+				"control": "programmer-scene-8"
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://userguides.novationmusic.com/hc/en-gb/articles/24001489325330-MIDI-on-Launchpad-X",
+		"https://userguides.novationmusic.com/hc/en-gb/articles/24001475492498-Controlling-the-Launchpad-X-surface",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

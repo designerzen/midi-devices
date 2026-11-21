@@ -1,0 +1,1008 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "casio-ct-s500",
+	"name": "Casio CT-S500",
+	"manufacturer": "Casio",
+	"manufacturerUrl": "https://www.casio.com/",
+	"productUrl": "https://www.casio.com/intl/electronic-musical-instruments/product.CT-S500/",
+	"ids": [
+		"casio-ct-s500"
+	],
+	"portNames": [],
+	"description": "61-key AiX keyboard with assignable controls and accompaniment.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Product specifications",
+			"url": "https://www.casio.com/intl/electronic-musical-instruments/product.CT-S500/"
+		},
+		{
+			"title": "MIDI implementation",
+			"url": "https://www.casio.com/content/dam/casio/global/support/manuals/electronic-musical-instruments/pdf/008-en/c/CTS1000V_midiimplementation_EN.pdf"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"Velocity-sensitive keyboard",
+		"Assignable knobs"
+	],
+	"hardwareControls": [
+		"PITCH: Pitch bend",
+		"ASSIGNABLE KNOBS: Knob 1, Knob 2, Knob 3",
+		"DISPLAY: LCD",
+		"NAVIGATION: Dial, Home, Menu, Tone",
+		"SELECTED FUNCTIONS: Rhythm, Start / Stop, Registration, Active DSP",
+		"61 keys"
+	],
+	"notice": "Connect the micro-USB host port to a computer; there are no DIN MIDI sockets. Bluetooth MIDI requires WU-BT10 and OS MIDI routing. Supply batteries or the specified DC adapter. MIDI Controller Mode and firmware routing determine transmitted messages. Exact browser port aliases are unverified; select this profile manually. This partial profile documents hardware and setup. Controls remain unbound because messages depend on the selected setup, channel, track or mode. Consult the linked manufacturer references for MIDI assignments and complete hardware details.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Casio CT-S500 schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 700,
+		"elements": [
+			{
+				"id": "pitch-pitch-bend",
+				"label": "PITCH: Pitch bend",
+				"kind": "wheel",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 71.42857142857143,
+					"width": 7.333333333333333,
+					"height": 23.57142857142857
+				}
+			},
+			{
+				"id": "assignable-knobs-knob-1",
+				"label": "ASSIGNABLE KNOBS: Knob 1",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 13.571428571428571,
+					"width": 8.833333333333334,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "assignable-knobs-knob-2",
+				"label": "ASSIGNABLE KNOBS: Knob 2",
+				"kind": "knob",
+				"position": {
+					"x": 11.416666666666666,
+					"y": 13.571428571428571,
+					"width": 8.833333333333334,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "assignable-knobs-knob-3",
+				"label": "ASSIGNABLE KNOBS: Knob 3",
+				"kind": "knob",
+				"position": {
+					"x": 20.25,
+					"y": 13.571428571428571,
+					"width": 8.833333333333334,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "display-lcd",
+				"label": "DISPLAY: LCD",
+				"kind": "screen",
+				"position": {
+					"x": 32.166666666666664,
+					"y": 13.571428571428571,
+					"width": 33.166666666666664,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "navigation-dial",
+				"label": "NAVIGATION: Dial",
+				"kind": "knob",
+				"position": {
+					"x": 68.41666666666667,
+					"y": 13.571428571428571,
+					"width": 7.145833333333333,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "navigation-home",
+				"label": "NAVIGATION: Home",
+				"kind": "button",
+				"position": {
+					"x": 75.5625,
+					"y": 13.571428571428571,
+					"width": 7.145833333333333,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "navigation-menu",
+				"label": "NAVIGATION: Menu",
+				"kind": "button",
+				"position": {
+					"x": 82.70833333333333,
+					"y": 13.571428571428571,
+					"width": 7.145833333333333,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "navigation-tone",
+				"label": "NAVIGATION: Tone",
+				"kind": "button",
+				"position": {
+					"x": 89.85416666666667,
+					"y": 13.571428571428571,
+					"width": 7.145833333333333,
+					"height": 20.714285714285715
+				}
+			},
+			{
+				"id": "selected-functions-rhythm",
+				"label": "SELECTED FUNCTIONS: Rhythm",
+				"kind": "button",
+				"position": {
+					"x": 32.166666666666664,
+					"y": 44.285714285714285,
+					"width": 16.208333333333332,
+					"height": 16.428571428571427
+				}
+			},
+			{
+				"id": "selected-functions-start-stop",
+				"label": "SELECTED FUNCTIONS: Start / Stop",
+				"kind": "button",
+				"position": {
+					"x": 48.375,
+					"y": 44.285714285714285,
+					"width": 16.208333333333332,
+					"height": 16.428571428571427
+				}
+			},
+			{
+				"id": "selected-functions-registration",
+				"label": "SELECTED FUNCTIONS: Registration",
+				"kind": "button",
+				"position": {
+					"x": 64.58333333333334,
+					"y": 44.285714285714285,
+					"width": 16.208333333333332,
+					"height": 16.428571428571427
+				}
+			},
+			{
+				"id": "selected-functions-active-dsp",
+				"label": "SELECTED FUNCTIONS: Active DSP",
+				"kind": "button",
+				"position": {
+					"x": 80.79166666666666,
+					"y": 44.285714285714285,
+					"width": 16.208333333333332,
+					"height": 16.428571428571427
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 12.083333333333334,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 14.456018518518517,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 16.828703703703702,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 19.201388888888886,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 21.574074074074076,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 23.946759259259256,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 26.319444444444446,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 28.69212962962963,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 31.064814814814813,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 33.4375,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 35.81018518518518,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 38.18287037037037,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 40.55555555555555,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 42.92824074074074,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Key 25",
+				"kind": "key",
+				"position": {
+					"x": 45.300925925925924,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Key 27",
+				"kind": "key",
+				"position": {
+					"x": 47.6736111111111,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-29",
+				"label": "Key 29",
+				"kind": "key",
+				"position": {
+					"x": 50.0462962962963,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-30",
+				"label": "Key 30",
+				"kind": "key",
+				"position": {
+					"x": 52.41898148148149,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-32",
+				"label": "Key 32",
+				"kind": "key",
+				"position": {
+					"x": 54.79166666666667,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-34",
+				"label": "Key 34",
+				"kind": "key",
+				"position": {
+					"x": 57.16435185185185,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-36",
+				"label": "Key 36",
+				"kind": "key",
+				"position": {
+					"x": 59.53703703703703,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-37",
+				"label": "Key 37",
+				"kind": "key",
+				"position": {
+					"x": 61.90972222222222,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-39",
+				"label": "Key 39",
+				"kind": "key",
+				"position": {
+					"x": 64.2824074074074,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-41",
+				"label": "Key 41",
+				"kind": "key",
+				"position": {
+					"x": 66.6550925925926,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-42",
+				"label": "Key 42",
+				"kind": "key",
+				"position": {
+					"x": 69.02777777777777,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-44",
+				"label": "Key 44",
+				"kind": "key",
+				"position": {
+					"x": 71.40046296296296,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-46",
+				"label": "Key 46",
+				"kind": "key",
+				"position": {
+					"x": 73.77314814814814,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-48",
+				"label": "Key 48",
+				"kind": "key",
+				"position": {
+					"x": 76.14583333333333,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-49",
+				"label": "Key 49",
+				"kind": "key",
+				"position": {
+					"x": 78.5185185185185,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-51",
+				"label": "Key 51",
+				"kind": "key",
+				"position": {
+					"x": 80.89120370370371,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-53",
+				"label": "Key 53",
+				"kind": "key",
+				"position": {
+					"x": 83.26388888888889,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-54",
+				"label": "Key 54",
+				"kind": "key",
+				"position": {
+					"x": 85.63657407407408,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-56",
+				"label": "Key 56",
+				"kind": "key",
+				"position": {
+					"x": 88.00925925925925,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-58",
+				"label": "Key 58",
+				"kind": "key",
+				"position": {
+					"x": 90.38194444444444,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-60",
+				"label": "Key 60",
+				"kind": "key",
+				"position": {
+					"x": 92.75462962962963,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-61",
+				"label": "Key 61",
+				"kind": "key",
+				"position": {
+					"x": 95.12731481481482,
+					"y": 67.14285714285714,
+					"width": 2.372685185185185,
+					"height": 28.57142857142857
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 13.720486111111112,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 16.093171296296298,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 20.838541666666664,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 23.21122685185185,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 25.583912037037038,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 30.32928240740741,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 32.70196759259259,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 37.44733796296296,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 39.820023148148145,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 42.192708333333336,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Key 26",
+				"kind": "key",
+				"position": {
+					"x": 46.938078703703695,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-28",
+				"label": "Key 28",
+				"kind": "key",
+				"position": {
+					"x": 49.310763888888886,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-31",
+				"label": "Key 31",
+				"kind": "key",
+				"position": {
+					"x": 54.05613425925926,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-33",
+				"label": "Key 33",
+				"kind": "key",
+				"position": {
+					"x": 56.42881944444444,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-35",
+				"label": "Key 35",
+				"kind": "key",
+				"position": {
+					"x": 58.80150462962963,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-38",
+				"label": "Key 38",
+				"kind": "key",
+				"position": {
+					"x": 63.546875,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-40",
+				"label": "Key 40",
+				"kind": "key",
+				"position": {
+					"x": 65.91956018518519,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-43",
+				"label": "Key 43",
+				"kind": "key",
+				"position": {
+					"x": 70.66493055555554,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-45",
+				"label": "Key 45",
+				"kind": "key",
+				"position": {
+					"x": 73.03761574074075,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-47",
+				"label": "Key 47",
+				"kind": "key",
+				"position": {
+					"x": 75.41030092592592,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-50",
+				"label": "Key 50",
+				"kind": "key",
+				"position": {
+					"x": 80.15567129629629,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-52",
+				"label": "Key 52",
+				"kind": "key",
+				"position": {
+					"x": 82.5283564814815,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-55",
+				"label": "Key 55",
+				"kind": "key",
+				"position": {
+					"x": 87.27372685185185,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-57",
+				"label": "Key 57",
+				"kind": "key",
+				"position": {
+					"x": 89.64641203703702,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			},
+			{
+				"id": "key-59",
+				"label": "Key 59",
+				"kind": "key",
+				"position": {
+					"x": 92.01909722222221,
+					"y": 67.14285714285714,
+					"width": 1.4710648148148149,
+					"height": 17.42857142857143
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB TO HOST",
+			"connector": "Micro-USB Type-B",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "USB TO DEVICE",
+			"connector": "USB Type-A; supported accessories/storage",
+			"direction": "bidirectional",
+			"location": "Device edge"
+		},
+		{
+			"label": "PHONES",
+			"connector": "3.5 mm stereo jack",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "AUDIO IN",
+			"connector": "3.5 mm stereo jack",
+			"direction": "input",
+			"location": "Device edge"
+		},
+		{
+			"label": "LINE OUT L/MONO / R",
+			"connector": "6.35 mm phone jacks",
+			"direction": "output",
+			"location": "Device edge"
+		},
+		{
+			"label": "PEDAL 1",
+			"connector": "6.35 mm pedal jack",
+			"direction": "control",
+			"location": "Device edge"
+		},
+		{
+			"label": "PEDAL 2 / EXPRESSION",
+			"connector": "6.35 mm pedal jack",
+			"direction": "control",
+			"location": "Device edge"
+		},
+		{
+			"label": "DC IN",
+			"connector": "12 V DC adapter",
+			"direction": "input",
+			"location": "Device edge"
+		}
+	],
+	"diagramSources": [
+		"https://www.casio.com/intl/electronic-musical-instruments/product.CT-S500/",
+		"https://www.casio.com/content/dam/casio/global/support/manuals/electronic-musical-instruments/pdf/008-en/c/CTS1000V_midiimplementation_EN.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

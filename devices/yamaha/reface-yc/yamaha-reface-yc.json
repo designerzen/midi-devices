@@ -1,0 +1,800 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "yamaha-reface-yc",
+	"name": "Yamaha reface YC",
+	"manufacturer": "Yamaha",
+	"manufacturerUrl": "https://usa.yamaha.com/",
+	"productUrl": "https://usa.yamaha.com/musical-instruments/keyboards/products/synthesizers/reface/",
+	"ids": [
+		"yamaha-reface-yc"
+	],
+	"portNames": [],
+	"description": "37-mini-key drawbar organ with USB and breakout DIN MIDI.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "reface owner manual",
+			"url": "https://data.yamaha.com/files/download/other_assets/6/438816/ZT92080_reface_En_OM_C0.pdf"
+		},
+		{
+			"title": "reface models",
+			"url": "https://usa.yamaha.com/musical-instruments/keyboards/products/synthesizers/reface/"
+		}
+	],
+	"abilities": [
+		"Velocity-sensitive keyboard",
+		"USB MIDI",
+		"DIN MIDI via breakout",
+		"drawbar organ"
+	],
+	"hardwareControls": [
+		"37 mini keys",
+		"LEVEL AND OCTAVE",
+		"ORGAN TYPE",
+		"FOOTAGE",
+		"ROTARY",
+		"VIBRATO / CHORUS",
+		"PERCUSSION",
+		"EFFECTS"
+	],
+	"notice": "Connect USB TO HOST to a computer or use the supplied MIDI breakout cable. Set MIDI channel, Local Control and MIDI Control as described in the manual. Supply batteries or the specified DC adapter; USB is not the instrument power source. This profile does not reuse reface CS controller mappings. Exact browser MIDI port names are not verified; select this profile manually. The selected-control schematics are illustrative. Keys and panel controls remain unbound because channel, octave, mode and assignable functions must be checked against the instrument setup. This is a partial hardware and setup profile, not a complete MIDI implementation.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Yamaha reface YC selected-control schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 650,
+		"elements": [
+			{
+				"id": "level-and-octave-volume",
+				"label": "LEVEL AND OCTAVE: Volume",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 14.615384615384617,
+					"width": 8.666666666666668,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "level-and-octave-octave",
+				"label": "LEVEL AND OCTAVE: Octave",
+				"kind": "fader",
+				"position": {
+					"x": 11.25,
+					"y": 14.615384615384617,
+					"width": 8.666666666666668,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "organ-type-wave",
+				"label": "ORGAN TYPE: Wave",
+				"kind": "knob",
+				"position": {
+					"x": 23.0,
+					"y": 14.615384615384617,
+					"width": 12.333333333333334,
+					"height": 16.153846153846153
+				}
+			},
+			{
+				"id": "footage-16-foot",
+				"label": "FOOTAGE: 16 foot",
+				"kind": "fader",
+				"position": {
+					"x": 38.416666666666664,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "footage-5-1-3-foot",
+				"label": "FOOTAGE: 5 1/3 foot",
+				"kind": "fader",
+				"position": {
+					"x": 44.925925925925924,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "footage-8-foot",
+				"label": "FOOTAGE: 8 foot",
+				"kind": "fader",
+				"position": {
+					"x": 51.43518518518518,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "footage-4-foot",
+				"label": "FOOTAGE: 4 foot",
+				"kind": "fader",
+				"position": {
+					"x": 57.94444444444444,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "footage-2-2-3-foot",
+				"label": "FOOTAGE: 2 2/3 foot",
+				"kind": "fader",
+				"position": {
+					"x": 64.4537037037037,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "footage-2-foot",
+				"label": "FOOTAGE: 2 foot",
+				"kind": "fader",
+				"position": {
+					"x": 70.96296296296296,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "footage-1-3-5-foot",
+				"label": "FOOTAGE: 1 3/5 foot",
+				"kind": "fader",
+				"position": {
+					"x": 77.47222222222223,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "footage-1-1-3-foot",
+				"label": "FOOTAGE: 1 1/3 foot",
+				"kind": "fader",
+				"position": {
+					"x": 83.9814814814815,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "footage-1-foot",
+				"label": "FOOTAGE: 1 foot",
+				"kind": "fader",
+				"position": {
+					"x": 90.49074074074073,
+					"y": 14.615384615384617,
+					"width": 6.5092592592592595,
+					"height": 20.76923076923077
+				}
+			},
+			{
+				"id": "rotary-rotary-speed",
+				"label": "ROTARY: Rotary speed",
+				"kind": "joystick",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 39.23076923076923,
+					"width": 17.333333333333336,
+					"height": 22.30769230769231
+				}
+			},
+			{
+				"id": "vibrato-chorus-vibrato-chorus",
+				"label": "VIBRATO / CHORUS: Vibrato / Chorus",
+				"kind": "switch",
+				"position": {
+					"x": 23.0,
+					"y": 43.84615384615385,
+					"width": 12.0,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "vibrato-chorus-depth",
+				"label": "VIBRATO / CHORUS: Depth",
+				"kind": "fader",
+				"position": {
+					"x": 35.0,
+					"y": 43.84615384615385,
+					"width": 12.0,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "percussion-on-off",
+				"label": "PERCUSSION: On / Off",
+				"kind": "switch",
+				"position": {
+					"x": 50.083333333333336,
+					"y": 43.84615384615385,
+					"width": 8.0,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "percussion-type-a-b",
+				"label": "PERCUSSION: Type A / B",
+				"kind": "switch",
+				"position": {
+					"x": 58.08333333333333,
+					"y": 43.84615384615385,
+					"width": 8.0,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "percussion-length",
+				"label": "PERCUSSION: Length",
+				"kind": "fader",
+				"position": {
+					"x": 66.08333333333334,
+					"y": 43.84615384615385,
+					"width": 8.0,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "effects-distortion",
+				"label": "EFFECTS: Distortion",
+				"kind": "fader",
+				"position": {
+					"x": 77.16666666666666,
+					"y": 43.84615384615385,
+					"width": 9.916666666666666,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "effects-reverb",
+				"label": "EFFECTS: Reverb",
+				"kind": "fader",
+				"position": {
+					"x": 87.08333333333333,
+					"y": 43.84615384615385,
+					"width": 9.916666666666666,
+					"height": 17.692307692307693
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 12.083333333333334,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 15.965909090909092,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 19.848484848484848,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 23.731060606060606,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 27.613636363636363,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 31.496212121212125,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 35.37878787878788,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 39.26136363636363,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 43.1439393939394,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 47.026515151515156,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 50.909090909090914,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 54.79166666666667,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 58.67424242424243,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 62.55681818181819,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Key 25",
+				"kind": "key",
+				"position": {
+					"x": 66.43939393939394,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Key 27",
+				"kind": "key",
+				"position": {
+					"x": 70.3219696969697,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-29",
+				"label": "Key 29",
+				"kind": "key",
+				"position": {
+					"x": 74.20454545454545,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-30",
+				"label": "Key 30",
+				"kind": "key",
+				"position": {
+					"x": 78.08712121212122,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-32",
+				"label": "Key 32",
+				"kind": "key",
+				"position": {
+					"x": 81.96969696969698,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-34",
+				"label": "Key 34",
+				"kind": "key",
+				"position": {
+					"x": 85.85227272727273,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-36",
+				"label": "Key 36",
+				"kind": "key",
+				"position": {
+					"x": 89.7348484848485,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-37",
+				"label": "Key 37",
+				"kind": "key",
+				"position": {
+					"x": 93.61742424242425,
+					"y": 66.15384615384615,
+					"width": 3.882575757575758,
+					"height": 29.230769230769234
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 14.762310606060607,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 18.644886363636363,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 26.41003787878788,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 30.292613636363637,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 34.1751893939394,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 41.940340909090914,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 45.82291666666667,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 53.58806818181818,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 57.47064393939394,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 61.353219696969695,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Key 26",
+				"kind": "key",
+				"position": {
+					"x": 69.1183712121212,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-28",
+				"label": "Key 28",
+				"kind": "key",
+				"position": {
+					"x": 73.00094696969697,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-31",
+				"label": "Key 31",
+				"kind": "key",
+				"position": {
+					"x": 80.7660984848485,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-33",
+				"label": "Key 33",
+				"kind": "key",
+				"position": {
+					"x": 84.64867424242425,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			},
+			{
+				"id": "key-35",
+				"label": "Key 35",
+				"kind": "key",
+				"position": {
+					"x": 88.53125,
+					"y": 66.15384615384615,
+					"width": 2.4071969696969697,
+					"height": 17.83076923076923
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB TO HOST",
+			"connector": "USB Type-B",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI IN / OUT",
+			"connector": "Mini-DIN; included breakout to 5-pin DIN IN/OUT",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "OUTPUT L/MONO",
+			"connector": "6.35 mm jack",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "OUTPUT R",
+			"connector": "6.35 mm jack",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "PHONES",
+			"connector": "6.35 mm stereo jack",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "AUX IN",
+			"connector": "3.5 mm stereo jack",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "FOOT CONTROLLER",
+			"connector": "6.35 mm pedal jack",
+			"direction": "control",
+			"location": "Rear"
+		},
+		{
+			"label": "DC IN",
+			"connector": "12 V DC adapter",
+			"direction": "input",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://data.yamaha.com/files/download/other_assets/6/438816/ZT92080_reface_En_OM_C0.pdf",
+		"https://usa.yamaha.com/musical-instruments/keyboards/products/synthesizers/reface/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

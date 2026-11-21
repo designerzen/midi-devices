@@ -7,7 +7,9 @@
 	"manufacturerUrl": "https://roli.com/",
 	"productUrl": "https://roli.com/",
 	"description": "Illuminated multitouch MIDI controller.",
-	"ids": ["roli-lightpad-block-m"],
+	"ids": [
+		"roli-lightpad-block-m"
+	],
 	"portNames": [],
 	"icon": "icon.svg",
 	"documentation": [
@@ -16,8 +18,13 @@
 			"url": "https://rolisupport.freshdesk.com/en/support/solutions/articles/36000019127-lightpad-block-and-lightpad-block-m-compared"
 		}
 	],
-	"abilities": ["MIDI notes", "MPE (configuration dependent)"],
-	"hardwareControls": ["Touch surface"],
+	"abilities": [
+		"MIDI notes",
+		"MPE (configuration dependent)"
+	],
+	"hardwareControls": [
+		"Touch surface"
+	],
 	"notice": "The loaded Dashboard app determines note grid, channel range and CC assignments; no fixed pad mapping is assumed. Baseline profile: parameter CC mappings and USB port names have not been verified; select this profile manually for your MIDI port. For per-note expression, configure matching MPE zones and pitch-bend ranges in the controller and destination; the single-channel notes GUI does not reproduce MPE gestures.",
 	"controls": [],
 	"modes": [],
@@ -45,21 +52,20 @@
 		]
 	},
 	"surface": {
-		"src": "panel.svg",
+		"src": "interface.svg",
 		"width": 650,
 		"height": 690,
 		"elements": [
 			{
 				"id": "lightpad-m-15-x-15-led-multi-touch-surface",
 				"label": "LIGHTPAD M: 15 x 15 LED multi-touch surface",
-				"kind": "button",
+				"kind": "lightpad",
 				"position": {
 					"x": 6.3076923076923075,
 					"y": 14.492753623188406,
 					"width": 87.38461538461539,
 					"height": 67.3913043478261
-				},
-				"learnable": true
+				}
 			},
 			{
 				"id": "edge-control-power-mode",
@@ -70,8 +76,7 @@
 					"y": 89.85507246376811,
 					"width": 87.38461538461539,
 					"height": 5.072463768115942
-				},
-				"learnable": true
+				}
 			}
 		]
 	},
@@ -101,6 +106,7 @@
 		}
 	],
 	"diagramSources": [
-		"https://rolisupport.freshdesk.com/en/support/solutions/articles/36000019127-lightpad-block-and-lightpad-block-m-compared"
+		"https://rolisupport.freshdesk.com/en/support/solutions/articles/36000019127-lightpad-block-and-lightpad-block-m-compared",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
 	]
 }

@@ -1,0 +1,456 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "soundbeam-soundbeam-5",
+	"name": "Soundbeam 5",
+	"manufacturer": "Soundbeam",
+	"manufacturerUrl": "https://www.soundbeam.co.uk/",
+	"ids": [
+		"soundbeam-soundbeam-5"
+	],
+	"portNames": [],
+	"description": "Accessible ultrasonic movement-to-MIDI instrument with switch inputs.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Soundbeam 5: manufacturer or original documentation",
+			"url": "https://www.soundbeam.co.uk/software-updates"
+		},
+		{
+			"title": "Soundbeam 5 MIDI utilities",
+			"url": "https://static1.squarespace.com/static/56d802d962cd9424aa8b5eb7/t/5707a0f6746fb94ec68e976e/1460117754257/Soundbeam_Part2.pdf"
+		}
+	],
+	"abilities": [
+		"Accessible music hardware"
+	],
+	"hardwareControls": [],
+	"notice": "Configure beam ranges, scales, MIDI channels and switch assignments on the Soundbeam. Connect its MIDI output through an interface to external sounds. Assignments depend on the setup; no universal note or CC map is supplied. This is Soundbeam 5, not Soundbeam 6. For computer use, connect MIDI OUT to interface MIDI IN; connect interface MIDI OUT to hardware MIDI IN when controlling the instrument. Port names are intentionally empty: interface or app names do not reliably identify the attached hardware. Select this profile manually. This is partial coverage, not a complete MIDI implementation. The panel is an original simplified schematic. Physical controls are shown without assumed MIDI assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Soundbeam 5 schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1100,
+		"height": 620,
+		"elements": [
+			{
+				"id": "beam-switch-select-record-preview",
+				"label": "BEAM / SWITCH SELECT: Record / preview",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 15.32258064516129,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-beam-1",
+				"label": "BEAM / SWITCH SELECT: Beam 1",
+				"kind": "button",
+				"position": {
+					"x": 10.636363636363637,
+					"y": 15.32258064516129,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-beam-2",
+				"label": "BEAM / SWITCH SELECT: Beam 2",
+				"kind": "button",
+				"position": {
+					"x": 18.454545454545453,
+					"y": 15.32258064516129,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-beam-3",
+				"label": "BEAM / SWITCH SELECT: Beam 3",
+				"kind": "button",
+				"position": {
+					"x": 26.272727272727277,
+					"y": 15.32258064516129,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-beam-4",
+				"label": "BEAM / SWITCH SELECT: Beam 4",
+				"kind": "button",
+				"position": {
+					"x": 34.090909090909086,
+					"y": 15.32258064516129,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-switch-1",
+				"label": "BEAM / SWITCH SELECT: Switch 1",
+				"kind": "button",
+				"position": {
+					"x": 41.90909090909091,
+					"y": 15.32258064516129,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-switch-2",
+				"label": "BEAM / SWITCH SELECT: Switch 2",
+				"kind": "button",
+				"position": {
+					"x": 49.72727272727273,
+					"y": 15.32258064516129,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-switch-3",
+				"label": "BEAM / SWITCH SELECT: Switch 3",
+				"kind": "button",
+				"position": {
+					"x": 57.54545454545455,
+					"y": 15.32258064516129,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-switch-4",
+				"label": "BEAM / SWITCH SELECT: Switch 4",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 24.193548387096776,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-switch-5",
+				"label": "BEAM / SWITCH SELECT: Switch 5",
+				"kind": "button",
+				"position": {
+					"x": 10.636363636363637,
+					"y": 24.193548387096776,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-switch-6",
+				"label": "BEAM / SWITCH SELECT: Switch 6",
+				"kind": "button",
+				"position": {
+					"x": 18.454545454545453,
+					"y": 24.193548387096776,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-switch-7",
+				"label": "BEAM / SWITCH SELECT: Switch 7",
+				"kind": "button",
+				"position": {
+					"x": 26.272727272727277,
+					"y": 24.193548387096776,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "beam-switch-select-switch-8",
+				"label": "BEAM / SWITCH SELECT: Switch 8",
+				"kind": "button",
+				"position": {
+					"x": 34.090909090909086,
+					"y": 24.193548387096776,
+					"width": 7.818181818181818,
+					"height": 8.870967741935484
+				}
+			},
+			{
+				"id": "display-lcd",
+				"label": "DISPLAY: LCD",
+				"kind": "screen",
+				"position": {
+					"x": 68.27272727272728,
+					"y": 15.32258064516129,
+					"width": 28.909090909090907,
+					"height": 17.741935483870968
+				}
+			},
+			{
+				"id": "parameters-sound",
+				"label": "PARAMETERS: Sound",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 41.12903225806452,
+					"width": 22.545454545454547,
+					"height": 8.60215053763441
+				}
+			},
+			{
+				"id": "parameters-trigger-mode",
+				"label": "PARAMETERS: Trigger mode",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 49.73118279569892,
+					"width": 22.545454545454547,
+					"height": 8.60215053763441
+				}
+			},
+			{
+				"id": "parameters-divisions",
+				"label": "PARAMETERS: Divisions",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 58.333333333333336,
+					"width": 22.545454545454547,
+					"height": 8.60215053763441
+				}
+			},
+			{
+				"id": "parameters-pitch-transpose",
+				"label": "PARAMETERS: Pitch transpose",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 66.93548387096774,
+					"width": 22.545454545454547,
+					"height": 8.60215053763441
+				}
+			},
+			{
+				"id": "parameters-note-sequence",
+				"label": "PARAMETERS: Note sequence",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 75.53763440860216,
+					"width": 22.545454545454547,
+					"height": 8.60215053763441
+				}
+			},
+			{
+				"id": "parameters-midi",
+				"label": "PARAMETERS: MIDI",
+				"kind": "button",
+				"position": {
+					"x": 2.8181818181818183,
+					"y": 84.13978494623657,
+					"width": 22.545454545454547,
+					"height": 8.60215053763441
+				}
+			},
+			{
+				"id": "navigation-increase",
+				"label": "NAVIGATION: Increase",
+				"kind": "button",
+				"position": {
+					"x": 28.272727272727273,
+					"y": 41.12903225806452,
+					"width": 12.666666666666668,
+					"height": 25.806451612903224
+				}
+			},
+			{
+				"id": "navigation-left",
+				"label": "NAVIGATION: Left",
+				"kind": "button",
+				"position": {
+					"x": 40.939393939393945,
+					"y": 41.12903225806452,
+					"width": 12.666666666666668,
+					"height": 25.806451612903224
+				}
+			},
+			{
+				"id": "navigation-confirm",
+				"label": "NAVIGATION: Confirm",
+				"kind": "button",
+				"position": {
+					"x": 53.60606060606061,
+					"y": 41.12903225806452,
+					"width": 12.666666666666668,
+					"height": 25.806451612903224
+				}
+			},
+			{
+				"id": "navigation-right",
+				"label": "NAVIGATION: Right",
+				"kind": "button",
+				"position": {
+					"x": 28.272727272727273,
+					"y": 66.93548387096774,
+					"width": 12.666666666666668,
+					"height": 25.806451612903224
+				}
+			},
+			{
+				"id": "navigation-decrease",
+				"label": "NAVIGATION: Decrease",
+				"kind": "button",
+				"position": {
+					"x": 40.939393939393945,
+					"y": 66.93548387096774,
+					"width": 12.666666666666668,
+					"height": 25.806451612903224
+				}
+			},
+			{
+				"id": "soundset-system-soundset",
+				"label": "SOUNDSET / SYSTEM: Soundset",
+				"kind": "button",
+				"position": {
+					"x": 69.18181818181817,
+					"y": 41.12903225806452,
+					"width": 14.000000000000002,
+					"height": 12.903225806451612
+				}
+			},
+			{
+				"id": "soundset-system-reset",
+				"label": "SOUNDSET / SYSTEM: Reset",
+				"kind": "button",
+				"position": {
+					"x": 83.18181818181817,
+					"y": 41.12903225806452,
+					"width": 14.000000000000002,
+					"height": 12.903225806451612
+				}
+			},
+			{
+				"id": "soundset-system-home",
+				"label": "SOUNDSET / SYSTEM: Home",
+				"kind": "button",
+				"position": {
+					"x": 69.18181818181817,
+					"y": 54.03225806451613,
+					"width": 14.000000000000002,
+					"height": 12.903225806451612
+				}
+			},
+			{
+				"id": "soundset-system-preview",
+				"label": "SOUNDSET / SYSTEM: Preview",
+				"kind": "button",
+				"position": {
+					"x": 83.18181818181817,
+					"y": 54.03225806451613,
+					"width": 14.000000000000002,
+					"height": 12.903225806451612
+				}
+			},
+			{
+				"id": "soundset-system-f1",
+				"label": "SOUNDSET / SYSTEM: F1",
+				"kind": "button",
+				"position": {
+					"x": 69.18181818181817,
+					"y": 66.93548387096774,
+					"width": 14.000000000000002,
+					"height": 12.903225806451612
+				}
+			},
+			{
+				"id": "soundset-system-volume",
+				"label": "SOUNDSET / SYSTEM: Volume",
+				"kind": "button",
+				"position": {
+					"x": 83.18181818181817,
+					"y": 66.93548387096774,
+					"width": 14.000000000000002,
+					"height": 12.903225806451612
+				}
+			},
+			{
+				"id": "soundset-system-help",
+				"label": "SOUNDSET / SYSTEM: Help",
+				"kind": "button",
+				"position": {
+					"x": 69.18181818181817,
+					"y": 79.83870967741935,
+					"width": 14.000000000000002,
+					"height": 12.903225806451612
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "Beam 1 - 4",
+			"connector": "Dedicated sensor sockets",
+			"direction": "bidirectional",
+			"location": "rear"
+		},
+		{
+			"label": "Line OUT 1 / 2",
+			"connector": "Audio jacks",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "Power",
+			"connector": "DC inlet",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "MIDI IN 1 / 2",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "rear"
+		},
+		{
+			"label": "MIDI OUT 1 / 2",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "rear"
+		},
+		{
+			"label": "USB",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.soundbeam.co.uk/s/WALL-WART-VERSION-SB5_MANUAL-Looking-after-sensors-and-switches-200515-rbl6.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

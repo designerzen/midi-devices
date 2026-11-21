@@ -1,0 +1,461 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "elektron-digitakt-ii",
+	"name": "Elektron Digitakt II",
+	"manufacturer": "Elektron",
+	"manufacturerUrl": "https://www.elektron.se/",
+	"productUrl": "https://www.elektron.se/explore/digitakt-ii",
+	"ids": [
+		"elektron-digitakt-ii"
+	],
+	"portNames": [],
+	"description": "Sixteen-track stereo sampler and sequencer with configurable MIDI tracks.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Product specifications",
+			"url": "https://www.elektron.se/explore/digitakt-ii"
+		},
+		{
+			"title": "Model manuals, firmware and support",
+			"url": "https://www.elektron.se/support-downloads/digitakt-ii"
+		}
+	],
+	"abilities": [
+		"Stereo sampling",
+		"Sample sequencing",
+		"External MIDI sequencing",
+		"USB MIDI",
+		"DIN MIDI",
+		"MIDI clock"
+	],
+	"hardwareControls": [
+		"Eight parameter encoders",
+		"16 trig buttons",
+		"OLED display",
+		"Record, play and stop buttons"
+	],
+	"notice": "Configure MIDI port routing, per-track channels, note reception and clock send/receive in MIDI settings. Trig buttons change function with the selected mode; parameter encoders and external MIDI CC destinations depend on the track and machine. This entry covers Digitakt II only. Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected hardware appears under the MIDI interface name. Physical controls are unbound and this profile does not supply a complete MIDI implementation. Diagrams show selected physical controls with illustrative positions; consult the linked manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Elektron Digitakt II selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "display-oled-display",
+				"label": "DISPLAY: OLED display",
+				"kind": "screen",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 29.416666666666668,
+					"height": 22.0
+				}
+			},
+			{
+				"id": "parameters-a",
+				"label": "PARAMETERS: A",
+				"kind": "knob",
+				"position": {
+					"x": 34.66666666666667,
+					"y": 12.666666666666668,
+					"width": 15.687499999999998,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "parameters-b",
+				"label": "PARAMETERS: B",
+				"kind": "knob",
+				"position": {
+					"x": 50.354166666666664,
+					"y": 12.666666666666668,
+					"width": 15.687499999999998,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "parameters-c",
+				"label": "PARAMETERS: C",
+				"kind": "knob",
+				"position": {
+					"x": 66.04166666666667,
+					"y": 12.666666666666668,
+					"width": 15.687499999999998,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "parameters-d",
+				"label": "PARAMETERS: D",
+				"kind": "knob",
+				"position": {
+					"x": 81.72916666666666,
+					"y": 12.666666666666668,
+					"width": 15.687499999999998,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "parameters-e",
+				"label": "PARAMETERS: E",
+				"kind": "knob",
+				"position": {
+					"x": 34.66666666666667,
+					"y": 23.666666666666668,
+					"width": 15.687499999999998,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "parameters-f",
+				"label": "PARAMETERS: F",
+				"kind": "knob",
+				"position": {
+					"x": 50.354166666666664,
+					"y": 23.666666666666668,
+					"width": 15.687499999999998,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "parameters-g",
+				"label": "PARAMETERS: G",
+				"kind": "knob",
+				"position": {
+					"x": 66.04166666666667,
+					"y": 23.666666666666668,
+					"width": 15.687499999999998,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "parameters-h",
+				"label": "PARAMETERS: H",
+				"kind": "knob",
+				"position": {
+					"x": 81.72916666666666,
+					"y": 23.666666666666668,
+					"width": 15.687499999999998,
+					"height": 11.0
+				}
+			},
+			{
+				"id": "transport-record",
+				"label": "TRANSPORT: Record",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 42.0,
+					"width": 23.708333333333336,
+					"height": 11.333333333333332
+				}
+			},
+			{
+				"id": "transport-play",
+				"label": "TRANSPORT: Play",
+				"kind": "button",
+				"position": {
+					"x": 26.291666666666668,
+					"y": 42.0,
+					"width": 23.708333333333336,
+					"height": 11.333333333333332
+				}
+			},
+			{
+				"id": "transport-stop",
+				"label": "TRANSPORT: Stop",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 42.0,
+					"width": 23.708333333333336,
+					"height": 11.333333333333332
+				}
+			},
+			{
+				"id": "transport-function",
+				"label": "TRANSPORT: Function",
+				"kind": "button",
+				"position": {
+					"x": 73.70833333333333,
+					"y": 42.0,
+					"width": 23.708333333333336,
+					"height": 11.333333333333332
+				}
+			},
+			{
+				"id": "trigs-trig-1",
+				"label": "TRIGS: Trig 1",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 60.66666666666667,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-2",
+				"label": "TRIGS: Trig 2",
+				"kind": "button",
+				"position": {
+					"x": 14.4375,
+					"y": 60.66666666666667,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-3",
+				"label": "TRIGS: Trig 3",
+				"kind": "button",
+				"position": {
+					"x": 26.291666666666668,
+					"y": 60.66666666666667,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-4",
+				"label": "TRIGS: Trig 4",
+				"kind": "button",
+				"position": {
+					"x": 38.145833333333336,
+					"y": 60.66666666666667,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-5",
+				"label": "TRIGS: Trig 5",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 60.66666666666667,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-6",
+				"label": "TRIGS: Trig 6",
+				"kind": "button",
+				"position": {
+					"x": 61.854166666666664,
+					"y": 60.66666666666667,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-7",
+				"label": "TRIGS: Trig 7",
+				"kind": "button",
+				"position": {
+					"x": 73.70833333333333,
+					"y": 60.66666666666667,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-8",
+				"label": "TRIGS: Trig 8",
+				"kind": "button",
+				"position": {
+					"x": 85.5625,
+					"y": 60.66666666666667,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-9",
+				"label": "TRIGS: Trig 9",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 75.0,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-10",
+				"label": "TRIGS: Trig 10",
+				"kind": "button",
+				"position": {
+					"x": 14.4375,
+					"y": 75.0,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-11",
+				"label": "TRIGS: Trig 11",
+				"kind": "button",
+				"position": {
+					"x": 26.291666666666668,
+					"y": 75.0,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-12",
+				"label": "TRIGS: Trig 12",
+				"kind": "button",
+				"position": {
+					"x": 38.145833333333336,
+					"y": 75.0,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-13",
+				"label": "TRIGS: Trig 13",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 75.0,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-14",
+				"label": "TRIGS: Trig 14",
+				"kind": "button",
+				"position": {
+					"x": 61.854166666666664,
+					"y": 75.0,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-15",
+				"label": "TRIGS: Trig 15",
+				"kind": "button",
+				"position": {
+					"x": 73.70833333333333,
+					"y": 75.0,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			},
+			{
+				"id": "trigs-trig-16",
+				"label": "TRIGS: Trig 16",
+				"kind": "button",
+				"position": {
+					"x": 85.5625,
+					"y": 75.0,
+					"width": 11.854166666666668,
+					"height": 14.333333333333334
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI THRU",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI",
+			"connector": "USB-B",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT L",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio IN L",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio IN R",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "6.35 mm TRS",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "DC power",
+			"connector": "DC power supply",
+			"direction": "input",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.elektron.se/explore/digitakt-ii",
+		"https://www.elektron.se/support-downloads/digitakt-ii",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

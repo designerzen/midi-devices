@@ -1,496 +1,352 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 740" role="group" aria-labelledby="buchla-easel-command-interface--title" aria-describedby="buchla-easel-command-interface--description" data-device="buchla-easel-command" data-diagram-style="wireframe" style="background: #fff; color: #000;">
-<title id="buchla-easel-command-interface--title">Buchla Easel Command labelled interface</title><desc id="buchla-easel-command-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
-<g id="buchla-easel-command-interface--chassis" aria-hidden="true">
-<rect x="9" y="9" width="1582" height="722" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Buchla Easel Command</text>
-<text x="1575" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="620" height="80" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="32" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">STORED PROGRAM</text>
-<rect x="660" y="65" width="730" height="80" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="667" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">TOP CONNECTIONS</text>
-<rect x="25" y="160" width="300" height="125" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="32" y="174" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">SEQUENTIAL VOLTAGE</text>
-<rect x="340" y="160" width="350" height="125" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="347" y="174" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE / PULSER</text>
-<rect x="705" y="160" width="210" height="125" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="712" y="174" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MOD OSCILLATOR</text>
-<rect x="930" y="160" width="245" height="125" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="937" y="174" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">COMPLEX OSCILLATOR</text>
-<rect x="1190" y="160" width="200" height="125" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1197" y="174" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">DUAL LO PASS GATE</text>
-<rect x="25" y="300" width="300" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="32" y="314" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">SEQUENCER VOLTAGES</text>
-<rect x="340" y="300" width="200" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="347" y="314" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
-<rect x="555" y="300" width="135" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="562" y="314" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">PULSER</text>
-<rect x="705" y="300" width="210" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="712" y="314" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MOD OSC FADERS</text>
-<rect x="930" y="300" width="245" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="937" y="314" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">COMPLEX OSC FADERS</text>
-<rect x="1190" y="300" width="200" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1197" y="314" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">LPG LEVELS</text>
-<rect x="1405" y="65" width="170" height="510" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1412" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MIX / REVERB</text>
-<rect x="25" y="590" width="1365" height="100" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="32" y="604" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">BANANA PATCH POINTS</text>
-</g>
-<g id="buchla-easel-command-interface--stored-program-program-card" data-part="stored-program-program-card" data-kind="slot" role="group" aria-roledescription="control" aria-label="STORED PROGRAM: Program card"><title>STORED PROGRAM: Program card</title><g aria-hidden="true">
-<rect x="39" y="104.785" width="288" height="8" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="183" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Program card</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--stored-program-control" data-part="stored-program-control" data-kind="switch" role="group" aria-roledescription="switch" aria-label="STORED PROGRAM: Control"><title>STORED PROGRAM: Control</title><g aria-hidden="true">
-<rect x="482" y="96.785" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="478" y="104.785" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="487" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Control</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--top-connections-mod-osc-in" data-part="top-connections-mod-osc-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Mod osc IN"><title>TOP CONNECTIONS: Mod osc IN</title><g aria-hidden="true">
-<circle cx="710.875" cy="108.785" r="6.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="710.875" cy="108.785" r="3.02" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="710.875" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mod osc IN</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--top-connections-mod-osc-out" data-part="top-connections-mod-osc-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Mod osc OUT"><title>TOP CONNECTIONS: Mod osc OUT</title><g aria-hidden="true">
-<circle cx="800.625" cy="108.785" r="6.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="800.625" cy="108.785" r="3.02" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="800.625" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mod osc OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--top-connections-inverter-in" data-part="top-connections-inverter-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Inverter IN"><title>TOP CONNECTIONS: Inverter IN</title><g aria-hidden="true">
-<circle cx="890.375" cy="108.785" r="6.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="890.375" cy="108.785" r="3.02" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="890.375" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Inverter IN</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--top-connections-inverter-out" data-part="top-connections-inverter-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Inverter OUT"><title>TOP CONNECTIONS: Inverter OUT</title><g aria-hidden="true">
-<circle cx="980.125" cy="108.785" r="6.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="980.125" cy="108.785" r="3.02" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="980.125" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Inverter OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--top-connections-complex-osc-out" data-part="top-connections-complex-osc-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Complex osc OUT"><title>TOP CONNECTIONS: Complex osc OUT</title><g aria-hidden="true">
-<circle cx="1069.875" cy="102.57" r="2.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1069.875" cy="102.57" r="1.28" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1069.875" y="123.57" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Complex osc</text>
-<text x="1069.875" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--top-connections-preamp-in" data-part="top-connections-preamp-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Preamp IN"><title>TOP CONNECTIONS: Preamp IN</title><g aria-hidden="true">
-<circle cx="1159.625" cy="108.785" r="6.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1159.625" cy="108.785" r="3.02" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1159.625" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Preamp IN</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--top-connections-card-in" data-part="top-connections-card-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Card IN"><title>TOP CONNECTIONS: Card IN</title><g aria-hidden="true">
-<circle cx="1249.375" cy="108.785" r="6.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1249.375" cy="108.785" r="3.02" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1249.375" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Card IN</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--top-connections-mix-out" data-part="top-connections-mix-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP CONNECTIONS: Mix OUT"><title>TOP CONNECTIONS: Mix OUT</title><g aria-hidden="true">
-<circle cx="1339.125" cy="108.785" r="6.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1339.125" cy="108.785" r="3.02" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1339.125" y="136" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mix OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequential-voltage-trigger" data-part="sequential-voltage-trigger" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SEQUENTIAL VOLTAGE: Trigger"><title>SEQUENTIAL VOLTAGE: Trigger</title><g aria-hidden="true">
-<rect x="46.571" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="42.571" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="51.571" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Trigger</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequential-voltage-stages" data-part="sequential-voltage-stages" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SEQUENTIAL VOLTAGE: Stages"><title>SEQUENTIAL VOLTAGE: Stages</title><g aria-hidden="true">
-<rect x="87.714" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="83.714" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="92.714" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Stages</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequential-voltage-pulse-1" data-part="sequential-voltage-pulse-1" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SEQUENTIAL VOLTAGE: Pulse 1"><title>SEQUENTIAL VOLTAGE: Pulse 1</title><g aria-hidden="true">
-<rect x="128.857" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="124.857" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="133.857" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Pulse 1</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequential-voltage-pulse-2" data-part="sequential-voltage-pulse-2" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SEQUENTIAL VOLTAGE: Pulse 2"><title>SEQUENTIAL VOLTAGE: Pulse 2</title><g aria-hidden="true">
-<rect x="170" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="166" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="175" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Pulse 2</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequential-voltage-pulse-3" data-part="sequential-voltage-pulse-3" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SEQUENTIAL VOLTAGE: Pulse 3"><title>SEQUENTIAL VOLTAGE: Pulse 3</title><g aria-hidden="true">
-<rect x="211.143" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="207.143" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="216.143" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Pulse 3</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequential-voltage-pulse-4" data-part="sequential-voltage-pulse-4" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SEQUENTIAL VOLTAGE: Pulse 4"><title>SEQUENTIAL VOLTAGE: Pulse 4</title><g aria-hidden="true">
-<rect x="252.286" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="248.286" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="257.286" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Pulse 4</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequential-voltage-pulse-5" data-part="sequential-voltage-pulse-5" data-kind="switch" role="group" aria-roledescription="switch" aria-label="SEQUENTIAL VOLTAGE: Pulse 5"><title>SEQUENTIAL VOLTAGE: Pulse 5</title><g aria-hidden="true">
-<rect x="293.429" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="289.429" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="298.429" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Pulse 5</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--envelope-pulser-eg-trigger" data-part="envelope-pulser-eg-trigger" data-kind="switch" role="group" aria-roledescription="switch" aria-label="ENVELOPE / PULSER: EG trigger"><title>ENVELOPE / PULSER: EG trigger</title><g aria-hidden="true">
-<rect x="383.25" y="214.285" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="379.25" y="222.285" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="388.25" y="276" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">EG trigger</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--envelope-pulser-eg-mode" data-part="envelope-pulser-eg-mode" data-kind="switch" role="group" aria-roledescription="switch" aria-label="ENVELOPE / PULSER: EG mode"><title>ENVELOPE / PULSER: EG mode</title><g aria-hidden="true">
-<rect x="467.75" y="214.285" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="463.75" y="222.285" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="472.75" y="276" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">EG mode</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--envelope-pulser-pulser-trigger" data-part="envelope-pulser-pulser-trigger" data-kind="switch" role="group" aria-roledescription="switch" aria-label="ENVELOPE / PULSER: Pulser trigger"><title>ENVELOPE / PULSER: Pulser trigger</title><g aria-hidden="true">
-<rect x="552.25" y="208.07" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="548.25" y="216.07" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="557.25" y="263.57" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pulser</text>
-<text x="557.25" y="276" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">trigger</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--envelope-pulser-pulser-mode" data-part="envelope-pulser-pulser-mode" data-kind="switch" role="group" aria-roledescription="switch" aria-label="ENVELOPE / PULSER: Pulser mode"><title>ENVELOPE / PULSER: Pulser mode</title><g aria-hidden="true">
-<rect x="636.75" y="214.285" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="632.75" y="222.285" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="641.75" y="276" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pulser mode</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mod-oscillator-wave-shape" data-part="mod-oscillator-wave-shape" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD OSCILLATOR: Wave shape"><title>MOD OSCILLATOR: Wave shape</title><g aria-hidden="true">
-<circle cx="735.75" cy="228.545" r="12.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M735.75 219.17L735.75 224.214" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="735.75" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Wave shape</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mod-oscillator-fine-tune" data-part="mod-oscillator-fine-tune" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MOD OSCILLATOR: Fine tune"><title>MOD OSCILLATOR: Fine tune</title><g aria-hidden="true">
-<circle cx="785.25" cy="228.545" r="12.375" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M785.25 219.17L785.25 224.214" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="785.25" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Fine tune</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mod-oscillator-range" data-part="mod-oscillator-range" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MOD OSCILLATOR: Range"><title>MOD OSCILLATOR: Range</title><g aria-hidden="true">
-<rect x="829.75" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="825.75" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="834.75" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Range</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mod-oscillator-modulation" data-part="mod-oscillator-modulation" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MOD OSCILLATOR: Modulation"><title>MOD OSCILLATOR: Modulation</title><g aria-hidden="true">
-<rect x="879.25" y="216.545" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="875.25" y="224.545" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="884.25" y="276" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Modulation</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--complex-oscillator-wave-shape" data-part="complex-oscillator-wave-shape" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="COMPLEX OSCILLATOR: Wave shape"><title>COMPLEX OSCILLATOR: Wave shape</title><g aria-hidden="true">
-<circle cx="965.125" cy="227.892" r="14.562" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M965.125 216.33L965.125 222.796" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="965.125" y="276" fill="currentColor" stroke="none" font-size="8.155000000000001" text-anchor="middle">Wave shape</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--complex-oscillator-fine-tune" data-part="complex-oscillator-fine-tune" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="COMPLEX OSCILLATOR: Fine tune"><title>COMPLEX OSCILLATOR: Fine tune</title><g aria-hidden="true">
-<circle cx="1023.375" cy="227.892" r="14.562" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1023.375 216.33L1023.375 222.796" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="1023.375" y="276" fill="currentColor" stroke="none" font-size="8.155000000000001" text-anchor="middle">Fine tune</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--complex-oscillator-keyboard" data-part="complex-oscillator-keyboard" data-kind="switch" role="group" aria-roledescription="switch" aria-label="COMPLEX OSCILLATOR: Keyboard"><title>COMPLEX OSCILLATOR: Keyboard</title><g aria-hidden="true">
-<rect x="1076.625" y="215.892" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1072.625" y="223.892" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1081.625" y="276" fill="currentColor" stroke="none" font-size="8.155000000000001" text-anchor="middle">Keyboard</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--complex-oscillator-polarity" data-part="complex-oscillator-polarity" data-kind="switch" role="group" aria-roledescription="switch" aria-label="COMPLEX OSCILLATOR: Polarity"><title>COMPLEX OSCILLATOR: Polarity</title><g aria-hidden="true">
-<rect x="1134.875" y="215.892" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1130.875" y="223.892" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1139.875" y="276" fill="currentColor" stroke="none" font-size="8.155000000000001" text-anchor="middle">Polarity</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--dual-lo-pass-gate-gate-source" data-part="dual-lo-pass-gate-gate-source" data-kind="switch" role="group" aria-roledescription="switch" aria-label="DUAL LO PASS GATE: Gate source"><title>DUAL LO PASS GATE: Gate source</title><g aria-hidden="true">
-<rect x="1222.333" y="215.543" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1218.333" y="223.543" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1227.333" y="276" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Gate source</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--dual-lo-pass-gate-mode-1" data-part="dual-lo-pass-gate-mode-1" data-kind="switch" role="group" aria-roledescription="switch" aria-label="DUAL LO PASS GATE: Mode 1"><title>DUAL LO PASS GATE: Mode 1</title><g aria-hidden="true">
-<rect x="1285" y="215.543" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1281" y="223.543" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1290" y="276" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Mode 1</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--dual-lo-pass-gate-mode-2" data-part="dual-lo-pass-gate-mode-2" data-kind="switch" role="group" aria-roledescription="switch" aria-label="DUAL LO PASS GATE: Mode 2"><title>DUAL LO PASS GATE: Mode 2</title><g aria-hidden="true">
-<rect x="1347.667" y="215.543" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1343.667" y="223.543" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1352.667" y="276" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Mode 2</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequencer-voltages-stage-1" data-part="sequencer-voltages-stage-1" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SEQUENCER VOLTAGES: Stage 1"><title>SEQUENCER VOLTAGES: Stage 1</title><g aria-hidden="true">
-<rect x="53.464" y="335" width="12.672" height="211.888" rx="4.224" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="47.128" y="435.546" width="25.344" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="59.8" y="566" fill="currentColor" stroke="none" font-size="8.064000000000002" text-anchor="middle">Stage 1</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequencer-voltages-stage-2" data-part="sequencer-voltages-stage-2" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SEQUENCER VOLTAGES: Stage 2"><title>SEQUENCER VOLTAGES: Stage 2</title><g aria-hidden="true">
-<rect x="111.064" y="335" width="12.672" height="211.888" rx="4.224" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="104.728" y="435.546" width="25.344" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="117.4" y="566" fill="currentColor" stroke="none" font-size="8.064000000000002" text-anchor="middle">Stage 2</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequencer-voltages-stage-3" data-part="sequencer-voltages-stage-3" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SEQUENCER VOLTAGES: Stage 3"><title>SEQUENCER VOLTAGES: Stage 3</title><g aria-hidden="true">
-<rect x="168.664" y="335" width="12.672" height="211.888" rx="4.224" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="162.328" y="435.546" width="25.344" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="175" y="566" fill="currentColor" stroke="none" font-size="8.064000000000002" text-anchor="middle">Stage 3</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequencer-voltages-stage-4" data-part="sequencer-voltages-stage-4" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SEQUENCER VOLTAGES: Stage 4"><title>SEQUENCER VOLTAGES: Stage 4</title><g aria-hidden="true">
-<rect x="226.264" y="335" width="12.672" height="211.888" rx="4.224" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="219.928" y="435.546" width="25.344" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="232.6" y="566" fill="currentColor" stroke="none" font-size="8.064000000000002" text-anchor="middle">Stage 4</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--sequencer-voltages-stage-5" data-part="sequencer-voltages-stage-5" data-kind="fader" role="group" aria-roledescription="slider" aria-label="SEQUENCER VOLTAGES: Stage 5"><title>SEQUENCER VOLTAGES: Stage 5</title><g aria-hidden="true">
-<rect x="283.864" y="335" width="12.672" height="211.888" rx="4.224" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="277.528" y="435.546" width="25.344" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="290.2" y="566" fill="currentColor" stroke="none" font-size="8.064000000000002" text-anchor="middle">Stage 5</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--envelope-attack" data-part="envelope-attack" data-kind="fader" role="group" aria-roledescription="slider" aria-label="ENVELOPE: Attack"><title>ENVELOPE: Attack</title><g aria-hidden="true">
-<rect x="370.44" y="335" width="13.787" height="211.086" rx="4.596" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="363.547" y="435.161" width="27.573" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="377.333" y="566" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Attack</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--envelope-sustain" data-part="envelope-sustain" data-kind="fader" role="group" aria-roledescription="slider" aria-label="ENVELOPE: Sustain"><title>ENVELOPE: Sustain</title><g aria-hidden="true">
-<rect x="433.107" y="335" width="13.787" height="211.086" rx="4.596" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="426.213" y="435.161" width="27.573" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="440" y="566" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Sustain</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--envelope-decay" data-part="envelope-decay" data-kind="fader" role="group" aria-roledescription="slider" aria-label="ENVELOPE: Decay"><title>ENVELOPE: Decay</title><g aria-hidden="true">
-<rect x="495.773" y="335" width="13.787" height="211.086" rx="4.596" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="488.88" y="435.161" width="27.573" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="502.667" y="566" fill="currentColor" stroke="none" font-size="8.773333333333333" text-anchor="middle">Decay</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--pulser-period" data-part="pulser-period" data-kind="fader" role="group" aria-roledescription="slider" aria-label="PULSER: Period"><title>PULSER: Period</title><g aria-hidden="true">
-<rect x="584.985" y="335" width="13.53" height="211.271" rx="4.51" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="578.22" y="435.25" width="27.06" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="591.75" y="566" fill="currentColor" stroke="none" font-size="8.610000000000001" text-anchor="middle">Period</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--pulser-period-cv" data-part="pulser-period-cv" data-kind="fader" role="group" aria-roledescription="slider" aria-label="PULSER: Period CV"><title>PULSER: Period CV</title><g aria-hidden="true">
-<rect x="646.485" y="335" width="13.53" height="211.271" rx="4.51" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="639.72" y="435.25" width="27.06" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="653.25" y="566" fill="currentColor" stroke="none" font-size="8.610000000000001" text-anchor="middle">Period CV</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mod-osc-faders-frequency" data-part="mod-osc-faders-frequency" data-kind="fader" role="group" aria-roledescription="slider" aria-label="MOD OSC FADERS: Frequency"><title>MOD OSC FADERS: Frequency</title><g aria-hidden="true">
-<rect x="737" y="335" width="14" height="210.559" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="730" y="434.908" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="744" y="566" fill="currentColor" stroke="none" font-size="9.24" text-anchor="middle">Frequency</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mod-osc-faders-freq-cv" data-part="mod-osc-faders-freq-cv" data-kind="fader" role="group" aria-roledescription="slider" aria-label="MOD OSC FADERS: Freq CV"><title>MOD OSC FADERS: Freq CV</title><g aria-hidden="true">
-<rect x="803" y="335" width="14" height="210.559" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="796" y="434.908" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="810" y="566" fill="currentColor" stroke="none" font-size="9.24" text-anchor="middle">Freq CV</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mod-osc-faders-mod-amount" data-part="mod-osc-faders-mod-amount" data-kind="fader" role="group" aria-roledescription="slider" aria-label="MOD OSC FADERS: Mod amount"><title>MOD OSC FADERS: Mod amount</title><g aria-hidden="true">
-<rect x="869" y="335" width="14" height="210.559" rx="4.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="862" y="434.908" width="28" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="876" y="566" fill="currentColor" stroke="none" font-size="9.24" text-anchor="middle">Mod amount</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--complex-osc-faders-pitch" data-part="complex-osc-faders-pitch" data-kind="fader" role="group" aria-roledescription="slider" aria-label="COMPLEX OSC FADERS: Pitch"><title>COMPLEX OSC FADERS: Pitch</title><g aria-hidden="true">
-<rect x="958.717" y="335" width="12.815" height="211.785" rx="4.272" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="952.31" y="435.497" width="25.63" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="965.125" y="566" fill="currentColor" stroke="none" font-size="8.155000000000001" text-anchor="middle">Pitch</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--complex-osc-faders-pitch-cv" data-part="complex-osc-faders-pitch-cv" data-kind="fader" role="group" aria-roledescription="slider" aria-label="COMPLEX OSC FADERS: Pitch CV"><title>COMPLEX OSC FADERS: Pitch CV</title><g aria-hidden="true">
-<rect x="1016.967" y="335" width="12.815" height="211.785" rx="4.272" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1010.56" y="435.497" width="25.63" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="1023.375" y="566" fill="currentColor" stroke="none" font-size="8.155000000000001" text-anchor="middle">Pitch CV</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--complex-osc-faders-timbre" data-part="complex-osc-faders-timbre" data-kind="fader" role="group" aria-roledescription="slider" aria-label="COMPLEX OSC FADERS: Timbre"><title>COMPLEX OSC FADERS: Timbre</title><g aria-hidden="true">
-<rect x="1075.217" y="335" width="12.815" height="211.785" rx="4.272" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1068.81" y="435.497" width="25.63" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="1081.625" y="566" fill="currentColor" stroke="none" font-size="8.155000000000001" text-anchor="middle">Timbre</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--complex-osc-faders-timbre-cv" data-part="complex-osc-faders-timbre-cv" data-kind="fader" role="group" aria-roledescription="slider" aria-label="COMPLEX OSC FADERS: Timbre CV"><title>COMPLEX OSC FADERS: Timbre CV</title><g aria-hidden="true">
-<rect x="1133.467" y="335" width="12.815" height="211.785" rx="4.272" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1127.06" y="435.497" width="25.63" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="1139.875" y="566" fill="currentColor" stroke="none" font-size="8.155000000000001" text-anchor="middle">Timbre CV</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--lpg-levels-level-1" data-part="lpg-levels-level-1" data-kind="fader" role="group" aria-roledescription="slider" aria-label="LPG LEVELS: Level 1"><title>LPG LEVELS: Level 1</title><g aria-hidden="true">
-<rect x="1214.33" y="335" width="10.34" height="213.09" rx="3.447" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1209.16" y="436.123" width="20.68" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="1219.5" y="566" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Level 1</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--lpg-levels-cv-1" data-part="lpg-levels-cv-1" data-kind="fader" role="group" aria-roledescription="slider" aria-label="LPG LEVELS: CV 1"><title>LPG LEVELS: CV 1</title><g aria-hidden="true">
-<rect x="1261.33" y="335" width="10.34" height="213.09" rx="3.447" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1256.16" y="436.123" width="20.68" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="1266.5" y="566" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">CV 1</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--lpg-levels-level-2" data-part="lpg-levels-level-2" data-kind="fader" role="group" aria-roledescription="slider" aria-label="LPG LEVELS: Level 2"><title>LPG LEVELS: Level 2</title><g aria-hidden="true">
-<rect x="1308.33" y="335" width="10.34" height="213.09" rx="3.447" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1303.16" y="436.123" width="20.68" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="1313.5" y="566" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">Level 2</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--lpg-levels-cv-2" data-part="lpg-levels-cv-2" data-kind="fader" role="group" aria-roledescription="slider" aria-label="LPG LEVELS: CV 2"><title>LPG LEVELS: CV 2</title><g aria-hidden="true">
-<rect x="1355.33" y="335" width="10.34" height="213.09" rx="3.447" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1350.16" y="436.123" width="20.68" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
-<text x="1360.5" y="566" fill="currentColor" stroke="none" font-size="7" text-anchor="middle">CV 2</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mix-reverb-preamp-gain" data-part="mix-reverb-preamp-gain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / REVERB: Preamp gain"><title>MIX / REVERB: Preamp gain</title><g aria-hidden="true">
-<circle cx="1490" cy="120.214" r="15.994" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1490 107.22L1490 114.616" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="1490" y="158.857" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Preamp gain</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mix-reverb-channel-a" data-part="mix-reverb-channel-a" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / REVERB: Channel A"><title>MIX / REVERB: Channel A</title><g aria-hidden="true">
-<circle cx="1490" cy="188.071" r="15.994" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1490 175.077L1490 182.473" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="1490" y="226.714" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Channel A</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mix-reverb-channel-b" data-part="mix-reverb-channel-b" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / REVERB: Channel B"><title>MIX / REVERB: Channel B</title><g aria-hidden="true">
-<circle cx="1490" cy="255.928" r="15.994" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1490 242.934L1490 250.33" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="1490" y="294.571" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Channel B</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mix-reverb-reverb" data-part="mix-reverb-reverb" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / REVERB: Reverb"><title>MIX / REVERB: Reverb</title><g aria-hidden="true">
-<circle cx="1490" cy="323.785" r="15.994" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1490 310.791L1490 318.187" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="1490" y="362.429" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Reverb</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mix-reverb-monitor-level" data-part="mix-reverb-monitor-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / REVERB: Monitor level"><title>MIX / REVERB: Monitor level</title><g aria-hidden="true">
-<circle cx="1490" cy="391.642" r="15.994" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1490 378.648L1490 386.044" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="1490" y="430.286" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Monitor level</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mix-reverb-phones" data-part="mix-reverb-phones" data-kind="jack" role="group" aria-roledescription="socket" aria-label="MIX / REVERB: Phones"><title>MIX / REVERB: Phones</title><g aria-hidden="true">
-<circle cx="1490" cy="459.499" r="13.328" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1490" cy="459.499" r="6" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1490" y="498.143" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Phones</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--mix-reverb-master-volume" data-part="mix-reverb-master-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIX / REVERB: Master volume"><title>MIX / REVERB: Master volume</title><g aria-hidden="true">
-<circle cx="1490" cy="527.356" r="15.994" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1490 514.363L1490 521.759" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-<text x="1490" y="566" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Master volume</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-pulse" data-part="banana-patch-points-pulse" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Pulse"><title>BANANA PATCH POINTS: Pulse</title><g aria-hidden="true">
-<circle cx="73.281" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="73.281" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="73.281" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pulse</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-pressure" data-part="banana-patch-points-pressure" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Pressure"><title>BANANA PATCH POINTS: Pressure</title><g aria-hidden="true">
-<circle cx="157.844" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="157.844" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="157.844" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pressure</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-pitch" data-part="banana-patch-points-pitch" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Pitch"><title>BANANA PATCH POINTS: Pitch</title><g aria-hidden="true">
-<circle cx="242.406" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="242.406" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="242.406" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pitch</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-mod-freq" data-part="banana-patch-points-mod-freq" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Mod freq"><title>BANANA PATCH POINTS: Mod freq</title><g aria-hidden="true">
-<circle cx="326.969" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="326.969" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="326.969" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mod freq</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-eg-in" data-part="banana-patch-points-eg-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: EG IN"><title>BANANA PATCH POINTS: EG IN</title><g aria-hidden="true">
-<circle cx="411.531" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="411.531" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="411.531" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">EG IN</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-eg-out" data-part="banana-patch-points-eg-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: EG OUT"><title>BANANA PATCH POINTS: EG OUT</title><g aria-hidden="true">
-<circle cx="496.094" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="496.094" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="496.094" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">EG OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-seq-out" data-part="banana-patch-points-seq-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Seq OUT"><title>BANANA PATCH POINTS: Seq OUT</title><g aria-hidden="true">
-<circle cx="580.656" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="580.656" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="580.656" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Seq OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-random-out" data-part="banana-patch-points-random-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Random OUT"><title>BANANA PATCH POINTS: Random OUT</title><g aria-hidden="true">
-<circle cx="665.219" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="665.219" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="665.219" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Random OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-pulser-out" data-part="banana-patch-points-pulser-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Pulser OUT"><title>BANANA PATCH POINTS: Pulser OUT</title><g aria-hidden="true">
-<circle cx="749.781" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="749.781" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="749.781" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pulser OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-mod-cv" data-part="banana-patch-points-mod-cv" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Mod CV"><title>BANANA PATCH POINTS: Mod CV</title><g aria-hidden="true">
-<circle cx="834.344" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="834.344" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="834.344" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mod CV</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-mod-out" data-part="banana-patch-points-mod-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Mod OUT"><title>BANANA PATCH POINTS: Mod OUT</title><g aria-hidden="true">
-<circle cx="918.906" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="918.906" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="918.906" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mod OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-pitch-cv" data-part="banana-patch-points-pitch-cv" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Pitch CV"><title>BANANA PATCH POINTS: Pitch CV</title><g aria-hidden="true">
-<circle cx="1003.469" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1003.469" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1003.469" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pitch CV</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-complex-out" data-part="banana-patch-points-complex-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Complex OUT"><title>BANANA PATCH POINTS: Complex OUT</title><g aria-hidden="true">
-<circle cx="1088.031" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1088.031" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1088.031" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Complex OUT</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-timbre-cv" data-part="banana-patch-points-timbre-cv" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: Timbre CV"><title>BANANA PATCH POINTS: Timbre CV</title><g aria-hidden="true">
-<circle cx="1172.594" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1172.594" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1172.594" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Timbre CV</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-lpg-1-cv" data-part="banana-patch-points-lpg-1-cv" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: LPG 1 CV"><title>BANANA PATCH POINTS: LPG 1 CV</title><g aria-hidden="true">
-<circle cx="1257.156" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1257.156" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1257.156" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">LPG 1 CV</text>
-</g>
-</g>
-<g id="buchla-easel-command-interface--banana-patch-points-lpg-2-cv" data-part="banana-patch-points-lpg-2-cv" data-kind="jack" role="group" aria-roledescription="socket" aria-label="BANANA PATCH POINTS: LPG 2 CV"><title>BANANA PATCH POINTS: LPG 2 CV</title><g aria-hidden="true">
-<circle cx="1341.719" cy="643.785" r="12.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1341.719" cy="643.785" r="5.82" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="1341.719" y="681" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">LPG 2 CV</text>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 740" role="img" aria-labelledby="title description">
+<title id="title">Buchla Easel Command labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect x="0" y="0" width="1600" height="740" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1582" height="722" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Buchla Easel Command</text>
+<text x="1575" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="65" width="620" height="80" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">STORED PROGRAM</text>
+<g id="stored-program-program-card" data-kind="slot" aria-label="Program card"><title>Program card</title>
+<rect x="39" y="106.35" width="288" height="8" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="183" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Program card</text>
+</g>
+<g id="stored-program-control" data-kind="switch" aria-label="Control"><title>Control</title>
+<svg data-symbol="switch" x="477.650" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="487" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Control</text>
+</g>
+<rect x="660" y="65" width="730" height="80" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="667" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">TOP CONNECTIONS</text>
+<g id="top-connections-mod-osc-in" data-kind="input" aria-label="Mod osc IN"><title>Mod osc IN</title>
+<svg data-symbol="input" x="701.525" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="710.875" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Mod osc IN</text>
+</g>
+<g id="top-connections-mod-osc-out" data-kind="output" aria-label="Mod osc OUT"><title>Mod osc OUT</title>
+<svg data-symbol="output" x="791.275" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="800.625" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Mod osc OUT</text>
+</g>
+<g id="top-connections-inverter-in" data-kind="input" aria-label="Inverter IN"><title>Inverter IN</title>
+<svg data-symbol="input" x="881.025" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="890.375" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Inverter IN</text>
+</g>
+<g id="top-connections-inverter-out" data-kind="output" aria-label="Inverter OUT"><title>Inverter OUT</title>
+<svg data-symbol="output" x="970.775" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="980.125" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Inverter OUT</text>
+</g>
+<g id="top-connections-complex-osc-out" data-kind="output" aria-label="Complex osc OUT"><title>Complex osc OUT</title>
+<svg data-symbol="output" x="1060.525" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="1069.875" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Complex osc OUT</text>
+</g>
+<g id="top-connections-preamp-in" data-kind="input" aria-label="Preamp IN"><title>Preamp IN</title>
+<svg data-symbol="input" x="1150.275" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="1159.625" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Preamp IN</text>
+</g>
+<g id="top-connections-card-in" data-kind="input" aria-label="Card IN"><title>Card IN</title>
+<svg data-symbol="input" x="1240.025" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="1249.375" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Card IN</text>
+</g>
+<g id="top-connections-mix-out" data-kind="output" aria-label="Mix OUT"><title>Mix OUT</title>
+<svg data-symbol="output" x="1329.775" y="100.000" width="18.700" height="18.700" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="1339.125" y="136" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.0" text-anchor="middle">Mix OUT</text>
+</g>
+<rect x="25" y="160" width="300" height="125" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="32" y="174" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">SEQUENTIAL VOLTAGE</text>
+<g id="sequential-voltage-trigger" data-kind="switch" aria-label="Trigger"><title>Trigger</title>
+<svg data-symbol="switch" x="36.000" y="213.674" width="31.143" height="31.143" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="51.571" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5.760000000000001" text-anchor="middle">Trigger</text>
+</g>
+<g id="sequential-voltage-stages" data-kind="switch" aria-label="Stages"><title>Stages</title>
+<svg data-symbol="switch" x="77.143" y="213.674" width="31.143" height="31.143" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="92.714" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5.760000000000001" text-anchor="middle">Stages</text>
+</g>
+<g id="sequential-voltage-pulse-1" data-kind="switch" aria-label="Pulse 1"><title>Pulse 1</title>
+<svg data-symbol="switch" x="118.286" y="213.674" width="31.143" height="31.143" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="133.857" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5.760000000000001" text-anchor="middle">Pulse 1</text>
+</g>
+<g id="sequential-voltage-pulse-2" data-kind="switch" aria-label="Pulse 2"><title>Pulse 2</title>
+<svg data-symbol="switch" x="159.429" y="213.674" width="31.143" height="31.143" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="175" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5.760000000000001" text-anchor="middle">Pulse 2</text>
+</g>
+<g id="sequential-voltage-pulse-3" data-kind="switch" aria-label="Pulse 3"><title>Pulse 3</title>
+<svg data-symbol="switch" x="200.571" y="213.674" width="31.143" height="31.143" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="216.143" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5.760000000000001" text-anchor="middle">Pulse 3</text>
+</g>
+<g id="sequential-voltage-pulse-4" data-kind="switch" aria-label="Pulse 4"><title>Pulse 4</title>
+<svg data-symbol="switch" x="241.714" y="213.674" width="31.143" height="31.143" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="257.286" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5.760000000000001" text-anchor="middle">Pulse 4</text>
+</g>
+<g id="sequential-voltage-pulse-5" data-kind="switch" aria-label="Pulse 5"><title>Pulse 5</title>
+<svg data-symbol="switch" x="282.857" y="213.674" width="31.143" height="31.143" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="298.429" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="5.760000000000001" text-anchor="middle">Pulse 5</text>
+</g>
+<rect x="340" y="160" width="350" height="125" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="347" y="174" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE / PULSER</text>
+<g id="envelope-pulser-eg-trigger" data-kind="switch" aria-label="EG trigger"><title>EG trigger</title>
+<svg data-symbol="switch" x="364.250" y="202.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="388.25" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG trigger</text>
+</g>
+<g id="envelope-pulser-eg-mode" data-kind="switch" aria-label="EG mode"><title>EG mode</title>
+<svg data-symbol="switch" x="448.750" y="202.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="472.75" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG mode</text>
+</g>
+<g id="envelope-pulser-pulser-trigger" data-kind="switch" aria-label="Pulser trigger"><title>Pulser trigger</title>
+<svg data-symbol="switch" x="533.250" y="196.070" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="557.25" y="263.57" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pulser</text>
+<text x="557.25" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">trigger</text>
+</g>
+<g id="envelope-pulser-pulser-mode" data-kind="switch" aria-label="Pulser mode"><title>Pulser mode</title>
+<svg data-symbol="switch" x="617.750" y="202.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="641.75" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pulser mode</text>
+</g>
+<rect x="705" y="160" width="210" height="125" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="712" y="174" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MOD OSCILLATOR</text>
+<g id="mod-oscillator-wave-shape" data-kind="knob" aria-label="Wave shape"><title>Wave shape</title>
+<svg data-symbol="knob" x="716.000" y="208.835" width="39.500" height="39.500" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="735.75" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.930000000000001" text-anchor="middle">Wave shape</text>
+</g>
+<g id="mod-oscillator-fine-tune" data-kind="knob" aria-label="Fine tune"><title>Fine tune</title>
+<svg data-symbol="knob" x="765.500" y="208.835" width="39.500" height="39.500" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="785.25" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.930000000000001" text-anchor="middle">Fine tune</text>
+</g>
+<g id="mod-oscillator-range" data-kind="switch" aria-label="Range"><title>Range</title>
+<svg data-symbol="switch" x="815.000" y="208.835" width="39.500" height="39.500" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="834.75" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.930000000000001" text-anchor="middle">Range</text>
+</g>
+<g id="mod-oscillator-modulation" data-kind="switch" aria-label="Modulation"><title>Modulation</title>
+<svg data-symbol="switch" x="864.500" y="208.835" width="39.500" height="39.500" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="884.25" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.930000000000001" text-anchor="middle">Modulation</text>
+</g>
+<rect x="930" y="160" width="245" height="125" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="937" y="174" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">COMPLEX OSCILLATOR</text>
+<g id="complex-oscillator-wave-shape" data-kind="knob" aria-label="Wave shape"><title>Wave shape</title>
+<svg data-symbol="knob" x="941.125" y="203.892" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="965.125" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.155000000000001" text-anchor="middle">Wave shape</text>
+</g>
+<g id="complex-oscillator-fine-tune" data-kind="knob" aria-label="Fine tune"><title>Fine tune</title>
+<svg data-symbol="knob" x="999.375" y="203.892" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1023.375" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.155000000000001" text-anchor="middle">Fine tune</text>
+</g>
+<g id="complex-oscillator-keyboard" data-kind="switch" aria-label="Keyboard"><title>Keyboard</title>
+<svg data-symbol="switch" x="1057.625" y="203.892" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="1081.625" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.155000000000001" text-anchor="middle">Keyboard</text>
+</g>
+<g id="complex-oscillator-polarity" data-kind="switch" aria-label="Polarity"><title>Polarity</title>
+<svg data-symbol="switch" x="1115.875" y="203.892" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="1139.875" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.155000000000001" text-anchor="middle">Polarity</text>
+</g>
+<rect x="1190" y="160" width="200" height="125" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="1197" y="174" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">DUAL LO PASS GATE</text>
+<g id="dual-lo-pass-gate-gate-source" data-kind="switch" aria-label="Gate source"><title>Gate source</title>
+<svg data-symbol="switch" x="1203.333" y="203.543" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="1227.333" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Gate source</text>
+</g>
+<g id="dual-lo-pass-gate-mode-1" data-kind="switch" aria-label="Mode 1"><title>Mode 1</title>
+<svg data-symbol="switch" x="1266.000" y="203.543" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="1290" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Mode 1</text>
+</g>
+<g id="dual-lo-pass-gate-mode-2" data-kind="switch" aria-label="Mode 2"><title>Mode 2</title>
+<svg data-symbol="switch" x="1328.667" y="203.543" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
+<text x="1352.667" y="276" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Mode 2</text>
+</g>
+<rect x="25" y="300" width="300" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="32" y="314" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">SEQUENCER VOLTAGES</text>
+<g id="sequencer-voltages-stage-1" data-kind="fader" aria-label="Stage 1"><title>Stage 1</title>
+<rect data-symbol="fader" x="55.800" y="335.000" width="8.000" height="215.888" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="59.8" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.064000000000002" text-anchor="middle">Stage 1</text>
+</g>
+<g id="sequencer-voltages-stage-2" data-kind="fader" aria-label="Stage 2"><title>Stage 2</title>
+<rect data-symbol="fader" x="113.400" y="335.000" width="8.000" height="215.888" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="117.4" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.064000000000002" text-anchor="middle">Stage 2</text>
+</g>
+<g id="sequencer-voltages-stage-3" data-kind="fader" aria-label="Stage 3"><title>Stage 3</title>
+<rect data-symbol="fader" x="171.000" y="335.000" width="8.000" height="215.888" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="175" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.064000000000002" text-anchor="middle">Stage 3</text>
+</g>
+<g id="sequencer-voltages-stage-4" data-kind="fader" aria-label="Stage 4"><title>Stage 4</title>
+<rect data-symbol="fader" x="228.600" y="335.000" width="8.000" height="215.888" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="232.6" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.064000000000002" text-anchor="middle">Stage 4</text>
+</g>
+<g id="sequencer-voltages-stage-5" data-kind="fader" aria-label="Stage 5"><title>Stage 5</title>
+<rect data-symbol="fader" x="286.200" y="335.000" width="8.000" height="215.888" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="290.2" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.064000000000002" text-anchor="middle">Stage 5</text>
+</g>
+<rect x="340" y="300" width="200" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="347" y="314" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">ENVELOPE</text>
+<g id="envelope-attack" data-kind="fader" aria-label="Attack"><title>Attack</title>
+<rect data-symbol="fader" x="373.333" y="335.000" width="8.000" height="215.086" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="377.333" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Attack</text>
+</g>
+<g id="envelope-sustain" data-kind="fader" aria-label="Sustain"><title>Sustain</title>
+<rect data-symbol="fader" x="436.000" y="335.000" width="8.000" height="215.086" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="440" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Sustain</text>
+</g>
+<g id="envelope-decay" data-kind="fader" aria-label="Decay"><title>Decay</title>
+<rect data-symbol="fader" x="498.667" y="335.000" width="8.000" height="215.086" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="502.667" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.773333333333333" text-anchor="middle">Decay</text>
+</g>
+<rect x="555" y="300" width="135" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="562" y="314" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">PULSER</text>
+<g id="pulser-period" data-kind="fader" aria-label="Period"><title>Period</title>
+<rect data-symbol="fader" x="587.750" y="335.000" width="8.000" height="215.271" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="591.75" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.610000000000001" text-anchor="middle">Period</text>
+</g>
+<g id="pulser-period-cv" data-kind="fader" aria-label="Period CV"><title>Period CV</title>
+<rect data-symbol="fader" x="649.250" y="335.000" width="8.000" height="215.271" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="653.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.610000000000001" text-anchor="middle">Period CV</text>
+</g>
+<rect x="705" y="300" width="210" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="712" y="314" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MOD OSC FADERS</text>
+<g id="mod-osc-faders-frequency" data-kind="fader" aria-label="Frequency"><title>Frequency</title>
+<rect data-symbol="fader" x="740.000" y="335.000" width="8.000" height="214.559" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="744" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.24" text-anchor="middle">Frequency</text>
+</g>
+<g id="mod-osc-faders-freq-cv" data-kind="fader" aria-label="Freq CV"><title>Freq CV</title>
+<rect data-symbol="fader" x="806.000" y="335.000" width="8.000" height="214.559" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="810" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.24" text-anchor="middle">Freq CV</text>
+</g>
+<g id="mod-osc-faders-mod-amount" data-kind="fader" aria-label="Mod amount"><title>Mod amount</title>
+<rect data-symbol="fader" x="872.000" y="335.000" width="8.000" height="214.559" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="876" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.24" text-anchor="middle">Mod amount</text>
+</g>
+<rect x="930" y="300" width="245" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="937" y="314" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">COMPLEX OSC FADERS</text>
+<g id="complex-osc-faders-pitch" data-kind="fader" aria-label="Pitch"><title>Pitch</title>
+<rect data-symbol="fader" x="961.125" y="335.000" width="8.000" height="215.785" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="965.125" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.155000000000001" text-anchor="middle">Pitch</text>
+</g>
+<g id="complex-osc-faders-pitch-cv" data-kind="fader" aria-label="Pitch CV"><title>Pitch CV</title>
+<rect data-symbol="fader" x="1019.375" y="335.000" width="8.000" height="215.785" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1023.375" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.155000000000001" text-anchor="middle">Pitch CV</text>
+</g>
+<g id="complex-osc-faders-timbre" data-kind="fader" aria-label="Timbre"><title>Timbre</title>
+<rect data-symbol="fader" x="1077.625" y="335.000" width="8.000" height="215.785" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1081.625" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.155000000000001" text-anchor="middle">Timbre</text>
+</g>
+<g id="complex-osc-faders-timbre-cv" data-kind="fader" aria-label="Timbre CV"><title>Timbre CV</title>
+<rect data-symbol="fader" x="1135.875" y="335.000" width="8.000" height="215.785" rx="4.000" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1139.875" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.155000000000001" text-anchor="middle">Timbre CV</text>
+</g>
+<rect x="1190" y="300" width="200" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="1197" y="314" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">LPG LEVELS</text>
+<g id="lpg-levels-level-1" data-kind="fader" aria-label="Level 1"><title>Level 1</title>
+<rect data-symbol="fader" x="1216.220" y="335.000" width="6.560" height="217.565" rx="3.280" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1219.5" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.580000000000001" text-anchor="middle">Level 1</text>
+</g>
+<g id="lpg-levels-cv-1" data-kind="fader" aria-label="CV 1"><title>CV 1</title>
+<rect data-symbol="fader" x="1263.220" y="335.000" width="6.560" height="217.565" rx="3.280" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1266.5" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.580000000000001" text-anchor="middle">CV 1</text>
+</g>
+<g id="lpg-levels-level-2" data-kind="fader" aria-label="Level 2"><title>Level 2</title>
+<rect data-symbol="fader" x="1310.220" y="335.000" width="6.560" height="217.565" rx="3.280" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1313.5" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.580000000000001" text-anchor="middle">Level 2</text>
+</g>
+<g id="lpg-levels-cv-2" data-kind="fader" aria-label="CV 2"><title>CV 2</title>
+<rect data-symbol="fader" x="1357.220" y="335.000" width="6.560" height="217.565" rx="3.280" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1360.5" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="6.580000000000001" text-anchor="middle">CV 2</text>
+</g>
+<rect x="1405" y="65" width="170" height="510" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="1412" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MIX / REVERB</text>
+<g id="mix-reverb-preamp-gain" data-kind="knob" aria-label="Preamp gain"><title>Preamp gain</title>
+<svg data-symbol="knob" x="1469.786" y="100.000" width="40.427" height="40.427" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1490" y="158.857" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Preamp gain</text>
+</g>
+<g id="mix-reverb-channel-a" data-kind="knob" aria-label="Channel A"><title>Channel A</title>
+<svg data-symbol="knob" x="1469.786" y="167.857" width="40.427" height="40.427" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1490" y="226.714" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Channel A</text>
+</g>
+<g id="mix-reverb-channel-b" data-kind="knob" aria-label="Channel B"><title>Channel B</title>
+<svg data-symbol="knob" x="1469.786" y="235.714" width="40.427" height="40.427" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1490" y="294.571" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Channel B</text>
+</g>
+<g id="mix-reverb-reverb" data-kind="knob" aria-label="Reverb"><title>Reverb</title>
+<svg data-symbol="knob" x="1469.786" y="303.571" width="40.427" height="40.427" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1490" y="362.429" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Reverb</text>
+</g>
+<g id="mix-reverb-monitor-level" data-kind="knob" aria-label="Monitor level"><title>Monitor level</title>
+<svg data-symbol="knob" x="1469.786" y="371.429" width="40.427" height="40.427" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1490" y="430.286" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Monitor level</text>
+</g>
+<g id="mix-reverb-phones" data-kind="output" aria-label="Phones"><title>Phones</title>
+<svg data-symbol="output" x="1469.786" y="439.286" width="40.427" height="40.427" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="1490" y="498.143" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Phones</text>
+</g>
+<g id="mix-reverb-master-volume" data-kind="knob" aria-label="Master volume"><title>Master volume</title>
+<svg data-symbol="knob" x="1469.786" y="507.143" width="40.427" height="40.427" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<text x="1490" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Master volume</text>
+</g>
+<rect x="25" y="590" width="1365" height="100" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<text x="32" y="604" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">BANANA PATCH POINTS</text>
+<g id="banana-patch-points-pulse" data-kind="input" aria-label="Pulse"><title>Pulse</title>
+<svg data-symbol="input" x="54.496" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="73.281" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pulse</text>
+<svg data-symbol="wave-pulse" x="37.000" y="626.000" width="16.000" height="16.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><path d="M2 35V5H11V35H29V5H38"/></g></svg>
+</g>
+<g id="banana-patch-points-pressure" data-kind="input" aria-label="Pressure"><title>Pressure</title>
+<svg data-symbol="input" x="139.059" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="157.844" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pressure</text>
+</g>
+<g id="banana-patch-points-pitch" data-kind="input" aria-label="Pitch"><title>Pitch</title>
+<svg data-symbol="input" x="223.621" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="242.406" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pitch</text>
+</g>
+<g id="banana-patch-points-mod-freq" data-kind="jack" aria-label="Mod freq"><title>Mod freq</title>
+<circle cx="326.969" cy="644.785" r="13.071" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<circle cx="326.969" cy="644.785" r="6" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="326.969" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Mod freq</text>
+</g>
+<g id="banana-patch-points-eg-in" data-kind="input" aria-label="EG IN"><title>EG IN</title>
+<svg data-symbol="input" x="392.746" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="411.531" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG IN</text>
+</g>
+<g id="banana-patch-points-eg-out" data-kind="output" aria-label="EG OUT"><title>EG OUT</title>
+<svg data-symbol="output" x="477.309" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="496.094" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">EG OUT</text>
+</g>
+<g id="banana-patch-points-seq-out" data-kind="output" aria-label="Seq OUT"><title>Seq OUT</title>
+<svg data-symbol="output" x="561.871" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="580.656" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Seq OUT</text>
+</g>
+<g id="banana-patch-points-random-out" data-kind="output" aria-label="Random OUT"><title>Random OUT</title>
+<svg data-symbol="output" x="646.434" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="665.219" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Random OUT</text>
+</g>
+<g id="banana-patch-points-pulser-out" data-kind="output" aria-label="Pulser OUT"><title>Pulser OUT</title>
+<svg data-symbol="output" x="730.996" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="749.781" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pulser OUT</text>
+</g>
+<g id="banana-patch-points-mod-cv" data-kind="jack" aria-label="Mod CV"><title>Mod CV</title>
+<circle cx="834.344" cy="644.785" r="13.071" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<circle cx="834.344" cy="644.785" r="6" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="834.344" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Mod CV</text>
+</g>
+<g id="banana-patch-points-mod-out" data-kind="output" aria-label="Mod OUT"><title>Mod OUT</title>
+<svg data-symbol="output" x="900.121" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="918.906" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Mod OUT</text>
+</g>
+<g id="banana-patch-points-pitch-cv" data-kind="jack" aria-label="Pitch CV"><title>Pitch CV</title>
+<circle cx="1003.469" cy="644.785" r="13.071" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<circle cx="1003.469" cy="644.785" r="6" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="1003.469" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pitch CV</text>
+</g>
+<g id="banana-patch-points-complex-out" data-kind="output" aria-label="Complex OUT"><title>Complex OUT</title>
+<svg data-symbol="output" x="1069.246" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
+<text x="1088.031" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Complex OUT</text>
+</g>
+<g id="banana-patch-points-timbre-cv" data-kind="input" aria-label="Timbre CV"><title>Timbre CV</title>
+<svg data-symbol="input" x="1153.809" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="1172.594" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Timbre CV</text>
+</g>
+<g id="banana-patch-points-lpg-1-cv" data-kind="input" aria-label="LPG 1 CV"><title>LPG 1 CV</title>
+<svg data-symbol="input" x="1238.371" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="1257.156" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">LPG 1 CV</text>
+</g>
+<g id="banana-patch-points-lpg-2-cv" data-kind="input" aria-label="LPG 2 CV"><title>LPG 2 CV</title>
+<svg data-symbol="input" x="1322.934" y="625.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
+<text x="1341.719" y="681" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">LPG 2 CV</text>
 </g>
 </svg>

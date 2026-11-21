@@ -1,0 +1,236 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "keith-mcmillen-softstep-2",
+	"name": "Keith McMillen SoftStep 2",
+	"manufacturer": "Keith McMillen Instruments",
+	"manufacturerUrl": "https://keithmcmillen.com/",
+	"productUrl": "https://files.keithmcmillen.com/downloads/softstep/SoftStep_Manual_v2.01.pdf",
+	"ids": [
+		"keith-mcmillen-softstep-2"
+	],
+	"portNames": [],
+	"description": "Ten pressure-sensitive foot pads with X/Y sensing and a navigation pad.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Keith McMillen SoftStep 2 - hardware / MIDI documentation",
+			"url": "https://files.keithmcmillen.com/downloads/softstep/SoftStep_Manual_v2.01.pdf"
+		},
+		{
+			"title": "Keith McMillen SoftStep 2 - setup and support reference",
+			"url": "https://support.keithmcmillen.com/hc/en-us/articles/202658809-What-is-the-difference-between-SoftStep-1-and-SoftStep-2-hardware"
+		},
+		{
+			"title": "Keith McMillen SoftStep 2 - setup and support reference",
+			"url": "https://support.keithmcmillen.com/hc/en-us/articles/203346895-What-do-I-need-the-MIDI-Expander-for"
+		}
+	],
+	"abilities": [
+		"Foot-operated control",
+		"Pressure and X/Y sensing",
+		"Configurable sensitivity",
+		"Assignable notes, CC and program changes",
+		"USB MIDI"
+	],
+	"hardwareControls": [
+		"FOOT PADS: Pad 6, Pad 7, Pad 8, Pad 9, Pad 0, Pad 1, Pad 2, Pad 3, Pad 4, Pad 5",
+		"DISPLAY: Preset display",
+		"NAVIGATION PAD: Navigation"
+	],
+	"notice": "Connect the main USB port to a computer or tablet host. Configure pad actions and sensitivity in the compatible SoftStep editor; choose Hosted or Standalone mode to match the preset. DIN MIDI requires a KMI MIDI Expander. This is SoftStep 2 hardware, not SoftStep3: no direct TRS MIDI or CV outputs are claimed. Foot operation may offer an alternative to hand controls; suitability depends on the player and positioning. All assignments are preset-dependent. Select the profile manually if the host does not identify it: no unverified port aliases are supplied. Diagrams are original simplified schematics, not scale drawings. Physical controls without a binding are informational; use MIDI learn for configurable assignments.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Keith McMillen SoftStep 2 schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 400,
+		"elements": [
+			{
+				"id": "foot-pads-pad-6",
+				"label": "FOOT PADS: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 23.75,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-7",
+				"label": "FOOT PADS: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 17.383333333333333,
+					"y": 23.75,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-8",
+				"label": "FOOT PADS: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 32.18333333333333,
+					"y": 23.75,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-9",
+				"label": "FOOT PADS: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 46.98333333333333,
+					"y": 23.75,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-0",
+				"label": "FOOT PADS: Pad 0",
+				"kind": "pad",
+				"position": {
+					"x": 61.78333333333333,
+					"y": 23.75,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-1",
+				"label": "FOOT PADS: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 56.875,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-2",
+				"label": "FOOT PADS: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 17.383333333333333,
+					"y": 56.875,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-3",
+				"label": "FOOT PADS: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 32.18333333333333,
+					"y": 56.875,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-4",
+				"label": "FOOT PADS: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 46.98333333333333,
+					"y": 56.875,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "foot-pads-pad-5",
+				"label": "FOOT PADS: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 61.78333333333333,
+					"y": 56.875,
+					"width": 14.799999999999999,
+					"height": 33.125
+				}
+			},
+			{
+				"id": "display-preset-display",
+				"label": "DISPLAY: Preset display",
+				"kind": "screen",
+				"position": {
+					"x": 79.25,
+					"y": 23.75,
+					"width": 18.166666666666668,
+					"height": 16.25
+				}
+			},
+			{
+				"id": "navigation-pad-navigation",
+				"label": "NAVIGATION PAD: Navigation",
+				"kind": "xy",
+				"position": {
+					"x": 79.25,
+					"y": 51.24999999999999,
+					"width": 18.166666666666668,
+					"height": 38.75
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB host connection",
+			"connector": "USB Type-B",
+			"direction": "bidirectional",
+			"location": "edge"
+		},
+		{
+			"label": "MIDI Expander connection",
+			"connector": "Mini USB (KMI accessory)",
+			"direction": "bidirectional",
+			"location": "edge"
+		},
+		{
+			"label": "Expression pedal",
+			"connector": "3.5 mm TRS",
+			"direction": "input",
+			"location": "edge"
+		}
+	],
+	"diagramSources": [
+		"https://files.keithmcmillen.com/downloads/softstep/SoftStep_Manual_v2.01.pdf",
+		"https://support.keithmcmillen.com/hc/en-us/articles/202658809-What-is-the-difference-between-SoftStep-1-and-SoftStep-2-hardware",
+		"https://support.keithmcmillen.com/hc/en-us/articles/203346895-What-do-I-need-the-MIDI-Expander-for",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

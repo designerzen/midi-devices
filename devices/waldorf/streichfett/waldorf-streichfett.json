@@ -1,0 +1,260 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "waldorf-streichfett",
+	"name": "Waldorf Streichfett",
+	"manufacturer": "Waldorf",
+	"manufacturerUrl": "https://waldorfmusic.com/",
+	"productUrl": "https://waldorfmusic.com/streichfett-en/",
+	"ids": [
+		"waldorf-streichfett"
+	],
+	"portNames": [],
+	"description": "Hardware string synthesizer combining polyphonic strings and a separate solo section.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications and panel",
+			"url": "https://waldorfmusic.com/streichfett-en/"
+		},
+		{
+			"title": "Manufacturer manuals and support",
+			"url": "https://waldorfmusic.com/produkt-faq/"
+		}
+	],
+	"abilities": [
+		"String synthesis",
+		"Solo synthesis",
+		"Layer and split",
+		"Preset memory",
+		"USB MIDI",
+		"DIN MIDI"
+	],
+	"hardwareControls": [
+		"Strings registration, crescendo and release controls",
+		"Solo tone and tremolo controls",
+		"Balance and effect depth controls",
+		"Four program buttons and bank switch"
+	],
+	"notice": "This entry covers the Streichfett hardware module rather than the Streichfett plug-in. Connect a MIDI keyboard or sequencer over USB MIDI or DIN. Configure the receive channel and use the hardware split/layer settings to determine how the strings and solo sections respond. Patch recall can change panel parameter values. Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected hardware appears under the MIDI interface name. Physical controls are unbound and this profile does not supply a complete MIDI implementation. Diagrams show selected physical controls with illustrative positions; consult the linked manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Waldorf Streichfett selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "strings-registration",
+				"label": "STRINGS: Registration",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 15.083333333333334,
+					"height": 26.666666666666668
+				}
+			},
+			{
+				"id": "strings-crescendo",
+				"label": "STRINGS: Crescendo",
+				"kind": "knob",
+				"position": {
+					"x": 17.666666666666668,
+					"y": 12.666666666666668,
+					"width": 15.083333333333334,
+					"height": 26.666666666666668
+				}
+			},
+			{
+				"id": "strings-release",
+				"label": "STRINGS: Release",
+				"kind": "knob",
+				"position": {
+					"x": 32.75,
+					"y": 12.666666666666668,
+					"width": 15.083333333333334,
+					"height": 26.666666666666668
+				}
+			},
+			{
+				"id": "solo-tone",
+				"label": "SOLO: Tone",
+				"kind": "knob",
+				"position": {
+					"x": 50.5,
+					"y": 12.666666666666668,
+					"width": 23.458333333333332,
+					"height": 26.666666666666668
+				}
+			},
+			{
+				"id": "solo-tremolo",
+				"label": "SOLO: Tremolo",
+				"kind": "knob",
+				"position": {
+					"x": 73.95833333333334,
+					"y": 12.666666666666668,
+					"width": 23.458333333333332,
+					"height": 26.666666666666668
+				}
+			},
+			{
+				"id": "mix-and-effect-volume",
+				"label": "MIX AND EFFECT: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 46.666666666666664,
+					"width": 31.61111111111111,
+					"height": 19.333333333333332
+				}
+			},
+			{
+				"id": "mix-and-effect-balance",
+				"label": "MIX AND EFFECT: Balance",
+				"kind": "knob",
+				"position": {
+					"x": 34.19444444444444,
+					"y": 46.666666666666664,
+					"width": 31.61111111111111,
+					"height": 19.333333333333332
+				}
+			},
+			{
+				"id": "mix-and-effect-effect-depth",
+				"label": "MIX AND EFFECT: Effect depth",
+				"kind": "knob",
+				"position": {
+					"x": 65.80555555555556,
+					"y": 46.666666666666664,
+					"width": 31.61111111111111,
+					"height": 19.333333333333332
+				}
+			},
+			{
+				"id": "memory-program-1",
+				"label": "MEMORY: Program 1",
+				"kind": "button",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 73.33333333333333,
+					"width": 18.966666666666665,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "memory-program-2",
+				"label": "MEMORY: Program 2",
+				"kind": "button",
+				"position": {
+					"x": 21.550000000000004,
+					"y": 73.33333333333333,
+					"width": 18.966666666666665,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "memory-program-3",
+				"label": "MEMORY: Program 3",
+				"kind": "button",
+				"position": {
+					"x": 40.516666666666666,
+					"y": 73.33333333333333,
+					"width": 18.966666666666665,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "memory-program-4",
+				"label": "MEMORY: Program 4",
+				"kind": "button",
+				"position": {
+					"x": 59.483333333333334,
+					"y": 73.33333333333333,
+					"width": 18.966666666666665,
+					"height": 18.0
+				}
+			},
+			{
+				"id": "memory-bank",
+				"label": "MEMORY: Bank",
+				"kind": "switch3",
+				"position": {
+					"x": 78.45,
+					"y": 73.33333333333333,
+					"width": 18.966666666666665,
+					"height": 18.0
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT L",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Audio OUT R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "Audio headphone socket",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://waldorfmusic.com/streichfett-en/",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

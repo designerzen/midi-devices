@@ -1,0 +1,283 @@
+{
+	"schemaVersion": 1,
+	"id": "teenage-engineering-tp-7",
+	"name": "Teenage Engineering TP-7",
+	"manufacturer": "Teenage Engineering",
+	"manufacturerUrl": "https://teenage.engineering/",
+	"productUrl": "https://teenage.engineering/products/tp-7",
+	"ids": [
+		"teenage-engineering-tp-7"
+	],
+	"portNames": [],
+	"description": "Portable recorder with motorized wheel and MIDI remote/control-surface modes.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "TP-7 user guide",
+			"url": "https://teenage.engineering/guides/tp-7"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"MIDI controller mode",
+		"Remote recording and playback control"
+	],
+	"hardwareControls": [
+		"Display",
+		"Record",
+		"Play",
+		"Stop",
+		"Memo",
+		"Up",
+		"Down",
+		"Motorized wheel",
+		"Rocker"
+	],
+	"notice": "Enable the desired MIDI mode in settings. Included mappings are incoming mix volume for channels 1-6. Outgoing controller mode uses a separate CC map; the wheel transmits relative two's-complement values and the rocker transmits pitch bend. Exact browser port names are unverified; select this profile manually. Diagrams show selected physical controls schematically, not a complete panel inventory. Unbound controls do not imply fixed MIDI assignments.",
+	"controls": [
+		{
+			"id": "mix-1-volume",
+			"label": "Mix 1 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 1
+			}
+		},
+		{
+			"id": "mix-2-volume",
+			"label": "Mix 2 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 2
+			}
+		},
+		{
+			"id": "mix-3-volume",
+			"label": "Mix 3 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 3
+			}
+		},
+		{
+			"id": "mix-4-volume",
+			"label": "Mix 4 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 4
+			}
+		},
+		{
+			"id": "mix-5-volume",
+			"label": "Mix 5 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 5
+			}
+		},
+		{
+			"id": "mix-6-volume",
+			"label": "Mix 6 volume",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 7,
+				"channel": 6
+			}
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "TP-7 selected controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1000,
+		"height": 650,
+		"elements": [
+			{
+				"id": "transport-navigation-display",
+				"label": "TRANSPORT / NAVIGATION: Display",
+				"kind": "screen",
+				"position": {
+					"x": 3.1,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "transport-navigation-record",
+				"label": "TRANSPORT / NAVIGATION: Record",
+				"kind": "button",
+				"position": {
+					"x": 26.55,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "transport-navigation-play",
+				"label": "TRANSPORT / NAVIGATION: Play",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "transport-navigation-stop",
+				"label": "TRANSPORT / NAVIGATION: Stop",
+				"kind": "button",
+				"position": {
+					"x": 73.45,
+					"y": 14.615384615384617,
+					"width": 23.45,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "transport-navigation-memo",
+				"label": "TRANSPORT / NAVIGATION: Memo",
+				"kind": "button",
+				"position": {
+					"x": 3.1,
+					"y": 25.0,
+					"width": 23.45,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "transport-navigation-up",
+				"label": "TRANSPORT / NAVIGATION: Up",
+				"kind": "button",
+				"position": {
+					"x": 26.55,
+					"y": 25.0,
+					"width": 23.45,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "transport-navigation-down",
+				"label": "TRANSPORT / NAVIGATION: Down",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 25.0,
+					"width": 23.45,
+					"height": 10.384615384615385
+				}
+			},
+			{
+				"id": "playback-controls-motorized-wheel",
+				"label": "PLAYBACK CONTROLS: Motorized wheel",
+				"kind": "wheel",
+				"position": {
+					"x": 3.1,
+					"y": 43.84615384615385,
+					"width": 23.45,
+					"height": 43.84615384615385
+				}
+			},
+			{
+				"id": "playback-controls-rocker",
+				"label": "PLAYBACK CONTROLS: Rocker",
+				"kind": "touch",
+				"position": {
+					"x": 26.55,
+					"y": 43.84615384615385,
+					"width": 23.45,
+					"height": 43.84615384615385
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / audio / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Two-way audio jack 1",
+			"connector": "3.5 mm",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Two-way audio jack 2",
+			"connector": "3.5 mm",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Two-way audio jack 3",
+			"connector": "3.5 mm",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Main output",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://teenage.engineering/guides/tp-7",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

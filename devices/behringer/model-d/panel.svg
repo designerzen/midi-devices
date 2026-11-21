@@ -1,359 +1,199 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 700" role="group" aria-labelledby="behringer-model-d-panel--title" aria-describedby="behringer-model-d-panel--description" data-device="behringer-model-d" data-diagram-style="wireframe" style="background: #fff; color: #000;">
-<title id="behringer-model-d-panel--title">Behringer MODEL D overhead hardware diagram</title><desc id="behringer-model-d-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
-<g id="behringer-model-d-panel--chassis" aria-hidden="true">
-<rect x="9" y="9" width="1482" height="682" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Behringer MODEL D</text>
-<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="1450" height="90" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="25" y="165" width="170" height="410" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="205" y="165" width="350" height="410" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="565" y="165" width="240" height="410" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="815" y="165" width="450" height="410" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1275" y="165" width="200" height="410" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 700" role="img" aria-labelledby="title description">
+<title id="title">Behringer MODEL D top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
+<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
+<defs>
+<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
+<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect x="0" y="0" width="1500" height="700" fill="#fff" stroke="none" stroke-width="1.6"/>
+<rect x="9" y="9" width="1482" height="682" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
+<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Behringer MODEL D</text>
+<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="1450" height="90" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="top-patch-connections-ext-audio-in" data-kind="input" aria-label="Ext audio IN"><title>Ext audio IN</title>
+<svg data-symbol="input" x="62.153" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-ext-audio-in" data-part="top-patch-connections-ext-audio-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Ext audio IN"><title>TOP PATCH CONNECTIONS: Ext audio IN</title><g aria-hidden="true">
-<circle cx="75.938" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="75.938" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="top-patch-connections-osc-pitch-in" data-kind="input" aria-label="Osc pitch IN"><title>Osc pitch IN</title>
+<svg data-symbol="input" x="152.028" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
+<g id="top-patch-connections-osc-mod-in" data-kind="input" aria-label="Osc mod IN"><title>Osc mod IN</title>
+<svg data-symbol="input" x="241.903" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-osc-pitch-in" data-part="top-patch-connections-osc-pitch-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Osc pitch IN"><title>TOP PATCH CONNECTIONS: Osc pitch IN</title><g aria-hidden="true">
-<circle cx="165.812" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="165.812" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="top-patch-connections-filter-cutoff-in" data-kind="input" aria-label="Filter cutoff IN"><title>Filter cutoff IN</title>
+<svg data-symbol="input" x="337.993" y="100.000" width="15.140" height="15.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
+<g id="top-patch-connections-filter-mod-in" data-kind="input" aria-label="Filter mod IN"><title>Filter mod IN</title>
+<svg data-symbol="input" x="421.652" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-osc-mod-in" data-part="top-patch-connections-osc-mod-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Osc mod IN"><title>TOP PATCH CONNECTIONS: Osc mod IN</title><g aria-hidden="true">
-<circle cx="255.688" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="255.688" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="top-patch-connections-loudness-in" data-kind="input" aria-label="Loudness IN"><title>Loudness IN</title>
+<svg data-symbol="input" x="511.527" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
+<g id="top-patch-connections-lfo-cv-in" data-kind="input" aria-label="LFO CV IN"><title>LFO CV IN</title>
+<svg data-symbol="input" x="601.403" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-filter-cutoff-in" data-part="top-patch-connections-filter-cutoff-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Filter cutoff IN"><title>TOP PATCH CONNECTIONS: Filter cutoff IN</title><g aria-hidden="true">
-<circle cx="345.562" cy="107.57" r="5.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="345.562" cy="107.57" r="2.68" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="top-patch-connections-filter-contour-gate-in" data-kind="input" aria-label="Filter contour gate IN"><title>Filter contour gate IN</title>
+<svg data-symbol="input" x="697.492" y="100.000" width="15.140" height="15.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
+<g id="top-patch-connections-loudness-contour-gate-in" data-kind="input" aria-label="Loudness contour gate IN"><title>Loudness contour gate IN</title>
+<svg data-symbol="input" x="787.938" y="100.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-filter-mod-in" data-part="top-patch-connections-filter-mod-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Filter mod IN"><title>TOP PATCH CONNECTIONS: Filter mod IN</title><g aria-hidden="true">
-<circle cx="435.438" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="435.438" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="top-patch-connections-lfo-triangle-out" data-kind="output" aria-label="LFO triangle OUT"><title>LFO triangle OUT</title>
+<svg data-symbol="output" x="877.242" y="100.000" width="15.140" height="15.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
+<g id="top-patch-connections-lfo-square-out" data-kind="output" aria-label="LFO square OUT"><title>LFO square OUT</title>
+<svg data-symbol="output" x="960.903" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-loudness-in" data-part="top-patch-connections-loudness-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Loudness IN"><title>TOP PATCH CONNECTIONS: Loudness IN</title><g aria-hidden="true">
-<circle cx="525.312" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="525.312" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="top-patch-connections-filter-contour-out" data-kind="output" aria-label="Filter contour OUT"><title>Filter contour OUT</title>
+<svg data-symbol="output" x="1056.993" y="100.000" width="15.140" height="15.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
+<g id="top-patch-connections-loudness-contour-out" data-kind="output" aria-label="Loudness contour OUT"><title>Loudness contour OUT</title>
+<svg data-symbol="output" x="1146.868" y="100.000" width="15.140" height="15.140" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-lfo-cv-in" data-part="top-patch-connections-lfo-cv-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: LFO CV IN"><title>TOP PATCH CONNECTIONS: LFO CV IN</title><g aria-hidden="true">
-<circle cx="615.188" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="615.188" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="top-patch-connections-main-high-out" data-kind="output" aria-label="Main high OUT"><title>Main high OUT</title>
+<svg data-symbol="output" x="1230.527" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
+<g id="top-patch-connections-main-low-out" data-kind="output" aria-label="Main low OUT"><title>Main low OUT</title>
+<svg data-symbol="output" x="1320.402" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-filter-contour-gate-in" data-part="top-patch-connections-filter-contour-gate-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Filter contour gate IN"><title>TOP PATCH CONNECTIONS: Filter contour gate IN</title><g aria-hidden="true">
-<circle cx="705.062" cy="107.57" r="5.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="705.062" cy="107.57" r="2.68" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="top-patch-connections-phones-out" data-kind="output" aria-label="Phones OUT"><title>Phones OUT</title>
+<svg data-symbol="output" x="1410.277" y="100.000" width="27.570" height="27.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="url(#tactile-stripes)"/></g></svg>
 </g>
+<rect x="25" y="165" width="170" height="410" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="controllers-tune" data-kind="knob" aria-label="Tune"><title>Tune</title>
+<svg data-symbol="knob" x="46.500" y="224.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-loudness-contour-gate-in" data-part="top-patch-connections-loudness-contour-gate-in" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Loudness contour gate IN"><title>TOP PATCH CONNECTIONS: Loudness contour gate IN</title><g aria-hidden="true">
-<circle cx="794.938" cy="102" r="2.4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="794.938" cy="102" r="1.12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="controllers-glide" data-kind="knob" aria-label="Glide"><title>Glide</title>
+<svg data-symbol="knob" x="125.500" y="224.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
+<g id="controllers-mod-mix" data-kind="knob" aria-label="Mod mix"><title>Mod mix</title>
+<svg data-symbol="knob" x="46.500" y="349.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-lfo-triangle-out" data-part="top-patch-connections-lfo-triangle-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: LFO triangle OUT"><title>TOP PATCH CONNECTIONS: LFO triangle OUT</title><g aria-hidden="true">
-<circle cx="884.812" cy="107.57" r="5.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="884.812" cy="107.57" r="2.68" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="controllers-lfo-rate" data-kind="knob" aria-label="LFO rate"><title>LFO rate</title>
+<svg data-symbol="knob" x="125.500" y="349.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
+<g id="controllers-lfo-wave" data-kind="switch" aria-label="LFO wave"><title>LFO wave</title>
+<svg data-symbol="switch" x="46.500" y="474.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-lfo-square-out" data-part="top-patch-connections-lfo-square-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: LFO square OUT"><title>TOP PATCH CONNECTIONS: LFO square OUT</title><g aria-hidden="true">
-<circle cx="974.688" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="974.688" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="205" y="165" width="350" height="410" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="oscillators-osc-1-range" data-kind="knob" aria-label="Osc 1 range"><title>Osc 1 range</title>
+<svg data-symbol="knob" x="243.333" y="209.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
+<g id="oscillators-osc-1-wave" data-kind="knob" aria-label="Osc 1 wave"><title>Osc 1 wave</title>
+<svg data-symbol="knob" x="356.000" y="209.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-filter-contour-out" data-part="top-patch-connections-filter-contour-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Filter contour OUT"><title>TOP PATCH CONNECTIONS: Filter contour OUT</title><g aria-hidden="true">
-<circle cx="1064.562" cy="107.57" r="5.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1064.562" cy="107.57" r="2.68" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="oscillators-osc-2-range" data-kind="knob" aria-label="Osc 2 range"><title>Osc 2 range</title>
+<svg data-symbol="knob" x="468.667" y="209.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
+<g id="oscillators-osc-2-freq" data-kind="knob" aria-label="Osc 2 freq"><title>Osc 2 freq</title>
+<svg data-symbol="knob" x="243.333" y="302.910" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-loudness-contour-out" data-part="top-patch-connections-loudness-contour-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Loudness contour OUT"><title>TOP PATCH CONNECTIONS: Loudness contour OUT</title><g aria-hidden="true">
-<circle cx="1154.438" cy="107.57" r="5.742" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1154.438" cy="107.57" r="2.68" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="oscillators-osc-2-wave" data-kind="knob" aria-label="Osc 2 wave"><title>Osc 2 wave</title>
+<svg data-symbol="knob" x="356.000" y="302.910" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
+<g id="oscillators-osc-3-range" data-kind="knob" aria-label="Osc 3 range"><title>Osc 3 range</title>
+<svg data-symbol="knob" x="468.667" y="302.910" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-main-high-out" data-part="top-patch-connections-main-high-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Main high OUT"><title>TOP PATCH CONNECTIONS: Main high OUT</title><g aria-hidden="true">
-<circle cx="1244.312" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1244.312" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="oscillators-osc-3-freq" data-kind="knob" aria-label="Osc 3 freq"><title>Osc 3 freq</title>
+<svg data-symbol="knob" x="243.333" y="396.660" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
+<g id="oscillators-osc-3-wave" data-kind="knob" aria-label="Osc 3 wave"><title>Osc 3 wave</title>
+<svg data-symbol="knob" x="356.000" y="396.660" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-main-low-out" data-part="top-patch-connections-main-low-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Main low OUT"><title>TOP PATCH CONNECTIONS: Main low OUT</title><g aria-hidden="true">
-<circle cx="1334.188" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1334.188" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="oscillators-osc-mod" data-kind="switch" aria-label="Osc mod"><title>Osc mod</title>
+<svg data-symbol="switch" x="468.667" y="396.660" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
+<g id="oscillators-osc-3-control" data-kind="switch" aria-label="Osc 3 control"><title>Osc 3 control</title>
+<svg data-symbol="switch" x="243.333" y="490.410" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--top-patch-connections-phones-out" data-part="top-patch-connections-phones-out" data-kind="jack" role="group" aria-roledescription="socket" aria-label="TOP PATCH CONNECTIONS: Phones OUT"><title>TOP PATCH CONNECTIONS: Phones OUT</title><g aria-hidden="true">
-<circle cx="1424.062" cy="113.785" r="9.471" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<circle cx="1424.062" cy="113.785" r="4.42" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="565" y="165" width="240" height="410" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="mixer-osc-1-level" data-kind="knob" aria-label="Osc 1 level"><title>Osc 1 level</title>
+<svg data-symbol="knob" x="585.000" y="209.363" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
+<g id="mixer-osc-2-level" data-kind="knob" aria-label="Osc 2 level"><title>Osc 2 level</title>
+<svg data-symbol="knob" x="661.000" y="209.363" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--controllers-tune" data-part="controllers-tune" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLERS: Tune"><title>CONTROLLERS: Tune</title><g aria-hidden="true">
-<circle cx="70.5" cy="248.785" r="19.75" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M70.5 232.035L70.5 241.873" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="mixer-osc-3-level" data-kind="knob" aria-label="Osc 3 level"><title>Osc 3 level</title>
+<svg data-symbol="knob" x="737.000" y="209.363" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--controllers-tune" data-surface-control="controllers-tune" aria-hidden="true"><rect x="31" y="195" width="79" height="125" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="mixer-noise-level" data-kind="knob" aria-label="Noise level"><title>Noise level</title>
+<svg data-symbol="knob" x="585.000" y="303.113" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--controllers-glide" data-part="controllers-glide" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLERS: Glide"><title>CONTROLLERS: Glide</title><g aria-hidden="true">
-<circle cx="149.5" cy="248.785" r="19.75" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M149.5 232.035L149.5 241.873" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="mixer-ext-input" data-kind="knob" aria-label="Ext input"><title>Ext input</title>
+<svg data-symbol="knob" x="661.000" y="303.113" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--controllers-glide" data-surface-control="controllers-glide" aria-hidden="true"><rect x="110" y="195" width="79" height="125" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="mixer-osc-1-on" data-kind="switch" aria-label="Osc 1 on"><title>Osc 1 on</title>
+<svg data-symbol="switch" x="737.000" y="303.113" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--controllers-mod-mix" data-part="controllers-mod-mix" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLERS: Mod mix"><title>CONTROLLERS: Mod mix</title><g aria-hidden="true">
-<circle cx="70.5" cy="373.785" r="19.75" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M70.5 357.035L70.5 366.872" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="mixer-osc-2-on" data-kind="switch" aria-label="Osc 2 on"><title>Osc 2 on</title>
+<svg data-symbol="switch" x="585.000" y="396.863" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--controllers-mod-mix" data-surface-control="controllers-mod-mix" aria-hidden="true"><rect x="31" y="320" width="79" height="125" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="mixer-osc-3-on" data-kind="switch" aria-label="Osc 3 on"><title>Osc 3 on</title>
+<svg data-symbol="switch" x="661.000" y="396.863" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--controllers-lfo-rate" data-part="controllers-lfo-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CONTROLLERS: LFO rate"><title>CONTROLLERS: LFO rate</title><g aria-hidden="true">
-<circle cx="149.5" cy="373.785" r="19.75" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M149.5 357.035L149.5 366.872" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="mixer-noise-on" data-kind="switch" aria-label="Noise on"><title>Noise on</title>
+<svg data-symbol="switch" x="737.000" y="396.863" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--controllers-lfo-rate" data-surface-control="controllers-lfo-rate" aria-hidden="true"><rect x="110" y="320" width="79" height="125" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="mixer-ext-on" data-kind="switch" aria-label="Ext on"><title>Ext on</title>
+<svg data-symbol="switch" x="585.000" y="490.613" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--controllers-lfo-wave" data-part="controllers-lfo-wave" data-kind="switch" role="group" aria-roledescription="switch" aria-label="CONTROLLERS: LFO wave"><title>CONTROLLERS: LFO wave</title><g aria-hidden="true">
-<rect x="65.5" y="486.785" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="61.5" y="494.785" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="mixer-noise-type" data-kind="switch" aria-label="Noise type"><title>Noise type</title>
+<svg data-symbol="switch" x="661.000" y="490.613" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--controllers-lfo-wave" data-surface-control="controllers-lfo-wave" aria-hidden="true"><rect x="31" y="445" width="79" height="125" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<rect x="815" y="165" width="450" height="410" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="modifiers-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
+<svg data-symbol="knob" x="870.215" y="200.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-1-range" data-part="oscillators-osc-1-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS: Osc 1 range"><title>OSCILLATORS: Osc 1 range</title><g aria-hidden="true">
-<circle cx="267.333" cy="233.16" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M267.333 211.16L267.333 224.41" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modifiers-emphasis" data-kind="knob" aria-label="Emphasis"><title>Emphasis</title>
+<svg data-symbol="knob" x="1016.215" y="200.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-1-range" data-surface-control="oscillators-osc-1-range" aria-hidden="true"><rect x="211" y="195" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modifiers-contour" data-kind="knob" aria-label="Contour"><title>Contour</title>
+<svg data-symbol="knob" x="1162.215" y="200.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-1-wave" data-part="oscillators-osc-1-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS: Osc 1 wave"><title>OSCILLATORS: Osc 1 wave</title><g aria-hidden="true">
-<circle cx="380" cy="233.16" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M380 211.16L380 224.41" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modifiers-filter-attack" data-kind="knob" aria-label="Filter attack"><title>Filter attack</title>
+<svg data-symbol="knob" x="870.215" y="275.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-1-wave" data-surface-control="oscillators-osc-1-wave" aria-hidden="true"><rect x="323.6667" y="195" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modifiers-filter-decay" data-kind="knob" aria-label="Filter decay"><title>Filter decay</title>
+<svg data-symbol="knob" x="1016.215" y="275.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-2-range" data-part="oscillators-osc-2-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS: Osc 2 range"><title>OSCILLATORS: Osc 2 range</title><g aria-hidden="true">
-<circle cx="492.667" cy="233.16" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M492.667 211.16L492.667 224.41" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modifiers-filter-sustain" data-kind="knob" aria-label="Filter sustain"><title>Filter sustain</title>
+<svg data-symbol="knob" x="1162.215" y="275.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-2-range" data-surface-control="oscillators-osc-2-range" aria-hidden="true"><rect x="436.3333" y="195" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modifiers-amp-attack" data-kind="knob" aria-label="Amp attack"><title>Amp attack</title>
+<svg data-symbol="knob" x="870.215" y="350.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-2-freq" data-part="oscillators-osc-2-freq" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS: Osc 2 freq"><title>OSCILLATORS: Osc 2 freq</title><g aria-hidden="true">
-<circle cx="267.333" cy="326.91" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M267.333 304.91L267.333 318.16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modifiers-amp-decay" data-kind="knob" aria-label="Amp decay"><title>Amp decay</title>
+<svg data-symbol="knob" x="1016.215" y="350.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-2-freq" data-surface-control="oscillators-osc-2-freq" aria-hidden="true"><rect x="211" y="288.75" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modifiers-amp-sustain" data-kind="knob" aria-label="Amp sustain"><title>Amp sustain</title>
+<svg data-symbol="knob" x="1162.215" y="350.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-2-wave" data-part="oscillators-osc-2-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS: Osc 2 wave"><title>OSCILLATORS: Osc 2 wave</title><g aria-hidden="true">
-<circle cx="380" cy="326.91" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M380 304.91L380 318.16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modifiers-filter-mode" data-kind="switch" aria-label="Filter mode"><title>Filter mode</title>
+<svg data-symbol="switch" x="870.215" y="425.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-2-wave" data-surface-control="oscillators-osc-2-wave" aria-hidden="true"><rect x="323.6667" y="288.75" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modifiers-filter-mod" data-kind="switch" aria-label="Filter mod"><title>Filter mod</title>
+<svg data-symbol="switch" x="1016.215" y="425.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-3-range" data-part="oscillators-osc-3-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS: Osc 3 range"><title>OSCILLATORS: Osc 3 range</title><g aria-hidden="true">
-<circle cx="492.667" cy="326.91" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M492.667 304.91L492.667 318.16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modifiers-key-track-1" data-kind="switch" aria-label="Key track 1"><title>Key track 1</title>
+<svg data-symbol="switch" x="1162.215" y="425.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-3-range" data-surface-control="oscillators-osc-3-range" aria-hidden="true"><rect x="436.3333" y="288.75" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="modifiers-key-track-2" data-kind="switch" aria-label="Key track 2"><title>Key track 2</title>
+<svg data-symbol="switch" x="870.215" y="500.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-3-freq" data-part="oscillators-osc-3-freq" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS: Osc 3 freq"><title>OSCILLATORS: Osc 3 freq</title><g aria-hidden="true">
-<circle cx="267.333" cy="420.66" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M267.333 398.66L267.333 411.91" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="modifiers-decay" data-kind="switch" aria-label="Decay"><title>Decay</title>
+<svg data-symbol="switch" x="1016.215" y="500.000" width="47.570" height="47.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-3-freq" data-surface-control="oscillators-osc-3-freq" aria-hidden="true"><rect x="211" y="382.5" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<rect x="1275" y="165" width="200" height="410" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="output-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
+<svg data-symbol="knob" x="1304.000" y="256.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-3-wave" data-part="oscillators-osc-3-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATORS: Osc 3 wave"><title>OSCILLATORS: Osc 3 wave</title><g aria-hidden="true">
-<circle cx="380" cy="420.66" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M380 398.66L380 411.91" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<g id="output-phones-level" data-kind="knob" aria-label="Phones level"><title>Phones level</title>
+<svg data-symbol="knob" x="1398.000" y="256.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-3-wave" data-surface-control="oscillators-osc-3-wave" aria-hidden="true"><rect x="323.6667" y="382.5" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="output-a-440" data-kind="switch" aria-label="A-440"><title>A-440</title>
+<svg data-symbol="switch" x="1304.000" y="443.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
-<g id="behringer-model-d-panel--oscillators-osc-mod" data-part="oscillators-osc-mod" data-kind="switch" role="group" aria-roledescription="switch" aria-label="OSCILLATORS: Osc mod"><title>OSCILLATORS: Osc mod</title><g aria-hidden="true">
-<rect x="487.667" y="408.66" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="483.667" y="416.66" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-mod" data-surface-control="oscillators-osc-mod" aria-hidden="true"><rect x="436.3333" y="382.5" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--oscillators-osc-3-control" data-part="oscillators-osc-3-control" data-kind="switch" role="group" aria-roledescription="switch" aria-label="OSCILLATORS: Osc 3 control"><title>OSCILLATORS: Osc 3 control</title><g aria-hidden="true">
-<rect x="262.333" y="502.41" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="258.333" y="510.41" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--oscillators-osc-3-control" data-surface-control="oscillators-osc-3-control" aria-hidden="true"><rect x="211" y="476.25" width="112.6667" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-osc-1-level" data-part="mixer-osc-1-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Osc 1 level"><title>MIXER: Osc 1 level</title><g aria-hidden="true">
-<circle cx="609" cy="233.363" r="19" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M609 217.363L609 226.713" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-osc-1-level" data-surface-control="mixer-osc-1-level" aria-hidden="true"><rect x="571" y="195" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-osc-2-level" data-part="mixer-osc-2-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Osc 2 level"><title>MIXER: Osc 2 level</title><g aria-hidden="true">
-<circle cx="685" cy="233.363" r="19" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M685 217.363L685 226.713" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-osc-2-level" data-surface-control="mixer-osc-2-level" aria-hidden="true"><rect x="647" y="195" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-osc-3-level" data-part="mixer-osc-3-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Osc 3 level"><title>MIXER: Osc 3 level</title><g aria-hidden="true">
-<circle cx="761" cy="233.363" r="19" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M761 217.363L761 226.713" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-osc-3-level" data-surface-control="mixer-osc-3-level" aria-hidden="true"><rect x="723" y="195" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-noise-level" data-part="mixer-noise-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Noise level"><title>MIXER: Noise level</title><g aria-hidden="true">
-<circle cx="609" cy="327.113" r="19" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M609 311.113L609 320.463" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-noise-level" data-surface-control="mixer-noise-level" aria-hidden="true"><rect x="571" y="288.75" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-ext-input" data-part="mixer-ext-input" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MIXER: Ext input"><title>MIXER: Ext input</title><g aria-hidden="true">
-<circle cx="685" cy="327.113" r="19" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M685 311.113L685 320.463" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-ext-input" data-surface-control="mixer-ext-input" aria-hidden="true"><rect x="647" y="288.75" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-osc-1-on" data-part="mixer-osc-1-on" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MIXER: Osc 1 on"><title>MIXER: Osc 1 on</title><g aria-hidden="true">
-<rect x="756" y="315.113" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="752" y="323.113" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-osc-1-on" data-surface-control="mixer-osc-1-on" aria-hidden="true"><rect x="723" y="288.75" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-osc-2-on" data-part="mixer-osc-2-on" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MIXER: Osc 2 on"><title>MIXER: Osc 2 on</title><g aria-hidden="true">
-<rect x="604" y="408.863" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="600" y="416.863" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-osc-2-on" data-surface-control="mixer-osc-2-on" aria-hidden="true"><rect x="571" y="382.5" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-osc-3-on" data-part="mixer-osc-3-on" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MIXER: Osc 3 on"><title>MIXER: Osc 3 on</title><g aria-hidden="true">
-<rect x="680" y="408.863" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="676" y="416.863" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-osc-3-on" data-surface-control="mixer-osc-3-on" aria-hidden="true"><rect x="647" y="382.5" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-noise-on" data-part="mixer-noise-on" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MIXER: Noise on"><title>MIXER: Noise on</title><g aria-hidden="true">
-<rect x="756" y="408.863" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="752" y="416.863" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-noise-on" data-surface-control="mixer-noise-on" aria-hidden="true"><rect x="723" y="382.5" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-ext-on" data-part="mixer-ext-on" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MIXER: Ext on"><title>MIXER: Ext on</title><g aria-hidden="true">
-<rect x="604" y="502.613" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="600" y="510.613" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-ext-on" data-surface-control="mixer-ext-on" aria-hidden="true"><rect x="571" y="476.25" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--mixer-noise-type" data-part="mixer-noise-type" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MIXER: Noise type"><title>MIXER: Noise type</title><g aria-hidden="true">
-<rect x="680" y="502.613" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="676" y="510.613" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--mixer-noise-type" data-surface-control="mixer-noise-type" aria-hidden="true"><rect x="647" y="476.25" width="76" height="93.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-cutoff" data-part="modifiers-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Cutoff"><title>MODIFIERS: Cutoff</title><g aria-hidden="true">
-<circle cx="894" cy="223.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M894 208.22L894 217.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-cutoff" data-surface-control="modifiers-cutoff" aria-hidden="true"><rect x="821" y="195" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-emphasis" data-part="modifiers-emphasis" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Emphasis"><title>MODIFIERS: Emphasis</title><g aria-hidden="true">
-<circle cx="1040" cy="223.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1040 208.22L1040 217.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-emphasis" data-surface-control="modifiers-emphasis" aria-hidden="true"><rect x="967" y="195" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-contour" data-part="modifiers-contour" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Contour"><title>MODIFIERS: Contour</title><g aria-hidden="true">
-<circle cx="1186" cy="223.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1186 208.22L1186 217.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-contour" data-surface-control="modifiers-contour" aria-hidden="true"><rect x="1113" y="195" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-filter-attack" data-part="modifiers-filter-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Filter attack"><title>MODIFIERS: Filter attack</title><g aria-hidden="true">
-<circle cx="894" cy="298.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M894 283.22L894 292.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-filter-attack" data-surface-control="modifiers-filter-attack" aria-hidden="true"><rect x="821" y="270" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-filter-decay" data-part="modifiers-filter-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Filter decay"><title>MODIFIERS: Filter decay</title><g aria-hidden="true">
-<circle cx="1040" cy="298.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1040 283.22L1040 292.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-filter-decay" data-surface-control="modifiers-filter-decay" aria-hidden="true"><rect x="967" y="270" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-filter-sustain" data-part="modifiers-filter-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Filter sustain"><title>MODIFIERS: Filter sustain</title><g aria-hidden="true">
-<circle cx="1186" cy="298.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1186 283.22L1186 292.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-filter-sustain" data-surface-control="modifiers-filter-sustain" aria-hidden="true"><rect x="1113" y="270" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-amp-attack" data-part="modifiers-amp-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Amp attack"><title>MODIFIERS: Amp attack</title><g aria-hidden="true">
-<circle cx="894" cy="373.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M894 358.22L894 367.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-amp-attack" data-surface-control="modifiers-amp-attack" aria-hidden="true"><rect x="821" y="345" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-amp-decay" data-part="modifiers-amp-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Amp decay"><title>MODIFIERS: Amp decay</title><g aria-hidden="true">
-<circle cx="1040" cy="373.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1040 358.22L1040 367.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-amp-decay" data-surface-control="modifiers-amp-decay" aria-hidden="true"><rect x="967" y="345" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-amp-sustain" data-part="modifiers-amp-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODIFIERS: Amp sustain"><title>MODIFIERS: Amp sustain</title><g aria-hidden="true">
-<circle cx="1186" cy="373.785" r="18.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1186 358.22L1186 367.287" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-amp-sustain" data-surface-control="modifiers-amp-sustain" aria-hidden="true"><rect x="1113" y="345" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-filter-mode" data-part="modifiers-filter-mode" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MODIFIERS: Filter mode"><title>MODIFIERS: Filter mode</title><g aria-hidden="true">
-<rect x="889" y="436.785" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="885" y="444.785" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-filter-mode" data-surface-control="modifiers-filter-mode" aria-hidden="true"><rect x="821" y="420" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-filter-mod" data-part="modifiers-filter-mod" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MODIFIERS: Filter mod"><title>MODIFIERS: Filter mod</title><g aria-hidden="true">
-<rect x="1035" y="436.785" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1031" y="444.785" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-filter-mod" data-surface-control="modifiers-filter-mod" aria-hidden="true"><rect x="967" y="420" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-key-track-1" data-part="modifiers-key-track-1" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MODIFIERS: Key track 1"><title>MODIFIERS: Key track 1</title><g aria-hidden="true">
-<rect x="1181" y="436.785" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1177" y="444.785" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-key-track-1" data-surface-control="modifiers-key-track-1" aria-hidden="true"><rect x="1113" y="420" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-key-track-2" data-part="modifiers-key-track-2" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MODIFIERS: Key track 2"><title>MODIFIERS: Key track 2</title><g aria-hidden="true">
-<rect x="889" y="511.785" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="885" y="519.785" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-key-track-2" data-surface-control="modifiers-key-track-2" aria-hidden="true"><rect x="821" y="495" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--modifiers-decay" data-part="modifiers-decay" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MODIFIERS: Decay"><title>MODIFIERS: Decay</title><g aria-hidden="true">
-<rect x="1035" y="511.785" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1031" y="519.785" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--modifiers-decay" data-surface-control="modifiers-decay" aria-hidden="true"><rect x="967" y="495" width="146" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--output-volume" data-part="output-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OUTPUT: Volume"><title>OUTPUT: Volume</title><g aria-hidden="true">
-<circle cx="1328" cy="280.035" r="23.5" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1328 259.535L1328 271.81" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--output-volume" data-surface-control="output-volume" aria-hidden="true"><rect x="1281" y="195" width="94" height="187.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--output-phones-level" data-part="output-phones-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OUTPUT: Phones level"><title>OUTPUT: Phones level</title><g aria-hidden="true">
-<circle cx="1422" cy="280.035" r="23.5" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<path d="M1422 259.535L1422 271.81" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
-</g>
-<g id="behringer-model-d-panel--surface--output-phones-level" data-surface-control="output-phones-level" aria-hidden="true"><rect x="1375" y="195" width="94" height="187.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--output-a-440" data-part="output-a-440" data-kind="switch" role="group" aria-roledescription="switch" aria-label="OUTPUT: A-440"><title>OUTPUT: A-440</title><g aria-hidden="true">
-<rect x="1323" y="455.535" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1319" y="463.535" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--output-a-440" data-surface-control="output-a-440" aria-hidden="true"><rect x="1281" y="382.5" width="94" height="187.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
-</g>
-<g id="behringer-model-d-panel--output-main-on" data-part="output-main-on" data-kind="switch" role="group" aria-roledescription="switch" aria-label="OUTPUT: Main on"><title>OUTPUT: Main on</title><g aria-hidden="true">
-<rect x="1417" y="455.535" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-<rect x="1413" y="463.535" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
-</g>
-<g id="behringer-model-d-panel--surface--output-main-on" data-surface-control="output-main-on" aria-hidden="true"><rect x="1375" y="382.5" width="94" height="187.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="output-main-on" data-kind="switch" aria-label="Main on"><title>Main on</title>
+<svg data-symbol="switch" x="1398.000" y="443.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
 </g>
 </svg>
