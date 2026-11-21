@@ -12,7 +12,7 @@ test("unmatched device email preserves all port details and safely encodes speci
 		{ direction: "Output", port: port("out-2", "Keys output", "") }
 	]
 	const email = new URL(unmatchedDeviceEmail(ports))
-	assert.equal(email.pathname, "midi@aweseomthing.co.uk")
+	assert.equal(email.pathname, "midi@awesomething.co.uk")
 	assert.equal(email.searchParams.get("subject"), "Unmatched MIDI device: Keys & Pads + α")
 	const body = email.searchParams.get("body")
 	for (const entry of ports) {

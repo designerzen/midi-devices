@@ -1,5 +1,5 @@
 const normalise = (value) => String(value ?? "").trim().toLowerCase()
-export const DEVICE_PROFILE_EMAIL = "midi@aweseomthing.co.uk"
+export const DEVICE_PROFILE_EMAIL = "midi@awesomething.co.uk"
 
 export function midiPortDetails({ direction, port }) {
 	return [["Port name", port.name], ["Manufacturer", port.manufacturer], ["Port ID", port.id], ["Version", port.version], ["Direction", direction], ["Device state", port.state], ["Port connection", port.connection]]
