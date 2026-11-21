@@ -1,6 +1,6 @@
 // Generates the static JSON and XML API served under api/v1/.
 import { readFileSync } from "node:fs"
-import { mkdir, writeFile } from "node:fs/promises"
+import { cp, mkdir, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { toXml } from "./xml.js"
 import { readManufacturers } from "./manufacturers.js"
@@ -25,12 +25,15 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 	await mkdir(path.join(out, "devices"), { recursive: true })
 	await mkdir(path.join(out, "manufacturers"), { recursive: true })
 	await mkdir(path.join(out, "midi"), { recursive: true })
+	for (const asset of ["api.xsd", "api.xsl"]) {
+		await cp(new URL(`../devices/${asset}`, import.meta.url), path.join(outDirectory, asset))
+	}
 	const write = async (file, data) => {
 		if (!validateResponse(data)) {
 			throw new Error(`Invalid API response ${file}: ${JSON.stringify(validateResponse.errors)}`)
 		}
 		await writeFile(path.join(out, file), JSON.stringify(data, null, "\t") + "\n")
-		await writeFile(path.join(out, file.replace(/\.json$/, ".xml")), toXml(data))
+		await writeFile(path.join(out, file.replace(/\.json$/, ".xml")), toXml(data, { stylesheet: `${site}api.xsl`, schema: `${site}api.xsd` }))
 	}
 	const meta = { apiVersion: API_VERSION, dataVersion: version, generated: new Date().toISOString() }
 
@@ -145,6 +148,8 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 			ports: `${api}ports.json`,
 			schema: `${site}profile.schema.json`,
 			apiSchema: `${site}api.schema.json`,
+			xmlSchema: `${site}api.xsd`,
+			xmlStylesheet: `${site}api.xsl`,
 			manufacturerSchema: `${site}manufacturer.schema.json`,
 			deviceIndexSchema: `${site}index.schema.json`,
 			manufacturerIndexSchema: `${site}manufacturers.schema.json`,

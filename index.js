@@ -12,10 +12,12 @@ const DEVICE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const ROOT_FILES = new Set([
 	"profile.schema.json", "manufacturer.schema.json", "index.schema.json",
 	"manufacturers.schema.json", "midi-manufacturers.schema.json", "api.schema.json",
-	"manufacturers.json", "midi-manufacturers.json"
+	"manufacturers.json", "midi-manufacturers.json", "api.xsd", "api.xsl"
 ])
 const MIME = {
 	".json": "application/json",
+	".xsd": "application/xml",
+	".xsl": "application/xslt+xml",
 	".svg": "image/svg+xml",
 	".png": "image/png",
 	".jpg": "image/jpeg",

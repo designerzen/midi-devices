@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" version="1.1" elementFormDefault="unqualified">
+  <xs:annotation><xs:documentation>Typed XML serialization for MIDI devices API v1. Requires XSD 1.1. Endpoint fields and MIDI constraints are defined by api.schema.json.</xs:documentation></xs:annotation>
+  <xs:simpleType name="jsonType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="object"/><xs:enumeration value="array"/>
+      <xs:enumeration value="string"/><xs:enumeration value="number"/>
+      <xs:enumeration value="boolean"/><xs:enumeration value="null"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="valueType" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="field" type="fieldType"/><xs:element name="item" type="valueType"/></xs:choice>
+    <xs:attribute name="type" type="jsonType" use="required"/>
+    <xs:assert test="if (@type = 'object') then empty(item) and count(field) = count(distinct-values(field/@key)) else if (@type = 'array') then empty(field) else empty(*)"/>
+    <xs:assert test="if (@type = ('object', 'array')) then normalize-space(string-join(text(), '')) = '' else true()"/>
+    <xs:assert test="if (@type = 'boolean') then string(.) = ('true', 'false') else true()"/>
+    <xs:assert test="if (@type = 'number') then matches(string(.), '^-?(0|[1-9][0-9]*)(\.[0-9]+)?([eE][+\-]?[0-9]+)?$') else true()"/>
+    <xs:assert test="if (@type = 'null') then string(.) = '' else true()"/>
+  </xs:complexType>
+  <xs:complexType name="fieldType" mixed="true">
+    <xs:complexContent mixed="true"><xs:extension base="valueType"><xs:attribute name="key" type="xs:string" use="required"/></xs:extension></xs:complexContent>
+  </xs:complexType>
+  <xs:element name="response" type="valueType"/>
+</xs:schema>

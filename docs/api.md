@@ -72,6 +72,25 @@ For example, fetch `devices/korg-minilogue.xml` for the same device data as `dev
 
 This example shows only the ID field; actual responses contain the complete profile.
 
+### XML schema and XSLT stylesheet
+
+The site root publishes `api.xsd` (XSD **1.1**) and `api.xsl` (XSLT **1.0**). Both are also package exports, `midi-devices/api.xsd` and `midi-devices/api.xsl`, and are copied by the Vite registry plugin. API discovery advertises them through `links.xmlSchema` and `links.xmlStylesheet`.
+
+Generated XML includes an `xml-stylesheet` processing instruction and `xsi:noNamespaceSchemaLocation`, using absolute URLs that retain the deployment subdirectory. The optional Node host serves the files at `/api.xsd` and `/api.xsl`; XML query errors reference those paths too. The stylesheet presents objects and arrays as expandable tables and preserves primitive values. Use an XSLT 1.0 processor, or a browser that supports XML stylesheet transformations; native browser support varies.
+
+XSD validates the typed serialization: required type/key attributes, object fields versus array items, unique object keys, primitive nesting, JSON number syntax, `true`/`false` booleans and empty nulls. XSD 1.1 assertions are necessary because the existing `type` attribute determines permitted content. XSD 1.0 processors cannot validate this schema. Device-specific fields, MIDI ranges and endpoint contracts remain defined by `api.schema.json`; the build checks JSON contracts, then verifies every XML response round-trips to the same JSON values.
+
+Install the test dependency with `python -m pip install -r requirements-dev.txt`. For standalone XSD validation, using the local schema avoids fetching the document's schema hint:
+
+```python
+import xmlschema
+
+schema = xmlschema.XMLSchema11("devices/api.xsd", defuse="always", allow="local")
+schema.validate("dist/api/v1/devices/korg-minilogue.xml", use_location_hints=False)
+```
+
+XSD validates data; XSLT transforms its presentation. Applying the stylesheet does not itself validate a response. `npm test` checks the XSD assertions and XML serializer; `npm run build` checks all generated XML/JSON pairs.
+
 ## Single-device query endpoint
 
 Run `npm start` to build the files and start the optional Node API host (Node 22 or later). It reads the requested prebuilt file without loading or filtering the full catalogue:

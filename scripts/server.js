@@ -7,6 +7,7 @@ import { toXml } from "./xml.js"
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "dist")
 const validId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
+const xmlAssets = new Map([["/api.xsd", "application/xml"], ["/api.xsl", "application/xslt+xml"]])
 
 export function createApiServer({ directory = root } = {}) {
 	return createServer(async (request, response) => {
@@ -14,12 +15,18 @@ export function createApiServer({ directory = root } = {}) {
 		response.setHeader("Access-Control-Allow-Origin", "*")
 		const error = (status, message) => {
 			response.writeHead(status, { "Content-Type": format === "xml" ? "application/xml; charset=utf-8" : "application/json; charset=utf-8" })
-			response.end(request.method === "HEAD" ? undefined : format === "xml" ? toXml({ error: message }) : JSON.stringify({ error: message }))
+			response.end(request.method === "HEAD" ? undefined : format === "xml" ? toXml({ error: message }, { stylesheet: "/api.xsl", schema: "/api.xsd" }) : JSON.stringify({ error: message }))
 		}
 		try {
 			const url = new URL(request.url, "http://localhost")
 			let file
-			if (url.pathname === "/api/v1/device") {
+			let resourceRoot = path.join(directory, "api", "v1")
+			const assetType = xmlAssets.get(url.pathname)
+			if (assetType) {
+				file = url.pathname.slice(1)
+				resourceRoot = directory
+				format = "xml"
+			} else if (url.pathname === "/api/v1/device") {
 				format = url.searchParams.get("format") ?? "json"
 				if (!["json", "xml"].includes(format)) {
 					format = "json"
@@ -38,9 +45,9 @@ export function createApiServer({ directory = root } = {}) {
 				response.setHeader("Allow", "GET, HEAD")
 				return error(405, "Method not allowed")
 			}
-			const bytes = await readFile(path.join(directory, "api", "v1", file))
+			const bytes = await readFile(path.join(resourceRoot, file))
 			response.writeHead(200, {
-				"Content-Type": format === "xml" ? "application/xml; charset=utf-8" : "application/json; charset=utf-8",
+				"Content-Type": assetType ? `${assetType}; charset=utf-8` : format === "xml" ? "application/xml; charset=utf-8" : "application/json; charset=utf-8",
 				"Content-Length": bytes.length
 			})
 			response.end(request.method === "HEAD" ? undefined : bytes)

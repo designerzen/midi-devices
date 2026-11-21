@@ -17,6 +17,8 @@
 		"./manufacturers.schema.json": "./devices/manufacturers.schema.json",
 		"./midi-manufacturers.schema.json": "./devices/midi-manufacturers.schema.json",
 		"./api.schema.json": "./devices/api.schema.json",
+		"./api.xsd": "./devices/api.xsd",
+		"./api.xsl": "./devices/api.xsl",
 		"./devices/*": "./devices/*"
 	},
 	"files": [
@@ -26,14 +28,14 @@
 	],
 	"scripts": {
 		"diagrams": "python scripts/generate-diagrams.py",
-		"build": "node scripts/build.js",
+		"build": "node scripts/build.js && python scripts/xml_validation.py dist/api/v1",
 		"validate": "node scripts/validate.js",
 		"manufacturers:import": "python scripts/import-midi-manufacturers.py",
 		"version:patch": "npm version patch --no-git-tag-version",
 		"version:build": "node scripts/bump-build-version.js",
 		"version:minor": "npm version minor --no-git-tag-version",
 		"version:major": "npm version major --no-git-tag-version",
-		"test": "npm run validate && node --test && python scripts/diagrams_test.py",
+		"test": "npm run validate && node --test && python scripts/diagrams_test.py && python scripts/xml_test.py",
 		"start": "npm run build && node scripts/server.js",
 		"preview": "npm run build && npx --yes serve dist"
 	},

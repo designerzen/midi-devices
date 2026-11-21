@@ -20,6 +20,8 @@ Read the [complete API reference](docs/api.md) for response shapes, every client
 
 [JSON Schemas](docs/api.md#json-schemas) cover device profiles, manufacturers, raw directory indexes, the official SysEx registry and API v1 responses. They are published with the catalogue and available as package exports; validation runs on the raw data and generated API responses.
 
+The XML API includes an [XSD 1.1 schema and XSLT stylesheet](docs/api.md#xml-schema-and-xslt-stylesheet). For development tests, install the XML validator with `python -m pip install -r requirements-dev.txt` alongside the npm dependencies.
+
 See the [GitHub control-library research](docs/control-libraries.md) for Behringer Mini/Micro editors, deeper Circuit controls and Volca functionality. The catalogue includes ten Behringer Mini/Micro models, expanded Circuit-family CC mappings and additional Volca Sample 2 controls, with manufacturer sources and explicit stock-firmware and adapter requirements.
 
 See [classic MIDI and accessible hardware coverage](docs/coverage.md) for the DX7, D-50, JUNO-106, M1, TR-909 and other landmark devices, plus Soundbeam, Magic Flute, Skoog and Skwitch. The guide explains DIN MIDI interfaces, companion-app dependencies, and partial mappings.

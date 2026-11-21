@@ -77,4 +77,10 @@ test("every schema is exposed through package exports and the raw store", async 
 	}
 	assert.equal(await store.read("../api.schema.json"), null)
 	assert.equal(await store.read("unknown.schema.json"), null)
+	for (const [file, mime] of [["api.xsd", "application/xml"], ["api.xsl", "application/xslt+xml"]]) {
+		assert.equal(fileURLToPath(import.meta.resolve(`midi-devices/${file}`)), path.join(MIDI_DEVICE_DIRECTORY, file))
+		const resource = await store.read(file)
+		assert.equal(resource.type, mime)
+		assert.equal(resource.bytes.toString(), await readFile(path.join(MIDI_DEVICE_DIRECTORY, file), "utf8"))
+	}
 })

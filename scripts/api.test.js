@@ -88,6 +88,20 @@ test("built data and query endpoint return only the requested device in either f
 		assert.equal((await fetch(`${base}${resource}.xml`)).status, 200)
 	}
 	const index = await (await fetch(`${base}index.json`)).json()
+	assert.equal(index.links.xmlSchema, "https://example.test/catalogue/api.xsd")
+	assert.equal(index.links.xmlStylesheet, "https://example.test/catalogue/api.xsl")
+	const xml = await (await fetch(`${base}devices/korg-minilogue.xml`)).text()
+	assert.match(xml, /<\?xml-stylesheet type="text\/xsl" href="https:\/\/example.test\/catalogue\/api.xsl"\?>/)
+	assert.match(xml, /xsi:noNamespaceSchemaLocation="https:\/\/example.test\/catalogue\/api.xsd"/)
+	const origin = new URL(base).origin
+	for (const [file, mime] of [["api.xsd", "application/xml"], ["api.xsl", "application/xslt+xml"]]) {
+		const response = await fetch(`${origin}/${file}`)
+		assert.equal(response.status, 200)
+		assert.equal(response.headers.get("content-type"), `${mime}; charset=utf-8`)
+		assert.equal(await response.text(), await readFile(path.join(MIDI_DEVICE_DIRECTORY, file), "utf8"))
+		assert.equal(await (await fetch(`${origin}/${file}`, { method: "HEAD" })).text(), "")
+		assert.equal((await fetch(`${origin}/${file}`, { method: "POST" })).status, 405)
+	}
 	const korg = await client.manufacturer("korg")
 	const descriptor = JSON.parse(await readFile(path.join(MIDI_DEVICE_DIRECTORY, "korg/manufacturer.json"), "utf8"))
 	assert.equal(korg.description, descriptor.description)
