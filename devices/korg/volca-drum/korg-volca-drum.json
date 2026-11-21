@@ -27,6 +27,10 @@
 		{
 			"title": "Factory split-channel MIDI chart",
 			"url": "https://cdn.korg.com/us/support/download/files/aa0a404eb2b0fa59873677d825cc272e.pdf"
+		},
+		{
+			"title": "Edisyn Volca editor: model-specific CC, part-channel and mode handling",
+			"url": "https://github.com/eclab/edisyn/blob/9582f314e2b7ceadfb3d101c132ee50d6e736aba/edisyn/synth/korgvolca/KorgVolca.java"
 		}
 	],
 	"abilities": [
@@ -41,7 +45,7 @@
 		"Envelope: Attack layers, Release layers",
 		"Waveguide: Model, Decay, Body, Tune, Send"
 	],
-	"notice": "Most controls are MIDI receive mappings. The unmodified hardware has no MIDI output and cannot send panel movements or notes to Harmoneasy. Factory split-channel mode: channels 1-6 select parts 1-6 and any note triggers that part. CC controls address both sound layers on the selected part channel. The optional single-channel mode has a different CC map; it does not make note numbers select the drum parts.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration.",
+	"notice": "Most controls are MIDI receive mappings. The unmodified hardware has no MIDI output and cannot send panel movements or notes to Harmoneasy. Factory split-channel mode: channels 1-6 select parts 1-6 and any note triggers that part. CC controls address both sound layers on the selected part channel. The optional single-channel mode has a different CC map; it does not make note numbers select the drum parts.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration. Edisyn provides model-specific remote CC editing; its locally saved editor patches are not proof that this instrument can transmit or dump its current panel state. Single-channel and multi-channel layouts, stock and modified firmware, and Sample versus Sample 2 must not be conflated.",
 	"controls": [
 		{
 			"id": "sound-select-layers-knob",

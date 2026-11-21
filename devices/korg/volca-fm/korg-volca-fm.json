@@ -23,6 +23,10 @@
 		{
 			"title": "Korg volca fm MIDI implementation chart",
 			"url": "https://cdn.korg.com/us/support/download/files/0ee40bc9fbbb72aa51d519df2af5697d.pdf"
+		},
+		{
+			"title": "Edisyn Volca editor: model-specific CC, part-channel and mode handling",
+			"url": "https://github.com/eclab/edisyn/blob/9582f314e2b7ceadfb3d101c132ee50d6e736aba/edisyn/synth/korgvolca/KorgVolca.java"
 		}
 	],
 	"abilities": [
@@ -38,7 +42,7 @@
 		"LFO: Rate, Pitch depth",
 		"Algorithm Arp: Algorithm, Type, Division"
 	],
-	"notice": "Most controls are MIDI receive mappings. The unmodified hardware has no MIDI output and cannot send panel movements or notes to Harmoneasy. Original three-voice model, separate from volca fm2. Velocity is controlled by the Velocity slider/CC41; do not assume the original firmware follows note-on velocity.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration.",
+	"notice": "Most controls are MIDI receive mappings. The unmodified hardware has no MIDI output and cannot send panel movements or notes to Harmoneasy. Original three-voice model, separate from volca fm2. Velocity is controlled by the Velocity slider/CC41; do not assume the original firmware follows note-on velocity.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration. Edisyn provides model-specific remote CC editing; its locally saved editor patches are not proof that this instrument can transmit or dump its current panel state. Single-channel and multi-channel layouts, stock and modified firmware, and Sample versus Sample 2 must not be conflated.",
 	"controls": [
 		{
 			"id": "performance-transpose-fader",

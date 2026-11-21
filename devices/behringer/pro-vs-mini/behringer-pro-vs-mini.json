@@ -1,0 +1,1190 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "behringer-pro-vs-mini",
+	"name": "Behringer PRO VS MINI",
+	"manufacturer": "Behringer",
+	"manufacturerUrl": "https://www.behringer.com/",
+	"productUrl": "https://www.behringer.com/en/products/0722-ABF",
+	"description": "Compact vector synthesizer with four digital oscillators per voice and an analog filter.",
+	"ids": [
+		"behringer-pro-vs-mini"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Behringer manual: controls, connections and MIDI CC implementation",
+			"url": "https://cdn-media.empowertribe.com/2bcaabc4ff574019b13c2ea35a1cc61d/QSG_BE_0722-ABF_PRO%20VS%20MINI_WW%20.pdf"
+		},
+		{
+			"title": "Manufacturer product page",
+			"url": "https://www.behringer.com/en/products/0722-ABF"
+		},
+		{
+			"title": "Community Web MIDI editor (reviewed source revision; not a dependency)",
+			"url": "https://github.com/gary909/Pro_VS_Mini_Editor/tree/60544a34ed83b83b8575ccf53419f5e77ac19453"
+		},
+		{
+			"title": "SynthHUB device definition (generic settings support; not full parameter verification)",
+			"url": "https://github.com/utajum/SynthHUB/blob/42be9fb911199990fc6a3350534e3f40dfe011ac/app/src/data/devices/provs-mini.json"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"MIDI note reception",
+		"Documented sound-parameter CC reception",
+		"External MIDI input"
+	],
+	"hardwareControls": [
+		"Power",
+		"Volume",
+		"Display",
+		"Wave mix",
+		"Program down",
+		"Program up",
+		"Envelope select",
+		"Attack",
+		"Decay",
+		"Sustain",
+		"Release",
+		"LFO select",
+		"LFO rate",
+		"LFO amount",
+		"Cutoff",
+		"Resonance",
+		"Wave select",
+		"Frequency",
+		"Chorus rate",
+		"Chorus amount",
+		"Tempo",
+		"Memory / Write",
+		"Function",
+		"Play / Active",
+		"Record / Clear",
+		"27-key touch keyboard"
+	],
+	"notice": "CC numbers are checked against the manufacturer manual. Connect a MIDI output to the matching input and enable MIDI/CC reception in the device settings. MIDI channel is user-selectable; no USB port-name aliases are assumed. The drawing is a partial grouped control inventory, not a scale panel layout. Touch-key note bindings are virtual defaults and may require octave adjustment. Menu-dependent controls are not automatically bound. NRPN, SysEx preset/sequence transfers, firmware updates and multi-message operations require a protocol-aware application and are not implemented by these static controls. Most sound parameters use 0-99 and portamento 0-31. CC118 is labelled Voice C twice in the printed table; the four-oscillator order and the editor identify it as Voice D coarse tuning. Voice count and effects can vary with firmware; this profile does not assume the updated firmware.",
+	"controls": [
+		{
+			"id": "modulation",
+			"label": "Modulation",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 1
+		},
+		{
+			"id": "portamento-time",
+			"label": "Portamento time",
+			"widget": "slider",
+			"min": 0,
+			"max": 31,
+			"cc": 5
+		},
+		{
+			"id": "effects-engine",
+			"label": "Effects engine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 9
+		},
+		{
+			"id": "voice-a-wave",
+			"label": "Voice A wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 24
+		},
+		{
+			"id": "voice-b-wave",
+			"label": "Voice B wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 25
+		},
+		{
+			"id": "voice-c-wave",
+			"label": "Voice C wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 26
+		},
+		{
+			"id": "voice-d-wave",
+			"label": "Voice D wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 27
+		},
+		{
+			"id": "lfo-2-amount",
+			"label": "LFO 2 amount",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 28
+		},
+		{
+			"id": "filter-envelope-amount",
+			"label": "Filter envelope amount",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 47
+		},
+		{
+			"id": "lfo-1-waveform",
+			"label": "LFO 1 waveform",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 54
+		},
+		{
+			"id": "lfo-2-waveform",
+			"label": "LFO 2 waveform",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 55
+		},
+		{
+			"id": "lfo-1-amount",
+			"label": "LFO 1 amount",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 70
+		},
+		{
+			"id": "filter-resonance",
+			"label": "Filter resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 71
+		},
+		{
+			"id": "lfo-1-rate",
+			"label": "LFO 1 rate",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 72
+		},
+		{
+			"id": "lfo-2-rate",
+			"label": "LFO 2 rate",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 73
+		},
+		{
+			"id": "filter-cutoff",
+			"label": "Filter cutoff",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 74
+		},
+		{
+			"id": "amp-envelope-attack",
+			"label": "Amp envelope attack",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 81
+		},
+		{
+			"id": "amp-envelope-decay",
+			"label": "Amp envelope decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 82
+		},
+		{
+			"id": "amp-envelope-sustain",
+			"label": "Amp envelope sustain",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 83
+		},
+		{
+			"id": "amp-envelope-release",
+			"label": "Amp envelope release",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 84
+		},
+		{
+			"id": "filter-envelope-attack",
+			"label": "Filter envelope attack",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 85
+		},
+		{
+			"id": "filter-envelope-decay",
+			"label": "Filter envelope decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 86
+		},
+		{
+			"id": "filter-envelope-sustain",
+			"label": "Filter envelope sustain",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 87
+		},
+		{
+			"id": "filter-envelope-release",
+			"label": "Filter envelope release",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 88
+		},
+		{
+			"id": "chorus-depth",
+			"label": "Chorus depth",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 91
+		},
+		{
+			"id": "chorus-rate",
+			"label": "Chorus rate",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 92
+		},
+		{
+			"id": "voice-a-fine-tuning",
+			"label": "Voice A fine tuning",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 111
+		},
+		{
+			"id": "voice-b-fine-tuning",
+			"label": "Voice B fine tuning",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 112
+		},
+		{
+			"id": "voice-c-fine-tuning",
+			"label": "Voice C fine tuning",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 113
+		},
+		{
+			"id": "voice-d-fine-tuning",
+			"label": "Voice D fine tuning",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 114
+		},
+		{
+			"id": "voice-a-coarse-tuning",
+			"label": "Voice A coarse tuning",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 115
+		},
+		{
+			"id": "voice-b-coarse-tuning",
+			"label": "Voice B coarse tuning",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 116
+		},
+		{
+			"id": "voice-c-coarse-tuning",
+			"label": "Voice C coarse tuning",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 117
+		},
+		{
+			"id": "voice-d-coarse-tuning",
+			"label": "Voice D coarse tuning",
+			"widget": "slider",
+			"min": 0,
+			"max": 99,
+			"cc": 118
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Partial grouped control schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Manufacturer MIDI implementation and community tools"
+			}
+		]
+	},
+	"connections": [
+		{
+			"label": "USB-C",
+			"connector": "USB-C (power and USB MIDI)",
+			"direction": "bidirectional",
+			"location": "top edge"
+		},
+		{
+			"label": "Headphones",
+			"connector": "3.5 mm TRS stereo audio",
+			"direction": "output",
+			"location": "top edge"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN MIDI",
+			"direction": "input",
+			"location": "top edge"
+		},
+		{
+			"label": "Sync IN",
+			"connector": "3.5 mm analog clock (not MIDI)",
+			"direction": "input",
+			"location": "top edge"
+		}
+	],
+	"surface": {
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 820,
+		"elements": [
+			{
+				"id": "connections-usb-c",
+				"label": "CONNECTIONS: USB-C",
+				"kind": "bidirectional",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 11.585365853658537,
+					"width": 23.892857142857142,
+					"height": 7.926829268292683
+				}
+			},
+			{
+				"id": "connections-headphones",
+				"label": "CONNECTIONS: Headphones",
+				"kind": "output",
+				"position": {
+					"x": 26.107142857142858,
+					"y": 11.585365853658537,
+					"width": 23.892857142857142,
+					"height": 7.926829268292683
+				}
+			},
+			{
+				"id": "connections-midi-in",
+				"label": "CONNECTIONS: MIDI IN",
+				"kind": "input",
+				"position": {
+					"x": 50.0,
+					"y": 11.585365853658537,
+					"width": 23.892857142857142,
+					"height": 7.926829268292683
+				}
+			},
+			{
+				"id": "connections-sync-in",
+				"label": "CONNECTIONS: Sync IN",
+				"kind": "input",
+				"position": {
+					"x": 73.89285714285714,
+					"y": 11.585365853658537,
+					"width": 23.892857142857142,
+					"height": 7.926829268292683
+				}
+			},
+			{
+				"id": "physical-controls-partial-power",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Power",
+				"kind": "power",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-volume",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Volume",
+				"kind": "knob",
+				"position": {
+					"x": 15.867346938775508,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-display",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Display",
+				"kind": "screen",
+				"position": {
+					"x": 29.520408163265305,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-wave-mix",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Wave mix",
+				"kind": "joystick",
+				"position": {
+					"x": 43.173469387755105,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-program-down",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Program down",
+				"kind": "button",
+				"position": {
+					"x": 56.826530612244895,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-program-up",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Program up",
+				"kind": "button",
+				"position": {
+					"x": 70.47959183673468,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-envelope-select",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Envelope select",
+				"kind": "button",
+				"position": {
+					"x": 84.13265306122449,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-attack",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Attack",
+				"kind": "knob",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 36.43292682926829,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-decay",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Decay",
+				"kind": "knob",
+				"position": {
+					"x": 15.867346938775508,
+					"y": 36.43292682926829,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-sustain",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Sustain",
+				"kind": "knob",
+				"position": {
+					"x": 29.520408163265305,
+					"y": 36.43292682926829,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-release",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Release",
+				"kind": "knob",
+				"position": {
+					"x": 43.173469387755105,
+					"y": 36.43292682926829,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-lfo-select",
+				"label": "PHYSICAL CONTROLS (PARTIAL): LFO select",
+				"kind": "button",
+				"position": {
+					"x": 56.826530612244895,
+					"y": 36.43292682926829,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-lfo-rate",
+				"label": "PHYSICAL CONTROLS (PARTIAL): LFO rate",
+				"kind": "knob",
+				"position": {
+					"x": 70.47959183673468,
+					"y": 36.43292682926829,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-lfo-amount",
+				"label": "PHYSICAL CONTROLS (PARTIAL): LFO amount",
+				"kind": "knob",
+				"position": {
+					"x": 84.13265306122449,
+					"y": 36.43292682926829,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-cutoff",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Cutoff",
+				"kind": "knob",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-resonance",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 15.867346938775508,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-wave-select",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Wave select",
+				"kind": "knob",
+				"position": {
+					"x": 29.520408163265305,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-frequency",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Frequency",
+				"kind": "knob",
+				"position": {
+					"x": 43.173469387755105,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-chorus-rate",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Chorus rate",
+				"kind": "knob",
+				"position": {
+					"x": 56.826530612244895,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-chorus-amount",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Chorus amount",
+				"kind": "knob",
+				"position": {
+					"x": 70.47959183673468,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-tempo",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Tempo",
+				"kind": "knob",
+				"position": {
+					"x": 84.13265306122449,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-memory-write",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Memory / Write",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 58.079268292682926,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-function",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Function",
+				"kind": "button",
+				"position": {
+					"x": 15.867346938775508,
+					"y": 58.079268292682926,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-play-active",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Play / Active",
+				"kind": "button",
+				"position": {
+					"x": 29.520408163265305,
+					"y": 58.079268292682926,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "physical-controls-partial-record-clear",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Record / Clear",
+				"kind": "button",
+				"position": {
+					"x": 43.173469387755105,
+					"y": 58.079268292682926,
+					"width": 13.653061224489797,
+					"height": 10.823170731707316
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Touch plate 1",
+				"kind": "key",
+				"position": {
+					"x": 2.857142857142857,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Touch plate 3",
+				"kind": "key",
+				"position": {
+					"x": 8.75,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Touch plate 5",
+				"kind": "key",
+				"position": {
+					"x": 14.642857142857144,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Touch plate 6",
+				"kind": "key",
+				"position": {
+					"x": 20.535714285714285,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Touch plate 8",
+				"kind": "key",
+				"position": {
+					"x": 26.42857142857143,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Touch plate 10",
+				"kind": "key",
+				"position": {
+					"x": 32.32142857142858,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Touch plate 12",
+				"kind": "key",
+				"position": {
+					"x": 38.21428571428571,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 59
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Touch plate 13",
+				"kind": "key",
+				"position": {
+					"x": 44.107142857142854,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Touch plate 15",
+				"kind": "key",
+				"position": {
+					"x": 50.0,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 62
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Touch plate 17",
+				"kind": "key",
+				"position": {
+					"x": 55.892857142857146,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 64
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Touch plate 18",
+				"kind": "key",
+				"position": {
+					"x": 61.78571428571429,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 65
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Touch plate 20",
+				"kind": "key",
+				"position": {
+					"x": 67.67857142857143,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 67
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Touch plate 22",
+				"kind": "key",
+				"position": {
+					"x": 73.57142857142858,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 69
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Touch plate 24",
+				"kind": "key",
+				"position": {
+					"x": 79.46428571428571,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 71
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Touch plate 25",
+				"kind": "key",
+				"position": {
+					"x": 85.35714285714285,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 72
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Touch plate 27",
+				"kind": "key",
+				"position": {
+					"x": 91.25,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 74
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Touch plate 2",
+				"kind": "key",
+				"position": {
+					"x": 6.923214285714286,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Touch plate 4",
+				"kind": "key",
+				"position": {
+					"x": 12.816071428571426,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Touch plate 7",
+				"kind": "key",
+				"position": {
+					"x": 24.601785714285715,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Touch plate 9",
+				"kind": "key",
+				"position": {
+					"x": 30.494642857142857,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Touch plate 11",
+				"kind": "key",
+				"position": {
+					"x": 36.3875,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Touch plate 14",
+				"kind": "key",
+				"position": {
+					"x": 48.17321428571429,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 61
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Touch plate 16",
+				"kind": "key",
+				"position": {
+					"x": 54.066071428571426,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 63
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Touch plate 19",
+				"kind": "key",
+				"position": {
+					"x": 65.85178571428571,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 66
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Touch plate 21",
+				"kind": "key",
+				"position": {
+					"x": 71.74464285714285,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 68
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Touch plate 23",
+				"kind": "key",
+				"position": {
+					"x": 77.63749999999999,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 70
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Touch plate 26",
+				"kind": "key",
+				"position": {
+					"x": 89.42321428571428,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 73
+				},
+				"learnable": true,
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"diagramSources": [
+		"https://cdn-media.empowertribe.com/2bcaabc4ff574019b13c2ea35a1cc61d/QSG_BE_0722-ABF_PRO%20VS%20MINI_WW%20.pdf",
+		"https://www.behringer.com/en/products/0722-ABF",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

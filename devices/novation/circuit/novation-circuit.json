@@ -19,13 +19,23 @@
 		{
 			"title": "Novation Circuit manual and MIDI reference",
 			"url": "https://downloads.novationmusic.com/novation/circuit/circuit"
+		},
+		{
+			"title": "Original Circuit Web Synth Editor: full synth patch editing and SysEx",
+			"url": "https://github.com/ewe2/circuit-web-synth-editor/tree/9e99c43bec7ca7366faaae12bd5112b1b7f31522"
+		},
+		{
+			"title": "Original Circuit programmer reference archived with the editor",
+			"url": "https://github.com/ewe2/circuit-web-synth-editor/blob/9e99c43bec7ca7366faaae12bd5112b1b7f31522/resources/circuit-programmers-reference-guide-v1-0.pdf"
 		}
 	],
 	"abilities": [
 		"Polyphonic synth notes",
 		"Drum notes",
 		"Synth macro CCs",
-		"Sequencer MIDI output"
+		"Sequencer MIDI output",
+		"Remote filter, amp-envelope and oscillator-mixer CC editing",
+		"Synth patch SysEx via a compatible editor"
 	],
 	"hardwareControls": [
 		"32 velocity-sensitive pads",
@@ -33,7 +43,7 @@
 		"Two synth tracks",
 		"Four drum tracks"
 	],
-	"notice": "Original Circuit, rather than Circuit Tracks or Rhythm. Enable MIDI note and CC transmission in the setup view. Synth macros use factory channels 1 and 2; drums use channel 10. The two macro rows represent the same eight encoders on the two synth tracks. Pad notes are virtual chromatic defaults; use MIDI learn to match the selected scale and octave. If hardware channels have changed, edit the surface mappings.",
+	"notice": "Original Circuit, rather than Circuit Tracks or Rhythm. Enable MIDI note and CC transmission in the setup view. Synth macros use factory channels 1 and 2; drums use channel 10. The two macro rows represent the same eight encoders on the two synth tracks. Pad notes are virtual chromatic defaults; use MIDI learn to match the selected scale and octave. If hardware channels have changed, edit the surface mappings. Additional CC controls expose the synth engine beyond the eight macros. The linked Web MIDI editor handles deeper NRPN and patch SysEx operations. Original Circuit, Tracks, Rhythm and Mono Station use different protocols; do not interchange dumps or firmware. This profile targets stock firmware.",
 	"controls": [
 		{
 			"id": "synth-1-macro-1",
@@ -194,6 +204,246 @@
 				"channel": 2
 			},
 			"widget": "slider"
+		},
+		{
+			"id": "synth-1-filter-cutoff",
+			"label": "Synth 1: Filter cutoff",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 74,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-filter-resonance",
+			"label": "Synth 1: Filter resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 71,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-amp-envelope-attack",
+			"label": "Synth 1: Amp envelope attack",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 73,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-amp-envelope-decay",
+			"label": "Synth 1: Amp envelope decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 75,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-amp-envelope-sustain",
+			"label": "Synth 1: Amp envelope sustain",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 70,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-amp-envelope-release",
+			"label": "Synth 1: Amp envelope release",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 72,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-oscillator-1-level",
+			"label": "Synth 1: Oscillator 1 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 51,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-oscillator-2-level",
+			"label": "Synth 1: Oscillator 2 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 52,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-ring-modulation-level",
+			"label": "Synth 1: Ring modulation level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 54,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-noise-level",
+			"label": "Synth 1: Noise level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 56,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-2-filter-cutoff",
+			"label": "Synth 2: Filter cutoff",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 74,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-filter-resonance",
+			"label": "Synth 2: Filter resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 71,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-amp-envelope-attack",
+			"label": "Synth 2: Amp envelope attack",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 73,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-amp-envelope-decay",
+			"label": "Synth 2: Amp envelope decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 75,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-amp-envelope-sustain",
+			"label": "Synth 2: Amp envelope sustain",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 70,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-amp-envelope-release",
+			"label": "Synth 2: Amp envelope release",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 72,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-oscillator-1-level",
+			"label": "Synth 2: Oscillator 1 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 51,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-oscillator-2-level",
+			"label": "Synth 2: Oscillator 2 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 52,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-ring-modulation-level",
+			"label": "Synth 2: Ring modulation level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 54,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-noise-level",
+			"label": "Synth 2: Noise level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 56,
+				"channel": 2
+			}
 		}
 	],
 	"modes": [],
@@ -223,6 +473,9 @@
 						"type": "controls"
 					}
 				]
+			},
+			{
+				"type": "controls"
 			},
 			{
 				"type": "guide",

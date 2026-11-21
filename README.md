@@ -18,6 +18,8 @@ Unknown-device cards include **Create a device profile with an agent**, an expan
 
 Read the [complete API reference](docs/api.md) for response shapes, every client method, identifier matching, errors, caching, and self-hosting. The [profile and contribution guide](docs/profiles.md) explains MIDI mappings, panel geometry, and how to add devices and manufacturers.
 
+See the [GitHub control-library research](docs/control-libraries.md) for Behringer Mini/Micro editors, deeper Circuit controls and Volca functionality. The catalogue includes ten Behringer Mini/Micro models, expanded Circuit-family CC mappings and additional Volca Sample 2 controls, with manufacturer sources and explicit stock-firmware and adapter requirements.
+
 See [classic MIDI and accessible hardware coverage](docs/coverage.md) for the DX7, D-50, JUNO-106, M1, TR-909 and other landmark devices, plus Soundbeam, Magic Flute, Skoog and Skwitch. The guide explains DIN MIDI interfaces, companion-app dependencies, and partial mappings.
 
 Teenage Engineering has 28 profiles, covering the OP synthesizers, MIDI-capable EP products, TX-6 and TP-7, POM-16/170, oplab interfaces and OP-Z expansions, ortho remote, all eight choir voices, and the CM-15 firmware endpoint. See [Teenage Engineering coverage](docs/coverage.md#teenage-engineering-midi-products) for connection requirements and mapping limits.

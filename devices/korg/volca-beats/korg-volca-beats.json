@@ -23,6 +23,10 @@
 		{
 			"title": "Korg volca beats MIDI implementation chart",
 			"url": "https://cdn.korg.com/us/support/download/files/456d19dc4cc9e6e73f7ed9ac34e38aec.pdf"
+		},
+		{
+			"title": "Edisyn Volca editor: model-specific CC, part-channel and mode handling",
+			"url": "https://github.com/eclab/edisyn/blob/9582f314e2b7ceadfb3d101c132ee50d6e736aba/edisyn/synth/korgvolca/KorgVolca.java"
 		}
 	],
 	"abilities": [
@@ -39,7 +43,7 @@
 		"Stutter: Time, Depth",
 		"Part: Level, PCM speed, Part left, Part right"
 	],
-	"notice": "Most controls are MIDI receive mappings. The unmodified hardware has no MIDI output and cannot send panel movements or notes to Harmoneasy. Level regions address parts 1-10; PCM speed regions address Clap, Claves, Agogo and Crash. Notes use the factory drum map.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration.",
+	"notice": "Most controls are MIDI receive mappings. The unmodified hardware has no MIDI output and cannot send panel movements or notes to Harmoneasy. Level regions address parts 1-10; PCM speed regions address Clap, Claves, Agogo and Crash. Notes use the factory drum map.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration. Edisyn provides model-specific remote CC editing; its locally saved editor patches are not proof that this instrument can transmit or dump its current panel state. Single-channel and multi-channel layouts, stock and modified firmware, and Sample versus Sample 2 must not be conflated.",
 	"controls": [
 		{
 			"id": "tom-decay-knob",

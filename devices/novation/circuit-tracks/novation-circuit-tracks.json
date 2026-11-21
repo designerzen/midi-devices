@@ -19,6 +19,18 @@
 		{
 			"title": "MIDI setup and channels",
 			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/25494477003154-Circuit-Tracks-appendix"
+		},
+		{
+			"title": "Novation Circuit Tracks Programmer's Reference v3: CC, NRPN, patch SysEx",
+			"url": "https://fael-downloads-prod.focusrite.com/customer/prod/downloads/circuit_tracks_programmer_s_reference_guide_v3.pdf"
+		},
+		{
+			"title": "Python Circuit Tracks library: reviewed MIDI parameter definitions",
+			"url": "https://github.com/namirsab/circuit-tracks-tools/blob/f064cee7fd9ba755ed768b152a7734ef7e9b114a/src/circuit_tracks/constants.py"
+		},
+		{
+			"title": "Community reverse-engineered project/file-transfer protocol",
+			"url": "https://github.com/namirsab/circuit-tracks-tools/blob/f064cee7fd9ba755ed768b152a7734ef7e9b114a/docs/sysex-file-protocol.md"
 		}
 	],
 	"abilities": [
@@ -26,7 +38,10 @@
 		"USB MIDI",
 		"DIN MIDI",
 		"MIDI clock",
-		"Configurable track channels"
+		"Configurable track channels",
+		"Deep synth-engine CC editing on channels 1 and 2",
+		"Per-drum sample, pitch, decay, distortion, EQ, pan and level CCs on channel 10",
+		"Synth patch SysEx supported by protocol-aware editors"
 	],
 	"hardwareControls": [
 		"32 pads",
@@ -35,8 +50,1593 @@
 		"Master filter",
 		"Master volume"
 	],
-	"notice": "Synths default to MIDI channels 1 and 2, external MIDI tracks to 3 and 4, and all four drum tracks to 10. Connect USB MIDI or the 5-pin MIDI ports. Hold Shift and press Save for Setup View to configure channels and independently enable note, CC, program-change and clock transmission/receive. Channel 16 is reserved for project selection. Pad notes and encoder behavior depend on the current view and configuration; this profile supplies setup guidance and an unbound physical surface, with no guessed CC or pad maps. USB port aliases have not been verified; select this profile manually. Diagrams are original schematics with illustrative positions, not scaled hardware drawings.",
-	"controls": [],
+	"notice": "Synths default to MIDI channels 1 and 2, external MIDI tracks to 3 and 4, and all four drum tracks to 10. Connect USB MIDI or the 5-pin MIDI ports. Hold Shift and press Save for Setup View to configure channels and independently enable note, CC, program-change and clock transmission/receive. Channel 16 is reserved for project selection. Pad notes and encoder behavior depend on the current view and configuration; this profile supplies setup guidance and an unbound physical surface, with no guessed CC or pad maps. USB port aliases have not been verified; select this profile manually. Diagrams are original schematics with illustrative positions, not scaled hardware drawings. The CC controls use factory channels 1/2 for synths and 10 for drums; remap after hardware channel changes. The two MIDI tracks default to channels 3/4. NRPN, full patch dumps, project file transfer, acknowledgements, pacing and checksums require the linked library or another protocol-aware host; they are not modeled as single CCs. The community project-transfer protocol is independently reverse-engineered. Parameter changes from the generic controls list are remote sound editing, not extra physical knobs.",
+	"controls": [
+		{
+			"id": "synth-1-polyphony-mode",
+			"label": "Synth 1: polyphony mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 3,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-portamento-rate",
+			"label": "Synth 1: portamento rate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 5,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-pre-glide",
+			"label": "Synth 1: pre glide",
+			"widget": "slider",
+			"min": 52,
+			"max": 76,
+			"message": {
+				"type": "cc",
+				"number": 9,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-keyboard-octave",
+			"label": "Synth 1: keyboard octave",
+			"widget": "slider",
+			"min": 58,
+			"max": 69,
+			"message": {
+				"type": "cc",
+				"number": 13,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-wave",
+			"label": "Synth 1: osc1 wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 29,
+			"message": {
+				"type": "cc",
+				"number": 19,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-wave-interpolate",
+			"label": "Synth 1: osc1 wave interpolate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 20,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-pulse-width-index",
+			"label": "Synth 1: osc1 pulse width index",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-virtual-sync-depth",
+			"label": "Synth 1: osc1 virtual sync depth",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-density",
+			"label": "Synth 1: osc1 density",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-density-detune",
+			"label": "Synth 1: osc1 density detune",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-semitones",
+			"label": "Synth 1: osc1 semitones",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-cents",
+			"label": "Synth 1: osc1 cents",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-pitchbend",
+			"label": "Synth 1: osc1 pitchbend",
+			"widget": "slider",
+			"min": 52,
+			"max": 76,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-wave",
+			"label": "Synth 1: osc2 wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 29,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-wave-interpolate",
+			"label": "Synth 1: osc2 wave interpolate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-pulse-width-index",
+			"label": "Synth 1: osc2 pulse width index",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-virtual-sync-depth",
+			"label": "Synth 1: osc2 virtual sync depth",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 33,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-density",
+			"label": "Synth 1: osc2 density",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 35,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-density-detune",
+			"label": "Synth 1: osc2 density detune",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 36,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-semitones",
+			"label": "Synth 1: osc2 semitones",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 37,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-cents",
+			"label": "Synth 1: osc2 cents",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 39,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-pitchbend",
+			"label": "Synth 1: osc2 pitchbend",
+			"widget": "slider",
+			"min": 52,
+			"max": 76,
+			"message": {
+				"type": "cc",
+				"number": 40,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc1-level",
+			"label": "Synth 1: osc1 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 51,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-osc2-level",
+			"label": "Synth 1: osc2 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 52,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-ring-mod-level",
+			"label": "Synth 1: ring mod level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 54,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-noise-level",
+			"label": "Synth 1: noise level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 56,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-pre-fx-level",
+			"label": "Synth 1: pre fx level",
+			"widget": "slider",
+			"min": 52,
+			"max": 82,
+			"message": {
+				"type": "cc",
+				"number": 58,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-post-fx-level",
+			"label": "Synth 1: post fx level",
+			"widget": "slider",
+			"min": 52,
+			"max": 82,
+			"message": {
+				"type": "cc",
+				"number": 59,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-routing",
+			"label": "Synth 1: routing",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 60,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-drive",
+			"label": "Synth 1: drive",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 63,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-drive-type",
+			"label": "Synth 1: drive type",
+			"widget": "slider",
+			"min": 0,
+			"max": 6,
+			"message": {
+				"type": "cc",
+				"number": 65,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-filter-type",
+			"label": "Synth 1: filter type",
+			"widget": "slider",
+			"min": 0,
+			"max": 5,
+			"message": {
+				"type": "cc",
+				"number": 68,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-filter-frequency",
+			"label": "Synth 1: filter frequency",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 74,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-filter-tracking",
+			"label": "Synth 1: filter tracking",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 69,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-filter-resonance",
+			"label": "Synth 1: filter resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 71,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-filter-q-normalize",
+			"label": "Synth 1: filter q normalize",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 78,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-env2-to-filter-freq",
+			"label": "Synth 1: env2 to filter freq",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 79,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-env1-velocity",
+			"label": "Synth 1: env1 velocity",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 108,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-env1-attack",
+			"label": "Synth 1: env1 attack",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 73,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-env1-decay",
+			"label": "Synth 1: env1 decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 75,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-env1-sustain",
+			"label": "Synth 1: env1 sustain",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 70,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-env1-release",
+			"label": "Synth 1: env1 release",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 72,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-distortion-level",
+			"label": "Synth 1: distortion level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 91,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-chorus-level",
+			"label": "Synth 1: chorus level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 93,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-macro-1",
+			"label": "Synth 1: macro knob1",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 80,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-macro-2",
+			"label": "Synth 1: macro knob2",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 81,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-macro-3",
+			"label": "Synth 1: macro knob3",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 82,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-macro-4",
+			"label": "Synth 1: macro knob4",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 83,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-macro-5",
+			"label": "Synth 1: macro knob5",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 84,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-macro-6",
+			"label": "Synth 1: macro knob6",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 85,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-macro-7",
+			"label": "Synth 1: macro knob7",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-1-macro-8",
+			"label": "Synth 1: macro knob8",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 1
+			}
+		},
+		{
+			"id": "synth-2-polyphony-mode",
+			"label": "Synth 2: polyphony mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 3,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-portamento-rate",
+			"label": "Synth 2: portamento rate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 5,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-pre-glide",
+			"label": "Synth 2: pre glide",
+			"widget": "slider",
+			"min": 52,
+			"max": 76,
+			"message": {
+				"type": "cc",
+				"number": 9,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-keyboard-octave",
+			"label": "Synth 2: keyboard octave",
+			"widget": "slider",
+			"min": 58,
+			"max": 69,
+			"message": {
+				"type": "cc",
+				"number": 13,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-wave",
+			"label": "Synth 2: osc1 wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 29,
+			"message": {
+				"type": "cc",
+				"number": 19,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-wave-interpolate",
+			"label": "Synth 2: osc1 wave interpolate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 20,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-pulse-width-index",
+			"label": "Synth 2: osc1 pulse width index",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-virtual-sync-depth",
+			"label": "Synth 2: osc1 virtual sync depth",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-density",
+			"label": "Synth 2: osc1 density",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-density-detune",
+			"label": "Synth 2: osc1 density detune",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-semitones",
+			"label": "Synth 2: osc1 semitones",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-cents",
+			"label": "Synth 2: osc1 cents",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-pitchbend",
+			"label": "Synth 2: osc1 pitchbend",
+			"widget": "slider",
+			"min": 52,
+			"max": 76,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-wave",
+			"label": "Synth 2: osc2 wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 29,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-wave-interpolate",
+			"label": "Synth 2: osc2 wave interpolate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-pulse-width-index",
+			"label": "Synth 2: osc2 pulse width index",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-virtual-sync-depth",
+			"label": "Synth 2: osc2 virtual sync depth",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 33,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-density",
+			"label": "Synth 2: osc2 density",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 35,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-density-detune",
+			"label": "Synth 2: osc2 density detune",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 36,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-semitones",
+			"label": "Synth 2: osc2 semitones",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 37,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-cents",
+			"label": "Synth 2: osc2 cents",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 39,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-pitchbend",
+			"label": "Synth 2: osc2 pitchbend",
+			"widget": "slider",
+			"min": 52,
+			"max": 76,
+			"message": {
+				"type": "cc",
+				"number": 40,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc1-level",
+			"label": "Synth 2: osc1 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 51,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-osc2-level",
+			"label": "Synth 2: osc2 level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 52,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-ring-mod-level",
+			"label": "Synth 2: ring mod level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 54,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-noise-level",
+			"label": "Synth 2: noise level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 56,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-pre-fx-level",
+			"label": "Synth 2: pre fx level",
+			"widget": "slider",
+			"min": 52,
+			"max": 82,
+			"message": {
+				"type": "cc",
+				"number": 58,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-post-fx-level",
+			"label": "Synth 2: post fx level",
+			"widget": "slider",
+			"min": 52,
+			"max": 82,
+			"message": {
+				"type": "cc",
+				"number": 59,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-routing",
+			"label": "Synth 2: routing",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 60,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-drive",
+			"label": "Synth 2: drive",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 63,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-drive-type",
+			"label": "Synth 2: drive type",
+			"widget": "slider",
+			"min": 0,
+			"max": 6,
+			"message": {
+				"type": "cc",
+				"number": 65,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-filter-type",
+			"label": "Synth 2: filter type",
+			"widget": "slider",
+			"min": 0,
+			"max": 5,
+			"message": {
+				"type": "cc",
+				"number": 68,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-filter-frequency",
+			"label": "Synth 2: filter frequency",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 74,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-filter-tracking",
+			"label": "Synth 2: filter tracking",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 69,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-filter-resonance",
+			"label": "Synth 2: filter resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 71,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-filter-q-normalize",
+			"label": "Synth 2: filter q normalize",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 78,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-env2-to-filter-freq",
+			"label": "Synth 2: env2 to filter freq",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 79,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-env1-velocity",
+			"label": "Synth 2: env1 velocity",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 108,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-env1-attack",
+			"label": "Synth 2: env1 attack",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 73,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-env1-decay",
+			"label": "Synth 2: env1 decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 75,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-env1-sustain",
+			"label": "Synth 2: env1 sustain",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 70,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-env1-release",
+			"label": "Synth 2: env1 release",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 72,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-distortion-level",
+			"label": "Synth 2: distortion level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 91,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-chorus-level",
+			"label": "Synth 2: chorus level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 93,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-macro-1",
+			"label": "Synth 2: macro knob1",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 80,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-macro-2",
+			"label": "Synth 2: macro knob2",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 81,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-macro-3",
+			"label": "Synth 2: macro knob3",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 82,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-macro-4",
+			"label": "Synth 2: macro knob4",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 83,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-macro-5",
+			"label": "Synth 2: macro knob5",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 84,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-macro-6",
+			"label": "Synth 2: macro knob6",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 85,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-macro-7",
+			"label": "Synth 2: macro knob7",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 2
+			}
+		},
+		{
+			"id": "synth-2-macro-8",
+			"label": "Synth 2: macro knob8",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 2
+			}
+		},
+		{
+			"id": "drum-1-patch-select",
+			"label": "Drum 1: patch select",
+			"widget": "slider",
+			"min": 0,
+			"max": 63,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-1-level",
+			"label": "Drum 1: level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-1-pitch",
+			"label": "Drum 1: pitch",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-1-decay",
+			"label": "Drum 1: decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-1-distortion",
+			"label": "Drum 1: distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-1-eq",
+			"label": "Drum 1: eq",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-1-pan",
+			"label": "Drum 1: pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 77,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-2-patch-select",
+			"label": "Drum 2: patch select",
+			"widget": "slider",
+			"min": 0,
+			"max": 63,
+			"message": {
+				"type": "cc",
+				"number": 18,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-2-level",
+			"label": "Drum 2: level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-2-pitch",
+			"label": "Drum 2: pitch",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 34,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-2-decay",
+			"label": "Drum 2: decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 40,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-2-distortion",
+			"label": "Drum 2: distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 42,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-2-eq",
+			"label": "Drum 2: eq",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 43,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-2-pan",
+			"label": "Drum 2: pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 78,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-3-patch-select",
+			"label": "Drum 3: patch select",
+			"widget": "slider",
+			"min": 0,
+			"max": 63,
+			"message": {
+				"type": "cc",
+				"number": 44,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-3-level",
+			"label": "Drum 3: level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 45,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-3-pitch",
+			"label": "Drum 3: pitch",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 46,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-3-decay",
+			"label": "Drum 3: decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 47,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-3-distortion",
+			"label": "Drum 3: distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 48,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-3-eq",
+			"label": "Drum 3: eq",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 49,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-3-pan",
+			"label": "Drum 3: pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 79,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-4-patch-select",
+			"label": "Drum 4: patch select",
+			"widget": "slider",
+			"min": 0,
+			"max": 63,
+			"message": {
+				"type": "cc",
+				"number": 50,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-4-level",
+			"label": "Drum 4: level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 53,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-4-pitch",
+			"label": "Drum 4: pitch",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 55,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-4-decay",
+			"label": "Drum 4: decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 57,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-4-distortion",
+			"label": "Drum 4: distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 61,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-4-eq",
+			"label": "Drum 4: eq",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 76,
+				"channel": 10
+			}
+		},
+		{
+			"id": "drum-4-pan",
+			"label": "Drum 4: pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 80,
+				"channel": 10
+			}
+		}
+	],
 	"modes": [],
 	"gui": {
 		"type": "column",

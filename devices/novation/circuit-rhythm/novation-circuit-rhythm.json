@@ -19,6 +19,10 @@
 		{
 			"title": "MIDI setup and channels",
 			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/25494352755730-Circuit-Rhythm-appendix"
+		},
+		{
+			"title": "Novation Circuit Rhythm Programmer's Reference v5: per-part CC and project control",
+			"url": "https://fael-downloads-prod.focusrite.com/customer/prod/downloads/circuit_rhythm_programmer_s_reference_guide_v5_2.pdf"
 		}
 	],
 	"abilities": [
@@ -26,7 +30,9 @@
 		"USB MIDI",
 		"DIN MIDI",
 		"MIDI clock",
-		"Configurable track channels"
+		"Configurable track channels",
+		"Per-track sample selection, playback and slice controls over CC",
+		"Per-track sample start, length, pitch, filters, envelopes and mixer CCs"
 	],
 	"hardwareControls": [
 		"32 pads",
@@ -35,8 +41,1929 @@
 		"Master filter",
 		"Master volume"
 	],
-	"notice": "Eight sample tracks default to MIDI channels 1-8. Connect USB MIDI or the 5-pin MIDI ports. Hold Shift and press Save for Setup View to configure channels and independently enable note, CC, program-change and clock transmission/receive. Channel 16 is reserved for project selection. Pad notes and encoder behavior depend on the current view and configuration; this profile supplies setup guidance and an unbound physical surface, with no guessed CC or pad maps. USB port aliases have not been verified; select this profile manually. Diagrams are original schematics with illustrative positions, not scaled hardware drawings.",
-	"controls": [],
+	"notice": "Eight sample tracks default to MIDI channels 1-8. Connect USB MIDI or the 5-pin MIDI ports. Hold Shift and press Save for Setup View to configure channels and independently enable note, CC, program-change and clock transmission/receive. Channel 16 is reserved for project selection. Pad notes and encoder behavior depend on the current view and configuration; this profile supplies setup guidance and an unbound physical surface, with no guessed CC or pad maps. USB port aliases have not been verified; select this profile manually. Diagrams are original schematics with illustrative positions, not scaled hardware drawings. Remote CC controls use factory track channels 1-8. Pitch is constrained to the sampler table range 4-124; number of slices is 1-16, playback mode 0-2 and reverse/choke/slice use 0/1, not 127. Pan uses a 7-bit MIDI byte representing the documented bipolar parameter. Remap channels if changed on the hardware. NRPN effect/dipper settings and SysEx transfer are not represented as single CCs. Project program change on channel 16 uses 0-63 for immediate and 64-127 for queued selection; no project-changing button is supplied in this performance subset.",
+	"controls": [
+		{
+			"id": "track-1-sample-choice",
+			"label": "Track 1: Sample choice",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-playback-mode",
+			"label": "Track 1: Playback mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-reverse",
+			"label": "Track 1: Reverse",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-choke",
+			"label": "Track 1: Choke",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-slice",
+			"label": "Track 1: Slice",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-number-of-slices",
+			"label": "Track 1: Number of slices",
+			"widget": "slider",
+			"min": 1,
+			"max": 16,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-pitch",
+			"label": "Track 1: Pitch",
+			"widget": "slider",
+			"min": 4,
+			"max": 124,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-sample-start-coarse",
+			"label": "Track 1: Sample start coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-sample-length-coarse",
+			"label": "Track 1: Sample length coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-slope",
+			"label": "Track 1: Slope",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-distortion",
+			"label": "Track 1: Distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-high-pass-filter",
+			"label": "Track 1: High-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-low-pass-filter",
+			"label": "Track 1: Low-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-resonance",
+			"label": "Track 1: Resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-sample-start-fine",
+			"label": "Track 1: Sample start fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-sample-length-fine",
+			"label": "Track 1: Sample length fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-level",
+			"label": "Track 1: Level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-pan",
+			"label": "Track 1: Pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-reverb-send",
+			"label": "Track 1: Reverb send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-1-delay-send",
+			"label": "Track 1: Delay send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 32,
+				"channel": 1
+			}
+		},
+		{
+			"id": "track-2-sample-choice",
+			"label": "Track 2: Sample choice",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-playback-mode",
+			"label": "Track 2: Playback mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-reverse",
+			"label": "Track 2: Reverse",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-choke",
+			"label": "Track 2: Choke",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-slice",
+			"label": "Track 2: Slice",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-number-of-slices",
+			"label": "Track 2: Number of slices",
+			"widget": "slider",
+			"min": 1,
+			"max": 16,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-pitch",
+			"label": "Track 2: Pitch",
+			"widget": "slider",
+			"min": 4,
+			"max": 124,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-sample-start-coarse",
+			"label": "Track 2: Sample start coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-sample-length-coarse",
+			"label": "Track 2: Sample length coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-slope",
+			"label": "Track 2: Slope",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-distortion",
+			"label": "Track 2: Distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-high-pass-filter",
+			"label": "Track 2: High-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-low-pass-filter",
+			"label": "Track 2: Low-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-resonance",
+			"label": "Track 2: Resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-sample-start-fine",
+			"label": "Track 2: Sample start fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-sample-length-fine",
+			"label": "Track 2: Sample length fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-level",
+			"label": "Track 2: Level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-pan",
+			"label": "Track 2: Pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-reverb-send",
+			"label": "Track 2: Reverb send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-2-delay-send",
+			"label": "Track 2: Delay send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 32,
+				"channel": 2
+			}
+		},
+		{
+			"id": "track-3-sample-choice",
+			"label": "Track 3: Sample choice",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-playback-mode",
+			"label": "Track 3: Playback mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-reverse",
+			"label": "Track 3: Reverse",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-choke",
+			"label": "Track 3: Choke",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-slice",
+			"label": "Track 3: Slice",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-number-of-slices",
+			"label": "Track 3: Number of slices",
+			"widget": "slider",
+			"min": 1,
+			"max": 16,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-pitch",
+			"label": "Track 3: Pitch",
+			"widget": "slider",
+			"min": 4,
+			"max": 124,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-sample-start-coarse",
+			"label": "Track 3: Sample start coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-sample-length-coarse",
+			"label": "Track 3: Sample length coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-slope",
+			"label": "Track 3: Slope",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-distortion",
+			"label": "Track 3: Distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-high-pass-filter",
+			"label": "Track 3: High-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-low-pass-filter",
+			"label": "Track 3: Low-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-resonance",
+			"label": "Track 3: Resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-sample-start-fine",
+			"label": "Track 3: Sample start fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-sample-length-fine",
+			"label": "Track 3: Sample length fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-level",
+			"label": "Track 3: Level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-pan",
+			"label": "Track 3: Pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-reverb-send",
+			"label": "Track 3: Reverb send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-3-delay-send",
+			"label": "Track 3: Delay send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 32,
+				"channel": 3
+			}
+		},
+		{
+			"id": "track-4-sample-choice",
+			"label": "Track 4: Sample choice",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-playback-mode",
+			"label": "Track 4: Playback mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-reverse",
+			"label": "Track 4: Reverse",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-choke",
+			"label": "Track 4: Choke",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-slice",
+			"label": "Track 4: Slice",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-number-of-slices",
+			"label": "Track 4: Number of slices",
+			"widget": "slider",
+			"min": 1,
+			"max": 16,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-pitch",
+			"label": "Track 4: Pitch",
+			"widget": "slider",
+			"min": 4,
+			"max": 124,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-sample-start-coarse",
+			"label": "Track 4: Sample start coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-sample-length-coarse",
+			"label": "Track 4: Sample length coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-slope",
+			"label": "Track 4: Slope",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-distortion",
+			"label": "Track 4: Distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-high-pass-filter",
+			"label": "Track 4: High-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-low-pass-filter",
+			"label": "Track 4: Low-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-resonance",
+			"label": "Track 4: Resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-sample-start-fine",
+			"label": "Track 4: Sample start fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-sample-length-fine",
+			"label": "Track 4: Sample length fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-level",
+			"label": "Track 4: Level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-pan",
+			"label": "Track 4: Pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-reverb-send",
+			"label": "Track 4: Reverb send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-4-delay-send",
+			"label": "Track 4: Delay send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 32,
+				"channel": 4
+			}
+		},
+		{
+			"id": "track-5-sample-choice",
+			"label": "Track 5: Sample choice",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-playback-mode",
+			"label": "Track 5: Playback mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-reverse",
+			"label": "Track 5: Reverse",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-choke",
+			"label": "Track 5: Choke",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-slice",
+			"label": "Track 5: Slice",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-number-of-slices",
+			"label": "Track 5: Number of slices",
+			"widget": "slider",
+			"min": 1,
+			"max": 16,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-pitch",
+			"label": "Track 5: Pitch",
+			"widget": "slider",
+			"min": 4,
+			"max": 124,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-sample-start-coarse",
+			"label": "Track 5: Sample start coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-sample-length-coarse",
+			"label": "Track 5: Sample length coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-slope",
+			"label": "Track 5: Slope",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-distortion",
+			"label": "Track 5: Distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-high-pass-filter",
+			"label": "Track 5: High-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-low-pass-filter",
+			"label": "Track 5: Low-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-resonance",
+			"label": "Track 5: Resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-sample-start-fine",
+			"label": "Track 5: Sample start fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-sample-length-fine",
+			"label": "Track 5: Sample length fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-level",
+			"label": "Track 5: Level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-pan",
+			"label": "Track 5: Pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-reverb-send",
+			"label": "Track 5: Reverb send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-5-delay-send",
+			"label": "Track 5: Delay send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 32,
+				"channel": 5
+			}
+		},
+		{
+			"id": "track-6-sample-choice",
+			"label": "Track 6: Sample choice",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-playback-mode",
+			"label": "Track 6: Playback mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-reverse",
+			"label": "Track 6: Reverse",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-choke",
+			"label": "Track 6: Choke",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-slice",
+			"label": "Track 6: Slice",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-number-of-slices",
+			"label": "Track 6: Number of slices",
+			"widget": "slider",
+			"min": 1,
+			"max": 16,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-pitch",
+			"label": "Track 6: Pitch",
+			"widget": "slider",
+			"min": 4,
+			"max": 124,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-sample-start-coarse",
+			"label": "Track 6: Sample start coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-sample-length-coarse",
+			"label": "Track 6: Sample length coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-slope",
+			"label": "Track 6: Slope",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-distortion",
+			"label": "Track 6: Distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-high-pass-filter",
+			"label": "Track 6: High-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-low-pass-filter",
+			"label": "Track 6: Low-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-resonance",
+			"label": "Track 6: Resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-sample-start-fine",
+			"label": "Track 6: Sample start fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-sample-length-fine",
+			"label": "Track 6: Sample length fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-level",
+			"label": "Track 6: Level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-pan",
+			"label": "Track 6: Pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-reverb-send",
+			"label": "Track 6: Reverb send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-6-delay-send",
+			"label": "Track 6: Delay send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 32,
+				"channel": 6
+			}
+		},
+		{
+			"id": "track-7-sample-choice",
+			"label": "Track 7: Sample choice",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-playback-mode",
+			"label": "Track 7: Playback mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-reverse",
+			"label": "Track 7: Reverse",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-choke",
+			"label": "Track 7: Choke",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-slice",
+			"label": "Track 7: Slice",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-number-of-slices",
+			"label": "Track 7: Number of slices",
+			"widget": "slider",
+			"min": 1,
+			"max": 16,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-pitch",
+			"label": "Track 7: Pitch",
+			"widget": "slider",
+			"min": 4,
+			"max": 124,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-sample-start-coarse",
+			"label": "Track 7: Sample start coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-sample-length-coarse",
+			"label": "Track 7: Sample length coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-slope",
+			"label": "Track 7: Slope",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-distortion",
+			"label": "Track 7: Distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-high-pass-filter",
+			"label": "Track 7: High-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-low-pass-filter",
+			"label": "Track 7: Low-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-resonance",
+			"label": "Track 7: Resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-sample-start-fine",
+			"label": "Track 7: Sample start fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-sample-length-fine",
+			"label": "Track 7: Sample length fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-level",
+			"label": "Track 7: Level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-pan",
+			"label": "Track 7: Pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-reverb-send",
+			"label": "Track 7: Reverb send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-7-delay-send",
+			"label": "Track 7: Delay send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 32,
+				"channel": 7
+			}
+		},
+		{
+			"id": "track-8-sample-choice",
+			"label": "Track 8: Sample choice",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 8,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-playback-mode",
+			"label": "Track 8: Playback mode",
+			"widget": "slider",
+			"min": 0,
+			"max": 2,
+			"message": {
+				"type": "cc",
+				"number": 12,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-reverse",
+			"label": "Track 8: Reverse",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 14,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-choke",
+			"label": "Track 8: Choke",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 15,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-slice",
+			"label": "Track 8: Slice",
+			"widget": "slider",
+			"min": 0,
+			"max": 1,
+			"message": {
+				"type": "cc",
+				"number": 16,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-number-of-slices",
+			"label": "Track 8: Number of slices",
+			"widget": "slider",
+			"min": 1,
+			"max": 16,
+			"message": {
+				"type": "cc",
+				"number": 17,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-pitch",
+			"label": "Track 8: Pitch",
+			"widget": "slider",
+			"min": 4,
+			"max": 124,
+			"message": {
+				"type": "cc",
+				"number": 21,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-sample-start-coarse",
+			"label": "Track 8: Sample start coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 22,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-sample-length-coarse",
+			"label": "Track 8: Sample length coarse",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 23,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-slope",
+			"label": "Track 8: Slope",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 24,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-distortion",
+			"label": "Track 8: Distortion",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 25,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-high-pass-filter",
+			"label": "Track 8: High-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 26,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-low-pass-filter",
+			"label": "Track 8: Low-pass filter",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 27,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-resonance",
+			"label": "Track 8: Resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 28,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-sample-start-fine",
+			"label": "Track 8: Sample start fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 86,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-sample-length-fine",
+			"label": "Track 8: Sample length fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 87,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-level",
+			"label": "Track 8: Level",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 29,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-pan",
+			"label": "Track 8: Pan",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 30,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-reverb-send",
+			"label": "Track 8: Reverb send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 31,
+				"channel": 8
+			}
+		},
+		{
+			"id": "track-8-delay-send",
+			"label": "Track 8: Delay send",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 32,
+				"channel": 8
+			}
+		}
+	],
 	"modes": [],
 	"gui": {
 		"type": "column",

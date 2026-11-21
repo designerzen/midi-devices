@@ -28,12 +28,23 @@
 		{
 			"title": "Factory multi-channel MIDI chart",
 			"url": "https://cdn.korg.com/us/support/download/files/c19d48a599794ff64a25b553e951c2fb.pdf"
+		},
+		{
+			"title": "Edisyn Volca editor: model-specific CC, part-channel and mode handling",
+			"url": "https://github.com/eclab/edisyn/blob/9582f314e2b7ceadfb3d101c132ee50d6e736aba/edisyn/synth/korgvolca/KorgVolca.java"
+		},
+		{
+			"title": "Volca Poly Sample: Arduino chromatic eight-part voice allocation",
+			"url": "https://github.com/astriiddev/Volca-Poly-Sample"
 		}
 	],
 	"abilities": [
 		"USB MIDI and DIN MIDI IN",
 		"MIDI note reception",
-		"Documented CC reception"
+		"Documented CC reception",
+		"Chromatic speed and trigger-delay CC reception",
+		"Sample selection using paired CC3/35",
+		"Loop, reverse and reverb CC reception"
 	],
 	"hardwareControls": [
 		"Master: Volume, Tempo, Memory, Play, Record, Function, Step, Part left, Part right",
@@ -42,7 +53,7 @@
 		"Amp: Level, Pan, Attack, Decay",
 		"Isolator: Bass, Treble"
 	],
-	"notice": "Match the hardware MIDI channel and receive settings. Uses the factory multi-channel implementation: channels 1-10 select parts 1-10 and any note triggers that part. CC controls follow the selected part channel. The optional single-channel mode uses notes 48-57 and different CC assignments; remap before using that mode. USB MIDI availability and transmitted messages depend on mode.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration.",
+	"notice": "Match the hardware MIDI channel and receive settings. Uses the factory multi-channel implementation: channels 1-10 select parts 1-10 and any note triggers that part. CC controls follow the selected part channel. The optional single-channel mode uses notes 48-57 and different CC assignments; remap before using that mode. USB MIDI availability and transmitted messages depend on mode.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration. Edisyn provides model-specific remote CC editing; its locally saved editor patches are not proof that this instrument can transmit or dump its current panel state. Single-channel and multi-channel layouts, stock and modified firmware, and Sample versus Sample 2 must not be conflated. CC49 controls chromatic speed, CC50 trigger delay, CC68 loop, CC70 reverb enable, CC75 reverse and CC91 reverb mix (channel 1 only). Sample number is a paired MSB/LSB operation using CC3/35, so send both bytes in order; these sliders expose the bytes separately. The linked Arduino project uses CC49 plus voice allocation across parts to add chromatic/polyphonic keyboard play; that requires an external MIDI processor, all eight parts configured alike, multi-channel mode and a controller on channel 16. It does not make stock note input chromatic or make note-off control sample sustain.",
 	"controls": [
 		{
 			"id": "sample-start-point-knob",
@@ -109,6 +120,74 @@
 			"label": "Amp: Decay",
 			"widget": "slider",
 			"cc": 48
+		},
+		{
+			"id": "sample-number-msb",
+			"label": "Sample number MSB",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 3
+		},
+		{
+			"id": "sample-number-lsb",
+			"label": "Sample number LSB",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 35
+		},
+		{
+			"id": "chromatic-speed",
+			"label": "Chromatic speed",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 49
+		},
+		{
+			"id": "trigger-delay",
+			"label": "Trigger delay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 50
+		},
+		{
+			"id": "loop-enable",
+			"label": "Loop enable",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 68
+		},
+		{
+			"id": "reverb-enable",
+			"label": "Reverb enable",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 70
+		},
+		{
+			"id": "reverse-enable",
+			"label": "Reverse enable",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 75
+		},
+		{
+			"id": "reverb-mix-global-channel-1",
+			"label": "Reverb mix (global, channel 1)",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"message": {
+				"type": "cc",
+				"number": 91,
+				"channel": 1
+			}
 		}
 	],
 	"modes": [],

@@ -23,12 +23,21 @@
 		{
 			"title": "Korg volca sample MIDI implementation chart",
 			"url": "https://cdn.korg.com/us/support/download/files/9bdc4997e44b7e96e771f612e06a90e5.pdf"
+		},
+		{
+			"title": "Edisyn Volca editor: model-specific CC, part-channel and mode handling",
+			"url": "https://github.com/eclab/edisyn/blob/9582f314e2b7ceadfb3d101c132ee50d6e736aba/edisyn/synth/korgvolca/KorgVolca.java"
+		},
+		{
+			"title": "Official Korg volca sample SDK (SYRO sample and sequence encoding)",
+			"url": "https://github.com/korginc/volcasample/tree/b0ed615f18c230a18b378d9ddc6a936971597e4e"
 		}
 	],
 	"abilities": [
 		"DIN MIDI IN only",
 		"MIDI note reception",
-		"Documented CC reception"
+		"Documented CC reception",
+		"Sample and sequence import through SYRO-encoded audio (external SDK)"
 	],
 	"hardwareControls": [
 		"Master: Volume, Tempo, Memory, Play, Record, Function, Step, Part left, Part right",
@@ -37,7 +46,7 @@
 		"Amp: Level, Pan, Attack, Decay",
 		"Isolator: Bass, Treble"
 	],
-	"notice": "Most controls are MIDI receive mappings. The unmodified hardware has no MIDI output and cannot send panel movements or notes to Harmoneasy. Factory mapping uses MIDI channels 1-10 for parts 1-10; note pitch does not select the part. Choose the target part channel for the CC controls. The OK GO cosmetic edition shares this implementation. Bass and Treble isolator knobs are analog-only.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration.",
+	"notice": "Most controls are MIDI receive mappings. The unmodified hardware has no MIDI output and cannot send panel movements or notes to Harmoneasy. Factory mapping uses MIDI channels 1-10 for parts 1-10; note pitch does not select the part. Choose the target part channel for the CC controls. The OK GO cosmetic edition shares this implementation. Bass and Treble isolator knobs are analog-only.  GUI controls generate MIDI into the chain; route that chain to a MIDI output to control the hardware. DIN devices normally appear under the MIDI interface name, so select the profile manually. Unmapped physical buttons and switches have stable SVG IDs for future bindings. Positions are schematic. Note surfaces use virtual defaults; use MIDI learn to match the hardware octave or configuration. Edisyn provides model-specific remote CC editing; its locally saved editor patches are not proof that this instrument can transmit or dump its current panel state. Single-channel and multi-channel layouts, stock and modified firmware, and Sample versus Sample 2 must not be conflated. The official SYRO SDK encodes samples and sequences as an audio data stream for the sync input; this is not MIDI SysEx sample upload. Pajen custom-firmware functionality is not part of this stock profile.",
 	"controls": [
 		{
 			"id": "sample-start-point-knob",

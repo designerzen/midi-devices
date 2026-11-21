@@ -1,0 +1,942 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "behringer-cz-1-mini",
+	"name": "Behringer CZ-1 MINI",
+	"manufacturer": "Behringer",
+	"manufacturerUrl": "https://www.behringer.com/",
+	"productUrl": "https://www.behringer.com/en/products/0718-ACK",
+	"description": "Compact phase-distortion synthesizer with editable multi-stage envelopes, filter and chorus.",
+	"ids": [
+		"behringer-cz-1-mini"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Behringer manual: controls, connections and MIDI CC implementation",
+			"url": "https://cdn-media.empowertribe.com/89f102fdb86844549a43713f92e64843/Manual_BE_0718-ACK_CZ-1-MINI_WW.pdf"
+		},
+		{
+			"title": "Manufacturer product page",
+			"url": "https://www.behringer.com/en/products/0718-ACK"
+		},
+		{
+			"title": "Community Web MIDI editor (reviewed source revision; not a dependency)",
+			"url": "https://github.com/gary909/Behringer-CZ1-Midi-Editor/tree/2b4b8616b483e72eef1953c0eb29a64c08e54615"
+		},
+		{
+			"title": "SynthHUB device definition (generic settings support; not full parameter verification)",
+			"url": "https://github.com/utajum/SynthHUB/blob/42be9fb911199990fc6a3350534e3f40dfe011ac/app/src/data/devices/cz-1-mini.json"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"MIDI note reception",
+		"Documented sound-parameter CC reception",
+		"External MIDI input"
+	],
+	"hardwareControls": [
+		"Power",
+		"Volume",
+		"Display",
+		"Parameter encoder",
+		"Select left",
+		"Select right",
+		"Program down / Octave down",
+		"Program up / Octave up",
+		"DCO 1 menu",
+		"DCO 2 menu",
+		"Function",
+		"27-key touch keyboard"
+	],
+	"notice": "CC numbers are checked against the manufacturer manual. Connect a MIDI output to the matching input and enable MIDI/CC reception in the device settings. MIDI channel is user-selectable; no USB port-name aliases are assumed. The drawing is a partial grouped control inventory, not a scale panel layout. Touch-key note bindings are virtual defaults and may require octave adjustment. Menu-dependent controls are not automatically bound. NRPN, SysEx preset/sequence transfers, firmware updates and multi-message operations require a protocol-aware application and are not implemented by these static controls. The MIDI CC table leaves many parameter ranges unspecified; controls expose MIDI byte values, not a calibrated physical scale. This is a verified subset of the table, not all eight-stage envelope parameters. Bank Select CC 0 selects the editing line, so it is omitted from this subset.",
+	"controls": [
+		{
+			"id": "modulation",
+			"label": "Modulation",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 1
+		},
+		{
+			"id": "vibrato-wave",
+			"label": "Vibrato wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 2
+		},
+		{
+			"id": "vibrato-rate",
+			"label": "Vibrato rate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 3
+		},
+		{
+			"id": "vibrato-depth",
+			"label": "Vibrato depth",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 6
+		},
+		{
+			"id": "vibrato-delay",
+			"label": "Vibrato delay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 7
+		},
+		{
+			"id": "detune-polarity",
+			"label": "Detune polarity",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 9
+		},
+		{
+			"id": "detune-octave",
+			"label": "Detune octave",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 10
+		},
+		{
+			"id": "detune-note",
+			"label": "Detune note",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 11
+		},
+		{
+			"id": "detune-fine",
+			"label": "Detune fine",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 12
+		},
+		{
+			"id": "dco-waveform-1",
+			"label": "DCO waveform 1",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 13
+		},
+		{
+			"id": "dco-waveform-2",
+			"label": "DCO waveform 2",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 14
+		},
+		{
+			"id": "dcw-amount",
+			"label": "DCW amount",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 15
+		},
+		{
+			"id": "lfo-wave",
+			"label": "LFO wave",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 81
+		},
+		{
+			"id": "lfo-amount",
+			"label": "LFO amount",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 82
+		},
+		{
+			"id": "lfo-rate",
+			"label": "LFO rate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 83
+		},
+		{
+			"id": "filter-attack",
+			"label": "Filter attack",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 84
+		},
+		{
+			"id": "filter-decay",
+			"label": "Filter decay",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 85
+		},
+		{
+			"id": "filter-sustain",
+			"label": "Filter sustain",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 86
+		},
+		{
+			"id": "filter-release",
+			"label": "Filter release",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 87
+		},
+		{
+			"id": "filter-envelope-amount",
+			"label": "Filter envelope amount",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 88
+		},
+		{
+			"id": "filter-cutoff",
+			"label": "Filter cutoff",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 89
+		},
+		{
+			"id": "filter-resonance",
+			"label": "Filter resonance",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 90
+		},
+		{
+			"id": "chorus-rate",
+			"label": "Chorus rate",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 91
+		},
+		{
+			"id": "chorus-depth",
+			"label": "Chorus depth",
+			"widget": "slider",
+			"min": 0,
+			"max": 127,
+			"cc": 92
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Partial grouped control schematic"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Manufacturer MIDI implementation and community tools"
+			}
+		]
+	},
+	"connections": [
+		{
+			"label": "USB-C",
+			"connector": "USB-C (power and USB MIDI)",
+			"direction": "bidirectional",
+			"location": "top edge"
+		},
+		{
+			"label": "Headphones",
+			"connector": "3.5 mm TRS stereo audio",
+			"direction": "output",
+			"location": "top edge"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN MIDI",
+			"direction": "input",
+			"location": "top edge"
+		},
+		{
+			"label": "Sync IN",
+			"connector": "3.5 mm analog clock (not MIDI)",
+			"direction": "input",
+			"location": "top edge"
+		}
+	],
+	"surface": {
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 820,
+		"elements": [
+			{
+				"id": "connections-usb-c",
+				"label": "CONNECTIONS: USB-C",
+				"kind": "bidirectional",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 11.585365853658537,
+					"width": 23.892857142857142,
+					"height": 7.926829268292683
+				}
+			},
+			{
+				"id": "connections-headphones",
+				"label": "CONNECTIONS: Headphones",
+				"kind": "output",
+				"position": {
+					"x": 26.107142857142858,
+					"y": 11.585365853658537,
+					"width": 23.892857142857142,
+					"height": 7.926829268292683
+				}
+			},
+			{
+				"id": "connections-midi-in",
+				"label": "CONNECTIONS: MIDI IN",
+				"kind": "input",
+				"position": {
+					"x": 50.0,
+					"y": 11.585365853658537,
+					"width": 23.892857142857142,
+					"height": 7.926829268292683
+				}
+			},
+			{
+				"id": "connections-sync-in",
+				"label": "CONNECTIONS: Sync IN",
+				"kind": "input",
+				"position": {
+					"x": 73.89285714285714,
+					"y": 11.585365853658537,
+					"width": 23.892857142857142,
+					"height": 7.926829268292683
+				}
+			},
+			{
+				"id": "physical-controls-partial-power",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Power",
+				"kind": "power",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-volume",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Volume",
+				"kind": "knob",
+				"position": {
+					"x": 15.867346938775508,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-display",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Display",
+				"kind": "screen",
+				"position": {
+					"x": 29.520408163265305,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-parameter-encoder",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Parameter encoder",
+				"kind": "knob",
+				"position": {
+					"x": 43.173469387755105,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-select-left",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Select left",
+				"kind": "button",
+				"position": {
+					"x": 56.826530612244895,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-select-right",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Select right",
+				"kind": "button",
+				"position": {
+					"x": 70.47959183673468,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-program-down-octave-down",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Program down / Octave down",
+				"kind": "button",
+				"position": {
+					"x": 84.13265306122449,
+					"y": 25.609756097560975,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-program-up-octave-up",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Program up / Octave up",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-dco-1-menu",
+				"label": "PHYSICAL CONTROLS (PARTIAL): DCO 1 menu",
+				"kind": "button",
+				"position": {
+					"x": 15.867346938775508,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-dco-2-menu",
+				"label": "PHYSICAL CONTROLS (PARTIAL): DCO 2 menu",
+				"kind": "button",
+				"position": {
+					"x": 29.520408163265305,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "physical-controls-partial-function",
+				"label": "PHYSICAL CONTROLS (PARTIAL): Function",
+				"kind": "button",
+				"position": {
+					"x": 43.173469387755105,
+					"y": 47.256097560975604,
+					"width": 13.653061224489797,
+					"height": 21.646341463414632
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Touch plate 1",
+				"kind": "key",
+				"position": {
+					"x": 2.857142857142857,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Touch plate 3",
+				"kind": "key",
+				"position": {
+					"x": 8.75,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Touch plate 5",
+				"kind": "key",
+				"position": {
+					"x": 14.642857142857144,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Touch plate 6",
+				"kind": "key",
+				"position": {
+					"x": 20.535714285714285,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Touch plate 8",
+				"kind": "key",
+				"position": {
+					"x": 26.42857142857143,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Touch plate 10",
+				"kind": "key",
+				"position": {
+					"x": 32.32142857142858,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Touch plate 12",
+				"kind": "key",
+				"position": {
+					"x": 38.21428571428571,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 59
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Touch plate 13",
+				"kind": "key",
+				"position": {
+					"x": 44.107142857142854,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Touch plate 15",
+				"kind": "key",
+				"position": {
+					"x": 50.0,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 62
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Touch plate 17",
+				"kind": "key",
+				"position": {
+					"x": 55.892857142857146,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 64
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Touch plate 18",
+				"kind": "key",
+				"position": {
+					"x": 61.78571428571429,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 65
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Touch plate 20",
+				"kind": "key",
+				"position": {
+					"x": 67.67857142857143,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 67
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Touch plate 22",
+				"kind": "key",
+				"position": {
+					"x": 73.57142857142858,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 69
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Touch plate 24",
+				"kind": "key",
+				"position": {
+					"x": 79.46428571428571,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 71
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Touch plate 25",
+				"kind": "key",
+				"position": {
+					"x": 85.35714285714285,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 72
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Touch plate 27",
+				"kind": "key",
+				"position": {
+					"x": 91.25,
+					"y": 73.17073170731707,
+					"width": 5.892857142857142,
+					"height": 21.341463414634145
+				},
+				"message": {
+					"type": "note",
+					"number": 74
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Touch plate 2",
+				"kind": "key",
+				"position": {
+					"x": 6.923214285714286,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Touch plate 4",
+				"kind": "key",
+				"position": {
+					"x": 12.816071428571426,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Touch plate 7",
+				"kind": "key",
+				"position": {
+					"x": 24.601785714285715,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Touch plate 9",
+				"kind": "key",
+				"position": {
+					"x": 30.494642857142857,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Touch plate 11",
+				"kind": "key",
+				"position": {
+					"x": 36.3875,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Touch plate 14",
+				"kind": "key",
+				"position": {
+					"x": 48.17321428571429,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 61
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Touch plate 16",
+				"kind": "key",
+				"position": {
+					"x": 54.066071428571426,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 63
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Touch plate 19",
+				"kind": "key",
+				"position": {
+					"x": 65.85178571428571,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 66
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Touch plate 21",
+				"kind": "key",
+				"position": {
+					"x": 71.74464285714285,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 68
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Touch plate 23",
+				"kind": "key",
+				"position": {
+					"x": 77.63749999999999,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 70
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Touch plate 26",
+				"kind": "key",
+				"position": {
+					"x": 89.42321428571428,
+					"y": 73.17073170731707,
+					"width": 3.6535714285714285,
+					"height": 13.01829268292683
+				},
+				"message": {
+					"type": "note",
+					"number": 73
+				},
+				"learnable": true,
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"diagramSources": [
+		"https://cdn-media.empowertribe.com/89f102fdb86844549a43713f92e64843/Manual_BE_0718-ACK_CZ-1-MINI_WW.pdf",
+		"https://www.behringer.com/en/products/0718-ACK",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}
