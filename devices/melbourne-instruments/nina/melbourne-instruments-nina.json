@@ -1,0 +1,334 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "melbourne-instruments-nina",
+	"name": "Melbourne Instruments NINA",
+	"manufacturer": "Melbourne Instruments",
+	"manufacturerUrl": "https://www.melbourneinstruments.com/",
+	"productUrl": "https://www.melbourneinstruments.com/nina",
+	"ids": [
+		"melbourne-instruments-nina"
+	],
+	"portNames": [],
+	"description": "Twelve-voice analog polysynth module with four timbral layers.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications",
+			"url": "https://www.melbourneinstruments.com/nina"
+		},
+		{
+			"title": "Manufacturer manuals and downloads",
+			"url": "https://www.melbourneinstruments.com/support"
+		},
+		{
+			"title": "Owner manual",
+			"url": "https://www.melbourneinstruments.com/s/NINA-UserManual-V1-4-DEC2023.pdf"
+		}
+	],
+	"abilities": [
+		"Motorized controls",
+		"Patch morphing",
+		"Multitimbral operation",
+		"USB MIDI",
+		"DIN MIDI",
+		"Sequencing"
+	],
+	"hardwareControls": [
+		"Oscillators: Tune, Shape, Width, Level",
+		"Filter: Cutoff, Resonance, Drive",
+		"Envelope: Attack, Decay, Sustain, Release",
+		"Morph And Effects: Morph, FX Level, FX Select",
+		"Patch And Display: Display, Load, Save, Multi"
+	],
+	"notice": "Set each layer MIDI channel, note range and voice allocation in the Multi configuration. USB host sockets connect controllers; use the USB device socket to connect a computer. Motorized controls change with the active patch, layer and modulation mode. Consult the support page for firmware supplements. The module needs an external controller or sequencer.  Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected instruments appear under the interface port name. Physical controls are unbound; this profile does not provide a complete MIDI implementation. Diagrams show selected controls at illustrative positions; consult the manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Melbourne Instruments NINA selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "oscillators-tune",
+				"label": "OSCILLATORS: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 8.083333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "oscillators-shape",
+				"label": "OSCILLATORS: Shape",
+				"kind": "knob",
+				"position": {
+					"x": 10.666666666666668,
+					"y": 12.666666666666668,
+					"width": 8.083333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "oscillators-width",
+				"label": "OSCILLATORS: Width",
+				"kind": "knob",
+				"position": {
+					"x": 18.75,
+					"y": 12.666666666666668,
+					"width": 8.083333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "oscillators-level",
+				"label": "OSCILLATORS: Level",
+				"kind": "knob",
+				"position": {
+					"x": 26.833333333333332,
+					"y": 12.666666666666668,
+					"width": 8.083333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "filter-cutoff",
+				"label": "FILTER: Cutoff",
+				"kind": "knob",
+				"position": {
+					"x": 37.583333333333336,
+					"y": 12.666666666666668,
+					"width": 6.833333333333333,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "filter-resonance",
+				"label": "FILTER: Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 44.416666666666664,
+					"y": 12.666666666666668,
+					"width": 6.833333333333333,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "filter-drive",
+				"label": "FILTER: Drive",
+				"kind": "knob",
+				"position": {
+					"x": 51.24999999999999,
+					"y": 12.666666666666668,
+					"width": 6.833333333333333,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "envelope-attack",
+				"label": "ENVELOPE: Attack",
+				"kind": "knob",
+				"position": {
+					"x": 67.58333333333333,
+					"y": 12.666666666666668,
+					"width": 7.458333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "envelope-decay",
+				"label": "ENVELOPE: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 75.04166666666666,
+					"y": 12.666666666666668,
+					"width": 7.458333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "envelope-sustain",
+				"label": "ENVELOPE: Sustain",
+				"kind": "knob",
+				"position": {
+					"x": 82.5,
+					"y": 12.666666666666668,
+					"width": 7.458333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "envelope-release",
+				"label": "ENVELOPE: Release",
+				"kind": "knob",
+				"position": {
+					"x": 89.95833333333333,
+					"y": 12.666666666666668,
+					"width": 7.458333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "morph-and-effects-morph",
+				"label": "MORPH AND EFFECTS: Morph",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 44.666666666666664,
+					"width": 11.208333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "morph-and-effects-fx-level",
+				"label": "MORPH AND EFFECTS: FX Level",
+				"kind": "knob",
+				"position": {
+					"x": 13.791666666666666,
+					"y": 44.666666666666664,
+					"width": 11.208333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "morph-and-effects-fx-select",
+				"label": "MORPH AND EFFECTS: FX Select",
+				"kind": "button",
+				"position": {
+					"x": 25.0,
+					"y": 44.666666666666664,
+					"width": 11.208333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "patch-and-display-display",
+				"label": "PATCH AND DISPLAY: Display",
+				"kind": "screen",
+				"position": {
+					"x": 50.083333333333336,
+					"y": 44.666666666666664,
+					"width": 11.833333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "patch-and-display-load",
+				"label": "PATCH AND DISPLAY: Load",
+				"kind": "button",
+				"position": {
+					"x": 61.916666666666664,
+					"y": 44.666666666666664,
+					"width": 11.833333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "patch-and-display-save",
+				"label": "PATCH AND DISPLAY: Save",
+				"kind": "button",
+				"position": {
+					"x": 73.75,
+					"y": 44.666666666666664,
+					"width": 11.833333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "patch-and-display-multi",
+				"label": "PATCH AND DISPLAY: Multi",
+				"kind": "button",
+				"position": {
+					"x": 85.58333333333333,
+					"y": 44.666666666666664,
+					"width": 11.833333333333334,
+					"height": 24.666666666666668
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI THRU",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI device",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "USB host 1 / 2",
+			"connector": "USB-A",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Main OUT L / R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Aux OUT 3 / 4",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.melbourneinstruments.com/nina",
+		"https://www.melbourneinstruments.com/support",
+		"https://www.melbourneinstruments.com/s/NINA-UserManual-V1-4-DEC2023.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

@@ -1,0 +1,1084 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "udo-super-8",
+	"name": "UDO Super 8",
+	"manufacturer": "UDO Audio",
+	"manufacturerUrl": "https://www.udo-audio.com/",
+	"productUrl": "https://www.udo-audio.com/super-8",
+	"ids": [
+		"udo-super-8"
+	],
+	"portNames": [],
+	"description": "16-voice hybrid synthesizer with a 61-key keyboard.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications",
+			"url": "https://www.udo-audio.com/super-8"
+		},
+		{
+			"title": "Manufacturer manuals and downloads",
+			"url": "https://www.udo-audio.com/super-8-support"
+		},
+		{
+			"title": "Owner manual",
+			"url": "https://cdn.prod.website-files.com/641dd1a703957e750da6b5e3/66e3ffcd302ab7007da33da0_UDO_SuperGemini-Super8_Manual.pdf"
+		}
+	],
+	"abilities": [
+		"Hybrid polyphonic synthesis",
+		"Binaural mode",
+		"USB MIDI",
+		"DIN MIDI",
+		"Arpeggiator",
+		"Step sequencer",
+		"Two timbral layers",
+		"Polyphonic aftertouch keyboard"
+	],
+	"hardwareControls": [
+		"Oscillators: DDS 1 Waveform, DDS 1 Super, DDS 2 Waveform, DDS 2 Tune",
+		"Filter: HPF, VCF Freq, VCF Res, VCF Env",
+		"Envelopes: ENV 1 Attack, ENV 1 Decay, ENV 1 Sustain, ENV 1 Release",
+		"Performance: Master Volume, Arpeggiator, Sequencer, Hold",
+		"Layer And Patch: Upper, Lower, Patch, Manual"
+	],
+	"notice": "Set MIDI channel, parameter transmit/receive options and clock source in the global settings. Use either USB MIDI or DIN MIDI; simultaneous use is not supported by the linked manual. Set layer channels and keyboard mode for split or dual operation. The base instrument has 16 voices; the optional SP8+ upgrade is separate.  Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected instruments appear under the interface port name. Physical controls are unbound; this profile does not provide a complete MIDI implementation. Diagrams show selected controls at illustrative positions; consult the manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "UDO Super 8 selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 900,
+		"elements": [
+			{
+				"id": "oscillators-dds-1-waveform",
+				"label": "OSCILLATORS: DDS 1 Waveform",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 10.555555555555555,
+					"width": 8.5,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "oscillators-dds-1-super",
+				"label": "OSCILLATORS: DDS 1 Super",
+				"kind": "fader",
+				"position": {
+					"x": 11.083333333333334,
+					"y": 10.555555555555555,
+					"width": 8.5,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "oscillators-dds-2-waveform",
+				"label": "OSCILLATORS: DDS 2 Waveform",
+				"kind": "fader",
+				"position": {
+					"x": 19.583333333333332,
+					"y": 10.555555555555555,
+					"width": 8.5,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "oscillators-dds-2-tune",
+				"label": "OSCILLATORS: DDS 2 Tune",
+				"kind": "fader",
+				"position": {
+					"x": 28.083333333333332,
+					"y": 10.555555555555555,
+					"width": 8.5,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "filter-hpf",
+				"label": "FILTER: HPF",
+				"kind": "fader",
+				"position": {
+					"x": 38.416666666666664,
+					"y": 10.555555555555555,
+					"width": 6.833333333333333,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "filter-vcf-freq",
+				"label": "FILTER: VCF Freq",
+				"kind": "fader",
+				"position": {
+					"x": 45.25,
+					"y": 10.555555555555555,
+					"width": 6.833333333333333,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "filter-vcf-res",
+				"label": "FILTER: VCF Res",
+				"kind": "fader",
+				"position": {
+					"x": 52.083333333333336,
+					"y": 10.555555555555555,
+					"width": 6.833333333333333,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "filter-vcf-env",
+				"label": "FILTER: VCF Env",
+				"kind": "fader",
+				"position": {
+					"x": 58.916666666666664,
+					"y": 10.555555555555555,
+					"width": 6.833333333333333,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "envelopes-env-1-attack",
+				"label": "ENVELOPES: ENV 1 Attack",
+				"kind": "fader",
+				"position": {
+					"x": 67.58333333333333,
+					"y": 10.555555555555555,
+					"width": 7.458333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "envelopes-env-1-decay",
+				"label": "ENVELOPES: ENV 1 Decay",
+				"kind": "fader",
+				"position": {
+					"x": 75.04166666666666,
+					"y": 10.555555555555555,
+					"width": 7.458333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "envelopes-env-1-sustain",
+				"label": "ENVELOPES: ENV 1 Sustain",
+				"kind": "fader",
+				"position": {
+					"x": 82.5,
+					"y": 10.555555555555555,
+					"width": 7.458333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "envelopes-env-1-release",
+				"label": "ENVELOPES: ENV 1 Release",
+				"kind": "fader",
+				"position": {
+					"x": 89.95833333333333,
+					"y": 10.555555555555555,
+					"width": 7.458333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "performance-master-volume",
+				"label": "PERFORMANCE: Master Volume",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 37.22222222222222,
+					"width": 11.208333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "performance-arpeggiator",
+				"label": "PERFORMANCE: Arpeggiator",
+				"kind": "button",
+				"position": {
+					"x": 13.791666666666666,
+					"y": 37.22222222222222,
+					"width": 11.208333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "performance-sequencer",
+				"label": "PERFORMANCE: Sequencer",
+				"kind": "button",
+				"position": {
+					"x": 25.0,
+					"y": 37.22222222222222,
+					"width": 11.208333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "performance-hold",
+				"label": "PERFORMANCE: Hold",
+				"kind": "button",
+				"position": {
+					"x": 36.20833333333333,
+					"y": 37.22222222222222,
+					"width": 11.208333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "layer-and-patch-upper",
+				"label": "LAYER AND PATCH: Upper",
+				"kind": "button",
+				"position": {
+					"x": 50.083333333333336,
+					"y": 37.22222222222222,
+					"width": 11.833333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "layer-and-patch-lower",
+				"label": "LAYER AND PATCH: Lower",
+				"kind": "button",
+				"position": {
+					"x": 61.916666666666664,
+					"y": 37.22222222222222,
+					"width": 11.833333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "layer-and-patch-patch",
+				"label": "LAYER AND PATCH: Patch",
+				"kind": "button",
+				"position": {
+					"x": 73.75,
+					"y": 37.22222222222222,
+					"width": 11.833333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "layer-and-patch-manual",
+				"label": "LAYER AND PATCH: Manual",
+				"kind": "button",
+				"position": {
+					"x": 85.58333333333333,
+					"y": 37.22222222222222,
+					"width": 11.833333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 10.0,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 12.430555555555554,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 14.86111111111111,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 17.291666666666668,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 19.722222222222225,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 22.15277777777778,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 24.583333333333332,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 27.013888888888893,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 29.444444444444446,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 31.874999999999996,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 34.30555555555556,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 36.736111111111114,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 39.166666666666664,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 41.59722222222222,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Key 25",
+				"kind": "key",
+				"position": {
+					"x": 44.027777777777786,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Key 27",
+				"kind": "key",
+				"position": {
+					"x": 46.458333333333336,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-29",
+				"label": "Key 29",
+				"kind": "key",
+				"position": {
+					"x": 48.88888888888889,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-30",
+				"label": "Key 30",
+				"kind": "key",
+				"position": {
+					"x": 51.31944444444445,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-32",
+				"label": "Key 32",
+				"kind": "key",
+				"position": {
+					"x": 53.75,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-34",
+				"label": "Key 34",
+				"kind": "key",
+				"position": {
+					"x": 56.180555555555564,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-36",
+				"label": "Key 36",
+				"kind": "key",
+				"position": {
+					"x": 58.611111111111114,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-37",
+				"label": "Key 37",
+				"kind": "key",
+				"position": {
+					"x": 61.04166666666667,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-39",
+				"label": "Key 39",
+				"kind": "key",
+				"position": {
+					"x": 63.47222222222223,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-41",
+				"label": "Key 41",
+				"kind": "key",
+				"position": {
+					"x": 65.90277777777777,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-42",
+				"label": "Key 42",
+				"kind": "key",
+				"position": {
+					"x": 68.33333333333333,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-44",
+				"label": "Key 44",
+				"kind": "key",
+				"position": {
+					"x": 70.76388888888889,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-46",
+				"label": "Key 46",
+				"kind": "key",
+				"position": {
+					"x": 73.19444444444446,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-48",
+				"label": "Key 48",
+				"kind": "key",
+				"position": {
+					"x": 75.625,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-49",
+				"label": "Key 49",
+				"kind": "key",
+				"position": {
+					"x": 78.05555555555557,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-51",
+				"label": "Key 51",
+				"kind": "key",
+				"position": {
+					"x": 80.48611111111111,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-53",
+				"label": "Key 53",
+				"kind": "key",
+				"position": {
+					"x": 82.91666666666667,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-54",
+				"label": "Key 54",
+				"kind": "key",
+				"position": {
+					"x": 85.34722222222223,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-56",
+				"label": "Key 56",
+				"kind": "key",
+				"position": {
+					"x": 87.77777777777779,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-58",
+				"label": "Key 58",
+				"kind": "key",
+				"position": {
+					"x": 90.20833333333333,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-60",
+				"label": "Key 60",
+				"kind": "key",
+				"position": {
+					"x": 92.63888888888889,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-61",
+				"label": "Key 61",
+				"kind": "key",
+				"position": {
+					"x": 95.06944444444446,
+					"y": 63.33333333333333,
+					"width": 2.430555555555556,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 11.677083333333334,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 14.107638888888888,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 18.96875,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 21.399305555555557,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 23.829861111111114,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 28.69097222222222,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 31.12152777777778,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 35.98263888888889,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 38.41319444444444,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 40.84375,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Key 26",
+				"kind": "key",
+				"position": {
+					"x": 45.70486111111111,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-28",
+				"label": "Key 28",
+				"kind": "key",
+				"position": {
+					"x": 48.13541666666667,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-31",
+				"label": "Key 31",
+				"kind": "key",
+				"position": {
+					"x": 52.99652777777778,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-33",
+				"label": "Key 33",
+				"kind": "key",
+				"position": {
+					"x": 55.427083333333336,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-35",
+				"label": "Key 35",
+				"kind": "key",
+				"position": {
+					"x": 57.85763888888889,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-38",
+				"label": "Key 38",
+				"kind": "key",
+				"position": {
+					"x": 62.718750000000014,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-40",
+				"label": "Key 40",
+				"kind": "key",
+				"position": {
+					"x": 65.14930555555556,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-43",
+				"label": "Key 43",
+				"kind": "key",
+				"position": {
+					"x": 70.01041666666667,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-45",
+				"label": "Key 45",
+				"kind": "key",
+				"position": {
+					"x": 72.44097222222223,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-47",
+				"label": "Key 47",
+				"kind": "key",
+				"position": {
+					"x": 74.87152777777779,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-50",
+				"label": "Key 50",
+				"kind": "key",
+				"position": {
+					"x": 79.7326388888889,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-52",
+				"label": "Key 52",
+				"kind": "key",
+				"position": {
+					"x": 82.16319444444444,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-55",
+				"label": "Key 55",
+				"kind": "key",
+				"position": {
+					"x": 87.02430555555556,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-57",
+				"label": "Key 57",
+				"kind": "key",
+				"position": {
+					"x": 89.4548611111111,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-59",
+				"label": "Key 59",
+				"kind": "key",
+				"position": {
+					"x": 91.88541666666666,
+					"y": 63.33333333333333,
+					"width": 1.5069444444444446,
+					"height": 18.3
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI THRU",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI device",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Main OUT L",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Main OUT R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.udo-audio.com/super-8",
+		"https://www.udo-audio.com/super-8-support",
+		"https://cdn.prod.website-files.com/641dd1a703957e750da6b5e3/66e3ffcd302ab7007da33da0_UDO_SuperGemini-Super8_Manual.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

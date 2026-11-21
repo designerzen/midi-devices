@@ -1,0 +1,916 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "melbourne-instruments-delia",
+	"name": "Melbourne Instruments DELIA",
+	"manufacturer": "Melbourne Instruments",
+	"manufacturerUrl": "https://www.melbourneinstruments.com/",
+	"productUrl": "https://www.melbourneinstruments.com/delia",
+	"ids": [
+		"melbourne-instruments-delia"
+	],
+	"portNames": [],
+	"description": "Hybrid synthesizer with a 49-key keyboard, six analog voice circuits and a 12-note mode.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications",
+			"url": "https://www.melbourneinstruments.com/delia"
+		},
+		{
+			"title": "Manufacturer manuals and downloads",
+			"url": "https://www.melbourneinstruments.com/support"
+		},
+		{
+			"title": "Owner manual",
+			"url": "https://www.melbourneinstruments.com/s/DELIA-UserManual-V1-04-Aug2024-b-4cpd.pdf"
+		}
+	],
+	"abilities": [
+		"Motorized controls",
+		"Patch morphing",
+		"Multitimbral operation",
+		"USB MIDI",
+		"DIN MIDI",
+		"Sequencing"
+	],
+	"hardwareControls": [
+		"Oscillators: Tune, Shape, Width, Level",
+		"Filter: Cutoff, Resonance, Drive",
+		"Envelope: Attack, Decay, Sustain, Release",
+		"Morph And Effects: Morph, FX Level, FX Select",
+		"Patch And Display: Display, Load, Save, Multi"
+	],
+	"notice": "Set each layer MIDI channel, note range and voice allocation in the Multi configuration. USB host sockets connect controllers; use the USB device socket to connect a computer. Motorized controls change with the active patch, layer and modulation mode. Consult the support page for firmware supplements. 12-note mode shares six analog filter/VCA voice circuits; it does not provide twelve independent analog voices.  Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected instruments appear under the interface port name. Physical controls are unbound; this profile does not provide a complete MIDI implementation. Diagrams show selected controls at illustrative positions; consult the manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Melbourne Instruments DELIA selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 900,
+		"elements": [
+			{
+				"id": "oscillators-tune",
+				"label": "OSCILLATORS: Tune",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 10.555555555555555,
+					"width": 8.083333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "oscillators-shape",
+				"label": "OSCILLATORS: Shape",
+				"kind": "knob",
+				"position": {
+					"x": 10.666666666666668,
+					"y": 10.555555555555555,
+					"width": 8.083333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "oscillators-width",
+				"label": "OSCILLATORS: Width",
+				"kind": "knob",
+				"position": {
+					"x": 18.75,
+					"y": 10.555555555555555,
+					"width": 8.083333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "oscillators-level",
+				"label": "OSCILLATORS: Level",
+				"kind": "knob",
+				"position": {
+					"x": 26.833333333333332,
+					"y": 10.555555555555555,
+					"width": 8.083333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "filter-cutoff",
+				"label": "FILTER: Cutoff",
+				"kind": "knob",
+				"position": {
+					"x": 37.583333333333336,
+					"y": 10.555555555555555,
+					"width": 6.833333333333333,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "filter-resonance",
+				"label": "FILTER: Resonance",
+				"kind": "knob",
+				"position": {
+					"x": 44.416666666666664,
+					"y": 10.555555555555555,
+					"width": 6.833333333333333,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "filter-drive",
+				"label": "FILTER: Drive",
+				"kind": "knob",
+				"position": {
+					"x": 51.24999999999999,
+					"y": 10.555555555555555,
+					"width": 6.833333333333333,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "envelope-attack",
+				"label": "ENVELOPE: Attack",
+				"kind": "knob",
+				"position": {
+					"x": 67.58333333333333,
+					"y": 10.555555555555555,
+					"width": 7.458333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "envelope-decay",
+				"label": "ENVELOPE: Decay",
+				"kind": "knob",
+				"position": {
+					"x": 75.04166666666666,
+					"y": 10.555555555555555,
+					"width": 7.458333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "envelope-sustain",
+				"label": "ENVELOPE: Sustain",
+				"kind": "knob",
+				"position": {
+					"x": 82.5,
+					"y": 10.555555555555555,
+					"width": 7.458333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "envelope-release",
+				"label": "ENVELOPE: Release",
+				"kind": "knob",
+				"position": {
+					"x": 89.95833333333333,
+					"y": 10.555555555555555,
+					"width": 7.458333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "morph-and-effects-morph",
+				"label": "MORPH AND EFFECTS: Morph",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 37.22222222222222,
+					"width": 11.208333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "morph-and-effects-fx-level",
+				"label": "MORPH AND EFFECTS: FX Level",
+				"kind": "knob",
+				"position": {
+					"x": 13.791666666666666,
+					"y": 37.22222222222222,
+					"width": 11.208333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "morph-and-effects-fx-select",
+				"label": "MORPH AND EFFECTS: FX Select",
+				"kind": "button",
+				"position": {
+					"x": 25.0,
+					"y": 37.22222222222222,
+					"width": 11.208333333333332,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "patch-and-display-display",
+				"label": "PATCH AND DISPLAY: Display",
+				"kind": "screen",
+				"position": {
+					"x": 50.083333333333336,
+					"y": 37.22222222222222,
+					"width": 11.833333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "patch-and-display-load",
+				"label": "PATCH AND DISPLAY: Load",
+				"kind": "button",
+				"position": {
+					"x": 61.916666666666664,
+					"y": 37.22222222222222,
+					"width": 11.833333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "patch-and-display-save",
+				"label": "PATCH AND DISPLAY: Save",
+				"kind": "button",
+				"position": {
+					"x": 73.75,
+					"y": 37.22222222222222,
+					"width": 11.833333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "patch-and-display-multi",
+				"label": "PATCH AND DISPLAY: Multi",
+				"kind": "button",
+				"position": {
+					"x": 85.58333333333333,
+					"y": 37.22222222222222,
+					"width": 11.833333333333334,
+					"height": 20.555555555555554
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 10.0,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 13.017241379310343,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 16.034482758620687,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 19.051724137931032,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 22.068965517241377,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 25.086206896551726,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 28.10344827586207,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 31.120689655172413,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 34.137931034482754,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 37.1551724137931,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 40.172413793103445,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 43.18965517241379,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 46.206896551724135,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 49.22413793103448,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Key 25",
+				"kind": "key",
+				"position": {
+					"x": 52.241379310344826,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Key 27",
+				"kind": "key",
+				"position": {
+					"x": 55.25862068965517,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-29",
+				"label": "Key 29",
+				"kind": "key",
+				"position": {
+					"x": 58.27586206896551,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-30",
+				"label": "Key 30",
+				"kind": "key",
+				"position": {
+					"x": 61.293103448275865,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-32",
+				"label": "Key 32",
+				"kind": "key",
+				"position": {
+					"x": 64.31034482758619,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-34",
+				"label": "Key 34",
+				"kind": "key",
+				"position": {
+					"x": 67.32758620689656,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-36",
+				"label": "Key 36",
+				"kind": "key",
+				"position": {
+					"x": 70.34482758620689,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-37",
+				"label": "Key 37",
+				"kind": "key",
+				"position": {
+					"x": 73.36206896551724,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-39",
+				"label": "Key 39",
+				"kind": "key",
+				"position": {
+					"x": 76.37931034482757,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-41",
+				"label": "Key 41",
+				"kind": "key",
+				"position": {
+					"x": 79.39655172413794,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-42",
+				"label": "Key 42",
+				"kind": "key",
+				"position": {
+					"x": 82.41379310344827,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-44",
+				"label": "Key 44",
+				"kind": "key",
+				"position": {
+					"x": 85.4310344827586,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-46",
+				"label": "Key 46",
+				"kind": "key",
+				"position": {
+					"x": 88.44827586206895,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-48",
+				"label": "Key 48",
+				"kind": "key",
+				"position": {
+					"x": 91.4655172413793,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-49",
+				"label": "Key 49",
+				"kind": "key",
+				"position": {
+					"x": 94.48275862068965,
+					"y": 63.33333333333333,
+					"width": 3.0172413793103448,
+					"height": 30.0
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 12.081896551724137,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 15.099137931034482,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 21.13362068965517,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 24.150862068965516,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 27.16810344827586,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 33.20258620689655,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 36.21982758620689,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 42.25431034482759,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 45.27155172413793,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 48.28879310344828,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Key 26",
+				"kind": "key",
+				"position": {
+					"x": 54.32327586206897,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-28",
+				"label": "Key 28",
+				"kind": "key",
+				"position": {
+					"x": 57.34051724137931,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-31",
+				"label": "Key 31",
+				"kind": "key",
+				"position": {
+					"x": 63.375,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-33",
+				"label": "Key 33",
+				"kind": "key",
+				"position": {
+					"x": 66.39224137931035,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-35",
+				"label": "Key 35",
+				"kind": "key",
+				"position": {
+					"x": 69.40948275862068,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-38",
+				"label": "Key 38",
+				"kind": "key",
+				"position": {
+					"x": 75.44396551724137,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-40",
+				"label": "Key 40",
+				"kind": "key",
+				"position": {
+					"x": 78.46120689655173,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-43",
+				"label": "Key 43",
+				"kind": "key",
+				"position": {
+					"x": 84.49568965517241,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-45",
+				"label": "Key 45",
+				"kind": "key",
+				"position": {
+					"x": 87.51293103448276,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			},
+			{
+				"id": "key-47",
+				"label": "Key 47",
+				"kind": "key",
+				"position": {
+					"x": 90.5301724137931,
+					"y": 63.33333333333333,
+					"width": 1.8706896551724135,
+					"height": 18.3
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI THRU",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI device",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "USB host 1 / 2",
+			"connector": "USB-A",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Main OUT L / R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.melbourneinstruments.com/delia",
+		"https://www.melbourneinstruments.com/support",
+		"https://www.melbourneinstruments.com/s/DELIA-UserManual-V1-04-Aug2024-b-4cpd.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

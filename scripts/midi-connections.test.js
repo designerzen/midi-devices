@@ -1,6 +1,6 @@
 import assert from "node:assert/strict"
 import test from "node:test"
-import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail } from "../site/midi-connections.js"
+import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail, unmatchedDeviceAgentPrompt, DEVICE_PROFILE_EMAIL } from "../site/midi-connections.js"
 
 const devices = [["arcana-strum", { profile: { name: "Arcana Strum", ids: ["arcana-strum"], portNames: ["ArcanaStrum"] }, devicePath: "arcana/strum" }]]
 const port = (id, name = "ArcanaStrum", manufacturer = "Arcana") => ({ id, name, manufacturer, version: "1.0", state: "connected", connection: "closed" })
@@ -27,6 +27,36 @@ test("unreported device details have useful email fallbacks", () => {
 	const email = new URL(unmatchedDeviceEmail(ports))
 	assert.equal(email.searchParams.get("subject"), "Unmatched MIDI device: Unnamed MIDI device")
 	assert.ok(email.searchParams.get("body").includes("Port ID: Not reported"))
+})
+
+test("agent prompt preserves both endpoints as data and routes the completed profile to the catalog address", () => {
+	const ports = [
+		{ direction: "Input", port: port('in"1', 'Keys <&>\nα', "Maker & Co") },
+		{ direction: "Output", port: port("out-2", "Keys output", "") }
+	]
+	const prompt = unmatchedDeviceAgentPrompt(ports)
+	const metadata = JSON.parse(prompt.slice(prompt.indexOf("[\n")))
+	assert.deepEqual(metadata, ports.map((entry) => Object.fromEntries(midiPortDetails(entry))))
+	assert.ok(prompt.includes(DEVICE_PROFILE_EMAIL))
+	assert.equal(new URL(unmatchedDeviceEmail(ports)).pathname, DEVICE_PROFILE_EMAIL)
+	assert.ok(prompt.includes("email it as an attachment"))
+	assert.ok(prompt.includes("detected port names/directions"))
+	assert.ok(prompt.includes("complete addressed email draft"))
+})
+
+test("agent prompt investigates missing facts and supplies the profile contract without guessing aliases", () => {
+	const prompt = unmatchedDeviceAgentPrompt([{ direction: "Input", port: {} }])
+	assert.ok(prompt.includes('"Manufacturer": "Not reported"'))
+	assert.ok(prompt.includes("asking me questions in small batches"))
+	assert.ok(prompt.includes("ask follow-ups until every required detail is established"))
+	assert.ok(prompt.includes("Do not guess"))
+	assert.ok(prompt.includes("not stable model identifiers"))
+	assert.ok(prompt.includes("configurable or unverified controls unbound"))
+	assert.ok(prompt.includes("devices/<manufacturer>/<model>/<id>.json"))
+	assert.ok(prompt.includes("devices/profile.schema.json"))
+	assert.ok(prompt.includes("manufacturer.schema.json"))
+	assert.ok(prompt.includes("run the repository build and tests"))
+	assert.deepEqual(JSON.parse(unmatchedDeviceAgentPrompt([]).split("\n\n").at(-1)), [])
 })
 
 test("recognized inputs and outputs get a profile and retain all live metadata", () => {

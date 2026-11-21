@@ -1,0 +1,339 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "udo-super-6-desktop",
+	"name": "UDO Super 6 Desktop",
+	"manufacturer": "UDO Audio",
+	"manufacturerUrl": "https://www.udo-audio.com/",
+	"productUrl": "https://www.udo-audio.com/super-6-desktop",
+	"ids": [
+		"udo-super-6-desktop"
+	],
+	"portNames": [],
+	"description": "12-voice hybrid synthesizer in a desktop module.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications",
+			"url": "https://www.udo-audio.com/super-6-desktop"
+		},
+		{
+			"title": "Manufacturer manuals and downloads",
+			"url": "https://www.udo-audio.com/super-6-support"
+		},
+		{
+			"title": "Owner manual",
+			"url": "https://cdn.prod.website-files.com/641dd1a703957e750da6b5e3/66e4297ca75f0eb7e730884b_UDO_Super6_Manual.pdf"
+		}
+	],
+	"abilities": [
+		"Hybrid polyphonic synthesis",
+		"Binaural mode",
+		"USB MIDI",
+		"DIN MIDI",
+		"Arpeggiator",
+		"Step sequencer"
+	],
+	"hardwareControls": [
+		"Oscillators: DDS 1 Waveform, DDS 1 Super, DDS 2 Waveform, DDS 2 Tune",
+		"Filter: HPF, VCF Freq, VCF Res, VCF Env",
+		"Envelopes: ENV 1 Attack, ENV 1 Decay, ENV 1 Sustain, ENV 1 Release",
+		"Performance: Master Volume, Arpeggiator, Sequencer, Hold",
+		"Patch: Patch, Manual, Shift"
+	],
+	"notice": "Set MIDI channel, parameter transmit/receive options and clock source in the global settings. Enable MPE only with a compatible controller and matching channel configuration. This desktop module has no built-in keyboard.  Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected instruments appear under the interface port name. Physical controls are unbound; this profile does not provide a complete MIDI implementation. Diagrams show selected controls at illustrative positions; consult the manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "UDO Super 6 Desktop selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "oscillators-dds-1-waveform",
+				"label": "OSCILLATORS: DDS 1 Waveform",
+				"kind": "fader",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 8.5,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "oscillators-dds-1-super",
+				"label": "OSCILLATORS: DDS 1 Super",
+				"kind": "fader",
+				"position": {
+					"x": 11.083333333333334,
+					"y": 12.666666666666668,
+					"width": 8.5,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "oscillators-dds-2-waveform",
+				"label": "OSCILLATORS: DDS 2 Waveform",
+				"kind": "fader",
+				"position": {
+					"x": 19.583333333333332,
+					"y": 12.666666666666668,
+					"width": 8.5,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "oscillators-dds-2-tune",
+				"label": "OSCILLATORS: DDS 2 Tune",
+				"kind": "fader",
+				"position": {
+					"x": 28.083333333333332,
+					"y": 12.666666666666668,
+					"width": 8.5,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "filter-hpf",
+				"label": "FILTER: HPF",
+				"kind": "fader",
+				"position": {
+					"x": 38.416666666666664,
+					"y": 12.666666666666668,
+					"width": 6.833333333333333,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "filter-vcf-freq",
+				"label": "FILTER: VCF Freq",
+				"kind": "fader",
+				"position": {
+					"x": 45.25,
+					"y": 12.666666666666668,
+					"width": 6.833333333333333,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "filter-vcf-res",
+				"label": "FILTER: VCF Res",
+				"kind": "fader",
+				"position": {
+					"x": 52.083333333333336,
+					"y": 12.666666666666668,
+					"width": 6.833333333333333,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "filter-vcf-env",
+				"label": "FILTER: VCF Env",
+				"kind": "fader",
+				"position": {
+					"x": 58.916666666666664,
+					"y": 12.666666666666668,
+					"width": 6.833333333333333,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "envelopes-env-1-attack",
+				"label": "ENVELOPES: ENV 1 Attack",
+				"kind": "fader",
+				"position": {
+					"x": 67.58333333333333,
+					"y": 12.666666666666668,
+					"width": 7.458333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "envelopes-env-1-decay",
+				"label": "ENVELOPES: ENV 1 Decay",
+				"kind": "fader",
+				"position": {
+					"x": 75.04166666666666,
+					"y": 12.666666666666668,
+					"width": 7.458333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "envelopes-env-1-sustain",
+				"label": "ENVELOPES: ENV 1 Sustain",
+				"kind": "fader",
+				"position": {
+					"x": 82.5,
+					"y": 12.666666666666668,
+					"width": 7.458333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "envelopes-env-1-release",
+				"label": "ENVELOPES: ENV 1 Release",
+				"kind": "fader",
+				"position": {
+					"x": 89.95833333333333,
+					"y": 12.666666666666668,
+					"width": 7.458333333333334,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "performance-master-volume",
+				"label": "PERFORMANCE: Master Volume",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 44.666666666666664,
+					"width": 11.208333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "performance-arpeggiator",
+				"label": "PERFORMANCE: Arpeggiator",
+				"kind": "button",
+				"position": {
+					"x": 13.791666666666666,
+					"y": 44.666666666666664,
+					"width": 11.208333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "performance-sequencer",
+				"label": "PERFORMANCE: Sequencer",
+				"kind": "button",
+				"position": {
+					"x": 25.0,
+					"y": 44.666666666666664,
+					"width": 11.208333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "performance-hold",
+				"label": "PERFORMANCE: Hold",
+				"kind": "button",
+				"position": {
+					"x": 36.20833333333333,
+					"y": 44.666666666666664,
+					"width": 11.208333333333332,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "patch-patch",
+				"label": "PATCH: Patch",
+				"kind": "button",
+				"position": {
+					"x": 50.083333333333336,
+					"y": 44.666666666666664,
+					"width": 15.777777777777779,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "patch-manual",
+				"label": "PATCH: Manual",
+				"kind": "button",
+				"position": {
+					"x": 65.86111111111111,
+					"y": 44.666666666666664,
+					"width": 15.777777777777779,
+					"height": 24.666666666666668
+				}
+			},
+			{
+				"id": "patch-shift",
+				"label": "PATCH: Shift",
+				"kind": "button",
+				"position": {
+					"x": 81.6388888888889,
+					"y": 44.666666666666664,
+					"width": 15.777777777777779,
+					"height": 24.666666666666668
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI THRU",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI device",
+			"connector": "USB",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Main OUT L",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Main OUT R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://www.udo-audio.com/super-6-desktop",
+		"https://www.udo-audio.com/super-6-support",
+		"https://cdn.prod.website-files.com/641dd1a703957e750da6b5e3/66e4297ca75f0eb7e730884b_UDO_Super6_Manual.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

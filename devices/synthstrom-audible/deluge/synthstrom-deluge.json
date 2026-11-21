@@ -1,0 +1,1631 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "synthstrom-deluge",
+	"name": "Synthstrom Audible Deluge",
+	"manufacturer": "Synthstrom Audible",
+	"manufacturerUrl": "https://synthstrom.com/",
+	"productUrl": "https://synthstrom.com/product/deluge/",
+	"ids": [
+		"synthstrom-deluge"
+	],
+	"portNames": [],
+	"description": "Standalone synthesizer, sampler and sequencer with a 16 by 8 RGB playing grid.",
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Manufacturer product specifications",
+			"url": "https://synthstrom.com/product/deluge/"
+		},
+		{
+			"title": "Manufacturer manuals and downloads",
+			"url": "https://synthstrom.com/product/deluge/"
+		},
+		{
+			"title": "Owner manual",
+			"url": "https://synthstrom-audible-deluge.s3.us-east-2.amazonaws.com/Deluge-Guidebook-4p1-OLED.pdf"
+		}
+	],
+	"abilities": [
+		"Synthesis",
+		"Sampling",
+		"Audio looping",
+		"MIDI sequencing",
+		"USB MIDI",
+		"DIN MIDI",
+		"MPE recording and playback",
+		"CV/gate output"
+	],
+	"hardwareControls": [
+		"Edit And Transport: Volume, Tempo, Select, Play, Record, Shift",
+		"Main Grid: Pad 1, Pad 2, Pad 3, Pad 4, Pad 5, Pad 6, Pad 7, Pad 8, Pad 9, Pad 10, Pad 11, Pad 12, Pad 13, Pad 14, Pad 15, Pad 16, Pad 17, Pad 18, Pad 19, Pad 20, Pad 21, Pad 22, Pad 23, Pad 24, Pad 25, Pad 26, Pad 27, Pad 28, Pad 29, Pad 30, Pad 31, Pad 32, Pad 33, Pad 34, Pad 35, Pad 36, Pad 37, Pad 38, Pad 39, Pad 40, Pad 41, Pad 42, Pad 43, Pad 44, Pad 45, Pad 46, Pad 47, Pad 48, Pad 49, Pad 50, Pad 51, Pad 52, Pad 53, Pad 54, Pad 55, Pad 56, Pad 57, Pad 58, Pad 59, Pad 60, Pad 61, Pad 62, Pad 63, Pad 64, Pad 65, Pad 66, Pad 67, Pad 68, Pad 69, Pad 70, Pad 71, Pad 72, Pad 73, Pad 74, Pad 75, Pad 76, Pad 77, Pad 78, Pad 79, Pad 80, Pad 81, Pad 82, Pad 83, Pad 84, Pad 85, Pad 86, Pad 87, Pad 88, Pad 89, Pad 90, Pad 91, Pad 92, Pad 93, Pad 94, Pad 95, Pad 96, Pad 97, Pad 98, Pad 99, Pad 100, Pad 101, Pad 102, Pad 103, Pad 104, Pad 105, Pad 106, Pad 107, Pad 108, Pad 109, Pad 110, Pad 111, Pad 112, Pad 113, Pad 114, Pad 115, Pad 116, Pad 117, Pad 118, Pad 119, Pad 120, Pad 121, Pad 122, Pad 123, Pad 124, Pad 125, Pad 126, Pad 127, Pad 128",
+		"Parameters: Gold encoder 1, Gold encoder 2"
+	],
+	"notice": "Assign MIDI instruments and channels per clip. Pad notes and encoder assignments depend on the active view, scale and instrument. USB hosting uses the documented B-to-B cable arrangement; external DC power is needed to power attached controllers. The linked 4.1 OLED guide describes official firmware; community firmware may differ. The grid schematic is shared by OLED and earlier display variants; display-specific operations are outside this profile. Exact browser MIDI port aliases have not been verified; select this profile manually. DIN-connected instruments appear under the interface port name. Physical controls are unbound; this profile does not provide a complete MIDI implementation. Diagrams show selected controls at illustrative positions; consult the manufacturer references for the full panel.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Synthstrom Audible Deluge selected-controls schematic"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and manufacturer documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1200,
+		"height": 750,
+		"elements": [
+			{
+				"id": "edit-and-transport-volume",
+				"label": "EDIT AND TRANSPORT: Volume",
+				"kind": "knob",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 16.666666666666664
+				}
+			},
+			{
+				"id": "edit-and-transport-tempo",
+				"label": "EDIT AND TRANSPORT: Tempo",
+				"kind": "knob",
+				"position": {
+					"x": 18.38888888888889,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 16.666666666666664
+				}
+			},
+			{
+				"id": "edit-and-transport-select",
+				"label": "EDIT AND TRANSPORT: Select",
+				"kind": "knob",
+				"position": {
+					"x": 34.19444444444444,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 16.666666666666664
+				}
+			},
+			{
+				"id": "edit-and-transport-play",
+				"label": "EDIT AND TRANSPORT: Play",
+				"kind": "button",
+				"position": {
+					"x": 50.0,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 16.666666666666664
+				}
+			},
+			{
+				"id": "edit-and-transport-record",
+				"label": "EDIT AND TRANSPORT: Record",
+				"kind": "button",
+				"position": {
+					"x": 65.80555555555556,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 16.666666666666664
+				}
+			},
+			{
+				"id": "edit-and-transport-shift",
+				"label": "EDIT AND TRANSPORT: Shift",
+				"kind": "button",
+				"position": {
+					"x": 81.6111111111111,
+					"y": 12.666666666666668,
+					"width": 15.805555555555555,
+					"height": 16.666666666666664
+				}
+			},
+			{
+				"id": "main-grid-pad-1",
+				"label": "MAIN GRID: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-2",
+				"label": "MAIN GRID: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 7.729166666666666,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-3",
+				"label": "MAIN GRID: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 12.875,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-4",
+				"label": "MAIN GRID: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 18.020833333333332,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-5",
+				"label": "MAIN GRID: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 23.166666666666664,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-6",
+				"label": "MAIN GRID: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 28.3125,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-7",
+				"label": "MAIN GRID: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 33.458333333333336,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-8",
+				"label": "MAIN GRID: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 38.604166666666664,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-9",
+				"label": "MAIN GRID: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 43.75,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-10",
+				"label": "MAIN GRID: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 48.895833333333336,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-11",
+				"label": "MAIN GRID: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 54.041666666666664,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-12",
+				"label": "MAIN GRID: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 59.18750000000001,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-13",
+				"label": "MAIN GRID: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 64.33333333333333,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-14",
+				"label": "MAIN GRID: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 69.47916666666667,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-15",
+				"label": "MAIN GRID: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 74.625,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-16",
+				"label": "MAIN GRID: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 79.77083333333333,
+					"y": 36.666666666666664,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-17",
+				"label": "MAIN GRID: Pad 17",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-18",
+				"label": "MAIN GRID: Pad 18",
+				"kind": "pad",
+				"position": {
+					"x": 7.729166666666666,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-19",
+				"label": "MAIN GRID: Pad 19",
+				"kind": "pad",
+				"position": {
+					"x": 12.875,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-20",
+				"label": "MAIN GRID: Pad 20",
+				"kind": "pad",
+				"position": {
+					"x": 18.020833333333332,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-21",
+				"label": "MAIN GRID: Pad 21",
+				"kind": "pad",
+				"position": {
+					"x": 23.166666666666664,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-22",
+				"label": "MAIN GRID: Pad 22",
+				"kind": "pad",
+				"position": {
+					"x": 28.3125,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-23",
+				"label": "MAIN GRID: Pad 23",
+				"kind": "pad",
+				"position": {
+					"x": 33.458333333333336,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-24",
+				"label": "MAIN GRID: Pad 24",
+				"kind": "pad",
+				"position": {
+					"x": 38.604166666666664,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-25",
+				"label": "MAIN GRID: Pad 25",
+				"kind": "pad",
+				"position": {
+					"x": 43.75,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-26",
+				"label": "MAIN GRID: Pad 26",
+				"kind": "pad",
+				"position": {
+					"x": 48.895833333333336,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-27",
+				"label": "MAIN GRID: Pad 27",
+				"kind": "pad",
+				"position": {
+					"x": 54.041666666666664,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-28",
+				"label": "MAIN GRID: Pad 28",
+				"kind": "pad",
+				"position": {
+					"x": 59.18750000000001,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-29",
+				"label": "MAIN GRID: Pad 29",
+				"kind": "pad",
+				"position": {
+					"x": 64.33333333333333,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-30",
+				"label": "MAIN GRID: Pad 30",
+				"kind": "pad",
+				"position": {
+					"x": 69.47916666666667,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-31",
+				"label": "MAIN GRID: Pad 31",
+				"kind": "pad",
+				"position": {
+					"x": 74.625,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-32",
+				"label": "MAIN GRID: Pad 32",
+				"kind": "pad",
+				"position": {
+					"x": 79.77083333333333,
+					"y": 43.583333333333336,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-33",
+				"label": "MAIN GRID: Pad 33",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-34",
+				"label": "MAIN GRID: Pad 34",
+				"kind": "pad",
+				"position": {
+					"x": 7.729166666666666,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-35",
+				"label": "MAIN GRID: Pad 35",
+				"kind": "pad",
+				"position": {
+					"x": 12.875,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-36",
+				"label": "MAIN GRID: Pad 36",
+				"kind": "pad",
+				"position": {
+					"x": 18.020833333333332,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-37",
+				"label": "MAIN GRID: Pad 37",
+				"kind": "pad",
+				"position": {
+					"x": 23.166666666666664,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-38",
+				"label": "MAIN GRID: Pad 38",
+				"kind": "pad",
+				"position": {
+					"x": 28.3125,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-39",
+				"label": "MAIN GRID: Pad 39",
+				"kind": "pad",
+				"position": {
+					"x": 33.458333333333336,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-40",
+				"label": "MAIN GRID: Pad 40",
+				"kind": "pad",
+				"position": {
+					"x": 38.604166666666664,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-41",
+				"label": "MAIN GRID: Pad 41",
+				"kind": "pad",
+				"position": {
+					"x": 43.75,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-42",
+				"label": "MAIN GRID: Pad 42",
+				"kind": "pad",
+				"position": {
+					"x": 48.895833333333336,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-43",
+				"label": "MAIN GRID: Pad 43",
+				"kind": "pad",
+				"position": {
+					"x": 54.041666666666664,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-44",
+				"label": "MAIN GRID: Pad 44",
+				"kind": "pad",
+				"position": {
+					"x": 59.18750000000001,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-45",
+				"label": "MAIN GRID: Pad 45",
+				"kind": "pad",
+				"position": {
+					"x": 64.33333333333333,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-46",
+				"label": "MAIN GRID: Pad 46",
+				"kind": "pad",
+				"position": {
+					"x": 69.47916666666667,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-47",
+				"label": "MAIN GRID: Pad 47",
+				"kind": "pad",
+				"position": {
+					"x": 74.625,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-48",
+				"label": "MAIN GRID: Pad 48",
+				"kind": "pad",
+				"position": {
+					"x": 79.77083333333333,
+					"y": 50.5,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-49",
+				"label": "MAIN GRID: Pad 49",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-50",
+				"label": "MAIN GRID: Pad 50",
+				"kind": "pad",
+				"position": {
+					"x": 7.729166666666666,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-51",
+				"label": "MAIN GRID: Pad 51",
+				"kind": "pad",
+				"position": {
+					"x": 12.875,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-52",
+				"label": "MAIN GRID: Pad 52",
+				"kind": "pad",
+				"position": {
+					"x": 18.020833333333332,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-53",
+				"label": "MAIN GRID: Pad 53",
+				"kind": "pad",
+				"position": {
+					"x": 23.166666666666664,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-54",
+				"label": "MAIN GRID: Pad 54",
+				"kind": "pad",
+				"position": {
+					"x": 28.3125,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-55",
+				"label": "MAIN GRID: Pad 55",
+				"kind": "pad",
+				"position": {
+					"x": 33.458333333333336,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-56",
+				"label": "MAIN GRID: Pad 56",
+				"kind": "pad",
+				"position": {
+					"x": 38.604166666666664,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-57",
+				"label": "MAIN GRID: Pad 57",
+				"kind": "pad",
+				"position": {
+					"x": 43.75,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-58",
+				"label": "MAIN GRID: Pad 58",
+				"kind": "pad",
+				"position": {
+					"x": 48.895833333333336,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-59",
+				"label": "MAIN GRID: Pad 59",
+				"kind": "pad",
+				"position": {
+					"x": 54.041666666666664,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-60",
+				"label": "MAIN GRID: Pad 60",
+				"kind": "pad",
+				"position": {
+					"x": 59.18750000000001,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-61",
+				"label": "MAIN GRID: Pad 61",
+				"kind": "pad",
+				"position": {
+					"x": 64.33333333333333,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-62",
+				"label": "MAIN GRID: Pad 62",
+				"kind": "pad",
+				"position": {
+					"x": 69.47916666666667,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-63",
+				"label": "MAIN GRID: Pad 63",
+				"kind": "pad",
+				"position": {
+					"x": 74.625,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-64",
+				"label": "MAIN GRID: Pad 64",
+				"kind": "pad",
+				"position": {
+					"x": 79.77083333333333,
+					"y": 57.41666666666667,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-65",
+				"label": "MAIN GRID: Pad 65",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-66",
+				"label": "MAIN GRID: Pad 66",
+				"kind": "pad",
+				"position": {
+					"x": 7.729166666666666,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-67",
+				"label": "MAIN GRID: Pad 67",
+				"kind": "pad",
+				"position": {
+					"x": 12.875,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-68",
+				"label": "MAIN GRID: Pad 68",
+				"kind": "pad",
+				"position": {
+					"x": 18.020833333333332,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-69",
+				"label": "MAIN GRID: Pad 69",
+				"kind": "pad",
+				"position": {
+					"x": 23.166666666666664,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-70",
+				"label": "MAIN GRID: Pad 70",
+				"kind": "pad",
+				"position": {
+					"x": 28.3125,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-71",
+				"label": "MAIN GRID: Pad 71",
+				"kind": "pad",
+				"position": {
+					"x": 33.458333333333336,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-72",
+				"label": "MAIN GRID: Pad 72",
+				"kind": "pad",
+				"position": {
+					"x": 38.604166666666664,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-73",
+				"label": "MAIN GRID: Pad 73",
+				"kind": "pad",
+				"position": {
+					"x": 43.75,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-74",
+				"label": "MAIN GRID: Pad 74",
+				"kind": "pad",
+				"position": {
+					"x": 48.895833333333336,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-75",
+				"label": "MAIN GRID: Pad 75",
+				"kind": "pad",
+				"position": {
+					"x": 54.041666666666664,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-76",
+				"label": "MAIN GRID: Pad 76",
+				"kind": "pad",
+				"position": {
+					"x": 59.18750000000001,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-77",
+				"label": "MAIN GRID: Pad 77",
+				"kind": "pad",
+				"position": {
+					"x": 64.33333333333333,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-78",
+				"label": "MAIN GRID: Pad 78",
+				"kind": "pad",
+				"position": {
+					"x": 69.47916666666667,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-79",
+				"label": "MAIN GRID: Pad 79",
+				"kind": "pad",
+				"position": {
+					"x": 74.625,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-80",
+				"label": "MAIN GRID: Pad 80",
+				"kind": "pad",
+				"position": {
+					"x": 79.77083333333333,
+					"y": 64.33333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-81",
+				"label": "MAIN GRID: Pad 81",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-82",
+				"label": "MAIN GRID: Pad 82",
+				"kind": "pad",
+				"position": {
+					"x": 7.729166666666666,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-83",
+				"label": "MAIN GRID: Pad 83",
+				"kind": "pad",
+				"position": {
+					"x": 12.875,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-84",
+				"label": "MAIN GRID: Pad 84",
+				"kind": "pad",
+				"position": {
+					"x": 18.020833333333332,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-85",
+				"label": "MAIN GRID: Pad 85",
+				"kind": "pad",
+				"position": {
+					"x": 23.166666666666664,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-86",
+				"label": "MAIN GRID: Pad 86",
+				"kind": "pad",
+				"position": {
+					"x": 28.3125,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-87",
+				"label": "MAIN GRID: Pad 87",
+				"kind": "pad",
+				"position": {
+					"x": 33.458333333333336,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-88",
+				"label": "MAIN GRID: Pad 88",
+				"kind": "pad",
+				"position": {
+					"x": 38.604166666666664,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-89",
+				"label": "MAIN GRID: Pad 89",
+				"kind": "pad",
+				"position": {
+					"x": 43.75,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-90",
+				"label": "MAIN GRID: Pad 90",
+				"kind": "pad",
+				"position": {
+					"x": 48.895833333333336,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-91",
+				"label": "MAIN GRID: Pad 91",
+				"kind": "pad",
+				"position": {
+					"x": 54.041666666666664,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-92",
+				"label": "MAIN GRID: Pad 92",
+				"kind": "pad",
+				"position": {
+					"x": 59.18750000000001,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-93",
+				"label": "MAIN GRID: Pad 93",
+				"kind": "pad",
+				"position": {
+					"x": 64.33333333333333,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-94",
+				"label": "MAIN GRID: Pad 94",
+				"kind": "pad",
+				"position": {
+					"x": 69.47916666666667,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-95",
+				"label": "MAIN GRID: Pad 95",
+				"kind": "pad",
+				"position": {
+					"x": 74.625,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-96",
+				"label": "MAIN GRID: Pad 96",
+				"kind": "pad",
+				"position": {
+					"x": 79.77083333333333,
+					"y": 71.25,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-97",
+				"label": "MAIN GRID: Pad 97",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-98",
+				"label": "MAIN GRID: Pad 98",
+				"kind": "pad",
+				"position": {
+					"x": 7.729166666666666,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-99",
+				"label": "MAIN GRID: Pad 99",
+				"kind": "pad",
+				"position": {
+					"x": 12.875,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-100",
+				"label": "MAIN GRID: Pad 100",
+				"kind": "pad",
+				"position": {
+					"x": 18.020833333333332,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-101",
+				"label": "MAIN GRID: Pad 101",
+				"kind": "pad",
+				"position": {
+					"x": 23.166666666666664,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-102",
+				"label": "MAIN GRID: Pad 102",
+				"kind": "pad",
+				"position": {
+					"x": 28.3125,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-103",
+				"label": "MAIN GRID: Pad 103",
+				"kind": "pad",
+				"position": {
+					"x": 33.458333333333336,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-104",
+				"label": "MAIN GRID: Pad 104",
+				"kind": "pad",
+				"position": {
+					"x": 38.604166666666664,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-105",
+				"label": "MAIN GRID: Pad 105",
+				"kind": "pad",
+				"position": {
+					"x": 43.75,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-106",
+				"label": "MAIN GRID: Pad 106",
+				"kind": "pad",
+				"position": {
+					"x": 48.895833333333336,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-107",
+				"label": "MAIN GRID: Pad 107",
+				"kind": "pad",
+				"position": {
+					"x": 54.041666666666664,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-108",
+				"label": "MAIN GRID: Pad 108",
+				"kind": "pad",
+				"position": {
+					"x": 59.18750000000001,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-109",
+				"label": "MAIN GRID: Pad 109",
+				"kind": "pad",
+				"position": {
+					"x": 64.33333333333333,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-110",
+				"label": "MAIN GRID: Pad 110",
+				"kind": "pad",
+				"position": {
+					"x": 69.47916666666667,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-111",
+				"label": "MAIN GRID: Pad 111",
+				"kind": "pad",
+				"position": {
+					"x": 74.625,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-112",
+				"label": "MAIN GRID: Pad 112",
+				"kind": "pad",
+				"position": {
+					"x": 79.77083333333333,
+					"y": 78.16666666666666,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-113",
+				"label": "MAIN GRID: Pad 113",
+				"kind": "pad",
+				"position": {
+					"x": 2.5833333333333335,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-114",
+				"label": "MAIN GRID: Pad 114",
+				"kind": "pad",
+				"position": {
+					"x": 7.729166666666666,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-115",
+				"label": "MAIN GRID: Pad 115",
+				"kind": "pad",
+				"position": {
+					"x": 12.875,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-116",
+				"label": "MAIN GRID: Pad 116",
+				"kind": "pad",
+				"position": {
+					"x": 18.020833333333332,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-117",
+				"label": "MAIN GRID: Pad 117",
+				"kind": "pad",
+				"position": {
+					"x": 23.166666666666664,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-118",
+				"label": "MAIN GRID: Pad 118",
+				"kind": "pad",
+				"position": {
+					"x": 28.3125,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-119",
+				"label": "MAIN GRID: Pad 119",
+				"kind": "pad",
+				"position": {
+					"x": 33.458333333333336,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-120",
+				"label": "MAIN GRID: Pad 120",
+				"kind": "pad",
+				"position": {
+					"x": 38.604166666666664,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-121",
+				"label": "MAIN GRID: Pad 121",
+				"kind": "pad",
+				"position": {
+					"x": 43.75,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-122",
+				"label": "MAIN GRID: Pad 122",
+				"kind": "pad",
+				"position": {
+					"x": 48.895833333333336,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-123",
+				"label": "MAIN GRID: Pad 123",
+				"kind": "pad",
+				"position": {
+					"x": 54.041666666666664,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-124",
+				"label": "MAIN GRID: Pad 124",
+				"kind": "pad",
+				"position": {
+					"x": 59.18750000000001,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-125",
+				"label": "MAIN GRID: Pad 125",
+				"kind": "pad",
+				"position": {
+					"x": 64.33333333333333,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-126",
+				"label": "MAIN GRID: Pad 126",
+				"kind": "pad",
+				"position": {
+					"x": 69.47916666666667,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-127",
+				"label": "MAIN GRID: Pad 127",
+				"kind": "pad",
+				"position": {
+					"x": 74.625,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "main-grid-pad-128",
+				"label": "MAIN GRID: Pad 128",
+				"kind": "pad",
+				"position": {
+					"x": 79.77083333333333,
+					"y": 85.08333333333333,
+					"width": 5.145833333333334,
+					"height": 6.916666666666667
+				}
+			},
+			{
+				"id": "parameters-gold-encoder-1",
+				"label": "PARAMETERS: Gold encoder 1",
+				"kind": "knob",
+				"position": {
+					"x": 87.58333333333333,
+					"y": 36.666666666666664,
+					"width": 9.833333333333332,
+					"height": 27.666666666666668
+				}
+			},
+			{
+				"id": "parameters-gold-encoder-2",
+				"label": "PARAMETERS: Gold encoder 2",
+				"kind": "knob",
+				"position": {
+					"x": 87.58333333333333,
+					"y": 64.33333333333333,
+					"width": 9.833333333333332,
+					"height": 27.666666666666668
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "Rear"
+		},
+		{
+			"label": "MIDI OUT",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-B",
+			"direction": "bidirectional",
+			"location": "Rear"
+		},
+		{
+			"label": "Line OUT L",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Line OUT R",
+			"connector": "6.35 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Headphones",
+			"connector": "3.5 mm",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "CV 1 / CV 2",
+			"connector": "CV sockets",
+			"direction": "output",
+			"location": "Rear"
+		},
+		{
+			"label": "Gates 1 to 4",
+			"connector": "Gate sockets",
+			"direction": "output",
+			"location": "Rear"
+		}
+	],
+	"diagramSources": [
+		"https://synthstrom.com/product/deluge/",
+		"https://synthstrom-audible-deluge.s3.us-east-2.amazonaws.com/Deluge-Guidebook-4p1-OLED.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

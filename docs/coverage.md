@@ -179,3 +179,17 @@ The [official MIDI Association SysEx ID table](https://midi.org/sysexidtable), r
 Every named assignment is linked to a manufacturer descriptor. Repeated source rows are deduplicated; companies with several assigned IDs retain them all. The single `00` extension marker and reserved entries are recorded separately and do not create manufacturers. A few name variants that normalise to the same company slug share a descriptor and preserve both official names. Companies without a verified match to an existing brand remain separate, rather than inheriting an assumed parent company's ID.
 
 Registry-only pages expose official names, assigned hex IDs and a source link, with no invented devices, logos or company website addresses. Existing company details and device profiles are retained. The manufacturer selector and JSON/XML API include entries with no devices. The source snapshot is in `devices/midi-manufacturers.json`; update and validation instructions are in the [contribution guide](profiles.md#official-manufacturer-ids).
+
+## UDO, Synthstrom and Melbourne Instruments
+
+Seven additional profiles bring the catalogue to **212 devices from 43 device manufacturers**, with **795 companies** in the manufacturer directory. The existing UDO Audio, Synthstrom Audible and Melbourne Instruments registry entries now have company descriptions, official websites, useful resources and source-attributed logos. Folder identifiers and official SysEx assignments remain stable.
+
+| Manufacturer | Added profiles | Setup and model distinctions |
+| --- | --- | --- |
+| UDO Audio | Super 6, Super 6 Desktop, Super 8, Super Gemini | Desktop has no keyboard. Super 8 and Gemini have two layers; use either USB or DIN MIDI, as their shared manual excludes simultaneous use. Super 8 describes the base 16-voice model; the optional SP8+ upgrade is separate. |
+| Synthstrom Audible | Deluge | Grid-based synth, sampler and sequencer. Assign MIDI channels per clip; note layouts depend on scale and view. USB hosting needs the documented cable arrangement and DC power to power attached controllers. The linked OLED 4.1 guide and community firmware can differ. |
+| Melbourne Instruments | NINA, DELIA | Set layer channels, ranges and voice allocation. NINA is a module; DELIA has a 49-key keyboard and six analog voice circuits with a 12-note mode. Motorized controls follow the active patch and layer. |
+
+These are partial hardware inventories with selected-control panel/interface diagrams and grouped connection diagrams, not scale drawings. No browser aliases or fixed control assignments are assumed: choose profiles manually until port names have been verified. Controls and playing surfaces remain unbound; full CC/NRPN charts, SysEx editing and firmware-specific extensions are outside this expansion. Official manuals and support pages are linked from each profile. The Deluge schematic represents its shared main grid rather than display-specific operations.
+
+Sources checked on 20 November 2026: [UDO support and downloads](https://www.udo-audio.com/support-downloads), [Deluge specifications and manuals](https://synthstrom.com/product/deluge/), and [Melbourne Instruments support](https://www.melbourneinstruments.com/support).

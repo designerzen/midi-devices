@@ -113,6 +113,9 @@
 			th { color: var(--muted); }
 			.profile-picker { display: grid; gap: 0.4rem; margin-top: 1rem; font-size: 0.9rem; color: var(--muted); }
 			.unmatched { background: var(--accent-soft); border-radius: 8px; padding: 0.75rem 1rem; }
+			.agent-prompt { white-space: pre-wrap; overflow-wrap: anywhere; font: 0.85rem/1.6 ui-monospace, monospace; padding: 1rem; border: 1px solid var(--border-strong); border-radius: 8px; background: var(--bg); -webkit-user-select: all; user-select: all; }
+			.agent-prompt:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 3px; }
+			.copy-status { color: var(--muted); font-size: 0.9rem; }
 			.notice { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--muted); }
 			.error { border-left: 3px solid var(--error); padding-left: 1rem; color: var(--error); }
 
@@ -197,7 +200,7 @@
 			<p>MIDI resources: <a href="https://midi.org/">The MIDI Association</a> · <a href="https://midi.org/specs">Official MIDI specifications</a> · <a href="https://midi.org/midi-1-0-detailed-specification">MIDI 1.0 detailed specification</a></p>
 		</footer>
 		<script type="module">
-			import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail } from "./midi-connections.js?v=__BUILD_COMMIT__"
+			import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail, unmatchedDeviceAgentPrompt, DEVICE_PROFILE_EMAIL } from "./midi-connections.js?v=__BUILD_COMMIT__"
 			const connectedCards = document.getElementById("connected-devices")
 			const connectedEmpty = document.getElementById("connected-empty")
 			const assignments = new Map()
@@ -573,10 +576,40 @@
 						report.setAttribute("aria-labelledby", heading.id)
 						const email = element("a", "Email device details", "email-device")
 						email.href = unmatchedDeviceEmail(ports)
+						const agentDetails = element("details")
+						const agentSummary = element("summary", "Create a device profile with an agent")
+						const prompt = element("pre", unmatchedDeviceAgentPrompt(ports), "agent-prompt")
+						prompt.tabIndex = 0
+						prompt.setAttribute("aria-label", "Device profile agent prompt")
+						const copy = element("button", "Copy agent prompt")
+						copy.type = "button"
+						const copyStatus = element("p", "", "copy-status")
+						copyStatus.setAttribute("role", "status")
+						copy.addEventListener("click", async () => {
+							copy.disabled = true
+							try {
+								await navigator.clipboard.writeText(prompt.textContent)
+								copyStatus.textContent = "Copied. Paste into your agent to identify the device and create its profile."
+							} catch {
+								prompt.focus()
+								const range = document.createRange()
+								range.selectNodeContents(prompt)
+								const selection = window.getSelection()
+								selection?.removeAllRanges()
+								selection?.addRange(range)
+								copyStatus.textContent = "Clipboard access is unavailable. Select the prompt and press Ctrl+C (Command+C on Mac), or use your device’s Copy command."
+							} finally {
+								copy.disabled = false
+							}
+						})
+						agentDetails.append(agentSummary,
+							element("p", `Copy this prompt into an agent. It will ask questions to fill in missing details, create the profile JSON, and send it to ${DEVICE_PROFILE_EMAIL} or prepare an email draft if it cannot send mail. You can also select all the prompt text with one click.`),
+							copy, copyStatus, prompt)
 						report.append(heading,
 							element("p", "The details above include everything Web MIDI reports about these ports. USB hardware IDs and other hardware specifications are not available in the browser."),
 							email,
-							element("p", "Opens a draft to midi@aweseomthing.co.uk with these details. Add the device model or any notes, then send it from your email app."))
+							element("p", `Opens a draft to ${DEVICE_PROFILE_EMAIL} with these details. Add the device model or any notes, then send it from your email app.`),
+							agentDetails)
 						card.append(report)
 					}
 					return card
