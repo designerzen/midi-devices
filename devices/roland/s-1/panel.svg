@@ -1,180 +1,310 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 790" role="img" aria-labelledby="title description">
-<title id="title">Roland S-1 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
-<defs>
-<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
-<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
-</defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="790" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="772" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland S-1</text>
-<text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="200" height="225" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="lfo-rate" data-kind="knob" aria-label="Rate" data-control="lfo-rate"><title>Rate</title>
-<svg data-symbol="knob" x="38.333" y="158.543" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 880" role="group" aria-labelledby="roland-s-1-panel--title" aria-describedby="roland-s-1-panel--description" data-device="roland-s-1" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-s-1-panel--title">Roland S-1 overhead hardware diagram</title><desc id="roland-s-1-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-s-1-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1232" height="862" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland S-1</text>
+<text x="1225" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="200" height="225" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="235" y="65" width="365" height="225" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="610" y="65" width="315" height="225" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="935" y="65" width="290" height="225" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="310" width="1200" height="130" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="460" width="1200" height="275" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="lfo-wave" data-kind="knob" aria-label="Wave"><title>Wave</title>
-<svg data-symbol="knob" x="101.000" y="158.543" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--lfo-rate" data-part="lfo-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Rate"><title>LFO: Rate</title><g aria-hidden="true">
+<circle cx="62.333" cy="182.543" r="15.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M62.333 169.876L62.333 177.06" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="lfo-osc-mod" data-kind="knob" aria-label="Osc mod"><title>Osc mod</title>
-<svg data-symbol="knob" x="163.667" y="158.543" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--lfo-rate" data-surface-control="lfo-rate" aria-hidden="true"><rect x="31" y="95" width="62.6667" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="235" y="65" width="365" height="225" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="oscillator-range" data-kind="knob" aria-label="Range" data-control="oscillator-range"><title>Range</title>
-<svg data-symbol="knob" x="252.300" y="157.916" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--lfo-wave" data-part="lfo-wave" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Wave"><title>LFO: Wave</title><g aria-hidden="true">
+<circle cx="125" cy="182.543" r="15.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M125 169.876L125 177.06" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="oscillator-pulse" data-kind="knob" aria-label="Pulse"><title>Pulse</title>
-<svg data-symbol="knob" x="322.900" y="157.916" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<svg data-symbol="wave-pulse" x="317.600" y="101.000" width="16.000" height="16.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><path d="M2 35V5H11V35H29V5H38"/></g></svg>
+<g id="roland-s-1-panel--surface--lfo-waveform" data-surface-control="lfo-waveform" aria-hidden="true"><rect x="93.6667" y="95" width="62.6667" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="oscillator-saw" data-kind="knob" aria-label="Saw"><title>Saw</title>
-<svg data-symbol="knob" x="393.500" y="157.916" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<svg data-symbol="wave-saw" x="388.200" y="101.000" width="16.000" height="16.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><path d="M2 35L19 5V35L36 5V35"/></g></svg>
+<g id="roland-s-1-panel--lfo-osc-mod" data-part="lfo-osc-mod" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Osc mod"><title>LFO: Osc mod</title><g aria-hidden="true">
+<circle cx="187.667" cy="182.543" r="15.667" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M187.667 169.876L187.667 177.06" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="oscillator-sub" data-kind="knob" aria-label="Sub"><title>Sub</title>
-<svg data-symbol="knob" x="464.100" y="157.916" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--oscillator-lfo" data-surface-control="oscillator-lfo" aria-hidden="true"><rect x="156.3333" y="95" width="62.6667" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="oscillator-noise" data-kind="knob" aria-label="Noise"><title>Noise</title>
-<svg data-symbol="knob" x="534.700" y="157.916" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--oscillator-range" data-part="oscillator-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Range"><title>OSCILLATOR: Range</title><g aria-hidden="true">
+<circle cx="276.3" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M276.3 167.266L276.3 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="610" y="65" width="315" height="225" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="filter-amp-cutoff" data-kind="knob" aria-label="Cutoff"><title>Cutoff</title>
-<svg data-symbol="knob" x="622.300" y="158.707" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--oscillator-range" data-surface-control="oscillator-range" aria-hidden="true"><rect x="241" y="95" width="70.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-amp-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<svg data-symbol="knob" x="682.900" y="158.707" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--oscillator-pulse" data-part="oscillator-pulse" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Pulse"><title>OSCILLATOR: Pulse</title><g aria-hidden="true">
+<circle cx="346.9" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M346.9 167.266L346.9 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-amp-env" data-kind="knob" aria-label="Env"><title>Env</title>
-<svg data-symbol="knob" x="743.500" y="158.707" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--pulse-level" data-surface-control="pulse-level" aria-hidden="true"><rect x="311.6" y="95" width="70.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-amp-lfo" data-kind="knob" aria-label="LFO"><title>LFO</title>
-<svg data-symbol="knob" x="804.100" y="158.707" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--oscillator-saw" data-part="oscillator-saw" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Saw"><title>OSCILLATOR: Saw</title><g aria-hidden="true">
+<circle cx="417.5" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M417.5 167.266L417.5 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-amp-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="864.700" y="158.707" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--saw-level" data-surface-control="saw-level" aria-hidden="true"><rect x="382.2" y="95" width="70.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="935" y="65" width="290" height="225" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="envelope-attack" data-kind="knob" aria-label="Attack" data-control="envelope-attack"><title>Attack</title>
-<svg data-symbol="knob" x="963.333" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--oscillator-sub" data-part="oscillator-sub" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Sub"><title>OSCILLATOR: Sub</title><g aria-hidden="true">
+<circle cx="488.1" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M488.1 167.266L488.1 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="envelope-decay" data-kind="knob" aria-label="Decay" data-control="envelope-decay"><title>Decay</title>
-<svg data-symbol="knob" x="1056.000" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--sub-level" data-surface-control="sub-level" aria-hidden="true"><rect x="452.8" y="95" width="70.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="envelope-sustain" data-kind="knob" aria-label="Sustain" data-control="envelope-sustain"><title>Sustain</title>
-<svg data-symbol="knob" x="1148.667" y="109.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--oscillator-noise" data-part="oscillator-noise" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OSCILLATOR: Noise"><title>OSCILLATOR: Noise</title><g aria-hidden="true">
+<circle cx="558.7" cy="181.916" r="17.65" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M558.7 167.266L558.7 175.738" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="envelope-release" data-kind="knob" aria-label="Release" data-control="envelope-release"><title>Release</title>
-<svg data-symbol="knob" x="963.333" y="204.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--noise-level" data-surface-control="noise-level" aria-hidden="true"><rect x="523.4" y="95" width="70.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="25" y="310" width="1200" height="130" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="performance-fx-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<svg data-symbol="knob" x="66.400" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--filter-amp-cutoff" data-part="filter-amp-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: Cutoff"><title>FILTER / AMP: Cutoff</title><g aria-hidden="true">
+<circle cx="646.3" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M646.3 170.557L646.3 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-fx-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<svg data-symbol="knob" x="185.200" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--filter-cutoff" data-surface-control="filter-cutoff" aria-hidden="true"><rect x="616" y="95" width="60.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-fx-delay" data-kind="knob" aria-label="Delay"><title>Delay</title>
-<svg data-symbol="knob" x="304.000" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--filter-amp-resonance" data-part="filter-amp-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: Resonance"><title>FILTER / AMP: Resonance</title><g aria-hidden="true">
+<circle cx="706.9" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M706.9 170.557L706.9 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-fx-reverb" data-kind="knob" aria-label="Reverb"><title>Reverb</title>
-<svg data-symbol="knob" x="422.800" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-s-1-panel--surface--filter-resonance" data-surface-control="filter-resonance" aria-hidden="true"><rect x="676.6" y="95" width="60.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-fx-d-motion" data-kind="button" aria-label="D-Motion"><title>D-Motion</title>
-<svg data-symbol="button" x="541.600" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-s-1-panel--filter-amp-env" data-part="filter-amp-env" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: Env"><title>FILTER / AMP: Env</title><g aria-hidden="true">
+<circle cx="767.5" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M767.5 170.557L767.5 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-fx-pattern" data-kind="button" aria-label="Pattern"><title>Pattern</title>
-<svg data-symbol="button" x="660.400" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-s-1-panel--surface--filter-envelope" data-surface-control="filter-envelope" aria-hidden="true"><rect x="737.2" y="95" width="60.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-fx-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<svg data-symbol="button" x="779.200" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-s-1-panel--filter-amp-lfo" data-part="filter-amp-lfo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: LFO"><title>FILTER / AMP: LFO</title><g aria-hidden="true">
+<circle cx="828.1" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M828.1 170.557L828.1 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-fx-play" data-kind="button" aria-label="Play"><title>Play</title>
-<svg data-symbol="button" x="898.000" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-s-1-panel--surface--filter-lfo" data-surface-control="filter-lfo" aria-hidden="true"><rect x="797.8" y="95" width="60.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-fx-record" data-kind="button" aria-label="Record"><title>Record</title>
-<svg data-symbol="button" x="1016.800" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-s-1-panel--filter-amp-level" data-part="filter-amp-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER / AMP: Level"><title>FILTER / AMP: Level</title><g aria-hidden="true">
+<circle cx="888.7" cy="182.707" r="15.15" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M888.7 170.557L888.7 177.404" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-fx-menu" data-kind="button" aria-label="Menu"><title>Menu</title>
-<svg data-symbol="button" x="1135.600" y="354.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-s-1-panel--surface--filter-amp-level" data-surface-control="filter-amp-level" aria-hidden="true"><rect x="858.4" y="95" width="60.6" height="190" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="25" y="460" width="1200" height="275" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="keyboard-steps-1" data-kind="key" aria-label="1"><title>1</title>
-<rect x="37" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--envelope-attack" data-part="envelope-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Attack"><title>ENVELOPE: Attack</title><g aria-hidden="true">
+<circle cx="987.333" cy="133.785" r="23.167" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M987.333 113.618L987.333 125.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard-steps-2" data-kind="key" aria-label="2"><title>2</title>
-<rect x="128.385" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--envelope-attack" data-surface-control="envelope-attack" aria-hidden="true"><rect x="941" y="95" width="92.6667" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-3" data-kind="key" aria-label="3"><title>3</title>
-<rect x="219.769" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--envelope-decay" data-part="envelope-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Decay"><title>ENVELOPE: Decay</title><g aria-hidden="true">
+<circle cx="1080" cy="133.785" r="23.167" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1080 113.618L1080 125.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard-steps-4" data-kind="key" aria-label="4"><title>4</title>
-<rect x="311.154" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--envelope-decay" data-surface-control="envelope-decay" aria-hidden="true"><rect x="1033.6667" y="95" width="92.6667" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-5" data-kind="key" aria-label="5"><title>5</title>
-<rect x="402.538" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--envelope-sustain" data-part="envelope-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Sustain"><title>ENVELOPE: Sustain</title><g aria-hidden="true">
+<circle cx="1172.667" cy="133.785" r="23.167" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1172.667 113.618L1172.667 125.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard-steps-6" data-kind="key" aria-label="6"><title>6</title>
-<rect x="493.923" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--envelope-sustain" data-surface-control="envelope-sustain" aria-hidden="true"><rect x="1126.3333" y="95" width="92.6667" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-7" data-kind="key" aria-label="7"><title>7</title>
-<rect x="585.308" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--envelope-release" data-part="envelope-release" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Release"><title>ENVELOPE: Release</title><g aria-hidden="true">
+<circle cx="987.333" cy="228.785" r="23.167" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M987.333 208.618L987.333 220.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard-steps-8" data-kind="key" aria-label="8"><title>8</title>
-<rect x="676.692" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--envelope-release" data-surface-control="envelope-release" aria-hidden="true"><rect x="941" y="190" width="92.6667" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-9" data-kind="key" aria-label="9"><title>9</title>
-<rect x="768.077" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-tempo" data-part="performance-fx-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PERFORMANCE / FX: Tempo"><title>PERFORMANCE / FX: Tempo</title><g aria-hidden="true">
+<circle cx="90.4" cy="378.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M90.4 356.785L90.4 370.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard-steps-10" data-kind="key" aria-label="10"><title>10</title>
-<rect x="859.462" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-tempo" data-surface-control="performance-fx-tempo" aria-hidden="true"><rect x="31" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-11" data-kind="key" aria-label="11"><title>11</title>
-<rect x="950.846" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-volume" data-part="performance-fx-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PERFORMANCE / FX: Volume"><title>PERFORMANCE / FX: Volume</title><g aria-hidden="true">
+<circle cx="209.2" cy="378.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M209.2 356.785L209.2 370.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard-steps-12" data-kind="key" aria-label="12"><title>12</title>
-<rect x="1042.231" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-volume" data-surface-control="performance-fx-volume" aria-hidden="true"><rect x="149.8" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-13" data-kind="key" aria-label="13"><title>13</title>
-<rect x="1133.615" y="502.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-delay" data-part="performance-fx-delay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PERFORMANCE / FX: Delay"><title>PERFORMANCE / FX: Delay</title><g aria-hidden="true">
+<circle cx="328" cy="378.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M328 356.785L328 370.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard-steps-14" data-kind="key" aria-label="14"><title>14</title>
-<rect x="37" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-delay" data-surface-control="performance-fx-delay" aria-hidden="true"><rect x="268.6" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-15" data-kind="key" aria-label="15"><title>15</title>
-<rect x="128.385" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-reverb" data-part="performance-fx-reverb" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PERFORMANCE / FX: Reverb"><title>PERFORMANCE / FX: Reverb</title><g aria-hidden="true">
+<circle cx="446.8" cy="378.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M446.8 356.785L446.8 370.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="keyboard-steps-16" data-kind="key" aria-label="16"><title>16</title>
-<rect x="219.769" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-reverb" data-surface-control="performance-fx-reverb" aria-hidden="true"><rect x="387.4" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-17" data-kind="key" aria-label="17"><title>17</title>
-<rect x="311.154" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-d-motion" data-part="performance-fx-d-motion" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: D-Motion"><title>PERFORMANCE / FX: D-Motion</title><g aria-hidden="true">
+<rect x="550.6" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard-steps-18" data-kind="key" aria-label="18"><title>18</title>
-<rect x="402.538" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-d-motion" data-surface-control="performance-fx-d-motion" aria-hidden="true"><rect x="506.2" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-19" data-kind="key" aria-label="19"><title>19</title>
-<rect x="493.923" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-pattern" data-part="performance-fx-pattern" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Pattern"><title>PERFORMANCE / FX: Pattern</title><g aria-hidden="true">
+<rect x="669.4" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard-steps-20" data-kind="key" aria-label="20"><title>20</title>
-<rect x="585.308" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-pattern" data-surface-control="performance-fx-pattern" aria-hidden="true"><rect x="625" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-21" data-kind="key" aria-label="21"><title>21</title>
-<rect x="676.692" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-shift" data-part="performance-fx-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Shift"><title>PERFORMANCE / FX: Shift</title><g aria-hidden="true">
+<rect x="788.2" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard-steps-22" data-kind="key" aria-label="22"><title>22</title>
-<rect x="768.077" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-shift" data-surface-control="performance-fx-shift" aria-hidden="true"><rect x="743.8" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-23" data-kind="key" aria-label="23"><title>23</title>
-<rect x="859.462" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-play" data-part="performance-fx-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Play"><title>PERFORMANCE / FX: Play</title><g aria-hidden="true">
+<rect x="907" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard-steps-24" data-kind="key" aria-label="24"><title>24</title>
-<rect x="950.846" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-play" data-surface-control="performance-fx-play" aria-hidden="true"><rect x="862.6" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="keyboard-steps-25" data-kind="key" aria-label="25"><title>25</title>
-<rect x="1042.231" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--performance-fx-record" data-part="performance-fx-record" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Record"><title>PERFORMANCE / FX: Record</title><g aria-hidden="true">
+<rect x="1025.8" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard-steps-26" data-kind="key" aria-label="26"><title>26</title>
-<rect x="1133.615" y="622.593" width="79.385" height="79.385" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-s-1-panel--surface--performance-fx-record" data-surface-control="performance-fx-record" aria-hidden="true"><rect x="981.4" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--performance-fx-menu" data-part="performance-fx-menu" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE / FX: Menu"><title>PERFORMANCE / FX: Menu</title><g aria-hidden="true">
+<rect x="1144.6" y="363.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--performance-fx-menu" data-surface-control="performance-fx-menu" aria-hidden="true"><rect x="1100.2" y="340" width="118.8" height="95" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-1" data-part="keyboard-steps-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 1"><title>KEYBOARD / STEPS: 1</title><g aria-hidden="true">
+<rect x="37" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-0" data-surface-control="key-0" aria-hidden="true"><rect x="31" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-2" data-part="keyboard-steps-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 2"><title>KEYBOARD / STEPS: 2</title><g aria-hidden="true">
+<rect x="128.385" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-1" data-surface-control="key-1" aria-hidden="true"><rect x="122.3846" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-3" data-part="keyboard-steps-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 3"><title>KEYBOARD / STEPS: 3</title><g aria-hidden="true">
+<rect x="219.769" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-2" data-surface-control="key-2" aria-hidden="true"><rect x="213.7692" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-4" data-part="keyboard-steps-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 4"><title>KEYBOARD / STEPS: 4</title><g aria-hidden="true">
+<rect x="311.154" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-3" data-surface-control="key-3" aria-hidden="true"><rect x="305.1538" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-5" data-part="keyboard-steps-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 5"><title>KEYBOARD / STEPS: 5</title><g aria-hidden="true">
+<rect x="402.538" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-4" data-surface-control="key-4" aria-hidden="true"><rect x="396.5385" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-6" data-part="keyboard-steps-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 6"><title>KEYBOARD / STEPS: 6</title><g aria-hidden="true">
+<rect x="493.923" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-5" data-surface-control="key-5" aria-hidden="true"><rect x="487.9231" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-7" data-part="keyboard-steps-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 7"><title>KEYBOARD / STEPS: 7</title><g aria-hidden="true">
+<rect x="585.308" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-6" data-surface-control="key-6" aria-hidden="true"><rect x="579.3077" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-8" data-part="keyboard-steps-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 8"><title>KEYBOARD / STEPS: 8</title><g aria-hidden="true">
+<rect x="676.692" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-7" data-surface-control="key-7" aria-hidden="true"><rect x="670.6923" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-9" data-part="keyboard-steps-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 9"><title>KEYBOARD / STEPS: 9</title><g aria-hidden="true">
+<rect x="768.077" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-8" data-surface-control="key-8" aria-hidden="true"><rect x="762.0769" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-10" data-part="keyboard-steps-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 10"><title>KEYBOARD / STEPS: 10</title><g aria-hidden="true">
+<rect x="859.462" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-9" data-surface-control="key-9" aria-hidden="true"><rect x="853.4615" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-11" data-part="keyboard-steps-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 11"><title>KEYBOARD / STEPS: 11</title><g aria-hidden="true">
+<rect x="950.846" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-10" data-surface-control="key-10" aria-hidden="true"><rect x="944.8462" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-12" data-part="keyboard-steps-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 12"><title>KEYBOARD / STEPS: 12</title><g aria-hidden="true">
+<rect x="1042.231" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-11" data-surface-control="key-11" aria-hidden="true"><rect x="1036.2308" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-13" data-part="keyboard-steps-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 13"><title>KEYBOARD / STEPS: 13</title><g aria-hidden="true">
+<rect x="1133.615" y="501.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-12" data-surface-control="key-12" aria-hidden="true"><rect x="1127.6154" y="490" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-14" data-part="keyboard-steps-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 14"><title>KEYBOARD / STEPS: 14</title><g aria-hidden="true">
+<rect x="37" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-13" data-surface-control="key-13" aria-hidden="true"><rect x="31" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-15" data-part="keyboard-steps-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 15"><title>KEYBOARD / STEPS: 15</title><g aria-hidden="true">
+<rect x="128.385" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-14" data-surface-control="key-14" aria-hidden="true"><rect x="122.3846" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-16" data-part="keyboard-steps-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 16"><title>KEYBOARD / STEPS: 16</title><g aria-hidden="true">
+<rect x="219.769" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-15" data-surface-control="key-15" aria-hidden="true"><rect x="213.7692" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-17" data-part="keyboard-steps-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 17"><title>KEYBOARD / STEPS: 17</title><g aria-hidden="true">
+<rect x="311.154" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-16" data-surface-control="key-16" aria-hidden="true"><rect x="305.1538" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-18" data-part="keyboard-steps-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 18"><title>KEYBOARD / STEPS: 18</title><g aria-hidden="true">
+<rect x="402.538" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-17" data-surface-control="key-17" aria-hidden="true"><rect x="396.5385" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-19" data-part="keyboard-steps-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 19"><title>KEYBOARD / STEPS: 19</title><g aria-hidden="true">
+<rect x="493.923" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-18" data-surface-control="key-18" aria-hidden="true"><rect x="487.9231" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-20" data-part="keyboard-steps-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 20"><title>KEYBOARD / STEPS: 20</title><g aria-hidden="true">
+<rect x="585.308" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-19" data-surface-control="key-19" aria-hidden="true"><rect x="579.3077" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-21" data-part="keyboard-steps-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 21"><title>KEYBOARD / STEPS: 21</title><g aria-hidden="true">
+<rect x="676.692" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-20" data-surface-control="key-20" aria-hidden="true"><rect x="670.6923" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-22" data-part="keyboard-steps-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 22"><title>KEYBOARD / STEPS: 22</title><g aria-hidden="true">
+<rect x="768.077" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-21" data-surface-control="key-21" aria-hidden="true"><rect x="762.0769" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-23" data-part="keyboard-steps-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 23"><title>KEYBOARD / STEPS: 23</title><g aria-hidden="true">
+<rect x="859.462" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-22" data-surface-control="key-22" aria-hidden="true"><rect x="853.4615" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-24" data-part="keyboard-steps-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 24"><title>KEYBOARD / STEPS: 24</title><g aria-hidden="true">
+<rect x="950.846" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-23" data-surface-control="key-23" aria-hidden="true"><rect x="944.8462" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-25" data-part="keyboard-steps-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 25"><title>KEYBOARD / STEPS: 25</title><g aria-hidden="true">
+<rect x="1042.231" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-24" data-surface-control="key-24" aria-hidden="true"><rect x="1036.2308" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--keyboard-steps-26" data-part="keyboard-steps-26" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="KEYBOARD / STEPS: 26"><title>KEYBOARD / STEPS: 26</title><g aria-hidden="true">
+<rect x="1133.615" y="621.593" width="79.385" height="79.385" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-s-1-panel--surface--key-25" data-surface-control="key-25" aria-hidden="true"><rect x="1127.6154" y="610" width="91.3846" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-s-1-panel--midi-only" data-region="midi-only" aria-label="MIDI-only controls">
+<rect x="25" y="780" width="1200" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="roland-s-1-panel--midi-pitch-bend" data-part="midi-pitch-bend" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="Pitch bend"><title>Pitch bend</title><g aria-hidden="true">
+<circle cx="625" cy="814.285" r="9.565" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M625 807.72L625 810.937" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-s-1-panel--surface--pitch-bend" data-surface-control="pitch-bend" aria-hidden="true"><rect x="25" y="798" width="1200" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
 </g>
 </svg>

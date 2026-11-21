@@ -141,8 +141,13 @@ class DeviceDiagrams(unittest.TestCase):
                 tree = ET.parse(path.parent / surface["src"])
                 by_id = {e.attrib["id"]: e for e in tree.iter() if "id" in e.attrib}
                 for item in surface["elements"]:
-                    self.assertIn(item["id"], by_id)
-                    self.assertEqual(item["kind"], by_id[item["id"]].attrib["data-kind"])
+                    if tree.getroot().get("data-diagram-style") == "wireframe":
+                        identifier = f'{device["id"]}-panel--surface--{item["id"]}'
+                        self.assertIn(identifier, by_id)
+                        self.assertEqual(item["id"], by_id[identifier].attrib["data-surface-control"])
+                    else:
+                        self.assertIn(item["id"], by_id)
+                        self.assertEqual(item["kind"], by_id[item["id"]].attrib["data-kind"])
                 for filename in ["panel.svg", "interface.svg"]:
                     self.assertNotIn("Conceptual schematic; see profile setup notes", (path.parent / filename).read_text())
 

@@ -1,204 +1,338 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 680" role="img" aria-labelledby="title description">
-<title id="title">Novation Launchkey Mini MK3 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
-<defs>
-<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
-<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
-</defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1250" height="680" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1232" height="662" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Novation Launchkey Mini MK3</text>
-<text x="1225" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="110" height="575" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="performance-pitch" data-kind="strip" aria-label="Pitch"><title>Pitch</title>
-<rect x="46.925" y="100" width="17.15" height="155.248" fill="#fff" stroke="#000" stroke-width="1.6" rx="5.716666666666666"/>
-<path d="M55.5 105L55.5 251.248" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 770" role="group" aria-labelledby="novation-launchkey-mini-mk3-panel--title" aria-describedby="novation-launchkey-mini-mk3-panel--description" data-device="novation-launchkey-mini-mk3" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="novation-launchkey-mini-mk3-panel--title">Novation Launchkey Mini MK3 overhead hardware diagram</title><desc id="novation-launchkey-mini-mk3-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="novation-launchkey-mini-mk3-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1232" height="752" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Novation Launchkey Mini MK3</text>
+<text x="1225" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="110" height="575" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="150" y="65" width="1065" height="95" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="150" y="175" width="850" height="185" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1015" y="175" width="200" height="185" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="performance-mod" data-kind="strip" aria-label="Mod"><title>Mod</title>
-<rect x="95.925" y="100" width="17.15" height="155.248" fill="#fff" stroke="#000" stroke-width="1.6" rx="5.716666666666666"/>
-<path d="M104.5 105L104.5 251.248" fill="none" stroke="#000" stroke-width="1"/>
+<g id="novation-launchkey-mini-mk3-panel--performance-pitch" data-part="performance-pitch" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Pitch"><title>PERFORMANCE: Pitch</title><g aria-hidden="true">
+<rect x="46.925" y="100" width="17.15" height="153.09" rx="5.717" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M55.5 105L55.5 249.09" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-octave" data-kind="button" aria-label="Octave -"><title>Octave -</title>
-<svg data-symbol="button" x="36.000" y="339.124" width="39.000" height="39.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--performance-pitch" data-surface-control="performance-pitch" aria-hidden="true"><rect x="31" y="95" width="49" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-octave-2" data-kind="button" aria-label="Octave +"><title>Octave +</title>
-<svg data-symbol="button" x="85.000" y="339.124" width="39.000" height="39.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--performance-mod" data-part="performance-mod" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PERFORMANCE: Mod"><title>PERFORMANCE: Mod</title><g aria-hidden="true">
+<rect x="95.925" y="100" width="17.15" height="153.09" rx="5.717" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M104.5 105L104.5 249.09" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="performance-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<svg data-symbol="button" x="36.000" y="519.124" width="39.000" height="39.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--performance-mod" data-surface-control="performance-mod" aria-hidden="true"><rect x="80" y="95" width="49" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="performance-transpose" data-kind="button" aria-label="Transpose"><title>Transpose</title>
-<svg data-symbol="button" x="85.000" y="519.124" width="39.000" height="39.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--performance-octave" data-part="performance-octave" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave -"><title>PERFORMANCE: Octave -</title><g aria-hidden="true">
+<rect x="40.5" y="343.545" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="150" y="65" width="1065" height="95" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="knobs-knob-1" data-kind="knob" aria-label="Knob 1"><title>Knob 1</title>
-<svg data-symbol="knob" x="205.528" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--performance-octave" data-surface-control="performance-octave" aria-hidden="true"><rect x="31" y="275" width="49" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="knobs-knob-2" data-kind="knob" aria-label="Knob 2"><title>Knob 2</title>
-<svg data-symbol="knob" x="337.153" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--performance-octave-2" data-part="performance-octave-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Octave +"><title>PERFORMANCE: Octave +</title><g aria-hidden="true">
+<rect x="89.5" y="343.545" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="knobs-knob-3" data-kind="knob" aria-label="Knob 3"><title>Knob 3</title>
-<svg data-symbol="knob" x="468.778" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--performance-octave-2" data-surface-control="performance-octave-2" aria-hidden="true"><rect x="80" y="275" width="49" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="knobs-knob-4" data-kind="knob" aria-label="Knob 4"><title>Knob 4</title>
-<svg data-symbol="knob" x="600.403" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--performance-shift" data-part="performance-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Shift"><title>PERFORMANCE: Shift</title><g aria-hidden="true">
+<rect x="40.5" y="523.545" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="knobs-knob-5" data-kind="knob" aria-label="Knob 5"><title>Knob 5</title>
-<svg data-symbol="knob" x="732.028" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--performance-shift" data-surface-control="performance-shift" aria-hidden="true"><rect x="31" y="455" width="49" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="knobs-knob-6" data-kind="knob" aria-label="Knob 6"><title>Knob 6</title>
-<svg data-symbol="knob" x="863.653" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--performance-transpose" data-part="performance-transpose" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PERFORMANCE: Transpose"><title>PERFORMANCE: Transpose</title><g aria-hidden="true">
+<rect x="89.5" y="523.545" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="knobs-knob-7" data-kind="knob" aria-label="Knob 7"><title>Knob 7</title>
-<svg data-symbol="knob" x="995.278" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--performance-transpose" data-surface-control="performance-transpose" aria-hidden="true"><rect x="80" y="455" width="49" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="knobs-knob-8" data-kind="knob" aria-label="Knob 8"><title>Knob 8</title>
-<svg data-symbol="knob" x="1126.902" y="100.000" width="32.570" height="32.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--knobs-knob-1" data-part="knobs-knob-1" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 1"><title>KNOBS: Knob 1</title><g aria-hidden="true">
+<circle cx="221.812" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M221.812 106.12L221.812 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="150" y="175" width="850" height="185" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="pads-pad-1" data-kind="pad" aria-label="Pad 1"><title>Pad 1</title>
-<rect x="183.59" y="210" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--knob-1" data-surface-control="knob-1" aria-hidden="true"><rect x="156" y="95" width="131.625" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-2" data-kind="pad" aria-label="Pad 2"><title>Pad 2</title>
-<rect x="288.34" y="210" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--knobs-knob-2" data-part="knobs-knob-2" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 2"><title>KNOBS: Knob 2</title><g aria-hidden="true">
+<circle cx="353.438" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M353.438 106.12L353.438 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-3" data-kind="pad" aria-label="Pad 3"><title>Pad 3</title>
-<rect x="393.09" y="210" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--knob-2" data-surface-control="knob-2" aria-hidden="true"><rect x="287.625" y="95" width="131.625" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-4" data-kind="pad" aria-label="Pad 4"><title>Pad 4</title>
-<rect x="497.84" y="210" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--knobs-knob-3" data-part="knobs-knob-3" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 3"><title>KNOBS: Knob 3</title><g aria-hidden="true">
+<circle cx="485.062" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M485.062 106.12L485.062 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-5" data-kind="pad" aria-label="Pad 5"><title>Pad 5</title>
-<rect x="602.59" y="210" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--knob-3" data-surface-control="knob-3" aria-hidden="true"><rect x="419.25" y="95" width="131.625" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-6" data-kind="pad" aria-label="Pad 6"><title>Pad 6</title>
-<rect x="707.34" y="210" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--knobs-knob-4" data-part="knobs-knob-4" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 4"><title>KNOBS: Knob 4</title><g aria-hidden="true">
+<circle cx="616.688" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M616.688 106.12L616.688 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-7" data-kind="pad" aria-label="Pad 7"><title>Pad 7</title>
-<rect x="812.09" y="210" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--knob-4" data-surface-control="knob-4" aria-hidden="true"><rect x="550.875" y="95" width="131.625" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-8" data-kind="pad" aria-label="Pad 8"><title>Pad 8</title>
-<rect x="916.84" y="210" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--knobs-knob-5" data-part="knobs-knob-5" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 5"><title>KNOBS: Knob 5</title><g aria-hidden="true">
+<circle cx="748.312" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M748.312 106.12L748.312 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-9" data-kind="pad" aria-label="Pad 9"><title>Pad 9</title>
-<rect x="183.59" y="285" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--knob-5" data-surface-control="knob-5" aria-hidden="true"><rect x="682.5" y="95" width="131.625" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-10" data-kind="pad" aria-label="Pad 10"><title>Pad 10</title>
-<rect x="288.34" y="285" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--knobs-knob-6" data-part="knobs-knob-6" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 6"><title>KNOBS: Knob 6</title><g aria-hidden="true">
+<circle cx="879.938" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M879.938 106.12L879.938 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-11" data-kind="pad" aria-label="Pad 11"><title>Pad 11</title>
-<rect x="393.09" y="285" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--knob-6" data-surface-control="knob-6" aria-hidden="true"><rect x="814.125" y="95" width="131.625" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-12" data-kind="pad" aria-label="Pad 12"><title>Pad 12</title>
-<rect x="497.84" y="285" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--knobs-knob-7" data-part="knobs-knob-7" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 7"><title>KNOBS: Knob 7</title><g aria-hidden="true">
+<circle cx="1011.562" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1011.562 106.12L1011.562 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-13" data-kind="pad" aria-label="Pad 13"><title>Pad 13</title>
-<rect x="602.59" y="285" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--knob-7" data-surface-control="knob-7" aria-hidden="true"><rect x="945.75" y="95" width="131.625" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-14" data-kind="pad" aria-label="Pad 14"><title>Pad 14</title>
-<rect x="707.34" y="285" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--knobs-knob-8" data-part="knobs-knob-8" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KNOBS: Knob 8"><title>KNOBS: Knob 8</title><g aria-hidden="true">
+<circle cx="1143.188" cy="116.285" r="13.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1143.188 106.12L1143.188 111.677" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="pads-pad-15" data-kind="pad" aria-label="Pad 15"><title>Pad 15</title>
-<rect x="812.09" y="285" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--knob-8" data-surface-control="knob-8" aria-hidden="true"><rect x="1077.375" y="95" width="131.625" height="60" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="pads-pad-16" data-kind="pad" aria-label="Pad 16"><title>Pad 16</title>
-<rect x="916.84" y="285" width="49.57" height="49.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-1" data-part="pads-pad-1" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 1"><title>PADS: Pad 1</title><g aria-hidden="true">
+<rect x="184.59" y="210" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="1015" y="175" width="200" height="185" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="transport-arp-arp" data-kind="button" aria-label="Arp"><title>Arp</title>
-<svg data-symbol="button" x="1056.715" y="210.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-1" data-surface-control="pad-1" aria-hidden="true"><rect x="156" y="205" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="transport-arp-fixed-chord" data-kind="button" aria-label="Fixed chord"><title>Fixed chord</title>
-<svg data-symbol="button" x="1150.715" y="210.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-2" data-part="pads-pad-2" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 2"><title>PADS: Pad 2</title><g aria-hidden="true">
+<rect x="289.34" y="210" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="transport-arp-play" data-kind="button" aria-label="Play"><title>Play</title>
-<svg data-symbol="button" x="1056.715" y="260.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-2" data-surface-control="pad-2" aria-hidden="true"><rect x="260.75" y="205" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="transport-arp-record" data-kind="button" aria-label="Record"><title>Record</title>
-<svg data-symbol="button" x="1150.715" y="260.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-3" data-part="pads-pad-3" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 3"><title>PADS: Pad 3</title><g aria-hidden="true">
+<rect x="394.09" y="210" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="transport-arp-session" data-kind="button" aria-label="Session"><title>Session</title>
-<svg data-symbol="button" x="1056.715" y="310.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-3" data-surface-control="pad-3" aria-hidden="true"><rect x="365.5" y="205" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="transport-arp-stop-solo-mute" data-kind="button" aria-label="Stop / Solo / Mute"><title>Stop / Solo / Mute</title>
-<svg data-symbol="button" x="1155.000" y="310.000" width="14.000" height="14.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-4" data-part="pads-pad-4" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 4"><title>PADS: Pad 4</title><g aria-hidden="true">
+<rect x="498.84" y="210" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="150" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-4" data-surface-control="pad-4" aria-hidden="true"><rect x="470.25" y="205" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="221" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-5" data-part="pads-pad-5" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 5"><title>PADS: Pad 5</title><g aria-hidden="true">
+<rect x="603.59" y="210" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="292" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-5" data-surface-control="pad-5" aria-hidden="true"><rect x="575" y="205" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="363" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-6" data-part="pads-pad-6" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 6"><title>PADS: Pad 6</title><g aria-hidden="true">
+<rect x="708.34" y="210" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="434" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-6" data-surface-control="pad-6" aria-hidden="true"><rect x="679.75" y="205" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="505" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-7" data-part="pads-pad-7" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 7"><title>PADS: Pad 7</title><g aria-hidden="true">
+<rect x="813.09" y="210" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="576" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-7" data-surface-control="pad-7" aria-hidden="true"><rect x="784.5" y="205" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="647" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-8" data-part="pads-pad-8" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 8"><title>PADS: Pad 8</title><g aria-hidden="true">
+<rect x="917.84" y="210" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="718" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-8" data-surface-control="pad-8" aria-hidden="true"><rect x="889.25" y="205" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="789" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-9" data-part="pads-pad-9" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 9"><title>PADS: Pad 9</title><g aria-hidden="true">
+<rect x="184.59" y="285" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="860" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-9" data-surface-control="pad-9" aria-hidden="true"><rect x="156" y="280" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="931" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-10" data-part="pads-pad-10" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 10"><title>PADS: Pad 10</title><g aria-hidden="true">
+<rect x="289.34" y="285" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="1002" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-10" data-surface-control="pad-10" aria-hidden="true"><rect x="260.75" y="280" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="1073" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-11" data-part="pads-pad-11" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 11"><title>PADS: Pad 11</title><g aria-hidden="true">
+<rect x="394.09" y="285" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-25" data-kind="key" aria-label="Key 25"><title>Key 25</title>
-<rect x="1144" y="385" width="71" height="255" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-11" data-surface-control="pad-11" aria-hidden="true"><rect x="365.5" y="280" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="198.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-12" data-part="pads-pad-12" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 12"><title>PADS: Pad 12</title><g aria-hidden="true">
+<rect x="498.84" y="285" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="269.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-12" data-surface-control="pad-12" aria-hidden="true"><rect x="470.25" y="280" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="411.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-13" data-part="pads-pad-13" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 13"><title>PADS: Pad 13</title><g aria-hidden="true">
+<rect x="603.59" y="285" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="482.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-13" data-surface-control="pad-13" aria-hidden="true"><rect x="575" y="280" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="553.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-14" data-part="pads-pad-14" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 14"><title>PADS: Pad 14</title><g aria-hidden="true">
+<rect x="708.34" y="285" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="695.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-14" data-surface-control="pad-14" aria-hidden="true"><rect x="679.75" y="280" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="766.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-15" data-part="pads-pad-15" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 15"><title>PADS: Pad 15</title><g aria-hidden="true">
+<rect x="813.09" y="285" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="908.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-15" data-surface-control="pad-15" aria-hidden="true"><rect x="784.5" y="280" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="979.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--pads-pad-16" data-part="pads-pad-16" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="PADS: Pad 16"><title>PADS: Pad 16</title><g aria-hidden="true">
+<rect x="917.84" y="285" width="47.57" height="47.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="1050.99" y="385" width="44.02" height="155.55" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="novation-launchkey-mini-mk3-panel--surface--pad-16" data-surface-control="pad-16" aria-hidden="true"><rect x="889.25" y="280" width="104.75" height="75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--transport-arp-arp" data-part="transport-arp-arp" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT / ARP: Arp"><title>TRANSPORT / ARP: Arp</title><g aria-hidden="true">
+<rect x="1056.715" y="210" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--transport-arp-arp" data-surface-control="transport-arp-arp" aria-hidden="true"><rect x="1021" y="205" width="94" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--transport-arp-fixed-chord" data-part="transport-arp-fixed-chord" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT / ARP: Fixed chord"><title>TRANSPORT / ARP: Fixed chord</title><g aria-hidden="true">
+<rect x="1150.715" y="210" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--transport-arp-fixed-chord" data-surface-control="transport-arp-fixed-chord" aria-hidden="true"><rect x="1115" y="205" width="94" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--transport-arp-play" data-part="transport-arp-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT / ARP: Play"><title>TRANSPORT / ARP: Play</title><g aria-hidden="true">
+<rect x="1056.715" y="260" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--transport-arp-play" data-surface-control="transport-arp-play" aria-hidden="true"><rect x="1021" y="255" width="94" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--transport-arp-record" data-part="transport-arp-record" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT / ARP: Record"><title>TRANSPORT / ARP: Record</title><g aria-hidden="true">
+<rect x="1150.715" y="260" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--transport-arp-record" data-surface-control="transport-arp-record" aria-hidden="true"><rect x="1115" y="255" width="94" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--transport-arp-session" data-part="transport-arp-session" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT / ARP: Session"><title>TRANSPORT / ARP: Session</title><g aria-hidden="true">
+<rect x="1056.715" y="310" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--transport-arp-session" data-surface-control="transport-arp-session" aria-hidden="true"><rect x="1021" y="305" width="94" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--transport-arp-stop-solo-mute" data-part="transport-arp-stop-solo-mute" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TRANSPORT / ARP: Stop / Solo / Mute"><title>TRANSPORT / ARP: Stop / Solo / Mute</title><g aria-hidden="true">
+<rect x="1156.93" y="310" width="10.14" height="10.14" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--transport-arp-stop-solo-mute" data-surface-control="transport-arp-stop-solo-mute" aria-hidden="true"><rect x="1115" y="305" width="94" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="novation-launchkey-mini-mk3-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="150" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-48" data-surface-control="key-48" aria-hidden="true"><rect x="150" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="221" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-50" data-surface-control="key-50" aria-hidden="true"><rect x="221" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="292" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-52" data-surface-control="key-52" aria-hidden="true"><rect x="292" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="363" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-53" data-surface-control="key-53" aria-hidden="true"><rect x="363" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="434" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-55" data-surface-control="key-55" aria-hidden="true"><rect x="434" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="505" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-57" data-surface-control="key-57" aria-hidden="true"><rect x="505" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="576" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-59" data-surface-control="key-59" aria-hidden="true"><rect x="576" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="647" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-60" data-surface-control="key-60" aria-hidden="true"><rect x="647" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="718" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-62" data-surface-control="key-62" aria-hidden="true"><rect x="718" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="789" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-64" data-surface-control="key-64" aria-hidden="true"><rect x="789" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="860" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-65" data-surface-control="key-65" aria-hidden="true"><rect x="860" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="931" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-67" data-surface-control="key-67" aria-hidden="true"><rect x="931" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="1002" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-69" data-surface-control="key-69" aria-hidden="true"><rect x="1002" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="1073" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-71" data-surface-control="key-71" aria-hidden="true"><rect x="1073" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-25" data-part="key-25" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 25"><title>Key 25</title><g aria-hidden="true">
+<rect x="1144" y="385" width="71" height="255" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-72" data-surface-control="key-72" aria-hidden="true"><rect x="1144" y="385" width="71" height="255" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="198.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-49" data-surface-control="key-49" aria-hidden="true"><rect x="198.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="269.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-51" data-surface-control="key-51" aria-hidden="true"><rect x="269.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="411.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-54" data-surface-control="key-54" aria-hidden="true"><rect x="411.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="482.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-56" data-surface-control="key-56" aria-hidden="true"><rect x="482.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="553.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-58" data-surface-control="key-58" aria-hidden="true"><rect x="553.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="695.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-61" data-surface-control="key-61" aria-hidden="true"><rect x="695.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="766.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-63" data-surface-control="key-63" aria-hidden="true"><rect x="766.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="908.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-66" data-surface-control="key-66" aria-hidden="true"><rect x="908.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="979.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-68" data-surface-control="key-68" aria-hidden="true"><rect x="979.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="1050.99" y="385" width="44.02" height="155.55" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--key-70" data-surface-control="key-70" aria-hidden="true"><rect x="1050.99" y="385" width="44.02" height="155.55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--midi-only" data-region="midi-only" aria-label="MIDI-only controls">
+<rect x="25" y="670" width="1200" height="70" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<g id="novation-launchkey-mini-mk3-panel--midi-control-sustain" data-part="midi-control-sustain" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="Sustain pedal (CC64)"><title>Sustain pedal (CC64)</title><g aria-hidden="true">
+<rect x="613.715" y="693" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="novation-launchkey-mini-mk3-panel--surface--control-sustain" data-surface-control="control-sustain" aria-hidden="true"><rect x="25" y="688" width="1200" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

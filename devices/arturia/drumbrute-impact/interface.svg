@@ -1,356 +1,459 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 750" role="img" aria-labelledby="title description">
-<title id="title">Arturia DrumBrute Impact labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
-<defs>
-<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
-<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
-</defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="750" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="732" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Arturia DrumBrute Impact</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="450" height="190" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">TEMPO / PATTERN</text>
-<g id="tempo-pattern-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="36" y="100" width="52.571" height="54.601" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="40" y="104" width="44.571" height="46.601" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="62.286" y="168.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Display</text>
-</g>
-<g id="tempo-pattern-rate" data-kind="knob" aria-label="Rate"><title>Rate</title>
-<svg data-symbol="knob" x="100.857" y="102.301" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="124.857" y="168.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Rate</text>
-</g>
-<g id="tempo-pattern-tap" data-kind="button" aria-label="Tap"><title>Tap</title>
-<svg data-symbol="button" x="163.429" y="102.301" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="187.429" y="168.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Tap</text>
-</g>
-<g id="tempo-pattern-record" data-kind="button" aria-label="Record"><title>Record</title>
-<svg data-symbol="button" x="226.000" y="102.301" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="250" y="168.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Record</text>
-</g>
-<g id="tempo-pattern-stop" data-kind="button" aria-label="Stop"><title>Stop</title>
-<svg data-symbol="button" x="288.571" y="102.301" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="312.571" y="168.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Stop</text>
-</g>
-<g id="tempo-pattern-play" data-kind="button" aria-label="Play"><title>Play</title>
-<svg data-symbol="button" x="351.143" y="102.301" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="375.143" y="168.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Play</text>
-</g>
-<g id="tempo-pattern-song" data-kind="button" aria-label="Song"><title>Song</title>
-<svg data-symbol="button" x="413.714" y="102.301" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="437.714" y="168.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Song</text>
-</g>
-<g id="tempo-pattern-bank" data-kind="button" aria-label="Bank"><title>Bank</title>
-<svg data-symbol="button" x="38.286" y="179.801" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="62.286" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Bank</text>
-</g>
-<g id="tempo-pattern-pattern" data-kind="button" aria-label="Pattern"><title>Pattern</title>
-<svg data-symbol="button" x="100.857" y="179.801" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="124.857" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Pattern</text>
-</g>
-<g id="tempo-pattern-save" data-kind="button" aria-label="Save"><title>Save</title>
-<svg data-symbol="button" x="163.429" y="179.801" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="187.429" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Save</text>
-</g>
-<g id="tempo-pattern-erase" data-kind="button" aria-label="Erase"><title>Erase</title>
-<svg data-symbol="button" x="226.000" y="179.801" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="250" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Erase</text>
-</g>
-<g id="tempo-pattern-copy" data-kind="button" aria-label="Copy"><title>Copy</title>
-<svg data-symbol="button" x="288.571" y="179.801" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="312.571" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Copy</text>
-</g>
-<g id="tempo-pattern-last-step" data-kind="button" aria-label="Last step"><title>Last step</title>
-<svg data-symbol="button" x="351.143" y="179.801" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="375.143" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Last step</text>
-</g>
-<g id="tempo-pattern-sync" data-kind="button" aria-label="Sync"><title>Sync</title>
-<svg data-symbol="button" x="413.714" y="179.801" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="437.714" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="8.76" text-anchor="middle">Sync</text>
-</g>
-<rect x="490" y="65" width="660" height="190" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="497" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">PATTERN FX</text>
-<g id="pattern-fx-swing" data-kind="knob" aria-label="Swing"><title>Swing</title>
-<svg data-symbol="knob" x="526.000" y="139.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="550" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Swing</text>
-</g>
-<g id="pattern-fx-random" data-kind="knob" aria-label="Random"><title>Random</title>
-<svg data-symbol="knob" x="634.000" y="139.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="658" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Random</text>
-</g>
-<g id="pattern-fx-current-track" data-kind="button" aria-label="Current track"><title>Current track</title>
-<svg data-symbol="button" x="742.000" y="139.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="766" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Current track</text>
-</g>
-<g id="pattern-fx-step-repeat" data-kind="strip" aria-label="Step repeat"><title>Step repeat</title>
-<rect x="863" y="100" width="22" height="125.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M874 105L874 221.57" fill="none" stroke="#000" stroke-width="1"/>
-<text x="874" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Step repeat</text>
-</g>
-<g id="pattern-fx-roller" data-kind="strip" aria-label="Roller"><title>Roller</title>
-<rect x="971" y="100" width="22" height="125.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M982 105L982 221.57" fill="none" stroke="#000" stroke-width="1"/>
-<text x="982" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Roller</text>
-</g>
-<g id="pattern-fx-looper" data-kind="strip" aria-label="Looper"><title>Looper</title>
-<rect x="1079" y="100" width="22" height="125.57" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M1090 105L1090 221.57" fill="none" stroke="#000" stroke-width="1"/>
-<text x="1090" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Looper</text>
-</g>
-<rect x="1165" y="65" width="310" height="190" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1172" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">OUTPUT</text>
-<g id="output-distortion" data-kind="knob" aria-label="Distortion"><title>Distortion</title>
-<svg data-symbol="knob" x="1196.667" y="139.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1220.667" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Distortion</text>
-</g>
-<g id="output-master-volume" data-kind="knob" aria-label="Master volume"><title>Master volume</title>
-<svg data-symbol="knob" x="1296.000" y="139.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1320" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Master volume</text>
-</g>
-<g id="output-distortion-on" data-kind="button" aria-label="Distortion on"><title>Distortion on</title>
-<svg data-symbol="button" x="1395.333" y="139.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1419.333" y="246" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Distortion on</text>
-</g>
-<rect x="145" y="275" width="157" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="152" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">KICK</text>
-<g id="kick-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<svg data-symbol="knob" x="163.250" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="187.25" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Decay</text>
-</g>
-<g id="kick-pitch" data-kind="knob" aria-label="Pitch"><title>Pitch</title>
-<svg data-symbol="knob" x="235.750" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="259.75" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Pitch</text>
-</g>
-<g id="kick-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="163.250" y="471.515" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="187.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Level</text>
-</g>
-<g id="kick-play" data-kind="pad" aria-label="Play"><title>Play</title>
-<rect x="229.5" y="466.265" width="60.5" height="60.5" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="259.75" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Play</text>
-</g>
-<rect x="312" y="275" width="157" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="319" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">SNARE 1</text>
-<g id="snare-1-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<svg data-symbol="knob" x="330.250" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="354.25" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Decay</text>
-</g>
-<g id="snare-1-tone-snap" data-kind="knob" aria-label="Tone / Snap"><title>Tone / Snap</title>
-<svg data-symbol="knob" x="402.750" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="426.75" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Tone / Snap</text>
-</g>
-<g id="snare-1-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="330.250" y="471.515" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="354.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Level</text>
-</g>
-<g id="snare-1-play" data-kind="pad" aria-label="Play"><title>Play</title>
-<rect x="396.5" y="466.265" width="60.5" height="60.5" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="426.75" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Play</text>
-</g>
-<rect x="479" y="275" width="157" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="486" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">SNARE 2</text>
-<g id="snare-2-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<svg data-symbol="knob" x="497.250" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="521.25" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Decay</text>
-</g>
-<g id="snare-2-tone" data-kind="knob" aria-label="Tone"><title>Tone</title>
-<svg data-symbol="knob" x="569.750" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="593.75" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Tone</text>
-</g>
-<g id="snare-2-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="497.250" y="471.515" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="521.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Level</text>
-</g>
-<g id="snare-2-play" data-kind="pad" aria-label="Play"><title>Play</title>
-<rect x="563.5" y="466.265" width="60.5" height="60.5" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="593.75" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Play</text>
-</g>
-<rect x="646" y="275" width="157" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="653" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">TOM HI/LOW</text>
-<g id="tom-hi-low-type" data-kind="button" aria-label="Type"><title>Type</title>
-<svg data-symbol="button" x="664.250" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="688.25" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Type</text>
-</g>
-<g id="tom-hi-low-pitch" data-kind="knob" aria-label="Pitch"><title>Pitch</title>
-<svg data-symbol="knob" x="736.750" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="760.75" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Pitch</text>
-</g>
-<g id="tom-hi-low-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="664.250" y="471.515" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="688.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Level</text>
-</g>
-<g id="tom-hi-low-play" data-kind="pad" aria-label="Play"><title>Play</title>
-<rect x="730.5" y="466.265" width="60.5" height="60.5" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="760.75" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Play</text>
-</g>
-<rect x="813" y="275" width="157" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="820" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">CYM/COW</text>
-<g id="cym-cow-type" data-kind="button" aria-label="Type"><title>Type</title>
-<svg data-symbol="button" x="831.250" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="855.25" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Type</text>
-</g>
-<g id="cym-cow-cym-decay" data-kind="knob" aria-label="Cym decay"><title>Cym decay</title>
-<svg data-symbol="knob" x="903.750" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="927.75" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Cym decay</text>
-</g>
-<g id="cym-cow-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="831.250" y="471.515" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="855.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Level</text>
-</g>
-<g id="cym-cow-play" data-kind="pad" aria-label="Play"><title>Play</title>
-<rect x="897.5" y="466.265" width="60.5" height="60.5" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="927.75" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Play</text>
-</g>
-<rect x="980" y="275" width="157" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="987" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">CLOSED HAT</text>
-<g id="closed-hat-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<svg data-symbol="knob" x="998.250" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1022.25" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Decay</text>
-</g>
-<g id="closed-hat-hat-tone" data-kind="knob" aria-label="Hat tone"><title>Hat tone</title>
-<svg data-symbol="knob" x="1070.750" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1094.75" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Hat tone</text>
-</g>
-<g id="closed-hat-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="998.250" y="471.515" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1022.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Level</text>
-</g>
-<g id="closed-hat-play" data-kind="pad" aria-label="Play"><title>Play</title>
-<rect x="1064.5" y="466.265" width="60.5" height="60.5" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1094.75" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Play</text>
-</g>
-<rect x="1147" y="275" width="157" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1154" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">OPEN HAT</text>
-<g id="open-hat-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<svg data-symbol="knob" x="1165.250" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1189.25" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Decay</text>
-</g>
-<g id="open-hat-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="1237.750" y="339.015" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1261.75" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Level</text>
-</g>
-<g id="open-hat-play" data-kind="pad" aria-label="Play"><title>Play</title>
-<rect x="1159" y="466.265" width="60.5" height="60.5" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1189.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Play</text>
-</g>
-<rect x="1314" y="275" width="157" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1321" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">FM DRUM</text>
-<g id="fm-drum-mod-decay" data-kind="knob" aria-label="Mod decay"><title>Mod decay</title>
-<svg data-symbol="knob" x="1332.250" y="316.932" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1356.25" y="389.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Mod decay</text>
-</g>
-<g id="fm-drum-mod-pitch" data-kind="knob" aria-label="Mod pitch"><title>Mod pitch</title>
-<svg data-symbol="knob" x="1404.750" y="316.932" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1428.75" y="389.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Mod pitch</text>
-</g>
-<g id="fm-drum-fm-amount" data-kind="knob" aria-label="FM amount"><title>FM amount</title>
-<svg data-symbol="knob" x="1332.250" y="405.265" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1356.25" y="477.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">FM amount</text>
-</g>
-<g id="fm-drum-carrier-pitch" data-kind="knob" aria-label="Carrier pitch"><title>Carrier pitch</title>
-<svg data-symbol="knob" x="1404.750" y="399.530" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1428.75" y="466.197" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Carrier</text>
-<text x="1428.75" y="477.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">pitch</text>
-</g>
-<g id="fm-drum-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="1332.250" y="493.599" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1356.25" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Level</text>
-</g>
-<g id="fm-drum-play" data-kind="pad" aria-label="Play"><title>Play</title>
-<rect x="1398.5" y="488.349" width="60.5" height="60.5" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1428.75" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="10.15" text-anchor="middle">Play</text>
-</g>
-<rect x="25" y="275" width="105" height="300" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="289" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">UTILITY</text>
-<g id="utility-metronome" data-kind="knob" aria-label="Metronome"><title>Metronome</title>
-<svg data-symbol="knob" x="68.331" y="310.000" width="18.337" height="18.337" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="77.5" y="345.167" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.583333333333332" text-anchor="middle">Metronome</text>
-</g>
-<g id="utility-on" data-kind="button" aria-label="On"><title>On</title>
-<svg data-symbol="button" x="68.331" y="354.167" width="18.337" height="18.337" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="77.5" y="389.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.583333333333332" text-anchor="middle">On</text>
-</g>
-<g id="utility-mute" data-kind="button" aria-label="Mute"><title>Mute</title>
-<svg data-symbol="button" x="68.331" y="398.333" width="18.337" height="18.337" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="77.5" y="433.5" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.583333333333332" text-anchor="middle">Mute</text>
-</g>
-<g id="utility-solo" data-kind="button" aria-label="Solo"><title>Solo</title>
-<svg data-symbol="button" x="68.331" y="442.500" width="18.337" height="18.337" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="77.5" y="477.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.583333333333332" text-anchor="middle">Solo</text>
-</g>
-<g id="utility-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<svg data-symbol="button" x="68.331" y="486.667" width="18.337" height="18.337" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="77.5" y="521.833" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.583333333333332" text-anchor="middle">Shift</text>
-</g>
-<g id="utility-color" data-kind="button" aria-label="Color"><title>Color</title>
-<svg data-symbol="button" x="68.331" y="530.833" width="18.337" height="18.337" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="77.5" y="566" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9.583333333333332" text-anchor="middle">Color</text>
-</g>
-<rect x="25" y="600" width="1450" height="100" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="614" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">STEPS</text>
-<g id="steps-1" data-kind="button" aria-label="1"><title>1</title>
-<svg data-symbol="button" x="57.153" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="75.938" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">1</text>
-</g>
-<g id="steps-2" data-kind="button" aria-label="2"><title>2</title>
-<svg data-symbol="button" x="147.028" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="165.812" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">2</text>
-</g>
-<g id="steps-3" data-kind="button" aria-label="3"><title>3</title>
-<svg data-symbol="button" x="236.903" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="255.688" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">3</text>
-</g>
-<g id="steps-4" data-kind="button" aria-label="4"><title>4</title>
-<svg data-symbol="button" x="326.777" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="345.562" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">4</text>
-</g>
-<g id="steps-5" data-kind="button" aria-label="5"><title>5</title>
-<svg data-symbol="button" x="416.652" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="435.438" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">5</text>
-</g>
-<g id="steps-6" data-kind="button" aria-label="6"><title>6</title>
-<svg data-symbol="button" x="506.527" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="525.312" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">6</text>
-</g>
-<g id="steps-7" data-kind="button" aria-label="7"><title>7</title>
-<svg data-symbol="button" x="596.403" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="615.188" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">7</text>
-</g>
-<g id="steps-8" data-kind="button" aria-label="8"><title>8</title>
-<svg data-symbol="button" x="686.278" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="705.062" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">8</text>
-</g>
-<g id="steps-9" data-kind="button" aria-label="9"><title>9</title>
-<svg data-symbol="button" x="776.153" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="794.938" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">9</text>
-</g>
-<g id="steps-10" data-kind="button" aria-label="10"><title>10</title>
-<svg data-symbol="button" x="866.028" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="884.812" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">10</text>
-</g>
-<g id="steps-11" data-kind="button" aria-label="11"><title>11</title>
-<svg data-symbol="button" x="955.903" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="974.688" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">11</text>
-</g>
-<g id="steps-12" data-kind="button" aria-label="12"><title>12</title>
-<svg data-symbol="button" x="1045.777" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1064.562" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">12</text>
-</g>
-<g id="steps-13" data-kind="button" aria-label="13"><title>13</title>
-<svg data-symbol="button" x="1135.652" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1154.438" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">13</text>
-</g>
-<g id="steps-14" data-kind="button" aria-label="14"><title>14</title>
-<svg data-symbol="button" x="1225.527" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1244.312" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">14</text>
-</g>
-<g id="steps-15" data-kind="button" aria-label="15"><title>15</title>
-<svg data-symbol="button" x="1315.402" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1334.188" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">15</text>
-</g>
-<g id="steps-16" data-kind="button" aria-label="16"><title>16</title>
-<svg data-symbol="button" x="1405.277" y="635.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1424.062" y="691" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">16</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 750" role="group" aria-labelledby="arturia-drumbrute-impact-interface--title" aria-describedby="arturia-drumbrute-impact-interface--description" data-device="arturia-drumbrute-impact" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="arturia-drumbrute-impact-interface--title">Arturia DrumBrute Impact labelled interface</title><desc id="arturia-drumbrute-impact-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="arturia-drumbrute-impact-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="732" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Arturia DrumBrute Impact</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="65" width="450" height="190" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">TEMPO / PATTERN</text>
+<rect x="490" y="65" width="660" height="190" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="497" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">PATTERN FX</text>
+<rect x="1165" y="65" width="310" height="190" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1172" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">OUTPUT</text>
+<rect x="145" y="275" width="157" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="152" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">KICK</text>
+<rect x="312" y="275" width="157" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="319" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">SNARE 1</text>
+<rect x="479" y="275" width="157" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="486" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">SNARE 2</text>
+<rect x="646" y="275" width="157" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="653" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">TOM HI/LOW</text>
+<rect x="813" y="275" width="157" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="820" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">CYM/COW</text>
+<rect x="980" y="275" width="157" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="987" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">CLOSED HAT</text>
+<rect x="1147" y="275" width="157" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1154" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">OPEN HAT</text>
+<rect x="1314" y="275" width="157" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1321" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">FM DRUM</text>
+<rect x="25" y="275" width="105" height="300" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="289" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">UTILITY</text>
+<rect x="25" y="600" width="1450" height="100" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="614" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">STEPS</text>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-display" data-part="tempo-pattern-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="TEMPO / PATTERN: Display"><title>TEMPO / PATTERN: Display</title><g aria-hidden="true">
+<rect x="36" y="100" width="52.571" height="52.601" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="40" y="104" width="44.571" height="44.601" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="62.286" y="168.5" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Display</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-rate" data-part="tempo-pattern-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="TEMPO / PATTERN: Rate"><title>TEMPO / PATTERN: Rate</title><g aria-hidden="true">
+<circle cx="124.857" cy="126.301" r="15.643" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M124.857 113.658L124.857 120.826" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="124.857" y="168.5" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Rate</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-tap" data-part="tempo-pattern-tap" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Tap"><title>TEMPO / PATTERN: Tap</title><g aria-hidden="true">
+<rect x="172.429" y="111.301" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="187.429" y="168.5" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Tap</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-record" data-part="tempo-pattern-record" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Record"><title>TEMPO / PATTERN: Record</title><g aria-hidden="true">
+<rect x="235" y="111.301" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="250" y="168.5" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Record</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-stop" data-part="tempo-pattern-stop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Stop"><title>TEMPO / PATTERN: Stop</title><g aria-hidden="true">
+<rect x="297.571" y="111.301" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="312.571" y="168.5" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Stop</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-play" data-part="tempo-pattern-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Play"><title>TEMPO / PATTERN: Play</title><g aria-hidden="true">
+<rect x="360.143" y="111.301" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="375.143" y="168.5" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-song" data-part="tempo-pattern-song" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Song"><title>TEMPO / PATTERN: Song</title><g aria-hidden="true">
+<rect x="422.714" y="111.301" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="437.714" y="168.5" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Song</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-bank" data-part="tempo-pattern-bank" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Bank"><title>TEMPO / PATTERN: Bank</title><g aria-hidden="true">
+<rect x="47.286" y="188.801" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="62.286" y="246" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Bank</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-pattern" data-part="tempo-pattern-pattern" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Pattern"><title>TEMPO / PATTERN: Pattern</title><g aria-hidden="true">
+<rect x="109.857" y="188.801" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="124.857" y="246" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Pattern</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-save" data-part="tempo-pattern-save" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Save"><title>TEMPO / PATTERN: Save</title><g aria-hidden="true">
+<rect x="172.429" y="188.801" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="187.429" y="246" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Save</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-erase" data-part="tempo-pattern-erase" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Erase"><title>TEMPO / PATTERN: Erase</title><g aria-hidden="true">
+<rect x="235" y="188.801" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="250" y="246" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Erase</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-copy" data-part="tempo-pattern-copy" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Copy"><title>TEMPO / PATTERN: Copy</title><g aria-hidden="true">
+<rect x="297.571" y="188.801" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="312.571" y="246" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Copy</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-last-step" data-part="tempo-pattern-last-step" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Last step"><title>TEMPO / PATTERN: Last step</title><g aria-hidden="true">
+<rect x="360.143" y="188.801" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="375.143" y="246" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Last step</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tempo-pattern-sync" data-part="tempo-pattern-sync" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TEMPO / PATTERN: Sync"><title>TEMPO / PATTERN: Sync</title><g aria-hidden="true">
+<rect x="422.714" y="188.801" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="437.714" y="246" fill="currentColor" stroke="none" font-size="8.76" text-anchor="middle">Sync</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--pattern-fx-swing" data-part="pattern-fx-swing" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PATTERN FX: Swing"><title>PATTERN FX: Swing</title><g aria-hidden="true">
+<circle cx="550" cy="163.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M550 141.785L550 155.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="550" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Swing</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--pattern-fx-random" data-part="pattern-fx-random" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="PATTERN FX: Random"><title>PATTERN FX: Random</title><g aria-hidden="true">
+<circle cx="658" cy="163.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M658 141.785L658 155.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="658" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Random</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--pattern-fx-current-track" data-part="pattern-fx-current-track" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATTERN FX: Current track"><title>PATTERN FX: Current track</title><g aria-hidden="true">
+<rect x="751" y="148.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="766" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Current track</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--pattern-fx-step-repeat" data-part="pattern-fx-step-repeat" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PATTERN FX: Step repeat"><title>PATTERN FX: Step repeat</title><g aria-hidden="true">
+<rect x="863" y="100" width="22" height="123.57" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M874 105L874 219.57" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="874" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Step repeat</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--pattern-fx-roller" data-part="pattern-fx-roller" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PATTERN FX: Roller"><title>PATTERN FX: Roller</title><g aria-hidden="true">
+<rect x="971" y="100" width="22" height="123.57" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M982 105L982 219.57" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="982" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Roller</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--pattern-fx-looper" data-part="pattern-fx-looper" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="PATTERN FX: Looper"><title>PATTERN FX: Looper</title><g aria-hidden="true">
+<rect x="1079" y="100" width="22" height="123.57" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1090 105L1090 219.57" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1090" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Looper</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--output-distortion" data-part="output-distortion" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OUTPUT: Distortion"><title>OUTPUT: Distortion</title><g aria-hidden="true">
+<circle cx="1220.667" cy="163.785" r="24.833" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1220.667 141.952L1220.667 155.093" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1220.667" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Distortion</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--output-master-volume" data-part="output-master-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OUTPUT: Master volume"><title>OUTPUT: Master volume</title><g aria-hidden="true">
+<circle cx="1320" cy="163.785" r="24.833" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1320 141.952L1320 155.093" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1320" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Master volume</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--output-distortion-on" data-part="output-distortion-on" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="OUTPUT: Distortion on"><title>OUTPUT: Distortion on</title><g aria-hidden="true">
+<rect x="1404.333" y="148.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1419.333" y="246" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Distortion on</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--kick-decay" data-part="kick-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KICK: Decay"><title>KICK: Decay</title><g aria-hidden="true">
+<circle cx="187.25" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M187.25 347.89L187.25 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="187.25" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Decay</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--kick-pitch" data-part="kick-pitch" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KICK: Pitch"><title>KICK: Pitch</title><g aria-hidden="true">
+<circle cx="259.75" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M259.75 347.89L259.75 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="259.75" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Pitch</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--kick-level" data-part="kick-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="KICK: Level"><title>KICK: Level</title><g aria-hidden="true">
+<circle cx="187.25" cy="495.515" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M187.25 480.39L187.25 489.171" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="187.25" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Level</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--kick-play" data-part="kick-play" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="KICK: Play"><title>KICK: Play</title><g aria-hidden="true">
+<rect x="229.5" y="465.265" width="60.5" height="60.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="259.75" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--snare-1-decay" data-part="snare-1-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SNARE 1: Decay"><title>SNARE 1: Decay</title><g aria-hidden="true">
+<circle cx="354.25" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M354.25 347.89L354.25 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="354.25" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Decay</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--snare-1-tone-snap" data-part="snare-1-tone-snap" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SNARE 1: Tone / Snap"><title>SNARE 1: Tone / Snap</title><g aria-hidden="true">
+<circle cx="426.75" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M426.75 347.89L426.75 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="426.75" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Tone / Snap</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--snare-1-level" data-part="snare-1-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SNARE 1: Level"><title>SNARE 1: Level</title><g aria-hidden="true">
+<circle cx="354.25" cy="495.515" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M354.25 480.39L354.25 489.171" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="354.25" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Level</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--snare-1-play" data-part="snare-1-play" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="SNARE 1: Play"><title>SNARE 1: Play</title><g aria-hidden="true">
+<rect x="396.5" y="465.265" width="60.5" height="60.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="426.75" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--snare-2-decay" data-part="snare-2-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SNARE 2: Decay"><title>SNARE 2: Decay</title><g aria-hidden="true">
+<circle cx="521.25" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M521.25 347.89L521.25 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="521.25" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Decay</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--snare-2-tone" data-part="snare-2-tone" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SNARE 2: Tone"><title>SNARE 2: Tone</title><g aria-hidden="true">
+<circle cx="593.75" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M593.75 347.89L593.75 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="593.75" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Tone</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--snare-2-level" data-part="snare-2-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SNARE 2: Level"><title>SNARE 2: Level</title><g aria-hidden="true">
+<circle cx="521.25" cy="495.515" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M521.25 480.39L521.25 489.171" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="521.25" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Level</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--snare-2-play" data-part="snare-2-play" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="SNARE 2: Play"><title>SNARE 2: Play</title><g aria-hidden="true">
+<rect x="563.5" y="465.265" width="60.5" height="60.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="593.75" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tom-hi-low-type" data-part="tom-hi-low-type" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TOM HI/LOW: Type"><title>TOM HI/LOW: Type</title><g aria-hidden="true">
+<rect x="673.25" y="348.015" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="688.25" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Type</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tom-hi-low-pitch" data-part="tom-hi-low-pitch" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="TOM HI/LOW: Pitch"><title>TOM HI/LOW: Pitch</title><g aria-hidden="true">
+<circle cx="760.75" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M760.75 347.89L760.75 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="760.75" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Pitch</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tom-hi-low-level" data-part="tom-hi-low-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="TOM HI/LOW: Level"><title>TOM HI/LOW: Level</title><g aria-hidden="true">
+<circle cx="688.25" cy="495.515" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M688.25 480.39L688.25 489.171" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="688.25" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Level</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--tom-hi-low-play" data-part="tom-hi-low-play" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="TOM HI/LOW: Play"><title>TOM HI/LOW: Play</title><g aria-hidden="true">
+<rect x="730.5" y="465.265" width="60.5" height="60.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="760.75" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--cym-cow-type" data-part="cym-cow-type" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="CYM/COW: Type"><title>CYM/COW: Type</title><g aria-hidden="true">
+<rect x="840.25" y="348.015" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="855.25" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Type</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--cym-cow-cym-decay" data-part="cym-cow-cym-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CYM/COW: Cym decay"><title>CYM/COW: Cym decay</title><g aria-hidden="true">
+<circle cx="927.75" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M927.75 347.89L927.75 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="927.75" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Cym decay</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--cym-cow-level" data-part="cym-cow-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CYM/COW: Level"><title>CYM/COW: Level</title><g aria-hidden="true">
+<circle cx="855.25" cy="495.515" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M855.25 480.39L855.25 489.171" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="855.25" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Level</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--cym-cow-play" data-part="cym-cow-play" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="CYM/COW: Play"><title>CYM/COW: Play</title><g aria-hidden="true">
+<rect x="897.5" y="465.265" width="60.5" height="60.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="927.75" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--closed-hat-decay" data-part="closed-hat-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CLOSED HAT: Decay"><title>CLOSED HAT: Decay</title><g aria-hidden="true">
+<circle cx="1022.25" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1022.25 347.89L1022.25 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1022.25" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Decay</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--closed-hat-hat-tone" data-part="closed-hat-hat-tone" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CLOSED HAT: Hat tone"><title>CLOSED HAT: Hat tone</title><g aria-hidden="true">
+<circle cx="1094.75" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1094.75 347.89L1094.75 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1094.75" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Hat tone</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--closed-hat-level" data-part="closed-hat-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="CLOSED HAT: Level"><title>CLOSED HAT: Level</title><g aria-hidden="true">
+<circle cx="1022.25" cy="495.515" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1022.25 480.39L1022.25 489.171" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1022.25" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Level</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--closed-hat-play" data-part="closed-hat-play" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="CLOSED HAT: Play"><title>CLOSED HAT: Play</title><g aria-hidden="true">
+<rect x="1064.5" y="465.265" width="60.5" height="60.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1094.75" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--open-hat-decay" data-part="open-hat-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OPEN HAT: Decay"><title>OPEN HAT: Decay</title><g aria-hidden="true">
+<circle cx="1189.25" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1189.25 347.89L1189.25 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1189.25" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Decay</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--open-hat-level" data-part="open-hat-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="OPEN HAT: Level"><title>OPEN HAT: Level</title><g aria-hidden="true">
+<circle cx="1261.75" cy="363.015" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1261.75 347.89L1261.75 356.671" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1261.75" y="433.5" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Level</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--open-hat-play" data-part="open-hat-play" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="OPEN HAT: Play"><title>OPEN HAT: Play</title><g aria-hidden="true">
+<rect x="1159" y="465.265" width="60.5" height="60.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1189.25" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--fm-drum-mod-decay" data-part="fm-drum-mod-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FM DRUM: Mod decay"><title>FM DRUM: Mod decay</title><g aria-hidden="true">
+<circle cx="1356.25" cy="340.932" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1356.25 325.807L1356.25 334.588" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1356.25" y="389.333" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Mod decay</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--fm-drum-mod-pitch" data-part="fm-drum-mod-pitch" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FM DRUM: Mod pitch"><title>FM DRUM: Mod pitch</title><g aria-hidden="true">
+<circle cx="1428.75" cy="340.932" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1428.75 325.807L1428.75 334.588" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1428.75" y="389.333" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Mod pitch</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--fm-drum-fm-amount" data-part="fm-drum-fm-amount" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FM DRUM: FM amount"><title>FM DRUM: FM amount</title><g aria-hidden="true">
+<circle cx="1356.25" cy="429.265" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1356.25 414.14L1356.25 422.921" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1356.25" y="477.667" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">FM amount</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--fm-drum-carrier-pitch" data-part="fm-drum-carrier-pitch" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FM DRUM: Carrier pitch"><title>FM DRUM: Carrier pitch</title><g aria-hidden="true">
+<circle cx="1428.75" cy="423.53" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1428.75 408.405L1428.75 417.187" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1428.75" y="466.197" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Carrier</text>
+<text x="1428.75" y="477.667" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">pitch</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--fm-drum-level" data-part="fm-drum-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FM DRUM: Level"><title>FM DRUM: Level</title><g aria-hidden="true">
+<circle cx="1356.25" cy="517.599" r="18.125" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1356.25 502.474L1356.25 511.255" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1356.25" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Level</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--fm-drum-play" data-part="fm-drum-play" data-kind="pad" role="button" aria-disabled="true" tabindex="-1" aria-label="FM DRUM: Play"><title>FM DRUM: Play</title><g aria-hidden="true">
+<rect x="1398.5" y="487.349" width="60.5" height="60.5" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1428.75" y="566" fill="currentColor" stroke="none" font-size="10.15" text-anchor="middle">Play</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--utility-metronome" data-part="utility-metronome" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="UTILITY: Metronome"><title>UTILITY: Metronome</title><g aria-hidden="true">
+<circle cx="77.5" cy="318.368" r="7.465" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M77.5 313.903L77.5 315.756" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="77.5" y="345.167" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Metronome</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--utility-on" data-part="utility-on" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="UTILITY: On"><title>UTILITY: On</title><g aria-hidden="true">
+<rect x="69.132" y="354.167" width="16.737" height="16.737" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="77.5" y="389.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">On</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--utility-mute" data-part="utility-mute" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="UTILITY: Mute"><title>UTILITY: Mute</title><g aria-hidden="true">
+<rect x="69.132" y="398.333" width="16.737" height="16.737" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="77.5" y="433.5" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mute</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--utility-solo" data-part="utility-solo" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="UTILITY: Solo"><title>UTILITY: Solo</title><g aria-hidden="true">
+<rect x="69.132" y="442.5" width="16.737" height="16.737" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="77.5" y="477.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Solo</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--utility-shift" data-part="utility-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="UTILITY: Shift"><title>UTILITY: Shift</title><g aria-hidden="true">
+<rect x="69.132" y="486.667" width="16.737" height="16.737" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="77.5" y="521.833" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Shift</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--utility-color" data-part="utility-color" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="UTILITY: Color"><title>UTILITY: Color</title><g aria-hidden="true">
+<rect x="69.132" y="530.833" width="16.737" height="16.737" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="77.5" y="566" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Color</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-1" data-part="steps-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 1"><title>STEPS: 1</title><g aria-hidden="true">
+<rect x="60.938" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="75.938" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">1</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-2" data-part="steps-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 2"><title>STEPS: 2</title><g aria-hidden="true">
+<rect x="150.812" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="165.812" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">2</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-3" data-part="steps-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 3"><title>STEPS: 3</title><g aria-hidden="true">
+<rect x="240.688" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="255.688" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">3</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-4" data-part="steps-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 4"><title>STEPS: 4</title><g aria-hidden="true">
+<rect x="330.562" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="345.562" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">4</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-5" data-part="steps-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 5"><title>STEPS: 5</title><g aria-hidden="true">
+<rect x="420.438" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="435.438" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">5</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-6" data-part="steps-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 6"><title>STEPS: 6</title><g aria-hidden="true">
+<rect x="510.312" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="525.312" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">6</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-7" data-part="steps-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 7"><title>STEPS: 7</title><g aria-hidden="true">
+<rect x="600.188" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="615.188" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">7</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-8" data-part="steps-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 8"><title>STEPS: 8</title><g aria-hidden="true">
+<rect x="690.062" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="705.062" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">8</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-9" data-part="steps-9" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 9"><title>STEPS: 9</title><g aria-hidden="true">
+<rect x="779.938" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="794.938" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">9</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-10" data-part="steps-10" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 10"><title>STEPS: 10</title><g aria-hidden="true">
+<rect x="869.812" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="884.812" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">10</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-11" data-part="steps-11" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 11"><title>STEPS: 11</title><g aria-hidden="true">
+<rect x="959.688" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="974.688" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">11</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-12" data-part="steps-12" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 12"><title>STEPS: 12</title><g aria-hidden="true">
+<rect x="1049.562" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1064.562" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">12</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-13" data-part="steps-13" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 13"><title>STEPS: 13</title><g aria-hidden="true">
+<rect x="1139.438" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1154.438" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">13</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-14" data-part="steps-14" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 14"><title>STEPS: 14</title><g aria-hidden="true">
+<rect x="1229.312" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1244.312" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">14</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-15" data-part="steps-15" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 15"><title>STEPS: 15</title><g aria-hidden="true">
+<rect x="1319.188" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1334.188" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">15</text>
+</g>
+</g>
+<g id="arturia-drumbrute-impact-interface--steps-16" data-part="steps-16" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="STEPS: 16"><title>STEPS: 16</title><g aria-hidden="true">
+<rect x="1409.062" y="638.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1424.062" y="691" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">16</text>
+</g>
 </g>
 </svg>

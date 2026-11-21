@@ -87,31 +87,33 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1250,
-		"height": 680,
+		"height": 770,
 		"elements": [
 			{
 				"id": "performance-pitch",
 				"label": "PERFORMANCE: Pitch",
-				"kind": "strip",
+				"kind": "fader",
 				"position": {
 					"x": 2.48,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 3.92,
-					"height": 26.47058823529412
-				}
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
 				"id": "performance-mod",
 				"label": "PERFORMANCE: Mod",
-				"kind": "strip",
+				"kind": "fader",
 				"position": {
 					"x": 6.4,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 3.92,
-					"height": 26.47058823529412
-				}
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
 				"id": "performance-octave",
@@ -119,10 +121,11 @@
 				"kind": "button",
 				"position": {
 					"x": 2.48,
-					"y": 40.44117647058824,
+					"y": 35.714285714285715,
 					"width": 3.92,
-					"height": 26.47058823529412
-				}
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
 				"id": "performance-octave-2",
@@ -130,10 +133,11 @@
 				"kind": "button",
 				"position": {
 					"x": 6.4,
-					"y": 40.44117647058824,
+					"y": 35.714285714285715,
 					"width": 3.92,
-					"height": 26.47058823529412
-				}
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
 				"id": "performance-shift",
@@ -141,10 +145,11 @@
 				"kind": "button",
 				"position": {
 					"x": 2.48,
-					"y": 66.91176470588235,
+					"y": 59.09090909090909,
 					"width": 3.92,
-					"height": 26.47058823529412
-				}
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
 				"id": "performance-transpose",
@@ -152,274 +157,395 @@
 				"kind": "button",
 				"position": {
 					"x": 6.4,
-					"y": 66.91176470588235,
+					"y": 59.09090909090909,
 					"width": 3.92,
-					"height": 26.47058823529412
-				}
+					"height": 23.376623376623375
+				},
+				"learnable": true
 			},
 			{
-				"id": "knobs-knob-1",
-				"label": "KNOBS: Knob 1",
+				"id": "knob-1",
+				"label": "Assignable knob 1",
 				"kind": "knob",
 				"position": {
 					"x": 12.479999999999999,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 10.530000000000001,
-					"height": 8.823529411764707
-				}
+					"height": 7.792207792207792
+				},
+				"message": {
+					"type": "cc",
+					"number": 16
+				},
+				"learnable": true
 			},
 			{
-				"id": "knobs-knob-2",
-				"label": "KNOBS: Knob 2",
+				"id": "knob-2",
+				"label": "Assignable knob 2",
 				"kind": "knob",
 				"position": {
 					"x": 23.01,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 10.530000000000001,
-					"height": 8.823529411764707
-				}
+					"height": 7.792207792207792
+				},
+				"message": {
+					"type": "cc",
+					"number": 17
+				},
+				"learnable": true
 			},
 			{
-				"id": "knobs-knob-3",
-				"label": "KNOBS: Knob 3",
+				"id": "knob-3",
+				"label": "Assignable knob 3",
 				"kind": "knob",
 				"position": {
 					"x": 33.54,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 10.530000000000001,
-					"height": 8.823529411764707
-				}
+					"height": 7.792207792207792
+				},
+				"message": {
+					"type": "cc",
+					"number": 18
+				},
+				"learnable": true
 			},
 			{
-				"id": "knobs-knob-4",
-				"label": "KNOBS: Knob 4",
+				"id": "knob-4",
+				"label": "Assignable knob 4",
 				"kind": "knob",
 				"position": {
 					"x": 44.07,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 10.530000000000001,
-					"height": 8.823529411764707
-				}
+					"height": 7.792207792207792
+				},
+				"message": {
+					"type": "cc",
+					"number": 19
+				},
+				"learnable": true
 			},
 			{
-				"id": "knobs-knob-5",
-				"label": "KNOBS: Knob 5",
+				"id": "knob-5",
+				"label": "Assignable knob 5",
 				"kind": "knob",
 				"position": {
 					"x": 54.6,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 10.530000000000001,
-					"height": 8.823529411764707
-				}
+					"height": 7.792207792207792
+				},
+				"message": {
+					"type": "cc",
+					"number": 20
+				},
+				"learnable": true
 			},
 			{
-				"id": "knobs-knob-6",
-				"label": "KNOBS: Knob 6",
+				"id": "knob-6",
+				"label": "Assignable knob 6",
 				"kind": "knob",
 				"position": {
 					"x": 65.13,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 10.530000000000001,
-					"height": 8.823529411764707
-				}
+					"height": 7.792207792207792
+				},
+				"message": {
+					"type": "cc",
+					"number": 21
+				},
+				"learnable": true
 			},
 			{
-				"id": "knobs-knob-7",
-				"label": "KNOBS: Knob 7",
+				"id": "knob-7",
+				"label": "Assignable knob 7",
 				"kind": "knob",
 				"position": {
 					"x": 75.66000000000001,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 10.530000000000001,
-					"height": 8.823529411764707
-				}
+					"height": 7.792207792207792
+				},
+				"message": {
+					"type": "cc",
+					"number": 22
+				},
+				"learnable": true
 			},
 			{
-				"id": "knobs-knob-8",
-				"label": "KNOBS: Knob 8",
+				"id": "knob-8",
+				"label": "Assignable knob 8",
 				"kind": "knob",
 				"position": {
 					"x": 86.19,
-					"y": 13.970588235294118,
+					"y": 12.337662337662337,
 					"width": 10.530000000000001,
-					"height": 8.823529411764707
-				}
+					"height": 7.792207792207792
+				},
+				"message": {
+					"type": "cc",
+					"number": 23
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-1",
-				"label": "PADS: Pad 1",
+				"id": "pad-1",
+				"label": "Assignable pad 1",
 				"kind": "pad",
 				"position": {
 					"x": 12.479999999999999,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 36
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-2",
-				"label": "PADS: Pad 2",
+				"id": "pad-2",
+				"label": "Assignable pad 2",
 				"kind": "pad",
 				"position": {
 					"x": 20.86,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 37
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-3",
-				"label": "PADS: Pad 3",
+				"id": "pad-3",
+				"label": "Assignable pad 3",
 				"kind": "pad",
 				"position": {
 					"x": 29.24,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 38
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-4",
-				"label": "PADS: Pad 4",
+				"id": "pad-4",
+				"label": "Assignable pad 4",
 				"kind": "pad",
 				"position": {
 					"x": 37.62,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 39
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-5",
-				"label": "PADS: Pad 5",
+				"id": "pad-5",
+				"label": "Assignable pad 5",
 				"kind": "pad",
 				"position": {
 					"x": 46.0,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 40
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-6",
-				"label": "PADS: Pad 6",
+				"id": "pad-6",
+				"label": "Assignable pad 6",
 				"kind": "pad",
 				"position": {
 					"x": 54.379999999999995,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 41
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-7",
-				"label": "PADS: Pad 7",
+				"id": "pad-7",
+				"label": "Assignable pad 7",
 				"kind": "pad",
 				"position": {
 					"x": 62.760000000000005,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 42
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-8",
-				"label": "PADS: Pad 8",
+				"id": "pad-8",
+				"label": "Assignable pad 8",
 				"kind": "pad",
 				"position": {
 					"x": 71.14,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 43
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-9",
-				"label": "PADS: Pad 9",
+				"id": "pad-9",
+				"label": "Assignable pad 9",
 				"kind": "pad",
 				"position": {
 					"x": 12.479999999999999,
-					"y": 41.17647058823529,
+					"y": 36.36363636363637,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 44
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-10",
-				"label": "PADS: Pad 10",
+				"id": "pad-10",
+				"label": "Assignable pad 10",
 				"kind": "pad",
 				"position": {
 					"x": 20.86,
-					"y": 41.17647058823529,
+					"y": 36.36363636363637,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 45
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-11",
-				"label": "PADS: Pad 11",
+				"id": "pad-11",
+				"label": "Assignable pad 11",
 				"kind": "pad",
 				"position": {
 					"x": 29.24,
-					"y": 41.17647058823529,
+					"y": 36.36363636363637,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 46
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-12",
-				"label": "PADS: Pad 12",
+				"id": "pad-12",
+				"label": "Assignable pad 12",
 				"kind": "pad",
 				"position": {
 					"x": 37.62,
-					"y": 41.17647058823529,
+					"y": 36.36363636363637,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 47
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-13",
-				"label": "PADS: Pad 13",
+				"id": "pad-13",
+				"label": "Assignable pad 13",
 				"kind": "pad",
 				"position": {
 					"x": 46.0,
-					"y": 41.17647058823529,
+					"y": 36.36363636363637,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-14",
-				"label": "PADS: Pad 14",
+				"id": "pad-14",
+				"label": "Assignable pad 14",
 				"kind": "pad",
 				"position": {
 					"x": 54.379999999999995,
-					"y": 41.17647058823529,
+					"y": 36.36363636363637,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-15",
-				"label": "PADS: Pad 15",
+				"id": "pad-15",
+				"label": "Assignable pad 15",
 				"kind": "pad",
 				"position": {
 					"x": 62.760000000000005,
-					"y": 41.17647058823529,
+					"y": 36.36363636363637,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-16",
-				"label": "PADS: Pad 16",
+				"id": "pad-16",
+				"label": "Assignable pad 16",
 				"kind": "pad",
 				"position": {
 					"x": 71.14,
-					"y": 41.17647058823529,
+					"y": 36.36363636363637,
 					"width": 8.38,
-					"height": 11.029411764705882
-				}
+					"height": 9.740259740259742
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-arp-arp",
@@ -427,10 +553,11 @@
 				"kind": "button",
 				"position": {
 					"x": 81.67999999999999,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 7.5200000000000005,
-					"height": 7.352941176470589
-				}
+					"height": 6.493506493506493
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-arp-fixed-chord",
@@ -438,10 +565,11 @@
 				"kind": "button",
 				"position": {
 					"x": 89.2,
-					"y": 30.14705882352941,
+					"y": 26.623376623376622,
 					"width": 7.5200000000000005,
-					"height": 7.352941176470589
-				}
+					"height": 6.493506493506493
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-arp-play",
@@ -449,10 +577,11 @@
 				"kind": "button",
 				"position": {
 					"x": 81.67999999999999,
-					"y": 37.5,
+					"y": 33.116883116883116,
 					"width": 7.5200000000000005,
-					"height": 7.352941176470589
-				}
+					"height": 6.493506493506493
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-arp-record",
@@ -460,10 +589,11 @@
 				"kind": "button",
 				"position": {
 					"x": 89.2,
-					"y": 37.5,
+					"y": 33.116883116883116,
 					"width": 7.5200000000000005,
-					"height": 7.352941176470589
-				}
+					"height": 6.493506493506493
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-arp-session",
@@ -471,10 +601,11 @@
 				"kind": "button",
 				"position": {
 					"x": 81.67999999999999,
-					"y": 44.85294117647059,
+					"y": 39.61038961038961,
 					"width": 7.5200000000000005,
-					"height": 7.352941176470589
-				}
+					"height": 6.493506493506493
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-arp-stop-solo-mute",
@@ -482,275 +613,261 @@
 				"kind": "button",
 				"position": {
 					"x": 89.2,
-					"y": 44.85294117647059,
+					"y": 39.61038961038961,
 					"width": 7.5200000000000005,
-					"height": 7.352941176470589
-				}
+					"height": 6.493506493506493
+				},
+				"learnable": true
 			},
 			{
-				"id": "key-1",
-				"label": "Key 1",
+				"id": "key-48",
+				"label": "Key 48",
 				"kind": "key",
 				"position": {
 					"x": 12.0,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 48
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-3",
-				"label": "Key 3",
+				"id": "key-50",
+				"label": "Key 50",
 				"kind": "key",
 				"position": {
 					"x": 17.68,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 50
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-5",
-				"label": "Key 5",
+				"id": "key-52",
+				"label": "Key 52",
 				"kind": "key",
 				"position": {
 					"x": 23.36,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 52
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-6",
-				"label": "Key 6",
+				"id": "key-53",
+				"label": "Key 53",
 				"kind": "key",
 				"position": {
 					"x": 29.04,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 53
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-8",
-				"label": "Key 8",
+				"id": "key-55",
+				"label": "Key 55",
 				"kind": "key",
 				"position": {
 					"x": 34.72,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 55
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-10",
-				"label": "Key 10",
+				"id": "key-57",
+				"label": "Key 57",
 				"kind": "key",
 				"position": {
 					"x": 40.400000000000006,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 57
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-12",
-				"label": "Key 12",
+				"id": "key-59",
+				"label": "Key 59",
 				"kind": "key",
 				"position": {
 					"x": 46.08,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 59
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-13",
-				"label": "Key 13",
+				"id": "key-60",
+				"label": "Key 60",
 				"kind": "key",
 				"position": {
 					"x": 51.76,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 60
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-15",
-				"label": "Key 15",
+				"id": "key-62",
+				"label": "Key 62",
 				"kind": "key",
 				"position": {
 					"x": 57.440000000000005,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 62
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-17",
-				"label": "Key 17",
+				"id": "key-64",
+				"label": "Key 64",
 				"kind": "key",
 				"position": {
 					"x": 63.12,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 64
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-18",
-				"label": "Key 18",
+				"id": "key-65",
+				"label": "Key 65",
 				"kind": "key",
 				"position": {
 					"x": 68.8,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 65
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-20",
-				"label": "Key 20",
+				"id": "key-67",
+				"label": "Key 67",
 				"kind": "key",
 				"position": {
 					"x": 74.48,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 67
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-22",
-				"label": "Key 22",
+				"id": "key-69",
+				"label": "Key 69",
 				"kind": "key",
 				"position": {
 					"x": 80.16,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 69
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-24",
-				"label": "Key 24",
+				"id": "key-71",
+				"label": "Key 71",
 				"kind": "key",
 				"position": {
 					"x": 85.84,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 71
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-25",
-				"label": "Key 25",
+				"id": "key-72",
+				"label": "Key 72",
 				"kind": "key",
 				"position": {
 					"x": 91.52,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 5.680000000000001,
-					"height": 37.5
+					"height": 33.116883116883116
 				},
 				"message": {
 					"type": "note",
 					"number": 72
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-2",
-				"label": "Key 2",
+				"id": "key-49",
+				"label": "Key 49",
 				"kind": "key",
 				"position": {
 					"x": 15.9192,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -760,14 +877,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-4",
-				"label": "Key 4",
+				"id": "key-51",
+				"label": "Key 51",
 				"kind": "key",
 				"position": {
 					"x": 21.599200000000003,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -777,14 +894,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-7",
-				"label": "Key 7",
+				"id": "key-54",
+				"label": "Key 54",
 				"kind": "key",
 				"position": {
 					"x": 32.9592,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -794,14 +911,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-9",
-				"label": "Key 9",
+				"id": "key-56",
+				"label": "Key 56",
 				"kind": "key",
 				"position": {
 					"x": 38.6392,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -811,14 +928,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-11",
-				"label": "Key 11",
+				"id": "key-58",
+				"label": "Key 58",
 				"kind": "key",
 				"position": {
 					"x": 44.3192,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -828,14 +945,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-14",
-				"label": "Key 14",
+				"id": "key-61",
+				"label": "Key 61",
 				"kind": "key",
 				"position": {
 					"x": 55.679199999999994,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -845,14 +962,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-16",
-				"label": "Key 16",
+				"id": "key-63",
+				"label": "Key 63",
 				"kind": "key",
 				"position": {
 					"x": 61.3592,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -862,14 +979,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-19",
-				"label": "Key 19",
+				"id": "key-66",
+				"label": "Key 66",
 				"kind": "key",
 				"position": {
 					"x": 72.7192,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -879,14 +996,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-21",
-				"label": "Key 21",
+				"id": "key-68",
+				"label": "Key 68",
 				"kind": "key",
 				"position": {
 					"x": 78.39920000000001,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -896,14 +1013,14 @@
 				"dark": true
 			},
 			{
-				"id": "key-23",
-				"label": "Key 23",
+				"id": "key-70",
+				"label": "Key 70",
 				"kind": "key",
 				"position": {
 					"x": 84.0792,
-					"y": 56.61764705882353,
+					"y": 50.0,
 					"width": 3.5216000000000003,
-					"height": 22.874999999999996
+					"height": 20.201298701298704
 				},
 				"message": {
 					"type": "note",
@@ -911,6 +1028,19 @@
 				},
 				"learnable": true,
 				"dark": true
+			},
+			{
+				"id": "control-sustain",
+				"label": "Sustain pedal (CC64)",
+				"kind": "button",
+				"position": {
+					"x": 2.0,
+					"y": 89.35064935064935,
+					"width": 96.0,
+					"height": 6.493506493506493
+				},
+				"control": "sustain",
+				"learnable": true
 			}
 		]
 	},

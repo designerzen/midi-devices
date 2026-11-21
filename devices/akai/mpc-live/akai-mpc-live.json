@@ -95,7 +95,7 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1250,
 		"height": 750,
 		"elements": [
@@ -108,7 +108,8 @@
 					"y": 12.666666666666668,
 					"width": 10.76,
 					"height": 4.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "pad-functions-pad-bank-b",
@@ -119,7 +120,8 @@
 					"y": 12.666666666666668,
 					"width": 10.76,
 					"height": 4.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "pad-functions-pad-bank-c",
@@ -130,7 +132,8 @@
 					"y": 12.666666666666668,
 					"width": 10.76,
 					"height": 4.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "pad-functions-pad-bank-d",
@@ -141,7 +144,8 @@
 					"y": 12.666666666666668,
 					"width": 10.76,
 					"height": 4.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "pad-functions-note-repeat",
@@ -152,7 +156,8 @@
 					"y": 17.0,
 					"width": 10.76,
 					"height": 4.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "pad-functions-full-level",
@@ -163,18 +168,24 @@
 					"y": 17.0,
 					"width": 10.76,
 					"height": 4.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "pad-functions-16-level",
-				"label": "PAD FUNCTIONS: 16 level",
-				"kind": "button",
+				"id": "pad-16",
+				"label": "Pad 16",
+				"kind": "pad",
 				"position": {
 					"x": 24.0,
 					"y": 17.0,
 					"width": 10.76,
 					"height": 4.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true
 			},
 			{
 				"id": "pad-functions-erase",
@@ -185,172 +196,248 @@
 					"y": 17.0,
 					"width": 10.76,
 					"height": 4.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-1",
-				"label": "PADS: Pad 1",
+				"id": "pad-1",
+				"label": "Pad 1",
 				"kind": "pad",
 				"position": {
 					"x": 2.48,
 					"y": 28.666666666666668,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 36
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-2",
-				"label": "PADS: Pad 2",
+				"id": "pad-2",
+				"label": "Pad 2",
 				"kind": "pad",
 				"position": {
 					"x": 13.239999999999998,
 					"y": 28.666666666666668,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 37
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-3",
-				"label": "PADS: Pad 3",
+				"id": "pad-3",
+				"label": "Pad 3",
 				"kind": "pad",
 				"position": {
 					"x": 24.0,
 					"y": 28.666666666666668,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 38
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-4",
-				"label": "PADS: Pad 4",
+				"id": "pad-4",
+				"label": "Pad 4",
 				"kind": "pad",
 				"position": {
 					"x": 34.760000000000005,
 					"y": 28.666666666666668,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 39
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-5",
-				"label": "PADS: Pad 5",
+				"id": "pad-5",
+				"label": "Pad 5",
 				"kind": "pad",
 				"position": {
 					"x": 2.48,
 					"y": 42.0,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 40
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-6",
-				"label": "PADS: Pad 6",
+				"id": "pad-6",
+				"label": "Pad 6",
 				"kind": "pad",
 				"position": {
 					"x": 13.239999999999998,
 					"y": 42.0,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 41
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-7",
-				"label": "PADS: Pad 7",
+				"id": "pad-7",
+				"label": "Pad 7",
 				"kind": "pad",
 				"position": {
 					"x": 24.0,
 					"y": 42.0,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 42
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-8",
-				"label": "PADS: Pad 8",
+				"id": "pad-8",
+				"label": "Pad 8",
 				"kind": "pad",
 				"position": {
 					"x": 34.760000000000005,
 					"y": 42.0,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 43
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-9",
-				"label": "PADS: Pad 9",
+				"id": "pad-9",
+				"label": "Pad 9",
 				"kind": "pad",
 				"position": {
 					"x": 2.48,
 					"y": 55.333333333333336,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 44
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-10",
-				"label": "PADS: Pad 10",
+				"id": "pad-10",
+				"label": "Pad 10",
 				"kind": "pad",
 				"position": {
 					"x": 13.239999999999998,
 					"y": 55.333333333333336,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 45
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-11",
-				"label": "PADS: Pad 11",
+				"id": "pad-11",
+				"label": "Pad 11",
 				"kind": "pad",
 				"position": {
 					"x": 24.0,
 					"y": 55.333333333333336,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 46
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-12",
-				"label": "PADS: Pad 12",
+				"id": "pad-12",
+				"label": "Pad 12",
 				"kind": "pad",
 				"position": {
 					"x": 34.760000000000005,
 					"y": 55.333333333333336,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 47
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-13",
-				"label": "PADS: Pad 13",
+				"id": "pad-13",
+				"label": "Pad 13",
 				"kind": "pad",
 				"position": {
 					"x": 2.48,
 					"y": 68.66666666666667,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-14",
-				"label": "PADS: Pad 14",
+				"id": "pad-14",
+				"label": "Pad 14",
 				"kind": "pad",
 				"position": {
 					"x": 13.239999999999998,
 					"y": 68.66666666666667,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true
 			},
 			{
-				"id": "pads-pad-15",
-				"label": "PADS: Pad 15",
+				"id": "pad-15",
+				"label": "Pad 15",
 				"kind": "pad",
 				"position": {
 					"x": 24.0,
 					"y": 68.66666666666667,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true
 			},
 			{
 				"id": "pads-pad-16",
@@ -361,62 +448,60 @@
 					"y": 68.66666666666667,
 					"width": 10.76,
 					"height": 13.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-display-7-inch-touchscreen",
-				"label": "TOUCH DISPLAY: 7 inch touchscreen",
-				"kind": "screen",
-				"position": {
-					"x": 48.480000000000004,
-					"y": 16.0,
-					"width": 35.04,
-					"height": 44.0
-				}
-			},
-			{
-				"id": "q-link-q-link-1",
-				"label": "Q-LINK: Q-Link 1",
+				"id": "q-link-1",
+				"label": "Assignable Q-Link 1",
 				"kind": "knob",
 				"position": {
 					"x": 86.08,
 					"y": 16.0,
 					"width": 11.44,
 					"height": 8.799999999999999
-				}
+				},
+				"control": "q-link-1",
+				"learnable": true
 			},
 			{
-				"id": "q-link-q-link-2",
-				"label": "Q-LINK: Q-Link 2",
+				"id": "q-link-2",
+				"label": "Assignable Q-Link 2",
 				"kind": "knob",
 				"position": {
 					"x": 86.08,
 					"y": 24.8,
 					"width": 11.44,
 					"height": 8.799999999999999
-				}
+				},
+				"control": "q-link-2",
+				"learnable": true
 			},
 			{
-				"id": "q-link-q-link-3",
-				"label": "Q-LINK: Q-Link 3",
+				"id": "q-link-3",
+				"label": "Assignable Q-Link 3",
 				"kind": "knob",
 				"position": {
 					"x": 86.08,
 					"y": 33.6,
 					"width": 11.44,
 					"height": 8.799999999999999
-				}
+				},
+				"control": "q-link-3",
+				"learnable": true
 			},
 			{
-				"id": "q-link-q-link-4",
-				"label": "Q-LINK: Q-Link 4",
+				"id": "q-link-4",
+				"label": "Assignable Q-Link 4",
 				"kind": "knob",
 				"position": {
 					"x": 86.08,
 					"y": 42.4,
 					"width": 11.44,
 					"height": 8.799999999999999
-				}
+				},
+				"control": "q-link-4",
+				"learnable": true
 			},
 			{
 				"id": "q-link-q-link-select",
@@ -427,7 +512,8 @@
 					"y": 51.2,
 					"width": 11.44,
 					"height": 8.799999999999999
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "data-data-dial",
@@ -438,7 +524,8 @@
 					"y": 66.0,
 					"width": 11.44,
 					"height": 14.000000000000002
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-menu",
@@ -449,7 +536,8 @@
 					"y": 67.33333333333333,
 					"width": 11.68,
 					"height": 6.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-main",
@@ -460,7 +548,8 @@
 					"y": 67.33333333333333,
 					"width": 11.68,
 					"height": 6.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-browse",
@@ -471,7 +560,8 @@
 					"y": 67.33333333333333,
 					"width": 11.68,
 					"height": 6.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-shift",
@@ -482,7 +572,8 @@
 					"y": 73.66666666666667,
 					"width": 11.68,
 					"height": 6.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-undo",
@@ -493,7 +584,8 @@
 					"y": 73.66666666666667,
 					"width": 11.68,
 					"height": 6.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "navigation-copy-delete",
@@ -504,7 +596,8 @@
 					"y": 73.66666666666667,
 					"width": 11.68,
 					"height": 6.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-tap",
@@ -515,7 +608,8 @@
 					"y": 89.33333333333333,
 					"width": 15.840000000000002,
 					"height": 5.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-rec",
@@ -526,7 +620,8 @@
 					"y": 89.33333333333333,
 					"width": 15.840000000000002,
 					"height": 5.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-overdub",
@@ -537,7 +632,8 @@
 					"y": 89.33333333333333,
 					"width": 15.840000000000002,
 					"height": 5.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-stop",
@@ -548,7 +644,8 @@
 					"y": 89.33333333333333,
 					"width": 15.840000000000002,
 					"height": 5.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-play",
@@ -559,7 +656,8 @@
 					"y": 89.33333333333333,
 					"width": 15.840000000000002,
 					"height": 5.333333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "transport-play-start",
@@ -570,7 +668,8 @@
 					"y": 89.33333333333333,
 					"width": 15.840000000000002,
 					"height": 5.333333333333334
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

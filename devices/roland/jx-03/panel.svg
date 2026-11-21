@@ -1,188 +1,324 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="img" aria-labelledby="title description">
-<title id="title">Roland JX-03 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
-<defs>
-<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
-<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
-</defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="680" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="662" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland JX-03</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="140" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="controllers-ribbon-c1" data-kind="strip" aria-label="Ribbon C1"><title>Ribbon C1</title>
-<rect x="52" y="100" width="22" height="332.875" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M63 105L63 428.875" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="group" aria-labelledby="roland-jx-03-panel--title" aria-describedby="roland-jx-03-panel--description" data-device="roland-jx-03" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-jx-03-panel--title">Roland JX-03 overhead hardware diagram</title><desc id="roland-jx-03-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-jx-03-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="662" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland JX-03</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="140" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="180" y="65" width="205.833" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="395.833" y="65" width="205.833" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="611.667" y="65" width="205.833" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="827.5" y="65" width="205.833" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1043.333" y="65" width="205.833" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="1259.167" y="65" width="205.833" height="395" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="25" y="480" width="1450" height="145" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="controllers-ribbon-c2" data-kind="strip" aria-label="Ribbon C2"><title>Ribbon C2</title>
-<rect x="116" y="100" width="22" height="332.875" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M127 105L127 428.875" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-jx-03-panel--controllers-ribbon-c1" data-part="controllers-ribbon-c1" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="CONTROLLERS: Ribbon C1"><title>CONTROLLERS: Ribbon C1</title><g aria-hidden="true">
+<rect x="52" y="100" width="22" height="330.875" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M63 105L63 426.875" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="180" y="65" width="205.833" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="dco-1-range" data-kind="knob" aria-label="Range"><title>Range</title>
-<svg data-symbol="knob" x="210.458" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--performance-ribbon-c1-touch" data-surface-control="performance-ribbon-c1-touch" aria-hidden="true"><rect x="31" y="95" width="64" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="dco-1-waveform" data-kind="knob" aria-label="Waveform"><title>Waveform</title>
-<svg data-symbol="knob" x="307.375" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--controllers-ribbon-c2" data-part="controllers-ribbon-c2" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="CONTROLLERS: Ribbon C2"><title>CONTROLLERS: Ribbon C2</title><g aria-hidden="true">
+<rect x="116" y="100" width="22" height="330.875" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M127 105L127 426.875" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="dco-1-lfo" data-kind="knob" aria-label="LFO"><title>LFO</title>
-<svg data-symbol="knob" x="210.458" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--performance-ribbon-c2-touch" data-surface-control="performance-ribbon-c2-touch" aria-hidden="true"><rect x="95" y="95" width="64" height="360" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="dco-1-envelope" data-kind="knob" aria-label="Envelope"><title>Envelope</title>
-<svg data-symbol="knob" x="307.375" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-1-range" data-part="dco-1-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 1: Range"><title>DCO 1: Range</title><g aria-hidden="true">
+<circle cx="234.458" cy="176.285" r="24.229" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M234.458 155.056L234.458 167.805" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="395.833" y="65" width="205.833" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="dco-2-range" data-kind="knob" aria-label="Range"><title>Range</title>
-<svg data-symbol="knob" x="428.007" y="100.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-1-range" data-surface-control="dco-1-range" aria-hidden="true"><rect x="186" y="95" width="96.9167" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="dco-2-waveform" data-kind="knob" aria-label="Waveform"><title>Waveform</title>
-<svg data-symbol="knob" x="524.923" y="100.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-1-waveform" data-part="dco-1-waveform" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 1: Waveform"><title>DCO 1: Waveform</title><g aria-hidden="true">
+<circle cx="331.375" cy="176.285" r="24.229" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M331.375 155.056L331.375 167.805" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="dco-2-cross-mod" data-kind="knob" aria-label="Cross mod"><title>Cross mod</title>
-<svg data-symbol="knob" x="428.007" y="172.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-1-waveform" data-surface-control="dco-1-waveform" aria-hidden="true"><rect x="282.9167" y="95" width="96.9167" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="dco-2-tune" data-kind="knob" aria-label="Tune"><title>Tune</title>
-<svg data-symbol="knob" x="524.923" y="172.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-1-lfo" data-part="dco-1-lfo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 1: LFO"><title>DCO 1: LFO</title><g aria-hidden="true">
+<circle cx="234.458" cy="356.285" r="24.229" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M234.458 335.056L234.458 347.805" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="dco-2-fine-tune" data-kind="knob" aria-label="Fine tune"><title>Fine tune</title>
-<svg data-symbol="knob" x="428.007" y="244.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-1-lfo" data-surface-control="dco-1-lfo" aria-hidden="true"><rect x="186" y="275" width="96.9167" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="dco-2-lfo" data-kind="knob" aria-label="LFO"><title>LFO</title>
-<svg data-symbol="knob" x="524.923" y="244.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-1-envelope" data-part="dco-1-envelope" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 1: Envelope"><title>DCO 1: Envelope</title><g aria-hidden="true">
+<circle cx="331.375" cy="356.285" r="24.229" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M331.375 335.056L331.375 347.805" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="dco-2-envelope" data-kind="knob" aria-label="Envelope"><title>Envelope</title>
-<svg data-symbol="knob" x="428.007" y="316.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-1-envelope" data-surface-control="dco-1-envelope" aria-hidden="true"><rect x="282.9167" y="275" width="96.9167" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="dco-2-lfo-depth" data-kind="knob" aria-label="LFO depth"><title>LFO depth</title>
-<svg data-symbol="knob" x="524.923" y="316.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-range" data-part="dco-2-range" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: Range"><title>DCO 2: Range</title><g aria-hidden="true">
+<circle cx="450.292" cy="122.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M450.292 107.8L450.292 116.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="dco-2-env-depth" data-kind="knob" aria-label="Env depth"><title>Env depth</title>
-<svg data-symbol="knob" x="428.007" y="388.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-range" data-surface-control="dco-2-range" aria-hidden="true"><rect x="401.8333" y="95" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="dco-2-polarity" data-kind="button" aria-label="Polarity"><title>Polarity</title>
-<svg data-symbol="button" x="524.923" y="388.000" width="44.570" height="44.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-waveform" data-part="dco-2-waveform" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: Waveform"><title>DCO 2: Waveform</title><g aria-hidden="true">
+<circle cx="547.208" cy="122.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M547.208 107.8L547.208 116.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="611.667" y="65" width="205.833" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="filter-mixer-source-mix" data-kind="knob" aria-label="Source mix"><title>Source mix</title>
-<svg data-symbol="knob" x="642.125" y="107.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-waveform" data-surface-control="dco-2-waveform" aria-hidden="true"><rect x="498.75" y="95" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-mixer-hpf" data-kind="knob" aria-label="HPF"><title>HPF</title>
-<svg data-symbol="knob" x="739.042" y="107.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-cross-mod" data-part="dco-2-cross-mod" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: Cross mod"><title>DCO 2: Cross mod</title><g aria-hidden="true">
+<circle cx="450.292" cy="194.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M450.292 179.8L450.292 188.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-mixer-lpf-cutoff" data-kind="knob" aria-label="LPF cutoff"><title>LPF cutoff</title>
-<svg data-symbol="knob" x="642.125" y="197.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-cross-mod" data-surface-control="dco-2-cross-mod" aria-hidden="true"><rect x="401.8333" y="167" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-mixer-resonance" data-kind="knob" aria-label="Resonance"><title>Resonance</title>
-<svg data-symbol="knob" x="739.042" y="197.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-tune" data-part="dco-2-tune" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: Tune"><title>DCO 2: Tune</title><g aria-hidden="true">
+<circle cx="547.208" cy="194.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M547.208 179.8L547.208 188.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-mixer-lfo" data-kind="knob" aria-label="LFO"><title>LFO</title>
-<svg data-symbol="knob" x="642.125" y="287.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-tune" data-surface-control="dco-2-tune" aria-hidden="true"><rect x="498.75" y="167" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-mixer-key-follow" data-kind="knob" aria-label="Key follow"><title>Key follow</title>
-<svg data-symbol="knob" x="739.042" y="287.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-fine-tune" data-part="dco-2-fine-tune" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: Fine tune"><title>DCO 2: Fine tune</title><g aria-hidden="true">
+<circle cx="450.292" cy="266.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M450.292 251.8L450.292 260.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="filter-mixer-env-depth" data-kind="knob" aria-label="Env depth"><title>Env depth</title>
-<svg data-symbol="knob" x="642.125" y="377.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-fine-tune" data-surface-control="dco-2-fine-tune" aria-hidden="true"><rect x="401.8333" y="239" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="filter-mixer-env-polarity" data-kind="button" aria-label="Env polarity"><title>Env polarity</title>
-<svg data-symbol="button" x="739.042" y="377.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-lfo" data-part="dco-2-lfo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: LFO"><title>DCO 2: LFO</title><g aria-hidden="true">
+<circle cx="547.208" cy="266.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M547.208 251.8L547.208 260.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="827.5" y="65" width="205.833" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="vca-mode" data-kind="knob" aria-label="Mode"><title>Mode</title>
-<svg data-symbol="knob" x="906.417" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-lfo" data-surface-control="dco-2-lfo" aria-hidden="true"><rect x="498.75" y="239" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="vca-level" data-kind="knob" aria-label="Level"><title>Level</title>
-<svg data-symbol="knob" x="906.417" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-envelope" data-part="dco-2-envelope" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: Envelope"><title>DCO 2: Envelope</title><g aria-hidden="true">
+<circle cx="450.292" cy="338.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M450.292 323.8L450.292 332.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="1043.333" y="65" width="205.833" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="lfo-waveform" data-kind="knob" aria-label="Waveform"><title>Waveform</title>
-<svg data-symbol="knob" x="1122.250" y="122.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-envelope" data-surface-control="dco-2-envelope" aria-hidden="true"><rect x="401.8333" y="311" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="lfo-delay" data-kind="knob" aria-label="Delay"><title>Delay</title>
-<svg data-symbol="knob" x="1122.250" y="242.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-lfo-depth" data-part="dco-2-lfo-depth" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: LFO depth"><title>DCO 2: LFO depth</title><g aria-hidden="true">
+<circle cx="547.208" cy="338.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M547.208 323.8L547.208 332.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="lfo-rate" data-kind="knob" aria-label="Rate"><title>Rate</title>
-<svg data-symbol="knob" x="1122.250" y="362.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-lfo-depth" data-surface-control="dco-2-lfo-depth" aria-hidden="true"><rect x="498.75" y="311" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="1259.167" y="65" width="205.833" height="395" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="envelope-attack" data-kind="knob" aria-label="Attack"><title>Attack</title>
-<svg data-symbol="knob" x="1289.625" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-env-depth" data-part="dco-2-env-depth" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="DCO 2: Env depth"><title>DCO 2: Env depth</title><g aria-hidden="true">
+<circle cx="450.292" cy="410.285" r="17.485" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M450.292 395.8L450.292 404.165" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="envelope-decay" data-kind="knob" aria-label="Decay"><title>Decay</title>
-<svg data-symbol="knob" x="1386.542" y="152.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-env-depth" data-surface-control="dco-2-env-depth" aria-hidden="true"><rect x="401.8333" y="383" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="envelope-sustain" data-kind="knob" aria-label="Sustain"><title>Sustain</title>
-<svg data-symbol="knob" x="1289.625" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--dco-2-polarity" data-part="dco-2-polarity" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DCO 2: Polarity"><title>DCO 2: Polarity</title><g aria-hidden="true">
+<rect x="532.208" y="395.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="envelope-release" data-kind="knob" aria-label="Release"><title>Release</title>
-<svg data-symbol="knob" x="1386.542" y="332.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--surface--dco-2-polarity" data-surface-control="dco-2-polarity" aria-hidden="true"><rect x="498.75" y="383" width="96.9167" height="72" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="25" y="480" width="1450" height="145" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="memory-performance-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<svg data-symbol="knob" x="52.637" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="roland-jx-03-panel--filter-mixer-source-mix" data-part="filter-mixer-source-mix" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER MIXER: Source mix"><title>FILTER MIXER: Source mix</title><g aria-hidden="true">
+<circle cx="666.125" cy="131.285" r="23.965" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M666.125 110.32L666.125 122.897" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-manual" data-kind="button" aria-label="Manual"><title>Manual</title>
-<svg data-symbol="button" x="124.537" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--filter-mixer-source-mix" data-surface-control="filter-mixer-source-mix" aria-hidden="true"><rect x="617.6667" y="95" width="96.9167" height="90" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-chorus" data-kind="button" aria-label="Chorus"><title>Chorus</title>
-<svg data-symbol="button" x="196.437" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--filter-mixer-hpf" data-part="filter-mixer-hpf" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER MIXER: HPF"><title>FILTER MIXER: HPF</title><g aria-hidden="true">
+<circle cx="763.042" cy="131.285" r="23.965" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M763.042 110.32L763.042 122.897" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-bank-a" data-kind="button" aria-label="Bank A"><title>Bank A</title>
-<svg data-symbol="button" x="268.337" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--filter-mixer-hpf" data-surface-control="filter-mixer-hpf" aria-hidden="true"><rect x="714.5833" y="95" width="96.9167" height="90" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-bank-b" data-kind="button" aria-label="Bank B"><title>Bank B</title>
-<svg data-symbol="button" x="340.237" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--filter-mixer-lpf-cutoff" data-part="filter-mixer-lpf-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER MIXER: LPF cutoff"><title>FILTER MIXER: LPF cutoff</title><g aria-hidden="true">
+<circle cx="666.125" cy="221.285" r="23.965" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M666.125 200.32L666.125 212.897" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-bank-c" data-kind="button" aria-label="Bank C"><title>Bank C</title>
-<svg data-symbol="button" x="412.137" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--filter-mixer-lpf-cutoff" data-surface-control="filter-mixer-lpf-cutoff" aria-hidden="true"><rect x="617.6667" y="185" width="96.9167" height="90" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-patch-1" data-kind="button" aria-label="Patch 1"><title>Patch 1</title>
-<svg data-symbol="button" x="484.037" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--filter-mixer-resonance" data-part="filter-mixer-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER MIXER: Resonance"><title>FILTER MIXER: Resonance</title><g aria-hidden="true">
+<circle cx="763.042" cy="221.285" r="23.965" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M763.042 200.32L763.042 212.897" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-patch-2" data-kind="button" aria-label="Patch 2"><title>Patch 2</title>
-<svg data-symbol="button" x="555.937" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--filter-mixer-resonance" data-surface-control="filter-mixer-resonance" aria-hidden="true"><rect x="714.5833" y="185" width="96.9167" height="90" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-patch-3" data-kind="button" aria-label="Patch 3"><title>Patch 3</title>
-<svg data-symbol="button" x="627.837" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--filter-mixer-lfo" data-part="filter-mixer-lfo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER MIXER: LFO"><title>FILTER MIXER: LFO</title><g aria-hidden="true">
+<circle cx="666.125" cy="311.285" r="23.965" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M666.125 290.32L666.125 302.897" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-patch-4" data-kind="button" aria-label="Patch 4"><title>Patch 4</title>
-<svg data-symbol="button" x="699.737" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--filter-mixer-lfo" data-surface-control="filter-mixer-lfo" aria-hidden="true"><rect x="617.6667" y="275" width="96.9167" height="90" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-patch-5" data-kind="button" aria-label="Patch 5"><title>Patch 5</title>
-<svg data-symbol="button" x="771.637" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--filter-mixer-key-follow" data-part="filter-mixer-key-follow" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER MIXER: Key follow"><title>FILTER MIXER: Key follow</title><g aria-hidden="true">
+<circle cx="763.042" cy="311.285" r="23.965" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M763.042 290.32L763.042 302.897" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-patch-6" data-kind="button" aria-label="Patch 6"><title>Patch 6</title>
-<svg data-symbol="button" x="843.537" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--filter-mixer-key-follow" data-surface-control="filter-mixer-key-follow" aria-hidden="true"><rect x="714.5833" y="275" width="96.9167" height="90" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-patch-7" data-kind="button" aria-label="Patch 7"><title>Patch 7</title>
-<svg data-symbol="button" x="915.437" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--filter-mixer-env-depth" data-part="filter-mixer-env-depth" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="FILTER MIXER: Env depth"><title>FILTER MIXER: Env depth</title><g aria-hidden="true">
+<circle cx="666.125" cy="401.285" r="23.965" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M666.125 380.32L666.125 392.897" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-patch-8" data-kind="button" aria-label="Patch 8"><title>Patch 8</title>
-<svg data-symbol="button" x="987.337" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--filter-mixer-env-depth" data-surface-control="filter-mixer-env-depth" aria-hidden="true"><rect x="617.6667" y="365" width="96.9167" height="90" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-patch-9" data-kind="button" aria-label="Patch 9"><title>Patch 9</title>
-<svg data-symbol="button" x="1059.237" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--filter-mixer-env-polarity" data-part="filter-mixer-env-polarity" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FILTER MIXER: Env polarity"><title>FILTER MIXER: Env polarity</title><g aria-hidden="true">
+<rect x="748.042" y="386.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="memory-performance-patch-10" data-kind="button" aria-label="Patch 10"><title>Patch 10</title>
-<svg data-symbol="button" x="1131.137" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--filter-mixer-env-polarity" data-surface-control="filter-mixer-env-polarity" aria-hidden="true"><rect x="714.5833" y="365" width="96.9167" height="90" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-patch-11" data-kind="button" aria-label="Patch 11"><title>Patch 11</title>
-<svg data-symbol="button" x="1203.037" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--vca-mode" data-part="vca-mode" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCA: Mode"><title>VCA: Mode</title><g aria-hidden="true">
+<circle cx="930.417" cy="176.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M930.417 154.285L930.417 167.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-patch-12" data-kind="button" aria-label="Patch 12"><title>Patch 12</title>
-<svg data-symbol="button" x="1274.937" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--vca-mode" data-surface-control="vca-mode" aria-hidden="true"><rect x="833.5" y="95" width="193.8333" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-patch-13" data-kind="button" aria-label="Patch 13"><title>Patch 13</title>
-<svg data-symbol="button" x="1346.837" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--vca-level" data-part="vca-level" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="VCA: Level"><title>VCA: Level</title><g aria-hidden="true">
+<circle cx="930.417" cy="356.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M930.417 334.285L930.417 347.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-patch-14" data-kind="button" aria-label="Patch 14"><title>Patch 14</title>
-<svg data-symbol="button" x="1418.737" y="515.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--vca-level" data-surface-control="vca-level" aria-hidden="true"><rect x="833.5" y="275" width="193.8333" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="memory-performance-patch-15" data-kind="button" aria-label="Patch 15"><title>Patch 15</title>
-<svg data-symbol="button" x="52.637" y="570.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--lfo-waveform" data-part="lfo-waveform" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Waveform"><title>LFO: Waveform</title><g aria-hidden="true">
+<circle cx="1146.25" cy="146.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1146.25 124.285L1146.25 137.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="memory-performance-patch-16" data-kind="button" aria-label="Patch 16"><title>Patch 16</title>
-<svg data-symbol="button" x="124.537" y="570.000" width="28.625" height="28.625" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-jx-03-panel--surface--lfo-waveform" data-surface-control="lfo-waveform" aria-hidden="true"><rect x="1049.3333" y="95" width="193.8333" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--lfo-delay" data-part="lfo-delay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Delay"><title>LFO: Delay</title><g aria-hidden="true">
+<circle cx="1146.25" cy="266.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1146.25 244.285L1146.25 257.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-jx-03-panel--surface--lfo-delay" data-surface-control="lfo-delay" aria-hidden="true"><rect x="1049.3333" y="215" width="193.8333" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--lfo-rate" data-part="lfo-rate" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="LFO: Rate"><title>LFO: Rate</title><g aria-hidden="true">
+<circle cx="1146.25" cy="386.285" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1146.25 364.285L1146.25 377.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-jx-03-panel--surface--lfo-rate" data-surface-control="lfo-rate" aria-hidden="true"><rect x="1049.3333" y="335" width="193.8333" height="120" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--envelope-attack" data-part="envelope-attack" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Attack"><title>ENVELOPE: Attack</title><g aria-hidden="true">
+<circle cx="1313.625" cy="176.285" r="24.229" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1313.625 155.056L1313.625 167.805" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-jx-03-panel--surface--envelope-attack" data-surface-control="envelope-attack" aria-hidden="true"><rect x="1265.1667" y="95" width="96.9167" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--envelope-decay" data-part="envelope-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Decay"><title>ENVELOPE: Decay</title><g aria-hidden="true">
+<circle cx="1410.542" cy="176.285" r="24.229" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1410.542 155.056L1410.542 167.805" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-jx-03-panel--surface--envelope-decay" data-surface-control="envelope-decay" aria-hidden="true"><rect x="1362.0833" y="95" width="96.9167" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--envelope-sustain" data-part="envelope-sustain" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Sustain"><title>ENVELOPE: Sustain</title><g aria-hidden="true">
+<circle cx="1313.625" cy="356.285" r="24.229" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1313.625 335.056L1313.625 347.805" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-jx-03-panel--surface--envelope-sustain" data-surface-control="envelope-sustain" aria-hidden="true"><rect x="1265.1667" y="275" width="96.9167" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--envelope-release" data-part="envelope-release" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENVELOPE: Release"><title>ENVELOPE: Release</title><g aria-hidden="true">
+<circle cx="1410.542" cy="356.285" r="24.229" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1410.542 335.056L1410.542 347.805" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-jx-03-panel--surface--envelope-release" data-surface-control="envelope-release" aria-hidden="true"><rect x="1362.0833" y="275" width="96.9167" height="180" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-volume" data-part="memory-performance-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MEMORY / PERFORMANCE: Volume"><title>MEMORY / PERFORMANCE: Volume</title><g aria-hidden="true">
+<circle cx="66.95" cy="529.313" r="11.745" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M66.95 520.568L66.95 525.202" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-volume" data-surface-control="memory-performance-volume" aria-hidden="true"><rect x="31" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-manual" data-part="memory-performance-manual" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Manual"><title>MEMORY / PERFORMANCE: Manual</title><g aria-hidden="true">
+<rect x="124.537" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-manual" data-surface-control="memory-performance-manual" aria-hidden="true"><rect x="102.9" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-chorus" data-part="memory-performance-chorus" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Chorus"><title>MEMORY / PERFORMANCE: Chorus</title><g aria-hidden="true">
+<rect x="196.437" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-chorus" data-surface-control="memory-performance-chorus" aria-hidden="true"><rect x="174.8" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-bank-a" data-part="memory-performance-bank-a" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Bank A"><title>MEMORY / PERFORMANCE: Bank A</title><g aria-hidden="true">
+<rect x="268.337" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-bank-a" data-surface-control="memory-performance-bank-a" aria-hidden="true"><rect x="246.7" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-bank-b" data-part="memory-performance-bank-b" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Bank B"><title>MEMORY / PERFORMANCE: Bank B</title><g aria-hidden="true">
+<rect x="340.237" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-bank-b" data-surface-control="memory-performance-bank-b" aria-hidden="true"><rect x="318.6" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-bank-c" data-part="memory-performance-bank-c" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Bank C"><title>MEMORY / PERFORMANCE: Bank C</title><g aria-hidden="true">
+<rect x="412.137" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-bank-c" data-surface-control="memory-performance-bank-c" aria-hidden="true"><rect x="390.5" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-1" data-part="memory-performance-patch-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 1"><title>MEMORY / PERFORMANCE: Patch 1</title><g aria-hidden="true">
+<rect x="484.037" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-1" data-surface-control="memory-performance-patch-1" aria-hidden="true"><rect x="462.4" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-2" data-part="memory-performance-patch-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 2"><title>MEMORY / PERFORMANCE: Patch 2</title><g aria-hidden="true">
+<rect x="555.937" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-2" data-surface-control="memory-performance-patch-2" aria-hidden="true"><rect x="534.3" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-3" data-part="memory-performance-patch-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 3"><title>MEMORY / PERFORMANCE: Patch 3</title><g aria-hidden="true">
+<rect x="627.837" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-3" data-surface-control="memory-performance-patch-3" aria-hidden="true"><rect x="606.2" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-4" data-part="memory-performance-patch-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 4"><title>MEMORY / PERFORMANCE: Patch 4</title><g aria-hidden="true">
+<rect x="699.737" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-4" data-surface-control="memory-performance-patch-4" aria-hidden="true"><rect x="678.1" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-5" data-part="memory-performance-patch-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 5"><title>MEMORY / PERFORMANCE: Patch 5</title><g aria-hidden="true">
+<rect x="771.637" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-5" data-surface-control="memory-performance-patch-5" aria-hidden="true"><rect x="750" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-6" data-part="memory-performance-patch-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 6"><title>MEMORY / PERFORMANCE: Patch 6</title><g aria-hidden="true">
+<rect x="843.537" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-6" data-surface-control="memory-performance-patch-6" aria-hidden="true"><rect x="821.9" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-7" data-part="memory-performance-patch-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 7"><title>MEMORY / PERFORMANCE: Patch 7</title><g aria-hidden="true">
+<rect x="915.437" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-7" data-surface-control="memory-performance-patch-7" aria-hidden="true"><rect x="893.8" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-8" data-part="memory-performance-patch-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 8"><title>MEMORY / PERFORMANCE: Patch 8</title><g aria-hidden="true">
+<rect x="987.337" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-8" data-surface-control="memory-performance-patch-8" aria-hidden="true"><rect x="965.7" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-9" data-part="memory-performance-patch-9" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 9"><title>MEMORY / PERFORMANCE: Patch 9</title><g aria-hidden="true">
+<rect x="1059.237" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-9" data-surface-control="memory-performance-patch-9" aria-hidden="true"><rect x="1037.6" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-10" data-part="memory-performance-patch-10" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 10"><title>MEMORY / PERFORMANCE: Patch 10</title><g aria-hidden="true">
+<rect x="1131.137" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-10" data-surface-control="memory-performance-patch-10" aria-hidden="true"><rect x="1109.5" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-11" data-part="memory-performance-patch-11" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 11"><title>MEMORY / PERFORMANCE: Patch 11</title><g aria-hidden="true">
+<rect x="1203.037" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-11" data-surface-control="memory-performance-patch-11" aria-hidden="true"><rect x="1181.4" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-12" data-part="memory-performance-patch-12" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 12"><title>MEMORY / PERFORMANCE: Patch 12</title><g aria-hidden="true">
+<rect x="1274.937" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-12" data-surface-control="memory-performance-patch-12" aria-hidden="true"><rect x="1253.3" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-13" data-part="memory-performance-patch-13" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 13"><title>MEMORY / PERFORMANCE: Patch 13</title><g aria-hidden="true">
+<rect x="1346.837" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-13" data-surface-control="memory-performance-patch-13" aria-hidden="true"><rect x="1325.2" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-14" data-part="memory-performance-patch-14" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 14"><title>MEMORY / PERFORMANCE: Patch 14</title><g aria-hidden="true">
+<rect x="1418.737" y="515" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-14" data-surface-control="memory-performance-patch-14" aria-hidden="true"><rect x="1397.1" y="510" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-15" data-part="memory-performance-patch-15" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 15"><title>MEMORY / PERFORMANCE: Patch 15</title><g aria-hidden="true">
+<rect x="52.637" y="570" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-15" data-surface-control="memory-performance-patch-15" aria-hidden="true"><rect x="31" y="565" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-jx-03-panel--memory-performance-patch-16" data-part="memory-performance-patch-16" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MEMORY / PERFORMANCE: Patch 16"><title>MEMORY / PERFORMANCE: Patch 16</title><g aria-hidden="true">
+<rect x="124.537" y="570" width="28.625" height="28.625" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-jx-03-panel--surface--memory-performance-patch-16" data-surface-control="memory-performance-patch-16" aria-hidden="true"><rect x="102.9" y="565" width="71.9" height="55" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </svg>

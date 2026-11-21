@@ -105,31 +105,35 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1500,
 		"height": 680,
 		"elements": [
 			{
-				"id": "ribbons-c1",
-				"label": "RIBBONS: C1",
-				"kind": "strip",
+				"id": "performance-ribbon-c1-touch",
+				"label": "Ribbon C1",
+				"kind": "fader",
 				"position": {
 					"x": 2.0666666666666664,
 					"y": 13.970588235294118,
 					"width": 5.6000000000000005,
 					"height": 69.85294117647058
-				}
+				},
+				"control": "performance-ribbon-c1-touch",
+				"learnable": true
 			},
 			{
-				"id": "ribbons-c2",
-				"label": "RIBBONS: C2",
-				"kind": "strip",
+				"id": "performance-ribbon-c2-touch",
+				"label": "Ribbon C2",
+				"kind": "fader",
 				"position": {
 					"x": 7.666666666666666,
 					"y": 13.970588235294118,
 					"width": 5.6000000000000005,
 					"height": 69.85294117647058
-				}
+				},
+				"control": "performance-ribbon-c2-touch",
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-bank-1",
@@ -140,7 +144,8 @@
 					"y": 13.970588235294118,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-bank-2",
@@ -151,7 +156,8 @@
 					"y": 13.970588235294118,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-dec",
@@ -162,7 +168,8 @@
 					"y": 13.970588235294118,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-inc",
@@ -173,7 +180,8 @@
 					"y": 13.970588235294118,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-controller",
@@ -184,7 +192,8 @@
 					"y": 31.433823529411764,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-synth",
@@ -195,7 +204,8 @@
 					"y": 31.433823529411764,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-seq",
@@ -206,7 +216,8 @@
 					"y": 31.433823529411764,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-menu",
@@ -217,7 +228,8 @@
 					"y": 31.433823529411764,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-patch-1",
@@ -228,7 +240,8 @@
 					"y": 48.89705882352941,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-patch-2",
@@ -239,7 +252,8 @@
 					"y": 48.89705882352941,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-patch-3",
@@ -250,7 +264,8 @@
 					"y": 48.89705882352941,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-patch-4",
@@ -261,7 +276,8 @@
 					"y": 48.89705882352941,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-play-stop",
@@ -272,7 +288,8 @@
 					"y": 66.36029411764706,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-write",
@@ -283,7 +300,8 @@
 					"y": 66.36029411764706,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-function",
@@ -294,7 +312,8 @@
 					"y": 66.36029411764706,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-memory-shift",
@@ -305,22 +324,12 @@
 					"y": 66.36029411764706,
 					"width": 6.800000000000001,
 					"height": 17.463235294117645
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "display-display",
-				"label": "DISPLAY: Display",
-				"kind": "screen",
-				"position": {
-					"x": 44.4,
-					"y": 13.970588235294118,
-					"width": 53.53333333333333,
-					"height": 24.264705882352942
-				}
-			},
-			{
-				"id": "encoders-encoder-1",
-				"label": "ENCODERS: Encoder 1",
+				"id": "encoders-encoder-1-knob",
+				"label": "Encoder 1",
 				"kind": "knob",
 				"position": {
 					"x": 44.4,
@@ -328,11 +337,12 @@
 					"width": 13.383333333333333,
 					"height": 37.5
 				},
-				"control": "encoders-encoder-1-knob"
+				"control": "encoders-encoder-1-knob",
+				"learnable": true
 			},
 			{
-				"id": "encoders-encoder-2",
-				"label": "ENCODERS: Encoder 2",
+				"id": "encoders-encoder-2-knob",
+				"label": "Encoder 2",
 				"kind": "knob",
 				"position": {
 					"x": 57.78333333333333,
@@ -340,11 +350,12 @@
 					"width": 13.383333333333333,
 					"height": 37.5
 				},
-				"control": "encoders-encoder-2-knob"
+				"control": "encoders-encoder-2-knob",
+				"learnable": true
 			},
 			{
-				"id": "encoders-encoder-3",
-				"label": "ENCODERS: Encoder 3",
+				"id": "encoders-encoder-3-knob",
+				"label": "Encoder 3",
 				"kind": "knob",
 				"position": {
 					"x": 71.16666666666667,
@@ -352,11 +363,12 @@
 					"width": 13.383333333333333,
 					"height": 37.5
 				},
-				"control": "encoders-encoder-3-knob"
+				"control": "encoders-encoder-3-knob",
+				"learnable": true
 			},
 			{
-				"id": "encoders-encoder-4",
-				"label": "ENCODERS: Encoder 4",
+				"id": "encoders-encoder-4-knob",
+				"label": "Encoder 4",
 				"kind": "knob",
 				"position": {
 					"x": 84.55,
@@ -364,7 +376,8 @@
 					"width": 13.383333333333333,
 					"height": 37.5
 				},
-				"control": "encoders-encoder-4-knob"
+				"control": "encoders-encoder-4-knob",
+				"learnable": true
 			}
 		]
 	},

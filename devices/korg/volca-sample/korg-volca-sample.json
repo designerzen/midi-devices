@@ -144,65 +144,10 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1200,
 		"height": 720,
 		"elements": [
-			{
-				"id": "top-connections-dc-9v",
-				"label": "TOP CONNECTIONS: DC 9V",
-				"kind": "input",
-				"position": {
-					"x": 2.5833333333333335,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
-			{
-				"id": "top-connections-midi-in",
-				"label": "TOP CONNECTIONS: MIDI IN",
-				"kind": "input",
-				"position": {
-					"x": 21.550000000000004,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
-			{
-				"id": "top-connections-sync-in",
-				"label": "TOP CONNECTIONS: Sync IN",
-				"kind": "input",
-				"position": {
-					"x": 40.516666666666666,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
-			{
-				"id": "top-connections-sync-out",
-				"label": "TOP CONNECTIONS: Sync OUT",
-				"kind": "output",
-				"position": {
-					"x": 59.483333333333334,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
-			{
-				"id": "top-connections-headphones",
-				"label": "TOP CONNECTIONS: Headphones",
-				"kind": "output",
-				"position": {
-					"x": 78.45,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
 			{
 				"id": "master-volume",
 				"label": "MASTER: Volume",
@@ -212,7 +157,8 @@
 					"y": 22.22222222222222,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-tempo",
@@ -223,7 +169,8 @@
 					"y": 22.22222222222222,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-memory",
@@ -234,7 +181,8 @@
 					"y": 31.52777777777778,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-play",
@@ -245,7 +193,8 @@
 					"y": 31.52777777777778,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-record",
@@ -256,7 +205,8 @@
 					"y": 40.833333333333336,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-function",
@@ -267,7 +217,8 @@
 					"y": 40.833333333333336,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-step",
@@ -278,7 +229,8 @@
 					"y": 50.138888888888886,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-part-left",
@@ -289,7 +241,8 @@
 					"y": 50.138888888888886,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-part-right",
@@ -300,47 +253,51 @@
 					"y": 59.44444444444444,
 					"width": 6.583333333333333,
 					"height": 9.305555555555555
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "sample-start-point",
-				"label": "SAMPLE: Start point",
+				"id": "sample-start-point-knob",
+				"label": "Start point",
 				"kind": "knob",
 				"position": {
 					"x": 18.0,
 					"y": 22.22222222222222,
 					"width": 18.375,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "sample-start-point-knob"
+				"control": "sample-start-point-knob",
+				"learnable": true
 			},
 			{
-				"id": "sample-length",
-				"label": "SAMPLE: Length",
+				"id": "sample-length-knob",
+				"label": "Length",
 				"kind": "knob",
 				"position": {
 					"x": 18.0,
-					"y": 37.73148148148148,
+					"y": 37.73148611111111,
 					"width": 18.375,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "sample-length-knob"
+				"control": "sample-length-knob",
+				"learnable": true
 			},
 			{
-				"id": "sample-hi-cut",
-				"label": "SAMPLE: Hi cut",
+				"id": "sample-hi-cut-knob",
+				"label": "Hi cut",
 				"kind": "knob",
 				"position": {
 					"x": 18.0,
-					"y": 53.24074074074075,
+					"y": 53.24073611111111,
 					"width": 18.375,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "sample-hi-cut-knob"
+				"control": "sample-hi-cut-knob",
+				"learnable": true
 			},
 			{
-				"id": "pitch-speed",
-				"label": "PITCH: Speed",
+				"id": "pitch-speed-knob",
+				"label": "Speed",
 				"kind": "knob",
 				"position": {
 					"x": 38.208333333333336,
@@ -348,11 +305,12 @@
 					"width": 9.1875,
 					"height": 23.26388888888889
 				},
-				"control": "pitch-speed-knob"
+				"control": "pitch-speed-knob",
+				"learnable": true
 			},
 			{
-				"id": "pitch-eg-intensity",
-				"label": "PITCH: EG intensity",
+				"id": "pitch-eg-intensity-knob",
+				"label": "EG intensity",
 				"kind": "knob",
 				"position": {
 					"x": 47.39583333333333,
@@ -360,11 +318,12 @@
 					"width": 9.1875,
 					"height": 23.26388888888889
 				},
-				"control": "pitch-eg-intensity-knob"
+				"control": "pitch-eg-intensity-knob",
+				"learnable": true
 			},
 			{
-				"id": "pitch-attack",
-				"label": "PITCH: Attack",
+				"id": "pitch-attack-knob",
+				"label": "Attack",
 				"kind": "knob",
 				"position": {
 					"x": 38.208333333333336,
@@ -372,11 +331,12 @@
 					"width": 9.1875,
 					"height": 23.26388888888889
 				},
-				"control": "pitch-attack-knob"
+				"control": "pitch-attack-knob",
+				"learnable": true
 			},
 			{
-				"id": "pitch-decay",
-				"label": "PITCH: Decay",
+				"id": "pitch-decay-knob",
+				"label": "Decay",
 				"kind": "knob",
 				"position": {
 					"x": 47.39583333333333,
@@ -384,11 +344,12 @@
 					"width": 9.1875,
 					"height": 23.26388888888889
 				},
-				"control": "pitch-decay-knob"
+				"control": "pitch-decay-knob",
+				"learnable": true
 			},
 			{
-				"id": "amp-level",
-				"label": "AMP: Level",
+				"id": "amp-level-knob",
+				"label": "Level",
 				"kind": "knob",
 				"position": {
 					"x": 58.416666666666664,
@@ -396,11 +357,12 @@
 					"width": 9.1875,
 					"height": 23.26388888888889
 				},
-				"control": "amp-level-knob"
+				"control": "amp-level-knob",
+				"learnable": true
 			},
 			{
-				"id": "amp-pan",
-				"label": "AMP: Pan",
+				"id": "amp-pan-knob",
+				"label": "Pan",
 				"kind": "knob",
 				"position": {
 					"x": 67.60416666666667,
@@ -408,11 +370,12 @@
 					"width": 9.1875,
 					"height": 23.26388888888889
 				},
-				"control": "amp-pan-knob"
+				"control": "amp-pan-knob",
+				"learnable": true
 			},
 			{
-				"id": "amp-attack",
-				"label": "AMP: Attack",
+				"id": "amp-attack-knob",
+				"label": "Attack",
 				"kind": "knob",
 				"position": {
 					"x": 58.416666666666664,
@@ -420,11 +383,12 @@
 					"width": 9.1875,
 					"height": 23.26388888888889
 				},
-				"control": "amp-attack-knob"
+				"control": "amp-attack-knob",
+				"learnable": true
 			},
 			{
-				"id": "amp-decay",
-				"label": "AMP: Decay",
+				"id": "amp-decay-knob",
+				"label": "Decay",
 				"kind": "knob",
 				"position": {
 					"x": 67.60416666666667,
@@ -432,7 +396,8 @@
 					"width": 9.1875,
 					"height": 23.26388888888889
 				},
-				"control": "amp-decay-knob"
+				"control": "amp-decay-knob",
+				"learnable": true
 			},
 			{
 				"id": "isolator-bass",
@@ -443,7 +408,8 @@
 					"y": 22.22222222222222,
 					"width": 18.375,
 					"height": 23.26388888888889
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "isolator-treble",
@@ -454,117 +420,178 @@
 					"y": 45.48611111111111,
 					"width": 18.375,
 					"height": 23.26388888888889
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-1",
-				"label": "TOUCH KEYBOARD / STEPS: 1",
+				"id": "key-1",
+				"label": "Part 1",
 				"kind": "key",
 				"position": {
 					"x": 2.5833333333333335,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 1
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-2",
-				"label": "TOUCH KEYBOARD / STEPS: 2",
+				"id": "key-2",
+				"label": "Part 2",
 				"kind": "key",
 				"position": {
 					"x": 8.510416666666666,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 2
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-3",
-				"label": "TOUCH KEYBOARD / STEPS: 3",
+				"id": "key-3",
+				"label": "Part 3",
 				"kind": "key",
 				"position": {
 					"x": 14.4375,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 3
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-4",
-				"label": "TOUCH KEYBOARD / STEPS: 4",
+				"id": "key-4",
+				"label": "Part 4",
 				"kind": "key",
 				"position": {
 					"x": 20.364583333333332,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 4
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-5",
-				"label": "TOUCH KEYBOARD / STEPS: 5",
+				"id": "key-5",
+				"label": "Part 5",
 				"kind": "key",
 				"position": {
 					"x": 26.291666666666668,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 5
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-6",
-				"label": "TOUCH KEYBOARD / STEPS: 6",
+				"id": "key-6",
+				"label": "Part 6",
 				"kind": "key",
 				"position": {
 					"x": 32.21875,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 6
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-7",
-				"label": "TOUCH KEYBOARD / STEPS: 7",
+				"id": "key-7",
+				"label": "Part 7",
 				"kind": "key",
 				"position": {
 					"x": 38.145833333333336,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 7
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-8",
-				"label": "TOUCH KEYBOARD / STEPS: 8",
+				"id": "key-8",
+				"label": "Part 8",
 				"kind": "key",
 				"position": {
 					"x": 44.072916666666664,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 8
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-9",
-				"label": "TOUCH KEYBOARD / STEPS: 9",
+				"id": "key-9",
+				"label": "Part 9",
 				"kind": "key",
 				"position": {
 					"x": 50.0,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 9
+				},
+				"learnable": true
 			},
 			{
-				"id": "touch-keyboard-steps-10",
-				"label": "TOUCH KEYBOARD / STEPS: 10",
+				"id": "key-10",
+				"label": "Part 10",
 				"kind": "key",
 				"position": {
 					"x": 55.927083333333336,
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"message": {
+					"type": "note",
+					"number": 60,
+					"channel": 10
+				},
+				"learnable": true
 			},
 			{
 				"id": "touch-keyboard-steps-11",
@@ -575,7 +602,8 @@
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "touch-keyboard-steps-12",
@@ -586,7 +614,8 @@
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "touch-keyboard-steps-13",
@@ -597,7 +626,8 @@
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "touch-keyboard-steps-14",
@@ -608,7 +638,8 @@
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "touch-keyboard-steps-15",
@@ -619,7 +650,8 @@
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "touch-keyboard-steps-16",
@@ -630,7 +662,8 @@
 					"y": 77.08333333333334,
 					"width": 5.927083333333334,
 					"height": 14.583333333333334
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

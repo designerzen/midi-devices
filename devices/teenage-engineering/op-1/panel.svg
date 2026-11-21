@@ -1,170 +1,265 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 590" role="img" aria-labelledby="title description">
-<title id="title">Teenage Engineering OP-1 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
-<defs>
-<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
-<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
-</defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1450" height="590" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1432" height="572" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Teenage Engineering OP-1</text>
-<text x="1425" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="165" height="200" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="speaker-speaker" data-kind="speaker" aria-label="Speaker"><title>Speaker</title>
-<path d="M41 103L174 103" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M41 110.512L174 110.512" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M41 118.023L174 118.023" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M41 125.535L174 125.535" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M41 133.047L174 133.047" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M41 140.558L174 140.558" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 590" role="group" aria-labelledby="teenage-engineering-op-1-panel--title" aria-describedby="teenage-engineering-op-1-panel--description" data-device="teenage-engineering-op-1" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="teenage-engineering-op-1-panel--title">Teenage Engineering OP-1 overhead hardware diagram</title><desc id="teenage-engineering-op-1-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="teenage-engineering-op-1-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1432" height="572" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Teenage Engineering OP-1</text>
+<text x="1425" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="165" height="200" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="205" y="65" width="375" height="200" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="595" y="65" width="310" height="200" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="920" y="65" width="505" height="105" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="920" y="185" width="505" height="85" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="speaker-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<svg data-symbol="knob" x="83.500" y="186.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="teenage-engineering-op-1-panel--speaker-speaker" data-part="speaker-speaker" data-kind="speaker" role="group" aria-roledescription="control" aria-label="SPEAKER: Speaker"><title>SPEAKER: Speaker</title><g aria-hidden="true">
+<path d="M41 103L174 103" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M41 110.178L174 110.178" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M41 117.357L174 117.357" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M41 124.535L174 124.535" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M41 131.713L174 131.713" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M41 138.892L174 138.892" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="205" y="65" width="375" height="200" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="modes-synth" data-kind="button" aria-label="Synth"><title>Synth</title>
-<svg data-symbol="button" x="232.375" y="103.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="modes-drum" data-kind="button" aria-label="Drum"><title>Drum</title>
-<svg data-symbol="button" x="323.125" y="103.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--speaker-volume" data-part="speaker-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SPEAKER: Volume"><title>SPEAKER: Volume</title><g aria-hidden="true">
+<circle cx="107.5" cy="210.035" r="21.265" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M107.5 191.77L107.5 202.592" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="modes-tape" data-kind="button" aria-label="Tape"><title>Tape</title>
-<svg data-symbol="button" x="413.875" y="103.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--surface--speaker-volume" data-surface-control="speaker-volume" aria-hidden="true"><rect x="31" y="177.5" width="153" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="modes-mixer" data-kind="button" aria-label="Mixer"><title>Mixer</title>
-<svg data-symbol="button" x="504.625" y="103.535" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--modes-synth" data-part="modes-synth" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Synth"><title>MODES: Synth</title><g aria-hidden="true">
+<rect x="241.375" y="112.535" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="modes-tempo" data-kind="button" aria-label="Tempo"><title>Tempo</title>
-<svg data-symbol="button" x="232.375" y="186.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--surface--modes-synth" data-surface-control="modes-synth" aria-hidden="true"><rect x="211" y="95" width="90.75" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="modes-help" data-kind="button" aria-label="Help"><title>Help</title>
-<svg data-symbol="button" x="323.125" y="186.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--modes-drum" data-part="modes-drum" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Drum"><title>MODES: Drum</title><g aria-hidden="true">
+<rect x="332.125" y="112.535" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="modes-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<svg data-symbol="button" x="413.875" y="186.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--surface--modes-drum" data-surface-control="modes-drum" aria-hidden="true"><rect x="301.75" y="95" width="90.75" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="modes-com" data-kind="button" aria-label="COM"><title>COM</title>
-<svg data-symbol="button" x="504.625" y="186.035" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--modes-tape" data-part="modes-tape" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Tape"><title>MODES: Tape</title><g aria-hidden="true">
+<rect x="422.875" y="112.535" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="595" y="65" width="310" height="200" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="display-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="606" y="100" width="64.5" height="57.714" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="610" y="104" width="56.5" height="49.714" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="teenage-engineering-op-1-panel--surface--modes-tape" data-surface-control="modes-tape" aria-hidden="true"><rect x="392.5" y="95" width="90.75" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-t1" data-kind="button" aria-label="T1"><title>T1</title>
-<svg data-symbol="button" x="688.750" y="103.857" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--modes-mixer" data-part="modes-mixer" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Mixer"><title>MODES: Mixer</title><g aria-hidden="true">
+<rect x="513.625" y="112.535" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-t2" data-kind="button" aria-label="T2"><title>T2</title>
-<svg data-symbol="button" x="763.250" y="103.857" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--surface--modes-mixer" data-surface-control="modes-mixer" aria-hidden="true"><rect x="483.25" y="95" width="90.75" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-t3" data-kind="button" aria-label="T3"><title>T3</title>
-<svg data-symbol="button" x="837.750" y="103.857" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--modes-tempo" data-part="modes-tempo" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Tempo"><title>MODES: Tempo</title><g aria-hidden="true">
+<rect x="241.375" y="195.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-t4" data-kind="button" aria-label="T4"><title>T4</title>
-<svg data-symbol="button" x="614.250" y="186.357" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--surface--modes-tempo" data-surface-control="modes-tempo" aria-hidden="true"><rect x="211" y="177.5" width="90.75" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="920" y="65" width="505" height="105" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="encoders-tape-blue-encoder" data-kind="knob" aria-label="Blue encoder"><title>Blue encoder</title>
-<svg data-symbol="knob" x="966.340" y="100.000" width="42.570" height="42.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="teenage-engineering-op-1-panel--modes-help" data-part="modes-help" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Help"><title>MODES: Help</title><g aria-hidden="true">
+<rect x="332.125" y="195.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="encoders-tape-green-encoder" data-kind="knob" aria-label="Green encoder"><title>Green encoder</title>
-<svg data-symbol="knob" x="1089.590" y="100.000" width="42.570" height="42.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="teenage-engineering-op-1-panel--surface--modes-help" data-surface-control="modes-help" aria-hidden="true"><rect x="301.75" y="177.5" width="90.75" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="encoders-tape-white-encoder" data-kind="knob" aria-label="White encoder"><title>White encoder</title>
-<svg data-symbol="knob" x="1212.840" y="100.000" width="42.570" height="42.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="teenage-engineering-op-1-panel--modes-shift" data-part="modes-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: Shift"><title>MODES: Shift</title><g aria-hidden="true">
+<rect x="422.875" y="195.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="encoders-tape-orange-encoder" data-kind="knob" aria-label="Orange encoder"><title>Orange encoder</title>
-<svg data-symbol="knob" x="1336.090" y="100.000" width="42.570" height="42.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
+<g id="teenage-engineering-op-1-panel--surface--modes-shift" data-surface-control="modes-shift" aria-hidden="true"><rect x="392.5" y="177.5" width="90.75" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="920" y="185" width="505" height="85" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="tape-transport-rec" data-kind="button" aria-label="Rec"><title>Rec</title>
-<svg data-symbol="button" x="964.015" y="220.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--modes-com" data-part="modes-com" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODES: COM"><title>MODES: COM</title><g aria-hidden="true">
+<rect x="513.625" y="195.035" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="tape-transport-play" data-kind="button" aria-label="Play"><title>Play</title>
-<svg data-symbol="button" x="1062.615" y="220.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--surface--modes-com" data-surface-control="modes-com" aria-hidden="true"><rect x="483.25" y="177.5" width="90.75" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="tape-transport-stop" data-kind="button" aria-label="Stop"><title>Stop</title>
-<svg data-symbol="button" x="1161.215" y="220.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--display-display" data-part="display-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="DISPLAY: Display"><title>DISPLAY: Display</title><g aria-hidden="true">
+<rect x="606" y="100" width="64.5" height="55.714" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="610" y="104" width="56.5" height="47.714" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="tape-transport-lift" data-kind="button" aria-label="Lift"><title>Lift</title>
-<svg data-symbol="button" x="1259.815" y="220.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="tape-transport-drop" data-kind="button" aria-label="Drop"><title>Drop</title>
-<svg data-symbol="button" x="1358.415" y="220.000" width="22.570" height="22.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="teenage-engineering-op-1-panel--display-t1" data-part="display-t1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY: T1"><title>DISPLAY: T1</title><g aria-hidden="true">
+<rect x="697.75" y="112.857" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="keyboard" aria-label="Keyboard"><title>Keyboard</title>
-<g id="key-1" data-kind="key" aria-label="Key 1"><title>Key 1</title>
-<rect x="35" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--display-t1" data-surface-control="display-t1" aria-hidden="true"><rect x="675.5" y="95" width="74.5" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-3" data-kind="key" aria-label="Key 3"><title>Key 3</title>
-<rect x="133.571" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--display-t2" data-part="display-t2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY: T2"><title>DISPLAY: T2</title><g aria-hidden="true">
+<rect x="772.25" y="112.857" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-5" data-kind="key" aria-label="Key 5"><title>Key 5</title>
-<rect x="232.143" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--display-t2" data-surface-control="display-t2" aria-hidden="true"><rect x="750" y="95" width="74.5" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-6" data-kind="key" aria-label="Key 6"><title>Key 6</title>
-<rect x="330.714" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--display-t3" data-part="display-t3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY: T3"><title>DISPLAY: T3</title><g aria-hidden="true">
+<rect x="846.75" y="112.857" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-8" data-kind="key" aria-label="Key 8"><title>Key 8</title>
-<rect x="429.286" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--display-t3" data-surface-control="display-t3" aria-hidden="true"><rect x="824.5" y="95" width="74.5" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-10" data-kind="key" aria-label="Key 10"><title>Key 10</title>
-<rect x="527.857" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--display-t4" data-part="display-t4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY: T4"><title>DISPLAY: T4</title><g aria-hidden="true">
+<rect x="623.25" y="195.357" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-12" data-kind="key" aria-label="Key 12"><title>Key 12</title>
-<rect x="626.429" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--display-t4" data-surface-control="display-t4" aria-hidden="true"><rect x="601" y="177.5" width="74.5" height="82.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-13" data-kind="key" aria-label="Key 13"><title>Key 13</title>
-<rect x="725" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--encoders-tape-blue-encoder" data-part="encoders-tape-blue-encoder" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS / TAPE: Blue encoder"><title>ENCODERS / TAPE: Blue encoder</title><g aria-hidden="true">
+<circle cx="987.625" cy="121.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M987.625 107.52L987.625 115.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-15" data-kind="key" aria-label="Key 15"><title>Key 15</title>
-<rect x="823.571" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--encoder-1" data-surface-control="encoder-1" aria-hidden="true"><rect x="926" y="95" width="123.25" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-17" data-kind="key" aria-label="Key 17"><title>Key 17</title>
-<rect x="922.143" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--encoders-tape-green-encoder" data-part="encoders-tape-green-encoder" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS / TAPE: Green encoder"><title>ENCODERS / TAPE: Green encoder</title><g aria-hidden="true">
+<circle cx="1110.875" cy="121.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1110.875 107.52L1110.875 115.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-18" data-kind="key" aria-label="Key 18"><title>Key 18</title>
-<rect x="1020.714" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--encoder-2" data-surface-control="encoder-2" aria-hidden="true"><rect x="1049.25" y="95" width="123.25" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-20" data-kind="key" aria-label="Key 20"><title>Key 20</title>
-<rect x="1119.286" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--encoders-tape-white-encoder" data-part="encoders-tape-white-encoder" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS / TAPE: White encoder"><title>ENCODERS / TAPE: White encoder</title><g aria-hidden="true">
+<circle cx="1234.125" cy="121.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1234.125 107.52L1234.125 115.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-22" data-kind="key" aria-label="Key 22"><title>Key 22</title>
-<rect x="1217.857" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--encoder-3" data-surface-control="encoder-3" aria-hidden="true"><rect x="1172.5" y="95" width="123.25" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-24" data-kind="key" aria-label="Key 24"><title>Key 24</title>
-<rect x="1316.429" y="300" width="98.571" height="250" fill="#fff" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--encoders-tape-orange-encoder" data-part="encoders-tape-orange-encoder" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="ENCODERS / TAPE: Orange encoder"><title>ENCODERS / TAPE: Orange encoder</title><g aria-hidden="true">
+<circle cx="1357.375" cy="121.285" r="16.765" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1357.375 107.52L1357.375 115.417" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="key-2" data-kind="key" aria-label="Key 2"><title>Key 2</title>
-<rect x="103.014" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--encoder-4" data-surface-control="encoder-4" aria-hidden="true"><rect x="1295.75" y="95" width="123.25" height="70" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-4" data-kind="key" aria-label="Key 4"><title>Key 4</title>
-<rect x="201.586" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--tape-transport-rec" data-part="tape-transport-rec" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TAPE TRANSPORT: Rec"><title>TAPE TRANSPORT: Rec</title><g aria-hidden="true">
+<rect x="964.015" y="220" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-7" data-kind="key" aria-label="Key 7"><title>Key 7</title>
-<rect x="398.729" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--tape-transport-rec" data-surface-control="tape-transport-rec" aria-hidden="true"><rect x="926" y="215" width="98.6" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-9" data-kind="key" aria-label="Key 9"><title>Key 9</title>
-<rect x="497.3" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--tape-transport-play" data-part="tape-transport-play" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TAPE TRANSPORT: Play"><title>TAPE TRANSPORT: Play</title><g aria-hidden="true">
+<rect x="1062.615" y="220" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-11" data-kind="key" aria-label="Key 11"><title>Key 11</title>
-<rect x="595.871" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--tape-transport-play" data-surface-control="tape-transport-play" aria-hidden="true"><rect x="1024.6" y="215" width="98.6" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-14" data-kind="key" aria-label="Key 14"><title>Key 14</title>
-<rect x="793.014" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--tape-transport-stop" data-part="tape-transport-stop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TAPE TRANSPORT: Stop"><title>TAPE TRANSPORT: Stop</title><g aria-hidden="true">
+<rect x="1161.215" y="220" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-16" data-kind="key" aria-label="Key 16"><title>Key 16</title>
-<rect x="891.586" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--tape-transport-stop" data-surface-control="tape-transport-stop" aria-hidden="true"><rect x="1123.2" y="215" width="98.6" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-19" data-kind="key" aria-label="Key 19"><title>Key 19</title>
-<rect x="1088.729" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--tape-transport-lift" data-part="tape-transport-lift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TAPE TRANSPORT: Lift"><title>TAPE TRANSPORT: Lift</title><g aria-hidden="true">
+<rect x="1259.815" y="220" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="key-21" data-kind="key" aria-label="Key 21"><title>Key 21</title>
-<rect x="1187.3" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--surface--tape-transport-lift" data-surface-control="tape-transport-lift" aria-hidden="true"><rect x="1221.8" y="215" width="98.6" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="key-23" data-kind="key" aria-label="Key 23"><title>Key 23</title>
-<rect x="1285.871" y="300" width="61.114" height="152.5" fill="#000" stroke="#000" stroke-width="1.6" rx="0"/>
+<g id="teenage-engineering-op-1-panel--tape-transport-drop" data-part="tape-transport-drop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="TAPE TRANSPORT: Drop"><title>TAPE TRANSPORT: Drop</title><g aria-hidden="true">
+<rect x="1358.415" y="220" width="22.57" height="22.57" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--tape-transport-drop" data-surface-control="tape-transport-drop" aria-hidden="true"><rect x="1320.4" y="215" width="98.6" height="50" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--keyboard" data-region="keyboard" aria-label="Keyboard">
+<g id="teenage-engineering-op-1-panel--key-1" data-part="key-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 1"><title>Key 1</title><g aria-hidden="true">
+<rect x="35" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-0" data-surface-control="key-0" aria-hidden="true"><rect x="35" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-3" data-part="key-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 3"><title>Key 3</title><g aria-hidden="true">
+<rect x="133.571" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-2" data-surface-control="key-2" aria-hidden="true"><rect x="133.5714" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-5" data-part="key-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 5"><title>Key 5</title><g aria-hidden="true">
+<rect x="232.143" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-4" data-surface-control="key-4" aria-hidden="true"><rect x="232.1429" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-6" data-part="key-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 6"><title>Key 6</title><g aria-hidden="true">
+<rect x="330.714" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-5" data-surface-control="key-5" aria-hidden="true"><rect x="330.7143" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-8" data-part="key-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 8"><title>Key 8</title><g aria-hidden="true">
+<rect x="429.286" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-7" data-surface-control="key-7" aria-hidden="true"><rect x="429.2857" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-10" data-part="key-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 10"><title>Key 10</title><g aria-hidden="true">
+<rect x="527.857" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-9" data-surface-control="key-9" aria-hidden="true"><rect x="527.8571" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-12" data-part="key-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 12"><title>Key 12</title><g aria-hidden="true">
+<rect x="626.429" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-11" data-surface-control="key-11" aria-hidden="true"><rect x="626.4286" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-13" data-part="key-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 13"><title>Key 13</title><g aria-hidden="true">
+<rect x="725" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-12" data-surface-control="key-12" aria-hidden="true"><rect x="725" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-15" data-part="key-15" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 15"><title>Key 15</title><g aria-hidden="true">
+<rect x="823.571" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-14" data-surface-control="key-14" aria-hidden="true"><rect x="823.5714" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-17" data-part="key-17" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 17"><title>Key 17</title><g aria-hidden="true">
+<rect x="922.143" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-16" data-surface-control="key-16" aria-hidden="true"><rect x="922.1429" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-18" data-part="key-18" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 18"><title>Key 18</title><g aria-hidden="true">
+<rect x="1020.714" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-17" data-surface-control="key-17" aria-hidden="true"><rect x="1020.7143" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-20" data-part="key-20" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 20"><title>Key 20</title><g aria-hidden="true">
+<rect x="1119.286" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-19" data-surface-control="key-19" aria-hidden="true"><rect x="1119.2857" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-22" data-part="key-22" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 22"><title>Key 22</title><g aria-hidden="true">
+<rect x="1217.857" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-21" data-surface-control="key-21" aria-hidden="true"><rect x="1217.8571" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-24" data-part="key-24" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 24"><title>Key 24</title><g aria-hidden="true">
+<rect x="1316.429" y="300" width="98.571" height="250" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-23" data-surface-control="key-23" aria-hidden="true"><rect x="1316.4286" y="300" width="98.5714" height="250" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-2" data-part="key-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 2"><title>Key 2</title><g aria-hidden="true">
+<rect x="103.014" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-1" data-surface-control="key-1" aria-hidden="true"><rect x="103.0143" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-4" data-part="key-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 4"><title>Key 4</title><g aria-hidden="true">
+<rect x="201.586" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-3" data-surface-control="key-3" aria-hidden="true"><rect x="201.5857" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-7" data-part="key-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 7"><title>Key 7</title><g aria-hidden="true">
+<rect x="398.729" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-6" data-surface-control="key-6" aria-hidden="true"><rect x="398.7286" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-9" data-part="key-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 9"><title>Key 9</title><g aria-hidden="true">
+<rect x="497.3" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-8" data-surface-control="key-8" aria-hidden="true"><rect x="497.3" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-11" data-part="key-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 11"><title>Key 11</title><g aria-hidden="true">
+<rect x="595.871" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-10" data-surface-control="key-10" aria-hidden="true"><rect x="595.8714" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-14" data-part="key-14" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 14"><title>Key 14</title><g aria-hidden="true">
+<rect x="793.014" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-13" data-surface-control="key-13" aria-hidden="true"><rect x="793.0143" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-16" data-part="key-16" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 16"><title>Key 16</title><g aria-hidden="true">
+<rect x="891.586" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-15" data-surface-control="key-15" aria-hidden="true"><rect x="891.5857" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-19" data-part="key-19" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 19"><title>Key 19</title><g aria-hidden="true">
+<rect x="1088.729" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-18" data-surface-control="key-18" aria-hidden="true"><rect x="1088.7286" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-21" data-part="key-21" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 21"><title>Key 21</title><g aria-hidden="true">
+<rect x="1187.3" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-20" data-surface-control="key-20" aria-hidden="true"><rect x="1187.3" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="teenage-engineering-op-1-panel--key-23" data-part="key-23" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="Key 23"><title>Key 23</title><g aria-hidden="true">
+<rect x="1285.871" y="300" width="61.114" height="152.5" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.2"/>
+</g>
+<g id="teenage-engineering-op-1-panel--surface--key-22" data-surface-control="key-22" aria-hidden="true"><rect x="1285.8714" y="300" width="61.1143" height="152.5" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </g>
 </svg>

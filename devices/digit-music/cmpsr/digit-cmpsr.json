@@ -217,20 +217,126 @@
 	"manufacturerUrl": "https://www.digitmusic.co.uk/",
 	"productUrl": "https://www.digitmusic.co.uk/cmpsr/",
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 530,
 		"height": 1040,
 		"elements": [
 			{
-				"id": "joystick-expressive-joystick",
-				"label": "JOYSTICK: Expressive joystick",
-				"kind": "joystick",
+				"id": "expression",
+				"label": "All directions",
+				"kind": "knob",
+				"position": {
+					"x": 39.05660377358491,
+					"y": 19.871798076923074,
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "expression",
+				"learnable": true
+			},
+			{
+				"id": "up",
+				"label": "Up",
+				"kind": "pad",
+				"position": {
+					"x": 39.05660377358491,
+					"y": 11.057692307692307,
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "up",
+				"learnable": true
+			},
+			{
+				"id": "up-right",
+				"label": "Up-right",
+				"kind": "pad",
+				"position": {
+					"x": 60.94339622641509,
+					"y": 11.057692307692307,
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "up-right",
+				"learnable": true
+			},
+			{
+				"id": "right",
+				"label": "Right",
+				"kind": "pad",
+				"position": {
+					"x": 60.94339622641509,
+					"y": 19.871798076923074,
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "right",
+				"learnable": true
+			},
+			{
+				"id": "down-right",
+				"label": "Down-right",
+				"kind": "pad",
+				"position": {
+					"x": 60.94339622641509,
+					"y": 28.685894230769232,
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "down-right",
+				"learnable": true
+			},
+			{
+				"id": "down",
+				"label": "Down",
+				"kind": "pad",
+				"position": {
+					"x": 39.05660377358491,
+					"y": 28.685894230769232,
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "down",
+				"learnable": true
+			},
+			{
+				"id": "down-left",
+				"label": "Down-left",
+				"kind": "pad",
+				"position": {
+					"x": 17.169811320754715,
+					"y": 28.685894230769232,
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "down-left",
+				"learnable": true
+			},
+			{
+				"id": "left",
+				"label": "Left",
+				"kind": "pad",
+				"position": {
+					"x": 17.169811320754715,
+					"y": 19.871798076923074,
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "left",
+				"learnable": true
+			},
+			{
+				"id": "up-left",
+				"label": "Up-left",
+				"kind": "pad",
 				"position": {
 					"x": 17.169811320754715,
 					"y": 11.057692307692307,
-					"width": 65.66037735849056,
-					"height": 26.442307692307693
-				}
+					"width": 21.88679245283019,
+					"height": 8.81410576923077
+				},
+				"control": "up-left",
+				"learnable": true
 			},
 			{
 				"id": "buttons-1-settings",
@@ -241,7 +347,8 @@
 					"y": 43.269230769230774,
 					"width": 32.83018867924528,
 					"height": 12.5
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "buttons-2-midi-cc",
@@ -252,7 +359,8 @@
 					"y": 43.269230769230774,
 					"width": 32.83018867924528,
 					"height": 12.5
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "buttons-3-smart-sustain",
@@ -263,7 +371,8 @@
 					"y": 55.769230769230774,
 					"width": 32.83018867924528,
 					"height": 12.5
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "buttons-4-chords",
@@ -274,7 +383,8 @@
 					"y": 55.769230769230774,
 					"width": 32.83018867924528,
 					"height": 12.5
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "buttons-5-chord-extensions",
@@ -285,7 +395,8 @@
 					"y": 68.26923076923077,
 					"width": 32.83018867924528,
 					"height": 12.5
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "buttons-6-inversions",
@@ -296,7 +407,8 @@
 					"y": 68.26923076923077,
 					"width": 32.83018867924528,
 					"height": 12.5
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "buttons-7-octave",
@@ -307,7 +419,8 @@
 					"y": 80.76923076923077,
 					"width": 32.83018867924528,
 					"height": 12.5
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "buttons-8-octave",
@@ -318,7 +431,8 @@
 					"y": 80.76923076923077,
 					"width": 32.83018867924528,
 					"height": 12.5
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

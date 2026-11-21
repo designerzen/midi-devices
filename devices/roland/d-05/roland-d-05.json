@@ -81,42 +81,47 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1500,
 		"height": 680,
 		"elements": [
 			{
-				"id": "ribbons-c1",
-				"label": "RIBBONS: C1",
-				"kind": "strip",
+				"id": "performance-ribbon-c1-touch",
+				"label": "Ribbon C1",
+				"kind": "fader",
 				"position": {
 					"x": 2.0666666666666664,
 					"y": 13.970588235294118,
 					"width": 4.766666666666667,
 					"height": 52.20588235294118
-				}
+				},
+				"control": "performance-ribbon-c1-touch",
+				"learnable": true
 			},
 			{
-				"id": "ribbons-c2",
-				"label": "RIBBONS: C2",
-				"kind": "strip",
+				"id": "performance-ribbon-c2-touch",
+				"label": "Ribbon C2",
+				"kind": "fader",
 				"position": {
 					"x": 6.833333333333333,
 					"y": 13.970588235294118,
 					"width": 4.766666666666667,
 					"height": 52.20588235294118
-				}
+				},
+				"control": "performance-ribbon-c2-touch",
+				"learnable": true
 			},
 			{
 				"id": "partial-balance-partial-balance",
 				"label": "PARTIAL BALANCE: Partial balance",
-				"kind": "joystick",
+				"kind": "button",
 				"position": {
 					"x": 13.4,
 					"y": 13.970588235294118,
 					"width": 12.533333333333333,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "partial-balance-function",
@@ -124,10 +129,11 @@
 				"kind": "button",
 				"position": {
 					"x": 13.4,
-					"y": 31.372549019607842,
+					"y": 31.37254411764706,
 					"width": 12.533333333333333,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "partial-balance-preset-user",
@@ -135,21 +141,11 @@
 				"kind": "button",
 				"position": {
 					"x": 13.4,
-					"y": 48.77450980392156,
+					"y": 48.774514705882346,
 					"width": 12.533333333333333,
-					"height": 17.401960784313726
-				}
-			},
-			{
-				"id": "display-edit-display",
-				"label": "DISPLAY / EDIT: Display",
-				"kind": "screen",
-				"position": {
-					"x": 27.73333333333333,
-					"y": 13.970588235294118,
-					"width": 7.3,
-					"height": 13.051470588235295
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-left",
@@ -160,7 +156,8 @@
 					"y": 13.970588235294118,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-f1",
@@ -171,7 +168,8 @@
 					"y": 13.970588235294118,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-f2",
@@ -182,7 +180,8 @@
 					"y": 13.970588235294118,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-right",
@@ -193,7 +192,8 @@
 					"y": 27.02205882352941,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-chase",
@@ -204,7 +204,8 @@
 					"y": 27.02205882352941,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-portamento",
@@ -215,7 +216,8 @@
 					"y": 27.02205882352941,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-edit",
@@ -226,7 +228,8 @@
 					"y": 27.02205882352941,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-exit",
@@ -237,7 +240,8 @@
 					"y": 40.07352941176471,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-sequencer",
@@ -248,7 +252,8 @@
 					"y": 40.07352941176471,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-write",
@@ -259,7 +264,8 @@
 					"y": 40.07352941176471,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-increment",
@@ -270,7 +276,8 @@
 					"y": 40.07352941176471,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "display-edit-decrement",
@@ -281,7 +288,8 @@
 					"y": 53.125,
 					"width": 7.3,
 					"height": 13.051470588235295
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-0",
@@ -291,8 +299,9 @@
 					"x": 58.733333333333334,
 					"y": 13.970588235294118,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-1",
@@ -302,8 +311,9 @@
 					"x": 68.53333333333333,
 					"y": 13.970588235294118,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-2",
@@ -313,8 +323,9 @@
 					"x": 78.33333333333333,
 					"y": 13.970588235294118,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-3",
@@ -324,8 +335,9 @@
 					"x": 88.13333333333333,
 					"y": 13.970588235294118,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-4",
@@ -333,10 +345,11 @@
 				"kind": "button",
 				"position": {
 					"x": 58.733333333333334,
-					"y": 31.372549019607842,
+					"y": 31.37254411764706,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-5",
@@ -344,10 +357,11 @@
 				"kind": "button",
 				"position": {
 					"x": 68.53333333333333,
-					"y": 31.372549019607842,
+					"y": 31.37254411764706,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-6",
@@ -355,10 +369,11 @@
 				"kind": "button",
 				"position": {
 					"x": 78.33333333333333,
-					"y": 31.372549019607842,
+					"y": 31.37254411764706,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-7",
@@ -366,10 +381,11 @@
 				"kind": "button",
 				"position": {
 					"x": 88.13333333333333,
-					"y": 31.372549019607842,
+					"y": 31.37254411764706,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-8",
@@ -377,10 +393,11 @@
 				"kind": "button",
 				"position": {
 					"x": 58.733333333333334,
-					"y": 48.77450980392156,
+					"y": 48.774514705882346,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-9",
@@ -388,10 +405,11 @@
 				"kind": "button",
 				"position": {
 					"x": 68.53333333333333,
-					"y": 48.77450980392156,
+					"y": 48.774514705882346,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-shift",
@@ -399,10 +417,11 @@
 				"kind": "button",
 				"position": {
 					"x": 78.33333333333333,
-					"y": 48.77450980392156,
+					"y": 48.774514705882346,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "numeric-enter",
@@ -410,10 +429,11 @@
 				"kind": "button",
 				"position": {
 					"x": 88.13333333333333,
-					"y": 48.77450980392156,
+					"y": 48.774514705882346,
 					"width": 9.8,
-					"height": 17.401960784313726
-				}
+					"height": 17.40195588235294
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-bank-1",
@@ -424,7 +444,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-bank-2",
@@ -435,7 +456,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-bank-3",
@@ -446,7 +468,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-bank-4",
@@ -457,7 +480,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-bank-5",
@@ -468,7 +492,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-bank-6",
@@ -479,7 +504,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-bank-7",
@@ -490,7 +516,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-bank-8",
@@ -501,7 +528,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-patch-1",
@@ -512,7 +540,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-patch-2",
@@ -523,7 +552,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-patch-3",
@@ -534,7 +564,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-patch-4",
@@ -545,7 +576,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-patch-5",
@@ -556,7 +588,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-patch-6",
@@ -567,7 +600,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-patch-7",
@@ -578,7 +612,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "patch-bank-patch-8",
@@ -589,7 +624,8 @@
 					"y": 74.26470588235294,
 					"width": 5.283333333333333,
 					"height": 16.176470588235293
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

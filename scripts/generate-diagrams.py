@@ -10,6 +10,7 @@ import textwrap
 from html import escape
 from pathlib import Path
 from tactile import DEFS, SOURCE, symbol
+from live_diagrams import render_device as render_live_device, render_connections as render_live_connections, VIRTUAL_HEIGHT
 
 ROOT = Path(__file__).resolve().parent.parent
 PROFILES = {json.loads(p.read_text(encoding="utf-8"))["id"]: p for p in (ROOT / "devices").glob("*/*/*.json")}
@@ -143,6 +144,8 @@ def keyboard(draw,spec,labelled):
 
 
 def render_device(identifier,spec,profile,folder):
+    if "elements" in spec:
+        return render_live_device(identifier,spec,profile,folder)
     elements=[];used=set();bindings=profile.get("controls",[])
     descriptions=spec.get("description", "Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.")
     for labelled,filename in [(False,"panel.svg"),(True,"interface.svg")]:
@@ -193,6 +196,8 @@ def render_device(identifier,spec,profile,folder):
 
 
 def render_connections(spec,profile,folder):
+    if "elements" in spec:
+        return render_live_connections(spec,profile,folder)
     columns=[("INPUTS","input"),("OUTPUTS","output"),("DATA / POWER / CONTROLS","other")]
     groups=[]
     for _,direction in columns:
@@ -248,7 +253,9 @@ def main():
         spec=LAYOUTS.get(identifier)
         if spec:
             elements=render_device(identifier,spec,profile,folder)
-            profile["surface"]={"src":"interface.svg","width":spec["width"],"height":spec["height"],"elements":elements}
+            live = "elements" in spec
+            height = spec["height"] + (VIRTUAL_HEIGHT if live and spec.get("virtual") else 0)
+            profile["surface"]={"src":"panel.svg" if live else "interface.svg","width":spec["width"],"height":height,"elements":elements}
         else:
             render_existing_surface(profile,folder)
             spec={"ports":profile.get("connections",[]),"groups":[],"references":profile.get("diagramSources",[])}

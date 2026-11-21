@@ -71,64 +71,89 @@
 	"manufacturerUrl": "https://arcanainstruments.com/",
 	"productUrl": "https://arcanainstruments.com/product/arcana-instrument/",
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1400,
 		"height": 530,
 		"elements": [
 			{
-				"id": "five-key-touch-cluster-playing-key-1",
-				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 1",
-				"kind": "touch",
+				"id": "strum-key-1",
+				"label": "Playing key 1",
+				"kind": "key",
 				"position": {
 					"x": 14.578571428571427,
 					"y": 44.00943396226415,
 					"width": 7.985714285714285,
-					"height": 15.58490566037736
-				}
+					"height": 15.584905660377357
+				},
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true
 			},
 			{
-				"id": "five-key-touch-cluster-playing-key-2",
-				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 2",
-				"kind": "touch",
+				"id": "strum-key-2",
+				"label": "Playing key 2",
+				"kind": "key",
 				"position": {
 					"x": 5.671428571428572,
 					"y": 44.00943396226415,
 					"width": 7.985714285714285,
-					"height": 15.58490566037736
-				}
+					"height": 15.584905660377357
+				},
+				"message": {
+					"type": "note",
+					"number": 62
+				},
+				"learnable": true
 			},
 			{
-				"id": "five-key-touch-cluster-playing-key-3",
-				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 3",
-				"kind": "touch",
+				"id": "strum-key-3",
+				"label": "Playing key 3",
+				"kind": "key",
 				"position": {
 					"x": 14.578571428571427,
 					"y": 26.19811320754717,
 					"width": 7.985714285714285,
-					"height": 15.58490566037736
-				}
+					"height": 15.584905660377357
+				},
+				"message": {
+					"type": "note",
+					"number": 64
+				},
+				"learnable": true
 			},
 			{
-				"id": "five-key-touch-cluster-playing-key-4",
-				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 4",
-				"kind": "touch",
+				"id": "strum-key-4",
+				"label": "Playing key 4",
+				"kind": "key",
 				"position": {
 					"x": 23.485714285714288,
 					"y": 44.00943396226415,
 					"width": 7.985714285714285,
-					"height": 15.58490566037736
-				}
+					"height": 15.584905660377357
+				},
+				"message": {
+					"type": "note",
+					"number": 65
+				},
+				"learnable": true
 			},
 			{
-				"id": "five-key-touch-cluster-playing-key-5",
-				"label": "FIVE-KEY TOUCH CLUSTER: Playing key 5",
-				"kind": "touch",
+				"id": "strum-key-5",
+				"label": "Playing key 5",
+				"kind": "key",
 				"position": {
 					"x": 14.578571428571427,
 					"y": 61.82075471698113,
 					"width": 7.985714285714285,
-					"height": 15.58490566037736
-				}
+					"height": 15.584905660377357
+				},
+				"message": {
+					"type": "note",
+					"number": 67
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-buttons-duration",
@@ -139,7 +164,8 @@
 					"y": 29.245283018867923,
 					"width": 8.535714285714285,
 					"height": 22.169811320754718
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-buttons-melodic-mode",
@@ -150,7 +176,8 @@
 					"y": 29.245283018867923,
 					"width": 8.535714285714285,
 					"height": 22.169811320754718
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-buttons-septachords",
@@ -161,7 +188,8 @@
 					"y": 29.245283018867923,
 					"width": 8.535714285714285,
 					"height": 22.169811320754718
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-buttons-power-reset",
@@ -172,7 +200,8 @@
 					"y": 29.245283018867923,
 					"width": 8.535714285714285,
 					"height": 22.169811320754718
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-buttons-transpose",
@@ -183,7 +212,8 @@
 					"y": 51.41509433962265,
 					"width": 8.535714285714285,
 					"height": 22.169811320754718
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-buttons-transpose-2",
@@ -194,7 +224,8 @@
 					"y": 51.41509433962265,
 					"width": 8.535714285714285,
 					"height": 22.169811320754718
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-buttons-mode-1",
@@ -205,7 +236,8 @@
 					"y": 51.41509433962265,
 					"width": 8.535714285714285,
 					"height": 22.169811320754718
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "mode-buttons-mode-2",
@@ -216,18 +248,20 @@
 					"y": 51.41509433962265,
 					"width": 8.535714285714285,
 					"height": 22.169811320754718
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "strum-stick-strum-handle",
 				"label": "STRUM STICK: Strum handle",
-				"kind": "joystick",
+				"kind": "button",
 				"position": {
 					"x": 72.57142857142857,
 					"y": 24.528301886792452,
 					"width": 23.785714285714285,
 					"height": 55.660377358490564
-				}
+				},
+				"learnable": true
 			}
 		]
 	},

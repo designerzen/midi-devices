@@ -51,7 +51,7 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1450,
 		"height": 620,
 		"elements": [
@@ -62,75 +62,46 @@
 				"position": {
 					"x": 2.1379310344827585,
 					"y": 15.32258064516129,
-					"width": 6.778325123152709,
+					"width": 6.778324137931035,
 					"height": 23.387096774193548
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "keyboard-control-arpeggiation",
 				"label": "KEYBOARD CONTROL: Arpeggiation",
 				"kind": "knob",
 				"position": {
-					"x": 8.916256157635468,
+					"x": 8.916255172413793,
 					"y": 15.32258064516129,
-					"width": 6.778325123152709,
+					"width": 6.778324137931035,
 					"height": 23.387096774193548
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "keyboard-control-octave",
 				"label": "KEYBOARD CONTROL: Octave",
-				"kind": "switch",
+				"kind": "button",
 				"position": {
-					"x": 15.694581280788178,
+					"x": 15.694579310344828,
 					"y": 15.32258064516129,
-					"width": 6.778325123152709,
+					"width": 6.778324137931035,
 					"height": 23.387096774193548
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "keyboard-control-arp-mode",
 				"label": "KEYBOARD CONTROL: Arp mode",
-				"kind": "switch",
+				"kind": "button",
 				"position": {
-					"x": 22.47290640394089,
+					"x": 22.472903448275865,
 					"y": 15.32258064516129,
-					"width": 6.778325123152709,
+					"width": 6.778324137931035,
 					"height": 23.387096774193548
-				}
-			},
-			{
-				"id": "keyboard-control-pulse",
-				"label": "KEYBOARD CONTROL: Pulse",
-				"kind": "output",
-				"position": {
-					"x": 29.251231527093598,
-					"y": 15.32258064516129,
-					"width": 6.778325123152709,
-					"height": 23.387096774193548
-				}
-			},
-			{
-				"id": "keyboard-control-pressure",
-				"label": "KEYBOARD CONTROL: Pressure",
-				"kind": "output",
-				"position": {
-					"x": 36.029556650246306,
-					"y": 15.32258064516129,
-					"width": 6.778325123152709,
-					"height": 23.387096774193548
-				}
-			},
-			{
-				"id": "keyboard-control-pitch",
-				"label": "KEYBOARD CONTROL: Pitch",
-				"kind": "output",
-				"position": {
-					"x": 42.80788177339902,
-					"y": 15.32258064516129,
-					"width": 6.778325123152709,
-					"height": 23.387096774193548
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "preset-voltage-preset-1",
@@ -141,7 +112,8 @@
 					"y": 15.32258064516129,
 					"width": 11.60344827586207,
 					"height": 11.693548387096774
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "preset-voltage-preset-2",
@@ -152,7 +124,8 @@
 					"y": 15.32258064516129,
 					"width": 11.60344827586207,
 					"height": 11.693548387096774
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "preset-voltage-preset-3",
@@ -163,7 +136,8 @@
 					"y": 15.32258064516129,
 					"width": 11.60344827586207,
 					"height": 11.693548387096774
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "preset-voltage-preset-4",
@@ -174,360 +148,349 @@
 					"y": 15.32258064516129,
 					"width": 11.60344827586207,
 					"height": 11.693548387096774
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "preset-voltage-pad-1",
 				"label": "PRESET VOLTAGE: Pad 1",
-				"kind": "touch",
+				"kind": "button",
 				"position": {
 					"x": 51.44827586206897,
 					"y": 27.016129032258064,
 					"width": 11.60344827586207,
 					"height": 11.693548387096774
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "preset-voltage-pad-2",
 				"label": "PRESET VOLTAGE: Pad 2",
-				"kind": "touch",
+				"kind": "button",
 				"position": {
 					"x": 63.05172413793103,
 					"y": 27.016129032258064,
 					"width": 11.60344827586207,
 					"height": 11.693548387096774
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "preset-voltage-pad-3",
 				"label": "PRESET VOLTAGE: Pad 3",
-				"kind": "touch",
+				"kind": "button",
 				"position": {
 					"x": 74.6551724137931,
 					"y": 27.016129032258064,
 					"width": 11.60344827586207,
 					"height": 11.693548387096774
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "preset-voltage-pad-4",
 				"label": "PRESET VOLTAGE: Pad 4",
-				"kind": "touch",
+				"kind": "button",
 				"position": {
 					"x": 86.25862068965517,
 					"y": 27.016129032258064,
 					"width": 11.60344827586207,
 					"height": 11.693548387096774
-				}
+				},
+				"learnable": true
 			},
 			{
 				"id": "touch-strip-position-pitch-bend",
 				"label": "TOUCH STRIP: Position / Pitch bend",
-				"kind": "horizontal-strip",
+				"kind": "fader",
 				"position": {
 					"x": 2.8275862068965516,
 					"y": 45.96774193548387,
 					"width": 94.34482758620689,
 					"height": 4.838709677419355
-				}
+				},
+				"learnable": true
 			},
 			{
-				"id": "key-1",
-				"label": "Touch plate 1",
+				"id": "note-48",
+				"label": "Virtual MIDI note 48",
 				"kind": "key",
 				"position": {
 					"x": 2.413793103448276,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 48
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-3",
-				"label": "Touch plate 3",
+				"id": "note-50",
+				"label": "Virtual MIDI note 50",
 				"kind": "key",
 				"position": {
-					"x": 8.012170385395537,
+					"x": 8.012172413793103,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 50
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-5",
-				"label": "Touch plate 5",
+				"id": "note-52",
+				"label": "Virtual MIDI note 52",
 				"kind": "key",
 				"position": {
-					"x": 13.610547667342798,
+					"x": 13.610544827586207,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 52
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-6",
-				"label": "Touch plate 6",
+				"id": "note-53",
+				"label": "Virtual MIDI note 53",
 				"kind": "key",
 				"position": {
-					"x": 19.20892494929006,
+					"x": 19.208924137931035,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 53
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-8",
-				"label": "Touch plate 8",
+				"id": "note-55",
+				"label": "Virtual MIDI note 55",
 				"kind": "key",
 				"position": {
-					"x": 24.807302231237323,
+					"x": 24.80730344827586,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 55
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-10",
-				"label": "Touch plate 10",
+				"id": "note-57",
+				"label": "Virtual MIDI note 57",
 				"kind": "key",
 				"position": {
-					"x": 30.405679513184587,
+					"x": 30.40568275862069,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 57
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-12",
-				"label": "Touch plate 12",
+				"id": "note-59",
+				"label": "Virtual MIDI note 59",
 				"kind": "key",
 				"position": {
-					"x": 36.004056795131845,
+					"x": 36.00405517241379,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 59
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-13",
-				"label": "Touch plate 13",
+				"id": "note-60",
+				"label": "Virtual MIDI note 60",
 				"kind": "key",
 				"position": {
-					"x": 41.60243407707911,
+					"x": 41.602434482758625,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 60
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-15",
-				"label": "Touch plate 15",
+				"id": "note-62",
+				"label": "Virtual MIDI note 62",
 				"kind": "key",
 				"position": {
-					"x": 47.20081135902637,
+					"x": 47.20081379310345,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 62
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-17",
-				"label": "Touch plate 17",
+				"id": "note-64",
+				"label": "Virtual MIDI note 64",
 				"kind": "key",
 				"position": {
-					"x": 52.799188640973625,
+					"x": 52.79918620689655,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 64
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-18",
-				"label": "Touch plate 18",
+				"id": "note-65",
+				"label": "Virtual MIDI note 65",
 				"kind": "key",
 				"position": {
-					"x": 58.39756592292089,
+					"x": 58.397565517241375,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 65
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-20",
-				"label": "Touch plate 20",
+				"id": "note-67",
+				"label": "Virtual MIDI note 67",
 				"kind": "key",
 				"position": {
-					"x": 63.995943204868155,
+					"x": 63.99594482758621,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 67
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-22",
-				"label": "Touch plate 22",
+				"id": "note-69",
+				"label": "Virtual MIDI note 69",
 				"kind": "key",
 				"position": {
-					"x": 69.5943204868154,
+					"x": 69.59431724137931,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 69
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-24",
-				"label": "Touch plate 24",
+				"id": "note-71",
+				"label": "Virtual MIDI note 71",
 				"kind": "key",
 				"position": {
-					"x": 75.19269776876267,
+					"x": 75.19269655172415,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 71
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-25",
-				"label": "Touch plate 25",
+				"id": "note-72",
+				"label": "Virtual MIDI note 72",
 				"kind": "key",
 				"position": {
-					"x": 80.79107505070994,
+					"x": 80.79107586206898,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 72
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-27",
-				"label": "Touch plate 27",
+				"id": "note-74",
+				"label": "Virtual MIDI note 74",
 				"kind": "key",
 				"position": {
-					"x": 86.38945233265719,
+					"x": 86.38945517241379,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 74
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-29",
-				"label": "Touch plate 29",
+				"id": "note-76",
+				"label": "Virtual MIDI note 76",
 				"kind": "key",
 				"position": {
-					"x": 91.98782961460445,
+					"x": 91.98782758620689,
 					"y": 54.83870967741935,
-					"width": 5.598377281947261,
+					"width": 5.5983793103448285,
 					"height": 37.903225806451616
 				},
 				"message": {
 					"type": "note",
 					"number": 76
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
-				"id": "key-2",
-				"label": "Touch plate 2",
+				"id": "note-49",
+				"label": "Virtual MIDI note 49",
 				"kind": "key",
 				"position": {
-					"x": 6.276673427991886,
+					"x": 6.276675862068965,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -538,13 +501,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-4",
-				"label": "Touch plate 4",
+				"id": "note-51",
+				"label": "Virtual MIDI note 51",
 				"kind": "key",
 				"position": {
-					"x": 11.87505070993915,
+					"x": 11.875048275862069,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -555,13 +518,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-7",
-				"label": "Touch plate 7",
+				"id": "note-54",
+				"label": "Virtual MIDI note 54",
 				"kind": "key",
 				"position": {
-					"x": 23.071805273833668,
+					"x": 23.071806896551724,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -572,13 +535,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-9",
-				"label": "Touch plate 9",
+				"id": "note-56",
+				"label": "Virtual MIDI note 56",
 				"kind": "key",
 				"position": {
-					"x": 28.670182555780936,
+					"x": 28.670179310344828,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -589,13 +552,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-11",
-				"label": "Touch plate 11",
+				"id": "note-58",
+				"label": "Virtual MIDI note 58",
 				"kind": "key",
 				"position": {
-					"x": 34.26855983772819,
+					"x": 34.26855862068965,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -606,13 +569,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-14",
-				"label": "Touch plate 14",
+				"id": "note-61",
+				"label": "Virtual MIDI note 61",
 				"kind": "key",
 				"position": {
-					"x": 45.46531440162272,
+					"x": 45.46531724137932,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -623,13 +586,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-16",
-				"label": "Touch plate 16",
+				"id": "note-63",
+				"label": "Virtual MIDI note 63",
 				"kind": "key",
 				"position": {
-					"x": 51.06369168356998,
+					"x": 51.06368965517242,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -640,13 +603,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-19",
-				"label": "Touch plate 19",
+				"id": "note-66",
+				"label": "Virtual MIDI note 66",
 				"kind": "key",
 				"position": {
-					"x": 62.26044624746449,
+					"x": 62.26044827586207,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -657,13 +620,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-21",
-				"label": "Touch plate 21",
+				"id": "note-68",
+				"label": "Virtual MIDI note 68",
 				"kind": "key",
 				"position": {
-					"x": 67.85882352941177,
+					"x": 67.85882068965518,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -674,13 +637,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-23",
-				"label": "Touch plate 23",
+				"id": "note-70",
+				"label": "Virtual MIDI note 70",
 				"kind": "key",
 				"position": {
-					"x": 73.45720081135902,
+					"x": 73.4572,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -691,13 +654,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-26",
-				"label": "Touch plate 26",
+				"id": "note-73",
+				"label": "Virtual MIDI note 73",
 				"kind": "key",
 				"position": {
-					"x": 84.65395537525353,
+					"x": 84.65395862068966,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {
@@ -708,13 +671,13 @@
 				"dark": true
 			},
 			{
-				"id": "key-28",
-				"label": "Touch plate 28",
+				"id": "note-75",
+				"label": "Virtual MIDI note 75",
 				"kind": "key",
 				"position": {
-					"x": 90.25233265720081,
+					"x": 90.25233103448275,
 					"y": 54.83870967741935,
-					"width": 3.470993914807302,
+					"width": 3.4709931034482757,
 					"height": 23.120967741935484
 				},
 				"message": {

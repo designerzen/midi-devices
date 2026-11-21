@@ -38,11 +38,12 @@ for (const { id, path: folder } of entries) {
 		if (new Set(ids).size !== ids.length) errors.push(`${folder}/${asset}: duplicate SVG element IDs`)
 		if (!svg.includes("<title") || !svg.includes("<desc")) errors.push(`${folder}/${asset}: missing accessible title or description`)
 		for (const [, colour] of svg.matchAll(/(?:fill|stroke)="([^"]+)"/g)) {
-			if (!["#000", "#fff", "none", "url(#tactile-stripes)", "url(#tactile-dots)"].includes(colour)) errors.push(`${folder}/${asset}: non-monochrome colour ${colour}`)
+			if (!["#000", "#fff", "none", "currentColor", "url(#tactile-stripes)", "url(#tactile-dots)"].includes(colour)) errors.push(`${folder}/${asset}: non-monochrome colour ${colour}`)
 		}
-		if (kind === "interface") {
+		if (asset === profile.surface?.src) {
+			const prefix = svg.includes('data-diagram-style="wireframe"') ? `${id}-panel--surface--` : ""
 			for (const element of profile.surface?.elements ?? []) {
-				if (!ids.includes(element.id)) errors.push(`${folder}/${asset}: missing surface element ${element.id}`)
+				if (!ids.includes(prefix + element.id)) errors.push(`${folder}/${asset}: missing surface element ${element.id}`)
 			}
 		}
 	}

@@ -1,163 +1,250 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="img" aria-labelledby="title description">
-<title id="title">Roland D-05 top panel</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
-<defs>
-<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
-<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
-</defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="680" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="662" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland D-05</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">TOP VIEW</text>
-<rect x="25" y="65" width="155" height="390" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="ribbons-c1" data-kind="strip" aria-label="C1"><title>C1</title>
-<rect x="55.75" y="100" width="22" height="326.689" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M66.75 105L66.75 422.689" fill="none" stroke="#000" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680" role="group" aria-labelledby="roland-d-05-panel--title" aria-describedby="roland-d-05-panel--description" data-device="roland-d-05" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-d-05-panel--title">Roland D-05 overhead hardware diagram</title><desc id="roland-d-05-panel--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-d-05-panel--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="662" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland D-05</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">TOP VIEW</text>
+<rect x="25" y="65" width="155" height="390" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="195" y="65" width="200" height="390" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="410" y="65" width="450" height="390" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="875" y="65" width="600" height="390" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="195" y="475" width="1280" height="145" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="ribbons-c2" data-kind="strip" aria-label="C2"><title>C2</title>
-<rect x="127.25" y="100" width="22" height="326.689" fill="#fff" stroke="#000" stroke-width="1.6" rx="7.333333333333333"/>
-<path d="M138.25 105L138.25 422.689" fill="none" stroke="#000" stroke-width="1"/>
+<g id="roland-d-05-panel--ribbons-c1" data-part="ribbons-c1" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="RIBBONS: C1"><title>RIBBONS: C1</title><g aria-hidden="true">
+<rect x="55.75" y="100" width="22" height="324.689" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M66.75 105L66.75 420.689" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<rect x="195" y="65" width="200" height="390" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="partial-balance-partial-balance" data-kind="joystick" aria-label="Partial balance"><title>Partial balance</title>
-<rect x="253.816" y="105.268" width="82.368" height="82.368" fill="#fff" stroke="#000" stroke-width="1.6" rx="9"/>
-<path d="M270.29 146.452L319.71 146.452" fill="none" stroke="#000" stroke-width="1"/>
-<path d="M295 121.741L295 171.162" fill="none" stroke="#000" stroke-width="1"/>
-<circle cx="295" cy="146.452" r="15.65" fill="#fff" stroke="#000" stroke-width="1.6"/>
-<circle cx="295" cy="146.452" r="26.358" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<g id="roland-d-05-panel--surface--performance-ribbon-c1-touch" data-surface-control="performance-ribbon-c1-touch" aria-hidden="true"><rect x="31" y="95" width="71.5" height="355" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="partial-balance-function" data-kind="button" aria-label="Function"><title>Function</title>
-<svg data-symbol="button" x="271.000" y="239.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--ribbons-c2" data-part="ribbons-c2" data-kind="strip" role="group" aria-roledescription="touch strip" aria-label="RIBBONS: C2"><title>RIBBONS: C2</title><g aria-hidden="true">
+<rect x="127.25" y="100" width="22" height="324.689" rx="7.333" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M138.25 105L138.25 420.689" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
 </g>
-<g id="partial-balance-preset-user" data-kind="button" aria-label="Preset / User"><title>Preset / User</title>
-<svg data-symbol="button" x="271.000" y="358.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--performance-ribbon-c2-touch" data-surface-control="performance-ribbon-c2-touch" aria-hidden="true"><rect x="102.5" y="95" width="71.5" height="355" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<rect x="410" y="65" width="450" height="390" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="display-edit-display" data-kind="screen" aria-label="Display"><title>Display</title>
-<rect x="421" y="100" width="99.5" height="63.32" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<rect x="425" y="104" width="91.5" height="55.32" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
+<g id="roland-d-05-panel--partial-balance-partial-balance" data-part="partial-balance-partial-balance" data-kind="joystick" role="group" aria-roledescription="joystick" aria-label="PARTIAL BALANCE: Partial balance"><title>PARTIAL BALANCE: Partial balance</title><g aria-hidden="true">
+<rect x="254.666" y="105.118" width="80.668" height="80.668" rx="9" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M270.8 145.452L319.2 145.452" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<path d="M295 121.251L295 169.652" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<circle cx="295" cy="145.452" r="15.327" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<circle cx="295" cy="145.452" r="25.814" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-edit-left" data-kind="button" aria-label="Left"><title>Left</title>
-<svg data-symbol="button" x="556.250" y="106.660" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--partial-balance-partial-balance" data-surface-control="partial-balance-partial-balance" aria-hidden="true"><rect x="201" y="95" width="188" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-edit-f1" data-kind="button" aria-label="F1"><title>F1</title>
-<svg data-symbol="button" x="665.750" y="106.660" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--partial-balance-function" data-part="partial-balance-function" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PARTIAL BALANCE: Function"><title>PARTIAL BALANCE: Function</title><g aria-hidden="true">
+<rect x="280" y="248.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-edit-f2" data-kind="button" aria-label="F2"><title>F2</title>
-<svg data-symbol="button" x="775.250" y="106.660" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--partial-balance-function" data-surface-control="partial-balance-function" aria-hidden="true"><rect x="201" y="213.3333" width="188" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-edit-right" data-kind="button" aria-label="Right"><title>Right</title>
-<svg data-symbol="button" x="446.750" y="195.410" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--partial-balance-preset-user" data-part="partial-balance-preset-user" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PARTIAL BALANCE: Preset / User"><title>PARTIAL BALANCE: Preset / User</title><g aria-hidden="true">
+<rect x="280" y="367.118" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-edit-chase" data-kind="button" aria-label="Chase"><title>Chase</title>
-<svg data-symbol="button" x="556.250" y="195.410" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--partial-balance-preset-user" data-surface-control="partial-balance-preset-user" aria-hidden="true"><rect x="201" y="331.6667" width="188" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-edit-portamento" data-kind="button" aria-label="Portamento"><title>Portamento</title>
-<svg data-symbol="button" x="665.750" y="195.410" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-display" data-part="display-edit-display" data-kind="screen" role="group" aria-roledescription="display" aria-label="DISPLAY / EDIT: Display"><title>DISPLAY / EDIT: Display</title><g aria-hidden="true">
+<rect x="421" y="100" width="99.5" height="61.32" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="425" y="104" width="91.5" height="53.32" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-edit-edit" data-kind="button" aria-label="Edit"><title>Edit</title>
-<svg data-symbol="button" x="775.250" y="195.410" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
 </g>
-<g id="display-edit-exit" data-kind="button" aria-label="Exit"><title>Exit</title>
-<svg data-symbol="button" x="446.750" y="284.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-left" data-part="display-edit-left" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Left"><title>DISPLAY / EDIT: Left</title><g aria-hidden="true">
+<rect x="565.25" y="115.66" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-edit-sequencer" data-kind="button" aria-label="Sequencer"><title>Sequencer</title>
-<svg data-symbol="button" x="556.250" y="284.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-left" data-surface-control="display-edit-left" aria-hidden="true"><rect x="525.5" y="95" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-edit-write" data-kind="button" aria-label="Write"><title>Write</title>
-<svg data-symbol="button" x="665.750" y="284.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-f1" data-part="display-edit-f1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: F1"><title>DISPLAY / EDIT: F1</title><g aria-hidden="true">
+<rect x="674.75" y="115.66" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="display-edit-increment" data-kind="button" aria-label="Increment"><title>Increment</title>
-<svg data-symbol="button" x="775.250" y="284.160" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-f1" data-surface-control="display-edit-f1" aria-hidden="true"><rect x="635" y="95" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="display-edit-decrement" data-kind="button" aria-label="Decrement"><title>Decrement</title>
-<svg data-symbol="button" x="446.750" y="372.910" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-f2" data-part="display-edit-f2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: F2"><title>DISPLAY / EDIT: F2</title><g aria-hidden="true">
+<rect x="784.25" y="115.66" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="875" y="65" width="600" height="390" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="numeric-0" data-kind="button" aria-label="0"><title>0</title>
-<svg data-symbol="button" x="930.500" y="121.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-f2" data-surface-control="display-edit-f2" aria-hidden="true"><rect x="744.5" y="95" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="numeric-1" data-kind="button" aria-label="1"><title>1</title>
-<svg data-symbol="button" x="1077.500" y="121.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-right" data-part="display-edit-right" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Right"><title>DISPLAY / EDIT: Right</title><g aria-hidden="true">
+<rect x="455.75" y="204.41" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="numeric-2" data-kind="button" aria-label="2"><title>2</title>
-<svg data-symbol="button" x="1224.500" y="121.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-right" data-surface-control="display-edit-right" aria-hidden="true"><rect x="416" y="183.75" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="numeric-3" data-kind="button" aria-label="3"><title>3</title>
-<svg data-symbol="button" x="1371.500" y="121.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-chase" data-part="display-edit-chase" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Chase"><title>DISPLAY / EDIT: Chase</title><g aria-hidden="true">
+<rect x="565.25" y="204.41" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="numeric-4" data-kind="button" aria-label="4"><title>4</title>
-<svg data-symbol="button" x="930.500" y="239.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-chase" data-surface-control="display-edit-chase" aria-hidden="true"><rect x="525.5" y="183.75" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="numeric-5" data-kind="button" aria-label="5"><title>5</title>
-<svg data-symbol="button" x="1077.500" y="239.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-portamento" data-part="display-edit-portamento" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Portamento"><title>DISPLAY / EDIT: Portamento</title><g aria-hidden="true">
+<rect x="674.75" y="204.41" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="numeric-6" data-kind="button" aria-label="6"><title>6</title>
-<svg data-symbol="button" x="1224.500" y="239.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-portamento" data-surface-control="display-edit-portamento" aria-hidden="true"><rect x="635" y="183.75" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="numeric-7" data-kind="button" aria-label="7"><title>7</title>
-<svg data-symbol="button" x="1371.500" y="239.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-edit" data-part="display-edit-edit" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Edit"><title>DISPLAY / EDIT: Edit</title><g aria-hidden="true">
+<rect x="784.25" y="204.41" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="numeric-8" data-kind="button" aria-label="8"><title>8</title>
-<svg data-symbol="button" x="930.500" y="358.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-edit" data-surface-control="display-edit-edit" aria-hidden="true"><rect x="744.5" y="183.75" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="numeric-9" data-kind="button" aria-label="9"><title>9</title>
-<svg data-symbol="button" x="1077.500" y="358.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-exit" data-part="display-edit-exit" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Exit"><title>DISPLAY / EDIT: Exit</title><g aria-hidden="true">
+<rect x="455.75" y="293.16" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="numeric-shift" data-kind="button" aria-label="Shift"><title>Shift</title>
-<svg data-symbol="button" x="1224.500" y="358.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-exit" data-surface-control="display-edit-exit" aria-hidden="true"><rect x="416" y="272.5" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="numeric-enter" data-kind="button" aria-label="Enter"><title>Enter</title>
-<svg data-symbol="button" x="1371.500" y="358.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-sequencer" data-part="display-edit-sequencer" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Sequencer"><title>DISPLAY / EDIT: Sequencer</title><g aria-hidden="true">
+<rect x="565.25" y="293.16" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<rect x="195" y="475" width="1280" height="145" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<g id="patch-bank-bank-1" data-kind="button" aria-label="Bank 1"><title>Bank 1</title>
-<svg data-symbol="button" x="216.625" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-sequencer" data-surface-control="display-edit-sequencer" aria-hidden="true"><rect x="525.5" y="272.5" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bank-bank-2" data-kind="button" aria-label="Bank 2"><title>Bank 2</title>
-<svg data-symbol="button" x="295.875" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-write" data-part="display-edit-write" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Write"><title>DISPLAY / EDIT: Write</title><g aria-hidden="true">
+<rect x="674.75" y="293.16" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bank-bank-3" data-kind="button" aria-label="Bank 3"><title>Bank 3</title>
-<svg data-symbol="button" x="375.125" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-write" data-surface-control="display-edit-write" aria-hidden="true"><rect x="635" y="272.5" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bank-bank-4" data-kind="button" aria-label="Bank 4"><title>Bank 4</title>
-<svg data-symbol="button" x="454.375" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-increment" data-part="display-edit-increment" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Increment"><title>DISPLAY / EDIT: Increment</title><g aria-hidden="true">
+<rect x="784.25" y="293.16" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bank-bank-5" data-kind="button" aria-label="Bank 5"><title>Bank 5</title>
-<svg data-symbol="button" x="533.625" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-increment" data-surface-control="display-edit-increment" aria-hidden="true"><rect x="744.5" y="272.5" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bank-bank-6" data-kind="button" aria-label="Bank 6"><title>Bank 6</title>
-<svg data-symbol="button" x="612.875" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--display-edit-decrement" data-part="display-edit-decrement" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="DISPLAY / EDIT: Decrement"><title>DISPLAY / EDIT: Decrement</title><g aria-hidden="true">
+<rect x="455.75" y="381.91" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bank-bank-7" data-kind="button" aria-label="Bank 7"><title>Bank 7</title>
-<svg data-symbol="button" x="692.125" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--display-edit-decrement" data-surface-control="display-edit-decrement" aria-hidden="true"><rect x="416" y="361.25" width="109.5" height="88.75" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bank-bank-8" data-kind="button" aria-label="Bank 8"><title>Bank 8</title>
-<svg data-symbol="button" x="771.375" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--numeric-0" data-part="numeric-0" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 0"><title>NUMERIC: 0</title><g aria-hidden="true">
+<rect x="939.5" y="130.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bank-patch-1" data-kind="button" aria-label="Patch 1"><title>Patch 1</title>
-<svg data-symbol="button" x="850.625" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--numeric-0" data-surface-control="numeric-0" aria-hidden="true"><rect x="881" y="95" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bank-patch-2" data-kind="button" aria-label="Patch 2"><title>Patch 2</title>
-<svg data-symbol="button" x="929.875" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--numeric-1" data-part="numeric-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 1"><title>NUMERIC: 1</title><g aria-hidden="true">
+<rect x="1086.5" y="130.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bank-patch-3" data-kind="button" aria-label="Patch 3"><title>Patch 3</title>
-<svg data-symbol="button" x="1009.125" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--numeric-1" data-surface-control="numeric-1" aria-hidden="true"><rect x="1028" y="95" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bank-patch-4" data-kind="button" aria-label="Patch 4"><title>Patch 4</title>
-<svg data-symbol="button" x="1088.375" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--numeric-2" data-part="numeric-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 2"><title>NUMERIC: 2</title><g aria-hidden="true">
+<rect x="1233.5" y="130.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bank-patch-5" data-kind="button" aria-label="Patch 5"><title>Patch 5</title>
-<svg data-symbol="button" x="1167.625" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--numeric-2" data-surface-control="numeric-2" aria-hidden="true"><rect x="1175" y="95" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bank-patch-6" data-kind="button" aria-label="Patch 6"><title>Patch 6</title>
-<svg data-symbol="button" x="1246.875" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--numeric-3" data-part="numeric-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 3"><title>NUMERIC: 3</title><g aria-hidden="true">
+<rect x="1380.5" y="130.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
 </g>
-<g id="patch-bank-patch-7" data-kind="button" aria-label="Patch 7"><title>Patch 7</title>
-<svg data-symbol="button" x="1326.125" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--surface--numeric-3" data-surface-control="numeric-3" aria-hidden="true"><rect x="1322" y="95" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
-<g id="patch-bank-patch-8" data-kind="button" aria-label="Patch 8"><title>Patch 8</title>
-<svg data-symbol="button" x="1405.375" y="527.285" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
+<g id="roland-d-05-panel--numeric-4" data-part="numeric-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 4"><title>NUMERIC: 4</title><g aria-hidden="true">
+<rect x="939.5" y="248.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--numeric-4" data-surface-control="numeric-4" aria-hidden="true"><rect x="881" y="213.3333" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--numeric-5" data-part="numeric-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 5"><title>NUMERIC: 5</title><g aria-hidden="true">
+<rect x="1086.5" y="248.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--numeric-5" data-surface-control="numeric-5" aria-hidden="true"><rect x="1028" y="213.3333" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--numeric-6" data-part="numeric-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 6"><title>NUMERIC: 6</title><g aria-hidden="true">
+<rect x="1233.5" y="248.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--numeric-6" data-surface-control="numeric-6" aria-hidden="true"><rect x="1175" y="213.3333" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--numeric-7" data-part="numeric-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 7"><title>NUMERIC: 7</title><g aria-hidden="true">
+<rect x="1380.5" y="248.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--numeric-7" data-surface-control="numeric-7" aria-hidden="true"><rect x="1322" y="213.3333" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--numeric-8" data-part="numeric-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 8"><title>NUMERIC: 8</title><g aria-hidden="true">
+<rect x="939.5" y="367.118" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--numeric-8" data-surface-control="numeric-8" aria-hidden="true"><rect x="881" y="331.6667" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--numeric-9" data-part="numeric-9" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: 9"><title>NUMERIC: 9</title><g aria-hidden="true">
+<rect x="1086.5" y="367.118" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--numeric-9" data-surface-control="numeric-9" aria-hidden="true"><rect x="1028" y="331.6667" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--numeric-shift" data-part="numeric-shift" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: Shift"><title>NUMERIC: Shift</title><g aria-hidden="true">
+<rect x="1233.5" y="367.118" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--numeric-shift" data-surface-control="numeric-shift" aria-hidden="true"><rect x="1175" y="331.6667" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--numeric-enter" data-part="numeric-enter" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="NUMERIC: Enter"><title>NUMERIC: Enter</title><g aria-hidden="true">
+<rect x="1380.5" y="367.118" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--numeric-enter" data-surface-control="numeric-enter" aria-hidden="true"><rect x="1322" y="331.6667" width="147" height="118.3333" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-bank-1" data-part="patch-bank-bank-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Bank 1"><title>PATCH / BANK: Bank 1</title><g aria-hidden="true">
+<rect x="225.625" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-bank-1" data-surface-control="patch-bank-bank-1" aria-hidden="true"><rect x="201" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-bank-2" data-part="patch-bank-bank-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Bank 2"><title>PATCH / BANK: Bank 2</title><g aria-hidden="true">
+<rect x="304.875" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-bank-2" data-surface-control="patch-bank-bank-2" aria-hidden="true"><rect x="280.25" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-bank-3" data-part="patch-bank-bank-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Bank 3"><title>PATCH / BANK: Bank 3</title><g aria-hidden="true">
+<rect x="384.125" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-bank-3" data-surface-control="patch-bank-bank-3" aria-hidden="true"><rect x="359.5" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-bank-4" data-part="patch-bank-bank-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Bank 4"><title>PATCH / BANK: Bank 4</title><g aria-hidden="true">
+<rect x="463.375" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-bank-4" data-surface-control="patch-bank-bank-4" aria-hidden="true"><rect x="438.75" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-bank-5" data-part="patch-bank-bank-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Bank 5"><title>PATCH / BANK: Bank 5</title><g aria-hidden="true">
+<rect x="542.625" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-bank-5" data-surface-control="patch-bank-bank-5" aria-hidden="true"><rect x="518" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-bank-6" data-part="patch-bank-bank-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Bank 6"><title>PATCH / BANK: Bank 6</title><g aria-hidden="true">
+<rect x="621.875" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-bank-6" data-surface-control="patch-bank-bank-6" aria-hidden="true"><rect x="597.25" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-bank-7" data-part="patch-bank-bank-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Bank 7"><title>PATCH / BANK: Bank 7</title><g aria-hidden="true">
+<rect x="701.125" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-bank-7" data-surface-control="patch-bank-bank-7" aria-hidden="true"><rect x="676.5" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-bank-8" data-part="patch-bank-bank-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Bank 8"><title>PATCH / BANK: Bank 8</title><g aria-hidden="true">
+<rect x="780.375" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-bank-8" data-surface-control="patch-bank-bank-8" aria-hidden="true"><rect x="755.75" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-patch-1" data-part="patch-bank-patch-1" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Patch 1"><title>PATCH / BANK: Patch 1</title><g aria-hidden="true">
+<rect x="859.625" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-patch-1" data-surface-control="patch-bank-patch-1" aria-hidden="true"><rect x="835" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-patch-2" data-part="patch-bank-patch-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Patch 2"><title>PATCH / BANK: Patch 2</title><g aria-hidden="true">
+<rect x="938.875" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-patch-2" data-surface-control="patch-bank-patch-2" aria-hidden="true"><rect x="914.25" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-patch-3" data-part="patch-bank-patch-3" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Patch 3"><title>PATCH / BANK: Patch 3</title><g aria-hidden="true">
+<rect x="1018.125" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-patch-3" data-surface-control="patch-bank-patch-3" aria-hidden="true"><rect x="993.5" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-patch-4" data-part="patch-bank-patch-4" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Patch 4"><title>PATCH / BANK: Patch 4</title><g aria-hidden="true">
+<rect x="1097.375" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-patch-4" data-surface-control="patch-bank-patch-4" aria-hidden="true"><rect x="1072.75" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-patch-5" data-part="patch-bank-patch-5" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Patch 5"><title>PATCH / BANK: Patch 5</title><g aria-hidden="true">
+<rect x="1176.625" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-patch-5" data-surface-control="patch-bank-patch-5" aria-hidden="true"><rect x="1152" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-patch-6" data-part="patch-bank-patch-6" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Patch 6"><title>PATCH / BANK: Patch 6</title><g aria-hidden="true">
+<rect x="1255.875" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-patch-6" data-surface-control="patch-bank-patch-6" aria-hidden="true"><rect x="1231.25" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-patch-7" data-part="patch-bank-patch-7" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Patch 7"><title>PATCH / BANK: Patch 7</title><g aria-hidden="true">
+<rect x="1335.125" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-patch-7" data-surface-control="patch-bank-patch-7" aria-hidden="true"><rect x="1310.5" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
+</g>
+<g id="roland-d-05-panel--patch-bank-patch-8" data-part="patch-bank-patch-8" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="PATCH / BANK: Patch 8"><title>PATCH / BANK: Patch 8</title><g aria-hidden="true">
+<rect x="1414.375" y="536.285" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+</g>
+<g id="roland-d-05-panel--surface--patch-bank-patch-8" data-surface-control="patch-bank-patch-8" aria-hidden="true"><rect x="1389.75" y="505" width="79.25" height="110" stroke-opacity="0" pointer-events="all" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"/></g>
 </g>
 </svg>

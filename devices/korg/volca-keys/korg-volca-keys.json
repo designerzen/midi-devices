@@ -163,65 +163,10 @@
 		]
 	},
 	"surface": {
-		"src": "interface.svg",
+		"src": "panel.svg",
 		"width": 1200,
 		"height": 720,
 		"elements": [
-			{
-				"id": "top-connections-dc-9v",
-				"label": "TOP CONNECTIONS: DC 9V",
-				"kind": "input",
-				"position": {
-					"x": 2.5833333333333335,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
-			{
-				"id": "top-connections-midi-in",
-				"label": "TOP CONNECTIONS: MIDI IN",
-				"kind": "input",
-				"position": {
-					"x": 21.550000000000004,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
-			{
-				"id": "top-connections-sync-in",
-				"label": "TOP CONNECTIONS: Sync IN",
-				"kind": "input",
-				"position": {
-					"x": 40.516666666666666,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
-			{
-				"id": "top-connections-sync-out",
-				"label": "TOP CONNECTIONS: Sync OUT",
-				"kind": "output",
-				"position": {
-					"x": 59.483333333333334,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
-			{
-				"id": "top-connections-headphones",
-				"label": "TOP CONNECTIONS: Headphones",
-				"kind": "output",
-				"position": {
-					"x": 78.45,
-					"y": 12.5,
-					"width": 18.966666666666665,
-					"height": 4.166666666666666
-				}
-			},
 			{
 				"id": "master-volume",
 				"label": "MASTER: Volume",
@@ -230,8 +175,9 @@
 					"x": 2.5833333333333335,
 					"y": 22.22222222222222,
 					"width": 6.583333333333333,
-					"height": 15.50925925925926
-				}
+					"height": 15.509263888888889
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-tempo",
@@ -241,8 +187,9 @@
 					"x": 9.166666666666666,
 					"y": 22.22222222222222,
 					"width": 6.583333333333333,
-					"height": 15.50925925925926
-				}
+					"height": 15.509263888888889
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-memory",
@@ -250,10 +197,11 @@
 				"kind": "button",
 				"position": {
 					"x": 2.5833333333333335,
-					"y": 37.73148148148148,
+					"y": 37.73148611111111,
 					"width": 6.583333333333333,
-					"height": 15.50925925925926
-				}
+					"height": 15.509263888888889
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-play",
@@ -261,10 +209,11 @@
 				"kind": "button",
 				"position": {
 					"x": 9.166666666666666,
-					"y": 37.73148148148148,
+					"y": 37.73148611111111,
 					"width": 6.583333333333333,
-					"height": 15.50925925925926
-				}
+					"height": 15.509263888888889
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-record",
@@ -272,10 +221,11 @@
 				"kind": "button",
 				"position": {
 					"x": 2.5833333333333335,
-					"y": 53.24074074074075,
+					"y": 53.24073611111111,
 					"width": 6.583333333333333,
-					"height": 15.50925925925926
-				}
+					"height": 15.509263888888889
+				},
+				"learnable": true
 			},
 			{
 				"id": "master-function",
@@ -283,14 +233,15 @@
 				"kind": "button",
 				"position": {
 					"x": 9.166666666666666,
-					"y": 53.24074074074075,
+					"y": 53.24073611111111,
 					"width": 6.583333333333333,
-					"height": 15.50925925925926
-				}
+					"height": 15.509263888888889
+				},
+				"learnable": true
 			},
 			{
-				"id": "vco-voice",
-				"label": "VCO: Voice",
+				"id": "vco-voice-knob",
+				"label": "Voice",
 				"kind": "knob",
 				"position": {
 					"x": 18.0,
@@ -298,11 +249,12 @@
 					"width": 7.166666666666667,
 					"height": 23.26388888888889
 				},
-				"control": "vco-voice-knob"
+				"control": "vco-voice-knob",
+				"learnable": true
 			},
 			{
-				"id": "vco-octave",
-				"label": "VCO: Octave",
+				"id": "vco-octave-knob",
+				"label": "Octave",
 				"kind": "knob",
 				"position": {
 					"x": 25.166666666666664,
@@ -310,11 +262,12 @@
 					"width": 7.166666666666667,
 					"height": 23.26388888888889
 				},
-				"control": "vco-octave-knob"
+				"control": "vco-octave-knob",
+				"learnable": true
 			},
 			{
-				"id": "vco-detune",
-				"label": "VCO: Detune",
+				"id": "vco-detune-knob",
+				"label": "Detune",
 				"kind": "knob",
 				"position": {
 					"x": 18.0,
@@ -322,11 +275,12 @@
 					"width": 7.166666666666667,
 					"height": 23.26388888888889
 				},
-				"control": "vco-detune-knob"
+				"control": "vco-detune-knob",
+				"learnable": true
 			},
 			{
-				"id": "vco-eg-intensity",
-				"label": "VCO: EG intensity",
+				"id": "vco-eg-intensity-knob",
+				"label": "EG intensity",
 				"kind": "knob",
 				"position": {
 					"x": 25.166666666666664,
@@ -334,19 +288,21 @@
 					"width": 7.166666666666667,
 					"height": 23.26388888888889
 				},
-				"control": "vco-eg-intensity-knob"
+				"control": "vco-eg-intensity-knob",
+				"learnable": true
 			},
 			{
-				"id": "vcf-cutoff",
-				"label": "VCF: Cutoff",
+				"id": "vcf-cutoff-knob",
+				"label": "Cutoff",
 				"kind": "knob",
 				"position": {
 					"x": 34.166666666666664,
 					"y": 22.22222222222222,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "vcf-cutoff-knob"
+				"control": "vcf-cutoff-knob",
+				"learnable": true
 			},
 			{
 				"id": "vcf-peak",
@@ -354,98 +310,106 @@
 				"kind": "knob",
 				"position": {
 					"x": 34.166666666666664,
-					"y": 37.73148148148148,
+					"y": 37.73148611111111,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
-				}
+					"height": 15.509263888888889
+				},
+				"learnable": true
 			},
 			{
-				"id": "vcf-eg-intensity",
-				"label": "VCF: EG intensity",
+				"id": "vcf-eg-intensity-knob",
+				"label": "EG intensity",
 				"kind": "knob",
 				"position": {
 					"x": 34.166666666666664,
-					"y": 53.24074074074075,
+					"y": 53.24073611111111,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "vcf-eg-intensity-knob"
+				"control": "vcf-eg-intensity-knob",
+				"learnable": true
 			},
 			{
-				"id": "lfo-rate",
-				"label": "LFO: Rate",
+				"id": "lfo-rate-knob",
+				"label": "Rate",
 				"kind": "knob",
 				"position": {
 					"x": 50.33333333333333,
 					"y": 22.22222222222222,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "lfo-rate-knob"
+				"control": "lfo-rate-knob",
+				"learnable": true
 			},
 			{
-				"id": "lfo-pitch-intensity",
-				"label": "LFO: Pitch intensity",
+				"id": "lfo-pitch-intensity-knob",
+				"label": "Pitch intensity",
 				"kind": "knob",
 				"position": {
 					"x": 50.33333333333333,
-					"y": 37.73148148148148,
+					"y": 37.73148611111111,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "lfo-pitch-intensity-knob"
+				"control": "lfo-pitch-intensity-knob",
+				"learnable": true
 			},
 			{
-				"id": "lfo-cutoff-intensity",
-				"label": "LFO: Cutoff intensity",
+				"id": "lfo-cutoff-intensity-knob",
+				"label": "Cutoff intensity",
 				"kind": "knob",
 				"position": {
 					"x": 50.33333333333333,
-					"y": 53.24074074074075,
+					"y": 53.24073611111111,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "lfo-cutoff-intensity-knob"
+				"control": "lfo-cutoff-intensity-knob",
+				"learnable": true
 			},
 			{
-				"id": "envelope-attack",
-				"label": "ENVELOPE: Attack",
+				"id": "envelope-attack-knob",
+				"label": "Attack",
 				"kind": "knob",
 				"position": {
 					"x": 66.5,
 					"y": 22.22222222222222,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "envelope-attack-knob"
+				"control": "envelope-attack-knob",
+				"learnable": true
 			},
 			{
-				"id": "envelope-decay-release",
-				"label": "ENVELOPE: Decay Release",
+				"id": "envelope-decay-release-knob",
+				"label": "Decay Release",
 				"kind": "knob",
 				"position": {
 					"x": 66.5,
-					"y": 37.73148148148148,
+					"y": 37.73148611111111,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "envelope-decay-release-knob"
+				"control": "envelope-decay-release-knob",
+				"learnable": true
 			},
 			{
-				"id": "envelope-sustain",
-				"label": "ENVELOPE: Sustain",
+				"id": "envelope-sustain-knob",
+				"label": "Sustain",
 				"kind": "knob",
 				"position": {
 					"x": 66.5,
-					"y": 53.24074074074075,
+					"y": 53.24073611111111,
 					"width": 14.333333333333334,
-					"height": 15.50925925925926
+					"height": 15.509263888888889
 				},
-				"control": "envelope-sustain-knob"
+				"control": "envelope-sustain-knob",
+				"learnable": true
 			},
 			{
-				"id": "delay-time",
-				"label": "DELAY: Time",
+				"id": "delay-time-knob",
+				"label": "Time",
 				"kind": "knob",
 				"position": {
 					"x": 82.66666666666667,
@@ -453,11 +417,12 @@
 					"width": 14.333333333333334,
 					"height": 23.26388888888889
 				},
-				"control": "delay-time-knob"
+				"control": "delay-time-knob",
+				"learnable": true
 			},
 			{
-				"id": "delay-feedback",
-				"label": "DELAY: Feedback",
+				"id": "delay-feedback-knob",
+				"label": "Feedback",
 				"kind": "knob",
 				"position": {
 					"x": 82.66666666666667,
@@ -465,11 +430,12 @@
 					"width": 14.333333333333334,
 					"height": 23.26388888888889
 				},
-				"control": "delay-feedback-knob"
+				"control": "delay-feedback-knob",
+				"learnable": true
 			},
 			{
 				"id": "key-1",
-				"label": "Touch plate 1",
+				"label": "Key 1",
 				"kind": "key",
 				"position": {
 					"x": 2.083333333333333,
@@ -481,12 +447,11 @@
 					"type": "note",
 					"number": 48
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-3",
-				"label": "Touch plate 3",
+				"label": "Key 3",
 				"kind": "key",
 				"position": {
 					"x": 8.072916666666668,
@@ -498,12 +463,11 @@
 					"type": "note",
 					"number": 50
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-5",
-				"label": "Touch plate 5",
+				"label": "Key 5",
 				"kind": "key",
 				"position": {
 					"x": 14.0625,
@@ -515,12 +479,11 @@
 					"type": "note",
 					"number": 52
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-6",
-				"label": "Touch plate 6",
+				"label": "Key 6",
 				"kind": "key",
 				"position": {
 					"x": 20.052083333333336,
@@ -532,12 +495,11 @@
 					"type": "note",
 					"number": 53
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-8",
-				"label": "Touch plate 8",
+				"label": "Key 8",
 				"kind": "key",
 				"position": {
 					"x": 26.041666666666668,
@@ -549,12 +511,11 @@
 					"type": "note",
 					"number": 55
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-10",
-				"label": "Touch plate 10",
+				"label": "Key 10",
 				"kind": "key",
 				"position": {
 					"x": 32.03125,
@@ -566,12 +527,11 @@
 					"type": "note",
 					"number": 57
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-12",
-				"label": "Touch plate 12",
+				"label": "Key 12",
 				"kind": "key",
 				"position": {
 					"x": 38.02083333333333,
@@ -583,12 +543,11 @@
 					"type": "note",
 					"number": 59
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-13",
-				"label": "Touch plate 13",
+				"label": "Key 13",
 				"kind": "key",
 				"position": {
 					"x": 44.01041666666667,
@@ -600,12 +559,11 @@
 					"type": "note",
 					"number": 60
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-15",
-				"label": "Touch plate 15",
+				"label": "Key 15",
 				"kind": "key",
 				"position": {
 					"x": 50.0,
@@ -617,12 +575,11 @@
 					"type": "note",
 					"number": 62
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-17",
-				"label": "Touch plate 17",
+				"label": "Key 17",
 				"kind": "key",
 				"position": {
 					"x": 55.989583333333336,
@@ -634,12 +591,11 @@
 					"type": "note",
 					"number": 64
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-18",
-				"label": "Touch plate 18",
+				"label": "Key 18",
 				"kind": "key",
 				"position": {
 					"x": 61.979166666666664,
@@ -651,12 +607,11 @@
 					"type": "note",
 					"number": 65
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-20",
-				"label": "Touch plate 20",
+				"label": "Key 20",
 				"kind": "key",
 				"position": {
 					"x": 67.96875,
@@ -668,12 +623,11 @@
 					"type": "note",
 					"number": 67
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-22",
-				"label": "Touch plate 22",
+				"label": "Key 22",
 				"kind": "key",
 				"position": {
 					"x": 73.95833333333334,
@@ -685,12 +639,11 @@
 					"type": "note",
 					"number": 69
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-24",
-				"label": "Touch plate 24",
+				"label": "Key 24",
 				"kind": "key",
 				"position": {
 					"x": 79.94791666666666,
@@ -702,12 +655,11 @@
 					"type": "note",
 					"number": 71
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-25",
-				"label": "Touch plate 25",
+				"label": "Key 25",
 				"kind": "key",
 				"position": {
 					"x": 85.9375,
@@ -719,12 +671,11 @@
 					"type": "note",
 					"number": 72
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-27",
-				"label": "Touch plate 27",
+				"label": "Key 27",
 				"kind": "key",
 				"position": {
 					"x": 91.92708333333334,
@@ -736,18 +687,17 @@
 					"type": "note",
 					"number": 74
 				},
-				"learnable": true,
-				"dark": false
+				"learnable": true
 			},
 			{
 				"id": "key-2",
-				"label": "Touch plate 2",
+				"label": "Key 2",
 				"kind": "key",
 				"position": {
-					"x": 6.216145833333334,
+					"x": 6.21615,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -758,13 +708,13 @@
 			},
 			{
 				"id": "key-4",
-				"label": "Touch plate 4",
+				"label": "Key 4",
 				"kind": "key",
 				"position": {
-					"x": 12.205729166666666,
+					"x": 12.205733333333333,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -775,13 +725,13 @@
 			},
 			{
 				"id": "key-7",
-				"label": "Touch plate 7",
+				"label": "Key 7",
 				"kind": "key",
 				"position": {
-					"x": 24.184895833333332,
+					"x": 24.1849,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -792,13 +742,13 @@
 			},
 			{
 				"id": "key-9",
-				"label": "Touch plate 9",
+				"label": "Key 9",
 				"kind": "key",
 				"position": {
-					"x": 30.174479166666668,
+					"x": 30.17448333333333,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -809,13 +759,13 @@
 			},
 			{
 				"id": "key-11",
-				"label": "Touch plate 11",
+				"label": "Key 11",
 				"kind": "key",
 				"position": {
-					"x": 36.1640625,
+					"x": 36.16406666666666,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -826,13 +776,13 @@
 			},
 			{
 				"id": "key-14",
-				"label": "Touch plate 14",
+				"label": "Key 14",
 				"kind": "key",
 				"position": {
-					"x": 48.14322916666667,
+					"x": 48.14323333333333,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -843,13 +793,13 @@
 			},
 			{
 				"id": "key-16",
-				"label": "Touch plate 16",
+				"label": "Key 16",
 				"kind": "key",
 				"position": {
-					"x": 54.13281250000001,
+					"x": 54.13281666666666,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -860,13 +810,13 @@
 			},
 			{
 				"id": "key-19",
-				"label": "Touch plate 19",
+				"label": "Key 19",
 				"kind": "key",
 				"position": {
-					"x": 66.11197916666667,
+					"x": 66.11198333333334,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -877,13 +827,13 @@
 			},
 			{
 				"id": "key-21",
-				"label": "Touch plate 21",
+				"label": "Key 21",
 				"kind": "key",
 				"position": {
-					"x": 72.1015625,
+					"x": 72.10156666666666,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -894,13 +844,13 @@
 			},
 			{
 				"id": "key-23",
-				"label": "Touch plate 23",
+				"label": "Key 23",
 				"kind": "key",
 				"position": {
-					"x": 78.09114583333333,
+					"x": 78.09115,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",
@@ -911,13 +861,13 @@
 			},
 			{
 				"id": "key-26",
-				"label": "Touch plate 26",
+				"label": "Key 26",
 				"kind": "key",
 				"position": {
-					"x": 90.0703125,
+					"x": 90.07031666666667,
 					"y": 72.91666666666666,
 					"width": 3.7135416666666665,
-					"height": 11.861111111111109
+					"height": 11.861111111111112
 				},
 				"message": {
 					"type": "note",

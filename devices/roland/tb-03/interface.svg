@@ -1,179 +1,229 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 720" role="img" aria-labelledby="title description">
-<title id="title">Roland TB-03 labelled interface</title><desc id="description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Labels identify physical controls, not guaranteed MIDI assignments.</desc>
-<metadata>Symbol vocabulary: NYU ABILITY Project / IDM SynthAccess; https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides. Original schematic geometry; physical controls do not imply MIDI mappings.</metadata>
-<defs>
-<pattern id="tactile-stripes" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#fff"/><path d="M0 3H6" stroke="#000" stroke-width="2"/></pattern>
-<pattern id="tactile-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="2" cy="2" r="1.5" fill="#000"/><circle cx="6" cy="6" r="1.5" fill="#000"/></pattern>
-</defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#000;stroke:none}.line{fill:#fff;stroke:#000;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.thin{fill:none;stroke:#000;stroke-width:1;stroke-linejoin:round;stroke-linecap:round}</style>
-<rect x="0" y="0" width="1500" height="720" fill="#fff" stroke="none" stroke-width="1.6"/>
-<rect x="9" y="9" width="1482" height="702" fill="#fff" stroke="#000" stroke-width="1.6" rx="12"/>
-<text x="25" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="19" text-anchor="start" font-weight="bold">Roland TB-03</text>
-<text x="1475" y="37" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="end">INTERFACE</text>
-<rect x="25" y="65" width="1050" height="150" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">SOUND</text>
-<g id="sound-tuning" data-kind="knob" aria-label="Tuning" data-control="sound-tuning-knob"><title>Tuning</title>
-<svg data-symbol="knob" x="93.500" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="117.5" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tuning</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 720" role="group" aria-labelledby="roland-tb-03-interface--title" aria-describedby="roland-tb-03-interface--description" data-device="roland-tb-03" data-diagram-style="wireframe" style="background: #fff; color: #000;">
+<title id="roland-tb-03-interface--title">Roland TB-03 labelled interface</title><desc id="roland-tb-03-interface--description">Original simplified top-down line drawing; positions are illustrative, not mechanical dimensions. Each physical control has a stable device-prefixed ID and data-part name; standalone buttons are disabled until a host adds input handlers. Transparent regions marked data-surface-control are the profile&#x27;s MIDI hit areas, and several can share one context-dependent control.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}[data-part]:focus-visible{outline:3px solid currentColor}</style>
+<g id="roland-tb-03-interface--chassis" aria-hidden="true">
+<rect x="9" y="9" width="1482" height="702" rx="12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="25" y="37" fill="currentColor" stroke="none" font-size="19" text-anchor="start" font-weight="bold">Roland TB-03</text>
+<text x="1475" y="37" fill="currentColor" stroke="none" font-size="11" text-anchor="end">INTERFACE</text>
+<rect x="25" y="65" width="1050" height="150" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">SOUND</text>
+<rect x="1090" y="65" width="385" height="150" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1097" y="79" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">EFFECTS</text>
+<rect x="25" y="230" width="400" height="400" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="32" y="244" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">MODE / TEMPO</text>
+<rect x="440" y="230" width="1035" height="100" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="447" y="244" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">FUNCTIONS</text>
+<rect x="440" y="350" width="1035" height="280" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="447" y="364" fill="currentColor" stroke="none" font-size="9" text-anchor="start" font-weight="bold">NOTE / STEP KEYS</text>
 </g>
-<g id="sound-cutoff" data-kind="knob" aria-label="Cutoff" data-control="sound-cutoff-knob"><title>Cutoff</title>
-<svg data-symbol="knob" x="266.500" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="290.5" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Cutoff</text>
+<g id="roland-tb-03-interface--sound-tuning" data-part="sound-tuning" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Tuning"><title>SOUND: Tuning</title><g aria-hidden="true">
+<circle cx="117.5" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M117.5 121.785L117.5 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="117.5" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tuning</text>
 </g>
-<g id="sound-resonance" data-kind="knob" aria-label="Resonance" data-control="sound-resonance-knob"><title>Resonance</title>
-<svg data-symbol="knob" x="439.500" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="463.5" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Resonance</text>
 </g>
-<g id="sound-env-mod" data-kind="knob" aria-label="Env mod" data-control="sound-env-mod-knob"><title>Env mod</title>
-<svg data-symbol="knob" x="612.500" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="636.5" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Env mod</text>
+<g id="roland-tb-03-interface--sound-cutoff" data-part="sound-cutoff" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Cutoff"><title>SOUND: Cutoff</title><g aria-hidden="true">
+<circle cx="290.5" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M290.5 121.785L290.5 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="290.5" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Cutoff</text>
 </g>
-<g id="sound-decay" data-kind="knob" aria-label="Decay" data-control="sound-decay-knob"><title>Decay</title>
-<svg data-symbol="knob" x="785.500" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="809.5" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Decay</text>
 </g>
-<g id="sound-accent" data-kind="knob" aria-label="Accent" data-control="sound-accent-knob"><title>Accent</title>
-<svg data-symbol="knob" x="958.500" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="982.5" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Accent</text>
+<g id="roland-tb-03-interface--sound-resonance" data-part="sound-resonance" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Resonance"><title>SOUND: Resonance</title><g aria-hidden="true">
+<circle cx="463.5" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M463.5 121.785L463.5 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="463.5" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Resonance</text>
 </g>
-<rect x="1090" y="65" width="385" height="150" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="1097" y="79" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">EFFECTS</text>
-<g id="effects-overdrive" data-kind="knob" aria-label="Overdrive" data-control="effects-overdrive-knob"><title>Overdrive</title>
-<svg data-symbol="knob" x="1134.167" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1158.167" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Overdrive</text>
 </g>
-<g id="effects-delay-time" data-kind="knob" aria-label="Delay time" data-control="effects-delay-time-knob"><title>Delay time</title>
-<svg data-symbol="knob" x="1258.500" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1282.5" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Delay time</text>
+<g id="roland-tb-03-interface--sound-env-mod" data-part="sound-env-mod" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Env mod"><title>SOUND: Env mod</title><g aria-hidden="true">
+<circle cx="636.5" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M636.5 121.785L636.5 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="636.5" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Env mod</text>
 </g>
-<g id="effects-delay-feedback" data-kind="knob" aria-label="Delay feedback" data-control="effects-delay-feedback-knob"><title>Delay feedback</title>
-<svg data-symbol="knob" x="1382.833" y="119.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="1406.833" y="206" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Delay feedback</text>
 </g>
-<rect x="25" y="230" width="400" height="400" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="32" y="244" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">MODE / TEMPO</text>
-<g id="mode-tempo-volume" data-kind="knob" aria-label="Volume"><title>Volume</title>
-<svg data-symbol="knob" x="71.667" y="288.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="95.667" y="377.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Volume</text>
+<g id="roland-tb-03-interface--sound-decay" data-part="sound-decay" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Decay"><title>SOUND: Decay</title><g aria-hidden="true">
+<circle cx="809.5" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M809.5 121.785L809.5 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="809.5" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Decay</text>
 </g>
-<g id="mode-tempo-waveform" data-kind="switch" aria-label="Waveform"><title>Waveform</title>
-<svg data-symbol="switch" x="201.000" y="288.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="12" y="2" width="16" height="36" fill="#fff"/><path d="M12 20H28"/></g></svg>
-<text x="225" y="377.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Waveform</text>
 </g>
-<g id="mode-tempo-track-group" data-kind="knob" aria-label="Track group"><title>Track group</title>
-<svg data-symbol="knob" x="330.333" y="288.118" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="354.333" y="377.667" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Track group</text>
+<g id="roland-tb-03-interface--sound-accent" data-part="sound-accent" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="SOUND: Accent"><title>SOUND: Accent</title><g aria-hidden="true">
+<circle cx="982.5" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M982.5 121.785L982.5 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="982.5" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Accent</text>
 </g>
-<g id="mode-tempo-mode" data-kind="knob" aria-label="Mode"><title>Mode</title>
-<svg data-symbol="knob" x="71.667" y="409.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="95.667" y="499.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Mode</text>
 </g>
-<g id="mode-tempo-tempo" data-kind="knob" aria-label="Tempo"><title>Tempo</title>
-<svg data-symbol="knob" x="201.000" y="409.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="225" y="499.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tempo</text>
+<g id="roland-tb-03-interface--effects-overdrive" data-part="effects-overdrive" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="EFFECTS: Overdrive"><title>EFFECTS: Overdrive</title><g aria-hidden="true">
+<circle cx="1158.167" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1158.167 121.785L1158.167 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1158.167" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Overdrive</text>
 </g>
-<g id="mode-tempo-value" data-kind="knob" aria-label="Value"><title>Value</title>
-<svg data-symbol="knob" x="330.333" y="409.785" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="20" r="18" fill="url(#tactile-stripes)"/><circle cx="20" cy="20" r="11" fill="#fff"/></g></svg>
-<text x="354.333" y="499.333" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Value</text>
 </g>
-<g id="mode-tempo-run-stop" data-kind="button" aria-label="Run / Stop"><title>Run / Stop</title>
-<svg data-symbol="button" x="71.667" y="531.452" width="48.000" height="48.000" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="95.667" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Run / Stop</text>
+<g id="roland-tb-03-interface--effects-delay-time" data-part="effects-delay-time" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="EFFECTS: Delay time"><title>EFFECTS: Delay time</title><g aria-hidden="true">
+<circle cx="1282.5" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1282.5 121.785L1282.5 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1282.5" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Delay time</text>
 </g>
-<rect x="440" y="230" width="1035" height="100" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="447" y="244" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">FUNCTIONS</text>
-<g id="functions-pattern-clear" data-kind="button" aria-label="Pattern clear"><title>Pattern clear</title>
-<svg data-symbol="button" x="478.365" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="497.15" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pattern clear</text>
 </g>
-<g id="functions-pitch-mode" data-kind="button" aria-label="Pitch mode"><title>Pitch mode</title>
-<svg data-symbol="button" x="580.665" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="599.45" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Pitch mode</text>
+<g id="roland-tb-03-interface--effects-delay-feedback" data-part="effects-delay-feedback" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="EFFECTS: Delay feedback"><title>EFFECTS: Delay feedback</title><g aria-hidden="true">
+<circle cx="1406.833" cy="143.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M1406.833 121.785L1406.833 135.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="1406.833" y="206" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Delay feedback</text>
 </g>
-<g id="functions-function" data-kind="button" aria-label="Function"><title>Function</title>
-<svg data-symbol="button" x="682.965" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="701.75" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Function</text>
 </g>
-<g id="functions-time-mode" data-kind="button" aria-label="Time mode"><title>Time mode</title>
-<svg data-symbol="button" x="785.265" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="804.05" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Time mode</text>
+<g id="roland-tb-03-interface--mode-tempo-volume" data-part="mode-tempo-volume" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODE / TEMPO: Volume"><title>MODE / TEMPO: Volume</title><g aria-hidden="true">
+<circle cx="95.667" cy="312.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M95.667 290.118L95.667 303.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="95.667" y="377.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Volume</text>
 </g>
-<g id="functions-transpose" data-kind="button" aria-label="Transpose -"><title>Transpose -</title>
-<svg data-symbol="button" x="887.565" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="906.35" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Transpose -</text>
 </g>
-<g id="functions-transpose-2" data-kind="button" aria-label="Transpose +"><title>Transpose +</title>
-<svg data-symbol="button" x="989.865" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1008.65" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Transpose +</text>
+<g id="roland-tb-03-interface--mode-tempo-waveform" data-part="mode-tempo-waveform" data-kind="switch" role="group" aria-roledescription="switch" aria-label="MODE / TEMPO: Waveform"><title>MODE / TEMPO: Waveform</title><g aria-hidden="true">
+<rect x="220" y="300.118" width="10" height="24" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<rect x="216" y="308.118" width="18" height="7" rx="0" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="225" y="377.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Waveform</text>
 </g>
-<g id="functions-accent" data-kind="button" aria-label="Accent"><title>Accent</title>
-<svg data-symbol="button" x="1092.165" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1110.95" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Accent</text>
 </g>
-<g id="functions-slide" data-kind="button" aria-label="Slide"><title>Slide</title>
-<svg data-symbol="button" x="1194.465" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1213.25" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Slide</text>
+<g id="roland-tb-03-interface--mode-tempo-track-group" data-part="mode-tempo-track-group" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODE / TEMPO: Track group"><title>MODE / TEMPO: Track group</title><g aria-hidden="true">
+<circle cx="354.333" cy="312.118" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M354.333 290.118L354.333 303.368" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="354.333" y="377.667" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Track group</text>
 </g>
-<g id="functions-back" data-kind="button" aria-label="Back"><title>Back</title>
-<svg data-symbol="button" x="1296.765" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1315.55" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Back</text>
 </g>
-<g id="functions-tap" data-kind="button" aria-label="Tap"><title>Tap</title>
-<svg data-symbol="button" x="1399.065" y="265.000" width="37.570" height="37.570" viewBox="0 0 40 40"><g fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="34" height="34" fill="#fff"/><path d="M3 3L10 10M37 3L30 10M3 37L10 30M37 37L30 30"/><rect x="10" y="10" width="20" height="20" fill="#000"/></g></svg>
-<text x="1417.85" y="321" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">Tap</text>
+<g id="roland-tb-03-interface--mode-tempo-mode" data-part="mode-tempo-mode" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODE / TEMPO: Mode"><title>MODE / TEMPO: Mode</title><g aria-hidden="true">
+<circle cx="95.667" cy="433.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M95.667 411.785L95.667 425.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="95.667" y="499.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Mode</text>
 </g>
-<rect x="440" y="350" width="1035" height="280" fill="#fff" stroke="#000" stroke-width="1.6" rx="3"/>
-<text x="447" y="364" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="9" text-anchor="start" font-weight="bold">NOTE / STEP KEYS</text>
-<g id="note-step-keys-1" data-kind="key" aria-label="1"><title>1</title>
-<rect x="452" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="485.346" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">1</text>
 </g>
-<g id="note-step-keys-2" data-kind="key" aria-label="2"><title>2</title>
-<rect x="530.692" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="564.038" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">2</text>
+<g id="roland-tb-03-interface--mode-tempo-tempo" data-part="mode-tempo-tempo" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODE / TEMPO: Tempo"><title>MODE / TEMPO: Tempo</title><g aria-hidden="true">
+<circle cx="225" cy="433.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M225 411.785L225 425.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="225" y="499.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tempo</text>
 </g>
-<g id="note-step-keys-3" data-kind="key" aria-label="3"><title>3</title>
-<rect x="609.385" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="642.731" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">3</text>
 </g>
-<g id="note-step-keys-4" data-kind="key" aria-label="4"><title>4</title>
-<rect x="688.077" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="721.423" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">4</text>
+<g id="roland-tb-03-interface--mode-tempo-value" data-part="mode-tempo-value" data-kind="knob" role="group" aria-roledescription="rotary control" aria-label="MODE / TEMPO: Value"><title>MODE / TEMPO: Value</title><g aria-hidden="true">
+<circle cx="354.333" cy="433.785" r="25" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<path d="M354.333 411.785L354.333 425.035" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1"/>
+<text x="354.333" y="499.333" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Value</text>
 </g>
-<g id="note-step-keys-5" data-kind="key" aria-label="5"><title>5</title>
-<rect x="766.769" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="800.115" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">5</text>
 </g>
-<g id="note-step-keys-6" data-kind="key" aria-label="6"><title>6</title>
-<rect x="845.462" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="878.808" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">6</text>
+<g id="roland-tb-03-interface--mode-tempo-run-stop" data-part="mode-tempo-run-stop" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="MODE / TEMPO: Run / Stop"><title>MODE / TEMPO: Run / Stop</title><g aria-hidden="true">
+<rect x="80.667" y="540.452" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="95.667" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Run / Stop</text>
 </g>
-<g id="note-step-keys-7" data-kind="key" aria-label="7"><title>7</title>
-<rect x="924.154" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="957.5" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">7</text>
 </g>
-<g id="note-step-keys-8" data-kind="key" aria-label="8"><title>8</title>
-<rect x="1002.846" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1036.192" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">8</text>
+<g id="roland-tb-03-interface--functions-pattern-clear" data-part="functions-pattern-clear" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Pattern clear"><title>FUNCTIONS: Pattern clear</title><g aria-hidden="true">
+<rect x="482.15" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="497.15" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pattern clear</text>
 </g>
-<g id="note-step-keys-9" data-kind="key" aria-label="9"><title>9</title>
-<rect x="1081.538" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1114.885" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">9</text>
 </g>
-<g id="note-step-keys-10" data-kind="key" aria-label="10"><title>10</title>
-<rect x="1160.231" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1193.577" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">10</text>
+<g id="roland-tb-03-interface--functions-pitch-mode" data-part="functions-pitch-mode" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Pitch mode"><title>FUNCTIONS: Pitch mode</title><g aria-hidden="true">
+<rect x="584.45" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="599.45" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Pitch mode</text>
 </g>
-<g id="note-step-keys-11" data-kind="key" aria-label="11"><title>11</title>
-<rect x="1238.923" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1272.269" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">11</text>
 </g>
-<g id="note-step-keys-12" data-kind="key" aria-label="12"><title>12</title>
-<rect x="1317.615" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1350.962" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">12</text>
+<g id="roland-tb-03-interface--functions-function" data-part="functions-function" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Function"><title>FUNCTIONS: Function</title><g aria-hidden="true">
+<rect x="686.75" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="701.75" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Function</text>
 </g>
-<g id="note-step-keys-13" data-kind="key" aria-label="13"><title>13</title>
-<rect x="1396.308" y="461.439" width="66.692" height="66.692" fill="#fff" stroke="#000" stroke-width="1.6" rx="1"/>
-<text x="1429.654" y="621" fill="#000" font-family="Arial,Helvetica,sans-serif" font-size="11" text-anchor="middle">13</text>
+</g>
+<g id="roland-tb-03-interface--functions-time-mode" data-part="functions-time-mode" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Time mode"><title>FUNCTIONS: Time mode</title><g aria-hidden="true">
+<rect x="789.05" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="804.05" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Time mode</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--functions-transpose" data-part="functions-transpose" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Transpose -"><title>FUNCTIONS: Transpose -</title><g aria-hidden="true">
+<rect x="891.35" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="906.35" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Transpose -</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--functions-transpose-2" data-part="functions-transpose-2" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Transpose +"><title>FUNCTIONS: Transpose +</title><g aria-hidden="true">
+<rect x="993.65" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1008.65" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Transpose +</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--functions-accent" data-part="functions-accent" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Accent"><title>FUNCTIONS: Accent</title><g aria-hidden="true">
+<rect x="1095.95" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1110.95" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Accent</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--functions-slide" data-part="functions-slide" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Slide"><title>FUNCTIONS: Slide</title><g aria-hidden="true">
+<rect x="1198.25" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1213.25" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Slide</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--functions-back" data-part="functions-back" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Back"><title>FUNCTIONS: Back</title><g aria-hidden="true">
+<rect x="1300.55" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1315.55" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Back</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--functions-tap" data-part="functions-tap" data-kind="button" role="button" aria-disabled="true" tabindex="-1" aria-label="FUNCTIONS: Tap"><title>FUNCTIONS: Tap</title><g aria-hidden="true">
+<rect x="1402.85" y="268.785" width="30" height="30" rx="3" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1417.85" y="321" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">Tap</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-1" data-part="note-step-keys-1" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 1"><title>NOTE / STEP KEYS: 1</title><g aria-hidden="true">
+<rect x="452" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="485.346" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">1</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-2" data-part="note-step-keys-2" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 2"><title>NOTE / STEP KEYS: 2</title><g aria-hidden="true">
+<rect x="530.692" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="564.038" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">2</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-3" data-part="note-step-keys-3" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 3"><title>NOTE / STEP KEYS: 3</title><g aria-hidden="true">
+<rect x="609.385" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="642.731" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">3</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-4" data-part="note-step-keys-4" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 4"><title>NOTE / STEP KEYS: 4</title><g aria-hidden="true">
+<rect x="688.077" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="721.423" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">4</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-5" data-part="note-step-keys-5" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 5"><title>NOTE / STEP KEYS: 5</title><g aria-hidden="true">
+<rect x="766.769" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="800.115" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">5</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-6" data-part="note-step-keys-6" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 6"><title>NOTE / STEP KEYS: 6</title><g aria-hidden="true">
+<rect x="845.462" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="878.808" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">6</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-7" data-part="note-step-keys-7" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 7"><title>NOTE / STEP KEYS: 7</title><g aria-hidden="true">
+<rect x="924.154" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="957.5" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">7</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-8" data-part="note-step-keys-8" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 8"><title>NOTE / STEP KEYS: 8</title><g aria-hidden="true">
+<rect x="1002.846" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1036.192" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">8</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-9" data-part="note-step-keys-9" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 9"><title>NOTE / STEP KEYS: 9</title><g aria-hidden="true">
+<rect x="1081.538" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1114.885" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">9</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-10" data-part="note-step-keys-10" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 10"><title>NOTE / STEP KEYS: 10</title><g aria-hidden="true">
+<rect x="1160.231" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1193.577" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">10</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-11" data-part="note-step-keys-11" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 11"><title>NOTE / STEP KEYS: 11</title><g aria-hidden="true">
+<rect x="1238.923" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1272.269" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">11</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-12" data-part="note-step-keys-12" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 12"><title>NOTE / STEP KEYS: 12</title><g aria-hidden="true">
+<rect x="1317.615" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1350.962" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">12</text>
+</g>
+</g>
+<g id="roland-tb-03-interface--note-step-keys-13" data-part="note-step-keys-13" data-kind="key" role="button" aria-disabled="true" tabindex="-1" aria-label="NOTE / STEP KEYS: 13"><title>NOTE / STEP KEYS: 13</title><g aria-hidden="true">
+<rect x="1396.308" y="460.439" width="66.692" height="66.692" rx="1" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"/>
+<text x="1429.654" y="621" fill="currentColor" stroke="none" font-size="11" text-anchor="middle">13</text>
+</g>
 </g>
 </svg>
