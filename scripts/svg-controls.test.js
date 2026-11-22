@@ -156,7 +156,7 @@ test("the test page isolates identical devices, retains cards on port open and c
 		const data = pathname.endsWith("/index.json") ? [{ id: profile.id, path: "korg/volca-bass" }] : pathname.endsWith("/manufacturers.json") ? [{ id: "korg", name: "Korg" }] : profile
 		return { ok: true, json: async () => data, text: async () => drawing }
 	}
-	const script = html.match(/<script type="module">([\s\S]*?)<\/script>/)[1].replace(/from "\.\/(midi-connections|svg-controls)\.js\?v=__BUILD_COMMIT__"/g, (_, name) => `from "${new URL(`../site/${name}.js`, import.meta.url).href}"`)
+	const script = html.match(/<script type="module">([\s\S]*?)<\/script>/)[1].replace(/from "\.\/(midi-connections|midi-state|svg-controls)\.js\?v=__BUILD_COMMIT__"/g, (_, name) => `from "${new URL(`../site/${name}.js`, import.meta.url).href}"`)
 	await import(`data:text/javascript;base64,${Buffer.from(script).toString("base64")}`)
 	assert.equal(window.document.querySelectorAll("#catalog article").length, 1)
 	await window.document.getElementById("detect-midi").onclick()
@@ -167,6 +167,15 @@ test("the test page isolates identical devices, retains cards on port open and c
 	const emit = (input, data) => { const event = new window.Event("midimessage"); event.data = data; input.dispatchEvent(event) }
 	emit(inputs[0], [0x90, keyboard.message.number, 90])
 	assert.equal(nodes[0].dataset.active, "true"); assert.notEqual(nodes[1].dataset.active, "true")
+	await new Promise(resolve => setTimeout(resolve, 80))
+	const stateView = window.document.getElementById("midi-state")
+	assert.equal(stateView.hidden, false)
+	assert.match(stateView.textContent, /Channel 1/)
+	assert.equal(window.document.getElementById("events-table").hidden, true)
+	const view = window.document.getElementById("monitor-view")
+	view.value = "log"; view.dispatchEvent(new window.Event("change"))
+	assert.equal(stateView.hidden, true)
+	assert.equal(window.document.getElementById("events-table").hidden, false)
 	assert.deepEqual(outputs.map(value => value.sent), [[], []])
 	nodes[0].dispatchEvent(new window.KeyboardEvent("keydown", { key: " " }))
 	await next()

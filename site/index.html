@@ -82,6 +82,24 @@
 			#midi-monitor th { position: sticky; top: 0; background: var(--surface-raised); }
 			#midi-monitor td:last-child { font-family: ui-monospace, monospace; overflow-wrap: anywhere; min-width: 10ch; }
 			#midi-monitor table { margin: 0; }
+			.monitor-settings { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: end; margin-bottom: 1rem; font-size: 0.92rem; }
+			.monitor-settings label { display: grid; gap: 0.25rem; color: var(--muted); }
+			/* ShowMIDI-style channel state */
+			#midi-state { display: grid; gap: 1rem; max-height: 520px; overflow: auto; }
+			.state-port { border: 1px solid var(--border); border-radius: 10px; padding: 0.75rem 1rem; background: var(--surface); }
+			.state-port h3 { margin: 0 0 0.5rem; font-size: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; }
+			.state-clock { font-weight: 400; color: var(--muted); font-family: ui-monospace, monospace; font-size: 0.85rem; }
+			.state-channels { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 0.75rem; }
+			.state-channel { border-left: 3px solid var(--accent); padding-left: 0.6rem; font-family: ui-monospace, monospace; font-size: 0.82rem; }
+			.state-channel h4 { margin: 0 0 0.35rem; font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--accent); }
+			.state-row { display: grid; grid-template-columns: 7.5ch 1fr 5ch; gap: 0.5rem; align-items: center; line-height: 1.5; }
+			.state-row.off { opacity: 0.45; }
+			.state-row output { text-align: right; }
+			.state-bar { height: 0.5rem; background: var(--border); border-radius: 4px; position: relative; overflow: hidden; }
+			.state-bar span { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 4px; }
+			.state-bar.centered span { background: var(--warning); }
+			.state-bar.centered::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--muted); }
+			.state-bar .pressure { top: 60%; background: var(--warning); }
 
 			/* Device cards */
 			#catalog, #connected-devices { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 1.25rem; align-items: start; }
@@ -174,10 +192,29 @@
 					<h2 id="midi-monitor-heading" class="section-title">Live MIDI messages</h2>
 					<button id="clear-events" class="secondary" type="button" hidden>Clear messages</button>
 				</div>
+				<div class="monitor-settings">
+					<label>View<select id="monitor-view">
+						<option value="state">Channel state (ShowMIDI)</option>
+						<option value="log">Message log</option>
+						<option value="both">Both</option>
+					</select></label>
+					<label>Values<select id="monitor-format">
+						<option value="decimal">Decimal</option>
+						<option value="percent">Percent</option>
+						<option value="hex">Hex</option>
+					</select></label>
+					<label>Hide inactive after<select id="monitor-hold">
+						<option value="2000">2 seconds</option>
+						<option value="5000">5 seconds</option>
+						<option value="15000">15 seconds</option>
+						<option value="0">Never</option>
+					</select></label>
+				</div>
 				<p id="event-status" role="status">Listening for MIDI messages.</p>
 				<p id="input-errors" class="error" hidden></p>
 				<p id="monitor-empty" class="monitor-empty"><span class="pulse" aria-hidden="true"></span><span><strong>Waiting for you to play.</strong> Press a key, turn a knob or hit a pad on your device. Messages appear here as they arrive, newest first.</span></p>
-				<div id="events-table" class="table-scroll" hidden><table aria-label="Incoming MIDI messages">
+				<div id="midi-state" aria-label="Current MIDI state per input and channel" hidden></div>
+				<div id="events-table"class="table-scroll" hidden><table aria-label="Incoming MIDI messages">
 					<thead><tr><th scope="col">Time (UTC)</th><th scope="col">From</th><th scope="col">Message</th><th scope="col">Raw bytes (hex)</th></tr></thead>
 					<tbody id="midi-events"></tbody>
 				</table></div>
@@ -208,6 +245,7 @@
 		</footer>
 		<script type="module">
 			import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail, unmatchedDeviceAgentPrompt, DEVICE_PROFILE_EMAIL } from "./midi-connections.js?v=__BUILD_COMMIT__"
+			import { MidiState, noteName, formatValue } from "./midi-state.js?v=__BUILD_COMMIT__"
 			import { createSvgControls } from "./svg-controls.js?v=__BUILD_COMMIT__"
 			const liveSurfaces = new Map()
 			const learnedMappings = new Map()
@@ -244,6 +282,20 @@
 			const monitorEmpty = document.getElementById("monitor-empty")
 			const eventsTable = document.getElementById("events-table")
 			const clearEvents = document.getElementById("clear-events")
+			const stateView = document.getElementById("midi-state")
+			const midiState = new MidiState()
+			const monitorSettings = { view: "state", format: "decimal", hold: "5000" }
+			try { Object.assign(monitorSettings, JSON.parse(localStorage.getItem("midi-monitor-settings") ?? "{}")) } catch { /* Storage may be blocked. */ }
+			for (const key of ["view", "format", "hold"]) {
+				const select = document.getElementById(`monitor-${key}`)
+				select.value = monitorSettings[key]
+				if (select.value !== monitorSettings[key]) monitorSettings[key] = select.value = select.options[0].value
+				select.addEventListener("change", () => {
+					monitorSettings[key] = select.value
+					try { localStorage.setItem("midi-monitor-settings", JSON.stringify(monitorSettings)) } catch { /* Storage may be blocked. */ }
+					renderEvents()
+				})
+			}
 			const midiOptions = document.getElementById("midi-options")
 			const steps = document.getElementById("steps")
 			let midiAccess
@@ -425,19 +477,76 @@
 			const renderEvents = () => {
 				clearTimeout(monitorTimer)
 				monitorTimer = undefined
-				eventBody.replaceChildren(...events.map((event) => {
+				const view = monitorSettings.view
+				if (view !== "state") eventBody.replaceChildren(...events.map((event) => {
 					const row = element("tr")
 					for (const value of [event.time, event.name, event.message, event.hex]) row.append(element("td", value))
 					return row
 				}))
 				const hasEvents = events.length > 0
-				eventsTable.hidden = clearEvents.hidden = !hasEvents
+				clearEvents.hidden = !hasEvents
+				eventsTable.hidden = !hasEvents || view === "state"
+				renderState(hasEvents && view !== "log")
 				monitorEmpty.hidden = hasEvents
 				if (receivedEvents) setStep(4)
 				eventStatus.textContent = hasEvents
 					? `${receivedEvents} ${receivedEvents === 1 ? "message" : "messages"} received · showing the latest ${events.length} · SysEx ${midiAccess?.sysexEnabled ? "on" : "off"}.`
 					: listeningText()
 				for (const [id, node] of activityNodes) node.textContent = activityText(id)
+			}
+			const bar = (value, max, { centered = false, pressure } = {}) => {
+				const track = element("div", undefined, centered ? "state-bar centered" : "state-bar")
+				const fill = element("span")
+				if (centered) {
+					const offset = (value - (max + 1) / 2) / ((max + 1) / 2) * 50
+					fill.style.left = `${50 + Math.min(0, offset)}%`
+					fill.style.width = `${Math.abs(offset)}%`
+				} else fill.style.width = `${value / max * 100}%`
+				track.append(fill)
+				if (pressure !== undefined) {
+					const after = element("span", undefined, "pressure")
+					after.style.width = `${pressure / 127 * 100}%`
+					track.append(after)
+				}
+				return track
+			}
+			const stateRow = (label, value, max, display, options = {}) => {
+				const row = element("div", undefined, options.off ? "state-row off" : "state-row")
+				row.append(element("span", label), bar(value, max, options), element("output", display))
+				return row
+			}
+			let stateTimer
+			const renderState = (visible) => {
+				clearTimeout(stateTimer)
+				stateView.hidden = !visible
+				if (!visible) return
+				const hold = Number(monitorSettings.hold), format = monitorSettings.format
+				midiState.expire(performance.now(), hold)
+				stateView.replaceChildren(...[...midiState.ports.values()].map((port) => {
+					const section = element("section", undefined, "state-port")
+					const heading = element("h3", port.name)
+					const { bpm, running } = port.clock
+					const clock = [running === undefined ? "" : running ? "▶ Playing" : "■ Stopped", bpm ? `${bpm.toFixed(1)} BPM` : ""].filter(Boolean).join(" · ")
+					if (clock) heading.append(element("span", clock, "state-clock"))
+					const channels = element("div", undefined, "state-channels")
+					for (const [number, channel] of [...port.channels].sort(([a], [b]) => a - b)) {
+						const box = element("div", undefined, "state-channel")
+						box.append(element("h4", `Channel ${number}`))
+						// Programs display 1-128 in decimal, as most hardware panels do.
+						if (channel.program) box.append(stateRow("PROG", channel.program.value, 127, format === "decimal" ? String(channel.program.value + 1) : formatValue(channel.program.value, format)))
+						if (channel.pitchBend) box.append(stateRow("BEND", channel.pitchBend.value, 16383, format === "decimal" ? String(channel.pitchBend.value - 8192) : formatValue(channel.pitchBend.value, format, 16383), { centered: true }))
+						if (channel.pressure) box.append(stateRow("PRESS", channel.pressure.value, 127, formatValue(channel.pressure.value, format)))
+						for (const note of [...channel.notes.values()].sort((a, b) => a.number - b.number)) {
+							box.append(stateRow(noteName(note.number), note.on ? note.velocity : 0, 127, note.on ? formatValue(note.velocity, format) : "off", { off: !note.on, pressure: note.pressure }))
+						}
+						for (const controller of [...channel.controllers.values()].sort((a, b) => a.number - b.number)) box.append(stateRow(`CC ${controller.number}`, controller.value, 127, formatValue(controller.value, format)))
+						channels.append(box)
+					}
+					section.append(heading, channels)
+					return section
+				}))
+				// Keep removing stale items while nothing new arrives.
+				if (hold && midiState.ports.size) stateTimer = setTimeout(() => renderState(monitorSettings.view !== "log" && events.length > 0), 500)
 			}
 			const listenToInputs = () => {
 				for (const [port, listener] of inputListeners) {
@@ -451,6 +560,7 @@
 					if (port.state !== "connected" || inputListeners.has(port)) continue
 					const listener = (event) => {
 						for (const { surface, inputs } of liveSurfaces.values()) if (inputs.includes(port)) surface.receive(event.data)
+						midiState.receive(port.id, port.name || port.id, event.data)
 						const time = new Date().toISOString().slice(11, 23)
 						const message = describeMidiMessage(event.data)
 						receivedEvents++
@@ -474,6 +584,7 @@
 			}
 			clearEvents.addEventListener("click", () => {
 				events.length = 0
+				midiState.clear()
 				receivedEvents = 0
 				inputActivity.clear()
 				renderEvents()
