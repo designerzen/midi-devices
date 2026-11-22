@@ -4,6 +4,37 @@ The catalogue is a static, read-only collection of JSON and XML files generated 
 
 Base URL: `https://designerzen.github.io/midi-devices/api/v1/`
 
+## Contents
+
+- [Quick start](#quick-start)
+- [Endpoints and response shapes](#endpoints-and-response-shapes)
+- [JSON Schemas](#json-schemas)
+- [XML format](#xml-format)
+- [Single-device query endpoint](#single-device-query-endpoint)
+- [Identifier matching](#identifier-matching)
+- [JavaScript client](#javascript-client)
+- [npm package](#npm-package)
+- [Hosting and reproducibility](#hosting-and-reproducibility)
+
+## Quick start
+
+Fetch one device:
+
+```sh
+curl https://designerzen.github.io/midi-devices/api/v1/devices/korg-minilogue.json
+```
+
+Find a device from the name of a Web MIDI port, without downloading the whole catalogue:
+
+```js
+const base = "https://designerzen.github.io/midi-devices/api/v1/"
+const slug = "minilogue KBD/KNOB".toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")
+const response = await fetch(new URL(`midi/${slug}.json`, base))
+const profile = response.ok ? await response.json() : undefined // undefined: no profile for this port
+```
+
+The [JavaScript client](#javascript-client) does this for you with `lookup()` and `match()`.
+
 ## Endpoints and response shapes
 
 Use GET requests. Every `.json` endpoint below also has an equivalent `.xml` URL. Static hosts serve these files directly; query parameters do not filter static files. For a single endpoint that selects a device with an `id` query parameter, use the optional Node host described below.
@@ -18,9 +49,36 @@ Use GET requests. Every `.json` endpoint below also has an equivalent `.xml` URL
 | `midi/{slug}.json` | The same full profile as the device endpoint, located through an identifier alias |
 | `ports.json` | Metadata and `byId`, `byName`, `bySlug` dictionaries mapping identifiers to device IDs |
 
-Metadata means `apiVersion` (`"v1"`), `dataVersion` (`<build package version>+<short commit>`), and `generated` (ISO timestamp). Metadata appears on collection responses and the port map, **not** individual device, manufacturer, or alias responses. On main, GitHub Actions automatically bumps the build package version using the committed base patch plus `GITHUB_RUN_NUMBER`, so each push has a distinct version. The displayed app version and `version.json` use the same build package version. Local and pull-request builds use the committed package version. See [version bumping](../README.md#bumping-the-version).
+Metadata means `apiVersion` (`"v1"`), `dataVersion` (`<build package version>+<short commit>`), and `generated` (ISO timestamp). Metadata appears on collection responses and the port map, **not** individual device, manufacturer, or alias responses. On main, GitHub Actions automatically bumps the build package version using the committed base patch plus `GITHUB_RUN_NUMBER`, so each push has a distinct version. The displayed app version and `version.json` use the same build package version. Local and pull-request builds use the committed package version. See [versions](development.md#versions).
 
-A summary contains `id`, `name`, `manufacturer`, `manufacturerId`, `description`, `abilities`, `ids`, `portNames`, and `links`, when supplied by the profile. Full profiles additionally contain control mappings, setup notices, documentation, GUI layout, and panel geometry. See [the profile guide](profiles.md).
+A summary contains `id`, `name`, `manufacturer`, `manufacturerId`, `description`, `abilities`, `ids`, `portNames`, and `links`, when supplied by the profile. This is the summary for one device in `index.json`:
+
+```json
+{
+  "id": "korg-minilogue",
+  "name": "Korg minilogue",
+  "manufacturer": "Korg",
+  "manufacturerId": "korg",
+  "description": "Four-voice analog synthesizer with MIDI panel control.",
+  "abilities": ["Velocity-sensitive keyboard", "Filter CC", "Envelope CC", "LFO CC"],
+  "ids": ["korg-minilogue"],
+  "portNames": ["minilogue", "minilogue KBD/KNOB", "minilogue SOUND"],
+  "links": {
+    "self": "https://designerzen.github.io/midi-devices/api/v1/devices/korg-minilogue.json",
+    "xml": "https://designerzen.github.io/midi-devices/api/v1/devices/korg-minilogue.xml",
+    "profile": "https://designerzen.github.io/midi-devices/korg/minilogue/korg-minilogue.json",
+    "base": "https://designerzen.github.io/midi-devices/korg/minilogue/",
+    "icon": "https://designerzen.github.io/midi-devices/korg/minilogue/icon.svg",
+    "panel": "https://designerzen.github.io/midi-devices/korg/minilogue/panel.svg",
+    "connections": "https://designerzen.github.io/midi-devices/korg/minilogue/connections.svg",
+    "interface": "https://designerzen.github.io/midi-devices/korg/minilogue/interface.svg",
+    "manufacturer": "https://designerzen.github.io/midi-devices/api/v1/manufacturers/korg.json",
+    "catalogue": "https://designerzen.github.io/midi-devices/#device-korg-minilogue"
+  }
+}
+```
+
+Full profiles also contain control mappings, setup notes, documentation, GUI layout and panel geometry. See [the profile guide](profiles.md).
 
 Company fields come from `devices/<manufacturer>/manufacturer.json`: `schemaVersion`, `id`, `name`, `description`, `url`, `logo`, `logoSource`, and `resources` (the descriptor's labelled `links` array). `logo` is relative to `links.base`. Manufacturer `links` include `self`, `xml`, `base`, `profile` (raw descriptor), an optional `logo` (absolute SVG URL when verified), and `catalogue` (company page with associated products).
 
@@ -159,6 +217,30 @@ for (const input of access.inputs.values()) {
 ```
 
 Web MIDI access requires browser support, a secure context, and user permission. Reading the catalogue itself does not require MIDI permission. A catalogue match identifies a profile; it does not establish that every listed control is available in the current hardware mode.
+
+## npm package
+
+The package contains the raw registry (`devices/`) and helpers for serving it. It does not contain the generated `api/v1/` responses.
+
+```sh
+npm install github:designerzen/midi-devices
+```
+
+```js
+import { MIDI_DEVICE_DIRECTORY, midiDeviceFolders, midiDeviceDirectory, createMidiDeviceStore, midiDeviceFilesPlugin } from "midi-devices"
+```
+
+| Export | Description |
+| --- | --- |
+| `MIDI_DEVICE_DIRECTORY` | Absolute path of the bundled `devices/` folder |
+| `midiDeviceFolders(root?)` | `{ id, path }` for every valid profile |
+| `midiDeviceDirectory(id, root?)` | Absolute folder of one device. Throws for unknown IDs |
+| `createMidiDeviceStore(getRoots)` | Reads registry files from one or more roots for Node or Electron. `getRoots` returns paths in priority order, and earlier roots win. The store has async `entries()` (sorted `{ id, path }`), `list()` (IDs) and `read(relative)` (`{ type, bytes }`, or `null` for missing or disallowed paths) |
+| `midiDeviceFilesPlugin()` | Vite plugin that serves the registry at `<base>midi-devices/` in development and copies it into the build |
+
+Raw files are exported too, for example `midi-devices/index.json`, `midi-devices/profile.schema.json` and `midi-devices/devices/korg/volca-fm/korg-volca-fm.json`.
+
+The main entry point uses Node filesystem APIs. In browser code, import `midi-devices/client.js` instead.
 
 ## Hosting and reproducibility
 

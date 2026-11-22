@@ -193,3 +193,11 @@ Seven additional profiles bring the catalogue to **212 devices from 43 device ma
 These are partial hardware inventories with selected-control panel/interface diagrams and grouped connection diagrams, not scale drawings. No browser aliases or fixed control assignments are assumed: choose profiles manually until port names have been verified. Controls and playing surfaces remain unbound; full CC/NRPN charts, SysEx editing and firmware-specific extensions are outside this expansion. Official manuals and support pages are linked from each profile. The Deluge schematic represents its shared main grid rather than display-specific operations.
 
 Sources checked on 20 November 2026: [UDO support and downloads](https://www.udo-audio.com/support-downloads), [Deluge specifications and manuals](https://synthstrom.com/product/deluge/), and [Melbourne Instruments support](https://www.melbourneinstruments.com/support).
+
+## Keyboard controllers, Launchpads, Circuit and KeyStep
+
+Alesis Q49 and Q49 MKII, M-Audio Keystation 49 and 61 MK3, Native Instruments KOMPLETE KONTROL A25 and A49, and Nektar SE49 and SE61 profiles cover basic performance messages. Their setup notes explain configurable controls, and you must select the profile manually where port names have not been verified.
+
+Novation Launchpad X has its documented Programmer-mode grid and button mappings, and its LPX MIDI port names. Launchpad Mini MK3, Circuit Tracks, Circuit Rhythm and the original Arturia KeyStep 37 have model-specific schematic panels and setup guidance. Their USB port names are unverified, so they need manual profile selection. Custom layouts and assignable encoders are left unbound rather than given assumed factory assignments.
+
+Superlative SB01, Roland V-STAGE 76 and 88, and the MIDI-equipped Korg ARP 2600 FS have source-backed controls and layouts. Original pre-MIDI instruments are not included. Every profile has a populated schematic panel. These drawings do not imply fixed MIDI assignments, and each profile's `diagramSources` records where its layout came from.

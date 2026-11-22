@@ -1,171 +1,146 @@
 # MIDI devices
 
-Open profiles for MIDI hardware: port names for auto-detection, MIDI control mappings, panel diagrams, icons, capabilities and setup notes. Any application can consume them.
+Open, machine-readable profiles for MIDI hardware. Each profile tells your app how to recognise a connected device by its port name, which CCs and notes its controls send, and how to draw its panel. Profiles also carry setup notes and links to manuals.
 
-**Browse the catalogue:** https://designerzen.github.io/midi-devices/
+- **222 device profiles** from 43 manufacturers, including synths, controllers, drum machines, MIDI interfaces and accessible instruments
+- **795 manufacturers**, covering every named entry in the [official MIDI SysEx ID registry](https://midi.org/sysexidtable)
+- A free, static **JSON and XML API**, plus a JavaScript client and an npm package
+- **SVG panel diagrams** with mapped hit areas, drawn with the [NYU SynthAccess](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides) tactile symbol set
 
-The test page displays the package version, deployed commit and build time. Each `npm run build` reads the commit from Cloudflare Pages (`CF_PAGES_COMMIT_SHA`), GitHub Actions (`GITHUB_SHA`), or the local Git checkout, so every newly built commit has its own build identifier. Build metadata is also available in `version.json`, and API collections use `<package version>+<short commit>` as their `dataVersion`. Compare the displayed commit with the linked latest `main` commit to check whether deployment has caught up. Configure Cloudflare Pages to run `npm run build` and publish `dist`. The generated `_headers` requests revalidation of the page and build metadata, and catalog JSON requests include the build commit to distinguish cached revisions.
+**[Browse the catalogue →](https://designerzen.github.io/midi-devices/)** Plug in a device and click *Detect connected devices* to see its profile, play it from the panel diagram and watch its MIDI live.
 
-## Bumping the version
+## Quick start
 
-Every push to `main` automatically runs `npm run version:build` before validation and building in GitHub Actions. It sets the CI package and lockfile version to `<major>.<minor>.<base patch + GITHUB_RUN_NUMBER>`: with a committed base of `1.0.1`, workflow runs 42 and 43 build `1.0.43` and `1.0.44`. The page, `version.json`, and API `dataVersion` all use this generated version. Manual workflow runs on main use the same mechanism; rerunning a workflow run preserves its version. Workflow numbers include pull-request runs, so deployed versions can skip numbers. Version changes stay in the CI checkout without creating commits or tags.
-
-Local and pull-request builds keep the committed package version. Use `npm run version:patch`, `npm run version:minor`, or `npm run version:major` to change the committed base version when needed; these update `package.json` and the local npm lockfile without creating a Git commit or tag. The API URL version (`api/v1`) and profile `schemaVersion` are separate format versions.
-
-Click **Detect connected devices** to show dedicated cards for every browser-visible MIDI input and output, including unmatched devices. Recognized profiles show hardware diagrams and capabilities; every card includes live port metadata and a session-only profile selector. Inputs are opened for monitoring, with per-input event counts and a live table of the latest 200 messages (UTC time, input name, decoded message, and raw hexadecimal bytes). Enable **Include SysEx** and refresh detection to request the additional browser permission. Connect/disconnect changes update the cards automatically. Input/output pairing is based on the available profile, name and manufacturer; Web MIDI does not supply a physical USB identity.
-
-Connected profiles use their SVG surface as a live control panel. Teal hit areas indicate mapped controls: press keys/pads, drag knobs/sliders vertically (Shift for finer adjustment), or use Tab, Space/Enter and arrow keys (Home/End for range limits). Incoming notes hold their highlight until note-off; incoming CC and other mapped messages flash amber and update the displayed value without being sent back to the device. Each card receives feedback only from its paired input and sends only to its displayed output. Select the hardware's MIDI channel; explicit per-control channels take precedence. Controller-only devices support feedback, and output-only devices support sending. Notes held by the page are released on pointer cancellation, lost focus, channel/profile changes and card removal; **Release notes** also releases them.
-
-For configurable or unbound controls, choose **Learn mapping**, select the SVG control, then press or move it on the hardware. The observed note, CC, pitch bend, program change or channel pressure mapping overrides that control for this card during the current page session, including its channel. Refreshing connections retains learned mappings for the same paired ports/profile; reloading the page clears them. MIDI-only mappings and virtual note defaults do not prove that a physical control transmits MIDI: consult the profile's setup notes. Receive-only instruments such as stock volcas cannot report physical panel movements. SysEx templates require **Include SysEx** permission. The page does not query or assume the device's initial parameter values.
-
-Unknown-device cards include **Create a device profile with an agent**, an expandable prompt with one-click text selection and a **Copy agent prompt** button. Paste it into an agent to work through missing model, firmware, routing and MIDI implementation details, create a schema-valid JSON profile with supporting assets, and email the completed files to the catalogue submission address. Agents without email access prepare files and an addressed draft. If clipboard access is unavailable, the prompt is selected for manual copying.
-
-Read the [complete API reference](docs/api.md) for response shapes, every client method, identifier matching, errors, caching, and self-hosting. The [profile and contribution guide](docs/profiles.md) explains MIDI mappings, panel geometry, and how to add devices and manufacturers.
-
-[JSON Schemas](docs/api.md#json-schemas) cover device profiles, manufacturers, raw directory indexes, the official SysEx registry and API v1 responses. They are published with the catalogue and available as package exports; validation runs on the raw data and generated API responses.
-
-The XML API includes an [XSD 1.1 schema and XSLT stylesheet](docs/api.md#xml-schema-and-xslt-stylesheet). For development tests, install the XML validator with `python -m pip install -r requirements-dev.txt` alongside the npm dependencies.
-
-See the [GitHub control-library research](docs/control-libraries.md) for Behringer Mini/Micro editors, deeper Circuit controls and Volca functionality. The catalogue includes ten Behringer Mini/Micro models, expanded Circuit-family CC mappings and additional Volca Sample 2 controls, with manufacturer sources and explicit stock-firmware and adapter requirements.
-
-See [classic MIDI and accessible hardware coverage](docs/coverage.md) for the DX7, D-50, JUNO-106, M1, TR-909 and other landmark devices, plus Soundbeam, Magic Flute, Skoog and Skwitch. The guide explains DIN MIDI interfaces, companion-app dependencies, and partial mappings.
-
-Teenage Engineering has 28 profiles, covering the OP synthesizers, MIDI-capable EP products, TX-6 and TP-7, POM-16/170, oplab interfaces and OP-Z expansions, ortho remote, all eight choir voices, and the CM-15 firmware endpoint. See [Teenage Engineering coverage](docs/coverage.md#teenage-engineering-midi-products) for connection requirements and mapping limits.
-
-Nord adds 13 current model profiles across Stage 4, Electro 7, Piano 6, Grand 2, Organ 3, Wave 2, Lead A1 and Drum 3P. The existing Clavia manufacturer entry now appears as Nord / Clavia Digital Instruments. See [Nord coverage](docs/coverage.md#nord-keyboards-and-percussion) for variants, MIDI routing and mapping limits.
-
-The catalogue includes Alesis Q49/Q49 MKII, M-Audio Keystation 49/61 MK3, Native Instruments KOMPLETE KONTROL A25/A49, and Nektar SE49/SE61. These keyboard profiles cover basic performance messages; their setup notes explain configurable controls and manual selection where port aliases have not been verified.
-
-Also included: Novation Launchpad Mini MK3, Launchpad X, Circuit Tracks, Circuit Rhythm, and the original Arturia KeyStep 37. Launchpad X provides its documented Programmer-mode grid and button mappings and LPX MIDI port aliases. The other four profiles provide model-specific schematic surfaces and setup guidance; their USB port names remain unverified and require manual profile selection. Custom layouts and assignable encoders are left unbound rather than given assumed factory assignments. Manufacturer manuals and MIDI setup references are linked in each profile.
-
-The catalogue contains **212 device profiles from 43 manufacturers**, plus a directory of **795 manufacturers**. The directory covers all **787 named SysEx manufacturer ID assignments** in the [official MIDI Association registry](https://midi.org/sysexidtable) snapshot retrieved on 19 November 2026. Reserved values and the ID-extension marker are excluded. Existing manufacturer names and artwork are preserved; newly imported entries link to the registry and have no device profiles, company website or logo until those are verified. See [manufacturer ID coverage](docs/coverage.md#official-midi-manufacturer-directory). The newest expansion adds Casio CT-S500/CT-S1000V, Studiologic SL73 Studio/SL88 Studio/SL88 Grand, OXI ONE MKII, Torso T1/S4, Faderfox EC4/UC4, Novation Launch Control XL 3 and Arturia BeatStep Pro. Five new manufacturers include company metadata and source-attributed logos. See [expanded manufacturer coverage](docs/coverage.md#expanded-manufacturer-and-controller-coverage) for setup and mapping limits.
-
-Yamaha now has 15 profiles: DX7, the four reface models, MONTAGE M6/M7/M8x, MODX6+/7+/8+, CK61/76/88 and SEQTRAK. The 13 new Yamaha entries include setup references and model-specific control and connection schematics; see [Yamaha coverage](docs/coverage.md#yamaha-keyboards-and-seqtrak) for mapping limits.
-
-CME additions include Xkey 25/37, Xkey Air 25/37, WIDI Master, WIDI Jack, WIDI Uhost, WIDI Bud Pro, U6MIDI Pro and H4MIDI WC, with company metadata, manufacturer artwork, setup references and schematic diagrams. See the [coverage guide](docs/coverage.md#cme-keyboards-and-midi-interfaces) for connection and mapping limits.
-
-The previous expansion adds Elektron Digitakt II and Syntakt; Waldorf Blofeld Desktop and Streichfett; Dreadbox Typhon and Nymphes; Polyend Play+ and Tracker Mini; Sonicware LIVEN XFM and LIVEN Lofi-12; and IK Multimedia iRig Keys 2 and iRig Keys 2 Mini. Each new manufacturer includes company metadata, website and support links, and a shared logo. The profiles include selected-control schematics, connection inventories and manufacturer references; the Typhon profile supplies selected documented firmware 4.2 CC mappings. See the [coverage guide](docs/coverage.md) for model differences and mapping limits.
-
-Other recent additions include Kontrol S49/S61/S88 MK3 and Maschine MK3 with NI Accessibility Helper setup guidance; SoftStep 2, 12 Step, QuNeo and original QuNexus for alternative foot or touch control; Launchkey 25/37/49/61 MK4, Launchpad Pro MK3, MPK mini IV and APC mini MK2. All include populated schematics and manufacturer references. See the [coverage guide](docs/coverage.md) for software dependencies, access methods and mapping limits.
-
-The latest expansion adds UDO Super 6, Super 6 Desktop, Super 8 and Super Gemini; Synthstrom Audible Deluge; and Melbourne Instruments NINA and DELIA. Their three company entries now include verified websites, product/support resources and source-attributed logos. Each profile includes setup references and selected-control/connection schematics. See [UDO, Synthstrom and Melbourne Instruments coverage](docs/coverage.md#udo-synthstrom-and-melbourne-instruments) for routing and mapping limits.
-
-## Layout
-
-Device diagrams use the [NYU SynthAccess tactile symbol vocabulary](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides): striped-ring knobs, distinct input/output/bidirectional jack shapes, switches, sliders and buttons. The catalogue includes source-backed controls and layouts for Superlative SB01, Roland V-STAGE 76/88 and the MIDI-equipped Korg ARP 2600 FS. Guide references are attached to the individual profiles. Original pre-MIDI instruments are not added as MIDI devices.
-
-Every profile has a populated schematic surface, including Push 2, MPC2000XL, TR-909, Magic Flute, Skoog, Skwitch and the Soundbeam family. Component views separate external sensors or playing faces for clarity. These simplified drawings do not imply fixed MIDI assignments; configurable and app-dependent controls remain unbound. Layout sources are recorded in each profile's `diagramSources`.
-
-```
-devices/
-  index.json                      [{ "id": "akai-mpk-mini-mk3", "path": "akai/mpk-mini-mk3" }, …]
-  profile.schema.json             JSON Schema (draft 2020-12) for every profile
-  manufacturer.schema.json        JSON Schema for company descriptors
-  manufacturers.json              complete manufacturer directory index
-  midi-manufacturers.json         official SysEx assignments and source snapshot metadata
-  <manufacturer>/manufacturer.json company name, description, website, resources and logo source
-  <manufacturer>/logo.svg          manufacturer logo shared by its devices
-  <manufacturer>/<model>/
-    <id>.json                     the device profile
-    icon.svg                      copy of the manufacturer logo (stable device asset URL)
-    panel.svg                     panel diagram; surface elements are positioned over it
-```
-
-The `id` inside each profile must match its filename. Asset paths inside a profile are relative to its folder.
-
-Icons use manufacturer brand artwork, with sources recorded in [resources/manufacturer-logos.json](resources/manufacturer-logos.json). Raster-only sources are traced into SVG paths. Manufacturer logos remain the property of their respective owners. The diagram generator copies each manufacturer's `logo.svg` to its device icons.
-
-Each manufacturer has a catalogue page at its folder URL, such as [`roland/`](https://designerzen.github.io/midi-devices/roland/). It shows a company information panel above every associated product in this catalogue. Product-card manufacturer links and the manufacturer selector open these pages. Company details come from `devices/<manufacturer>/manufacturer.json`, with verified logo paths relative to that folder; builds publish the raw descriptor alongside the page and include its metadata in the JSON/XML API. Manufacturer pages and the selector include entries without device profiles. These pages show official SysEx IDs and an empty device state; registry-only entries omit unverified websites and artwork.
-
-## API
-
-A static, read-only JSON and XML API is generated by `npm run build` and published with the site. Every `.json` endpoint below has an equivalent `.xml` URL, including a unique URL for each device. Generated `links` are absolute URLs; asset fields within profiles remain relative. CORS and HTTP caching depend on the deployment host.
-
-| Endpoint | Returns |
-| --- | --- |
-| [`api/v1/index.json`](https://designerzen.github.io/midi-devices/api/v1/index.json) | Endpoint links and a summary of every device (name, manufacturer, abilities, port names, links) |
-| `api/v1/devices.json` | Every full profile in one response |
-| `api/v1/devices/{id}.json` | One full profile plus `manufacturerId` and `links` (`profile`, `icon`, `panel`, `base`, `catalogue`) |
-| `api/v1/manufacturers.json` | Manufacturers with device counts and IDs |
-| `api/v1/manufacturers/{id}.json` | One manufacturer with summaries of its devices |
-| `api/v1/midi/{slug}.json` | The full profile for a device ID or Web MIDI port name, slugged: lowercase, other characters become `-` (`MPK mini 3` → [`midi/mpk-mini-3.json`](https://designerzen.github.io/midi-devices/api/v1/midi/mpk-mini-3.json)) |
-| `api/v1/ports.json` | `byId`, `byName` and `bySlug` maps from lowercased Web MIDI port IDs and names to device IDs |
-
-Relative asset paths inside a profile (`icon`, `surface.src`, GUI element `src`) resolve against `links.base`. Collection responses and the port map carry `apiVersion` and `dataVersion`; individual device and manufacturer responses do not. Breaking changes to the shape will move to a new `api/v2/`.
-
-For a single query endpoint, run `npm start` (Node 22+) and request `/api/v1/device?id=korg-minilogue&format=json` or `&format=xml` on `http://127.0.0.1:3000`. It serves only the requested device from the generated files. JSON is the default. GitHub Pages serves the static files; the query endpoint requires the Node host. See [query endpoint and XML details](docs/api.md#single-device-query-endpoint).
-
-### JavaScript client
+Identify a connected device and read its controls. This runs in any browser that supports Web MIDI and needs no API key or install:
 
 ```js
 import { createMidiDevicesClient } from "https://designerzen.github.io/midi-devices/client.js"
 
 const devices = createMidiDevicesClient()
-await devices.list()                      // summaries
-await devices.device("korg-minilogue")    // full profile, or undefined
-await devices.lookup("MPK mini 3")        // full profile by device ID or port name
-await devices.manufacturer("roland")
-await devices.search("roland drum")
-
 const access = await navigator.requestMIDIAccess()
-for (const port of access.inputs.values()) {
-	const id = await devices.match(port)  // device ID for a connected port
+
+for (const input of access.inputs.values()) {
+	const id = await devices.match(input) // "korg-minilogue", or undefined if unknown
+	if (!id) continue
+	const profile = await devices.device(id)
+	console.log(profile.name, profile.controls)
+	// Korg minilogue [{ id: "cutoff", label: "Filter cutoff", cc: 43, widget: "slider" }, …]
 }
 ```
 
-`createMidiDevicesClient({ baseUrl, fetch })` accepts another API location (for example a pinned jsDelivr copy) and a custom `fetch`.
-
-## Using the raw files
-
-### Over HTTP
-
-The `devices/` folder is published as the site root, with CORS enabled:
+Without Web MIDI, look a device up by name, or search the catalogue:
 
 ```js
-const registry = "https://designerzen.github.io/midi-devices/"
-const index = await (await fetch(new URL("index.json", registry))).json()
-const { id, path } = index[0]
-const profile = await (await fetch(new URL(`${path}/${id}.json`, registry))).json()
-const icon = new URL(`${path}/${profile.icon ?? "icon.svg"}`, registry).href
+await devices.lookup("MPK mini 3")     // full profile, by device ID or port name
+await devices.search("roland drum")    // summaries matching every word
 ```
 
-Pinned versions are available from jsDelivr: `https://cdn.jsdelivr.net/gh/designerzen/midi-devices@<tag-or-sha>/devices/index.json`.
+## What a profile contains
 
-### As a package
+Every device is one JSON file. A shortened example:
+
+```json
+{
+	"id": "korg-minilogue",
+	"name": "Korg minilogue",
+	"manufacturer": "Korg",
+	"portNames": ["minilogue", "minilogue KBD/KNOB", "minilogue SOUND"],
+	"abilities": ["Velocity-sensitive keyboard", "Filter CC", "Envelope CC", "LFO CC"],
+	"controls": [
+		{ "id": "cutoff", "label": "Filter cutoff", "cc": 43, "widget": "slider" },
+		{ "id": "resonance", "label": "Filter resonance", "cc": 44, "widget": "slider" }
+	],
+	"surface": { "src": "panel.svg", "elements": ["…"] },
+	"notice": "Setup steps and known limits",
+	"documentation": ["Links to manuals and MIDI implementation charts"]
+}
+```
+
+| Field | Use it to |
+| --- | --- |
+| `portNames`, `ids` | Recognise the device from a Web MIDI port name |
+| `controls` | Send or decode the device's CCs, notes, pitch bend, program changes and SysEx |
+| `surface`, `gui` | Draw the panel and place interactive controls on it |
+| `abilities`, `modes`, `notice` | Show what the device can do and how to set it up |
+| `documentation`, `productUrl` | Link to the manufacturer's manuals and product pages |
+
+Profiles only record mappings that have a documented source. Configurable controls are left unbound rather than guessed. The [profile guide](docs/profiles.md) defines every field, and [`profile.schema.json`](devices/profile.schema.json) validates them.
+
+## Ways to use the data
+
+### 1. The HTTP API
+
+Base URL: `https://designerzen.github.io/midi-devices/api/v1/`. Every endpoint is also available as `.xml`.
+
+| Endpoint | Returns |
+| --- | --- |
+| [`index.json`](https://designerzen.github.io/midi-devices/api/v1/index.json) | A summary of every device, with links to everything else |
+| `devices/{id}.json` | One full profile, for example [`devices/korg-minilogue.json`](https://designerzen.github.io/midi-devices/api/v1/devices/korg-minilogue.json) |
+| `midi/{slug}.json` | A full profile found by port name: `MPK mini 3` becomes [`midi/mpk-mini-3.json`](https://designerzen.github.io/midi-devices/api/v1/midi/mpk-mini-3.json) |
+| `ports.json` | Maps from port IDs and names to device IDs |
+| `devices.json` | Every full profile in one response |
+| `manufacturers.json`, `manufacturers/{id}.json` | Companies, their SysEx IDs and their devices |
+
+```sh
+curl https://designerzen.github.io/midi-devices/api/v1/devices/korg-minilogue.json
+```
+
+The [API reference](docs/api.md) documents every response shape, the JSON Schemas, the XML format, errors and self-hosting.
+
+### 2. The JavaScript client
+
+`client.js` wraps the API, with caching and port matching. Import it from the site as in the quick start, or from the package as `midi-devices/client.js`. See the [client reference](docs/api.md#javascript-client).
+
+### 3. The npm package
+
+The package bundles the raw profiles and assets, so your app works offline:
 
 ```sh
 npm install github:designerzen/midi-devices
 ```
 
 ```js
-import { MIDI_DEVICE_DIRECTORY, midiDeviceFolders, createMidiDeviceStore, midiDeviceFilesPlugin } from "midi-devices"
+import { midiDeviceFolders, createMidiDeviceStore, midiDeviceFilesPlugin } from "midi-devices"
+import minilogue from "midi-devices/devices/korg/minilogue/korg-minilogue.json" with { type: "json" }
 ```
 
-- `MIDI_DEVICE_DIRECTORY`: absolute path of `devices/`.
-- `midiDeviceFolders(root?)`: `{ id, path }` for every valid profile.
-- `midiDeviceDirectory(id, root?)`: absolute device folder; throws for unknown IDs.
-- `createMidiDeviceStore(getRoots)`: reads registry files from one or more roots (earlier roots win), for serving from Node or Electron.
-- `midiDeviceFilesPlugin()`: Vite plugin that serves the registry at `<base>midi-devices/` in development and copies it into the build.
+It provides directory helpers for Node, a file store for Node or Electron, and a Vite plugin. The [package reference](docs/api.md#npm-package) describes each one.
 
-Raw files are also exported, e.g. `midi-devices/index.json`, `midi-devices/profile.schema.json` and `midi-devices/devices/korg/volca-fm/korg-volca-fm.json`.
+### 4. The raw files
 
-The Node entry point uses filesystem APIs; browser applications should import `midi-devices/client.js` instead. A store exposes asynchronous `entries()` (sorted `{ id, path }` records), `list()` (IDs), and `read(relative)` (`{ type, bytes }` or `null` for missing or disallowed paths). Its roots callback returns filesystem paths in priority order. The Vite plugin serves raw profiles and assets, rather than the generated versioned API.
+The `devices/` folder is published at the site root, and you can pin a version through jsDelivr:
 
-## Documentation entry points
+```text
+https://designerzen.github.io/midi-devices/index.json
+https://cdn.jsdelivr.net/gh/designerzen/midi-devices@<tag-or-sha>/devices/index.json
+```
 
-- [Package manifest](package.json): current version, exports and supported commands.
-- [Profile schema](devices/profile.schema.json) and [profile contributions](docs/profiles.md): field contracts and validation.
-- [API guide](docs/api.md): static JSON/XML and the optional Node query endpoint.
-- [Coverage and limits](docs/coverage.md): device-specific scope and mapping caveats.
-- [Control libraries](docs/control-libraries.md): rendering/control integration references.
+## Contributing a device
 
-Harmoneasy consumes this package through its asset plugin and audiobus profile adapters. Its deployed AI documentation mirrors these guides from the checked-out submodule; repository branch tips and a deployed app can contain different profile versions.
+Missing your hardware? Detect it on the [catalogue page](https://designerzen.github.io/midi-devices/). An unknown device's card includes a ready-made prompt that guides an AI agent through writing its profile, or you can email its port details.
 
-## Adding a device
+To add a profile yourself:
 
-1. Create `devices/<manufacturer>/<model>/` with `<id>.json`, `icon.svg` and `panel.svg`. Folder and file names are lowercase kebab-case.
-2. Set `"$schema": "../../profile.schema.json"` in the profile to get editor completion.
-3. Run `npm install`, then `npm run build` to regenerate `devices/index.json` and `npm run validate` to check it.
-4. `npm run preview` serves the catalogue locally.
+1. Find the manufacturer's manual and MIDI implementation chart. Map only messages they document.
+2. Create `devices/<manufacturer>/<model>/<id>.json` with `icon.svg` and `panel.svg` beside it. Set `"$schema": "../../profile.schema.json"` in the profile for editor completion.
+3. Run `npm ci`, then `npm run build` to regenerate `devices/index.json`, then `npm test` to validate everything.
+4. Run `npm run preview` to see the device in the catalogue, then open a pull request.
 
-Pushes to `main` are validated and published to GitHub Pages.
+The [profile guide](docs/profiles.md) explains MIDI mappings, panel geometry and sourcing rules. The [development guide](docs/development.md) covers the build, tests and releases.
+
+## Documentation
+
+| Guide | Covers |
+| --- | --- |
+| [API reference](docs/api.md) | Endpoints, response shapes, schemas, XML, the client, the npm package and self-hosting |
+| [Profile guide](docs/profiles.md) | Profile fields, MIDI mappings, panel layout, and adding devices and manufacturers |
+| [Catalogue app](docs/catalogue-app.md) | Device detection, the live control panel, mapping learn mode and the MIDI monitor |
+| [Device coverage](docs/coverage.md) | Which devices are included, and their setup requirements and mapping limits |
+| [Control-library research](docs/control-libraries.md) | Sources for the Behringer, Circuit and Volca mappings |
+| [Development](docs/development.md) | Building, testing, versioning and deployment |
+
+[Harmoneasy](https://github.com/designerzen/harmoneasy) uses this package through its asset plugin and audiobus profile adapters, and mirrors these guides in its AI documentation. Its deployed app can carry a different profile version from this repository's `main` branch.
+
+## Trademarks
+
+Manufacturer names and logos belong to their owners and are used only to identify their products. Logo sources are recorded in [`resources/manufacturer-logos.json`](resources/manufacturer-logos.json).
