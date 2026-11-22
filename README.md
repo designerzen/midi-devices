@@ -151,6 +151,16 @@ Raw files are also exported, e.g. `midi-devices/index.json`, `midi-devices/profi
 
 The Node entry point uses filesystem APIs; browser applications should import `midi-devices/client.js` instead. A store exposes asynchronous `entries()` (sorted `{ id, path }` records), `list()` (IDs), and `read(relative)` (`{ type, bytes }` or `null` for missing or disallowed paths). Its roots callback returns filesystem paths in priority order. The Vite plugin serves raw profiles and assets, rather than the generated versioned API.
 
+## Documentation entry points
+
+- [Package manifest](package.json): current version, exports and supported commands.
+- [Profile schema](devices/profile.schema.json) and [profile contributions](docs/profiles.md): field contracts and validation.
+- [API guide](docs/api.md): static JSON/XML and the optional Node query endpoint.
+- [Coverage and limits](docs/coverage.md): device-specific scope and mapping caveats.
+- [Control libraries](docs/control-libraries.md): rendering/control integration references.
+
+Harmoneasy consumes this package through its asset plugin and audiobus profile adapters. Its deployed AI documentation mirrors these guides from the checked-out submodule; repository branch tips and a deployed app can contain different profile versions.
+
 ## Adding a device
 
 1. Create `devices/<manufacturer>/<model>/` with `<id>.json`, `icon.svg` and `panel.svg`. Folder and file names are lowercase kebab-case.
