@@ -1,0 +1,634 @@
+{
+	"schemaVersion": 1,
+	"id": "korg-nanokontrol2",
+	"name": "Korg nanoKONTROL2",
+	"manufacturer": "Korg",
+	"manufacturerUrl": "https://www.korg.com/",
+	"productUrl": "https://www.korg.com/us/products/computergear/nanokontrol2/page_1.php",
+	"description": "USB control surface with eight faders, eight knobs and channel/transport buttons.",
+	"ids": [
+		"korg-nanokontrol2"
+	],
+	"portNames": [
+		"nanoKONTROL2",
+		"nanoKONTROL2 SLIDER/KNOB",
+		"nanoKONTROL2 CTRL",
+		"nanoKONTROL2 1 SLIDER/KNOB",
+		"nanoKONTROL2 1 CTRL"
+	],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Korg nanoKONTROL2 official hardware / MIDI reference",
+			"url": "https://www.korg.com/us/products/computergear/nanokontrol2/page_1.php"
+		},
+		{
+			"title": "Korg nanoKONTROL2 official hardware / MIDI reference",
+			"url": "https://cdn.korg.com/us/support/download/files/b61f4da2e9b32e7825edc729e7d71a0d.pdf"
+		},
+		{
+			"title": "Korg nanoKONTROL2 official hardware / MIDI reference",
+			"url": "https://cdn.korg.com/us/support/download/files/2a079f43dd62e84294672a8b46649db6.pdf"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"Configurable playing surface"
+	],
+	"hardwareControls": [
+		"TRANSPORT: Rewind, Forward, Stop, Play, Record, Cycle, Track -, Track +, Marker",
+		"CHANNEL STRIPS: Knob 1, Knob 2, Knob 3, Knob 4, Knob 5, Knob 6, Knob 7, Knob 8, Fader 1, Fader 2, Fader 3, Fader 4, Fader 5, Fader 6, Fader 7, Fader 8, Solo 1, Solo 2, Solo 3, Solo 4, Solo 5, Solo 6, Solo 7, Solo 8, Mute 1, Mute 2, Mute 3, Mute 4, Mute 5, Mute 6, Mute 7, Mute 8, Record 1, Record 2, Record 3, Record 4, Record 5, Record 6, Record 7, Record 8"
+	],
+	"notice": "Select CC mode for general MIDI control. DAW-specific modes use a separate protocol; do not assume those messages are ordinary CCs. SLIDER/KNOB is the performance endpoint; CTRL is for the editor. Physical controls and keys remain unbound because presets, modes and octave settings determine messages. Diagrams are selected-control schematics, not dimensioned panel drawings. Port names are recorded only when documented; otherwise detection uses an unambiguous complete model name or manual selection.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Korg nanoKONTROL2 selected controls"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 670,
+		"elements": [
+			{
+				"id": "transport-rewind",
+				"label": "TRANSPORT: Rewind",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 14.17910447761194,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "transport-forward",
+				"label": "TRANSPORT: Forward",
+				"kind": "button",
+				"position": {
+					"x": 10.714285714285714,
+					"y": 14.17910447761194,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "transport-stop",
+				"label": "TRANSPORT: Stop",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 29.55223880597015,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "transport-play",
+				"label": "TRANSPORT: Play",
+				"kind": "button",
+				"position": {
+					"x": 10.714285714285714,
+					"y": 29.55223880597015,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "transport-record",
+				"label": "TRANSPORT: Record",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 44.92537313432835,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "transport-cycle",
+				"label": "TRANSPORT: Cycle",
+				"kind": "button",
+				"position": {
+					"x": 10.714285714285714,
+					"y": 44.92537313432835,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "transport-track",
+				"label": "TRANSPORT: Track -",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 60.298507462686565,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "transport-track-2",
+				"label": "TRANSPORT: Track +",
+				"kind": "button",
+				"position": {
+					"x": 10.714285714285714,
+					"y": 60.298507462686565,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "transport-marker",
+				"label": "TRANSPORT: Marker",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 75.67164179104478,
+					"width": 8.5,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-knob-1",
+				"label": "CHANNEL STRIPS: Knob 1",
+				"kind": "knob",
+				"position": {
+					"x": 21.5,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-knob-2",
+				"label": "CHANNEL STRIPS: Knob 2",
+				"kind": "knob",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-knob-3",
+				"label": "CHANNEL STRIPS: Knob 3",
+				"kind": "knob",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-knob-4",
+				"label": "CHANNEL STRIPS: Knob 4",
+				"kind": "knob",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-knob-5",
+				"label": "CHANNEL STRIPS: Knob 5",
+				"kind": "knob",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-knob-6",
+				"label": "CHANNEL STRIPS: Knob 6",
+				"kind": "knob",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-knob-7",
+				"label": "CHANNEL STRIPS: Knob 7",
+				"kind": "knob",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-knob-8",
+				"label": "CHANNEL STRIPS: Knob 8",
+				"kind": "knob",
+				"position": {
+					"x": 88.25,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-fader-1",
+				"label": "CHANNEL STRIPS: Fader 1",
+				"kind": "fader",
+				"position": {
+					"x": 21.5,
+					"y": 29.55223880597015,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-fader-2",
+				"label": "CHANNEL STRIPS: Fader 2",
+				"kind": "fader",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 29.55223880597015,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-fader-3",
+				"label": "CHANNEL STRIPS: Fader 3",
+				"kind": "fader",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 29.55223880597015,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-fader-4",
+				"label": "CHANNEL STRIPS: Fader 4",
+				"kind": "fader",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 29.55223880597015,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-fader-5",
+				"label": "CHANNEL STRIPS: Fader 5",
+				"kind": "fader",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 29.55223880597015,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-fader-6",
+				"label": "CHANNEL STRIPS: Fader 6",
+				"kind": "fader",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 29.55223880597015,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-fader-7",
+				"label": "CHANNEL STRIPS: Fader 7",
+				"kind": "fader",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 29.55223880597015,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-fader-8",
+				"label": "CHANNEL STRIPS: Fader 8",
+				"kind": "fader",
+				"position": {
+					"x": 88.25,
+					"y": 29.55223880597015,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-solo-1",
+				"label": "CHANNEL STRIPS: Solo 1",
+				"kind": "button",
+				"position": {
+					"x": 21.5,
+					"y": 44.92537313432835,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-solo-2",
+				"label": "CHANNEL STRIPS: Solo 2",
+				"kind": "button",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 44.92537313432835,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-solo-3",
+				"label": "CHANNEL STRIPS: Solo 3",
+				"kind": "button",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 44.92537313432835,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-solo-4",
+				"label": "CHANNEL STRIPS: Solo 4",
+				"kind": "button",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 44.92537313432835,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-solo-5",
+				"label": "CHANNEL STRIPS: Solo 5",
+				"kind": "button",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 44.92537313432835,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-solo-6",
+				"label": "CHANNEL STRIPS: Solo 6",
+				"kind": "button",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 44.92537313432835,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-solo-7",
+				"label": "CHANNEL STRIPS: Solo 7",
+				"kind": "button",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 44.92537313432835,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-solo-8",
+				"label": "CHANNEL STRIPS: Solo 8",
+				"kind": "button",
+				"position": {
+					"x": 88.25,
+					"y": 44.92537313432835,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-mute-1",
+				"label": "CHANNEL STRIPS: Mute 1",
+				"kind": "button",
+				"position": {
+					"x": 21.5,
+					"y": 60.298507462686565,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-mute-2",
+				"label": "CHANNEL STRIPS: Mute 2",
+				"kind": "button",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 60.298507462686565,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-mute-3",
+				"label": "CHANNEL STRIPS: Mute 3",
+				"kind": "button",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 60.298507462686565,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-mute-4",
+				"label": "CHANNEL STRIPS: Mute 4",
+				"kind": "button",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 60.298507462686565,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-mute-5",
+				"label": "CHANNEL STRIPS: Mute 5",
+				"kind": "button",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 60.298507462686565,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-mute-6",
+				"label": "CHANNEL STRIPS: Mute 6",
+				"kind": "button",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 60.298507462686565,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-mute-7",
+				"label": "CHANNEL STRIPS: Mute 7",
+				"kind": "button",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 60.298507462686565,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-mute-8",
+				"label": "CHANNEL STRIPS: Mute 8",
+				"kind": "button",
+				"position": {
+					"x": 88.25,
+					"y": 60.298507462686565,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-record-1",
+				"label": "CHANNEL STRIPS: Record 1",
+				"kind": "button",
+				"position": {
+					"x": 21.5,
+					"y": 75.67164179104478,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-record-2",
+				"label": "CHANNEL STRIPS: Record 2",
+				"kind": "button",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 75.67164179104478,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-record-3",
+				"label": "CHANNEL STRIPS: Record 3",
+				"kind": "button",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 75.67164179104478,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-record-4",
+				"label": "CHANNEL STRIPS: Record 4",
+				"kind": "button",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 75.67164179104478,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-record-5",
+				"label": "CHANNEL STRIPS: Record 5",
+				"kind": "button",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 75.67164179104478,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-record-6",
+				"label": "CHANNEL STRIPS: Record 6",
+				"kind": "button",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 75.67164179104478,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-record-7",
+				"label": "CHANNEL STRIPS: Record 7",
+				"kind": "button",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 75.67164179104478,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			},
+			{
+				"id": "channel-strips-record-8",
+				"label": "CHANNEL STRIPS: Record 8",
+				"kind": "button",
+				"position": {
+					"x": 88.25,
+					"y": 75.67164179104478,
+					"width": 9.535714285714286,
+					"height": 15.37313432835821
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "Mini USB",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://www.korg.com/us/products/computergear/nanokontrol2/page_1.php",
+		"https://cdn.korg.com/us/support/download/files/b61f4da2e9b32e7825edc729e7d71a0d.pdf",
+		"https://cdn.korg.com/us/support/download/files/2a079f43dd62e84294672a8b46649db6.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

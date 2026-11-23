@@ -1,0 +1,978 @@
+{
+	"schemaVersion": 1,
+	"id": "arturia-keystep-pro",
+	"name": "Arturia KeyStep Pro",
+	"manufacturer": "Arturia",
+	"manufacturerUrl": "https://www.arturia.com/",
+	"productUrl": "https://www.arturia.com/products/hybrid-synths/keystep-pro/details",
+	"description": "37-key four-track sequencer and controller with MIDI and CV/gate outputs.",
+	"ids": [
+		"arturia-keystep-pro"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Arturia KeyStep Pro official hardware / MIDI reference",
+			"url": "https://www.arturia.com/products/hybrid-synths/keystep-pro/details"
+		},
+		{
+			"title": "Arturia KeyStep Pro official hardware / MIDI reference",
+			"url": "https://support.arturia.com/hc/en-us/articles/4405741087634-KeyStep-Pro-Keyboard-Peripherals"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"Velocity-sensitive keyboard"
+	],
+	"hardwareControls": [
+		"37 keys",
+		"TRANSPORT / TRACKS: Display, Tempo, Track 1, Track 2, Track 3, Track 4, Record, Stop, Play",
+		"SEQUENCER: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16"
+	],
+	"notice": "Configure each sequencer track MIDI channel and USB/DIN routing in Utility or MIDI Control Center. Output 2 can be configured as thru. CV and analog clock sockets do not carry MIDI. Physical controls and keys remain unbound because presets, modes and octave settings determine messages. Diagrams are selected-control schematics, not dimensioned panel drawings. Port names are recorded only when documented; otherwise detection uses an unambiguous complete model name or manual selection.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Arturia KeyStep Pro selected controls"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 750,
+		"elements": [
+			{
+				"id": "transport-tracks-display",
+				"label": "TRANSPORT / TRACKS: Display",
+				"kind": "screen",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 12.666666666666668,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "transport-tracks-tempo",
+				"label": "TRANSPORT / TRACKS: Tempo",
+				"kind": "knob",
+				"position": {
+					"x": 11.328571428571427,
+					"y": 12.666666666666668,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "transport-tracks-track-1",
+				"label": "TRANSPORT / TRACKS: Track 1",
+				"kind": "button",
+				"position": {
+					"x": 20.442857142857143,
+					"y": 12.666666666666668,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "transport-tracks-track-2",
+				"label": "TRANSPORT / TRACKS: Track 2",
+				"kind": "button",
+				"position": {
+					"x": 29.557142857142853,
+					"y": 12.666666666666668,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "transport-tracks-track-3",
+				"label": "TRANSPORT / TRACKS: Track 3",
+				"kind": "button",
+				"position": {
+					"x": 38.67142857142857,
+					"y": 12.666666666666668,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "transport-tracks-track-4",
+				"label": "TRANSPORT / TRACKS: Track 4",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 30.333333333333336,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "transport-tracks-record",
+				"label": "TRANSPORT / TRACKS: Record",
+				"kind": "button",
+				"position": {
+					"x": 11.328571428571427,
+					"y": 30.333333333333336,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "transport-tracks-stop",
+				"label": "TRANSPORT / TRACKS: Stop",
+				"kind": "button",
+				"position": {
+					"x": 20.442857142857143,
+					"y": 30.333333333333336,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "transport-tracks-play",
+				"label": "TRANSPORT / TRACKS: Play",
+				"kind": "button",
+				"position": {
+					"x": 29.557142857142853,
+					"y": 30.333333333333336,
+					"width": 9.114285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-1",
+				"label": "SEQUENCER: 1",
+				"kind": "button",
+				"position": {
+					"x": 50.07142857142857,
+					"y": 12.666666666666668,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-2",
+				"label": "SEQUENCER: 2",
+				"kind": "button",
+				"position": {
+					"x": 56.03571428571429,
+					"y": 12.666666666666668,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-3",
+				"label": "SEQUENCER: 3",
+				"kind": "button",
+				"position": {
+					"x": 62.0,
+					"y": 12.666666666666668,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-4",
+				"label": "SEQUENCER: 4",
+				"kind": "button",
+				"position": {
+					"x": 67.96428571428571,
+					"y": 12.666666666666668,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-5",
+				"label": "SEQUENCER: 5",
+				"kind": "button",
+				"position": {
+					"x": 73.92857142857143,
+					"y": 12.666666666666668,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-6",
+				"label": "SEQUENCER: 6",
+				"kind": "button",
+				"position": {
+					"x": 79.89285714285714,
+					"y": 12.666666666666668,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-7",
+				"label": "SEQUENCER: 7",
+				"kind": "button",
+				"position": {
+					"x": 85.85714285714286,
+					"y": 12.666666666666668,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-8",
+				"label": "SEQUENCER: 8",
+				"kind": "button",
+				"position": {
+					"x": 91.82142857142857,
+					"y": 12.666666666666668,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-9",
+				"label": "SEQUENCER: 9",
+				"kind": "button",
+				"position": {
+					"x": 50.07142857142857,
+					"y": 30.333333333333336,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-10",
+				"label": "SEQUENCER: 10",
+				"kind": "button",
+				"position": {
+					"x": 56.03571428571429,
+					"y": 30.333333333333336,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-11",
+				"label": "SEQUENCER: 11",
+				"kind": "button",
+				"position": {
+					"x": 62.0,
+					"y": 30.333333333333336,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-12",
+				"label": "SEQUENCER: 12",
+				"kind": "button",
+				"position": {
+					"x": 67.96428571428571,
+					"y": 30.333333333333336,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-13",
+				"label": "SEQUENCER: 13",
+				"kind": "button",
+				"position": {
+					"x": 73.92857142857143,
+					"y": 30.333333333333336,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-14",
+				"label": "SEQUENCER: 14",
+				"kind": "button",
+				"position": {
+					"x": 79.89285714285714,
+					"y": 30.333333333333336,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-15",
+				"label": "SEQUENCER: 15",
+				"kind": "button",
+				"position": {
+					"x": 85.85714285714286,
+					"y": 30.333333333333336,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "sequencer-16",
+				"label": "SEQUENCER: 16",
+				"kind": "button",
+				"position": {
+					"x": 91.82142857142857,
+					"y": 30.333333333333336,
+					"width": 5.964285714285714,
+					"height": 17.666666666666668
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 2.142857142857143,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 6.493506493506493,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 10.844155844155843,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 15.194805194805195,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 19.545454545454543,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 23.89610389610389,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 28.246753246753247,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 32.5974025974026,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 36.94805194805195,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 41.298701298701296,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 45.649350649350644,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 50.0,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 54.35064935064935,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 58.7012987012987,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Key 25",
+				"kind": "key",
+				"position": {
+					"x": 63.051948051948045,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Key 27",
+				"kind": "key",
+				"position": {
+					"x": 67.4025974025974,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-29",
+				"label": "Key 29",
+				"kind": "key",
+				"position": {
+					"x": 71.75324675324674,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-30",
+				"label": "Key 30",
+				"kind": "key",
+				"position": {
+					"x": 76.1038961038961,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-32",
+				"label": "Key 32",
+				"kind": "key",
+				"position": {
+					"x": 80.45454545454544,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-34",
+				"label": "Key 34",
+				"kind": "key",
+				"position": {
+					"x": 84.8051948051948,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-36",
+				"label": "Key 36",
+				"kind": "key",
+				"position": {
+					"x": 89.15584415584415,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-37",
+				"label": "Key 37",
+				"kind": "key",
+				"position": {
+					"x": 93.5064935064935,
+					"y": 56.00000000000001,
+					"width": 4.350649350649351,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 5.144805194805195,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 9.495454545454546,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 18.196753246753246,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 22.5474025974026,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 26.89805194805195,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 35.59935064935065,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 39.949999999999996,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 48.65129870129869,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 53.001948051948055,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 57.3525974025974,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Key 26",
+				"kind": "key",
+				"position": {
+					"x": 66.0538961038961,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-28",
+				"label": "Key 28",
+				"kind": "key",
+				"position": {
+					"x": 70.40454545454546,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-31",
+				"label": "Key 31",
+				"kind": "key",
+				"position": {
+					"x": 79.10584415584415,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-33",
+				"label": "Key 33",
+				"kind": "key",
+				"position": {
+					"x": 83.45649350649352,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-35",
+				"label": "Key 35",
+				"kind": "key",
+				"position": {
+					"x": 87.80714285714285,
+					"y": 56.00000000000001,
+					"width": 2.697402597402597,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-B",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "MIDI input",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "MIDI output 1",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "MIDI output 2 / thru",
+			"connector": "5-pin DIN",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Clock input",
+			"connector": "3.5 mm sync",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Clock output",
+			"connector": "3.5 mm sync",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Reset output",
+			"connector": "3.5 mm sync",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Sustain pedal",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Metronome output",
+			"connector": "3.5 mm audio",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "DC power",
+			"connector": "12 V DC",
+			"direction": "input",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 1 pitch",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 1 velocity",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 1 gate",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 2 pitch",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 2 velocity",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 2 gate",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 3 pitch",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 3 velocity",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 3 gate",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 4 pitch",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 4 velocity",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Voice 4 gate",
+			"connector": "3.5 mm CV/gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Drum gate 1",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Drum gate 2",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Drum gate 3",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Drum gate 4",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Drum gate 5",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Drum gate 6",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Drum gate 7",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Drum gate 8",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://www.arturia.com/products/hybrid-synths/keystep-pro/details",
+		"https://support.arturia.com/hc/en-us/articles/4405741087634-KeyStep-Pro-Keyboard-Peripherals",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

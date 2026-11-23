@@ -95,9 +95,9 @@ export async function buildApi({ entries, devicesDirectory, outDirectory, siteUr
 	}
 
 	// Matches the exact, case-insensitive rules of matchMidiDeviceProfile: IDs first, then port names.
-	const ports = { byId: {}, byName: {} }
+	const ports = { byId: Object.create(null), byName: Object.create(null) }
 	for (const device of devices) {
-		for (const value of device.ids ?? [device.id]) ports.byId[normalise(value)] ??= device.id
+		for (const value of new Set([device.id, ...(device.ids ?? [])])) ports.byId[normalise(value)] ??= device.id
 		for (const value of device.portNames ?? []) ports.byName[normalise(value)] ??= device.id
 	}
 

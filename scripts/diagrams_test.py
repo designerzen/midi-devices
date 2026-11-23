@@ -180,7 +180,7 @@ class DeviceDiagrams(unittest.TestCase):
             pads = [e for e in device["surface"]["elements"] if e["kind"] == "pad"]
             self.assertEqual(len(pads), count)
             self.assertTrue(all("control" not in p and "message" not in p for p in pads))
-            self.assertEqual(device["portNames"], [])
+            self.assertEqual(device["portNames"], ["LPMiniMK3 MIDI In", "LPMiniMK3 MIDI Out"] if model == "launchpad-mini-mk3" else [])
         device = profile("arturia/keystep-37", "arturia-keystep-37")
         self.assertEqual(len([e for e in device["surface"]["elements"] if e["kind"] == "key"]), 37)
         self.assertTrue(all("cc" not in c for c in device["controls"]))

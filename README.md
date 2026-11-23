@@ -2,12 +2,14 @@
 
 Open, machine-readable profiles for MIDI hardware. Each profile tells your app how to recognise a connected device by its port name, which CCs and notes its controls send, and how to draw its panel. Profiles also carry setup notes and links to manuals.
 
-- **222 device profiles** from 43 manufacturers, including synths, controllers, drum machines, MIDI interfaces and accessible instruments
+- **235 device profiles** from 43 manufacturers, including synths, controllers, drum machines, MIDI interfaces and accessible instruments
 - **795 manufacturers**, covering every named entry in the [official MIDI SysEx ID registry](https://midi.org/sysexidtable)
 - A free, static **JSON and XML API**, plus a JavaScript client and an npm package
 - **SVG panel diagrams** with mapped hit areas, drawn with the [NYU SynthAccess](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides) tactile symbol set
 
 **[Browse the catalogue →](https://designerzen.github.io/midi-devices/)** Plug in a device and click *Detect connected devices* to see its profile, play it from the panel diagram and watch its MIDI live.
+
+Detection matches stable application IDs, documented port aliases and unique complete model names, including common Windows/macOS/ALSA naming variations. Canonical catalogue IDs are not USB hardware IDs. Manufacturer pages detect against the full catalogue while displaying their selected manufacturer. Generic MIDI interfaces and ambiguous model families still require manual profile selection. Run `npm run audit:midi` for catalogue matching checks.
 
 ## Quick start
 

@@ -43,7 +43,7 @@ for (const descriptor of manufacturers) {
 		.replace('content="Open MIDI hardware profiles: panel diagrams, icons, MIDI control mappings and setup guides, free for any application to use."', `content="${escape(descriptor.description)}"`))
 }
 await writeFile(path.join(dist, "version.json"), JSON.stringify(build, null, "\t") + "\n")
-await cp(path.join(root, "client.js"), path.join(dist, "client.js"))
+await writeFile(path.join(dist, "client.js"), readFileSync(path.join(root, "client.js"), "utf8").replaceAll('"./site/midi-match.js"', '"./midi-match.js"'))
 await writeFile(path.join(dist, ".nojekyll"), "")
 const api = await buildApi({
 	entries,

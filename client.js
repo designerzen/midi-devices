@@ -1,5 +1,7 @@
 // Browser and Node client for the static MIDI devices API.
 // import { createMidiDevicesClient } from "https://designerzen.github.io/midi-devices/client.js"
+import { createMidiMatcher } from "./site/midi-match.js"
+export { createMidiMatcher, midiModelKey } from "./site/midi-match.js"
 
 export const DEFAULT_API_URL = "https://designerzen.github.io/midi-devices/api/v1/"
 
@@ -18,6 +20,7 @@ export function createMidiDevicesClient({
 	fetch: fetcher = globalThis.fetch
 } = {}) {
 	const cache = new Map()
+	let matcher
 	const get = (file) => {
 		if (!cache.has(file)) {
 			const request = fetcher(new URL(file, baseUrl).href).then((response) => {
@@ -60,7 +63,12 @@ export function createMidiDevicesClient({
 			try {
 				return await get(`midi/${slug}.json`)
 			} catch {
-				return undefined
+				try {
+					const id = await this.match({ name: identifier })
+					return id ? await this.device(id) : undefined
+				} catch {
+					return undefined
+				}
 			}
 		},
 		async manufacturers() {
@@ -69,10 +77,14 @@ export function createMidiDevicesClient({
 		async manufacturer(id) {
 			return get(`manufacturers/${id}.json`)
 		},
-		/** Device ID for a Web MIDI port ({ id, name }), matching IDs before port names. */
+		/** Match a port ID, verified alias or unique complete model name. */
 		async match(port) {
 			const { byId, byName } = await get("ports.json")
-			return byId[normalise(port.id)] ?? byName[normalise(port.name)]
+			const id = normalise(port.id), name = normalise(port.name)
+			if (Object.hasOwn(byId, id)) return byId[id]
+			if (Object.hasOwn(byName, name)) return byName[name]
+			matcher ??= createMidiMatcher((await get("index.json")).devices)
+			return matcher(port)
 		},
 		/** Case-insensitive search over names, manufacturers, descriptions and abilities. */
 		async search(text) {

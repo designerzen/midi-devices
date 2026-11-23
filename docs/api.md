@@ -169,9 +169,9 @@ GitHub Pages hosts the unique static URLs in both formats. It cannot execute the
 
 Device and manufacturer IDs are lowercase kebab-case, such as `korg-minilogue` and `native-instruments`. Manufacturer IDs come from the manufacturer folder, rather than a MIDI SysEx manufacturer number.
 
-`match(port)` checks `port.id` against `byId` first, then `port.name` against `byName`. Both are trimmed and lowercased; matching is exact, with no substring or manufacturer fallback. Browser port IDs may be opaque or machine-specific. Profiles without verified port names require manual selection.
+`match(port)` checks `port.id` against `byId` first, then `port.name` against `byName`, trimming and lowercasing both. If neither matches, it loads the cached catalogue summaries and uses the same matcher as the demo page: documented aliases with driver wrappers, then unique complete model names. It handles numbered Windows instances, MIDIIN/MIDIOUT wrappers, MIDI/port direction suffixes, ALSA endpoint prefixes and punctuation/MkII/MK2 spelling variants. It retains size and generation qualifiers and never uses substring or manufacturer-only matching. Conflicting manufacturer metadata blocks model-name fallback, and generic names or ambiguous model families need manual selection. Browser IDs are often opaque or machine-specific; canonical profile IDs are application identifiers, not USB vendor/product IDs.
 
-`lookup(identifier)` uses an alias URL: lowercase the identifier, replace each run of non-ASCII-alphanumeric characters with `-`, then remove leading/trailing hyphens. For example, `MPK mini 3` becomes `mpk-mini-3`. Aliases include canonical device IDs, profile `ids`, and `portNames`. The build rejects aliases claimed by different devices.
+`lookup(identifier)` first uses an alias URL: lowercase the identifier, replace each run of non-ASCII-alphanumeric characters with `-`, then remove leading/trailing hyphens. For example, `MPK mini 3` becomes `mpk-mini-3`. Static aliases include canonical device IDs, profile `ids`, and `portNames`. The build rejects aliases claimed by different devices. If the alias URL is unavailable, the JavaScript client tries the same complete-name matching as `match()` and fetches the matching profile. Static alias URLs alone do not perform this fallback.
 
 ## JavaScript client
 
@@ -194,7 +194,7 @@ For direct browser imports use `https://designerzen.github.io/midi-devices/clien
 | `lookup(identifier)` | Full profile, or `undefined` for empty aliases or any request failure |
 | `manufacturers()` | Array of manufacturer summaries |
 | `manufacturer(id)` | Manufacturer detail; rejects on request failure |
-| `match({ id, name })` | Device ID or `undefined`; rejects on port-map request failure |
+| `match({ id, name, manufacturer })` | Device ID or `undefined`; rejects if a required port-map/catalogue request fails |
 | `search(text)` | Summaries matching every whitespace-separated term, case-insensitively, across ID, name, manufacturer, description, and abilities; empty text returns all summaries |
 
 Call `search` as a client method because it uses `this.list()`. Methods other than `device` and `lookup` propagate fetch, HTTP, and JSON parsing failures. Those two methods return `undefined` for network failures as well as unknown devices; use direct fetch if you need to distinguish the cases.

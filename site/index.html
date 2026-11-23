@@ -27,6 +27,7 @@
 			button.secondary { color: var(--text); background: transparent; border-color: var(--border-strong); }
 			button.secondary:hover { background: var(--surface-raised); }
 			button.primary { font-size: 1.1rem; padding: 0.9rem 1.5rem; }
+			#detect-midi[aria-pressed="true"] { background: var(--bg); color: var(--accent); box-shadow: inset 0 0 0 2px currentColor; }
 			input, select { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border-strong); border-radius: 8px; padding: 0.65rem 0.75rem; width: 100%; min-width: 0; }
 			input[type="checkbox"] { width: 1.1rem; height: 1.1rem; margin: 0.2rem 0 0; accent-color: var(--accent); flex-shrink: 0; }
 			.skip { position: absolute; left: 1rem; top: -5rem; padding: 1rem; background: var(--surface-raised); z-index: 1; }
@@ -169,22 +170,22 @@
 				<p class="lead">Plug in your keyboard, controller or synth and this page identifies it, shows its panel layout and MIDI controls, and displays every note and knob movement as you play.</p>
 				<ol class="steps" id="steps">
 					<li data-step="1" data-state="current"><strong>Plug in your device</strong>Connect it by USB, or through a MIDI interface.</li>
-					<li data-step="2" data-state="upcoming"><strong>Detect it</strong>Click <em>Detect my devices</em>, then choose <em>Allow</em> when your browser asks.</li>
+					<li data-step="2" data-state="upcoming"><strong>Turn on detection</strong>Click <em>Detect my devices</em>, then choose <em>Allow</em>. Leave it on to detect devices as you connect them; click again to stop.</li>
 					<li data-step="3" data-state="upcoming"><strong>Play something</strong>Press a key, turn a knob or hit a pad to see the MIDI messages live.</li>
 				</ol>
 				<div class="panel detect-panel">
-					<button id="detect-midi" class="primary" type="button" aria-describedby="midi-status" hidden>Detect my devices</button>
+					<button id="detect-midi" class="primary" type="button" aria-pressed="false" aria-describedby="midi-status" hidden>Detect my devices</button>
 					<p id="midi-status" role="status" aria-live="polite">Loading device profiles…</p>
 					<details class="options" id="midi-options" hidden>
 						<summary>Advanced options</summary>
-						<label><input id="include-sysex" type="checkbox" /> <span><strong>Include SysEx messages.</strong> Shows system-exclusive data such as patch dumps. Your browser asks for extra permission. If you have already detected your devices, click <em>Refresh connections</em> to apply the change.</span></label>
+						<label><input id="include-sysex" type="checkbox" /> <span><strong>Include SysEx messages.</strong> Shows system-exclusive data such as patch dumps. Your browser asks for extra permission. Turn detection off to change this option, then turn it back on.</span></label>
 					</details>
 				</div>
 			</section>
 			<section id="connected-section" aria-labelledby="connected-heading" hidden>
 				<h2 id="connected-heading" class="section-title">Your connected devices</h2>
 				<p class="section-intro">Each card is one device this browser can see. If we picked the wrong profile, choose the right one from the <em>Device profile</em> list on the card.</p>
-				<p id="connected-empty" class="panel" hidden>No MIDI devices are visible to this browser. Check the cable and power, then click <em>Refresh connections</em>. Devices plugged in later appear automatically.</p>
+				<p id="connected-empty" class="panel" hidden>Detection is on. Connect a MIDI device and check its cable and power. It will appear here automatically.</p>
 				<div id="connected-devices" aria-label="Connected MIDI devices"></div>
 			</section>
 			<section id="midi-monitor" class="panel" tabindex="-1" aria-labelledby="midi-monitor-heading" hidden>
@@ -269,6 +270,7 @@
 			const detectMidi = document.getElementById("detect-midi")
 			const midiStatus = document.getElementById("midi-status")
 			const deviceCards = new Map()
+			const deviceProfiles = new Map()
 			const filters = document.getElementById("filters")
 			const search = document.getElementById("device-search")
 			const manufacturerFilter = document.getElementById("manufacturer-filter")
@@ -464,7 +466,7 @@
 			}
 			const normalise = (value) => String(value ?? "").trim().toLowerCase()
 			const activityText = (id) => {
-				if (failures.has(id)) return "Could not open MIDI input. Refresh connections to retry."
+				if (failures.has(id)) return "Could not open MIDI input. Turn detection off and on to retry."
 				const activity = inputActivity.get(id)
 				return activity ? `${activity.count} incoming events · Last: ${activity.message} at ${activity.time} UTC` : "Listening · No incoming events yet"
 			}
@@ -572,11 +574,12 @@
 					port.addEventListener("midimessage", listener)
 					inputListeners.set(port, listener)
 					port.open().catch((error) => {
+						if (inputListeners.get(port) !== listener) return
 						failures.set(port.id, `${port.name || port.id}: ${error.message || "Could not open MIDI input"}`)
 						inputErrors.textContent = [...failures.values()].join(" · ")
 						inputErrors.hidden = false
 						const node = activityNodes.get(port.id)
-						if (node) node.textContent = "Could not open input. Refresh connections to retry."
+						if (node) node.textContent = "Could not open input. Turn detection off and on to retry."
 					})
 				}
 				inputErrors.textContent = [...failures.values()].join(" · ")
@@ -626,7 +629,7 @@
 				if (!midiAccess) return
 				portSignature = currentPortSignature()
 				const matches = new Map()
-				const devices = [...deviceCards.entries()]
+				const devices = [...deviceProfiles.entries()]
 				const groups = connectedMidiDevices(midiAccess, devices, assignments)
 				disposeSurfaces()
 				activityNodes.clear()
@@ -757,7 +760,7 @@
 				connectedEmpty.hidden = groups.length !== 0
 				monitor.hidden = false
 				setStep(groups.length ? (receivedEvents ? 4 : 3) : 1)
-				for (const [id, { card }] of devices) {
+				for (const [id, { card }] of deviceCards) {
 					const ports = matches.get(id)
 					const connected = !!ports?.size
 					card.classList.toggle("is-connected", connected)
@@ -770,32 +773,57 @@
 				const portCount = groups.reduce((total, group) => total + group.ports.length, 0)
 				midiStatus.classList.toggle("warning", !groups.length)
 				midiStatus.textContent = groups.length
-					? `Found ${groups.length} ${groups.length === 1 ? "device" : "devices"} (${portCount} MIDI ${portCount === 1 ? "port" : "ports"}). Plugging devices in or out updates this page automatically.`
-					: "No MIDI devices found. Check the cable and power, then click Refresh connections."
+					? `Detection is on · ${groups.length} ${groups.length === 1 ? "device" : "devices"} (${portCount} MIDI ${portCount === 1 ? "port" : "ports"}). Devices update automatically. Click Detect my devices again to turn detection off.`
+					: "Detection is on. No MIDI devices connected yet. Check the cable and power; devices will appear automatically. Click Detect my devices again to turn detection off."
 				listenToInputs()
 				if (!receivedEvents) eventStatus.textContent = listeningText()
 			}
 			detectMidi.onclick = async () => {
 				detectMidi.disabled = true
 				midiStatus.classList.remove("warning")
-				midiStatus.textContent = midiAccess ? "Checking MIDI connections…" : "Waiting for permission. If your browser shows a prompt, choose Allow."
 				try {
-					if (!midiAccess || midiAccess.sysexEnabled !== includeSysex.checked) {
-						const access = await navigator.requestMIDIAccess({ sysex: includeSysex.checked })
-						if (midiAccess) midiAccess.onstatechange = null
-						midiAccess = access
+					if (midiAccess) {
+						const access = midiAccess
+						access.onstatechange = null
+						midiAccess = undefined
+						portSignature = undefined
+						for (const [port, listener] of inputListeners) port.removeEventListener("midimessage", listener)
+						inputListeners.clear()
+						disposeSurfaces()
+						clearTimeout(monitorTimer)
+						clearTimeout(stateTimer)
+						monitorTimer = undefined
+						events.length = 0
+						receivedEvents = 0
+						midiState.clear()
+						inputActivity.clear()
+						activityNodes.clear()
+						failures.clear()
+						inputErrors.textContent = ""
+						inputErrors.hidden = true
+						renderEvents()
+						connectedCards.replaceChildren()
+						connectedSection.hidden = monitor.hidden = true
+						for (const { card } of deviceCards.values()) {
+							card.classList.remove("is-connected")
+							card.dataset.connected = "false"
+							card.querySelector(".connection-status").hidden = true
+							card.querySelector(".connection-ports").hidden = true
+						}
+						setStep(2)
+						detectMidi.setAttribute("aria-pressed", "false")
+						includeSysex.disabled = false
+						midiStatus.textContent = "Detection is off. Click Detect my devices to detect and listen to connected devices automatically."
+						await Promise.allSettled([...access.inputs.values(), ...access.outputs.values()].map(port => port.close()))
+						return
 					}
-					for (const [port, listener] of inputListeners) {
-						if (!failures.has(port.id)) continue
-						port.removeEventListener("midimessage", listener)
-						inputListeners.delete(port)
-					}
-					failures.clear()
+					midiStatus.textContent = "Waiting for permission. If your browser shows a prompt, choose Allow."
+					midiAccess = await navigator.requestMIDIAccess({ sysex: includeSysex.checked })
 					// Opening a port also emits statechange; retain held notes and UI state.
 					midiAccess.onstatechange = () => { if (currentPortSignature() !== portSignature) updateConnections() }
 					updateConnections()
-					detectMidi.textContent = "Refresh connections"
-					detectMidi.classList.replace("primary", "secondary")
+					detectMidi.setAttribute("aria-pressed", "true")
+					includeSysex.disabled = true
 					connectedSection.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" })
 				} catch {
 					midiStatus.classList.add("warning")
@@ -856,7 +884,7 @@
 					companyIds.set(companyKey(id), id)
 				}
 				const selectedIds = manufacturerId ? ids.filter((id) => entries.get(id).path.split("/")[0] === manufacturerId) : ids
-				const results = await Promise.allSettled(selectedIds.map(async (id) => {
+				const results = await Promise.allSettled(ids.map(async (id) => {
 					const profile = await read(new URL(`${entries.get(id).path}/${id}.json`, registry))
 					if (profile.schemaVersion !== 1 || typeof profile.name !== "string") throw new Error("Invalid device profile")
 					return { id, profile, devicePath: entries.get(id).path }
@@ -864,9 +892,12 @@
 				const loaded = results.filter((result) => result.status === "fulfilled").map((result) => result.value)
 				loaded.sort((a, b) => a.profile.name.localeCompare(b.profile.name))
 				for (const { profile, devicePath } of loaded) companyIds.set(companyKey(profile.manufacturer), devicePath.split("/")[0])
-				let failed = results.length - loaded.length
+				const selected = new Set(selectedIds)
+				let failed = selectedIds.length - loaded.filter(({ id }) => selected.has(id)).length
 				let count = 0
 				for (const { id, profile, devicePath } of loaded) {
+					deviceProfiles.set(id, { profile, devicePath })
+					if (!selected.has(id)) continue
 					try {
 						const card = render(id, profile, devicePath)
 						catalog.append(card)
@@ -874,7 +905,7 @@
 						count++
 					} catch { failed++ }
 				}
-				status.textContent = `${count} ${count === 1 ? "device profile" : "device profiles"} from ${new Set(loaded.map(({ profile }) => profile.manufacturer)).size} manufacturers.${failed ? ` ${failed} ${failed === 1 ? "profile could" : "profiles could"} not be loaded.` : ""}`
+				status.textContent = `${count} ${count === 1 ? "device profile" : "device profiles"} from ${new Set(loaded.filter(({ id }) => selected.has(id)).map(({ profile }) => profile.manufacturer)).size} manufacturers.${failed ? ` ${failed} ${failed === 1 ? "profile could" : "profiles could"} not be loaded.` : ""}`
 				if (manufacturerId && !selectedIds.length) status.textContent = "No device profiles have been added for this manufacturer yet. Its official MIDI ID registration is listed above."
 				else if (!ids.length) status.textContent = "No MIDI device profiles are available."
 				if (!manufacturerId) status.textContent += ` ${manufacturerIndex.length} manufacturers are listed in the directory.`

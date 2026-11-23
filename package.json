@@ -8,6 +8,7 @@
 		".": "./index.js",
 		"./device-files.js": "./index.js",
 		"./client.js": "./client.js",
+		"./midi-match.js": "./site/midi-match.js",
 		"./index.json": "./devices/index.json",
 		"./manufacturers.json": "./devices/manufacturers.json",
 		"./midi-manufacturers.json": "./devices/midi-manufacturers.json",
@@ -24,12 +25,14 @@
 	"files": [
 		"index.js",
 		"client.js",
+		"site/midi-match.js",
 		"devices"
 	],
 	"scripts": {
 		"diagrams": "python scripts/generate-diagrams.py",
 		"build": "node scripts/build.js && python scripts/xml_validation.py dist/api/v1",
 		"validate": "node scripts/validate.js",
+		"audit:midi": "node scripts/audit-midi-matching.js",
 		"manufacturers:import": "python scripts/import-midi-manufacturers.py",
 		"version:patch": "npm version patch --no-git-tag-version",
 		"version:build": "node scripts/bump-build-version.js",

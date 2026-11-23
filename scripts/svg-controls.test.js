@@ -133,7 +133,35 @@ test("messages arriving while the SVG loads retain final state and all-notes-off
 	assert.equal(node.dataset.value, "80")
 })
 
-test("the test page isolates identical devices, retains cards on port open and cleans up on disconnect", async t => {
+test("manufacturer pages detect devices from the full catalogue", async t => {
+	const window = environment(t)
+	const html = readFileSync(new URL("../site/index.html", import.meta.url), "utf8")
+	window.document.write(html.replace(/<script type="module">[\s\S]*?<\/script>/, ""))
+	window.document.body.dataset.manufacturer = "korg"
+	window.HTMLElement.prototype.scrollIntoView = () => {}
+	const other = JSON.parse(readFileSync(new URL("../devices/arturia/keystep-37/arturia-keystep-37.json", import.meta.url)))
+	const company = JSON.parse(readFileSync(new URL("../devices/korg/manufacturer.json", import.meta.url)))
+	const input = Object.assign(new window.EventTarget(), { id: "opaque", type: "input", name: "MIDIIN2 (KeyStep 37)", manufacturer: "Arturia", state: "connected", connection: "closed", open: async () => {}, close: async () => {} })
+	window.navigator.requestMIDIAccess = async () => ({ inputs: new Map([[input.id, input]]), outputs: new Map(), sysexEnabled: false })
+	globalThis.fetch = async url => {
+		const pathname = new URL(url).pathname
+		const data = pathname.endsWith("/index.json") ? [{ id: profile.id, path: "korg/volca-bass" }, { id: other.id, path: "arturia/keystep-37" }]
+			: pathname.endsWith("/manufacturers.json") ? [{ id: "korg", name: "Korg" }, { id: "arturia", name: "Arturia" }]
+			: pathname.endsWith("/manufacturer.json") ? company : pathname.includes("keystep-37") ? other : profile
+		return { ok: true, json: async () => data, text: async () => drawing }
+	}
+	const script = html.match(/<script type="module">([\s\S]*?)<\/script>/)[1].replace(/from "\.\/(midi-connections|midi-state|svg-controls)\.js\?v=__BUILD_COMMIT__"/g, (_, name) => `from "${new URL(`../site/${name}.js`, import.meta.url).href}"`)
+	await import(`data:text/javascript;base64,${Buffer.from(script + "\n// manufacturer matching regression").toString("base64")}`)
+	assert.equal(window.document.querySelectorAll("#catalog article").length, 1)
+	assert.match(window.document.querySelector("#catalog").textContent, /volca bass/i)
+	const detect = window.document.getElementById("detect-midi")
+	await detect.onclick()
+	assert.match(window.document.querySelector("#connected-devices h2").textContent, /KeyStep 37/)
+	assert.equal(window.document.querySelector("#connected-devices .profile-picker select").options.length, 3)
+	await detect.onclick()
+})
+
+test("the page toggles continuous MIDI detection, handles hotplug and isolates identical devices", async t => {
 	const window = environment(t)
 	const html = readFileSync(new URL("../site/index.html", import.meta.url), "utf8")
 	window.document.write(html.replace(/<script type="module">[\s\S]*?<\/script>/, ""))
@@ -143,14 +171,14 @@ test("the test page isolates identical devices, retains cards on port open and c
 		const value = new window.EventTarget()
 		Object.assign(value, { id, type, name: "volca bass", manufacturer: "Korg", state: "connected", connection: "closed", sent: [] })
 		value.open = async () => { value.connection = "open"; queueMicrotask(() => access.onstatechange?.({ port: value })) }
+		value.close = async () => { value.connection = "closed"; value.closes = (value.closes ?? 0) + 1; queueMicrotask(() => access.onstatechange?.({ port: value })) }
 		value.send = packet => { value.sent.push(packet); if (value.connection !== "open") void value.open() }
 		return value
 	}
 	const inputs = [port("in-1", "input"), port("in-2", "input")]
 	const outputs = [port("out-1", "output"), port("out-2", "output")]
-	for (const value of inputs) access.inputs.set(value.id, value)
-	for (const value of outputs) access.outputs.set(value.id, value)
-	window.navigator.requestMIDIAccess = async () => access
+	let requests = 0
+	window.navigator.requestMIDIAccess = async () => { requests++; return access }
 	globalThis.fetch = async url => {
 		const pathname = new URL(url).pathname
 		const data = pathname.endsWith("/index.json") ? [{ id: profile.id, path: "korg/volca-bass" }] : pathname.endsWith("/manufacturers.json") ? [{ id: "korg", name: "Korg" }] : profile
@@ -159,7 +187,16 @@ test("the test page isolates identical devices, retains cards on port open and c
 	const script = html.match(/<script type="module">([\s\S]*?)<\/script>/)[1].replace(/from "\.\/(midi-connections|midi-state|svg-controls)\.js\?v=__BUILD_COMMIT__"/g, (_, name) => `from "${new URL(`../site/${name}.js`, import.meta.url).href}"`)
 	await import(`data:text/javascript;base64,${Buffer.from(script).toString("base64")}`)
 	assert.equal(window.document.querySelectorAll("#catalog article").length, 1)
-	await window.document.getElementById("detect-midi").onclick()
+	const detect = window.document.getElementById("detect-midi")
+	assert.equal(detect.getAttribute("aria-pressed"), "false")
+	await detect.onclick()
+	assert.equal(detect.getAttribute("aria-pressed"), "true")
+	assert.equal(window.document.getElementById("connected-empty").hidden, false)
+	assert.match(window.document.getElementById("midi-status").textContent, /Detection is on/)
+	// Devices connected after activation are detected without pressing the button again.
+	for (const value of inputs) access.inputs.set(value.id, value)
+	for (const value of outputs) access.outputs.set(value.id, value)
+	access.onstatechange({ port: inputs[0] })
 	for (let attempt = 0; attempt < 30 && !window.document.querySelector(".svg-control-host")?.shadowRoot.querySelector("[data-live]"); attempt++) await next()
 	const cards = [...window.document.querySelectorAll("#connected-devices article")]
 	assert.equal(cards.length, 2)
@@ -184,8 +221,34 @@ test("the test page isolates identical devices, retains cards on port open and c
 	assert.deepEqual(outputs[1].sent, [])
 	inputs[0].state = "disconnected"; access.onstatechange({ port: inputs[0] })
 	assert.deepEqual(outputs[0].sent.at(-1), [0x80, keyboard.message.number, 0])
-	// Dispose remaining cards and cancel the monitor timer before restoring globals.
-	for (const value of [...inputs, ...outputs]) value.state = "disconnected"
-	access.onstatechange({ port: outputs[0] })
-	window.document.getElementById("clear-events").click()
+	assert.equal(requests, 1)
+	await detect.onclick()
+	assert.equal(detect.getAttribute("aria-pressed"), "false")
+	assert.equal(access.onstatechange, null)
+	assert.equal(window.document.getElementById("connected-section").hidden, true)
+	assert.equal(window.document.getElementById("midi-monitor").hidden, true)
+	assert.equal(window.document.querySelectorAll(".is-connected").length, 0)
+	assert.ok([...inputs, ...outputs].every(value => value.closes === 1))
+	assert.equal(window.document.getElementById("include-sysex").disabled, false)
+	const status = window.document.getElementById("event-status").textContent
+	emit(inputs[1], [0x90, keyboard.message.number, 100])
+	const later = port("in-later", "input")
+	access.inputs.set(later.id, later)
+	access.onstatechange?.({ port: later })
+	await new Promise(resolve => setTimeout(resolve, 80))
+	assert.equal(window.document.getElementById("event-status").textContent, status)
+	assert.equal(window.document.querySelectorAll("#connected-devices article").length, 0)
+	await detect.onclick()
+	assert.equal(requests, 2)
+	assert.equal(detect.getAttribute("aria-pressed"), "true")
+	assert.equal(later.connection, "open")
+	assert.equal(window.document.getElementById("include-sysex").disabled, true)
+	assert.equal(window.document.getElementById("events-table").hidden, true)
+	assert.equal(window.document.getElementById("monitor-empty").hidden, false)
+	await detect.onclick()
+	window.navigator.requestMIDIAccess = async () => { throw new Error("Permission denied") }
+	await detect.onclick()
+	assert.equal(detect.getAttribute("aria-pressed"), "false")
+	assert.equal(detect.disabled, false)
+	assert.match(window.document.getElementById("midi-status").textContent, /MIDI access was blocked/)
 })

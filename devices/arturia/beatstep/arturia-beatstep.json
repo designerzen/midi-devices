@@ -1,0 +1,532 @@
+{
+	"schemaVersion": 1,
+	"id": "arturia-beatstep",
+	"name": "Arturia BeatStep",
+	"manufacturer": "Arturia",
+	"manufacturerUrl": "https://www.arturia.com/",
+	"productUrl": "https://www.arturia.com/products/hybrid-synths/beatstep/overview",
+	"description": "16-pad and 16-encoder controller with a monophonic step sequencer.",
+	"ids": [
+		"arturia-beatstep"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Arturia BeatStep official hardware / MIDI reference",
+			"url": "https://www.arturia.com/products/hybrid-synths/beatstep/overview"
+		},
+		{
+			"title": "Arturia BeatStep official hardware / MIDI reference",
+			"url": "https://downloads.arturia.com/products/beatstep/manual/BeatStep_Manual_1_0_1_EN.pdf"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"Configurable playing surface"
+	],
+	"hardwareControls": [
+		"CONTROLS: Data, Control / sequence, Play / pause, Stop, Shift, Recall, Store",
+		"ENCODERS: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16",
+		"PADS: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16"
+	],
+	"notice": "Original BeatStep, not BeatStep Pro. Select CNTRL for assignable controller messages or SEQ for sequencing. Configure pads, encoders and channels with MIDI Control Center. There is no dedicated MIDI input socket. Physical controls and keys remain unbound because presets, modes and octave settings determine messages. Diagrams are selected-control schematics, not dimensioned panel drawings. Port names are recorded only when documented; otherwise detection uses an unambiguous complete model name or manual selection.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Arturia BeatStep selected controls"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 670,
+		"elements": [
+			{
+				"id": "controls-data",
+				"label": "CONTROLS: Data",
+				"kind": "knob",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 14.17910447761194,
+					"width": 17.0,
+					"height": 10.980810234541577
+				}
+			},
+			{
+				"id": "controls-control-sequence",
+				"label": "CONTROLS: Control / sequence",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 25.159914712153515,
+					"width": 17.0,
+					"height": 10.980810234541577
+				}
+			},
+			{
+				"id": "controls-play-pause",
+				"label": "CONTROLS: Play / pause",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 36.140724946695094,
+					"width": 17.0,
+					"height": 10.980810234541577
+				}
+			},
+			{
+				"id": "controls-stop",
+				"label": "CONTROLS: Stop",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 47.12153518123667,
+					"width": 17.0,
+					"height": 10.980810234541577
+				}
+			},
+			{
+				"id": "controls-shift",
+				"label": "CONTROLS: Shift",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 58.102345415778245,
+					"width": 17.0,
+					"height": 10.980810234541577
+				}
+			},
+			{
+				"id": "controls-recall",
+				"label": "CONTROLS: Recall",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 69.08315565031982,
+					"width": 17.0,
+					"height": 10.980810234541577
+				}
+			},
+			{
+				"id": "controls-store",
+				"label": "CONTROLS: Store",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 80.0639658848614,
+					"width": 17.0,
+					"height": 10.980810234541577
+				}
+			},
+			{
+				"id": "encoders-1",
+				"label": "ENCODERS: 1",
+				"kind": "knob",
+				"position": {
+					"x": 21.5,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-2",
+				"label": "ENCODERS: 2",
+				"kind": "knob",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-3",
+				"label": "ENCODERS: 3",
+				"kind": "knob",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-4",
+				"label": "ENCODERS: 4",
+				"kind": "knob",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-5",
+				"label": "ENCODERS: 5",
+				"kind": "knob",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-6",
+				"label": "ENCODERS: 6",
+				"kind": "knob",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-7",
+				"label": "ENCODERS: 7",
+				"kind": "knob",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-8",
+				"label": "ENCODERS: 8",
+				"kind": "knob",
+				"position": {
+					"x": 88.25,
+					"y": 14.17910447761194,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-9",
+				"label": "ENCODERS: 9",
+				"kind": "knob",
+				"position": {
+					"x": 21.5,
+					"y": 30.223880597014922,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-10",
+				"label": "ENCODERS: 10",
+				"kind": "knob",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 30.223880597014922,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-11",
+				"label": "ENCODERS: 11",
+				"kind": "knob",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 30.223880597014922,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-12",
+				"label": "ENCODERS: 12",
+				"kind": "knob",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 30.223880597014922,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-13",
+				"label": "ENCODERS: 13",
+				"kind": "knob",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 30.223880597014922,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-14",
+				"label": "ENCODERS: 14",
+				"kind": "knob",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 30.223880597014922,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-15",
+				"label": "ENCODERS: 15",
+				"kind": "knob",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 30.223880597014922,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "encoders-16",
+				"label": "ENCODERS: 16",
+				"kind": "knob",
+				"position": {
+					"x": 88.25,
+					"y": 30.223880597014922,
+					"width": 9.535714285714286,
+					"height": 16.044776119402986
+				}
+			},
+			{
+				"id": "pads-1",
+				"label": "PADS: 1",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 54.47761194029851,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-2",
+				"label": "PADS: 2",
+				"kind": "pad",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 54.47761194029851,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-3",
+				"label": "PADS: 3",
+				"kind": "pad",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 54.47761194029851,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-4",
+				"label": "PADS: 4",
+				"kind": "pad",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 54.47761194029851,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-5",
+				"label": "PADS: 5",
+				"kind": "pad",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 54.47761194029851,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-6",
+				"label": "PADS: 6",
+				"kind": "pad",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 54.47761194029851,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-7",
+				"label": "PADS: 7",
+				"kind": "pad",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 54.47761194029851,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-8",
+				"label": "PADS: 8",
+				"kind": "pad",
+				"position": {
+					"x": 88.25,
+					"y": 54.47761194029851,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-9",
+				"label": "PADS: 9",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 72.76119402985076,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-10",
+				"label": "PADS: 10",
+				"kind": "pad",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 72.76119402985076,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-11",
+				"label": "PADS: 11",
+				"kind": "pad",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 72.76119402985076,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-12",
+				"label": "PADS: 12",
+				"kind": "pad",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 72.76119402985076,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-13",
+				"label": "PADS: 13",
+				"kind": "pad",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 72.76119402985076,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-14",
+				"label": "PADS: 14",
+				"kind": "pad",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 72.76119402985076,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-15",
+				"label": "PADS: 15",
+				"kind": "pad",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 72.76119402985076,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			},
+			{
+				"id": "pads-16",
+				"label": "PADS: 16",
+				"kind": "pad",
+				"position": {
+					"x": 88.25,
+					"y": 72.76119402985076,
+					"width": 9.535714285714286,
+					"height": 18.28358208955224
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "Mini USB",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "MIDI output",
+			"connector": "3.5 mm TRS with Arturia DIN adapter",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Pitch CV",
+			"connector": "3.5 mm CV",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Gate output",
+			"connector": "3.5 mm gate",
+			"direction": "output",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://www.arturia.com/products/hybrid-synths/beatstep/overview",
+		"https://downloads.arturia.com/products/beatstep/manual/BeatStep_Manual_1_0_1_EN.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

@@ -57,6 +57,10 @@ test("built data and query endpoint return only the requested device in either f
 		assert.equal((await client.device(id)).id, id)
 	}
 	assert.equal(await client.match({ name: "LPX DAW In" }), undefined)
+	assert.equal(await client.match({ id: "opaque", name: "MIDIIN2 (2- KeyStep 37)" }), "arturia-keystep-37")
+	assert.equal(await client.match({ name: "constructor" }), undefined)
+	assert.equal(await client.match({ name: "KeyStep 37 mk2" }), undefined)
+	assert.equal((await client.lookup("MIDIIN2 (KeyStep 37)")).id, "arturia-keystep-37")
 	for (const id of ["korg-minilogue", "roland-tr-909", "superlative-sb01", "korg-arp-2600-fs", "roland-v-stage-76", "roland-v-stage-88"]) {
 		for (const format of ["json", "xml"]) {
 			const response = await fetch(`${base}device?id=${id}&format=${format}`)

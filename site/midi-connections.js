@@ -1,3 +1,5 @@
+import { createMidiMatcher } from "./midi-match.js"
+
 const normalise = (value) => String(value ?? "").trim().toLowerCase()
 export const DEVICE_PROFILE_EMAIL = "midi@awesomething.co.uk"
 
@@ -54,16 +56,14 @@ export function describeMidiMessage(data) {
 // output per name/profile, retaining duplicate same-direction ports separately.
 export function connectedMidiDevices(access, devices, assignments = new Map()) {
 	const groups = []
+	const matchPort = createMidiMatcher(devices.map(([id, { profile }]) => ({ ...profile, id })))
 	for (const [direction, collection] of [["Input", access.inputs], ["Output", access.outputs]]) {
 		for (const port of collection.values()) {
 			if (port.state !== "connected") continue
 			const portKey = `${direction}:${port.id}`
 			const assigned = assignments.get(portKey)
-			const match = (assigned && devices.find(([id]) => id === assigned)) || devices.find(([id, { profile }]) =>
-				(profile.ids ?? [id]).some((alias) => normalise(alias) === normalise(port.id))
-			) || devices.find(([, { profile }]) =>
-				(profile.portNames ?? []).some((alias) => normalise(alias) === normalise(port.name))
-			)
+			const matchedId = assigned && devices.some(([id]) => id === assigned) ? assigned : matchPort(port)
+			const match = devices.find(([id]) => id === matchedId)
 			const id = match?.[0]
 			const signature = JSON.stringify([id ?? null, normalise(port.manufacturer), id ? null : normalise(port.name)])
 			let group = groups.find((item) => item.signature === signature && !item.ports.some((item) => item.direction === direction))

@@ -8,7 +8,7 @@ Profiles describe hardware independently of any application. The [JSON Schema](.
 | --- | --- |
 | `schemaVersion` | Profile format version; currently `1`, separate from API version |
 | `id`, `name`, `manufacturer` | Stable catalogue ID and display names |
-| `ids`, `portNames` | Known application identifiers and exact MIDI port-name aliases |
+| `ids`, `portNames` | Stable application identifiers and documented/observed MIDI port-name aliases; browser IDs may be opaque |
 | `documentation`, `productUrl` | Sources for hardware behavior and setup |
 | `abilities`, `hardwareControls` | Human-readable capabilities and physical controls |
 | `notice` | Connection instructions, mode requirements, omissions, and mapping caveats |
@@ -39,6 +39,8 @@ Surface `kind` preserves physical types such as `switch`, `switch3`, `input`, `o
 2. Create `devices/<manufacturer>/<model>/<id>.json` plus `icon.svg` and `panel.svg`. Use lowercase kebab-case. Copy the manufacturer's `devices/<manufacturer>/logo.svg` to `icon.svg`; icons show manufacturer branding. For a new manufacturer, add its actual logo as SVG paths and record the artwork source in `resources/manufacturer-logos.json`. Add the company descriptor described below; the build uses it for the manufacturer page and API entry.
 3. Set `$schema` to `../../profile.schema.json`, `schemaVersion` to `1`, and `id` to the filename without `.json`. Include manufacturer metadata, useful setup notes, controls, and a GUI tree.
 4. Only include port aliases observed on hardware or explicitly documented. Do not use generic aliases such as `USB MIDI` that can identify unrelated devices. An empty `portNames` array is preferable to a guessed match.
+
+   The site and JavaScript client also compare unique complete model names when no verified alias matches. Driver wrappers and punctuation can be normalized without adding invented aliases to a profile. Keep model sizes and generations explicit: a family label such as `Nord Stage 4` cannot identify an 88, 73 or Compact variant. Run `npm run audit:midi` (or `node scripts/audit-midi-matching.js --details`) to check every canonical ID and synthetic display-name/Windows-wrapper case. This audit does not verify real driver strings or discover instruments behind a generic DIN interface.
 5. Map verified messages only. Explain partial coverage; omit configurable encoders, DAW protocols, NRPN sequences, or SysEx features unless their behavior is verified and representable. Do not infer a device's complete MIDI implementation from its physical controls.
 6. Draw original SVG assets and keep surface coordinates aligned with the panel. Clearly identify schematic illustrations. Ensure all asset paths are relative to the profile folder.
 7. Run `npm ci`, `npm run build`, and `npm test`. Commit the regenerated `devices/index.json` alongside the profiles. `dist/` is generated output.

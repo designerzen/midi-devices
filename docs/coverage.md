@@ -1,5 +1,15 @@
 # Classic MIDI and accessible hardware coverage
 
+## MIDI detection audit and additional controllers
+
+The 23 November 2026 expansion adds **13 profiles**, bringing the catalogue to **235**: Arturia MiniFreak, KeyStep Pro, BeatStep and MiniLab MkII; Korg nanoKEY2, nanoKONTROL2, nanoPAD2 and microKEY2 25/37/49/61; Novation Launchkey Mini 25/37 MK4. Each includes manufacturer artwork, setup references and selected-control schematics. Configurable pads, keys and knobs remain unbound. Original BeatStep has MIDI output but no dedicated MIDI input; the 25-key microKEY2 uses a joystick and lacks the larger variants' switch socket; Launchkey Mini MK4 uses touch strips and Type A TRS MIDI output.
+
+The audit found that **173 of the original 222 profiles had no declared port-name aliases**. Some are DIN instruments or configurable interfaces, and a canonical application ID cannot be assumed to equal a browser's opaque port ID. Matching now shares one implementation between the site and JavaScript client: canonical IDs, documented aliases, driver-wrapper normalization, then unique complete model names. Manufacturer pages load all profiles for detection while showing the selected manufacturer's catalogue. Ambiguous sizes/generations, DAW/virtual endpoints without explicit aliases and generic interfaces remain unmatched.
+
+New source-backed aliases cover [Launchpad Mini MK3 MIDI endpoints](https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/Launchpad%20Mini%20-%20Programmers%20Reference%20Manual.pdf), [Launchpad Pro MK3 sequencer endpoints](https://userguides.novationmusic.com/hc/en-gb/articles/25494505907346-Using-Launchpad-Pro-MK3-s-Sequencer), [MiniFreak's musical endpoint](https://support.arturia.com/hc/en-us/articles/19499946683932-Common-MIDI-issues-Troubleshoot) and the Korg nano-series performance/editor endpoints documented in their manuals. The CTRL endpoint on Korg nano controllers is for editor communication, not an audio destination; DAW modes may need a host-specific protocol. microKEY family strings can omit generation and size, so select the exact model manually when those details are absent.
+
+Run `npm run audit:midi` for reproducible checks of every ID and synthetic complete-name/Windows-wrapper cases; add `--details` when invoking the script directly to inspect individual results. These are catalogue consistency checks, not measurements of hardware detection rates. Use the unmatched-device metadata/email tools to report real driver strings. Never assign a generic DIN interface's name to the instrument connected behind it.
+
 The catalogue includes the following landmarks as distinct profiles, rather than treating modern reissues as interchangeable with the originals. This is a curated selection, not a claim that every famous instrument is covered. Each profile includes sources and describes the limits of its mappings.
 
 | Device | Coverage and connection notes |

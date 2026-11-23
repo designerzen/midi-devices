@@ -1,0 +1,744 @@
+{
+	"schemaVersion": 1,
+	"id": "novation-launchkey-mini-25-mk4",
+	"name": "Novation Launchkey Mini 25 MK4",
+	"manufacturer": "Novation",
+	"manufacturerUrl": "https://novationmusic.com/",
+	"productUrl": "https://novationmusic.com/products/launchkey-mini-25",
+	"description": "25-key compact controller with 16 pads, eight encoders and touch strips.",
+	"ids": [
+		"novation-launchkey-mini-25-mk4"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Novation Launchkey Mini 25 MK4 official hardware / MIDI reference",
+			"url": "https://novationmusic.com/products/launchkey-mini-25"
+		},
+		{
+			"title": "Novation Launchkey Mini 25 MK4 official hardware / MIDI reference",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/27441184022418-Launchkey-Mini-25-s-specifications"
+		},
+		{
+			"title": "Novation Launchkey Mini 25 MK4 official hardware / MIDI reference",
+			"url": "https://userguides.novationmusic.com/hc/en-gb/articles/27441151031186-Introduction-to-the-Launchkey-Mini-25-MK4"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"Velocity-sensitive keyboard"
+	],
+	"hardwareControls": [
+		"25 keys",
+		"TOUCH / DISPLAY: Pitch strip, Mod strip, OLED display, Octave -, Octave +",
+		"ENCODERS: 1, 2, 3, 4, 5, 6, 7, 8",
+		"PADS / TRANSPORT: Pad 1, Pad 2, Pad 3, Pad 4, Pad 5, Pad 6, Pad 7, Pad 8, Pad 9, Pad 10, Pad 11, Pad 12, Pad 13, Pad 14, Pad 15, Pad 16, Play, Record"
+	],
+	"notice": "MK4 mini-key variant, distinct from Launchkey Mini MK3 and full-size Launchkey MK4. Use the musical MIDI endpoint for keys/custom modes; DAW endpoints need the corresponding host integration. Configure custom maps with Novation Components. Physical controls and keys remain unbound because presets, modes and octave settings determine messages. Diagrams are selected-control schematics, not dimensioned panel drawings. Port names are recorded only when documented; otherwise detection uses an unambiguous complete model name or manual selection.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Novation Launchkey Mini 25 MK4 selected controls"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 750,
+		"elements": [
+			{
+				"id": "touch-display-pitch-strip",
+				"label": "TOUCH / DISPLAY: Pitch strip",
+				"kind": "strip",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 12.666666666666668,
+					"width": 8.5,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "touch-display-mod-strip",
+				"label": "TOUCH / DISPLAY: Mod strip",
+				"kind": "strip",
+				"position": {
+					"x": 10.714285714285714,
+					"y": 12.666666666666668,
+					"width": 8.5,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "touch-display-oled-display",
+				"label": "TOUCH / DISPLAY: OLED display",
+				"kind": "screen",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 24.44444444444444,
+					"width": 8.5,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "touch-display-octave",
+				"label": "TOUCH / DISPLAY: Octave -",
+				"kind": "button",
+				"position": {
+					"x": 10.714285714285714,
+					"y": 24.44444444444444,
+					"width": 8.5,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "touch-display-octave-2",
+				"label": "TOUCH / DISPLAY: Octave +",
+				"kind": "button",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 36.222222222222214,
+					"width": 8.5,
+					"height": 11.777777777777777
+				}
+			},
+			{
+				"id": "encoders-1",
+				"label": "ENCODERS: 1",
+				"kind": "knob",
+				"position": {
+					"x": 21.5,
+					"y": 12.666666666666668,
+					"width": 9.535714285714286,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "encoders-2",
+				"label": "ENCODERS: 2",
+				"kind": "knob",
+				"position": {
+					"x": 31.035714285714285,
+					"y": 12.666666666666668,
+					"width": 9.535714285714286,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "encoders-3",
+				"label": "ENCODERS: 3",
+				"kind": "knob",
+				"position": {
+					"x": 40.57142857142857,
+					"y": 12.666666666666668,
+					"width": 9.535714285714286,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "encoders-4",
+				"label": "ENCODERS: 4",
+				"kind": "knob",
+				"position": {
+					"x": 50.10714285714286,
+					"y": 12.666666666666668,
+					"width": 9.535714285714286,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "encoders-5",
+				"label": "ENCODERS: 5",
+				"kind": "knob",
+				"position": {
+					"x": 59.64285714285714,
+					"y": 12.666666666666668,
+					"width": 9.535714285714286,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "encoders-6",
+				"label": "ENCODERS: 6",
+				"kind": "knob",
+				"position": {
+					"x": 69.17857142857143,
+					"y": 12.666666666666668,
+					"width": 9.535714285714286,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "encoders-7",
+				"label": "ENCODERS: 7",
+				"kind": "knob",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 12.666666666666668,
+					"width": 9.535714285714286,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "encoders-8",
+				"label": "ENCODERS: 8",
+				"kind": "knob",
+				"position": {
+					"x": 88.25,
+					"y": 12.666666666666668,
+					"width": 9.535714285714286,
+					"height": 12.666666666666668
+				}
+			},
+			{
+				"id": "pads-transport-pad-1",
+				"label": "PADS / TRANSPORT: Pad 1",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-2",
+				"label": "PADS / TRANSPORT: Pad 2",
+				"kind": "pad",
+				"position": {
+					"x": 29.976190476190478,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-3",
+				"label": "PADS / TRANSPORT: Pad 3",
+				"kind": "pad",
+				"position": {
+					"x": 38.452380952380956,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-4",
+				"label": "PADS / TRANSPORT: Pad 4",
+				"kind": "pad",
+				"position": {
+					"x": 46.92857142857143,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-5",
+				"label": "PADS / TRANSPORT: Pad 5",
+				"kind": "pad",
+				"position": {
+					"x": 55.40476190476191,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-6",
+				"label": "PADS / TRANSPORT: Pad 6",
+				"kind": "pad",
+				"position": {
+					"x": 63.88095238095238,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-7",
+				"label": "PADS / TRANSPORT: Pad 7",
+				"kind": "pad",
+				"position": {
+					"x": 72.35714285714285,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-8",
+				"label": "PADS / TRANSPORT: Pad 8",
+				"kind": "pad",
+				"position": {
+					"x": 80.83333333333333,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-9",
+				"label": "PADS / TRANSPORT: Pad 9",
+				"kind": "pad",
+				"position": {
+					"x": 89.30952380952381,
+					"y": 32.666666666666664,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-10",
+				"label": "PADS / TRANSPORT: Pad 10",
+				"kind": "pad",
+				"position": {
+					"x": 21.5,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-11",
+				"label": "PADS / TRANSPORT: Pad 11",
+				"kind": "pad",
+				"position": {
+					"x": 29.976190476190478,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-12",
+				"label": "PADS / TRANSPORT: Pad 12",
+				"kind": "pad",
+				"position": {
+					"x": 38.452380952380956,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-13",
+				"label": "PADS / TRANSPORT: Pad 13",
+				"kind": "pad",
+				"position": {
+					"x": 46.92857142857143,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-14",
+				"label": "PADS / TRANSPORT: Pad 14",
+				"kind": "pad",
+				"position": {
+					"x": 55.40476190476191,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-15",
+				"label": "PADS / TRANSPORT: Pad 15",
+				"kind": "pad",
+				"position": {
+					"x": 63.88095238095238,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-pad-16",
+				"label": "PADS / TRANSPORT: Pad 16",
+				"kind": "pad",
+				"position": {
+					"x": 72.35714285714285,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-play",
+				"label": "PADS / TRANSPORT: Play",
+				"kind": "button",
+				"position": {
+					"x": 80.83333333333333,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "pads-transport-record",
+				"label": "PADS / TRANSPORT: Record",
+				"kind": "button",
+				"position": {
+					"x": 89.30952380952381,
+					"y": 41.66666666666667,
+					"width": 8.476190476190476,
+					"height": 9.0
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 2.142857142857143,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 8.523809523809524,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 14.904761904761903,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 21.285714285714285,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 27.666666666666668,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 34.047619047619044,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 40.42857142857143,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 46.8095238095238,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 53.19047619047619,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 59.57142857142858,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 65.95238095238095,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 72.33333333333333,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 78.71428571428571,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 85.09523809523809,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Key 25",
+				"kind": "key",
+				"position": {
+					"x": 91.47619047619047,
+					"y": 56.00000000000001,
+					"width": 6.3809523809523805,
+					"height": 34.66666666666667
+				},
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 6.545714285714285,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 12.926666666666668,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 25.68857142857143,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 32.06952380952381,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 38.45047619047619,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 51.212380952380954,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 57.59333333333333,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 70.3552380952381,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 76.73619047619047,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 83.11714285714285,
+					"y": 56.00000000000001,
+					"width": 3.956190476190476,
+					"height": 21.146666666666665
+				},
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "USB-C",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "MIDI output",
+			"connector": "3.5 mm TRS Type A",
+			"direction": "output",
+			"location": "See hardware guide"
+		},
+		{
+			"label": "Sustain pedal",
+			"connector": "6.35 mm",
+			"direction": "input",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://novationmusic.com/products/launchkey-mini-25",
+		"https://userguides.novationmusic.com/hc/en-gb/articles/27441184022418-Launchkey-Mini-25-s-specifications",
+		"https://userguides.novationmusic.com/hc/en-gb/articles/27441151031186-Introduction-to-the-Launchkey-Mini-25-MK4",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

@@ -1,0 +1,329 @@
+{
+	"schemaVersion": 1,
+	"id": "korg-nanopad2",
+	"name": "Korg nanoPAD2",
+	"manufacturer": "Korg",
+	"manufacturerUrl": "https://www.korg.com/",
+	"productUrl": "https://www.korg.com/us/products/computergear/nanopad2/page_1.php",
+	"description": "16-pad USB MIDI controller with an X/Y touch surface.",
+	"ids": [
+		"korg-nanopad2"
+	],
+	"portNames": [
+		"nanoPAD2 PAD",
+		"nanoPAD2 CTRL"
+	],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Korg nanoPAD2 official hardware / MIDI reference",
+			"url": "https://www.korg.com/us/products/computergear/nanopad2/page_1.php"
+		},
+		{
+			"title": "Korg nanoPAD2 official hardware / MIDI reference",
+			"url": "https://cdn.korg.com/us/support/download/files/2a079f43dd62e84294672a8b46649db6.pdf"
+		}
+	],
+	"abilities": [
+		"USB MIDI",
+		"Configurable playing surface"
+	],
+	"hardwareControls": [
+		"PADS: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16",
+		"TOUCH / MODES: XY pad, Scene, Hold, Gate arp, Touch scale, Scale tap"
+	],
+	"notice": "Configure pad notes, channels and scenes in Korg Kontrol Editor. PAD is the playing endpoint and CTRL is used for editor communication. Physical controls and keys remain unbound because presets, modes and octave settings determine messages. Diagrams are selected-control schematics, not dimensioned panel drawings. Port names are recorded only when documented; otherwise detection uses an unambiguous complete model name or manual selection.",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "interface.svg",
+				"alt": "Korg nanoPAD2 selected controls"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "controls"
+			},
+			{
+				"type": "guide",
+				"label": "Setup and documentation"
+			}
+		]
+	},
+	"$schema": "../../profile.schema.json",
+	"surface": {
+		"src": "interface.svg",
+		"width": 1400,
+		"height": 670,
+		"elements": [
+			{
+				"id": "pads-1",
+				"label": "PADS: 1",
+				"kind": "pad",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 14.17910447761194,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-2",
+				"label": "PADS: 2",
+				"kind": "pad",
+				"position": {
+					"x": 10.857142857142858,
+					"y": 14.17910447761194,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-3",
+				"label": "PADS: 3",
+				"kind": "pad",
+				"position": {
+					"x": 19.5,
+					"y": 14.17910447761194,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-4",
+				"label": "PADS: 4",
+				"kind": "pad",
+				"position": {
+					"x": 28.142857142857142,
+					"y": 14.17910447761194,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-5",
+				"label": "PADS: 5",
+				"kind": "pad",
+				"position": {
+					"x": 36.78571428571429,
+					"y": 14.17910447761194,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-6",
+				"label": "PADS: 6",
+				"kind": "pad",
+				"position": {
+					"x": 45.42857142857143,
+					"y": 14.17910447761194,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-7",
+				"label": "PADS: 7",
+				"kind": "pad",
+				"position": {
+					"x": 54.07142857142857,
+					"y": 14.17910447761194,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-8",
+				"label": "PADS: 8",
+				"kind": "pad",
+				"position": {
+					"x": 62.71428571428571,
+					"y": 14.17910447761194,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-9",
+				"label": "PADS: 9",
+				"kind": "pad",
+				"position": {
+					"x": 2.214285714285714,
+					"y": 52.61194029850746,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-10",
+				"label": "PADS: 10",
+				"kind": "pad",
+				"position": {
+					"x": 10.857142857142858,
+					"y": 52.61194029850746,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-11",
+				"label": "PADS: 11",
+				"kind": "pad",
+				"position": {
+					"x": 19.5,
+					"y": 52.61194029850746,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-12",
+				"label": "PADS: 12",
+				"kind": "pad",
+				"position": {
+					"x": 28.142857142857142,
+					"y": 52.61194029850746,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-13",
+				"label": "PADS: 13",
+				"kind": "pad",
+				"position": {
+					"x": 36.78571428571429,
+					"y": 52.61194029850746,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-14",
+				"label": "PADS: 14",
+				"kind": "pad",
+				"position": {
+					"x": 45.42857142857143,
+					"y": 52.61194029850746,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-15",
+				"label": "PADS: 15",
+				"kind": "pad",
+				"position": {
+					"x": 54.07142857142857,
+					"y": 52.61194029850746,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "pads-16",
+				"label": "PADS: 16",
+				"kind": "pad",
+				"position": {
+					"x": 62.71428571428571,
+					"y": 52.61194029850746,
+					"width": 8.642857142857142,
+					"height": 38.43283582089552
+				}
+			},
+			{
+				"id": "touch-modes-xy-pad",
+				"label": "TOUCH / MODES: XY pad",
+				"kind": "xy",
+				"position": {
+					"x": 73.64285714285714,
+					"y": 14.17910447761194,
+					"width": 12.071428571428571,
+					"height": 25.621890547263682
+				}
+			},
+			{
+				"id": "touch-modes-scene",
+				"label": "TOUCH / MODES: Scene",
+				"kind": "button",
+				"position": {
+					"x": 85.71428571428571,
+					"y": 14.17910447761194,
+					"width": 12.071428571428571,
+					"height": 25.621890547263682
+				}
+			},
+			{
+				"id": "touch-modes-hold",
+				"label": "TOUCH / MODES: Hold",
+				"kind": "button",
+				"position": {
+					"x": 73.64285714285714,
+					"y": 39.80099502487562,
+					"width": 12.071428571428571,
+					"height": 25.621890547263682
+				}
+			},
+			{
+				"id": "touch-modes-gate-arp",
+				"label": "TOUCH / MODES: Gate arp",
+				"kind": "button",
+				"position": {
+					"x": 85.71428571428571,
+					"y": 39.80099502487562,
+					"width": 12.071428571428571,
+					"height": 25.621890547263682
+				}
+			},
+			{
+				"id": "touch-modes-touch-scale",
+				"label": "TOUCH / MODES: Touch scale",
+				"kind": "button",
+				"position": {
+					"x": 73.64285714285714,
+					"y": 65.4228855721393,
+					"width": 12.071428571428571,
+					"height": 25.621890547263682
+				}
+			},
+			{
+				"id": "touch-modes-scale-tap",
+				"label": "TOUCH / MODES: Scale tap",
+				"kind": "button",
+				"position": {
+					"x": 85.71428571428571,
+					"y": 65.4228855721393,
+					"width": 12.071428571428571,
+					"height": 25.621890547263682
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "USB MIDI / power",
+			"connector": "Mini USB",
+			"direction": "bidirectional",
+			"location": "See hardware guide"
+		}
+	],
+	"diagramSources": [
+		"https://www.korg.com/us/products/computergear/nanopad2/page_1.php",
+		"https://cdn.korg.com/us/support/download/files/2a079f43dd62e84294672a8b46649db6.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}
