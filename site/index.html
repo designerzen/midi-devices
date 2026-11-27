@@ -6,12 +6,16 @@
 		<meta name="description" content="Open MIDI hardware profiles: panel diagrams, icons, MIDI control mappings and setup guides, free for any application to use." />
 		<title>MIDI device discovery</title>
 		<link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any" />
+		<link rel="preload" href="./fonts/UncutPlan8-Regular.woff2" as="font" type="font/woff2" crossorigin />
 		<style>
+			@font-face { font-family: "Uncut Plan8"; src: url("./fonts/UncutPlan8-Regular.woff2") format("woff2"); font-style: normal; font-weight: 400; font-display: swap; }
+			@font-face { font-family: "Uncut Plan8"; src: url("./fonts/UncutPlan8-RegularItalic.woff2") format("woff2"); font-style: italic; font-weight: 400; font-display: swap; }
 			:root {
-				--bg: #0b1420; --surface: #132131; --surface-raised: #182a3d; --border: #2a3a4d; --border-strong: #46586c;
-				--text: #e5edf5; --muted: #a3b4c6; --accent: #9cddcf; --accent-strong: #c5f5e9; --accent-soft: rgba(156, 221, 207, 0.12);
-				--warning: #f5c48e; --error: #f5a48e; --radius: 14px;
-				color-scheme: dark; font-family: system-ui, sans-serif; color: var(--text); background: var(--bg);
+				--bg: #131716; --surface: #191e1c; --surface-raised: #222925; --border: #303a34; --border-strong: #58665d;
+				--text: #eef1eb; --muted: #aab6ac; --accent: #c1e5b3; --accent-strong: #e0f4d8; --accent-soft: rgba(193, 229, 179, 0.08);
+				--warning: #f5c48e; --error: #f5a48e; --radius: 6px;
+				--font: "Uncut Plan8", ui-monospace, monospace;
+				color-scheme: dark; font-family: var(--font); font-size: 15px; color: var(--text); background: var(--bg);
 			}
 			* { box-sizing: border-box; }
 			body { margin: 0; background: var(--bg); }
@@ -32,18 +36,18 @@
 			input[type="checkbox"] { width: 1.1rem; height: 1.1rem; margin: 0.2rem 0 0; accent-color: var(--accent); flex-shrink: 0; }
 			.skip { position: absolute; left: 1rem; top: -5rem; padding: 1rem; background: var(--surface-raised); z-index: 1; }
 			.skip:focus { top: 1rem; }
-			.site-header, main, footer { max-width: 1280px; margin: auto; padding: 0 2rem; }
+			.site-header, main, footer { max-width: 1200px; margin: auto; padding: 0 2rem; }
 			.site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
 			.brand { display: flex; align-items: center; gap: 0.6rem; color: var(--text); font-weight: 700; text-decoration: none; }
 			.brand img { width: 28px; height: 28px; }
 			nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: 0.9rem; }
 			nav a { color: var(--muted); text-decoration: none; }
 			nav a:hover { color: var(--accent-strong); text-decoration: underline; }
-			main { display: grid; gap: 3rem; padding-top: 3rem; padding-bottom: 3rem; }
-			h1 { font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 0.75rem; }
-			.lead { color: var(--muted); font-size: 1.15rem; max-width: 60ch; margin: 0 0 2rem; }
+			main { display: grid; gap: 3.5rem; padding-top: 4rem; padding-bottom: 3rem; }
+			h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 400; letter-spacing: -0.05em; line-height: 1.15; margin: 0 0 1rem; }
+			.lead { color: var(--muted); font-size: 1.05rem; max-width: 66ch; margin: 0 0 2rem; }
 			p, li, dd { line-height: 1.6; }
-			.section-title { font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 0.4rem; }
+			.section-title { font-size: 1.5rem; font-weight: 400; letter-spacing: -0.03em; margin: 0 0 0.5rem; }
 			.section-intro { color: var(--muted); margin: 0 0 1.5rem; max-width: 70ch; }
 			.panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
 			body[data-manufacturer] #getting-started { display: none; }
@@ -54,17 +58,17 @@
 
 			/* Getting started */
 			.steps { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; counter-reset: step; }
-			.steps li { counter-increment: step; position: relative; padding: 1rem 1rem 1rem 3.6rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--muted); }
-			.steps li::before { content: counter(step); position: absolute; left: 1rem; top: 1rem; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; border: 2px solid var(--border-strong); font-weight: 700; color: var(--muted); }
+			.steps li { counter-increment: step; position: relative; padding: 0.75rem 0.5rem 0.75rem 2.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+			.steps li::before { content: "0" counter(step); position: absolute; left: 0; top: 0.75rem; color: var(--muted); }
 			.steps strong { display: block; color: var(--text); margin-bottom: 0.15rem; }
-			.steps li[data-state="current"] { border-color: var(--accent); background: var(--accent-soft); }
+			.steps li[data-state="current"] { border-color: var(--accent); }
 			.steps li[data-state="current"]::before { border-color: var(--accent); color: var(--accent); }
-			.steps li[data-state="done"]::before { content: "✓"; background: var(--accent); border-color: var(--accent); color: var(--bg); }
+			.steps li[data-state="done"]::before { content: "✓"; color: var(--accent); }
 			.steps li[data-state="done"] strong { color: var(--muted); }
-			.detect-panel { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+			.detect-panel { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; background: transparent; padding: 1.25rem 0 0; border: 0; border-top: 1px solid var(--border); border-radius: 0; }
 			#midi-status { margin: 0; flex: 1 1 280px; }
 			#midi-status.warning { color: var(--warning); }
-			.options { flex-basis: 100%; font-size: 0.92rem; color: var(--muted); }
+			.options { flex-basis: 100%; font-size: 0.85rem; color: var(--muted); margin-top: 0; padding-top: 0; border: 0; }
 			.options summary { cursor: pointer; width: fit-content; }
 			.options label { display: flex; gap: 0.6rem; align-items: flex-start; margin-top: 0.75rem; max-width: 70ch; }
 			.options label strong { color: var(--text); }
@@ -81,7 +85,7 @@
 			@media (prefers-reduced-motion: reduce) { .pulse { animation: none; } }
 			#midi-monitor .table-scroll { max-height: 380px; overflow: auto; border: 1px solid var(--border); border-radius: 10px; }
 			#midi-monitor th { position: sticky; top: 0; background: var(--surface-raised); }
-			#midi-monitor td:last-child { font-family: ui-monospace, monospace; overflow-wrap: anywhere; min-width: 10ch; }
+			#midi-monitor td:last-child { font-family: var(--font); overflow-wrap: anywhere; min-width: 10ch; }
 			#midi-monitor table { margin: 0; }
 			.monitor-settings { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: end; margin-bottom: 1rem; font-size: 0.92rem; }
 			.monitor-settings label { display: grid; gap: 0.25rem; color: var(--muted); }
@@ -89,10 +93,10 @@
 			#midi-state { display: grid; gap: 1rem; max-height: 520px; overflow: auto; }
 			.state-port { border: 1px solid var(--border); border-radius: 10px; padding: 0.75rem 1rem; background: var(--surface); }
 			.state-port h3 { margin: 0 0 0.5rem; font-size: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; }
-			.state-clock { font-weight: 400; color: var(--muted); font-family: ui-monospace, monospace; font-size: 0.85rem; }
+			.state-clock { font-weight: 400; color: var(--muted); font-family: var(--font); font-size: 0.85rem; }
 			.state-channels { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 0.75rem; }
-			.state-channel { border-left: 3px solid var(--accent); padding-left: 0.6rem; font-family: ui-monospace, monospace; font-size: 0.82rem; }
-			.state-channel h4 { margin: 0 0 0.35rem; font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--accent); }
+			.state-channel { border-left: 3px solid var(--accent); padding-left: 0.6rem; font-family: var(--font); font-size: 0.82rem; }
+			.state-channel h4 { margin: 0 0 0.35rem; font-family: var(--font); font-size: 0.85rem; color: var(--accent); }
 			.state-row { display: grid; grid-template-columns: 7.5ch 1fr 5ch; gap: 0.5rem; align-items: center; line-height: 1.5; }
 			.state-row.off { opacity: 0.45; }
 			.state-row output { text-align: right; }
@@ -103,7 +107,7 @@
 			.state-bar .pressure { top: 60%; background: var(--warning); }
 
 			/* Device cards */
-			#catalog, #connected-devices { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 1.25rem; align-items: start; }
+			#catalog, #connected-devices { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1rem; align-items: start; }
 			#connected-devices { grid-template-columns: 1fr; }
 			.live-controls { margin-top: 1rem; }
 			.control-toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: 0.75rem; margin-bottom: 1rem; }
@@ -115,9 +119,9 @@
 			article.is-connected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 			.device-heading { display: flex; align-items: center; gap: 0.9rem; }
 			.icon { width: 52px; height: 52px; object-fit: contain; background: white; border-radius: 8px; padding: 4px; flex-shrink: 0; }
-			article h2 { margin: 0; font-size: 1.2rem; }
+			article h2 { margin: 0; font-size: 1.1rem; font-weight: 400; overflow-wrap: anywhere; }
 			.manufacturer { color: var(--muted); margin: 0.1rem 0 0; }
-			.description { color: var(--muted); margin: 1rem 0 0; }
+			.description { color: var(--muted); margin: 1rem 0 0; font-size: 0.9rem; }
 			.connection-status { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; font-weight: 700; color: var(--accent-strong); background: var(--accent-soft); border-radius: 999px; padding: 0.15rem 0.6rem; margin-top: 0.4rem; }
 			.connection-status::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); }
 			.connection-ports { font-size: 0.85rem; color: var(--muted); overflow-wrap: anywhere; margin: 0.75rem 0 0; }
@@ -139,7 +143,7 @@
 			th { color: var(--muted); }
 			.profile-picker { display: grid; gap: 0.4rem; margin-top: 1rem; font-size: 0.9rem; color: var(--muted); }
 			.unmatched { background: var(--accent-soft); border-radius: 8px; padding: 0.75rem 1rem; }
-			.agent-prompt { white-space: pre-wrap; overflow-wrap: anywhere; font: 0.85rem/1.6 ui-monospace, monospace; padding: 1rem; border: 1px solid var(--border-strong); border-radius: 8px; background: var(--bg); -webkit-user-select: all; user-select: all; }
+			.agent-prompt { white-space: pre-wrap; overflow-wrap: anywhere; font: 0.85rem/1.6 var(--font); padding: 1rem; border: 1px solid var(--border-strong); border-radius: 8px; background: var(--bg); -webkit-user-select: all; user-select: all; }
 			.agent-prompt:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 3px; }
 			.copy-status { color: var(--muted); font-size: 0.9rem; }
 			.notice { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--muted); }
@@ -148,7 +152,12 @@
 			/* Catalog filters */
 			.filter-bar { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; margin: 0 0 1rem; }
 			.filter-field { display: grid; gap: 0.4rem; flex: 1 1 240px; font-size: 0.9rem; font-weight: 650; color: var(--muted); }
-			.filter-field input, .filter-field select { font-size: 1rem; font-weight: 400; }
+			.filter-field input, .filter-field select { font-size: max(1rem, 16px); font-weight: 400; }
+			.filter-field:first-child { flex-grow: 2; }
+			#catalog-section { border-top: 1px solid var(--border); padding-top: 2rem; }
+			#catalog-section .section-intro { margin-bottom: 1.25rem; }
+			.footer-resources { margin-top: 1rem; font-size: 0.85rem; }
+			.footer-resources > div { padding-top: 0.75rem; }
 			#filter-status, #status { color: var(--muted); margin: 0 0 1rem; }
 
 			footer { color: var(--muted); font-size: 0.88rem; border-top: 1px solid var(--border); padding-top: 1.5rem; padding-bottom: 2.5rem; }
@@ -161,17 +170,17 @@
 		<a class="skip" href="#catalog-section">Skip to device catalog</a>
 		<header class="site-header">
 			<a class="brand" href="./"><img src="./favicon.svg" alt="" />MIDI device discovery</a>
-			<nav aria-label="Site navigation"><a href="https://github.com/designerzen/midi-devices">GitHub</a><a href="https://github.com/designerzen/midi-devices/blob/main/docs/api.md">API docs</a><a href="https://github.com/designerzen/midi-devices/blob/main/docs/profiles.md">Profile guide</a><a href="api/v1/index.json">JSON API</a><a href="index.json">Device index</a><a href="profile.schema.json">Profile schema</a><a href="https://github.com/designerzen/harmoneasy">Harmoneasy</a></nav>
+			<nav aria-label="Site navigation"><a href="#catalog-section">Devices</a><a href="https://github.com/designerzen/midi-devices/blob/main/docs/api.md">API docs</a><a href="https://github.com/designerzen/midi-devices">GitHub</a></nav>
 		</header>
 		<main>
 			<section id="manufacturer-info" class="panel" aria-labelledby="manufacturer-name" hidden></section>
 			<section id="getting-started" aria-labelledby="page-title">
-				<h1 id="page-title">Find out what your MIDI gear can do</h1>
-				<p class="lead">Plug in your keyboard, controller or synth and this page identifies it, shows its panel layout and MIDI controls, and displays every note and knob movement as you play.</p>
+				<h1 id="page-title">Get to know your MIDI gear.</h1>
+				<p class="lead">Find your device, explore its controls and see what you play. Connect your gear to get started, or browse the catalog below.</p>
 				<ol class="steps" id="steps">
 					<li data-step="1" data-state="current"><strong>Plug in your device</strong>Connect it by USB, or through a MIDI interface.</li>
-					<li data-step="2" data-state="upcoming"><strong>Turn on detection</strong>Click <em>Detect my devices</em>, then choose <em>Allow</em>. Leave it on to detect devices as you connect them; click again to stop.</li>
-					<li data-step="3" data-state="upcoming"><strong>Play something</strong>Press a key, turn a knob or hit a pad to see the MIDI messages live.</li>
+					<li data-step="2" data-state="upcoming"><strong>Turn on detection</strong>Detect your devices, then allow MIDI access. Click again to stop.</li>
+					<li data-step="3" data-state="upcoming"><strong>Play something</strong>Play a note or turn a knob to see it live.</li>
 				</ol>
 				<div class="panel detect-panel">
 					<button id="detect-midi" class="primary" type="button" aria-pressed="false" aria-describedby="midi-status" hidden>Detect my devices</button>
@@ -184,7 +193,7 @@
 			</section>
 			<section id="connected-section" aria-labelledby="connected-heading" hidden>
 				<h2 id="connected-heading" class="section-title">Your connected devices</h2>
-				<p class="section-intro">Each card is one device this browser can see. If we picked the wrong profile, choose the right one from the <em>Device profile</em> list on the card.</p>
+				<p class="section-intro">Check the detected profile below. Choose another if needed.</p>
 				<p id="connected-empty" class="panel" hidden>Detection is on. Connect a MIDI device and check its cable and power. It will appear here automatically.</p>
 				<div id="connected-devices" aria-label="Connected MIDI devices"></div>
 			</section>
@@ -213,7 +222,7 @@
 				</div>
 				<p id="event-status" role="status">Listening for MIDI messages.</p>
 				<p id="input-errors" class="error" hidden></p>
-				<p id="monitor-empty" class="monitor-empty"><span class="pulse" aria-hidden="true"></span><span><strong>Waiting for you to play.</strong> Press a key, turn a knob or hit a pad on your device. Messages appear here as they arrive, newest first.</span></p>
+				<p id="monitor-empty" class="monitor-empty"><span class="pulse" aria-hidden="true"></span><span><strong>Ready when you are.</strong> Play a note or turn a knob to see incoming MIDI.</span></p>
 				<div id="midi-state" aria-label="Current MIDI state per input and channel" hidden></div>
 				<div id="events-table"class="table-scroll" hidden><table aria-label="Incoming MIDI messages">
 					<thead><tr><th scope="col">Time (UTC)</th><th scope="col">From</th><th scope="col">Message</th><th scope="col">Raw bytes (hex)</th></tr></thead>
@@ -221,11 +230,11 @@
 				</table></div>
 			</section>
 			<section id="catalog-section" aria-labelledby="all-devices-heading">
-				<h2 id="all-devices-heading" class="section-title">Browse all device profiles</h2>
-				<p class="section-intro">No hardware to hand? Search the catalog to see panel diagrams, MIDI control mappings and setup notes for any supported device.</p>
+				<h2 id="all-devices-heading" class="section-title">Device catalog</h2>
+				<p class="section-intro">Panel diagrams, MIDI mappings and setup notes. No hardware needed.</p>
 				<p id="status" role="status" aria-live="polite">Loading device profiles…</p>
 				<form id="filters" class="filter-bar" role="search" aria-label="Filter MIDI devices" hidden>
-					<label class="filter-field" for="device-search">Search by name or manufacturer
+					<label class="filter-field" for="device-search">Search devices
 						<input id="device-search" type="search" placeholder="Try DX7, Roland or Soundbeam" aria-controls="catalog" />
 					</label>
 					<label class="filter-field" for="manufacturer-filter">Manufacturer
@@ -240,9 +249,16 @@
 			</section>
 		</main>
 		<footer>
-			<p id="build-version">Version __BUILD_VERSION__ · Commit <a href="https://github.com/designerzen/midi-devices/commit/__BUILD_COMMIT__" title="__BUILD_COMMIT__">__BUILD_SHORT_COMMIT__</a> · Built <time datetime="__BUILD_TIME__">__BUILD_TIME__</time> · <a href="https://github.com/designerzen/midi-devices/commits/main/">Compare with latest commit</a> · <a href="version.json">Build details</a></p>
-			<p>Diagrams are schematic. MIDI mappings and available features depend on the hardware settings; check each device’s setup notes.</p>
-			<p>MIDI resources: <a href="https://midi.org/">The MIDI Association</a> · <a href="https://midi.org/specs">Official MIDI specifications</a> · <a href="https://midi.org/midi-1-0-detailed-specification">MIDI 1.0 detailed specification</a></p>
+			<p>Open profiles for MIDI hardware. Diagrams are schematic; check your device’s setup notes.</p>
+			<details class="footer-resources">
+				<summary>Resources &amp; project details</summary>
+				<div>
+					<p><a href="https://github.com/designerzen/midi-devices/blob/main/docs/profiles.md">Profile guide</a> · <a href="api/v1/index.json">JSON API</a> · <a href="index.json">Device index</a> · <a href="profile.schema.json">Profile schema</a> · <a href="https://github.com/designerzen/harmoneasy">Harmoneasy</a></p>
+					<p><a href="https://midi.org/">The MIDI Association</a> · <a href="https://midi.org/specs">MIDI specifications</a> · <a href="https://midi.org/midi-1-0-detailed-specification">MIDI 1.0 specification</a></p>
+					<p>Typeface: <a href="https://github.com/kaspernordkvist/uncut_plan8">Uncut Plan8</a> by Kasper Nordkvist · <a href="./fonts/OFL.txt">SIL Open Font License</a></p>
+					<p id="build-version">Version __BUILD_VERSION__ · Commit <a href="https://github.com/designerzen/midi-devices/commit/__BUILD_COMMIT__" title="__BUILD_COMMIT__">__BUILD_SHORT_COMMIT__</a> · Built <time datetime="__BUILD_TIME__">__BUILD_TIME__</time> · <a href="https://github.com/designerzen/midi-devices/commits/main/">Compare with latest commit</a> · <a href="version.json">Build details</a></p>
+				</div>
+			</details>
 		</footer>
 		<script type="module">
 			import { connectedMidiDevices, describeMidiMessage, midiPortDetails, unmatchedDeviceEmail, unmatchedDeviceAgentPrompt, DEVICE_PROFILE_EMAIL } from "./midi-connections.js?v=__BUILD_COMMIT__"
@@ -393,9 +409,9 @@
 				assets.append(link("Profile JSON", new URL(`${id}.json`, folder).href))
 				assets.append(link("API JSON", `api/v1/devices/${encodeURIComponent(id)}.json`))
 				assets.append(link("API XML", `api/v1/devices/${encodeURIComponent(id)}.xml`))
-				list(card, "Capabilities", profile.abilities)
 				const details = element("details")
 				details.append(element("summary", "Controls, setup and files"))
+				list(details, "Capabilities", profile.abilities)
 				for (const [key, label] of [["interface", "Labelled hardware interface"], ["connections", "Inputs, outputs and controls"]]) {
 					const url = asset(folder, profile.diagrams?.[key])
 					if (!url) continue
