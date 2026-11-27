@@ -223,7 +223,7 @@ Web MIDI access requires browser support, a secure context, and user permission.
 The package contains the raw registry (`devices/`) and helpers for serving it. It does not contain the generated `api/v1/` responses.
 
 ```sh
-npm install github:designerzen/midi-devices
+npm install midi-devices
 ```
 
 ```js

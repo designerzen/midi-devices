@@ -58540,5 +58540,991 @@
 			260
 		],
 		"firstNote": 48
+	},
+	"korg-arp-odyssey": {
+		"width": 1500,
+		"height": 750,
+		"style": "standard",
+		"keyboard": [37, 185, 460, 1135, 265],
+		"firstNote": 48,
+		"autoBind": false,
+		"groups": [
+			{
+				"label": "VCO-1",
+				"box": [25, 65, 230, 380],
+				"labels": ["Frequency coarse~fader", "Frequency fine~fader", "Audio KYBD on / LF KYBD off~switch", "FM depth (pink)~fader", "FM depth (yellow)~fader", "Pulse width~fader", "Pulse width mod~fader", "FM source LFO~switch", "FM source S/H / ADSR~switch", "PWM source LFO / ADSR~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "VCO-2",
+				"box": [265, 65, 230, 380],
+				"labels": ["Frequency coarse~fader", "Frequency fine~fader", "Sync~switch", "FM depth (pink)~fader", "FM depth (yellow)~fader", "Pulse width~fader", "Pulse width mod~fader", "FM source LFO / S/H mixer or pedal~switch", "FM source S/H / ADSR~switch", "PWM source LFO / ADSR~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "LFO / Sample and hold",
+				"box": [505, 65, 200, 380],
+				"labels": ["LFO freq~fader", "S/H input level (blue)~fader", "S/H input level (white)~fader", "S/H output lag~fader", "S/H input source VCO-1~switch", "S/H input source noise / VCO-2~switch", "S/H trigger LFO / KYBD~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "Audio mixer",
+				"box": [715, 65, 170, 380],
+				"labels": ["Noise / Ring mod~fader", "VCO-1~fader", "VCO-2~fader", "Noise / Ring mod source~switch", "VCO-1 wave~switch", "VCO-2 wave~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "VCF / HPF",
+				"box": [895, 65, 260, 380],
+				"labels": ["VCF freq~fader", "Resonance~fader", "VCF type~switch3", "Mod level (black)~fader", "Mod level (yellow)~fader", "Mod level (pink)~fader", "Mod source KYBD CV / S/H mixer or pedal~switch", "Mod source S/H / LFO~switch", "Mod source ADSR / AR~switch", "HPF cutoff freq~fader"],
+				"kind": "fader",
+				"columns": 4
+			},
+			{
+				"label": "VCA",
+				"box": [1165, 65, 120, 380],
+				"labels": ["VCA gain~fader", "VCA level~fader", "Drive~switch", "VCA EG AR / ADSR~switch"],
+				"kind": "fader",
+				"columns": 2
+			},
+			{
+				"label": "Envelope generators",
+				"box": [1295, 65, 180, 380],
+				"labels": ["AR attack~fader", "AR release~fader", "ADSR attack~fader", "ADSR decay~fader", "ADSR sustain~fader", "ADSR release~fader", "ADSR trigger KYBD gate / LFO repeat~switch", "ADSR repeat KYBD / auto~switch", "AR trigger KYBD gate / LFO repeat~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "Noise / Controller",
+				"box": [25, 460, 145, 160],
+				"labels": ["Noise generator white / pink~switch", "Portamento~fader", "Portamento mode~switch", "Transpose~switch3"],
+				"kind": "fader",
+				"columns": 2
+			},
+			{
+				"label": "Proportional pitch control",
+				"box": [25, 630, 145, 95],
+				"labels": ["Pitch down pad~pad", "Vibrato pad~pad", "Pitch up pad~pad"],
+				"kind": "pad",
+				"columns": 3
+			},
+			{
+				"label": "Rear panel controls",
+				"box": [1330, 460, 145, 160],
+				"labels": ["Power~power", "Headphone volume~knob"],
+				"kind": "knob",
+				"columns": 1
+			}
+		],
+		"ports": [
+			{
+				"label": "DC 9V",
+				"connector": "DC power jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "MIDI IN",
+				"connector": "5-pin DIN",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "USB",
+				"connector": "USB-B MIDI",
+				"direction": "bidirectional",
+				"location": "rear panel"
+			},
+			{
+				"label": "PEDAL",
+				"connector": "6.35 mm phone jack (volume pedal)",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "PORTAMENTO FOOTSWITCH",
+				"connector": "Foot switch jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "OUTPUT LOW",
+				"connector": "6.35 mm mono phone jack",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "OUTPUT HIGH",
+				"connector": "XLR",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "EXT AUDIO INPUT",
+				"connector": "6.35 mm mono phone jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "Headphones",
+				"connector": "6.35 mm stereo phone jack",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "CV IN",
+				"connector": "3.5 mm mono jack, 1 V/oct",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "CV OUT",
+				"connector": "3.5 mm mono jack, 1 V/oct",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "GATE IN",
+				"connector": "3.5 mm mono jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "GATE OUT",
+				"connector": "3.5 mm mono jack",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "TRIG IN",
+				"connector": "3.5 mm mono jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "TRIG OUT",
+				"connector": "3.5 mm mono jack",
+				"direction": "output",
+				"location": "rear panel"
+			}
+		],
+		"references": ["https://cdn.korg.com/us/support/download/files/2da5c4341ec598574d4af552ecb88b6e.pdf", "https://cdn.korg.com/us/support/download/files/7d3989df8622ee63d35fd729db12ea74.pdf"]
+	},
+	"korg-arp-odyssey-module": {
+		"width": 1500,
+		"height": 615,
+		"style": "standard",
+		"autoBind": false,
+		"groups": [
+			{
+				"label": "VCO-1",
+				"box": [25, 65, 230, 380],
+				"labels": ["Frequency coarse~fader", "Frequency fine~fader", "Audio KYBD on / LF KYBD off~switch", "FM depth (pink)~fader", "FM depth (yellow)~fader", "Pulse width~fader", "Pulse width mod~fader", "FM source LFO~switch", "FM source S/H / ADSR~switch", "PWM source LFO / ADSR~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "VCO-2",
+				"box": [265, 65, 230, 380],
+				"labels": ["Frequency coarse~fader", "Frequency fine~fader", "Sync~switch", "FM depth (pink)~fader", "FM depth (yellow)~fader", "Pulse width~fader", "Pulse width mod~fader", "FM source LFO / S/H mixer or pedal~switch", "FM source S/H / ADSR~switch", "PWM source LFO / ADSR~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "LFO / Sample and hold",
+				"box": [505, 65, 200, 380],
+				"labels": ["LFO freq~fader", "S/H input level (blue)~fader", "S/H input level (white)~fader", "S/H output lag~fader", "S/H input source VCO-1~switch", "S/H input source noise / VCO-2~switch", "S/H trigger LFO / KYBD~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "Audio mixer",
+				"box": [715, 65, 170, 380],
+				"labels": ["Noise / Ring mod~fader", "VCO-1~fader", "VCO-2~fader", "Noise / Ring mod source~switch", "VCO-1 wave~switch", "VCO-2 wave~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "VCF / HPF",
+				"box": [895, 65, 260, 380],
+				"labels": ["VCF freq~fader", "Resonance~fader", "VCF type~switch3", "Mod level (black)~fader", "Mod level (yellow)~fader", "Mod level (pink)~fader", "Mod source KYBD CV / S/H mixer or pedal~switch", "Mod source S/H / LFO~switch", "Mod source ADSR / AR~switch", "HPF cutoff freq~fader"],
+				"kind": "fader",
+				"columns": 4
+			},
+			{
+				"label": "VCA",
+				"box": [1165, 65, 120, 380],
+				"labels": ["VCA gain~fader", "VCA level~fader", "Drive~switch", "VCA EG AR / ADSR~switch"],
+				"kind": "fader",
+				"columns": 2
+			},
+			{
+				"label": "Envelope generators",
+				"box": [1295, 65, 180, 380],
+				"labels": ["AR attack~fader", "AR release~fader", "ADSR attack~fader", "ADSR decay~fader", "ADSR sustain~fader", "ADSR release~fader", "ADSR trigger KYBD gate / LFO repeat~switch", "ADSR repeat KYBD / auto~switch", "AR trigger KYBD gate / LFO repeat~switch"],
+				"kind": "fader",
+				"columns": 3
+			},
+			{
+				"label": "Noise / Portamento",
+				"box": [25, 460, 230, 130],
+				"labels": ["Noise generator white / pink~switch", "Portamento~fader"],
+				"kind": "fader",
+				"columns": 2
+			},
+			{
+				"label": "Rear panel controls",
+				"box": [265, 460, 430, 130],
+				"labels": ["Power~power", "Headphone volume~knob", "Mode switch 1-5~switch"],
+				"kind": "knob",
+				"columns": 3
+			}
+		],
+		"ports": [
+			{
+				"label": "DC 9V",
+				"connector": "DC power jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "MIDI IN",
+				"connector": "5-pin DIN",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "USB",
+				"connector": "USB-B MIDI",
+				"direction": "bidirectional",
+				"location": "rear panel"
+			},
+			{
+				"label": "PEDAL",
+				"connector": "6.35 mm phone jack (volume pedal)",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "PORTAMENTO FOOTSWITCH",
+				"connector": "Foot switch jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "OUTPUT LOW",
+				"connector": "6.35 mm mono phone jack",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "OUTPUT HIGH",
+				"connector": "XLR",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "EXT AUDIO INPUT",
+				"connector": "6.35 mm mono phone jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "Headphones",
+				"connector": "6.35 mm stereo phone jack",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "CV IN",
+				"connector": "3.5 mm mono jack, 1 V/oct",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "CV OUT",
+				"connector": "3.5 mm mono jack, 1 V/oct",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "GATE IN",
+				"connector": "3.5 mm mono jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "GATE OUT",
+				"connector": "3.5 mm mono jack",
+				"direction": "output",
+				"location": "rear panel"
+			},
+			{
+				"label": "TRIG IN",
+				"connector": "3.5 mm mono jack",
+				"direction": "input",
+				"location": "rear panel"
+			},
+			{
+				"label": "TRIG OUT",
+				"connector": "3.5 mm mono jack",
+				"direction": "output",
+				"location": "rear panel"
+			}
+		],
+		"references": ["https://cdn.korg.com/us/support/download/files/2da5c4341ec598574d4af552ecb88b6e.pdf", "https://cdn.korg.com/us/support/download/files/7d3989df8622ee63d35fd729db12ea74.pdf"]
+	},
+	"korg-arp-2600-m": {
+		"width": 2400,
+		"height": 1385,
+		"style": "standard",
+		"autoBind": false,
+		"groups": [
+			{
+				"label": "Preamp / Envelope follower / Ring modulator",
+				"box": [25, 65, 310, 735],
+				"labels": ["Preamp input~input", "Gain", "Range x10 / x100 / x1000~switch3", "Preamp output~output", "Envelope follower input~input", "Envelope follower level~fader", "Envelope follower output~output", "Ring input 1~input", "Ring input 2~input", "Ring input level 1~fader", "Ring input level 2~fader", "Audio / DC~switch", "Ring output~output"],
+				"kind": "knob",
+				"columns": 3
+			},
+			{
+				"label": "VCO 1",
+				"box": [345, 65, 295, 735],
+				"labels": ["Frequency~horizontal-strip", "Fine Tune~horizontal-strip", "Audio / LF~switch", "KBD CV~input", "S/H CV~input", "ADSR CV~input", "VCO 2 sine CV~input", "CV level 2~fader", "CV level 3~fader", "CV level 4~fader", "Sawtooth out~output", "Square out~output"],
+				"kind": "knob",
+				"columns": 3
+			},
+			{
+				"label": "VCO 2",
+				"box": [650, 65, 295, 735],
+				"labels": ["Frequency~horizontal-strip", "Fine Tune~horizontal-strip", "Pulse Width~fader", "Audio / LF~switch", "KBD CV~input", "S/H CV~input", "ADSR CV~input", "VCO 1 CV~input", "CV level 2~fader", "CV level 3~fader", "CV level 4~fader", "Sawtooth out~output", "PWM CV~input", "PWM depth~fader", "Triangle out~output", "Sine out~output", "Pulse out~output"],
+				"kind": "knob",
+				"columns": 3
+			},
+			{
+				"label": "VCO 3",
+				"box": [955, 65, 295, 735],
+				"labels": ["Frequency~horizontal-strip", "Fine Tune~horizontal-strip", "Pulse Width~fader", "Audio / LF~switch", "KBD CV~input", "Noise CV~input", "ADSR CV~input", "VCO 2 sine CV~input", "CV level 2~fader", "CV level 3~fader", "CV level 4~fader", "Sawtooth out~output", "Pulse out~output"],
+				"kind": "knob",
+				"columns": 3
+			},
+			{
+				"label": "VCF",
+				"box": [1260, 65, 380, 735],
+				"labels": ["Frequency~horizontal-strip", "Fine Tune~horizontal-strip", "Resonance~fader", "Type I / II~switch", "Audio input 1~input", "Audio input 2~input", "Audio input 3~input", "Audio input 4~input", "Audio input 5~input", "Audio level 1~fader", "Audio level 2~fader", "Audio level 3~fader", "Audio level 4~fader", "Audio level 5~fader", "CV input 1~input", "CV input 2~input", "CV input 3~input", "CV level 2~fader", "CV level 3~fader", "VCF out~output"],
+				"kind": "knob",
+				"columns": 4
+			},
+			{
+				"label": "ADSR / AR",
+				"box": [1650, 65, 330, 735],
+				"labels": ["Attack~fader", "Decay~fader", "Sustain~fader", "Release~fader", "ADSR out~output", "AR attack~fader", "AR release~fader", "AR out~output", "KBD / S-H gate~switch", "Gate input~input", "Gate out~output", "Trig out~output", "Manual start~round-button"],
+				"kind": "knob",
+				"columns": 3
+			},
+			{
+				"label": "VCA",
+				"box": [1990, 65, 385, 735],
+				"labels": ["Initial gain~horizontal-strip", "VCF audio in~input", "Ring mod audio in~input", "AR CV in~input", "ADSR CV in~input", "Audio level 1~fader", "Audio level 2~fader", "CV level 1~fader", "CV level 2~fader", "VCA out~output"],
+				"kind": "knob",
+				"columns": 3
+			},
+			{
+				"label": "Left speaker / Multiples",
+				"box": [25, 815, 310, 410],
+				"labels": ["Left speaker~fader", "KBD CV-1~output", "KBD CV-2~output", "MOD CV~output", "Multiple 1~bidirectional", "Multiple 2~bidirectional", "Multiple 3~bidirectional", "Multiple 4~bidirectional"],
+				"kind": "knob",
+				"columns": 3
+			},
+			{
+				"label": "Noise generator",
+				"box": [345, 815, 230, 410],
+				"labels": ["White / Pink / LF color~fader", "Noise level~fader", "Noise out~output"],
+				"kind": "knob",
+				"columns": 2
+			},
+			{
+				"label": "Voltage processors",
+				"box": [585, 815, 620, 410],
+				"labels": ["Inverter input 1~input", "Inverter input 2~input", "Inverter input 3~input", "Inverter input 4~input", "Inverter input 5~input", "Inverter input 6~input", "Input level 2~fader", "Input level 4~fader", "Input level 6~fader", "Inverter out 1~output", "Inverter out 2~output", "Lag input~input", "Lag time~fader", "Lag output~output"],
+				"kind": "knob",
+				"columns": 5
+			},
+			{
+				"label": "Sample and hold / Electronic switch",
+				"box": [1215, 815, 440, 410],
+				"labels": ["Sample input~input", "Int clock out~output", "Sample out~output", "Ext clock input~input", "Level~fader", "Rate~fader", "Switch A~bidirectional", "Switch B~bidirectional", "Switch C~bidirectional"],
+				"kind": "knob",
+				"columns": 3
+			},
+			{
+				"label": "Mixer / Reverb",
+				"box": [1665, 815, 450, 410],
+				"labels": ["Input 1~input", "Input 2~input", "Level 1~fader", "Level 2~fader", "Audio out 1~output", "Audio out 2~output", "L-R input~input", "Pan~horizontal-strip", "Left input~input", "Left output~output", "Right input~input", "Right output~output", "Reverb input~input", "Reverb level L~fader", "Reverb level R~fader", "Reverb out~output"],
+				"kind": "knob",
+				"columns": 4
+			},
+			{
+				"label": "Right speaker / Power",
+				"box": [2125, 815, 250, 410],
+				"labels": ["Right speaker~fader", "Power~power", "Stereo phones~output"],
+				"kind": "knob",
+				"columns": 2
+			},
+			{
+				"label": "Side panel",
+				"box": [25, 1240, 400, 120],
+				"labels": ["Mode switch 1-5~switch"],
+				"kind": "switch",
+				"columns": 1
+			}
+		],
+		"ports": [
+			{
+				"label": "MIDI IN",
+				"connector": "5-pin DIN",
+				"direction": "input",
+				"location": "side panel"
+			},
+			{
+				"label": "USB MIDI CONTROLLER",
+				"connector": "USB-A host, receive only",
+				"direction": "input",
+				"location": "side panel"
+			},
+			{
+				"label": "USB",
+				"connector": "USB-B MIDI",
+				"direction": "bidirectional",
+				"location": "side panel"
+			},
+			{
+				"label": "Main output L",
+				"connector": "6.35 mm phone jack",
+				"direction": "output",
+				"location": "side panel"
+			},
+			{
+				"label": "Main output R",
+				"connector": "6.35 mm phone jack",
+				"direction": "output",
+				"location": "side panel"
+			},
+			{
+				"label": "DC 12V",
+				"connector": "DC power jack",
+				"direction": "input",
+				"location": "side panel"
+			},
+			{
+				"label": "Stereo phones",
+				"connector": "6.35 mm TRS",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Preamp / Envelope follower / Ring modulator: Preamp input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Preamp / Envelope follower / Ring modulator: Preamp output",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Preamp / Envelope follower / Ring modulator: Envelope follower input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Preamp / Envelope follower / Ring modulator: Envelope follower output",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Preamp / Envelope follower / Ring modulator: Ring input 1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Preamp / Envelope follower / Ring modulator: Ring input 2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Preamp / Envelope follower / Ring modulator: Ring output",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCO 1: KBD CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 1: S/H CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 1: ADSR CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 1: VCO 2 sine CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 1: Sawtooth out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCO 1: Square out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: KBD CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: S/H CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: ADSR CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: VCO 1 CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: Sawtooth out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: PWM CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: Triangle out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: Sine out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCO 2: Pulse out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCO 3: KBD CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 3: Noise CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 3: ADSR CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 3: VCO 2 sine CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCO 3: Sawtooth out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCO 3: Pulse out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCF: Audio input 1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCF: Audio input 2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCF: Audio input 3",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCF: Audio input 4",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCF: Audio input 5",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCF: CV input 1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCF: CV input 2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCF: CV input 3",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCF: VCF out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "ADSR / AR: ADSR out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "ADSR / AR: AR out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "ADSR / AR: Gate input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "ADSR / AR: Gate out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "ADSR / AR: Trig out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "VCA: VCF audio in",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCA: Ring mod audio in",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCA: AR CV in",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCA: ADSR CV in",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "VCA: VCA out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Left speaker / Multiples: KBD CV-1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Left speaker / Multiples: KBD CV-2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Left speaker / Multiples: MOD CV",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Left speaker / Multiples: Multiple 1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "bidirectional",
+				"location": "front"
+			},
+			{
+				"label": "Left speaker / Multiples: Multiple 2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "bidirectional",
+				"location": "front"
+			},
+			{
+				"label": "Left speaker / Multiples: Multiple 3",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "bidirectional",
+				"location": "front"
+			},
+			{
+				"label": "Left speaker / Multiples: Multiple 4",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "bidirectional",
+				"location": "front"
+			},
+			{
+				"label": "Noise generator: Noise out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Inverter input 1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Inverter input 2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Inverter input 3",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Inverter input 4",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Inverter input 5",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Inverter input 6",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Inverter out 1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Inverter out 2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Lag input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Voltage processors: Lag output",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Sample and hold / Electronic switch: Sample input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Sample and hold / Electronic switch: Int clock out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Sample and hold / Electronic switch: Sample out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Sample and hold / Electronic switch: Ext clock input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Sample and hold / Electronic switch: Switch A",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "bidirectional",
+				"location": "front"
+			},
+			{
+				"label": "Sample and hold / Electronic switch: Switch B",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "bidirectional",
+				"location": "front"
+			},
+			{
+				"label": "Sample and hold / Electronic switch: Switch C",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "bidirectional",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Input 1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Input 2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Audio out 1",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Audio out 2",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: L-R input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Left input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Left output",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Right input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Right output",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Reverb input",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "input",
+				"location": "front"
+			},
+			{
+				"label": "Mixer / Reverb: Reverb out",
+				"connector": "3.5 mm analog patch jack",
+				"direction": "output",
+				"location": "front"
+			}
+		],
+		"references": ["https://raw.githubusercontent.com/IDMNYU/synthaccess/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides/guides/ARP2600.pdf", "https://cdn.korg.com/us/support/download/files/5ed328fe7d6e3277381c1d0e331f62f7.pdf", "https://cdn.korg.com/us/support/download/files/301a4f37ea7ab21e17217099b2ec7878.pdf"]
 	}
 }

@@ -1,0 +1,2363 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "korg-arp-2600-m",
+	"name": "Korg ARP 2600 M",
+	"manufacturer": "Korg",
+	"manufacturerUrl": "https://www.korg.com/",
+	"productUrl": "https://www.korg.com/us/products/synthesizers/arp2600_m/",
+	"description": "Compact keyboardless ARP 2600 reissue with three VCOs, semi-modular patching and MIDI-to-CV keyboard voltages.",
+	"ids": [
+		"korg-arp-2600-m"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "NYU SynthAccess ARP 2600 / TTSH tactile guide: sections pp. 6-18",
+			"url": "https://raw.githubusercontent.com/IDMNYU/synthaccess/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides/guides/ARP2600.pdf"
+		},
+		{
+			"title": "Korg ARP 2600 M owner's manual: controls pp. 6-16, side panel p. 17, MIDI pp. 21-22",
+			"url": "https://cdn.korg.com/us/support/download/files/5ed328fe7d6e3277381c1d0e331f62f7.pdf"
+		},
+		{
+			"title": "Korg ARP 2600 M MIDI implementation chart",
+			"url": "https://cdn.korg.com/us/support/download/files/301a4f37ea7ab21e17217099b2ec7878.pdf"
+		}
+	],
+	"abilities": [
+		"DIN MIDI IN",
+		"USB MIDI",
+		"USB host for class-compliant MIDI controllers",
+		"Three analog VCOs",
+		"Semi-modular CV / audio patching",
+		"Duophonic MIDI-to-CV (KBD CV-1 / CV-2)"
+	],
+	"hardwareControls": [
+		"Preamp / Envelope follower / Ring modulator: Preamp input, Gain, Range x10 / x100 / x1000, Preamp output, Envelope follower input, Envelope follower level, Envelope follower output, Ring input 1, Ring input 2, Ring input level 1, Ring input level 2, Audio / DC, Ring output",
+		"VCO 1: Frequency, Fine Tune, Audio / LF, KBD CV, S/H CV, ADSR CV, VCO 2 sine CV, CV level 2, CV level 3, CV level 4, Sawtooth out, Square out",
+		"VCO 2: Frequency, Fine Tune, Pulse Width, Audio / LF, KBD CV, S/H CV, ADSR CV, VCO 1 CV, CV level 2, CV level 3, CV level 4, Sawtooth out, PWM CV, PWM depth, Triangle out, Sine out, Pulse out",
+		"VCO 3: Frequency, Fine Tune, Pulse Width, Audio / LF, KBD CV, Noise CV, ADSR CV, VCO 2 sine CV, CV level 2, CV level 3, CV level 4, Sawtooth out, Pulse out",
+		"VCF: Frequency, Fine Tune, Resonance, Type I / II, Audio input 1, Audio input 2, Audio input 3, Audio input 4, Audio input 5, Audio level 1, Audio level 2, Audio level 3, Audio level 4, Audio level 5, CV input 1, CV input 2, CV input 3, CV level 2, CV level 3, VCF out",
+		"ADSR / AR: Attack, Decay, Sustain, Release, ADSR out, AR attack, AR release, AR out, KBD / S-H gate, Gate input, Gate out, Trig out, Manual start",
+		"VCA: Initial gain, VCF audio in, Ring mod audio in, AR CV in, ADSR CV in, Audio level 1, Audio level 2, CV level 1, CV level 2, VCA out",
+		"Left speaker / Multiples: Left speaker, KBD CV-1, KBD CV-2, MOD CV, Multiple 1, Multiple 2, Multiple 3, Multiple 4",
+		"Noise generator: White / Pink / LF color, Noise level, Noise out",
+		"Voltage processors: Inverter input 1, Inverter input 2, Inverter input 3, Inverter input 4, Inverter input 5, Inverter input 6, Input level 2, Input level 4, Input level 6, Inverter out 1, Inverter out 2, Lag input, Lag time, Lag output",
+		"Sample and hold / Electronic switch: Sample input, Int clock out, Sample out, Ext clock input, Level, Rate, Switch A, Switch B, Switch C",
+		"Mixer / Reverb: Input 1, Input 2, Level 1, Level 2, Audio out 1, Audio out 2, L-R input, Pan, Left input, Left output, Right input, Right output, Reverb input, Reverb level L, Reverb level R, Reverb out",
+		"Right speaker / Power: Right speaker, Power, Stereo phones",
+		"Side panel: Mode switch 1-5"
+	],
+	"notice": "This profile is the Korg ARP 2600 M reissue, not the original pre-MIDI ARP 2600 or the full-size ARP 2600 FS. Synthesis sections follow the 2600 FS inventory and the M owner's manual pp. 6-16; the M omits the ARP 3620 keyboard and adds a MOD CV jack driven by CC1. Per the MIDI chart it receives notes (velocity ignored), pitch bend, CC1 modulation, CC5 portamento time, CC65 portamento, CC69 Hold 2 (interval latch), CC120 and CC121, and transmits nothing but SysEx device inquiry responses. Received notes drive KBD CV-1 (lower) and KBD CV-2 (upper). Voice assign and trigger modes are set by holding MANUAL START at power-on. Set the MIDI channel with side-panel MODE SWITCH 1-4 (factory channel 1); switch 5 sets auto power-off. The USB MIDI CONTROLLER port accepts a USB MIDI controller without a hub. Patch jacks are analog, not MIDI. Consult Korg driver requirements for USB. Select the profile manually for a DIN interface.",
+	"controls": [
+		{
+			"id": "pitch-bend",
+			"label": "Pitch bend",
+			"message": {
+				"type": "pitchBend"
+			},
+			"widget": "slider",
+			"min": 0,
+			"max": 16383,
+			"default": 8192
+		},
+		{
+			"id": "modulation",
+			"label": "Modulation (CC1, MOD CV)",
+			"cc": 1,
+			"widget": "slider"
+		},
+		{
+			"id": "portamento-time",
+			"label": "Portamento time (CC5)",
+			"cc": 5,
+			"widget": "slider"
+		},
+		{
+			"id": "portamento",
+			"label": "Portamento (CC65)",
+			"cc": 65,
+			"widget": "toggle"
+		},
+		{
+			"id": "interval-latch",
+			"label": "Interval latch / Hold 2 (CC69)",
+			"cc": 69,
+			"widget": "toggle"
+		}
+	],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Korg ARP 2600 M layout illustration"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "section",
+				"label": "Documented MIDI controls",
+				"children": [
+					{
+						"type": "grid",
+						"columns": 2,
+						"children": [
+							{
+								"type": "controls"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "guide",
+				"label": "Hardware and MIDI documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 2400,
+		"height": 1385,
+		"elements": [
+			{
+				"id": "preamp-envelope-follower-ring-modulator-preamp-input",
+				"label": "Preamp / Envelope follower / Ring modulator: Preamp input",
+				"kind": "input",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 6.859205776173286,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-gain",
+				"label": "Preamp / Envelope follower / Ring modulator: Gain",
+				"kind": "knob",
+				"position": {
+					"x": 5.4305555555555545,
+					"y": 6.859205776173286,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-range-x10-x100-x1000",
+				"label": "Preamp / Envelope follower / Ring modulator: Range x10 / x100 / x1000",
+				"kind": "switch3",
+				"position": {
+					"x": 9.569444444444445,
+					"y": 6.859205776173286,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-preamp-output",
+				"label": "Preamp / Envelope follower / Ring modulator: Preamp output",
+				"kind": "output",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 16.967509025270758,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-envelope-follower-input",
+				"label": "Preamp / Envelope follower / Ring modulator: Envelope follower input",
+				"kind": "input",
+				"position": {
+					"x": 5.4305555555555545,
+					"y": 16.967509025270758,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-envelope-follower-level",
+				"label": "Preamp / Envelope follower / Ring modulator: Envelope follower level",
+				"kind": "fader",
+				"position": {
+					"x": 9.569444444444445,
+					"y": 16.967509025270758,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-envelope-follower-output",
+				"label": "Preamp / Envelope follower / Ring modulator: Envelope follower output",
+				"kind": "output",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 27.075812274368232,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-ring-input-1",
+				"label": "Preamp / Envelope follower / Ring modulator: Ring input 1",
+				"kind": "input",
+				"position": {
+					"x": 5.4305555555555545,
+					"y": 27.075812274368232,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-ring-input-2",
+				"label": "Preamp / Envelope follower / Ring modulator: Ring input 2",
+				"kind": "input",
+				"position": {
+					"x": 9.569444444444445,
+					"y": 27.075812274368232,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-ring-input-level-1",
+				"label": "Preamp / Envelope follower / Ring modulator: Ring input level 1",
+				"kind": "fader",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 37.18411552346571,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-ring-input-level-2",
+				"label": "Preamp / Envelope follower / Ring modulator: Ring input level 2",
+				"kind": "fader",
+				"position": {
+					"x": 5.4305555555555545,
+					"y": 37.18411552346571,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-audio-dc",
+				"label": "Preamp / Envelope follower / Ring modulator: Audio / DC",
+				"kind": "switch",
+				"position": {
+					"x": 9.569444444444445,
+					"y": 37.18411552346571,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "preamp-envelope-follower-ring-modulator-ring-output",
+				"label": "Preamp / Envelope follower / Ring modulator: Ring output",
+				"kind": "output",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 47.292418772563174,
+					"width": 4.138888888888888,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-1-frequency",
+				"label": "VCO 1: Frequency",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 14.625,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-fine-tune",
+				"label": "VCO 1: Fine Tune",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 18.555555555555557,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-audio-lf",
+				"label": "VCO 1: Audio / LF",
+				"kind": "switch",
+				"position": {
+					"x": 22.48611111111111,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-kbd-cv",
+				"label": "VCO 1: KBD CV",
+				"kind": "input",
+				"position": {
+					"x": 14.625,
+					"y": 19.494584837545126,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-s-h-cv",
+				"label": "VCO 1: S/H CV",
+				"kind": "input",
+				"position": {
+					"x": 18.555555555555557,
+					"y": 19.494584837545126,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-adsr-cv",
+				"label": "VCO 1: ADSR CV",
+				"kind": "input",
+				"position": {
+					"x": 22.48611111111111,
+					"y": 19.494584837545126,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-vco-2-sine-cv",
+				"label": "VCO 1: VCO 2 sine CV",
+				"kind": "input",
+				"position": {
+					"x": 14.625,
+					"y": 32.12996389891697,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-cv-level-2",
+				"label": "VCO 1: CV level 2",
+				"kind": "fader",
+				"position": {
+					"x": 18.555555555555557,
+					"y": 32.12996389891697,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-cv-level-3",
+				"label": "VCO 1: CV level 3",
+				"kind": "fader",
+				"position": {
+					"x": 22.48611111111111,
+					"y": 32.12996389891697,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-cv-level-4",
+				"label": "VCO 1: CV level 4",
+				"kind": "fader",
+				"position": {
+					"x": 14.625,
+					"y": 44.765342960288805,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-sawtooth-out",
+				"label": "VCO 1: Sawtooth out",
+				"kind": "output",
+				"position": {
+					"x": 18.555555555555557,
+					"y": 44.765342960288805,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-1-square-out",
+				"label": "VCO 1: Square out",
+				"kind": "output",
+				"position": {
+					"x": 22.48611111111111,
+					"y": 44.765342960288805,
+					"width": 3.9305555555555554,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vco-2-frequency",
+				"label": "VCO 2: Frequency",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 27.333333333333332,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-fine-tune",
+				"label": "VCO 2: Fine Tune",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 31.263888888888893,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-pulse-width",
+				"label": "VCO 2: Pulse Width",
+				"kind": "fader",
+				"position": {
+					"x": 35.19444444444444,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-audio-lf",
+				"label": "VCO 2: Audio / LF",
+				"kind": "switch",
+				"position": {
+					"x": 27.333333333333332,
+					"y": 15.282791817087848,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-kbd-cv",
+				"label": "VCO 2: KBD CV",
+				"kind": "input",
+				"position": {
+					"x": 31.263888888888893,
+					"y": 15.282791817087848,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-s-h-cv",
+				"label": "VCO 2: S/H CV",
+				"kind": "input",
+				"position": {
+					"x": 35.19444444444444,
+					"y": 15.282791817087848,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-adsr-cv",
+				"label": "VCO 2: ADSR CV",
+				"kind": "input",
+				"position": {
+					"x": 27.333333333333332,
+					"y": 23.70637785800241,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-vco-1-cv",
+				"label": "VCO 2: VCO 1 CV",
+				"kind": "input",
+				"position": {
+					"x": 31.263888888888893,
+					"y": 23.70637785800241,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-cv-level-2",
+				"label": "VCO 2: CV level 2",
+				"kind": "fader",
+				"position": {
+					"x": 35.19444444444444,
+					"y": 23.70637785800241,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-cv-level-3",
+				"label": "VCO 2: CV level 3",
+				"kind": "fader",
+				"position": {
+					"x": 27.333333333333332,
+					"y": 32.12996389891697,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-cv-level-4",
+				"label": "VCO 2: CV level 4",
+				"kind": "fader",
+				"position": {
+					"x": 31.263888888888893,
+					"y": 32.12996389891697,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-sawtooth-out",
+				"label": "VCO 2: Sawtooth out",
+				"kind": "output",
+				"position": {
+					"x": 35.19444444444444,
+					"y": 32.12996389891697,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-pwm-cv",
+				"label": "VCO 2: PWM CV",
+				"kind": "input",
+				"position": {
+					"x": 27.333333333333332,
+					"y": 40.553549939831534,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-pwm-depth",
+				"label": "VCO 2: PWM depth",
+				"kind": "fader",
+				"position": {
+					"x": 31.263888888888893,
+					"y": 40.553549939831534,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-triangle-out",
+				"label": "VCO 2: Triangle out",
+				"kind": "output",
+				"position": {
+					"x": 35.19444444444444,
+					"y": 40.553549939831534,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-sine-out",
+				"label": "VCO 2: Sine out",
+				"kind": "output",
+				"position": {
+					"x": 27.333333333333332,
+					"y": 48.97713598074609,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-2-pulse-out",
+				"label": "VCO 2: Pulse out",
+				"kind": "output",
+				"position": {
+					"x": 31.263888888888893,
+					"y": 48.97713598074609,
+					"width": 3.9305555555555554,
+					"height": 8.42358604091456
+				}
+			},
+			{
+				"id": "vco-3-frequency",
+				"label": "VCO 3: Frequency",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 40.041666666666664,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-fine-tune",
+				"label": "VCO 3: Fine Tune",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 43.97222222222222,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-pulse-width",
+				"label": "VCO 3: Pulse Width",
+				"kind": "fader",
+				"position": {
+					"x": 47.902777777777786,
+					"y": 6.859205776173286,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-audio-lf",
+				"label": "VCO 3: Audio / LF",
+				"kind": "switch",
+				"position": {
+					"x": 40.041666666666664,
+					"y": 16.967509025270758,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-kbd-cv",
+				"label": "VCO 3: KBD CV",
+				"kind": "input",
+				"position": {
+					"x": 43.97222222222222,
+					"y": 16.967509025270758,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-noise-cv",
+				"label": "VCO 3: Noise CV",
+				"kind": "input",
+				"position": {
+					"x": 47.902777777777786,
+					"y": 16.967509025270758,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-adsr-cv",
+				"label": "VCO 3: ADSR CV",
+				"kind": "input",
+				"position": {
+					"x": 40.041666666666664,
+					"y": 27.075812274368232,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-vco-2-sine-cv",
+				"label": "VCO 3: VCO 2 sine CV",
+				"kind": "input",
+				"position": {
+					"x": 43.97222222222222,
+					"y": 27.075812274368232,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-cv-level-2",
+				"label": "VCO 3: CV level 2",
+				"kind": "fader",
+				"position": {
+					"x": 47.902777777777786,
+					"y": 27.075812274368232,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-cv-level-3",
+				"label": "VCO 3: CV level 3",
+				"kind": "fader",
+				"position": {
+					"x": 40.041666666666664,
+					"y": 37.18411552346571,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-cv-level-4",
+				"label": "VCO 3: CV level 4",
+				"kind": "fader",
+				"position": {
+					"x": 43.97222222222222,
+					"y": 37.18411552346571,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-sawtooth-out",
+				"label": "VCO 3: Sawtooth out",
+				"kind": "output",
+				"position": {
+					"x": 47.902777777777786,
+					"y": 37.18411552346571,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vco-3-pulse-out",
+				"label": "VCO 3: Pulse out",
+				"kind": "output",
+				"position": {
+					"x": 40.041666666666664,
+					"y": 47.292418772563174,
+					"width": 3.9305555555555554,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-frequency",
+				"label": "VCF: Frequency",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 52.75,
+					"y": 6.859205776173286,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-fine-tune",
+				"label": "VCF: Fine Tune",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 56.58333333333333,
+					"y": 6.859205776173286,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-resonance",
+				"label": "VCF: Resonance",
+				"kind": "fader",
+				"position": {
+					"x": 60.416666666666664,
+					"y": 6.859205776173286,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-type-i-ii",
+				"label": "VCF: Type I / II",
+				"kind": "switch",
+				"position": {
+					"x": 64.25,
+					"y": 6.859205776173286,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-input-1",
+				"label": "VCF: Audio input 1",
+				"kind": "input",
+				"position": {
+					"x": 52.75,
+					"y": 16.967509025270758,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-input-2",
+				"label": "VCF: Audio input 2",
+				"kind": "input",
+				"position": {
+					"x": 56.58333333333333,
+					"y": 16.967509025270758,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-input-3",
+				"label": "VCF: Audio input 3",
+				"kind": "input",
+				"position": {
+					"x": 60.416666666666664,
+					"y": 16.967509025270758,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-input-4",
+				"label": "VCF: Audio input 4",
+				"kind": "input",
+				"position": {
+					"x": 64.25,
+					"y": 16.967509025270758,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-input-5",
+				"label": "VCF: Audio input 5",
+				"kind": "input",
+				"position": {
+					"x": 52.75,
+					"y": 27.075812274368232,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-level-1",
+				"label": "VCF: Audio level 1",
+				"kind": "fader",
+				"position": {
+					"x": 56.58333333333333,
+					"y": 27.075812274368232,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-level-2",
+				"label": "VCF: Audio level 2",
+				"kind": "fader",
+				"position": {
+					"x": 60.416666666666664,
+					"y": 27.075812274368232,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-level-3",
+				"label": "VCF: Audio level 3",
+				"kind": "fader",
+				"position": {
+					"x": 64.25,
+					"y": 27.075812274368232,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-level-4",
+				"label": "VCF: Audio level 4",
+				"kind": "fader",
+				"position": {
+					"x": 52.75,
+					"y": 37.18411552346571,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-audio-level-5",
+				"label": "VCF: Audio level 5",
+				"kind": "fader",
+				"position": {
+					"x": 56.58333333333333,
+					"y": 37.18411552346571,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-cv-input-1",
+				"label": "VCF: CV input 1",
+				"kind": "input",
+				"position": {
+					"x": 60.416666666666664,
+					"y": 37.18411552346571,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-cv-input-2",
+				"label": "VCF: CV input 2",
+				"kind": "input",
+				"position": {
+					"x": 64.25,
+					"y": 37.18411552346571,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-cv-input-3",
+				"label": "VCF: CV input 3",
+				"kind": "input",
+				"position": {
+					"x": 52.75,
+					"y": 47.292418772563174,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-cv-level-2",
+				"label": "VCF: CV level 2",
+				"kind": "fader",
+				"position": {
+					"x": 56.58333333333333,
+					"y": 47.292418772563174,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-cv-level-3",
+				"label": "VCF: CV level 3",
+				"kind": "fader",
+				"position": {
+					"x": 60.416666666666664,
+					"y": 47.292418772563174,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vcf-vcf-out",
+				"label": "VCF: VCF out",
+				"kind": "output",
+				"position": {
+					"x": 64.25,
+					"y": 47.292418772563174,
+					"width": 3.833333333333333,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-attack",
+				"label": "ADSR / AR: Attack",
+				"kind": "fader",
+				"position": {
+					"x": 69.0,
+					"y": 6.859205776173286,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-decay",
+				"label": "ADSR / AR: Decay",
+				"kind": "fader",
+				"position": {
+					"x": 73.41666666666666,
+					"y": 6.859205776173286,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-sustain",
+				"label": "ADSR / AR: Sustain",
+				"kind": "fader",
+				"position": {
+					"x": 77.83333333333333,
+					"y": 6.859205776173286,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-release",
+				"label": "ADSR / AR: Release",
+				"kind": "fader",
+				"position": {
+					"x": 69.0,
+					"y": 16.967509025270758,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-adsr-out",
+				"label": "ADSR / AR: ADSR out",
+				"kind": "output",
+				"position": {
+					"x": 73.41666666666666,
+					"y": 16.967509025270758,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-ar-attack",
+				"label": "ADSR / AR: AR attack",
+				"kind": "fader",
+				"position": {
+					"x": 77.83333333333333,
+					"y": 16.967509025270758,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-ar-release",
+				"label": "ADSR / AR: AR release",
+				"kind": "fader",
+				"position": {
+					"x": 69.0,
+					"y": 27.075812274368232,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-ar-out",
+				"label": "ADSR / AR: AR out",
+				"kind": "output",
+				"position": {
+					"x": 73.41666666666666,
+					"y": 27.075812274368232,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-kbd-s-h-gate",
+				"label": "ADSR / AR: KBD / S-H gate",
+				"kind": "switch",
+				"position": {
+					"x": 77.83333333333333,
+					"y": 27.075812274368232,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-gate-input",
+				"label": "ADSR / AR: Gate input",
+				"kind": "input",
+				"position": {
+					"x": 69.0,
+					"y": 37.18411552346571,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-gate-out",
+				"label": "ADSR / AR: Gate out",
+				"kind": "output",
+				"position": {
+					"x": 73.41666666666666,
+					"y": 37.18411552346571,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-trig-out",
+				"label": "ADSR / AR: Trig out",
+				"kind": "output",
+				"position": {
+					"x": 77.83333333333333,
+					"y": 37.18411552346571,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "adsr-ar-manual-start",
+				"label": "ADSR / AR: Manual start",
+				"kind": "round-button",
+				"position": {
+					"x": 69.0,
+					"y": 47.292418772563174,
+					"width": 4.416666666666667,
+					"height": 10.108303249097473
+				}
+			},
+			{
+				"id": "vca-initial-gain",
+				"label": "VCA: Initial gain",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 83.16666666666667,
+					"y": 6.859205776173286,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-vcf-audio-in",
+				"label": "VCA: VCF audio in",
+				"kind": "input",
+				"position": {
+					"x": 88.34722222222223,
+					"y": 6.859205776173286,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-ring-mod-audio-in",
+				"label": "VCA: Ring mod audio in",
+				"kind": "input",
+				"position": {
+					"x": 93.52777777777777,
+					"y": 6.859205776173286,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-ar-cv-in",
+				"label": "VCA: AR CV in",
+				"kind": "input",
+				"position": {
+					"x": 83.16666666666667,
+					"y": 19.494584837545126,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-adsr-cv-in",
+				"label": "VCA: ADSR CV in",
+				"kind": "input",
+				"position": {
+					"x": 88.34722222222223,
+					"y": 19.494584837545126,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-audio-level-1",
+				"label": "VCA: Audio level 1",
+				"kind": "fader",
+				"position": {
+					"x": 93.52777777777777,
+					"y": 19.494584837545126,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-audio-level-2",
+				"label": "VCA: Audio level 2",
+				"kind": "fader",
+				"position": {
+					"x": 83.16666666666667,
+					"y": 32.12996389891697,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-cv-level-1",
+				"label": "VCA: CV level 1",
+				"kind": "fader",
+				"position": {
+					"x": 88.34722222222223,
+					"y": 32.12996389891697,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-cv-level-2",
+				"label": "VCA: CV level 2",
+				"kind": "fader",
+				"position": {
+					"x": 93.52777777777777,
+					"y": 32.12996389891697,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "vca-vca-out",
+				"label": "VCA: VCA out",
+				"kind": "output",
+				"position": {
+					"x": 83.16666666666667,
+					"y": 44.765342960288805,
+					"width": 5.180555555555555,
+					"height": 12.63537906137184
+				}
+			},
+			{
+				"id": "left-speaker-multiples-left-speaker",
+				"label": "Left speaker / Multiples: Left speaker",
+				"kind": "fader",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 61.01083032490975,
+					"width": 4.138888888888888,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "left-speaker-multiples-kbd-cv-1",
+				"label": "Left speaker / Multiples: KBD CV-1",
+				"kind": "output",
+				"position": {
+					"x": 5.4305555555555545,
+					"y": 61.01083032490975,
+					"width": 4.138888888888888,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "left-speaker-multiples-kbd-cv-2",
+				"label": "Left speaker / Multiples: KBD CV-2",
+				"kind": "output",
+				"position": {
+					"x": 9.569444444444445,
+					"y": 61.01083032490975,
+					"width": 4.138888888888888,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "left-speaker-multiples-mod-cv",
+				"label": "Left speaker / Multiples: MOD CV",
+				"kind": "output",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 70.03610108303249,
+					"width": 4.138888888888888,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "left-speaker-multiples-multiple-1",
+				"label": "Left speaker / Multiples: Multiple 1",
+				"kind": "bidirectional",
+				"position": {
+					"x": 5.4305555555555545,
+					"y": 70.03610108303249,
+					"width": 4.138888888888888,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "left-speaker-multiples-multiple-2",
+				"label": "Left speaker / Multiples: Multiple 2",
+				"kind": "bidirectional",
+				"position": {
+					"x": 9.569444444444445,
+					"y": 70.03610108303249,
+					"width": 4.138888888888888,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "left-speaker-multiples-multiple-3",
+				"label": "Left speaker / Multiples: Multiple 3",
+				"kind": "bidirectional",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 79.06137184115524,
+					"width": 4.138888888888888,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "left-speaker-multiples-multiple-4",
+				"label": "Left speaker / Multiples: Multiple 4",
+				"kind": "bidirectional",
+				"position": {
+					"x": 5.4305555555555545,
+					"y": 79.06137184115524,
+					"width": 4.138888888888888,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "noise-generator-white-pink-lf-color",
+				"label": "Noise generator: White / Pink / LF color",
+				"kind": "fader",
+				"position": {
+					"x": 14.625,
+					"y": 61.01083032490975,
+					"width": 4.541666666666667,
+					"height": 13.537906137184116
+				}
+			},
+			{
+				"id": "noise-generator-noise-level",
+				"label": "Noise generator: Noise level",
+				"kind": "fader",
+				"position": {
+					"x": 19.166666666666668,
+					"y": 61.01083032490975,
+					"width": 4.541666666666667,
+					"height": 13.537906137184116
+				}
+			},
+			{
+				"id": "noise-generator-noise-out",
+				"label": "Noise generator: Noise out",
+				"kind": "output",
+				"position": {
+					"x": 14.625,
+					"y": 74.54873646209387,
+					"width": 4.541666666666667,
+					"height": 13.537906137184116
+				}
+			},
+			{
+				"id": "voltage-processors-inverter-input-1",
+				"label": "Voltage processors: Inverter input 1",
+				"kind": "input",
+				"position": {
+					"x": 24.625,
+					"y": 61.01083032490975,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-inverter-input-2",
+				"label": "Voltage processors: Inverter input 2",
+				"kind": "input",
+				"position": {
+					"x": 29.691666666666666,
+					"y": 61.01083032490975,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-inverter-input-3",
+				"label": "Voltage processors: Inverter input 3",
+				"kind": "input",
+				"position": {
+					"x": 34.75833333333333,
+					"y": 61.01083032490975,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-inverter-input-4",
+				"label": "Voltage processors: Inverter input 4",
+				"kind": "input",
+				"position": {
+					"x": 39.825,
+					"y": 61.01083032490975,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-inverter-input-5",
+				"label": "Voltage processors: Inverter input 5",
+				"kind": "input",
+				"position": {
+					"x": 44.891666666666666,
+					"y": 61.01083032490975,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-inverter-input-6",
+				"label": "Voltage processors: Inverter input 6",
+				"kind": "input",
+				"position": {
+					"x": 24.625,
+					"y": 70.03610108303249,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-input-level-2",
+				"label": "Voltage processors: Input level 2",
+				"kind": "fader",
+				"position": {
+					"x": 29.691666666666666,
+					"y": 70.03610108303249,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-input-level-4",
+				"label": "Voltage processors: Input level 4",
+				"kind": "fader",
+				"position": {
+					"x": 34.75833333333333,
+					"y": 70.03610108303249,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-input-level-6",
+				"label": "Voltage processors: Input level 6",
+				"kind": "fader",
+				"position": {
+					"x": 39.825,
+					"y": 70.03610108303249,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-inverter-out-1",
+				"label": "Voltage processors: Inverter out 1",
+				"kind": "output",
+				"position": {
+					"x": 44.891666666666666,
+					"y": 70.03610108303249,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-inverter-out-2",
+				"label": "Voltage processors: Inverter out 2",
+				"kind": "output",
+				"position": {
+					"x": 24.625,
+					"y": 79.06137184115524,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-lag-input",
+				"label": "Voltage processors: Lag input",
+				"kind": "input",
+				"position": {
+					"x": 29.691666666666666,
+					"y": 79.06137184115524,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-lag-time",
+				"label": "Voltage processors: Lag time",
+				"kind": "fader",
+				"position": {
+					"x": 34.75833333333333,
+					"y": 79.06137184115524,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "voltage-processors-lag-output",
+				"label": "Voltage processors: Lag output",
+				"kind": "output",
+				"position": {
+					"x": 39.825,
+					"y": 79.06137184115524,
+					"width": 5.066666666666666,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-sample-input",
+				"label": "Sample and hold / Electronic switch: Sample input",
+				"kind": "input",
+				"position": {
+					"x": 50.875,
+					"y": 61.01083032490975,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-int-clock-out",
+				"label": "Sample and hold / Electronic switch: Int clock out",
+				"kind": "output",
+				"position": {
+					"x": 56.81944444444444,
+					"y": 61.01083032490975,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-sample-out",
+				"label": "Sample and hold / Electronic switch: Sample out",
+				"kind": "output",
+				"position": {
+					"x": 62.763888888888886,
+					"y": 61.01083032490975,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-ext-clock-input",
+				"label": "Sample and hold / Electronic switch: Ext clock input",
+				"kind": "input",
+				"position": {
+					"x": 50.875,
+					"y": 70.03610108303249,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-level",
+				"label": "Sample and hold / Electronic switch: Level",
+				"kind": "fader",
+				"position": {
+					"x": 56.81944444444444,
+					"y": 70.03610108303249,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-rate",
+				"label": "Sample and hold / Electronic switch: Rate",
+				"kind": "fader",
+				"position": {
+					"x": 62.763888888888886,
+					"y": 70.03610108303249,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-switch-a",
+				"label": "Sample and hold / Electronic switch: Switch A",
+				"kind": "bidirectional",
+				"position": {
+					"x": 50.875,
+					"y": 79.06137184115524,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-switch-b",
+				"label": "Sample and hold / Electronic switch: Switch B",
+				"kind": "bidirectional",
+				"position": {
+					"x": 56.81944444444444,
+					"y": 79.06137184115524,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "sample-and-hold-electronic-switch-switch-c",
+				"label": "Sample and hold / Electronic switch: Switch C",
+				"kind": "bidirectional",
+				"position": {
+					"x": 62.763888888888886,
+					"y": 79.06137184115524,
+					"width": 5.944444444444444,
+					"height": 9.025270758122744
+				}
+			},
+			{
+				"id": "mixer-reverb-input-1",
+				"label": "Mixer / Reverb: Input 1",
+				"kind": "input",
+				"position": {
+					"x": 69.625,
+					"y": 61.01083032490975,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-input-2",
+				"label": "Mixer / Reverb: Input 2",
+				"kind": "input",
+				"position": {
+					"x": 74.1875,
+					"y": 61.01083032490975,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-level-1",
+				"label": "Mixer / Reverb: Level 1",
+				"kind": "fader",
+				"position": {
+					"x": 78.75,
+					"y": 61.01083032490975,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-level-2",
+				"label": "Mixer / Reverb: Level 2",
+				"kind": "fader",
+				"position": {
+					"x": 83.3125,
+					"y": 61.01083032490975,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-audio-out-1",
+				"label": "Mixer / Reverb: Audio out 1",
+				"kind": "output",
+				"position": {
+					"x": 69.625,
+					"y": 67.7797833935018,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-audio-out-2",
+				"label": "Mixer / Reverb: Audio out 2",
+				"kind": "output",
+				"position": {
+					"x": 74.1875,
+					"y": 67.7797833935018,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-l-r-input",
+				"label": "Mixer / Reverb: L-R input",
+				"kind": "input",
+				"position": {
+					"x": 78.75,
+					"y": 67.7797833935018,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-pan",
+				"label": "Mixer / Reverb: Pan",
+				"kind": "horizontal-strip",
+				"position": {
+					"x": 83.3125,
+					"y": 67.7797833935018,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-left-input",
+				"label": "Mixer / Reverb: Left input",
+				"kind": "input",
+				"position": {
+					"x": 69.625,
+					"y": 74.54873646209387,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-left-output",
+				"label": "Mixer / Reverb: Left output",
+				"kind": "output",
+				"position": {
+					"x": 74.1875,
+					"y": 74.54873646209387,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-right-input",
+				"label": "Mixer / Reverb: Right input",
+				"kind": "input",
+				"position": {
+					"x": 78.75,
+					"y": 74.54873646209387,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-right-output",
+				"label": "Mixer / Reverb: Right output",
+				"kind": "output",
+				"position": {
+					"x": 83.3125,
+					"y": 74.54873646209387,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-reverb-input",
+				"label": "Mixer / Reverb: Reverb input",
+				"kind": "input",
+				"position": {
+					"x": 69.625,
+					"y": 81.31768953068593,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-reverb-level-l",
+				"label": "Mixer / Reverb: Reverb level L",
+				"kind": "fader",
+				"position": {
+					"x": 74.1875,
+					"y": 81.31768953068593,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-reverb-level-r",
+				"label": "Mixer / Reverb: Reverb level R",
+				"kind": "fader",
+				"position": {
+					"x": 78.75,
+					"y": 81.31768953068593,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "mixer-reverb-reverb-out",
+				"label": "Mixer / Reverb: Reverb out",
+				"kind": "output",
+				"position": {
+					"x": 83.3125,
+					"y": 81.31768953068593,
+					"width": 4.5625,
+					"height": 6.768953068592058
+				}
+			},
+			{
+				"id": "right-speaker-power-right-speaker",
+				"label": "Right speaker / Power: Right speaker",
+				"kind": "fader",
+				"position": {
+					"x": 88.79166666666667,
+					"y": 61.01083032490975,
+					"width": 4.958333333333333,
+					"height": 13.537906137184116
+				}
+			},
+			{
+				"id": "right-speaker-power-power",
+				"label": "Right speaker / Power: Power",
+				"kind": "power",
+				"position": {
+					"x": 93.75,
+					"y": 61.01083032490975,
+					"width": 4.958333333333333,
+					"height": 13.537906137184116
+				}
+			},
+			{
+				"id": "right-speaker-power-stereo-phones",
+				"label": "Right speaker / Power: Stereo phones",
+				"kind": "output",
+				"position": {
+					"x": 88.79166666666667,
+					"y": 74.54873646209387,
+					"width": 4.958333333333333,
+					"height": 13.537906137184116
+				}
+			},
+			{
+				"id": "side-panel-mode-switch-1-5",
+				"label": "Side panel: Mode switch 1-5",
+				"kind": "switch",
+				"position": {
+					"x": 1.2916666666666667,
+					"y": 91.69675090252709,
+					"width": 16.166666666666664,
+					"height": 6.137184115523466
+				}
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "side panel"
+		},
+		{
+			"label": "USB MIDI CONTROLLER",
+			"connector": "USB-A host, receive only",
+			"direction": "input",
+			"location": "side panel"
+		},
+		{
+			"label": "USB",
+			"connector": "USB-B MIDI",
+			"direction": "bidirectional",
+			"location": "side panel"
+		},
+		{
+			"label": "Main output L",
+			"connector": "6.35 mm phone jack",
+			"direction": "output",
+			"location": "side panel"
+		},
+		{
+			"label": "Main output R",
+			"connector": "6.35 mm phone jack",
+			"direction": "output",
+			"location": "side panel"
+		},
+		{
+			"label": "DC 12V",
+			"connector": "DC power jack",
+			"direction": "input",
+			"location": "side panel"
+		},
+		{
+			"label": "Stereo phones",
+			"connector": "6.35 mm TRS",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Preamp / Envelope follower / Ring modulator: Preamp input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Preamp / Envelope follower / Ring modulator: Preamp output",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Preamp / Envelope follower / Ring modulator: Envelope follower input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Preamp / Envelope follower / Ring modulator: Envelope follower output",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Preamp / Envelope follower / Ring modulator: Ring input 1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Preamp / Envelope follower / Ring modulator: Ring input 2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Preamp / Envelope follower / Ring modulator: Ring output",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCO 1: KBD CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 1: S/H CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 1: ADSR CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 1: VCO 2 sine CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 1: Sawtooth out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCO 1: Square out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: KBD CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: S/H CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: ADSR CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: VCO 1 CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: Sawtooth out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: PWM CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: Triangle out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: Sine out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCO 2: Pulse out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCO 3: KBD CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 3: Noise CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 3: ADSR CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 3: VCO 2 sine CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCO 3: Sawtooth out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCO 3: Pulse out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCF: Audio input 1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCF: Audio input 2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCF: Audio input 3",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCF: Audio input 4",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCF: Audio input 5",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCF: CV input 1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCF: CV input 2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCF: CV input 3",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCF: VCF out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "ADSR / AR: ADSR out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "ADSR / AR: AR out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "ADSR / AR: Gate input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "ADSR / AR: Gate out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "ADSR / AR: Trig out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "VCA: VCF audio in",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCA: Ring mod audio in",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCA: AR CV in",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCA: ADSR CV in",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "VCA: VCA out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Left speaker / Multiples: KBD CV-1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Left speaker / Multiples: KBD CV-2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Left speaker / Multiples: MOD CV",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Left speaker / Multiples: Multiple 1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "bidirectional",
+			"location": "front"
+		},
+		{
+			"label": "Left speaker / Multiples: Multiple 2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "bidirectional",
+			"location": "front"
+		},
+		{
+			"label": "Left speaker / Multiples: Multiple 3",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "bidirectional",
+			"location": "front"
+		},
+		{
+			"label": "Left speaker / Multiples: Multiple 4",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "bidirectional",
+			"location": "front"
+		},
+		{
+			"label": "Noise generator: Noise out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Inverter input 1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Inverter input 2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Inverter input 3",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Inverter input 4",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Inverter input 5",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Inverter input 6",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Inverter out 1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Inverter out 2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Lag input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Voltage processors: Lag output",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Sample and hold / Electronic switch: Sample input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Sample and hold / Electronic switch: Int clock out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Sample and hold / Electronic switch: Sample out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Sample and hold / Electronic switch: Ext clock input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Sample and hold / Electronic switch: Switch A",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "bidirectional",
+			"location": "front"
+		},
+		{
+			"label": "Sample and hold / Electronic switch: Switch B",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "bidirectional",
+			"location": "front"
+		},
+		{
+			"label": "Sample and hold / Electronic switch: Switch C",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "bidirectional",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Input 1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Input 2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Audio out 1",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Audio out 2",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: L-R input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Left input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Left output",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Right input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Right output",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Reverb input",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "input",
+			"location": "front"
+		},
+		{
+			"label": "Mixer / Reverb: Reverb out",
+			"connector": "3.5 mm analog patch jack",
+			"direction": "output",
+			"location": "front"
+		}
+	],
+	"diagramSources": [
+		"https://raw.githubusercontent.com/IDMNYU/synthaccess/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides/guides/ARP2600.pdf",
+		"https://cdn.korg.com/us/support/download/files/5ed328fe7d6e3277381c1d0e331f62f7.pdf",
+		"https://cdn.korg.com/us/support/download/files/301a4f37ea7ab21e17217099b2ec7878.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

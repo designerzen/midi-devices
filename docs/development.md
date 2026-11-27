@@ -67,6 +67,15 @@ Each build records the package version, commit and build time. The commit comes 
 - `version.json` at the site root
 - `dataVersion` (`<package version>+<short commit>`) on API collection responses
 
+## Publishing to npm
+
+`.github/workflows/npm-publish.yml` publishes the package to [npm](https://www.npmjs.com/package/midi-devices) when you push a version tag. It runs the tests and the build first, and publishes with provenance.
+
+1. Raise the committed version with `npm run version:patch`, `version:minor` or `version:major`, and commit it.
+2. Tag that commit with the same version and push the tag: `git tag v1.0.2 && git push origin v1.0.2`.
+
+The workflow fails if the tag does not match `package.json`. It needs an npm automation token in the repository secret `NPM_TOKEN`. The CI build numbers described above apply only to the deployed site; npm releases use the committed version.
+
 ## Deployment
 
 Pushes to `main` are validated, built and published to GitHub Pages by `.github/workflows/pages.yml`. To deploy on Cloudflare Pages, set the build command to `npm run build` and the output directory to `dist`.

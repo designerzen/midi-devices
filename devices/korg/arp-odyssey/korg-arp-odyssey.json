@@ -1,0 +1,1525 @@
+{
+	"$schema": "../../profile.schema.json",
+	"schemaVersion": 1,
+	"id": "korg-arp-odyssey",
+	"name": "Korg ARP Odyssey",
+	"manufacturer": "Korg",
+	"manufacturerUrl": "https://www.korg.com/",
+	"productUrl": "https://www.korg.com/us/products/synthesizers/arpodyssey/",
+	"description": "Korg's 2015 duophonic ARP Odyssey reissue with two VCOs, three selectable filter types and a 37-note slim keyboard.",
+	"ids": [
+		"korg-arp-odyssey"
+	],
+	"portNames": [],
+	"icon": "icon.svg",
+	"documentation": [
+		{
+			"title": "Korg ARP Odyssey / ARP Odyssey Module owner's manual: controls pp. 6-12, rear panel p. 13, MIDI p. 17",
+			"url": "https://cdn.korg.com/us/support/download/files/2da5c4341ec598574d4af552ecb88b6e.pdf"
+		},
+		{
+			"title": "Korg ARP Odyssey MIDI implementation chart",
+			"url": "https://cdn.korg.com/us/support/download/files/7d3989df8622ee63d35fd729db12ea74.pdf"
+		}
+	],
+	"abilities": [
+		"DIN MIDI IN",
+		"USB MIDI",
+		"Duophonic two-VCO analog synthesis",
+		"Three VCF types and drive",
+		"CV / GATE / TRIG in and out",
+		"37-note slim keyboard"
+	],
+	"hardwareControls": [
+		"VCO-1: Frequency coarse, Frequency fine, Audio KYBD on / LF KYBD off, FM depth (pink), FM depth (yellow), Pulse width, Pulse width mod, FM source LFO, FM source S/H / ADSR, PWM source LFO / ADSR",
+		"VCO-2: Frequency coarse, Frequency fine, Sync, FM depth (pink), FM depth (yellow), Pulse width, Pulse width mod, FM source LFO / S/H mixer or pedal, FM source S/H / ADSR, PWM source LFO / ADSR",
+		"LFO / Sample and hold: LFO freq, S/H input level (blue), S/H input level (white), S/H output lag, S/H input source VCO-1, S/H input source noise / VCO-2, S/H trigger LFO / KYBD",
+		"Audio mixer: Noise / Ring mod, VCO-1, VCO-2, Noise / Ring mod source, VCO-1 wave, VCO-2 wave",
+		"VCF / HPF: VCF freq, Resonance, VCF type, Mod level (black), Mod level (yellow), Mod level (pink), Mod source KYBD CV / S/H mixer or pedal, Mod source S/H / LFO, Mod source ADSR / AR, HPF cutoff freq",
+		"VCA: VCA gain, VCA level, Drive, VCA EG AR / ADSR",
+		"Envelope generators: AR attack, AR release, ADSR attack, ADSR decay, ADSR sustain, ADSR release, ADSR trigger KYBD gate / LFO repeat, ADSR repeat KYBD / auto, AR trigger KYBD gate / LFO repeat",
+		"Noise / Controller: Noise generator white / pink, Portamento, Portamento mode, Transpose",
+		"Proportional pitch control: Pitch down pad, Vibrato pad, Pitch up pad",
+		"Rear panel controls: Power, Headphone volume"
+	],
+	"notice": "This profile is the 2015 Korg reissue, not an original 1970s ARP Odyssey; the Rev1, Rev2 and Rev3 editions share these controls and connections. Sections and rear-panel connections come from the Korg owner's manual pp. 6-13. DIN MIDI IN receives note messages only (notes 12-127, velocity ignored). The PPC pads, sliders and switches transmit no MIDI and no CC assignments exist. CV/GATE/TRIG jacks are analog, not MIDI. Consult Korg driver requirements for USB. Select the profile manually for a DIN interface. USB transmits keyboard notes 48-84 (with TRANSPOSE at 0) at fixed velocity 64 and receives notes with velocity ignored. Set the MIDI channel by holding C3 and C4 while powering on, pressing the key assigned to the channel (manual p. 17), then C6 to save (factory channel 1). The keyboard drawing is schematic; virtual note positions start at C3 (48).",
+	"controls": [],
+	"modes": [],
+	"gui": {
+		"type": "column",
+		"gap": "0.65rem",
+		"children": [
+			{
+				"type": "status"
+			},
+			{
+				"type": "image",
+				"src": "panel.svg",
+				"alt": "Korg ARP Odyssey layout illustration"
+			},
+			{
+				"type": "notes"
+			},
+			{
+				"type": "channel"
+			},
+			{
+				"type": "guide",
+				"label": "Hardware and MIDI documentation"
+			}
+		]
+	},
+	"surface": {
+		"src": "interface.svg",
+		"width": 1500,
+		"height": 750,
+		"elements": [
+			{
+				"id": "vco-1-frequency-coarse",
+				"label": "VCO-1: Frequency coarse",
+				"kind": "fader",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 12.666666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-frequency-fine",
+				"label": "VCO-1: Frequency fine",
+				"kind": "fader",
+				"position": {
+					"x": 6.9111111111111105,
+					"y": 12.666666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-audio-kybd-on-lf-kybd-off",
+				"label": "VCO-1: Audio KYBD on / LF KYBD off",
+				"kind": "switch",
+				"position": {
+					"x": 11.755555555555556,
+					"y": 12.666666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-fm-depth-pink",
+				"label": "VCO-1: FM depth (pink)",
+				"kind": "fader",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 24.166666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-fm-depth-yellow",
+				"label": "VCO-1: FM depth (yellow)",
+				"kind": "fader",
+				"position": {
+					"x": 6.9111111111111105,
+					"y": 24.166666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-pulse-width",
+				"label": "VCO-1: Pulse width",
+				"kind": "fader",
+				"position": {
+					"x": 11.755555555555556,
+					"y": 24.166666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-pulse-width-mod",
+				"label": "VCO-1: Pulse width mod",
+				"kind": "fader",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 35.66666666666667,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-fm-source-lfo",
+				"label": "VCO-1: FM source LFO",
+				"kind": "switch",
+				"position": {
+					"x": 6.9111111111111105,
+					"y": 35.66666666666667,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-fm-source-s-h-adsr",
+				"label": "VCO-1: FM source S/H / ADSR",
+				"kind": "switch",
+				"position": {
+					"x": 11.755555555555556,
+					"y": 35.66666666666667,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-1-pwm-source-lfo-adsr",
+				"label": "VCO-1: PWM source LFO / ADSR",
+				"kind": "switch",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 47.16666666666667,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-frequency-coarse",
+				"label": "VCO-2: Frequency coarse",
+				"kind": "fader",
+				"position": {
+					"x": 18.066666666666666,
+					"y": 12.666666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-frequency-fine",
+				"label": "VCO-2: Frequency fine",
+				"kind": "fader",
+				"position": {
+					"x": 22.91111111111111,
+					"y": 12.666666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-sync",
+				"label": "VCO-2: Sync",
+				"kind": "switch",
+				"position": {
+					"x": 27.755555555555556,
+					"y": 12.666666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-fm-depth-pink",
+				"label": "VCO-2: FM depth (pink)",
+				"kind": "fader",
+				"position": {
+					"x": 18.066666666666666,
+					"y": 24.166666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-fm-depth-yellow",
+				"label": "VCO-2: FM depth (yellow)",
+				"kind": "fader",
+				"position": {
+					"x": 22.91111111111111,
+					"y": 24.166666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-pulse-width",
+				"label": "VCO-2: Pulse width",
+				"kind": "fader",
+				"position": {
+					"x": 27.755555555555556,
+					"y": 24.166666666666668,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-pulse-width-mod",
+				"label": "VCO-2: Pulse width mod",
+				"kind": "fader",
+				"position": {
+					"x": 18.066666666666666,
+					"y": 35.66666666666667,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-fm-source-lfo-s-h-mixer-or-pedal",
+				"label": "VCO-2: FM source LFO / S/H mixer or pedal",
+				"kind": "switch",
+				"position": {
+					"x": 22.91111111111111,
+					"y": 35.66666666666667,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-fm-source-s-h-adsr",
+				"label": "VCO-2: FM source S/H / ADSR",
+				"kind": "switch",
+				"position": {
+					"x": 27.755555555555556,
+					"y": 35.66666666666667,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "vco-2-pwm-source-lfo-adsr",
+				"label": "VCO-2: PWM source LFO / ADSR",
+				"kind": "switch",
+				"position": {
+					"x": 18.066666666666666,
+					"y": 47.16666666666667,
+					"width": 4.844444444444445,
+					"height": 11.5
+				}
+			},
+			{
+				"id": "lfo-sample-and-hold-lfo-freq",
+				"label": "LFO / Sample and hold: LFO freq",
+				"kind": "fader",
+				"position": {
+					"x": 34.06666666666667,
+					"y": 12.666666666666668,
+					"width": 4.177777777777777,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "lfo-sample-and-hold-s-h-input-level-blue",
+				"label": "LFO / Sample and hold: S/H input level (blue)",
+				"kind": "fader",
+				"position": {
+					"x": 38.24444444444444,
+					"y": 12.666666666666668,
+					"width": 4.177777777777777,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "lfo-sample-and-hold-s-h-input-level-white",
+				"label": "LFO / Sample and hold: S/H input level (white)",
+				"kind": "fader",
+				"position": {
+					"x": 42.422222222222224,
+					"y": 12.666666666666668,
+					"width": 4.177777777777777,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "lfo-sample-and-hold-s-h-output-lag",
+				"label": "LFO / Sample and hold: S/H output lag",
+				"kind": "fader",
+				"position": {
+					"x": 34.06666666666667,
+					"y": 28.000000000000004,
+					"width": 4.177777777777777,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "lfo-sample-and-hold-s-h-input-source-vco-1",
+				"label": "LFO / Sample and hold: S/H input source VCO-1",
+				"kind": "switch",
+				"position": {
+					"x": 38.24444444444444,
+					"y": 28.000000000000004,
+					"width": 4.177777777777777,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "lfo-sample-and-hold-s-h-input-source-noise-vco-2",
+				"label": "LFO / Sample and hold: S/H input source noise / VCO-2",
+				"kind": "switch",
+				"position": {
+					"x": 42.422222222222224,
+					"y": 28.000000000000004,
+					"width": 4.177777777777777,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "lfo-sample-and-hold-s-h-trigger-lfo-kybd",
+				"label": "LFO / Sample and hold: S/H trigger LFO / KYBD",
+				"kind": "switch",
+				"position": {
+					"x": 34.06666666666667,
+					"y": 43.333333333333336,
+					"width": 4.177777777777777,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "audio-mixer-noise-ring-mod",
+				"label": "Audio mixer: Noise / Ring mod",
+				"kind": "fader",
+				"position": {
+					"x": 48.06666666666667,
+					"y": 12.666666666666668,
+					"width": 3.5111111111111106,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "audio-mixer-vco-1",
+				"label": "Audio mixer: VCO-1",
+				"kind": "fader",
+				"position": {
+					"x": 51.577777777777776,
+					"y": 12.666666666666668,
+					"width": 3.5111111111111106,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "audio-mixer-vco-2",
+				"label": "Audio mixer: VCO-2",
+				"kind": "fader",
+				"position": {
+					"x": 55.08888888888889,
+					"y": 12.666666666666668,
+					"width": 3.5111111111111106,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "audio-mixer-noise-ring-mod-source",
+				"label": "Audio mixer: Noise / Ring mod source",
+				"kind": "switch",
+				"position": {
+					"x": 48.06666666666667,
+					"y": 35.66666666666667,
+					"width": 3.5111111111111106,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "audio-mixer-vco-1-wave",
+				"label": "Audio mixer: VCO-1 wave",
+				"kind": "switch",
+				"position": {
+					"x": 51.577777777777776,
+					"y": 35.66666666666667,
+					"width": 3.5111111111111106,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "audio-mixer-vco-2-wave",
+				"label": "Audio mixer: VCO-2 wave",
+				"kind": "switch",
+				"position": {
+					"x": 55.08888888888889,
+					"y": 35.66666666666667,
+					"width": 3.5111111111111106,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "vcf-hpf-vcf-freq",
+				"label": "VCF / HPF: VCF freq",
+				"kind": "fader",
+				"position": {
+					"x": 60.06666666666667,
+					"y": 12.666666666666668,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-resonance",
+				"label": "VCF / HPF: Resonance",
+				"kind": "fader",
+				"position": {
+					"x": 64.2,
+					"y": 12.666666666666668,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-vcf-type",
+				"label": "VCF / HPF: VCF type",
+				"kind": "switch3",
+				"position": {
+					"x": 68.33333333333333,
+					"y": 12.666666666666668,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-mod-level-black",
+				"label": "VCF / HPF: Mod level (black)",
+				"kind": "fader",
+				"position": {
+					"x": 72.46666666666667,
+					"y": 12.666666666666668,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-mod-level-yellow",
+				"label": "VCF / HPF: Mod level (yellow)",
+				"kind": "fader",
+				"position": {
+					"x": 60.06666666666667,
+					"y": 28.000000000000004,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-mod-level-pink",
+				"label": "VCF / HPF: Mod level (pink)",
+				"kind": "fader",
+				"position": {
+					"x": 64.2,
+					"y": 28.000000000000004,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-mod-source-kybd-cv-s-h-mixer-or-pedal",
+				"label": "VCF / HPF: Mod source KYBD CV / S/H mixer or pedal",
+				"kind": "switch",
+				"position": {
+					"x": 68.33333333333333,
+					"y": 28.000000000000004,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-mod-source-s-h-lfo",
+				"label": "VCF / HPF: Mod source S/H / LFO",
+				"kind": "switch",
+				"position": {
+					"x": 72.46666666666667,
+					"y": 28.000000000000004,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-mod-source-adsr-ar",
+				"label": "VCF / HPF: Mod source ADSR / AR",
+				"kind": "switch",
+				"position": {
+					"x": 60.06666666666667,
+					"y": 43.333333333333336,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vcf-hpf-hpf-cutoff-freq",
+				"label": "VCF / HPF: HPF cutoff freq",
+				"kind": "fader",
+				"position": {
+					"x": 64.2,
+					"y": 43.333333333333336,
+					"width": 4.133333333333333,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "vca-vca-gain",
+				"label": "VCA: VCA gain",
+				"kind": "fader",
+				"position": {
+					"x": 78.06666666666666,
+					"y": 12.666666666666668,
+					"width": 3.5999999999999996,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "vca-vca-level",
+				"label": "VCA: VCA level",
+				"kind": "fader",
+				"position": {
+					"x": 81.66666666666667,
+					"y": 12.666666666666668,
+					"width": 3.5999999999999996,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "vca-drive",
+				"label": "VCA: Drive",
+				"kind": "switch",
+				"position": {
+					"x": 78.06666666666666,
+					"y": 35.66666666666667,
+					"width": 3.5999999999999996,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "vca-vca-eg-ar-adsr",
+				"label": "VCA: VCA EG AR / ADSR",
+				"kind": "switch",
+				"position": {
+					"x": 81.66666666666667,
+					"y": 35.66666666666667,
+					"width": 3.5999999999999996,
+					"height": 23.0
+				}
+			},
+			{
+				"id": "envelope-generators-ar-attack",
+				"label": "Envelope generators: AR attack",
+				"kind": "fader",
+				"position": {
+					"x": 86.73333333333333,
+					"y": 12.666666666666668,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "envelope-generators-ar-release",
+				"label": "Envelope generators: AR release",
+				"kind": "fader",
+				"position": {
+					"x": 90.46666666666667,
+					"y": 12.666666666666668,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "envelope-generators-adsr-attack",
+				"label": "Envelope generators: ADSR attack",
+				"kind": "fader",
+				"position": {
+					"x": 94.19999999999999,
+					"y": 12.666666666666668,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "envelope-generators-adsr-decay",
+				"label": "Envelope generators: ADSR decay",
+				"kind": "fader",
+				"position": {
+					"x": 86.73333333333333,
+					"y": 28.000000000000004,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "envelope-generators-adsr-sustain",
+				"label": "Envelope generators: ADSR sustain",
+				"kind": "fader",
+				"position": {
+					"x": 90.46666666666667,
+					"y": 28.000000000000004,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "envelope-generators-adsr-release",
+				"label": "Envelope generators: ADSR release",
+				"kind": "fader",
+				"position": {
+					"x": 94.19999999999999,
+					"y": 28.000000000000004,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "envelope-generators-adsr-trigger-kybd-gate-lfo-repeat",
+				"label": "Envelope generators: ADSR trigger KYBD gate / LFO repeat",
+				"kind": "switch",
+				"position": {
+					"x": 86.73333333333333,
+					"y": 43.333333333333336,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "envelope-generators-adsr-repeat-kybd-auto",
+				"label": "Envelope generators: ADSR repeat KYBD / auto",
+				"kind": "switch",
+				"position": {
+					"x": 90.46666666666667,
+					"y": 43.333333333333336,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "envelope-generators-ar-trigger-kybd-gate-lfo-repeat",
+				"label": "Envelope generators: AR trigger KYBD gate / LFO repeat",
+				"kind": "switch",
+				"position": {
+					"x": 94.19999999999999,
+					"y": 43.333333333333336,
+					"width": 3.733333333333334,
+					"height": 15.333333333333332
+				}
+			},
+			{
+				"id": "noise-controller-noise-generator-white-pink",
+				"label": "Noise / Controller: Noise generator white / pink",
+				"kind": "switch",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 65.33333333333333,
+					"width": 4.433333333333334,
+					"height": 8.333333333333332
+				}
+			},
+			{
+				"id": "noise-controller-portamento",
+				"label": "Noise / Controller: Portamento",
+				"kind": "fader",
+				"position": {
+					"x": 6.5,
+					"y": 65.33333333333333,
+					"width": 4.433333333333334,
+					"height": 8.333333333333332
+				}
+			},
+			{
+				"id": "noise-controller-portamento-mode",
+				"label": "Noise / Controller: Portamento mode",
+				"kind": "switch",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 73.66666666666667,
+					"width": 4.433333333333334,
+					"height": 8.333333333333332
+				}
+			},
+			{
+				"id": "noise-controller-transpose",
+				"label": "Noise / Controller: Transpose",
+				"kind": "switch3",
+				"position": {
+					"x": 6.5,
+					"y": 73.66666666666667,
+					"width": 4.433333333333334,
+					"height": 8.333333333333332
+				}
+			},
+			{
+				"id": "proportional-pitch-control-pitch-down-pad",
+				"label": "Proportional pitch control: Pitch down pad",
+				"kind": "pad",
+				"position": {
+					"x": 2.0666666666666664,
+					"y": 88.0,
+					"width": 2.9555555555555557,
+					"height": 8.0
+				}
+			},
+			{
+				"id": "proportional-pitch-control-vibrato-pad",
+				"label": "Proportional pitch control: Vibrato pad",
+				"kind": "pad",
+				"position": {
+					"x": 5.022222222222223,
+					"y": 88.0,
+					"width": 2.9555555555555557,
+					"height": 8.0
+				}
+			},
+			{
+				"id": "proportional-pitch-control-pitch-up-pad",
+				"label": "Proportional pitch control: Pitch up pad",
+				"kind": "pad",
+				"position": {
+					"x": 7.977777777777778,
+					"y": 88.0,
+					"width": 2.9555555555555557,
+					"height": 8.0
+				}
+			},
+			{
+				"id": "rear-panel-controls-power",
+				"label": "Rear panel controls: Power",
+				"kind": "power",
+				"position": {
+					"x": 89.06666666666668,
+					"y": 65.33333333333333,
+					"width": 8.866666666666667,
+					"height": 8.333333333333332
+				}
+			},
+			{
+				"id": "rear-panel-controls-headphone-volume",
+				"label": "Rear panel controls: Headphone volume",
+				"kind": "knob",
+				"position": {
+					"x": 89.06666666666668,
+					"y": 73.66666666666667,
+					"width": 8.866666666666667,
+					"height": 8.333333333333332
+				}
+			},
+			{
+				"id": "key-1",
+				"label": "Key 1",
+				"kind": "key",
+				"position": {
+					"x": 12.333333333333334,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 48
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-3",
+				"label": "Key 3",
+				"kind": "key",
+				"position": {
+					"x": 15.772727272727272,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 50
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-5",
+				"label": "Key 5",
+				"kind": "key",
+				"position": {
+					"x": 19.212121212121215,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 52
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-6",
+				"label": "Key 6",
+				"kind": "key",
+				"position": {
+					"x": 22.65151515151515,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 53
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-8",
+				"label": "Key 8",
+				"kind": "key",
+				"position": {
+					"x": 26.090909090909093,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 55
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-10",
+				"label": "Key 10",
+				"kind": "key",
+				"position": {
+					"x": 29.530303030303035,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 57
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-12",
+				"label": "Key 12",
+				"kind": "key",
+				"position": {
+					"x": 32.96969696969697,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 59
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-13",
+				"label": "Key 13",
+				"kind": "key",
+				"position": {
+					"x": 36.40909090909091,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 60
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-15",
+				"label": "Key 15",
+				"kind": "key",
+				"position": {
+					"x": 39.84848484848485,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 62
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-17",
+				"label": "Key 17",
+				"kind": "key",
+				"position": {
+					"x": 43.28787878787879,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 64
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-18",
+				"label": "Key 18",
+				"kind": "key",
+				"position": {
+					"x": 46.727272727272734,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 65
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-20",
+				"label": "Key 20",
+				"kind": "key",
+				"position": {
+					"x": 50.16666666666667,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 67
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-22",
+				"label": "Key 22",
+				"kind": "key",
+				"position": {
+					"x": 53.60606060606061,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 69
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-24",
+				"label": "Key 24",
+				"kind": "key",
+				"position": {
+					"x": 57.045454545454554,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 71
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-25",
+				"label": "Key 25",
+				"kind": "key",
+				"position": {
+					"x": 60.484848484848484,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 72
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-27",
+				"label": "Key 27",
+				"kind": "key",
+				"position": {
+					"x": 63.92424242424243,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 74
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-29",
+				"label": "Key 29",
+				"kind": "key",
+				"position": {
+					"x": 67.36363636363637,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 76
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-30",
+				"label": "Key 30",
+				"kind": "key",
+				"position": {
+					"x": 70.8030303030303,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 77
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-32",
+				"label": "Key 32",
+				"kind": "key",
+				"position": {
+					"x": 74.24242424242425,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 79
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-34",
+				"label": "Key 34",
+				"kind": "key",
+				"position": {
+					"x": 77.68181818181819,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 81
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-36",
+				"label": "Key 36",
+				"kind": "key",
+				"position": {
+					"x": 81.12121212121212,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 83
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-37",
+				"label": "Key 37",
+				"kind": "key",
+				"position": {
+					"x": 84.56060606060606,
+					"y": 61.33333333333333,
+					"width": 3.4393939393939394,
+					"height": 35.333333333333336
+				},
+				"message": {
+					"type": "note",
+					"number": 84
+				},
+				"learnable": true,
+				"dark": false
+			},
+			{
+				"id": "key-2",
+				"label": "Key 2",
+				"kind": "key",
+				"position": {
+					"x": 14.70651515151515,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 49
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-4",
+				"label": "Key 4",
+				"kind": "key",
+				"position": {
+					"x": 18.14590909090909,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 51
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-7",
+				"label": "Key 7",
+				"kind": "key",
+				"position": {
+					"x": 25.02469696969697,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 54
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-9",
+				"label": "Key 9",
+				"kind": "key",
+				"position": {
+					"x": 28.46409090909091,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 56
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-11",
+				"label": "Key 11",
+				"kind": "key",
+				"position": {
+					"x": 31.903484848484847,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 58
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-14",
+				"label": "Key 14",
+				"kind": "key",
+				"position": {
+					"x": 38.782272727272726,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 61
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-16",
+				"label": "Key 16",
+				"kind": "key",
+				"position": {
+					"x": 42.22166666666667,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 63
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-19",
+				"label": "Key 19",
+				"kind": "key",
+				"position": {
+					"x": 49.10045454545455,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 66
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-21",
+				"label": "Key 21",
+				"kind": "key",
+				"position": {
+					"x": 52.539848484848484,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 68
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-23",
+				"label": "Key 23",
+				"kind": "key",
+				"position": {
+					"x": 55.97924242424243,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 70
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-26",
+				"label": "Key 26",
+				"kind": "key",
+				"position": {
+					"x": 62.8580303030303,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 73
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-28",
+				"label": "Key 28",
+				"kind": "key",
+				"position": {
+					"x": 66.29742424242424,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 75
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-31",
+				"label": "Key 31",
+				"kind": "key",
+				"position": {
+					"x": 73.17621212121213,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 78
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-33",
+				"label": "Key 33",
+				"kind": "key",
+				"position": {
+					"x": 76.61560606060607,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 80
+				},
+				"learnable": true,
+				"dark": true
+			},
+			{
+				"id": "key-35",
+				"label": "Key 35",
+				"kind": "key",
+				"position": {
+					"x": 80.05500000000002,
+					"y": 61.33333333333333,
+					"width": 2.1324242424242428,
+					"height": 21.553333333333335
+				},
+				"message": {
+					"type": "note",
+					"number": 82
+				},
+				"learnable": true,
+				"dark": true
+			}
+		]
+	},
+	"diagrams": {
+		"panel": "panel.svg",
+		"connections": "connections.svg",
+		"interface": "interface.svg"
+	},
+	"connections": [
+		{
+			"label": "DC 9V",
+			"connector": "DC power jack",
+			"direction": "input",
+			"location": "rear panel"
+		},
+		{
+			"label": "MIDI IN",
+			"connector": "5-pin DIN",
+			"direction": "input",
+			"location": "rear panel"
+		},
+		{
+			"label": "USB",
+			"connector": "USB-B MIDI",
+			"direction": "bidirectional",
+			"location": "rear panel"
+		},
+		{
+			"label": "PEDAL",
+			"connector": "6.35 mm phone jack (volume pedal)",
+			"direction": "input",
+			"location": "rear panel"
+		},
+		{
+			"label": "PORTAMENTO FOOTSWITCH",
+			"connector": "Foot switch jack",
+			"direction": "input",
+			"location": "rear panel"
+		},
+		{
+			"label": "OUTPUT LOW",
+			"connector": "6.35 mm mono phone jack",
+			"direction": "output",
+			"location": "rear panel"
+		},
+		{
+			"label": "OUTPUT HIGH",
+			"connector": "XLR",
+			"direction": "output",
+			"location": "rear panel"
+		},
+		{
+			"label": "EXT AUDIO INPUT",
+			"connector": "6.35 mm mono phone jack",
+			"direction": "input",
+			"location": "rear panel"
+		},
+		{
+			"label": "Headphones",
+			"connector": "6.35 mm stereo phone jack",
+			"direction": "output",
+			"location": "rear panel"
+		},
+		{
+			"label": "CV IN",
+			"connector": "3.5 mm mono jack, 1 V/oct",
+			"direction": "input",
+			"location": "rear panel"
+		},
+		{
+			"label": "CV OUT",
+			"connector": "3.5 mm mono jack, 1 V/oct",
+			"direction": "output",
+			"location": "rear panel"
+		},
+		{
+			"label": "GATE IN",
+			"connector": "3.5 mm mono jack",
+			"direction": "input",
+			"location": "rear panel"
+		},
+		{
+			"label": "GATE OUT",
+			"connector": "3.5 mm mono jack",
+			"direction": "output",
+			"location": "rear panel"
+		},
+		{
+			"label": "TRIG IN",
+			"connector": "3.5 mm mono jack",
+			"direction": "input",
+			"location": "rear panel"
+		},
+		{
+			"label": "TRIG OUT",
+			"connector": "3.5 mm mono jack",
+			"direction": "output",
+			"location": "rear panel"
+		}
+	],
+	"diagramSources": [
+		"https://cdn.korg.com/us/support/download/files/2da5c4341ec598574d4af552ecb88b6e.pdf",
+		"https://cdn.korg.com/us/support/download/files/7d3989df8622ee63d35fd729db12ea74.pdf",
+		"https://github.com/IDMNYU/synthaccess/tree/ee1ef12cec3a3fb6be59a7861f7df8848be2dafe/tactileSynthGuides"
+	]
+}

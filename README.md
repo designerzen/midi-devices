@@ -2,7 +2,7 @@
 
 Open, machine-readable profiles for MIDI hardware. Each profile tells your app how to recognise a connected device by its port name, which CCs and notes its controls send, and how to draw its panel. Profiles also carry setup notes and links to manuals.
 
-- **235 device profiles** from 43 manufacturers, including synths, controllers, drum machines, MIDI interfaces and accessible instruments
+- **238 device profiles** from 43 manufacturers, including synths, controllers, drum machines, MIDI interfaces and accessible instruments
 - **795 manufacturers**, covering every named entry in the [official MIDI SysEx ID registry](https://midi.org/sysexidtable)
 - A free, static **JSON and XML API**, plus a JavaScript client and an npm package
 - **SVG panel diagrams** with mapped hit areas, drawn with the [NYU SynthAccess](https://github.com/IDMNYU/synthaccess/tree/main/tactileSynthGuides) tactile symbol set
@@ -98,7 +98,7 @@ The [API reference](docs/api.md) documents every response shape, the JSON Schema
 The package bundles the raw profiles and assets, so your app works offline:
 
 ```sh
-npm install github:designerzen/midi-devices
+npm install midi-devices
 ```
 
 ```js
@@ -141,7 +141,11 @@ The [profile guide](docs/profiles.md) explains MIDI mappings, panel geometry and
 | [Control-library research](docs/control-libraries.md) | Sources for the Behringer, Circuit and Volca mappings |
 | [Development](docs/development.md) | Building, testing, versioning and deployment |
 
-[Harmoneasy](https://github.com/designerzen/harmoneasy) uses this package through its asset plugin and audiobus profile adapters, and mirrors these guides in its AI documentation. Its deployed app can carry a different profile version from this repository's `main` branch.
+Harmoneasy uses this package through its asset plugin and audiobus profile adapters, and mirrors these guides in its AI documentation. Its deployed app can carry a different profile version from this repository's `main` branch.
+
+## Licence
+
+Licensed under the [GNU Affero General Public License v3.0](LICENSE) (`AGPL-3.0-only`). This covers the profiles, diagrams and code. If you modify the catalogue and let people use it over a network, you must offer them your modified source.
 
 ## Trademarks
 
